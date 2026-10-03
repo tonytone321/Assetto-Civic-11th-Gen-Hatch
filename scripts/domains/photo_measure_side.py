@@ -49,6 +49,8 @@ PAGE_URL = "https://www.hondainfocenter.com/2024/Civic-Hatchback/"
 IMG_PATH = os.path.join(ROOT, "cache", "photos", "22_CivicHatchback_STRG_Header_RR.png")
 OVERLAY = os.path.join(ROOT, "cache", "photos", "side_overlay.png")
 SCRIPT = "scripts/domains/photo_measure_side.py"
+CGI_NOTE = ("Source image is a manufacturer studio render (CGI) at 620x200 px (~8.6 mm/px), not a photograph; its ride height is "
+            "the render model's pose, so ride-height-type values (arch, sill, wheel centre) are low confidence. ")
 
 ALPHA_BODY = 250
 ALPHA_TOP = 128             # glass is rendered semi-transparent (alpha ~190); the ground shadow lies only below the car
@@ -429,9 +431,11 @@ def main():
         unit = "1" if ("fraction" in key or "ratio" in key) else ("rad" if "angle" in key else "m")
         rec = db.record(value=v, unit=unit, status="estimated", cls="D", source_id="prop:hic-2022-hatch-strg-profile",
                         locator=f"image px {json.dumps(r['pix'])}", evidence=f"Image feature located by algorithm: {r['algorithm']}",
-                        as_printed="", applicability=app, confidence="medium" if s / max(abs(v), 1e-9) < 0.05 else "low",
+                        as_printed="", applicability=app,
+                        confidence=("low" if any(t in key for t in ("arch", "sill", "wheel_center", "bumper_extreme", "overhang_front", "overhang_rear"))
+                                    and "fraction" not in key else ("medium" if s / max(abs(v), 1e-9) < 0.05 else "low")),
                         range=[v - 2 * s, v + 2 * s], how_to_measure=r["how"] or "Measure on the car.",
-                        notes=(r["notes"] + " " if r["notes"] else "") + f"1-sigma {s:.4g} {unit}; range = +-2 sigma (localisation + scale + perspective).",
+                        notes=CGI_NOTE + (r["notes"] + " " if r["notes"] else "") + f"1-sigma {s:.4g} {unit}; range = +-2 sigma (localisation + scale + perspective).",
                         derivation={"script": SCRIPT, "function": "main", "inputs": deriv_inputs,
                                     "algorithm": r["algorithm"], "pixels": r["pix"],
                                     "scale_mm_per_px": {"horizontal": s_wb, "vertical": s_v}})

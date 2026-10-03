@@ -39,13 +39,13 @@
             "engine": "1.5T",
             "notes": "Exterior body identical 2022-2024 per Honda spec tables (length, width, height, wheelbase, track unchanged)"
           },
-          "confidence": "medium",
+          "confidence": "low",
           "range": [
             0.7768576037467901,
             0.9253591759863088
           ],
           "how_to_measure": "Plumb bob from the front bumper's foremost point and from the front hub centre; measure the floor distance (+-5 mm).",
-          "notes": "Direct photo overhangs scaled by wheelbase sum to 1631 mm vs published length - wheelbase 1794 mm; prefer dimensions.overhang_front/rear derived from the scale-free fraction. 1-sigma 0.03713 m; range = +-2 sigma (localisation + scale + perspective).",
+          "notes": "Source image is a manufacturer studio render (CGI) at 620x200 px (~8.6 mm/px), not a photograph; its ride height is the render model's pose, so ride-height-type values (arch, sill, wheel centre) are low confidence. Direct photo overhangs scaled by wheelbase sum to 1631 mm vs published length - wheelbase 1794 mm; prefer dimensions.overhang_front/rear derived from the scale-free fraction. 1-sigma 0.03713 m; range = +-2 sigma (localisation + scale + perspective).",
           "derivation": {
             "script": "scripts/domains/photo_measure_side.py",
             "function": "main",
@@ -94,13 +94,13 @@
             "engine": "1.5T",
             "notes": "Exterior body identical 2022-2024 per Honda spec tables (length, width, height, wheelbase, track unchanged)"
           },
-          "confidence": "medium",
+          "confidence": "low",
           "range": [
             0.711399868022507,
             0.8477759089661786
           ],
           "how_to_measure": "Plumb bob from the rear bumper's rearmost point and from the rear hub centre; measure the floor distance (+-5 mm).",
-          "notes": "Direct photo overhangs scaled by wheelbase sum to 1631 mm vs published length - wheelbase 1794 mm; prefer dimensions.overhang_front/rear derived from the scale-free fraction. 1-sigma 0.03409 m; range = +-2 sigma (localisation + scale + perspective).",
+          "notes": "Source image is a manufacturer studio render (CGI) at 620x200 px (~8.6 mm/px), not a photograph; its ride height is the render model's pose, so ride-height-type values (arch, sill, wheel centre) are low confidence. Direct photo overhangs scaled by wheelbase sum to 1631 mm vs published length - wheelbase 1794 mm; prefer dimensions.overhang_front/rear derived from the scale-free fraction. 1-sigma 0.03409 m; range = +-2 sigma (localisation + scale + perspective).",
           "derivation": {
             "script": "scripts/domains/photo_measure_side.py",
             "function": "main",
@@ -155,7 +155,7 @@
             0.5432884930660693
           ],
           "how_to_measure": "As for the overhangs.",
-          "notes": "Used by scripts/derivations/dimensions.py with the published length and wheelbase. Sigma includes a 0.01 allowance for front/rear differential perspective (the photo reproduces the published length only to 3.6%, consistent with a finite-distance camera magnifying the near-side wheels relative to the centreline bumper extremes). 1-sigma 0.01068 1; range = +-2 sigma (localisation + scale + perspective).",
+          "notes": "Source image is a manufacturer studio render (CGI) at 620x200 px (~8.6 mm/px), not a photograph; its ride height is the render model's pose, so ride-height-type values (arch, sill, wheel centre) are low confidence. Used by scripts/derivations/dimensions.py with the published length and wheelbase. Sigma includes a 0.01 allowance for front/rear differential perspective (the photo reproduces the published length only to 3.6%, consistent with a finite-distance camera magnifying the near-side wheels relative to the centreline bumper extremes). 1-sigma 0.01068 1; range = +-2 sigma (localisation + scale + perspective).",
           "derivation": {
             "script": "scripts/domains/photo_measure_side.py",
             "function": "main",
@@ -206,7 +206,7 @@
             0.6601002803016159
           ],
           "how_to_measure": "Measure the height of the bumper nose above the floor with a square (+-5 mm).",
-          "notes": "1-sigma 0.1304 m; range = +-2 sigma (localisation + scale + perspective).",
+          "notes": "Source image is a manufacturer studio render (CGI) at 620x200 px (~8.6 mm/px), not a photograph; its ride height is the render model's pose, so ride-height-type values (arch, sill, wheel centre) are low confidence. 1-sigma 0.1304 m; range = +-2 sigma (localisation + scale + perspective).",
           "derivation": {
             "script": "scripts/domains/photo_measure_side.py",
             "function": "main",
@@ -254,13 +254,13 @@
             "engine": "1.5T",
             "notes": "Exterior body identical 2022-2024 per Honda spec tables (length, width, height, wheelbase, track unchanged)"
           },
-          "confidence": "medium",
+          "confidence": "low",
           "range": [
             0.39714980069648176,
             0.4360206825495092
           ],
           "how_to_measure": "Measure the height of the rearmost bumper point above the floor (+-5 mm).",
-          "notes": "1-sigma 0.009718 m; range = +-2 sigma (localisation + scale + perspective).",
+          "notes": "Source image is a manufacturer studio render (CGI) at 620x200 px (~8.6 mm/px), not a photograph; its ride height is the render model's pose, so ride-height-type values (arch, sill, wheel centre) are low confidence. 1-sigma 0.009718 m; range = +-2 sigma (localisation + scale + perspective).",
           "derivation": {
             "script": "scripts/domains/photo_measure_side.py",
             "function": "main",
@@ -314,7 +314,7 @@
             4.741560618175238
           ],
           "how_to_measure": "Tape between plumb marks of bumper extremes.",
-          "notes": "1-sigma 0.1879 m; range = +-2 sigma (localisation + scale + perspective).",
+          "notes": "Source image is a manufacturer studio render (CGI) at 620x200 px (~8.6 mm/px), not a photograph; its ride height is the render model's pose, so ride-height-type values (arch, sill, wheel centre) are low confidence. 1-sigma 0.1879 m; range = +-2 sigma (localisation + scale + perspective).",
           "derivation": {
             "script": "scripts/domains/photo_measure_side.py",
             "function": "main",
@@ -365,7 +365,7 @@
             1.4954590746027063
           ],
           "how_to_measure": "Straightedge on roof, tape to floor.",
-          "notes": "1-sigma 0.03531 m; range = +-2 sigma (localisation + scale + perspective).",
+          "notes": "Source image is a manufacturer studio render (CGI) at 620x200 px (~8.6 mm/px), not a photograph; its ride height is the render model's pose, so ride-height-type values (arch, sill, wheel centre) are low confidence. 1-sigma 0.03531 m; range = +-2 sigma (localisation + scale + perspective).",
           "derivation": {
             "script": "scripts/domains/photo_measure_side.py",
             "function": "main",
@@ -416,7 +416,7 @@
             1.4954590746027063
           ],
           "how_to_measure": "Straightedge across the roof at its highest point; tape to floor (+-3 mm).",
-          "notes": "1-sigma 0.03531 m; range = +-2 sigma (localisation + scale + perspective).",
+          "notes": "Source image is a manufacturer studio render (CGI) at 620x200 px (~8.6 mm/px), not a photograph; its ride height is the render model's pose, so ride-height-type values (arch, sill, wheel centre) are low confidence. 1-sigma 0.03531 m; range = +-2 sigma (localisation + scale + perspective).",
           "derivation": {
             "script": "scripts/domains/photo_measure_side.py",
             "function": "main",
@@ -470,7 +470,7 @@
             -1.1679166955520628
           ],
           "how_to_measure": "Level laid on the roof: find the highest point, plumb down, measure from front hub centre.",
-          "notes": "1-sigma 0.2483 m; range = +-2 sigma (localisation + scale + perspective).",
+          "notes": "Source image is a manufacturer studio render (CGI) at 620x200 px (~8.6 mm/px), not a photograph; its ride height is the render model's pose, so ride-height-type values (arch, sill, wheel centre) are low confidence. 1-sigma 0.2483 m; range = +-2 sigma (localisation + scale + perspective).",
           "derivation": {
             "script": "scripts/domains/photo_measure_side.py",
             "function": "main",
@@ -523,7 +523,7 @@
             -0.2956766959117825
           ],
           "how_to_measure": "Measure from front hub centre to the windshield base at the centreline (tape along the hood + plumb), +-10 mm.",
-          "notes": "Silhouette break: the true glass base can sit slightly behind the visible hood/cowl edge. Localisation sigma 2 px. 1-sigma 0.02311 m; range = +-2 sigma (localisation + scale + perspective).",
+          "notes": "Source image is a manufacturer studio render (CGI) at 620x200 px (~8.6 mm/px), not a photograph; its ride height is the render model's pose, so ride-height-type values (arch, sill, wheel centre) are low confidence. Silhouette break: the true glass base can sit slightly behind the visible hood/cowl edge. Localisation sigma 2 px. 1-sigma 0.02311 m; range = +-2 sigma (localisation + scale + perspective).",
           "derivation": {
             "script": "scripts/domains/photo_measure_side.py",
             "function": "main",
@@ -574,7 +574,7 @@
             1.0460168301181794
           ],
           "how_to_measure": "Tape from floor to the windshield base at the centreline (+-5 mm).",
-          "notes": "1-sigma 0.03006 m; range = +-2 sigma (localisation + scale + perspective).",
+          "notes": "Source image is a manufacturer studio render (CGI) at 620x200 px (~8.6 mm/px), not a photograph; its ride height is the render model's pose, so ride-height-type values (arch, sill, wheel centre) are low confidence. 1-sigma 0.03006 m; range = +-2 sigma (localisation + scale + perspective).",
           "derivation": {
             "script": "scripts/domains/photo_measure_side.py",
             "function": "main",
@@ -624,7 +624,7 @@
             -0.8901334771496963
           ],
           "how_to_measure": "Measure from front hub centre to the top edge of the windshield glass (plumb), +-10 mm.",
-          "notes": "1-sigma 0.05007 m; range = +-2 sigma (localisation + scale + perspective).",
+          "notes": "Source image is a manufacturer studio render (CGI) at 620x200 px (~8.6 mm/px), not a photograph; its ride height is the render model's pose, so ride-height-type values (arch, sill, wheel centre) are low confidence. 1-sigma 0.05007 m; range = +-2 sigma (localisation + scale + perspective).",
           "derivation": {
             "script": "scripts/domains/photo_measure_side.py",
             "function": "main",
@@ -674,7 +674,7 @@
             0.5835699628111697
           ],
           "how_to_measure": "Inclinometer on the glass at the centreline.",
-          "notes": "Silhouette (outer glass) line, not the glass at centreline; 2 deg sigma. 1-sigma 0.03491 rad; range = +-2 sigma (localisation + scale + perspective).",
+          "notes": "Source image is a manufacturer studio render (CGI) at 620x200 px (~8.6 mm/px), not a photograph; its ride height is the render model's pose, so ride-height-type values (arch, sill, wheel centre) are low confidence. Silhouette (outer glass) line, not the glass at centreline; 2 deg sigma. 1-sigma 0.03491 rad; range = +-2 sigma (localisation + scale + perspective).",
           "derivation": {
             "script": "scripts/domains/photo_measure_side.py",
             "function": "main",
@@ -729,7 +729,7 @@
             0.4295634487989103
           ],
           "how_to_measure": "Inclinometer on the hatch glass at the centreline.",
-          "notes": "Includes the effect of the roof spoiler on the silhouette; 2.5 deg sigma. 1-sigma 0.04363 rad; range = +-2 sigma (localisation + scale + perspective).",
+          "notes": "Source image is a manufacturer studio render (CGI) at 620x200 px (~8.6 mm/px), not a photograph; its ride height is the render model's pose, so ride-height-type values (arch, sill, wheel centre) are low confidence. Includes the effect of the roof spoiler on the silhouette; 2.5 deg sigma. 1-sigma 0.04363 rad; range = +-2 sigma (localisation + scale + perspective).",
           "derivation": {
             "script": "scripts/domains/photo_measure_side.py",
             "function": "main",
@@ -789,7 +789,7 @@
             -2.225951284386631
           ],
           "how_to_measure": "Plumb from the roof-spoiler trailing edge, measure from front hub centre.",
-          "notes": "1-sigma 0.1083 m; range = +-2 sigma (localisation + scale + perspective).",
+          "notes": "Source image is a manufacturer studio render (CGI) at 620x200 px (~8.6 mm/px), not a photograph; its ride height is the render model's pose, so ride-height-type values (arch, sill, wheel centre) are low confidence. 1-sigma 0.1083 m; range = +-2 sigma (localisation + scale + perspective).",
           "derivation": {
             "script": "scripts/domains/photo_measure_side.py",
             "function": "main",
@@ -839,7 +839,7 @@
             0.9992934288699167
           ],
           "how_to_measure": "Straightedge across the hood above the front hub; tape to floor (+-5 mm).",
-          "notes": "1-sigma 0.02408 m; range = +-2 sigma (localisation + scale + perspective).",
+          "notes": "Source image is a manufacturer studio render (CGI) at 620x200 px (~8.6 mm/px), not a photograph; its ride height is the render model's pose, so ride-height-type values (arch, sill, wheel centre) are low confidence. 1-sigma 0.02408 m; range = +-2 sigma (localisation + scale + perspective).",
           "derivation": {
             "script": "scripts/domains/photo_measure_side.py",
             "function": "main",
@@ -884,13 +884,13 @@
             "engine": "1.5T",
             "notes": "Exterior body identical 2022-2024 per Honda spec tables (length, width, height, wheelbase, track unchanged)"
           },
-          "confidence": "medium",
+          "confidence": "low",
           "range": [
             0.18346326275926497,
             0.2151175496430647
           ],
           "how_to_measure": "Tape from floor to the sill lower edge at mid-wheelbase, both sides (+-3 mm).",
-          "notes": "Not the same quantity as the published minimum ground clearance (134 mm, no-load). 1-sigma 0.007914 m; range = +-2 sigma (localisation + scale + perspective).",
+          "notes": "Source image is a manufacturer studio render (CGI) at 620x200 px (~8.6 mm/px), not a photograph; its ride height is the render model's pose, so ride-height-type values (arch, sill, wheel centre) are low confidence. Not the same quantity as the published minimum ground clearance (134 mm, no-load). 1-sigma 0.007914 m; range = +-2 sigma (localisation + scale + perspective).",
           "derivation": {
             "script": "scripts/domains/photo_measure_side.py",
             "function": "main",
@@ -938,13 +938,13 @@
             "engine": "1.5T",
             "notes": "Exterior body identical 2022-2024 per Honda spec tables (length, width, height, wheelbase, track unchanged)"
           },
-          "confidence": "medium",
+          "confidence": "low",
           "range": [
             0.29383076296745303,
             0.33315928856385857
           ],
           "how_to_measure": "Tape from floor to hub centre (+-2 mm).",
-          "notes": "In a render the tyre is undeflected; a real loaded tyre sits ~10-20 mm lower. Equals the unloaded tyre radius here. 1-sigma 0.009832 m; range = +-2 sigma (localisation + scale + perspective).",
+          "notes": "Source image is a manufacturer studio render (CGI) at 620x200 px (~8.6 mm/px), not a photograph; its ride height is the render model's pose, so ride-height-type values (arch, sill, wheel centre) are low confidence. In a render the tyre is undeflected; a real loaded tyre sits ~10-20 mm lower. Equals the unloaded tyre radius here. 1-sigma 0.009832 m; range = +-2 sigma (localisation + scale + perspective).",
           "derivation": {
             "script": "scripts/domains/photo_measure_side.py",
             "function": "main",
@@ -989,13 +989,13 @@
             "engine": "1.5T",
             "notes": "Exterior body identical 2022-2024 per Honda spec tables (length, width, height, wheelbase, track unchanged)"
           },
-          "confidence": "medium",
+          "confidence": "low",
           "range": [
             0.36282490527149763,
             0.41701389195681476
           ],
           "how_to_measure": "Tape from hub centre to the arch lip directly above it, car at curb weight (+-2 mm). Primary ride-height reference.",
-          "notes": "1-sigma 0.01355 m; range = +-2 sigma (localisation + scale + perspective).",
+          "notes": "Source image is a manufacturer studio render (CGI) at 620x200 px (~8.6 mm/px), not a photograph; its ride height is the render model's pose, so ride-height-type values (arch, sill, wheel centre) are low confidence. 1-sigma 0.01355 m; range = +-2 sigma (localisation + scale + perspective).",
           "derivation": {
             "script": "scripts/domains/photo_measure_side.py",
             "function": "main",
@@ -1041,13 +1041,13 @@
             "engine": "1.5T",
             "notes": "Exterior body identical 2022-2024 per Honda spec tables (length, width, height, wheelbase, track unchanged)"
           },
-          "confidence": "medium",
+          "confidence": "low",
           "range": [
             0.6640544157799612,
             0.7427744329796627
           ],
           "how_to_measure": "Tape from floor to the arch lip above the hub centre (+-2 mm).",
-          "notes": "1-sigma 0.01968 m; range = +-2 sigma (localisation + scale + perspective).",
+          "notes": "Source image is a manufacturer studio render (CGI) at 620x200 px (~8.6 mm/px), not a photograph; its ride height is the render model's pose, so ride-height-type values (arch, sill, wheel centre) are low confidence. 1-sigma 0.01968 m; range = +-2 sigma (localisation + scale + perspective).",
           "derivation": {
             "script": "scripts/domains/photo_measure_side.py",
             "function": "main",
@@ -1092,13 +1092,13 @@
             "engine": "1.5T",
             "notes": "Exterior body identical 2022-2024 per Honda spec tables (length, width, height, wheelbase, track unchanged)"
           },
-          "confidence": "medium",
+          "confidence": "low",
           "range": [
             0.2958734769543988,
             0.3353645578112504
           ],
           "how_to_measure": "Tape from floor to hub centre (+-2 mm).",
-          "notes": "In a render the tyre is undeflected; a real loaded tyre sits ~10-20 mm lower. Equals the unloaded tyre radius here. 1-sigma 0.009873 m; range = +-2 sigma (localisation + scale + perspective).",
+          "notes": "Source image is a manufacturer studio render (CGI) at 620x200 px (~8.6 mm/px), not a photograph; its ride height is the render model's pose, so ride-height-type values (arch, sill, wheel centre) are low confidence. In a render the tyre is undeflected; a real loaded tyre sits ~10-20 mm lower. Equals the unloaded tyre radius here. 1-sigma 0.009873 m; range = +-2 sigma (localisation + scale + perspective).",
           "derivation": {
             "script": "scripts/domains/photo_measure_side.py",
             "function": "main",
@@ -1143,13 +1143,13 @@
             "engine": "1.5T",
             "notes": "Exterior body identical 2022-2024 per Honda spec tables (length, width, height, wheelbase, track unchanged)"
           },
-          "confidence": "medium",
+          "confidence": "low",
           "range": [
             0.36077326631041795,
             0.4148175476835567
           ],
           "how_to_measure": "Tape from hub centre to the arch lip directly above it, car at curb weight (+-2 mm). Primary ride-height reference.",
-          "notes": "1-sigma 0.01351 m; range = +-2 sigma (localisation + scale + perspective).",
+          "notes": "Source image is a manufacturer studio render (CGI) at 620x200 px (~8.6 mm/px), not a photograph; its ride height is the render model's pose, so ride-height-type values (arch, sill, wheel centre) are low confidence. 1-sigma 0.01351 m; range = +-2 sigma (localisation + scale + perspective).",
           "derivation": {
             "script": "scripts/domains/photo_measure_side.py",
             "function": "main",
@@ -1195,13 +1195,13 @@
             "engine": "1.5T",
             "notes": "Exterior body identical 2022-2024 per Honda spec tables (length, width, height, wheelbase, track unchanged)"
           },
-          "confidence": "medium",
+          "confidence": "low",
           "range": [
             0.6640544157799612,
             0.7427744329796627
           ],
           "how_to_measure": "Tape from floor to the arch lip above the hub centre (+-2 mm).",
-          "notes": "1-sigma 0.01968 m; range = +-2 sigma (localisation + scale + perspective).",
+          "notes": "Source image is a manufacturer studio render (CGI) at 620x200 px (~8.6 mm/px), not a photograph; its ride height is the render model's pose, so ride-height-type values (arch, sill, wheel centre) are low confidence. 1-sigma 0.01968 m; range = +-2 sigma (localisation + scale + perspective).",
           "derivation": {
             "script": "scripts/domains/photo_measure_side.py",
             "function": "main",
@@ -1252,7 +1252,7 @@
             0.8034061740003551
           ],
           "how_to_measure": "Measure rim flange and tyre diameters.",
-          "notes": "Nominal 18 in / 645.2 mm = 0.709; visible rim lip is slightly smaller than the bead seat diameter. 1-sigma 0.02618 1; range = +-2 sigma (localisation + scale + perspective).",
+          "notes": "Source image is a manufacturer studio render (CGI) at 620x200 px (~8.6 mm/px), not a photograph; its ride height is the render model's pose, so ride-height-type values (arch, sill, wheel centre) are low confidence. Nominal 18 in / 645.2 mm = 0.709; visible rim lip is slightly smaller than the bead seat diameter. 1-sigma 0.02618 1; range = +-2 sigma (localisation + scale + perspective).",
           "derivation": {
             "script": "scripts/domains/photo_measure_side.py",
             "function": "main",
@@ -1303,7 +1303,7 @@
             0.7971729382074548
           ],
           "how_to_measure": "Measure rim flange and tyre diameters.",
-          "notes": "Nominal 18 in / 645.2 mm = 0.709; visible rim lip is slightly smaller than the bead seat diameter. 1-sigma 0.02622 1; range = +-2 sigma (localisation + scale + perspective).",
+          "notes": "Source image is a manufacturer studio render (CGI) at 620x200 px (~8.6 mm/px), not a photograph; its ride height is the render model's pose, so ride-height-type values (arch, sill, wheel centre) are low confidence. Nominal 18 in / 645.2 mm = 0.709; visible rim lip is slightly smaller than the bead seat diameter. 1-sigma 0.02622 1; range = +-2 sigma (localisation + scale + perspective).",
           "derivation": {
             "script": "scripts/domains/photo_measure_side.py",
             "function": "main",
