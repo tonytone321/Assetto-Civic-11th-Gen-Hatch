@@ -22,12 +22,12 @@
       "impact": "high",
       "candidates": [
         {
-          "value": 0.8519556507180501,
+          "value": 0.8511083898665495,
           "unit": "m",
           "status": "estimated",
           "class": "D",
           "source_id": "prop:hic-2022-hatch-strg-profile",
-          "locator": "image px {\"x_min\": 58, \"rows_at_extreme\": [128, 157], \"front_wheel_cx\": 156.2616756843141}",
+          "locator": "image px {\"x_min\": 58, \"rows_at_extreme\": [128, 157], \"front_wheel_cx\": 156.45158927179887}",
           "evidence": "Image feature located by algorithm: silhouette min column minus fitted front wheel centre",
           "as_printed": "",
           "applicability": {
@@ -39,13 +39,13 @@
             "engine": "1.5T",
             "notes": "Exterior body identical 2022-2024 per Honda spec tables (length, width, height, wheelbase, track unchanged)"
           },
-          "confidence": "low",
+          "confidence": "medium",
           "range": [
-            0.26718925174110375,
-            1.4367220496949966
+            0.8063978163160394,
+            0.8958189634170596
           ],
           "how_to_measure": "Plumb bob from the front bumper's foremost point and from the front hub centre; measure the floor distance (+-5 mm).",
-          "notes": "1-sigma 0.2924 m; range = +-2 sigma (localisation + scale + perspective).",
+          "notes": "1-sigma 0.02236 m; range = +-2 sigma (localisation + scale + perspective).",
           "derivation": {
             "script": "scripts/domains/photo_measure_side.py",
             "function": "main",
@@ -61,11 +61,11 @@
                 128,
                 157
               ],
-              "front_wheel_cx": 156.2616756843141
+              "front_wheel_cx": 156.45158927179887
             },
             "scale_mm_per_px": {
-              "horizontal": 8.670273988153157,
-              "vertical": 8.764766322988079
+              "horizontal": 8.644943125467114,
+              "vertical": 8.039560745606778
             }
           }
         }
@@ -77,12 +77,12 @@
       "impact": "high",
       "candidates": [
         {
-          "value": 0.7915327132992944,
+          "value": 0.7795878884943428,
           "unit": "m",
           "status": "estimated",
           "class": "D",
           "source_id": "prop:hic-2022-hatch-strg-profile",
-          "locator": "image px {\"x_max\": 563, \"rows_at_extreme\": [140, 141], \"rear_wheel_cx\": 471.7073010171507}",
+          "locator": "image px {\"x_max\": 563, \"rows_at_extreme\": [140, 141], \"rear_wheel_cx\": 472.82151331941594}",
           "evidence": "Image feature located by algorithm: silhouette max column minus fitted rear wheel centre",
           "as_printed": "",
           "applicability": {
@@ -94,13 +94,13 @@
             "engine": "1.5T",
             "notes": "Exterior body identical 2022-2024 per Honda spec tables (length, width, height, wheelbase, track unchanged)"
           },
-          "confidence": "low",
+          "confidence": "medium",
           "range": [
-            0.24822055633023898,
-            1.3348448702683497
+            0.7383416779974341,
+            0.8208340989912515
           ],
           "how_to_measure": "Plumb bob from the rear bumper's rearmost point and from the rear hub centre; measure the floor distance (+-5 mm).",
-          "notes": "1-sigma 0.2717 m; range = +-2 sigma (localisation + scale + perspective).",
+          "notes": "1-sigma 0.02062 m; range = +-2 sigma (localisation + scale + perspective).",
           "derivation": {
             "script": "scripts/domains/photo_measure_side.py",
             "function": "main",
@@ -116,11 +116,11 @@
                 140,
                 141
               ],
-              "rear_wheel_cx": 471.7073010171507
+              "rear_wheel_cx": 472.82151331941594
             },
             "scale_mm_per_px": {
-              "horizontal": 8.670273988153157,
-              "vertical": 8.764766322988079
+              "horizontal": 8.644943125467114,
+              "vertical": 8.039560745606778
             }
           }
         }
@@ -132,12 +132,12 @@
       "impact": "high",
       "candidates": [
         {
-          "value": 0.5183825266858166,
+          "value": 0.5219294366220348,
           "unit": "1",
           "status": "estimated",
           "class": "D",
           "source_id": "prop:hic-2022-hatch-strg-profile",
-          "locator": "image px {\"oh_f_px\": 98.2616756843141, \"oh_r_px\": 91.29269898284929}",
+          "locator": "image px {\"oh_f_px\": 98.45158927179887, \"oh_r_px\": 90.17848668058406}",
           "evidence": "Image feature located by algorithm: ratio of silhouette-derived overhang pixel lengths; independent of scale",
           "as_printed": "",
           "applicability": {
@@ -151,11 +151,11 @@
           },
           "confidence": "medium",
           "range": [
-            0.5109217990457593,
-            0.525843254325874
+            0.5144321509679163,
+            0.5294267222761534
           ],
           "how_to_measure": "As for the overhangs.",
-          "notes": "Used by scripts/derivations/dimensions.py with the published length and wheelbase. 1-sigma 0.00373 1; range = +-2 sigma (localisation + scale + perspective).",
+          "notes": "Used by scripts/derivations/dimensions.py with the published length and wheelbase. 1-sigma 0.003749 1; range = +-2 sigma (localisation + scale + perspective).",
           "derivation": {
             "script": "scripts/domains/photo_measure_side.py",
             "function": "main",
@@ -166,12 +166,12 @@
             },
             "algorithm": "ratio of silhouette-derived overhang pixel lengths; independent of scale",
             "pixels": {
-              "oh_f_px": 98.2616756843141,
-              "oh_r_px": 91.29269898284929
+              "oh_f_px": 98.45158927179887,
+              "oh_r_px": 90.17848668058406
             },
             "scale_mm_per_px": {
-              "horizontal": 8.670273988153157,
-              "vertical": 8.764766322988079
+              "horizontal": 8.644943125467114,
+              "vertical": 8.039560745606778
             }
           }
         }
@@ -183,7 +183,7 @@
       "impact": "low",
       "candidates": [
         {
-          "value": 0.4001257406547127,
+          "value": 0.3998770716673482,
           "unit": "m",
           "status": "estimated",
           "class": "D",
@@ -202,11 +202,11 @@
           },
           "confidence": "low",
           "range": [
-            0.13703671208144824,
-            0.6632147692279771
+            0.1585562938195765,
+            0.6411978495151199
           ],
           "how_to_measure": "Measure the height of the bumper nose above the floor with a square (+-5 mm).",
-          "notes": "1-sigma 0.1315 m; range = +-2 sigma (localisation + scale + perspective).",
+          "notes": "1-sigma 0.1207 m; range = +-2 sigma (localisation + scale + perspective).",
           "derivation": {
             "script": "scripts/domains/photo_measure_side.py",
             "function": "main",
@@ -224,8 +224,8 @@
               ]
             },
             "scale_mm_per_px": {
-              "horizontal": 8.670273988153157,
-              "vertical": 8.764766322988079
+              "horizontal": 8.644943125467114,
+              "vertical": 8.039560745606778
             }
           }
         }
@@ -237,7 +237,7 @@
       "impact": "low",
       "candidates": [
         {
-          "value": 0.4176552733006888,
+          "value": 0.41595619315856175,
           "unit": "m",
           "status": "estimated",
           "class": "D",
@@ -256,11 +256,11 @@
           },
           "confidence": "medium",
           "range": [
-            0.3980566599955866,
-            0.437253886605791
+            0.3979791888221461,
+            0.4339331974949774
           ],
           "how_to_measure": "Measure the height of the rearmost bumper point above the floor (+-5 mm).",
-          "notes": "1-sigma 0.009799 m; range = +-2 sigma (localisation + scale + perspective).",
+          "notes": "1-sigma 0.008989 m; range = +-2 sigma (localisation + scale + perspective).",
           "derivation": {
             "script": "scripts/domains/photo_measure_side.py",
             "function": "main",
@@ -278,8 +278,8 @@
               ]
             },
             "scale_mm_per_px": {
-              "horizontal": 8.670273988153157,
-              "vertical": 8.764766322988079
+              "horizontal": 8.644943125467114,
+              "vertical": 8.039560745606778
             }
           }
         }
@@ -291,7 +291,7 @@
       "impact": "low",
       "candidates": [
         {
-          "value": 4.378488364017345,
+          "value": 4.365696278360892,
           "unit": "m",
           "status": "estimated",
           "class": "D",
@@ -308,13 +308,13 @@
             "engine": "1.5T",
             "notes": "Exterior body identical 2022-2024 per Honda spec tables (length, width, height, wheelbase, track unchanged)"
           },
-          "confidence": "low",
+          "confidence": "medium",
           "range": [
-            1.373811705694569,
-            7.383165022340121
+            4.1447587849695235,
+            4.586633771752261
           ],
           "how_to_measure": "Tape between plumb marks of bumper extremes.",
-          "notes": "1-sigma 1.502 m; range = +-2 sigma (localisation + scale + perspective).",
+          "notes": "1-sigma 0.1105 m; range = +-2 sigma (localisation + scale + perspective).",
           "derivation": {
             "script": "scripts/domains/photo_measure_side.py",
             "function": "main",
@@ -329,8 +329,8 @@
               "x_max": 563
             },
             "scale_mm_per_px": {
-              "horizontal": 8.670273988153157,
-              "vertical": 8.764766322988079
+              "horizontal": 8.644943125467114,
+              "vertical": 8.039560745606778
             }
           }
         }
@@ -342,12 +342,12 @@
       "impact": "low",
       "candidates": [
         {
-          "value": 1.4343681667673058,
+          "value": 1.348545239648948,
           "unit": "m",
           "status": "estimated",
           "class": "D",
           "source_id": "prop:hic-2022-hatch-strg-profile",
-          "locator": "image px {\"roof_row\": 25, \"ground_row\": 188.15161533231864}",
+          "locator": "image px {\"roof_row\": 25, \"ground_row\": 192.23867159171118}",
           "evidence": "Image feature located by algorithm: top silhouette row vs fitted tyre-bottom ground line",
           "as_printed": "",
           "applicability": {
@@ -359,13 +359,13 @@
             "engine": "1.5T",
             "notes": "Exterior body identical 2022-2024 per Honda spec tables (length, width, height, wheelbase, track unchanged)"
           },
-          "confidence": "low",
+          "confidence": "medium",
           "range": [
-            0.4529902279970802,
-            2.4157461055375316
+            1.2796614718542867,
+            1.4174290074436091
           ],
           "how_to_measure": "Straightedge on roof, tape to floor.",
-          "notes": "1-sigma 0.4907 m; range = +-2 sigma (localisation + scale + perspective).",
+          "notes": "1-sigma 0.03444 m; range = +-2 sigma (localisation + scale + perspective).",
           "derivation": {
             "script": "scripts/domains/photo_measure_side.py",
             "function": "main",
@@ -377,11 +377,11 @@
             "algorithm": "top silhouette row vs fitted tyre-bottom ground line",
             "pixels": {
               "roof_row": 25,
-              "ground_row": 188.15161533231864
+              "ground_row": 192.23867159171118
             },
             "scale_mm_per_px": {
-              "horizontal": 8.670273988153157,
-              "vertical": 8.764766322988079
+              "horizontal": 8.644943125467114,
+              "vertical": 8.039560745606778
             }
           }
         }
@@ -393,7 +393,7 @@
       "impact": "medium",
       "candidates": [
         {
-          "value": 1.4343681667673058,
+          "value": 1.348545239648948,
           "unit": "m",
           "status": "estimated",
           "class": "D",
@@ -410,13 +410,13 @@
             "engine": "1.5T",
             "notes": "Exterior body identical 2022-2024 per Honda spec tables (length, width, height, wheelbase, track unchanged)"
           },
-          "confidence": "low",
+          "confidence": "medium",
           "range": [
-            0.4529902279970802,
-            2.4157461055375316
+            1.2796614718542867,
+            1.4174290074436091
           ],
           "how_to_measure": "Straightedge across the roof at its highest point; tape to floor (+-3 mm).",
-          "notes": "1-sigma 0.4907 m; range = +-2 sigma (localisation + scale + perspective).",
+          "notes": "1-sigma 0.03444 m; range = +-2 sigma (localisation + scale + perspective).",
           "derivation": {
             "script": "scripts/domains/photo_measure_side.py",
             "function": "main",
@@ -434,8 +434,8 @@
               ]
             },
             "scale_mm_per_px": {
-              "horizontal": 8.670273988153157,
-              "vertical": 8.764766322988079
+              "horizontal": 8.644943125467114,
+              "vertical": 8.039560745606778
             }
           }
         }
@@ -447,7 +447,7 @@
       "impact": "medium",
       "candidates": [
         {
-          "value": -1.6147372989115232,
+          "value": -1.6083779293288445,
           "unit": "m",
           "status": "estimated",
           "class": "D",
@@ -466,11 +466,11 @@
           },
           "confidence": "medium",
           "range": [
-            -1.719141223163912,
-            -1.5103333746591343
+            -1.712476829602437,
+            -1.504279029055252
           ],
           "how_to_measure": "Level laid on the roof: find the highest point, plumb down, measure from front hub centre.",
-          "notes": "1-sigma 0.0522 m; range = +-2 sigma (localisation + scale + perspective).",
+          "notes": "1-sigma 0.05205 m; range = +-2 sigma (localisation + scale + perspective).",
           "derivation": {
             "script": "scripts/domains/photo_measure_side.py",
             "function": "main",
@@ -487,8 +487,8 @@
               ]
             },
             "scale_mm_per_px": {
-              "horizontal": 8.670273988153157,
-              "vertical": 8.764766322988079
+              "horizontal": 8.644943125467114,
+              "vertical": 8.039560745606778
             }
           }
         }
@@ -500,7 +500,7 @@
       "impact": "medium",
       "candidates": [
         {
-          "value": -0.6046503792916803,
+          "value": -0.6012420552119256,
           "unit": "m",
           "status": "estimated",
           "class": "D",
@@ -519,11 +519,11 @@
           },
           "confidence": "medium",
           "range": [
-            -0.6403988347478811,
-            -0.5689019238354796
+            -0.6368860688456838,
+            -0.5655980415781675
           ],
           "how_to_measure": "Measure from front hub centre to the windshield base at the centreline (tape along the hood + plumb), +-10 mm.",
-          "notes": "Silhouette break: the true glass base can sit slightly behind the visible hood/cowl edge. Localisation sigma 2 px. 1-sigma 0.01787 m; range = +-2 sigma (localisation + scale + perspective).",
+          "notes": "Silhouette break: the true glass base can sit slightly behind the visible hood/cowl edge. Localisation sigma 2 px. 1-sigma 0.01782 m; range = +-2 sigma (localisation + scale + perspective).",
           "derivation": {
             "script": "scripts/domains/photo_measure_side.py",
             "function": "main",
@@ -538,8 +538,8 @@
               "row": 70.0
             },
             "scale_mm_per_px": {
-              "horizontal": 8.670273988153157,
-              "vertical": 8.764766322988079
+              "horizontal": 8.644943125467114,
+              "vertical": 8.039560745606778
             }
           }
         }
@@ -551,7 +551,7 @@
       "impact": "medium",
       "candidates": [
         {
-          "value": 1.0355712990713484,
+          "value": 0.9827452257238396,
           "unit": "m",
           "status": "estimated",
           "class": "D",
@@ -568,13 +568,13 @@
             "engine": "1.5T",
             "notes": "Exterior body identical 2022-2024 per Honda spec tables (length, width, height, wheelbase, track unchanged)"
           },
-          "confidence": "low",
+          "confidence": "medium",
           "range": [
-            0.3240125679281036,
-            1.7471300302145931
+            0.9230399228494808,
+            1.0424505285981984
           ],
           "how_to_measure": "Tape from floor to the windshield base at the centreline (+-5 mm).",
-          "notes": "1-sigma 0.3558 m; range = +-2 sigma (localisation + scale + perspective).",
+          "notes": "1-sigma 0.02985 m; range = +-2 sigma (localisation + scale + perspective).",
           "derivation": {
             "script": "scripts/domains/photo_measure_side.py",
             "function": "main",
@@ -588,8 +588,8 @@
               "break_px": 226.0
             },
             "scale_mm_per_px": {
-              "horizontal": 8.670273988153157,
-              "vertical": 8.764766322988079
+              "horizontal": 8.644943125467114,
+              "vertical": 8.039560745606778
             }
           }
         }
@@ -601,7 +601,7 @@
       "impact": "low",
       "candidates": [
         {
-          "value": -0.9601316128059598,
+          "value": -0.9556847233560772,
           "unit": "m",
           "status": "estimated",
           "class": "D",
@@ -620,11 +620,11 @@
           },
           "confidence": "medium",
           "range": [
-            -1.0128708305485172,
-            -0.9073923950634025
+            -1.0082698594762278,
+            -0.9030995872359266
           ],
           "how_to_measure": "Measure from front hub centre to the top edge of the windshield glass (plumb), +-10 mm.",
-          "notes": "1-sigma 0.02637 m; range = +-2 sigma (localisation + scale + perspective).",
+          "notes": "1-sigma 0.02629 m; range = +-2 sigma (localisation + scale + perspective).",
           "derivation": {
             "script": "scripts/domains/photo_measure_side.py",
             "function": "main",
@@ -638,8 +638,8 @@
               "break_px": 267.0
             },
             "scale_mm_per_px": {
-              "horizontal": 8.670273988153157,
-              "vertical": 8.764766322988079
+              "horizontal": 8.644943125467114,
+              "vertical": 8.039560745606778
             }
           }
         }
@@ -651,7 +651,7 @@
       "impact": "low",
       "candidates": [
         {
-          "value": 0.7577830029422682,
+          "value": 0.7162704563749877,
           "unit": "rad",
           "status": "estimated",
           "class": "D",
@@ -670,8 +670,8 @@
           },
           "confidence": "medium",
           "range": [
-            0.687969832862495,
-            0.8275961730220414
+            0.6464572862952145,
+            0.7860836264547608
           ],
           "how_to_measure": "Inclinometer on the glass at the centreline.",
           "notes": "Silhouette (outer glass) line, not the glass at centreline; 2 deg sigma. 1-sigma 0.03491 rad; range = +-2 sigma (localisation + scale + perspective).",
@@ -693,8 +693,8 @@
               "rms_px": 1.2735616810222934
             },
             "scale_mm_per_px": {
-              "horizontal": 8.670273988153157,
-              "vertical": 8.764766322988079
+              "horizontal": 8.644943125467114,
+              "vertical": 8.039560745606778
             }
           }
         }
@@ -706,7 +706,7 @@
       "impact": "medium",
       "candidates": [
         {
-          "value": 0.3516512468524677,
+          "value": 0.32552212489763205,
           "unit": "rad",
           "status": "estimated",
           "class": "D",
@@ -725,8 +725,8 @@
           },
           "confidence": "low",
           "range": [
-            0.2643847842527512,
-            0.43891770945218417
+            0.23825566229791556,
+            0.41278858749734854
           ],
           "how_to_measure": "Inclinometer on the hatch glass at the centreline.",
           "notes": "Includes the effect of the roof spoiler on the silhouette; 2.5 deg sigma. 1-sigma 0.04363 rad; range = +-2 sigma (localisation + scale + perspective).",
@@ -753,8 +753,8 @@
               "rms_px": 2.2783884020587033
             },
             "scale_mm_per_px": {
-              "horizontal": 8.670273988153157,
-              "vertical": 8.764766322988079
+              "horizontal": 8.644943125467114,
+              "vertical": 8.039560745606778
             }
           }
         }
@@ -766,7 +766,7 @@
       "impact": "low",
       "candidates": [
         {
-          "value": -2.4340781907919964,
+          "value": -2.4253250546854863,
           "unit": "m",
           "status": "estimated",
           "class": "D",
@@ -785,11 +785,11 @@
           },
           "confidence": "medium",
           "range": [
-            -2.4868174085345536,
-            -2.381338973049439
+            -2.4779101908056367,
+            -2.372739918565336
           ],
           "how_to_measure": "Plumb from the roof-spoiler trailing edge, measure from front hub centre.",
-          "notes": "1-sigma 0.02637 m; range = +-2 sigma (localisation + scale + perspective).",
+          "notes": "1-sigma 0.02629 m; range = +-2 sigma (localisation + scale + perspective).",
           "derivation": {
             "script": "scripts/domains/photo_measure_side.py",
             "function": "main",
@@ -803,8 +803,8 @@
               "break_px": 437.0
             },
             "scale_mm_per_px": {
-              "horizontal": 8.670273988153157,
-              "vertical": 8.764766322988079
+              "horizontal": 8.644943125467114,
+              "vertical": 8.039560745606778
             }
           }
         }
@@ -816,7 +816,7 @@
       "impact": "medium",
       "candidates": [
         {
-          "value": 0.9566884021644556,
+          "value": 0.9103891790133786,
           "unit": "m",
           "status": "estimated",
           "class": "D",
@@ -833,13 +833,13 @@
             "engine": "1.5T",
             "notes": "Exterior body identical 2022-2024 per Honda spec tables (length, width, height, wheelbase, track unchanged)"
           },
-          "confidence": "low",
+          "confidence": "medium",
           "range": [
-            0.3000627728335772,
-            1.613314031495334
+            0.8630029324959875,
+            0.9577754255307697
           ],
           "how_to_measure": "Straightedge across the hood above the front hub; tape to floor (+-5 mm).",
-          "notes": "1-sigma 0.3283 m; range = +-2 sigma (localisation + scale + perspective).",
+          "notes": "1-sigma 0.02369 m; range = +-2 sigma (localisation + scale + perspective).",
           "derivation": {
             "script": "scripts/domains/photo_measure_side.py",
             "function": "main",
@@ -854,8 +854,8 @@
               "row": 79
             },
             "scale_mm_per_px": {
-              "horizontal": 8.670273988153157,
-              "vertical": 8.764766322988079
+              "horizontal": 8.644943125467114,
+              "vertical": 8.039560745606778
             }
           }
         }
@@ -867,12 +867,12 @@
       "impact": "medium",
       "candidates": [
         {
-          "value": 0.19853611522598685,
+          "value": 0.2149671745183923,
           "unit": "m",
           "status": "estimated",
           "class": "D",
           "source_id": "prop:hic-2022-hatch-strg-profile",
-          "locator": "image px {\"cols\": [304, 324], \"rows_median\": 165.0}",
+          "locator": "image px {\"cols\": [305, 325], \"rows_median\": 165.0}",
           "evidence": "Image feature located by algorithm: lowest opaque row (median over 21 columns) at mid-wheelbase",
           "as_printed": "",
           "applicability": {
@@ -884,13 +884,13 @@
             "engine": "1.5T",
             "notes": "Exterior body identical 2022-2024 per Honda spec tables (length, width, height, wheelbase, track unchanged)"
           },
-          "confidence": "low",
+          "confidence": "medium",
           "range": [
-            0.058736687496884876,
-            0.33833554295508883
+            0.19910171625744108,
+            0.23083263277934354
           ],
           "how_to_measure": "Tape from floor to the sill lower edge at mid-wheelbase, both sides (+-3 mm).",
-          "notes": "Not the same quantity as the published minimum ground clearance (134 mm, no-load). 1-sigma 0.0699 m; range = +-2 sigma (localisation + scale + perspective).",
+          "notes": "Not the same quantity as the published minimum ground clearance (134 mm, no-load). 1-sigma 0.007933 m; range = +-2 sigma (localisation + scale + perspective).",
           "derivation": {
             "script": "scripts/domains/photo_measure_side.py",
             "function": "main",
@@ -902,14 +902,14 @@
             "algorithm": "lowest opaque row (median over 21 columns) at mid-wheelbase",
             "pixels": {
               "cols": [
-                304,
-                324
+                305,
+                325
               ],
               "rows_median": 165.0
             },
             "scale_mm_per_px": {
-              "horizontal": 8.670273988153157,
-              "vertical": 8.764766322988079
+              "horizontal": 8.644943125467114,
+              "vertical": 8.039560745606778
             }
           }
         }
@@ -921,12 +921,12 @@
       "impact": "medium",
       "candidates": [
         {
-          "value": 0.3140702597009457,
+          "value": 0.3206018729495859,
           "unit": "m",
           "status": "estimated",
           "class": "D",
           "source_id": "prop:hic-2022-hatch-strg-profile",
-          "locator": "image px {\"cx\": 156.2616756843141, \"cy\": 152.31834287219525}",
+          "locator": "image px {\"cx\": 156.45158927179887, \"cy\": 152.36063806546673}",
           "evidence": "Image feature located by algorithm: least-squares circle fit to tyre edge",
           "as_printed": "",
           "applicability": {
@@ -938,13 +938,13 @@
             "engine": "1.5T",
             "notes": "Exterior body identical 2022-2024 per Honda spec tables (length, width, height, wheelbase, track unchanged)"
           },
-          "confidence": "low",
+          "confidence": "medium",
           "range": [
-            0.09818956912041216,
-            0.5299509502814792
+            0.3008102007792792,
+            0.3403935451198926
           ],
           "how_to_measure": "Tape from floor to hub centre (+-2 mm).",
-          "notes": "In a render the tyre is undeflected; a real loaded tyre sits ~10-20 mm lower. Equals the unloaded tyre radius here. 1-sigma 0.1079 m; range = +-2 sigma (localisation + scale + perspective).",
+          "notes": "In a render the tyre is undeflected; a real loaded tyre sits ~10-20 mm lower. Equals the unloaded tyre radius here. 1-sigma 0.009896 m; range = +-2 sigma (localisation + scale + perspective).",
           "derivation": {
             "script": "scripts/domains/photo_measure_side.py",
             "function": "main",
@@ -955,12 +955,12 @@
             },
             "algorithm": "least-squares circle fit to tyre edge",
             "pixels": {
-              "cx": 156.2616756843141,
-              "cy": 152.31834287219525
+              "cx": 156.45158927179887,
+              "cy": 152.36063806546673
             },
             "scale_mm_per_px": {
-              "horizontal": 8.670273988153157,
-              "vertical": 8.764766322988079
+              "horizontal": 8.644943125467114,
+              "vertical": 8.039560745606778
             }
           }
         }
@@ -972,12 +972,12 @@
       "impact": "high",
       "candidates": [
         {
-          "value": 0.40158706858133775,
+          "value": 0.36065982481399955,
           "unit": "m",
           "status": "estimated",
           "class": "D",
           "source_id": "prop:hic-2022-hatch-strg-profile",
-          "locator": "image px {\"col\": 156, \"arch_row\": 107, \"cy\": 152.31834287219525}",
+          "locator": "image px {\"col\": 156, \"arch_row\": 108, \"cy\": 152.36063806546673}",
           "evidence": "Image feature located by algorithm: first run of >=3 body-coloured px (Lab distance < 30 to door-box median) scanning up from tyre top",
           "as_printed": "",
           "applicability": {
@@ -989,13 +989,13 @@
             "engine": "1.5T",
             "notes": "Exterior body identical 2022-2024 per Honda spec tables (length, width, height, wheelbase, track unchanged)"
           },
-          "confidence": "low",
+          "confidence": "medium",
           "range": [
-            0.1283094733792292,
-            0.6748646637834463
+            0.33520533810718134,
+            0.38611431152081777
           ],
           "how_to_measure": "Tape from hub centre to the arch lip directly above it, car at curb weight (+-2 mm). Primary ride-height reference.",
-          "notes": "1-sigma 0.1366 m; range = +-2 sigma (localisation + scale + perspective).",
+          "notes": "1-sigma 0.01273 m; range = +-2 sigma (localisation + scale + perspective).",
           "derivation": {
             "script": "scripts/domains/photo_measure_side.py",
             "function": "main",
@@ -1007,12 +1007,12 @@
             "algorithm": "first run of >=3 body-coloured px (Lab distance < 30 to door-box median) scanning up from tyre top",
             "pixels": {
               "col": 156,
-              "arch_row": 107,
-              "cy": 152.31834287219525
+              "arch_row": 108,
+              "cy": 152.36063806546673
             },
             "scale_mm_per_px": {
-              "horizontal": 8.670273988153157,
-              "vertical": 8.764766322988079
+              "horizontal": 8.644943125467114,
+              "vertical": 8.039560745606778
             }
           }
         }
@@ -1024,12 +1024,12 @@
       "impact": "high",
       "candidates": [
         {
-          "value": 0.7156573282822836,
+          "value": 0.6812616977635854,
           "unit": "m",
           "status": "estimated",
           "class": "D",
           "source_id": "prop:hic-2022-hatch-strg-profile",
-          "locator": "image px {\"col\": 156, \"arch_row\": 107}",
+          "locator": "image px {\"col\": 156, \"arch_row\": 108}",
           "evidence": "Image feature located by algorithm: as above",
           "as_printed": "",
           "applicability": {
@@ -1041,13 +1041,13 @@
             "engine": "1.5T",
             "notes": "Exterior body identical 2022-2024 per Honda spec tables (length, width, height, wheelbase, track unchanged)"
           },
-          "confidence": "low",
+          "confidence": "medium",
           "range": [
-            0.22716555475455263,
-            1.2041491018100146
+            0.6426060973214462,
+            0.7199172982057245
           ],
           "how_to_measure": "Tape from floor to the arch lip above the hub centre (+-2 mm).",
-          "notes": "1-sigma 0.2442 m; range = +-2 sigma (localisation + scale + perspective).",
+          "notes": "1-sigma 0.01933 m; range = +-2 sigma (localisation + scale + perspective).",
           "derivation": {
             "script": "scripts/domains/photo_measure_side.py",
             "function": "main",
@@ -1059,11 +1059,11 @@
             "algorithm": "as above",
             "pixels": {
               "col": 156,
-              "arch_row": 107
+              "arch_row": 108
             },
             "scale_mm_per_px": {
-              "horizontal": 8.670273988153157,
-              "vertical": 8.764766322988079
+              "horizontal": 8.644943125467114,
+              "vertical": 8.039560745606778
             }
           }
         }
@@ -1075,12 +1075,12 @@
       "impact": "medium",
       "candidates": [
         {
-          "value": 0.3116130878251355,
+          "value": 0.32256648011526473,
           "unit": "m",
           "status": "estimated",
           "class": "D",
           "source_id": "prop:hic-2022-hatch-strg-profile",
-          "locator": "image px {\"cx\": 471.7073010171507, \"cy\": 152.59868940800254}",
+          "locator": "image px {\"cx\": 472.82151331941594, \"cy\": 152.1162705896998}",
           "evidence": "Image feature located by algorithm: least-squares circle fit to tyre edge",
           "as_printed": "",
           "applicability": {
@@ -1092,13 +1092,13 @@
             "engine": "1.5T",
             "notes": "Exterior body identical 2022-2024 per Honda spec tables (length, width, height, wheelbase, track unchanged)"
           },
-          "confidence": "low",
+          "confidence": "medium",
           "range": [
-            0.09741577955895026,
-            0.5258103960913207
+            0.30269346941278225,
+            0.3424394908177472
           ],
           "how_to_measure": "Tape from floor to hub centre (+-2 mm).",
-          "notes": "In a render the tyre is undeflected; a real loaded tyre sits ~10-20 mm lower. Equals the unloaded tyre radius here. 1-sigma 0.1071 m; range = +-2 sigma (localisation + scale + perspective).",
+          "notes": "In a render the tyre is undeflected; a real loaded tyre sits ~10-20 mm lower. Equals the unloaded tyre radius here. 1-sigma 0.009937 m; range = +-2 sigma (localisation + scale + perspective).",
           "derivation": {
             "script": "scripts/domains/photo_measure_side.py",
             "function": "main",
@@ -1109,12 +1109,12 @@
             },
             "algorithm": "least-squares circle fit to tyre edge",
             "pixels": {
-              "cx": 471.7073010171507,
-              "cy": 152.59868940800254
+              "cx": 472.82151331941594,
+              "cy": 152.1162705896998
             },
             "scale_mm_per_px": {
-              "horizontal": 8.670273988153157,
-              "vertical": 8.764766322988079
+              "horizontal": 8.644943125467114,
+              "vertical": 8.039560745606778
             }
           }
         }
@@ -1126,12 +1126,12 @@
       "impact": "high",
       "candidates": [
         {
-          "value": 0.3952794741341598,
+          "value": 0.35869521764832074,
           "unit": "m",
           "status": "estimated",
           "class": "D",
           "source_id": "prop:hic-2022-hatch-strg-profile",
-          "locator": "image px {\"col\": 472, \"arch_row\": 108, \"cy\": 152.59868940800254}",
+          "locator": "image px {\"col\": 473, \"arch_row\": 108, \"cy\": 152.1162705896998}",
           "evidence": "Image feature located by algorithm: first run of >=3 body-coloured px (Lab distance < 30 to door-box median) scanning up from tyre top",
           "as_printed": "",
           "applicability": {
@@ -1143,13 +1143,13 @@
             "engine": "1.5T",
             "notes": "Exterior body identical 2022-2024 per Honda spec tables (length, width, height, wheelbase, track unchanged)"
           },
-          "confidence": "low",
+          "confidence": "medium",
           "range": [
-            0.12631901692946051,
-            0.6642399313388592
+            0.33331091568506155,
+            0.38407951961157993
           ],
           "how_to_measure": "Tape from hub centre to the arch lip directly above it, car at curb weight (+-2 mm). Primary ride-height reference.",
-          "notes": "1-sigma 0.1345 m; range = +-2 sigma (localisation + scale + perspective).",
+          "notes": "1-sigma 0.01269 m; range = +-2 sigma (localisation + scale + perspective).",
           "derivation": {
             "script": "scripts/domains/photo_measure_side.py",
             "function": "main",
@@ -1160,13 +1160,13 @@
             },
             "algorithm": "first run of >=3 body-coloured px (Lab distance < 30 to door-box median) scanning up from tyre top",
             "pixels": {
-              "col": 472,
+              "col": 473,
               "arch_row": 108,
-              "cy": 152.59868940800254
+              "cy": 152.1162705896998
             },
             "scale_mm_per_px": {
-              "horizontal": 8.670273988153157,
-              "vertical": 8.764766322988079
+              "horizontal": 8.644943125467114,
+              "vertical": 8.039560745606778
             }
           }
         }
@@ -1178,12 +1178,12 @@
       "impact": "high",
       "candidates": [
         {
-          "value": 0.7068925619592954,
+          "value": 0.6812616977635854,
           "unit": "m",
           "status": "estimated",
           "class": "D",
           "source_id": "prop:hic-2022-hatch-strg-profile",
-          "locator": "image px {\"col\": 472, \"arch_row\": 108}",
+          "locator": "image px {\"col\": 473, \"arch_row\": 108}",
           "evidence": "Image feature located by algorithm: as above",
           "as_printed": "",
           "applicability": {
@@ -1195,13 +1195,13 @@
             "engine": "1.5T",
             "notes": "Exterior body identical 2022-2024 per Honda spec tables (length, width, height, wheelbase, track unchanged)"
           },
-          "confidence": "low",
+          "confidence": "medium",
           "range": [
-            0.224410534079249,
-            1.1893745898393417
+            0.6426060973214462,
+            0.7199172982057245
           ],
           "how_to_measure": "Tape from floor to the arch lip above the hub centre (+-2 mm).",
-          "notes": "1-sigma 0.2412 m; range = +-2 sigma (localisation + scale + perspective).",
+          "notes": "1-sigma 0.01933 m; range = +-2 sigma (localisation + scale + perspective).",
           "derivation": {
             "script": "scripts/domains/photo_measure_side.py",
             "function": "main",
@@ -1212,29 +1212,29 @@
             },
             "algorithm": "as above",
             "pixels": {
-              "col": 472,
+              "col": 473,
               "arch_row": 108
             },
             "scale_mm_per_px": {
-              "horizontal": 8.670273988153157,
-              "vertical": 8.764766322988079
+              "horizontal": 8.644943125467114,
+              "vertical": 8.039560745606778
             }
           }
         }
       ]
     },
-    "proportions.rim_to_tyre_ratio_rear": {
-      "description": "rear visible rim diameter / tyre diameter (photo)",
+    "proportions.rim_to_tyre_ratio_front": {
+      "description": "front visible rim diameter / tyre diameter (photo)",
       "unit": "1",
       "impact": "low",
       "candidates": [
         {
-          "value": 0.6689713813413677,
+          "value": 0.7432436045917926,
           "unit": "1",
           "status": "estimated",
           "class": "D",
           "source_id": "prop:hic-2022-hatch-strg-profile",
-          "locator": "image px {\"rim_r_px\": 28.899999618530273, \"tyre_r_px\": 43.20065166402532}",
+          "locator": "image px {\"rim_r_px\": 28.688912844990057, \"tyre_r_px\": 38.59960942515839}",
           "evidence": "Image feature located by algorithm: concentric HoughCircles",
           "as_printed": "",
           "applicability": {
@@ -1248,11 +1248,11 @@
           },
           "confidence": "medium",
           "range": [
-            0.6226757834056201,
-            0.7152669792771152
+            0.6914296088082901,
+            0.7950576003752952
           ],
           "how_to_measure": "Measure rim flange and tyre diameters.",
-          "notes": "Nominal 18 in / 645.2 mm = 0.709; visible rim lip is slightly smaller than the bead seat diameter. 1-sigma 0.02315 1; range = +-2 sigma (localisation + scale + perspective).",
+          "notes": "Nominal 18 in / 645.2 mm = 0.709; visible rim lip is slightly smaller than the bead seat diameter. 1-sigma 0.02591 1; range = +-2 sigma (localisation + scale + perspective).",
           "derivation": {
             "script": "scripts/domains/photo_measure_side.py",
             "function": "main",
@@ -1263,12 +1263,63 @@
             },
             "algorithm": "concentric HoughCircles",
             "pixels": {
-              "rim_r_px": 28.899999618530273,
-              "tyre_r_px": 43.20065166402532
+              "rim_r_px": 28.688912844990057,
+              "tyre_r_px": 38.59960942515839
             },
             "scale_mm_per_px": {
-              "horizontal": 8.670273988153157,
-              "vertical": 8.764766322988079
+              "horizontal": 8.644943125467114,
+              "vertical": 8.039560745606778
+            }
+          }
+        }
+      ]
+    },
+    "proportions.rim_to_tyre_ratio_rear": {
+      "description": "rear visible rim diameter / tyre diameter (photo)",
+      "unit": "1",
+      "impact": "low",
+      "candidates": [
+        {
+          "value": 0.7393066153556677,
+          "unit": "1",
+          "status": "estimated",
+          "class": "D",
+          "source_id": "prop:hic-2022-hatch-strg-profile",
+          "locator": "image px {\"rim_r_px\": 28.40763912574396, \"tyre_r_px\": 38.42470571168572}",
+          "evidence": "Image feature located by algorithm: concentric HoughCircles",
+          "as_printed": "",
+          "applicability": {
+            "year": "2022",
+            "market": "US",
+            "trim": "Sport Touring",
+            "body": "hatchback",
+            "gearbox": "n/a (exterior render)",
+            "engine": "1.5T",
+            "notes": "Exterior body identical 2022-2024 per Honda spec tables (length, width, height, wheelbase, track unchanged)"
+          },
+          "confidence": "medium",
+          "range": [
+            0.6872567697431413,
+            0.791356460968194
+          ],
+          "how_to_measure": "Measure rim flange and tyre diameters.",
+          "notes": "Nominal 18 in / 645.2 mm = 0.709; visible rim lip is slightly smaller than the bead seat diameter. 1-sigma 0.02602 1; range = +-2 sigma (localisation + scale + perspective).",
+          "derivation": {
+            "script": "scripts/domains/photo_measure_side.py",
+            "function": "main",
+            "inputs": {
+              "image": "https://www.hondainfocenter.com/-/media/Honda-Sales-Tool-Media-Folder/Images/2022-Civic-Hatchback/Profile-Headers/22_CivicHatchback_STRG_Header_RR.ashx",
+              "dimensions.wheelbase_mm": 2735.0,
+              "tyre": "P235/40 R18 (nominal 645.2 mm)"
+            },
+            "algorithm": "concentric HoughCircles",
+            "pixels": {
+              "rim_r_px": 28.40763912574396,
+              "tyre_r_px": 38.42470571168572
+            },
+            "scale_mm_per_px": {
+              "horizontal": 8.644943125467114,
+              "vertical": 8.039560745606778
             }
           }
         }
@@ -1381,34 +1432,464 @@
   },
   "measurements": {
     "wheel_front": {
-      "hough_px": [
+      "rim_hough_px": [
         156.375,
         152.375,
         29.125
       ],
-      "cx": 156.2616756843141,
-      "cy": 152.31834287219525,
-      "r": 28.475895964565716,
-      "fit_resid_px": 0.6853591820060184,
-      "n_edge_pts": 1522,
-      "ellipse_semi_x": 28.498601616007697,
-      "ellipse_semi_y": 28.518953641041694,
-      "rim_r": null
+      "rim_fit_px": [
+        156.45158927179887,
+        152.36063806546673,
+        28.688912844990057
+      ],
+      "rim_fit_resid_px": 0.6852414427470089,
+      "cx": 156.45158927179887,
+      "cy": 152.36063806546673,
+      "r": 38.59960942515839,
+      "tyre_free_fit_px": [
+        156.40162654522405,
+        156.89437235442674,
+        35.49910444956232
+      ],
+      "fit_resid_px": 0.951482099977277,
+      "n_edge_pts": 40,
+      "ray_angles_deg": [
+        28,
+        30,
+        32,
+        34,
+        36,
+        38,
+        40,
+        42,
+        44,
+        46,
+        48,
+        50,
+        52,
+        54,
+        56,
+        58,
+        60,
+        62,
+        64,
+        66,
+        114,
+        116,
+        118,
+        120,
+        122,
+        124,
+        126,
+        128,
+        130,
+        132,
+        134,
+        136,
+        138,
+        140,
+        142,
+        144,
+        146,
+        148,
+        150,
+        152
+      ],
+      "tyre_edge_pts_px": [
+        [
+          190.08,
+          170.24
+        ],
+        [
+          189.94,
+          171.69
+        ],
+        [
+          188.94,
+          172.66
+        ],
+        [
+          188.05,
+          173.68
+        ],
+        [
+          187.08,
+          174.61
+        ],
+        [
+          186.65,
+          175.95
+        ],
+        [
+          185.76,
+          176.96
+        ],
+        [
+          184.86,
+          177.94
+        ],
+        [
+          183.95,
+          178.91
+        ],
+        [
+          182.94,
+          179.79
+        ],
+        [
+          181.95,
+          180.68
+        ],
+        [
+          180.95,
+          181.56
+        ],
+        [
+          179.66,
+          182.06
+        ],
+        [
+          178.67,
+          182.94
+        ],
+        [
+          177.74,
+          183.92
+        ],
+        [
+          176.27,
+          184.08
+        ],
+        [
+          177.08,
+          188.1
+        ],
+        [
+          175.45,
+          188.09
+        ],
+        [
+          173.88,
+          188.1
+        ],
+        [
+          172.74,
+          188.93
+        ],
+        [
+          140.1,
+          189.09
+        ],
+        [
+          138.55,
+          189.06
+        ],
+        [
+          137.03,
+          188.89
+        ],
+        [
+          135.82,
+          188.1
+        ],
+        [
+          136.63,
+          184.09
+        ],
+        [
+          135.16,
+          183.92
+        ],
+        [
+          134.21,
+          182.98
+        ],
+        [
+          133.05,
+          182.32
+        ],
+        [
+          132.03,
+          181.46
+        ],
+        [
+          131.02,
+          180.6
+        ],
+        [
+          130.04,
+          179.71
+        ],
+        [
+          129.05,
+          178.82
+        ],
+        [
+          128.05,
+          177.93
+        ],
+        [
+          127.14,
+          176.96
+        ],
+        [
+          126.25,
+          175.95
+        ],
+        [
+          125.37,
+          174.94
+        ],
+        [
+          124.94,
+          173.61
+        ],
+        [
+          124.04,
+          172.61
+        ],
+        [
+          123.09,
+          171.62
+        ],
+        [
+          122.93,
+          170.18
+        ]
+      ],
+      "ellipse_semi_x": 37.02052787955051,
+      "ellipse_semi_y": 40.25116366381029,
+      "rim_r": 28.688912844990057
     },
     "wheel_rear": {
-      "hough_px": [
-        471.375,
-        152.625,
-        42.849998474121094
+      "rim_hough_px": [
+        472.875,
+        152.125,
+        28.899999618530273
       ],
-      "cx": 471.7073010171507,
-      "cy": 152.59868940800254,
-      "r": 43.20065166402532,
-      "fit_resid_px": 0.38957316294323685,
-      "n_edge_pts": 493,
-      "ellipse_semi_x": 43.665593930868816,
-      "ellipse_semi_y": 42.8672447433978,
-      "rim_r": 28.899999618530273
+      "rim_fit_px": [
+        472.82151331941594,
+        152.1162705896998,
+        28.40763912574396
+      ],
+      "rim_fit_resid_px": 0.6962487688385616,
+      "cx": 472.82151331941594,
+      "cy": 152.1162705896998,
+      "r": 38.42470571168572,
+      "tyre_free_fit_px": [
+        471.1514986799733,
+        155.88009099820977,
+        35.856924995449326
+      ],
+      "fit_resid_px": 1.0713279011734582,
+      "n_edge_pts": 40,
+      "ray_angles_deg": [
+        28,
+        30,
+        32,
+        34,
+        36,
+        38,
+        40,
+        42,
+        44,
+        46,
+        48,
+        50,
+        52,
+        54,
+        56,
+        58,
+        60,
+        62,
+        64,
+        66,
+        114,
+        116,
+        118,
+        120,
+        122,
+        124,
+        126,
+        128,
+        130,
+        132,
+        134,
+        136,
+        138,
+        140,
+        142,
+        144,
+        146,
+        148,
+        150,
+        152
+      ],
+      "tyre_edge_pts_px": [
+        [
+          505.08,
+          169.27
+        ],
+        [
+          504.94,
+          170.66
+        ],
+        [
+          504.07,
+          171.64
+        ],
+        [
+          503.71,
+          172.95
+        ],
+        [
+          502.88,
+          173.95
+        ],
+        [
+          501.98,
+          174.9
+        ],
+        [
+          501.07,
+          175.82
+        ],
+        [
+          500.4,
+          176.94
+        ],
+        [
+          499.57,
+          177.95
+        ],
+        [
+          498.72,
+          178.94
+        ],
+        [
+          497.87,
+          179.94
+        ],
+        [
+          496.95,
+          180.87
+        ],
+        [
+          495.43,
+          181.06
+        ],
+        [
+          494.55,
+          182.03
+        ],
+        [
+          493.61,
+          182.94
+        ],
+        [
+          492.18,
+          183.1
+        ],
+        [
+          491.27,
+          184.07
+        ],
+        [
+          490.26,
+          184.91
+        ],
+        [
+          489.03,
+          185.34
+        ],
+        [
+          488.84,
+          188.09
+        ],
+        [
+          456.44,
+          188.92
+        ],
+        [
+          455.27,
+          188.1
+        ],
+        [
+          453.7,
+          188.08
+        ],
+        [
+          452.06,
+          188.08
+        ],
+        [
+          450.34,
+          188.1
+        ],
+        [
+          448.56,
+          188.08
+        ],
+        [
+          450.33,
+          183.08
+        ],
+        [
+          449.04,
+          182.55
+        ],
+        [
+          448.03,
+          181.66
+        ],
+        [
+          447.02,
+          180.77
+        ],
+        [
+          445.95,
+          179.95
+        ],
+        [
+          444.94,
+          179.04
+        ],
+        [
+          443.96,
+          178.1
+        ],
+        [
+          443.0,
+          177.14
+        ],
+        [
+          442.06,
+          176.15
+        ],
+        [
+          441.3,
+          175.01
+        ],
+        [
+          440.4,
+          173.98
+        ],
+        [
+          439.46,
+          172.96
+        ],
+        [
+          438.45,
+          171.96
+        ],
+        [
+          437.37,
+          170.97
+        ]
+      ],
+      "ellipse_semi_x": 37.37768894273751,
+      "ellipse_semi_y": 39.74927086444554,
+      "rim_r": 28.40763912574396
     },
     "image": {
       "url": "https://www.hondainfocenter.com/-/media/Honda-Sales-Tool-Media-Folder/Images/2022-Civic-Hatchback/Profile-Headers/22_CivicHatchback_STRG_Header_RR.ashx",
@@ -1426,13 +1907,13 @@
       "roof_row": 25
     },
     "scale": {
-      "s_wheelbase_mm_per_px": 8.670273988153157,
-      "s_tyre_mm_per_px": 8.940721851196834,
-      "s_vertical_mm_per_px": 8.764766322988079,
-      "wheel_ellipse_aspect_y_over_x": 0.989219069698745,
-      "front_rear_tyre_radius_ratio": 0.6591543152178554,
-      "relative_scale_error_1sigma": 0.3431151792053298,
-      "wheelbase_px": 315.4456253328366,
+      "s_wheelbase_mm_per_px": 8.644943125467114,
+      "s_tyre_mm_per_px": 8.672250862425411,
+      "s_vertical_mm_per_px": 8.039560745606778,
+      "wheel_ellipse_aspect_y_over_x": 1.0753004298389246,
+      "front_rear_tyre_radius_ratio": 1.004551855641655,
+      "relative_scale_error_1sigma": 0.02526503869026301,
+      "wheelbase_px": 316.3699240476171,
       "inputs": {
         "wheelbase_mm": 2735.0,
         "tyre_nominal_diameter_mm": 645.2,
@@ -1441,7 +1922,7 @@
       }
     },
     "ground": {
-      "y_ground_fit_px": 188.15161533231864,
+      "y_ground_fit_px": 192.23867159171118,
       "lowest_opaque_rows_px": [
         188.5,
         188.35714285714286
@@ -1470,15 +1951,15 @@
       }
     },
     "body_colour_lab": [
-      96.0,
-      187.0,
-      171.0
+      99.0,
+      188.0,
+      172.0
     ],
     "door_box_px": [
-      266,
-      94,
-      361,
-      130
+      267,
+      90,
+      362,
+      129
     ]
   },
   "updated": "2026-10-03"

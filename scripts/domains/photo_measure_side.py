@@ -141,10 +141,10 @@ def fit_wheels(rgba, rim_r_guess_px, tyre_r_guess_px):
         pts = np.array(pts)
         cx, cy, r, sd = circle_lsq(pts)
         r_fixed = float(np.mean(np.hypot(pts[:, 0] - rcx, pts[:, 1] - rcy)))
-        (ecx, ecy), (ea, eb), ang = cv2.fitEllipse(pts.astype(np.float32))
-        th = math.radians(ang)
-        ax_x = math.hypot(ea / 2 * math.cos(th), eb / 2 * math.sin(th))
-        ax_y = math.hypot(ea / 2 * math.sin(th), eb / 2 * math.cos(th))
+        # axis-aligned ellipse centred on the rim centre: (dx/ax)^2 + (dy/ay)^2 = 1 (linear in 1/ax^2, 1/ay^2)
+        dxs, dys = pts[:, 0] - rcx, pts[:, 1] - rcy
+        (ia, ib), *_ = np.linalg.lstsq(np.c_[dxs ** 2, dys ** 2], np.ones(len(dxs)), rcond=None)
+        ax_x, ax_y = 1 / math.sqrt(ia), 1 / math.sqrt(ib)
         out.append(dict(rim_hough_px=[float(hx) / UP, float(hy) / UP, float(hr) / UP],
                         rim_fit_px=[rcx, rcy, rr], rim_fit_resid_px=rsd,
                         cx=rcx, cy=rcy, r=r_fixed,
