@@ -1,0 +1,188 @@
+{
+  "domain": "mass_inertia",
+  "title": "Mass and inertia",
+  "schema_version": 1,
+  "updated": "2026-10-03",
+  "sources": {
+    "mass:hondanews-ca-2024-hatch-specs": {
+      "title": "2024 Honda Civic Hatchback Specifications (release, April 4, 2024)",
+      "url": "https://hondanews.ca/en-CA/releases/release-1128768177ab00a73471b1938c152ddf-2024-honda-civic-hatchback-specifications",
+      "publisher": "Honda Canada Inc. (Honda Canada News)",
+      "class": "A",
+      "accessed": "2026-10-03",
+      "access_method": "rendered",
+      "applicability": "2024 Civic Hatchback, Canada, Sport and Sport Touring columns (1.5T; CVT, MT on Sport Touring)",
+      "notes": "",
+      "cache_file": "cache/pages/22157798d6e48e1c.txt"
+    },
+    "mass:hondainfocenter-us-2024-hatch-specs": {
+      "title": "2024 Civic Hatchback - Specifications (Honda Information Center feature guide)",
+      "url": "https://www.hondainfocenter.com/2024/Civic-Hatchback/Feature-Guide/Civic-Hatchback-Specifications/",
+      "publisher": "American Honda Motor Co., Inc.",
+      "class": "A",
+      "accessed": "2026-10-03",
+      "access_method": "static",
+      "applicability": "2024 Civic Hatchback, US market, LX / Sport / EX-L / Sport Touring columns; page footer: 'All information contained herein applies to U.S. veh[icles]'",
+      "notes": "Column order in the HTML table is LX, Sport, EX-L, Sport Touring (data-model-identifier 1..4); the 6MT weight-distribution row has values only in columns 2 (Sport) and 4 (Sport Touring), verified in cached HTML cache/pages/b67f7f855816944e.html.",
+      "cache_file": "cache/pages/b67f7f855816944e.txt"
+    }
+  },
+  "parameters": {
+    "mass.curb_mass": {
+      "description": "Curb mass (manufacturer curb weight), 2024 Sport Touring hatchback 6MT",
+      "unit": "kg",
+      "impact": "critical",
+      "candidates": [
+        {
+          "printed": {
+            "value": 1382,
+            "unit": "kg"
+          },
+          "value": 1382.0,
+          "unit": "kg",
+          "status": "confirmed",
+          "class": "A",
+          "source_id": "mass:hondanews-ca-2024-hatch-specs",
+          "locator": "DIMENSIONS table, row 'Curb weight – MT/CVT (kg)', SPORT TOURING column",
+          "evidence": "Curb weight – MT/CVT (kg) NA/1391 1382/1412",
+          "as_printed": "1382 (MT, Sport Touring)",
+          "applicability": {
+            "year": "2024",
+            "market": "CA",
+            "trim": "Sport Touring",
+            "body": "hatchback",
+            "gearbox": "6MT",
+            "engine": "1.5T",
+            "notes": ""
+          },
+          "confidence": "high",
+          "range": null,
+          "how_to_measure": null,
+          "notes": "Canadian figure for exactly the target trim and gearbox. Columns are SPORT then SPORT TOURING; Sport is CVT-only in Canada for 2024 (NA for MT). The resolver selects the Canadian record."
+        },
+        {
+          "printed": {
+            "value": 3036,
+            "unit": "lb"
+          },
+          "value": 1377.1064353200002,
+          "unit": "kg",
+          "status": "confirmed",
+          "class": "A",
+          "source_id": "mass:hondainfocenter-us-2024-hatch-specs",
+          "locator": "Exterior Measurements table, row 'Curb Weight (6MT/CVT)', Sport Touring column",
+          "evidence": "Curb Weight (6MT/CVT) NA / 2877 lbs 2932 lbs / 2956 lbs NA / 3053 lbs 3036 lbs / 3102 lbs",
+          "as_printed": "3036 lbs (6MT, Sport Touring)",
+          "applicability": {
+            "year": "2024",
+            "market": "US",
+            "trim": "Sport Touring",
+            "body": "hatchback",
+            "gearbox": "6MT",
+            "engine": "1.5T",
+            "notes": ""
+          },
+          "confidence": "high",
+          "range": null,
+          "how_to_measure": null,
+          "notes": "US figure for the same trim/gearbox; 3036 lb = 1377.1 kg, about 5 kg below the Canadian 1382 kg. The difference is small (0.4 %) and may come from Canadian-market equipment or rounding/definition differences; both are kept, the Canadian value is the target-market value."
+        }
+      ]
+    },
+    "mass.front_fraction": {
+      "description": "Static front-axle share of curb mass",
+      "unit": "1",
+      "impact": "critical",
+      "candidates": [
+        {
+          "printed": {
+            "value": 59,
+            "unit": "%"
+          },
+          "value": 0.59,
+          "unit": "1",
+          "status": "confirmed",
+          "class": "A",
+          "source_id": "mass:hondainfocenter-us-2024-hatch-specs",
+          "locator": "Exterior Measurements table, row 'Weight Distribution (front/rear, 6MT)', Sport Touring column (4th)",
+          "evidence": "Weight Distribution (front/rear, 6MT) 60% / 40% 59% / 41%",
+          "as_printed": "59% / 41%",
+          "applicability": {
+            "year": "2024",
+            "market": "US",
+            "trim": "Sport Touring",
+            "body": "hatchback",
+            "gearbox": "6MT",
+            "engine": "1.5T",
+            "notes": ""
+          },
+          "confidence": "high",
+          "range": null,
+          "how_to_measure": null,
+          "notes": "Published to whole percent, so the true value lies in about 0.585-0.595. The two printed values sit in the Sport (60/40) and Sport Touring (59/41) columns; LX and EX-L cells are empty (no 6MT), checked in raw HTML. US-market figure; no Canadian distribution figure found (Honda Canada spec release lists none). Same trim/gearbox/body/engine, so mechanically applicable to the Canadian car (CA curb mass differs by ~5 kg)."
+        }
+      ]
+    },
+    "mass.fuel_capacity": {
+      "description": "Fuel tank capacity",
+      "unit": "m3",
+      "impact": "medium",
+      "candidates": [
+        {
+          "printed": {
+            "value": 46,
+            "unit": "L"
+          },
+          "value": 0.046,
+          "unit": "m3",
+          "status": "confirmed",
+          "class": "A",
+          "source_id": "mass:hondanews-ca-2024-hatch-specs",
+          "locator": "DIMENSIONS table, row 'Fuel tank capacity (L)'",
+          "evidence": "Fuel tank capacity (L) 46 46",
+          "as_printed": "46",
+          "applicability": {
+            "year": "2024",
+            "market": "CA",
+            "trim": "Sport, Sport Touring",
+            "body": "hatchback",
+            "gearbox": "CVT and 6MT",
+            "engine": "1.5T",
+            "notes": ""
+          },
+          "confidence": "high",
+          "range": null,
+          "how_to_measure": null,
+          "notes": "Same value in both Canadian trim columns."
+        },
+        {
+          "printed": {
+            "value": 12.39,
+            "unit": "US gal"
+          },
+          "value": 0.046901252003760004,
+          "unit": "m3",
+          "status": "confirmed",
+          "class": "A",
+          "source_id": "mass:hondainfocenter-us-2024-hatch-specs",
+          "locator": "EPA Mileage Ratings / Fuel table, row 'Fuel Tank Capacity'",
+          "evidence": "Fuel Tank Capacity 12.39 gal 12.39 gal 12.39 gal 12.39 gal",
+          "as_printed": "12.39 gal",
+          "applicability": {
+            "year": "2024",
+            "market": "US",
+            "trim": "LX, Sport, EX-L, Sport Touring",
+            "body": "hatchback",
+            "gearbox": "CVT and 6MT",
+            "engine": "1.5T",
+            "notes": ""
+          },
+          "confidence": "high",
+          "range": null,
+          "how_to_measure": null,
+          "notes": "12.39 US gal = 46.9 L; Canada prints 46 L. Same tank, different rounding/unit convention (not a conflict beyond rounding: 46 L as printed vs 46.9 L)."
+        }
+      ]
+    }
+  }
+}

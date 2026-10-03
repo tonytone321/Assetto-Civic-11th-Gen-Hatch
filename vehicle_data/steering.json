@@ -1,0 +1,458 @@
+{
+  "domain": "steering",
+  "title": "Steering",
+  "schema_version": 1,
+  "updated": "2026-10-03",
+  "sources": {
+    "steer:hondanews-ca-2024-hatch-specs": {
+      "title": "2024 Honda Civic Hatchback Specifications (release, April 4, 2024)",
+      "url": "https://hondanews.ca/en-CA/releases/release-1128768177ab00a73471b1938c152ddf-2024-honda-civic-hatchback-specifications",
+      "publisher": "Honda Canada Inc. (Honda Canada News)",
+      "class": "A",
+      "accessed": "2026-10-03",
+      "access_method": "rendered",
+      "applicability": "2024 Civic Hatchback, Canada, SPORT and SPORT TOURING columns (1.5T; Sport Touring 6MT or CVT)",
+      "notes": "Steering rows are in the DIMENSIONS table, not per gearbox.",
+      "cache_file": "cache/pages/22157798d6e48e1c.txt"
+    },
+    "steer:hondanews-ca-2022-hatch-specs": {
+      "title": "2022 Civic Hatchback Specifications (release, October 12, 2021)",
+      "url": "https://hondanews.ca/en-CA/hci-automobiles/releases/release-9d4b663caef09e412c833d744c4365f9-2022-civic-hatchback-specifications",
+      "publisher": "Honda Canada Inc. (Honda Canada News)",
+      "class": "A",
+      "accessed": "2026-10-03",
+      "access_method": "static",
+      "applicability": "2022 Civic Hatchback, Canada, LX / Sport / Sport Touring columns",
+      "notes": "",
+      "cache_file": "cache/pages/344bc90bb36560a9.txt"
+    },
+    "steer:hondanews-ca-2023-hatch-specs": {
+      "title": "2023 Civic Hatchback Specifications (release, April 13, 2023)",
+      "url": "https://hondanews.ca/en-CA/hci-automobiles/releases/release-f61ab7d13cb83fb181b8bc22df100303-2023-civic-hatchback-specifications",
+      "publisher": "Honda Canada Inc. (Honda Canada News)",
+      "class": "A",
+      "accessed": "2026-10-03",
+      "access_method": "static",
+      "applicability": "2023 Civic Hatchback, Canada, LX / Sport / Sport-B / Sport Touring columns",
+      "notes": "",
+      "cache_file": "cache/pages/374416cf6bc6db5d.txt"
+    },
+    "steer:hondanews-us-2024-hatch-specs": {
+      "title": "2024 Honda Civic Hatchback Specifications & Features",
+      "url": "https://hondanews.com/en-US/honda-automobiles/releases/2024-honda-civic-hatchback-specifications-features",
+      "publisher": "American Honda Motor Co., Inc. (Honda News)",
+      "class": "A",
+      "accessed": "2026-10-03",
+      "access_method": "static",
+      "applicability": "2024 Civic Hatchback, US market, columns LX / Sport / EX-L / Sport Touring (HTML table column order verified in cache .html)",
+      "notes": "",
+      "cache_file": "cache/pages/2b1524caf89378a3.txt"
+    },
+    "steer:hondainfocenter-us-2024-hatch-specs": {
+      "title": "2024 Civic Hatchback - Specifications (Honda Information Center feature guide)",
+      "url": "https://www.hondainfocenter.com/2024/Civic-Hatchback/Feature-Guide/Civic-Hatchback-Specifications/",
+      "publisher": "American Honda Motor Co., Inc.",
+      "class": "A",
+      "accessed": "2026-10-03",
+      "access_method": "static",
+      "applicability": "2024 Civic Hatchback, US market, LX / Sport / EX-L / Sport Touring columns",
+      "notes": "Same publisher as hondanews.com US, so not an independent source; used as a consistency check.",
+      "cache_file": "cache/pages/b67f7f855816944e.txt"
+    },
+    "steer:hondanews-us-2022-hatch-specs": {
+      "title": "2022 Honda Civic Hatchback Specifications & Features",
+      "url": "https://hondanews.com/en-US/honda-automobiles/releases/release-cb177600e922c8a5fcfa01b9b80149e2-2022-honda-civic-hatchback-specifications-features",
+      "publisher": "American Honda Motor Co., Inc. (Honda News)",
+      "class": "A",
+      "accessed": "2026-10-03",
+      "access_method": "static",
+      "applicability": "2022 Civic Hatchback, US market, LX / Sport / EX-L / Sport Touring columns",
+      "notes": "Model-year check: steering rows identical to the 2024 US table.",
+      "cache_file": "cache/pages/fb1d5790fd3bfda8.txt"
+    },
+    "steer:hondanews-us-2022-hatch-debut": {
+      "title": "2022 Honda Civic Hatchback Makes Global Debut During Honda Civic Remix Virtual Performance",
+      "url": "https://hondanews.com/en-US/releases/release-53541be6030b25a47a2899aba12f09d7-2022-honda-civic-hatchback-makes-global-debut-during-honda-civic-remix-virtual-performance",
+      "publisher": "American Honda Motor Co., Inc. (Honda News)",
+      "class": "A",
+      "accessed": "2026-10-03",
+      "access_method": "static",
+      "applicability": "2022 Civic Hatchback, US market, all trims (narrative press release)",
+      "notes": "",
+      "cache_file": "cache/pages/6b8fd454f6a040ce.txt"
+    }
+  },
+  "parameters": {
+    "steering.type": {
+      "description": "Steering system type",
+      "unit": "text",
+      "impact": "medium",
+      "candidates": [
+        {
+          "value": "Variable-ratio electric power-assisted rack-and-pinion (EPS)",
+          "unit": "text",
+          "status": "confirmed",
+          "class": "A",
+          "source_id": "steer:hondanews-ca-2024-hatch-specs",
+          "locator": "CHASSIS table, row 'Variable Ratio Electric Power-Assisted Rack-and-Pinion Steering (EPS)', SPORT TOURING column",
+          "evidence": "Variable Ratio Electric Power-Assisted Rack-and-Pinion Steering (EPS) • •",
+          "as_printed": "Variable Ratio Electric Power-Assisted Rack-and-Pinion Steering (EPS)",
+          "applicability": {
+            "year": "2024",
+            "market": "CA",
+            "trim": "Sport Touring",
+            "body": "hatchback",
+            "gearbox": "6MT or CVT (row not split by gearbox)",
+            "engine": "1.5T",
+            "notes": ""
+          },
+          "confidence": "high",
+          "range": null,
+          "how_to_measure": null,
+          "notes": "Honda does not say in public material whether the EPS is column-, pinion- or dual-pinion-assisted; see steering.assist_layout."
+        },
+        {
+          "value": "Variable-ratio electric power-assisted rack-and-pinion (EPS)",
+          "unit": "text",
+          "status": "confirmed",
+          "class": "A",
+          "source_id": "steer:hondanews-us-2024-hatch-specs",
+          "locator": "CHASSIS table, row 'Variable Ratio Electric Power-Assisted Rack-and-Pinion Steering (EPS)', all four columns",
+          "evidence": "Variable Ratio Electric Power-Assisted Rack-and-Pinion Steering (EPS) • • • •",
+          "as_printed": "Variable Ratio Electric Power-Assisted Rack-and-Pinion Steering (EPS)",
+          "applicability": {
+            "year": "2024",
+            "market": "US",
+            "trim": "Sport Touring",
+            "body": "hatchback",
+            "gearbox": "6MT or CVT (row not split by gearbox)",
+            "engine": "1.5T",
+            "notes": ""
+          },
+          "confidence": "high",
+          "range": null,
+          "how_to_measure": null,
+          "notes": ""
+        }
+      ]
+    },
+    "steering.ratio_overall": {
+      "description": "Steering ratio as published by Honda (handwheel angle / road-wheel angle); Honda publishes one figure for a variable-ratio rack",
+      "unit": "1",
+      "impact": "high",
+      "candidates": [
+        {
+          "printed": {
+            "value": 11.4,
+            "unit": "ratio"
+          },
+          "value": 11.4,
+          "unit": "1",
+          "status": "confirmed",
+          "class": "A",
+          "source_id": "steer:hondanews-ca-2024-hatch-specs",
+          "locator": "DIMENSIONS table, row 'Steering ratio – (curb-to-curb) (m)', SPORT TOURING column",
+          "evidence": "Steering ratio – (curb-to-curb) (m) 11.4:1 11.4:1",
+          "as_printed": "11.4:1",
+          "applicability": {
+            "year": "2024",
+            "market": "CA",
+            "trim": "Sport Touring",
+            "body": "hatchback",
+            "gearbox": "6MT or CVT (row not split by gearbox)",
+            "engine": "1.5T",
+            "notes": ""
+          },
+          "confidence": "high",
+          "range": null,
+          "how_to_measure": null,
+          "notes": "Honda prints a single 'steering ratio' for a variable-ratio rack and does not say whether it is the on-centre or the overall (lock-to-lock average) ratio. Treated as the overall ratio because turns x 360 / (2 x ratio) gives a mean lock angle consistent with the published turning circle (cross-check registered in scripts/derivations/steering.py). Sport/Sport Touring (18-in wheels) print 11.41:1 and 2.21 turns; LX/EX-L (16/17-in) print 11.27:1 and 2.29 turns. The Canadian row label carries a copy-paste unit '(curb-to-curb) (m)'; the value is a ratio. Canadian figure is rounded to one decimal; agrees with the US 11.41:1."
+        },
+        {
+          "printed": {
+            "value": 11.41,
+            "unit": "ratio"
+          },
+          "value": 11.41,
+          "unit": "1",
+          "status": "confirmed",
+          "class": "A",
+          "source_id": "steer:hondanews-us-2024-hatch-specs",
+          "locator": "CHASSIS table, row 'Steering Ratio', 4th column (Sport Touring)",
+          "evidence": "Steering Ratio 11.27:1 11.41:1 11.27:1 11.41:1",
+          "as_printed": "11.41:1",
+          "applicability": {
+            "year": "2024",
+            "market": "US",
+            "trim": "Sport Touring",
+            "body": "hatchback",
+            "gearbox": "6MT or CVT (row not split by gearbox)",
+            "engine": "1.5T",
+            "notes": ""
+          },
+          "confidence": "high",
+          "range": null,
+          "how_to_measure": null,
+          "notes": "Honda prints a single 'steering ratio' for a variable-ratio rack and does not say whether it is the on-centre or the overall (lock-to-lock average) ratio. Treated as the overall ratio because turns x 360 / (2 x ratio) gives a mean lock angle consistent with the published turning circle (cross-check registered in scripts/derivations/steering.py). Sport/Sport Touring (18-in wheels) print 11.41:1 and 2.21 turns; LX/EX-L (16/17-in) print 11.27:1 and 2.29 turns."
+        },
+        {
+          "printed": {
+            "value": 11.41,
+            "unit": "ratio"
+          },
+          "value": 11.41,
+          "unit": "1",
+          "status": "confirmed",
+          "class": "A",
+          "source_id": "steer:hondainfocenter-us-2024-hatch-specs",
+          "locator": "Body/Suspension/Chassis table, row 'Steering Ratio', Sport Touring column",
+          "evidence": "Steering Ratio 11.27 : 1 11.41 : 1 11.27 : 1 11.41 : 1",
+          "as_printed": "11.41 : 1",
+          "applicability": {
+            "year": "2024",
+            "market": "US",
+            "trim": "Sport Touring",
+            "body": "hatchback",
+            "gearbox": "6MT or CVT (row not split by gearbox)",
+            "engine": "1.5T",
+            "notes": ""
+          },
+          "confidence": "high",
+          "range": null,
+          "how_to_measure": null,
+          "notes": "Same publisher as hondanews.com (American Honda); consistency check only."
+        },
+        {
+          "printed": {
+            "value": 11.41,
+            "unit": "ratio"
+          },
+          "value": 11.41,
+          "unit": "1",
+          "status": "confirmed",
+          "class": "A",
+          "source_id": "steer:hondanews-us-2022-hatch-specs",
+          "locator": "CHASSIS table, row 'Steering Ratio', Sport Touring column",
+          "evidence": "Steering Ratio 11.27 : 1 11.41 : 1 11.27 : 1 11.41 : 1",
+          "as_printed": "11.41 : 1",
+          "applicability": {
+            "year": "2022",
+            "market": "US",
+            "trim": "Sport Touring",
+            "body": "hatchback",
+            "gearbox": "6MT or CVT (row not split by gearbox)",
+            "engine": "1.5T",
+            "notes": "Model-year check: same value printed in the 2024 US table."
+          },
+          "confidence": "high",
+          "range": null,
+          "how_to_measure": null,
+          "notes": "Model-year check 2022 vs 2024: unchanged."
+        }
+      ]
+    },
+    "steering.turns_lock_to_lock": {
+      "description": "Steering wheel turns, lock to lock",
+      "unit": "turns",
+      "impact": "high",
+      "candidates": [
+        {
+          "printed": {
+            "value": 2.2,
+            "unit": "turns"
+          },
+          "value": 2.2,
+          "unit": "turns",
+          "status": "confirmed",
+          "class": "A",
+          "source_id": "steer:hondanews-ca-2024-hatch-specs",
+          "locator": "DIMENSIONS table, row 'Steering wheel turns, lock-to-lock', SPORT TOURING column",
+          "evidence": "Steering wheel turns, lock-to-lock 2.2 2.2",
+          "as_printed": "2.2",
+          "applicability": {
+            "year": "2024",
+            "market": "CA",
+            "trim": "Sport Touring",
+            "body": "hatchback",
+            "gearbox": "6MT or CVT (row not split by gearbox)",
+            "engine": "1.5T",
+            "notes": ""
+          },
+          "confidence": "high",
+          "range": null,
+          "how_to_measure": null,
+          "notes": "Canadian figure rounded to one decimal; agrees with US 2.21."
+        },
+        {
+          "printed": {
+            "value": 2.21,
+            "unit": "turns"
+          },
+          "value": 2.21,
+          "unit": "turns",
+          "status": "confirmed",
+          "class": "A",
+          "source_id": "steer:hondanews-us-2024-hatch-specs",
+          "locator": "CHASSIS table, row 'Steering Wheel Turns, Lock-to-Lock', 4th column (Sport Touring)",
+          "evidence": "Steering Wheel Turns, Lock-to-Lock 2.29 2.21 2.29 2.21",
+          "as_printed": "2.21",
+          "applicability": {
+            "year": "2024",
+            "market": "US",
+            "trim": "Sport Touring",
+            "body": "hatchback",
+            "gearbox": "6MT or CVT (row not split by gearbox)",
+            "engine": "1.5T",
+            "notes": ""
+          },
+          "confidence": "high",
+          "range": null,
+          "how_to_measure": null,
+          "notes": ""
+        },
+        {
+          "printed": {
+            "value": 2.21,
+            "unit": "turns"
+          },
+          "value": 2.21,
+          "unit": "turns",
+          "status": "confirmed",
+          "class": "A",
+          "source_id": "steer:hondanews-us-2022-hatch-specs",
+          "locator": "CHASSIS table, row 'Steering Wheel Turns, Lock-to-Lock', Sport Touring column",
+          "evidence": "Steering Wheel Turns, Lock-to-Lock 2.29 2.21 2.29 2.21",
+          "as_printed": "2.21",
+          "applicability": {
+            "year": "2022",
+            "market": "US",
+            "trim": "Sport Touring",
+            "body": "hatchback",
+            "gearbox": "6MT or CVT (row not split by gearbox)",
+            "engine": "1.5T",
+            "notes": "Model-year check: same value printed in the 2024 US table."
+          },
+          "confidence": "high",
+          "range": null,
+          "how_to_measure": null,
+          "notes": "Model-year check 2022 vs 2024: unchanged."
+        }
+      ]
+    },
+    "steering.turning_circle_diameter": {
+      "description": "Turning circle diameter, curb-to-curb (path of the outer front tyre)",
+      "unit": "m",
+      "impact": "medium",
+      "candidates": [
+        {
+          "printed": {
+            "value": 11.6,
+            "unit": "m"
+          },
+          "value": 11.6,
+          "unit": "m",
+          "status": "confirmed",
+          "class": "A",
+          "source_id": "steer:hondanews-ca-2024-hatch-specs",
+          "locator": "DIMENSIONS table, row 'Turning radius – (curb-to-curb) (m)', SPORT TOURING column",
+          "evidence": "Turning radius – (curb-to-curb) (m) 11.6 11.6",
+          "as_printed": "11.6 m",
+          "applicability": {
+            "year": "2024",
+            "market": "CA",
+            "trim": "Sport Touring",
+            "body": "hatchback",
+            "gearbox": "6MT or CVT (row not split by gearbox)",
+            "engine": "1.5T",
+            "notes": ""
+          },
+          "confidence": "high",
+          "range": null,
+          "how_to_measure": null,
+          "notes": "Printed label says 'Turning radius' but the figure is the curb-to-curb DIAMETER: it equals the US 'Turning Diameter, Curb-to-Curb' 38.1 ft (11.61 m) for the same trim, and a radius of 11.6 m would need a mean road-wheel lock of only ~14 deg, inconsistent with 2.2 turns at 11.4:1 (~35 deg). Lower trims print 11 m (= US 36.1 ft) in the same row. Sport/Sport Touring (18-in wheel) turning circle is larger than LX/EX-L because lock is reduced (2.21 vs 2.29 turns)."
+        },
+        {
+          "printed": {
+            "value": 38.1,
+            "unit": "ft"
+          },
+          "value": 11.61288,
+          "unit": "m",
+          "status": "confirmed",
+          "class": "A",
+          "source_id": "steer:hondanews-us-2024-hatch-specs",
+          "locator": "CHASSIS table, row 'Turning Diameter, Curb-to-Curb (ft.)', 4th column (Sport Touring)",
+          "evidence": "Turning Diameter, Curb-to-Curb (ft.) 36.1 38.1 36.1 38.1",
+          "as_printed": "38.1 ft",
+          "applicability": {
+            "year": "2024",
+            "market": "US",
+            "trim": "Sport Touring",
+            "body": "hatchback",
+            "gearbox": "6MT or CVT (row not split by gearbox)",
+            "engine": "1.5T",
+            "notes": ""
+          },
+          "confidence": "high",
+          "range": null,
+          "how_to_measure": null,
+          "notes": ""
+        },
+        {
+          "printed": {
+            "value": 38.1,
+            "unit": "ft"
+          },
+          "value": 11.61288,
+          "unit": "m",
+          "status": "confirmed",
+          "class": "A",
+          "source_id": "steer:hondainfocenter-us-2024-hatch-specs",
+          "locator": "Body/Suspension/Chassis table, row 'Turning Diameter, Curb-to-Curb', Sport Touring column",
+          "evidence": "Turning Diameter, Curb-to-Curb 36.1 ft 38.1 ft 36.1 ft 38.1 ft",
+          "as_printed": "38.1 ft",
+          "applicability": {
+            "year": "2024",
+            "market": "US",
+            "trim": "Sport Touring",
+            "body": "hatchback",
+            "gearbox": "6MT or CVT (row not split by gearbox)",
+            "engine": "1.5T",
+            "notes": ""
+          },
+          "confidence": "high",
+          "range": null,
+          "how_to_measure": null,
+          "notes": "Same publisher as hondanews.com; consistency check."
+        },
+        {
+          "printed": {
+            "value": 11.6,
+            "unit": "m"
+          },
+          "value": 11.6,
+          "unit": "m",
+          "status": "confirmed",
+          "class": "A",
+          "source_id": "steer:hondanews-ca-2022-hatch-specs",
+          "locator": "DIMENSIONS table, row 'Turning radius (m) (curb-to-curb)', Sport Touring column",
+          "evidence": "Turning radius (m) (curb-to-curb) 11 11.6 11.6",
+          "as_printed": "11.6",
+          "applicability": {
+            "year": "2022",
+            "market": "CA",
+            "trim": "Sport Touring",
+            "body": "hatchback",
+            "gearbox": "6MT or CVT (row not split by gearbox)",
+            "engine": "1.5T",
+            "notes": "Model-year check: same value printed in the 2023 and 2024 Canadian tables."
+          },
+          "confidence": "high",
+          "range": null,
+          "how_to_measure": null,
+          "notes": "Model-year check 2022 vs 2024 (Canada): unchanged. Label says radius; value is the diameter (see 2024 record)."
+        }
+      ]
+    }
+  }
+}
