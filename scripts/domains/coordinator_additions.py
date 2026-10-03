@@ -57,3 +57,23 @@ db.add_candidate(t, "tires.revs_per_mile", "Tire revolutions per mile (published
     notes="Per mile. Used by the coordinator derivation tires.rolling_circumference_from_revs as a cross-check."))
 db.save(t)
 print("tires.json updated")
+
+# The engine thread found no rpm-resolved stock 6MT curve; make the gap a first-class unknown so it is
+# ranked in docs/UNCERTAINTIES.md (engine_curve.csv has no rows).
+e = db.load("engine")
+db.add_candidate(e, "engine.torque_curve_stock_6mt", "Stock torque/power vs rpm curve for the 1.5T 6MT "
+                 "(crank or wheel, with boost onset, plateau and taper)", "N*m", "critical", db.unknown(
+    "N*m",
+    searches=["hondanews.ca / hondainfocenter.com / hondanews.com spec and powertrain pages (rated points only)",
+              "Hondata 2022 EX sedan CVT stock dyno via The Drive (CVT, peak only)",
+              "PRL Motorsports 2022 Touring sedan CVT baselines (CVT, speed x-axis)",
+              "TSP 2022 non-Si CVT stock dyno (CVT, peak only)",
+              "hondata.com (robots.txt disallows; not fetched)",
+              "civicxi.com / reddit / forum dyno threads (no stock 6MT hatch rpm curve found)"],
+    how_to_measure="Stock car, chassis dyno (state make: Dynojet/Mustang/Dynapack), SAE J1349 correction, 4th gear "
+                   "(or 3rd), 3 pulls from 1500 rpm to fuel cut, with a simultaneous OBD log of rpm, MAP and "
+                   "throttle. Export the rpm-resolved CSV, not just the chart.",
+    notes="Rated anchor points (180 hp @ 6000, 177 lb-ft @ 1700-4500, class A) are in engine.json; the shape "
+          "between them, boost onset below 1700 rpm and the taper above 4500 rpm are unsourced."))
+db.save(e)
+print("engine.json updated")

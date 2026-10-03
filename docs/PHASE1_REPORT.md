@@ -4,32 +4,61 @@
 
 Each row is the **effective** record chosen by `scripts/resolve.py` (precedence: user measurement > A > B/C > D > E > F; then closest applicability to 2024 / Canada / Sport Touring / 6MT). `n` = number of candidate records kept. Class: A manufacturer/government, B measurement, C third party, D derived by script, E engineering estimate, F fallback. Status `unknown` means not found after the primary sources and ~5 searches; see `docs/UNCERTAINTIES.md`.
 
-**47 parameters**: 43 confirmed, 1 estimated, 3 unknown. By class: A: 40, C: 3, E: 1, None: 3. Conflicts: 2 (see `docs/CONFLICTS.md`).
+**377 parameters**: 169 confirmed, 119 estimated, 89 unknown. By class: A: 122, C: 31, D: 83, E: 52, None: 89. Conflicts: 7 (see `docs/CONFLICTS.md`).
 
 ## Validation
 
-`scripts/validate_db.py`: **12 errors, 6 warnings**; 158 evidence quotes re-found in cached page text, 1 not found (listed as warnings).
+`scripts/validate_db.py`: **0 errors, 1 warnings**; 260 evidence quotes re-found in cached page text, 0 not found (listed as warnings).
 
 | cross-check | result | detail |
 |---|---|---|
-| Overall length = wheelbase + overhangs | not_run | missing ['dimensions.overhang_front', 'dimensions.overhang_rear'] |
-| Axle masses vs curb mass and ratings | not_run | missing ['mass.gvwr', 'mass.gawr_front', 'mass.gawr_rear'] |
-| Track + tire width vs overall width | not_run | missing ['tires.section_width'] |
+| Overall length = wheelbase + overhangs | pass | length - (wheelbase+overhangs) = 0.0 mm (tol 10 mm) |
+| Axle masses vs curb mass and ratings | pass | front 815 + rear 567 = 1382 kg vs curb 1382 kg (diff +0.0); curb 1382 kg < lineup-minimum GVWR (trim GVWR unknown) 1790 kg: True (payload margin 408 kg); GAWR unknown: per-axle rating check not run |
+| Track + tire width vs overall width | pass | front: track+section width 1771 mm vs body width 1802 mm (margin 31 mm); rear: track+section width 1800 mm vs body width 1802 mm (margin 2 mm) (expected 0–200 mm) |
 | Steering ratio x lock vs turning circle | pass | ratio x lock gives mean road-wheel angle 34.7 deg; turning circle (outer-wheel radius 5.80 m, wheelbase, track) implies outer 28.1 / inner 37.4 deg (mean 32.8); deviation +6% (tol ±20%: variable ratio and turning-circle definition make this approximate) |
-| Gear speed vs real observation | not_run | no drivetrain.obs_rpm_* observation with a matching drivetrain.pred_rpm_* derivation |
-| Tire diameter: published vs nominal | not_run | need tires.overall_diameter and tires.overall_diameter_nominal |
+| Gear speed vs real observation | not_run | drivetrain.obs_rpm_at_100kmh_6th: not computable; drivetrain.obs_rpm_at_70mph_6th: not computable |
+| Tire diameter: published vs nominal | pass | selected 645.2 mm vs nominal 645.2 mm (-0.01%, tol ±2%) |
+| Rolling circumference: size-based vs published revs/mile | pass | selected 1.9661 m vs published revs/mile 1.9674 m (-0.06%, tol ±1.5%) |
 
 ## 1. Identity
 
-_No parameter records in the database for this domain._
+Research log: `docs/research_log/01_identity.md`.
+
+| parameter | value | status | class | conf. | source | n |
+|---|---|---|---|---|---|---|
+| `identity.assembly_plant` ⚠ | GREENSBURG, INDIANA, UNITED STATES (USA) | confirmed | A | high | `id:vpic` | 2 |
+| `identity.body` | 5-door hatchback | confirmed | A | high | `id:vpic` | 1 |
+| `identity.cluster_type` | 10.2-inch colour TFT full digital driver meter display | confirmed | A | high | `id:hci-2024-specs` | 1 |
+| `identity.drivetrain` | FWD | confirmed | A | high | `id:hci-2022-specs` | 1 |
+| `identity.engine_code` | L15B7 | confirmed | A | medium | `id:vpic` | 1 |
+| `identity.engine_description` | 1.5-litre, 16-valve, Direct Injection, DOHC, VTEC turbocharged 4-cylinder | confirmed | A | high | `id:hci-2024-specs` | 1 |
+| `identity.interior_color` | Black | confirmed | A | high | `id:hci-2023-specs` | 1 |
+| `identity.market` | Canada | confirmed | A | high | `id:hci-2024-specs` | 1 |
+| `identity.model_code` | FL1 | estimated | E | medium | `id:vpic` | 1 |
+| `identity.model_year` | 2024 | confirmed | A | high | `id:hci-2024-specs` | 1 |
+| `identity.options_ca_2024_st` | Transmission (6MT or CVT) and colour only; no packages listed | estimated | E | medium | — | 1 |
+| `identity.paint_code` | NH-877P | confirmed | A | high | `id:hci-2023-specs` | 2 |
+| `identity.paint_name` | Sonic Grey Pearl | confirmed | A | high | `id:hci-2023-specs` | 1 |
+| `identity.seat_material` | Leather-trimmed seating surfaces | confirmed | A | high | `id:hci-2024-specs` | 1 |
+| `identity.seating` | 5 seats; driver 8-way power, passenger 4-way power; heated front and rear seats; 60/40 … | confirmed | A | high | `id:hci-2024-specs` | 1 |
+| `identity.sold_in_canada_2024_st_6mt` | true | confirmed | A | high | `id:hci-2024-specs` | 1 |
+| `identity.sonic_grey_offered_2023_ca_st` | true | confirmed | A | high | `id:hci-2023-specs` | 1 |
+| `identity.sonic_grey_offered_2024_ca_st` | true (range true–true) | estimated | E | medium | — | 1 |
+| `identity.transmission_code` | — | unknown | — | none | — | 1 |
+| `identity.transmission_type` | 6-speed manual | confirmed | A | high | `id:hci-2024-specs` | 1 |
+| `identity.trim` | Sport Touring | confirmed | A | high | `id:hci-2024-specs` | 1 |
 
 ## 2. Dimensions
+
+Research log: `docs/research_log/02_dimensions.md`.
 
 | parameter | value | status | class | conf. | source | n |
 |---|---|---|---|---|---|---|
 | `dimensions.approach_angle` | — | unknown | — | none | — | 1 |
 | `dimensions.cargo_volume` | 0.693 m3 | confirmed | A | high | `dim:hondanews-ca-2024-hatch-specs` | 2 |
 | `dimensions.departure_angle` | — | unknown | — | none | — | 1 |
+| `dimensions.front_bumper_y` | 0.936341 m (range 0.897022–0.975746) | estimated | D | medium | derived | 1 |
+| `dimensions.front_tyre_outer_margin_per_side` | 0.0155 m (range 0.0105–0.0205) | estimated | D | medium | derived | 1 |
 | `dimensions.ground_clearance` | 0.134 m | confirmed | A | medium | `dim:hondanews-ca-2024-hatch-specs` | 2 |
 | `dimensions.headroom_front` | 0.956 m | confirmed | A | high | `dim:hondanews-ca-2024-hatch-specs` | 2 |
 | `dimensions.headroom_rear` | 0.942 m | confirmed | A | high | `dim:hondanews-ca-2024-hatch-specs` | 2 |
@@ -40,7 +69,15 @@ _No parameter records in the database for this domain._
 | `dimensions.legroom_rear` | 0.95 m | confirmed | A | high | `dim:hondanews-ca-2024-hatch-specs` | 2 |
 | `dimensions.length` ⚠ | 4.529 m | confirmed | A | high | `dim:hondanews-ca-2024-hatch-specs` | 4 |
 | `dimensions.length_with_licence_bracket` | 4.547 m | confirmed | A | high | `dim:hondanews-ca-2023-hatch-specs` | 2 |
+| `dimensions.licence_bracket_depth` | 0.018 m (range 0.016–0.02) | confirmed | D | high | derived | 1 |
+| `dimensions.mirror_protrusion_per_side` | 0.1395 m (range 0.1385–0.1405) | confirmed | D | medium | derived | 1 |
+| `dimensions.overhang_front` | 0.936341 m (range 0.897022–0.975746) | estimated | D | medium | derived | 1 |
+| `dimensions.overhang_rear` | 0.857659 m (range 0.818427–0.896976) | estimated | D | medium | derived | 1 |
+| `dimensions.overhang_total` | 1.794 m (range 1.792–1.796) | confirmed | D | high | derived | 1 |
 | `dimensions.passenger_volume` | 2.735 m3 | confirmed | A | high | `dim:hondanews-ca-2024-hatch-specs` | 1 |
+| `dimensions.rear_axle_y` | -2.735 m (range -2.736–-2.734) | confirmed | D | high | derived | 1 |
+| `dimensions.rear_bumper_y` | -3.59266 m (range -3.63198–-3.55343) | estimated | D | medium | derived | 1 |
+| `dimensions.rear_tyre_outer_margin_per_side` | 0.001 m (range -0.004–0.006) | estimated | D | medium | derived | 1 |
 | `dimensions.shoulder_room_front` | 1.447 m | confirmed | A | high | `dim:hondanews-ca-2024-hatch-specs` | 2 |
 | `dimensions.shoulder_room_rear` | 1.422 m | confirmed | A | high | `dim:hondanews-ca-2024-hatch-specs` | 2 |
 | `dimensions.track_front` | 1.536 m | confirmed | A | high | `dim:hondanews-ca-2024-hatch-specs` | 3 |
@@ -49,6 +86,35 @@ _No parameter records in the database for this domain._
 | `dimensions.width_body` | 1.802 m | confirmed | A | high | `dim:hondanews-ca-2024-hatch-specs` | 2 |
 | `dimensions.width_mirrors` | 2.081 m | confirmed | A | medium | `dim:hondanews-ca-2023-hatch-specs` | 2 |
 | `dimensions.width_mirrors_folded` | 1.9 m | confirmed | A | medium | `dim:hondanews-ca-2023-hatch-specs` | 1 |
+| `proportions.arch_gap_front` | 0.389919 m (range 0.362825–0.417014) | estimated | D | low | `prop:hic-2022-hatch-strg-profile` | 1 |
+| `proportions.arch_gap_rear` | 0.387795 m (range 0.360773–0.414818) | estimated | D | low | `prop:hic-2022-hatch-strg-profile` | 1 |
+| `proportions.arch_top_z_front` | 0.703414 m (range 0.664054–0.742774) | estimated | D | low | `prop:hic-2022-hatch-strg-profile` | 1 |
+| `proportions.arch_top_z_rear` | 0.703414 m (range 0.664054–0.742774) | estimated | D | low | `prop:hic-2022-hatch-strg-profile` | 1 |
+| `proportions.front_bumper_extreme_z` | 0.399202 m (range 0.138303–0.6601) | estimated | D | low | `prop:hic-2022-hatch-strg-profile` | 1 |
+| `proportions.front_view_track_ratio` | — | unknown | — | none | — | 1 |
+| `proportions.hatch_angle` | 0.342297 rad (range 0.255031–0.429563) | estimated | D | low | `prop:hic-2022-hatch-strg-profile` | 1 |
+| `proportions.hatch_glass_top_y` | -2.44261 m (range -2.65928–-2.22595) | estimated | D | medium | `prop:hic-2022-hatch-strg-profile` | 1 |
+| `proportions.height_check` | 1.42483 m (range 1.35421–1.49546) | estimated | D | medium | `prop:hic-2022-hatch-strg-profile` | 1 |
+| `proportions.hood_z_at_front_axle` | 0.951131 m (range 0.902968–0.999293) | estimated | D | medium | `prop:hic-2022-hatch-strg-profile` | 1 |
+| `proportions.length_check` | 4.3657 m (range 3.98983–4.74156) | estimated | D | medium | `prop:hic-2022-hatch-strg-profile` | 1 |
+| `proportions.mirror_width_ratio` | — | unknown | — | none | — | 1 |
+| `proportions.mirror_y` | — | unknown | — | none | — | 1 |
+| `proportions.mirror_z` | — | unknown | — | none | — | 1 |
+| `proportions.overhang_front` | 0.851108 m (range 0.776858–0.925359) | estimated | D | low | `prop:hic-2022-hatch-strg-profile` | 1 |
+| `proportions.overhang_front_fraction` | 0.521929 (range 0.50057–0.543288) | estimated | D | medium | `prop:hic-2022-hatch-strg-profile` | 1 |
+| `proportions.overhang_rear` | 0.779588 m (range 0.7114–0.847776) | estimated | D | low | `prop:hic-2022-hatch-strg-profile` | 1 |
+| `proportions.rear_bumper_extreme_z` | 0.416585 m (range 0.39715–0.436021) | estimated | D | low | `prop:hic-2022-hatch-strg-profile` | 1 |
+| `proportions.rim_to_tyre_ratio_front` | 0.751048 (range 0.69869–0.803406) | estimated | D | medium | `prop:hic-2022-hatch-strg-profile` | 1 |
+| `proportions.rim_to_tyre_ratio_rear` | 0.744741 (range 0.692308–0.797173) | estimated | D | medium | `prop:hic-2022-hatch-strg-profile` | 1 |
+| `proportions.roof_peak_y` | -1.66457 m (range -2.16122–-1.16792) | estimated | D | low | `prop:hic-2022-hatch-strg-profile` | 1 |
+| `proportions.roof_peak_z` | 1.42483 m (range 1.35421–1.49546) | estimated | D | medium | `prop:hic-2022-hatch-strg-profile` | 1 |
+| `proportions.sill_z_mid_wheelbase` | 0.19929 m (range 0.183463–0.215118) | estimated | D | low | `prop:hic-2022-hatch-strg-profile` | 1 |
+| `proportions.wheel_center_z_front` | 0.313495 m (range 0.293831–0.333159) | estimated | D | low | `prop:hic-2022-hatch-strg-profile` | 1 |
+| `proportions.wheel_center_z_rear` | 0.315619 m (range 0.295873–0.335365) | estimated | D | low | `prop:hic-2022-hatch-strg-profile` | 1 |
+| `proportions.windshield_angle` | 0.513757 rad (range 0.443944–0.58357) | estimated | D | low | `prop:hic-2022-hatch-strg-profile` | 1 |
+| `proportions.windshield_base_y` | -0.341894 m (range -0.388111–-0.295677) | estimated | D | low | `prop:hic-2022-hatch-strg-profile` | 1 |
+| `proportions.windshield_base_z` | 0.985898 m (range 0.925779–1.04602) | estimated | D | medium | `prop:hic-2022-hatch-strg-profile` | 1 |
+| `proportions.windshield_header_y` | -0.990264 m (range -1.0904–-0.890133) | estimated | D | low | `prop:hic-2022-hatch-strg-profile` | 1 |
 
 ## 3. Mass and inertia
 
@@ -56,26 +122,122 @@ Research log: `docs/research_log/03_mass_inertia.md`.
 
 | parameter | value | status | class | conf. | source | n |
 |---|---|---|---|---|---|---|
-| `mass.curb_mass` | 1382 kg | confirmed | A | high | `mass:hondanews-ca-2024-hatch-specs` | 2 |
-| `mass.front_fraction` | 0.59 | confirmed | A | high | `mass:hondainfocenter-us-2024-hatch-specs` | 1 |
-| `mass.fuel_capacity` ⚠ | 0.046 m3 | confirmed | A | high | `mass:hondanews-ca-2024-hatch-specs` | 2 |
+| `mass.cg_height` | 0.523818 m (range 0.507054–0.540593) | estimated | D | medium | derived | 1 |
+| `mass.cg_x` | 0 m (range -0.015–0.015) | estimated | E | low | — | 1 |
+| `mass.cg_y` | -1.12135 m (range -1.13502–-1.10767) | estimated | D | high | derived | 1 |
+| `mass.check_axle_sum` | 0 kg (range -0.5–0.5) | estimated | D | high | derived | 1 |
+| `mass.check_rollover_risk_from_ssf` | 0.0951313 (range 0.0942713–0.0960058) | estimated | D | high | derived | 1 |
+| `mass.check_yaw_over_roll` | 4.47098 (range 4.38–6) | estimated | D | medium | derived | 1 |
+| `mass.corner_weights` | — | unknown | — | none | — | 1 |
+| `mass.curb_mass` | 1382 kg | confirmed | A | high | `mass:hondanews-ca-2024-hatch-specs` | 5 |
+| `mass.front_axle_mass` | 815.38 kg (range 808.47–822.29) | estimated | D | high | derived | 1 |
+| `mass.front_fraction` | 0.59 | confirmed | A | high | `mass:hondainfocenter-us-2024-hatch-specs` | 3 |
+| `mass.fuel_capacity` ⚠ | 0.046 m3 | confirmed | A | high | `mass:hondanews-ca-2024-hatch-specs` | 3 |
+| `mass.fuel_density` | 755 kg/m3 | estimated | C | medium | `mass:wikipedia-gasoline` | 1 |
+| `mass.fuel_level_assumed` | 1 (range 0.9–1) | estimated | E | medium | `mass:ecfr-49cfr571.3` | 1 |
+| `mass.fuel_mass_full` | 34.73 kg (range 32.66–35.42) | estimated | D | high | derived | 1 |
+| `mass.gawr_front` | — | unknown | — | none | — | 1 |
+| `mass.gawr_rear` | — | unknown | — | none | — | 1 |
+| `mass.gvwr` | — | unknown | — | none | — | 1 |
+| `mass.gvwr_lineup_max` | 1839.77 kg | confirmed | A | high | `mass:nhtsa-safercar-data` | 1 |
+| `mass.gvwr_lineup_min` | 1789.88 kg | confirmed | A | high | `mass:nhtsa-safercar-data` | 1 |
+| `mass.inertia_pitch` | 2777.97 kg*m2 (range 2313.5–3292.7) | estimated | E | low | — | 1 |
+| `mass.inertia_roll` | 669.054 kg*m2 (range 544.9–810.424) | estimated | E | low | — | 1 |
+| `mass.inertia_yaw` | 2991.32 kg*m2 (range 2514.14–3513.59) | estimated | E | low | — | 1 |
+| `mass.rear_axle_mass` | 566.62 kg (range 559.71–573.53) | estimated | D | high | derived | 1 |
+| `mass.rollover_possibility_nhtsa` | 0.095 | confirmed | A | high | `mass:nhtsa-safercar-data` | 1 |
+| `mass.ssf_nhtsa` | 1.48 | confirmed | A | medium | `mass:nhtsa-safercar-data` | 1 |
+| `mass.unsprung_mass_front` | — | unknown | — | none | — | 1 |
+| `mass.unsprung_mass_rear` | — | unknown | — | none | — | 1 |
 
 ## 4. Engine and turbo
 
-_No parameter records in the database for this domain._
+Research log: `docs/research_log/04_engine.md`.
+
+| parameter | value | status | class | conf. | source | n |
+|---|---|---|---|---|---|---|
+| `engine.bmep_at_torque_peak` | 2.01313e+06 Pa (range 2.00307e+06–2.0232e+06) | confirmed | D | high | derived | 1 |
+| `engine.bore` | 0.073 m | confirmed | A | high | `eng:hondanews-ca-2024-hatch-specs` | 2 |
+| `engine.code` | L15B7 (w/VTEC) | confirmed | A | high | `eng:hondanews-us-15t-engine-2024` | 1 |
+| `engine.compression_ratio` | 10.3 | confirmed | A | high | `eng:hondanews-ca-2024-hatch-specs` | 2 |
+| `engine.cylinders` | 4 count | confirmed | A | high | `eng:hondanews-ca-2024-hatch-specs` | 1 |
+| `engine.description` | 1.5-litre, 16-valve, Direct Injection, DOHC, VTEC turbocharged 4-cylinder | confirmed | A | high | `eng:hondanews-ca-2024-hatch-specs` | 1 |
+| `engine.displacement` | 0.001498 m3 | confirmed | A | high | `eng:hondanews-ca-2024-hatch-specs` | 2 |
+| `engine.displacement_from_bore_stroke` | 0.00149837 m3 (range 0.00149548–0.00150126) | confirmed | D | high | derived | 1 |
+| `engine.driveline_loss_assumed` | 0.13 (range 0.1–0.18) | estimated | E | low | — | 1 |
+| `engine.fuel_cut_behavior` | — | unknown | — | none | — | 1 |
+| `engine.fuel_recommended` ⚠ | Regular | confirmed | A | high | `eng:hondanews-ca-2024-hatch-specs` | 2 |
+| `engine.idle_rpm` | 750 rpm (range 650–850) | estimated | E | low | — | 1 |
+| `engine.idle_stop` | true | confirmed | A | medium | `eng:hondanews-ca-2024-hatch-specs` | 1 |
+| `engine.inertia` | 0.05 kg*m2 (range 0.035–0.08) | estimated | E | low | — | 1 |
+| `engine.injection` | Direct | confirmed | A | high | `eng:hondanews-ca-2024-hatch-specs` | 2 |
+| `engine.limiter_behavior` | — | unknown | — | none | — | 1 |
+| `engine.limiter_rpm` | — | unknown | — | none | — | 1 |
+| `engine.mean_piston_speed_at_redline` | 19.69 m/s (range 19.6703–19.7097) | confirmed | D | high | derived | 1 |
+| `engine.power_at_torque_plateau_end` | 113088 W (range 112522–113653) | confirmed | D | high | derived | 1 |
+| `engine.power_at_torque_plateau_start` | 42722.1 W (range 42508.4–42935.7) | confirmed | D | high | derived | 1 |
+| `engine.power_max` | 134226 W | confirmed | A | high | `eng:hondanews-ca-2024-hatch-specs` | 5 |
+| `engine.power_max_rpm` | 6000 rpm | confirmed | A | high | `eng:hondanews-ca-2024-hatch-specs` | 5 |
+| `engine.rating_standard` | SAE net, SAE J1349 (Rev. 08/04) | confirmed | A | high | `eng:hondanews-ca-2024-hatch-specs` | 1 |
+| `engine.redline_rpm` | 6600 rpm | confirmed | A | high | `eng:hic-us-2024-hatch-specs` | 2 |
+| `engine.rev_hang_engine_side` | — | unknown | — | none | — | 1 |
+| `engine.stroke` | 0.0895 m | confirmed | A | high | `eng:hondanews-ca-2024-hatch-specs` | 2 |
+| `engine.throttle` | Drive-by-wire (electronic throttle) | confirmed | A | high | `eng:hondanews-ca-2023-hatch-specs` | 1 |
+| `engine.torque_at_power_peak` | 213.627 N*m (range 212.559–214.695) | confirmed | D | high | derived | 1 |
+| `engine.torque_max` | 239.98 N*m | confirmed | A | high | `eng:hondanews-ca-2024-hatch-specs` | 5 |
+| `engine.torque_max_rpm_high` | 4500 rpm | confirmed | A | high | `eng:hondanews-ca-2024-hatch-specs` | 5 |
+| `engine.torque_max_rpm_low` | 1700 rpm | confirmed | A | high | `eng:hondanews-ca-2024-hatch-specs` | 5 |
+| `engine.valvetrain` ⚠ | 16-Valve DOHC VTEC | confirmed | A | high | `eng:hic-us-2024-hatch-specs` | 2 |
+| `turbo.boost_onset_rpm` | 1700 rpm (range 1500–2200) | estimated | E | low | — | 1 |
+| `turbo.boost_peak` | 113763 Pa | confirmed | A | high | `eng:hic-us-2024-hatch-specs` | 2 |
+| `turbo.boost_taper` | — | unknown | — | none | — | 1 |
+| `turbo.exhaust_manifold` | Cast into cylinder head, 4-into-2 (cyl 1+4, 2+3) | confirmed | A | high | `eng:hondanews-us-15t-engine-2024` | 1 |
+| `turbo.intercooler` | Air-to-air, front-mounted low in the front of the car, resin composite inlet pipes | confirmed | A | high | `eng:hondanews-us-15t-engine-2024` | 1 |
+| `turbo.make_model` | Mitsubishi Heavy Industries (MHI) TD03 family, small-diameter, single-scroll; 11-blade … | confirmed | A | medium | `eng:hondanews-us-15t-engine-2024` | 1 |
+| `turbo.response` | Negligible turbo lag; quick throttle response (small-diameter turbine) | confirmed | A | medium | `eng:hic-us-2024-turbo-feature` | 1 |
+| `turbo.torque_management` | — | unknown | — | none | — | 1 |
+| `turbo.wastegate` | Internal wastegate, electrically actuated (ECU-controlled) | confirmed | A | high | `eng:hondanews-us-15t-engine-2024` | 1 |
 
 ## 5. Drivetrain
+
+Research log: `docs/research_log/05_drivetrain.md`.
 
 | parameter | value | status | class | conf. | source | n |
 |---|---|---|---|---|---|---|
 | `drivetrain.agile_handling_assist` | true | confirmed | A | high | `dt:hondanews-ca-2024-hatch-specs` | 1 |
+| `drivetrain.clutch_actuation` | hydraulic (master cylinder, line with in-line damper) | confirmed | C | medium | `dt:civicxi-clutch-thread` | 1 |
+| `drivetrain.clutch_disc_inner_diameter` | — | unknown | — | none | — | 1 |
+| `drivetrain.clutch_disc_outer_diameter` | — | unknown | — | none | — | 1 |
+| `drivetrain.clutch_torque_capacity` | — | unknown | — | none | — | 1 |
+| `drivetrain.clutch_type` | single dry plate, rigid (unsprung) hub disc; torsional damping in the dual-mass flywheel | confirmed | C | low | `dt:civicxi-clutch-thread` | 1 |
 | `drivetrain.differential_type` | open (bevel-gear) differential; no mechanical LSD | confirmed | C | high | `dt:hondapartsnow-2024-civic-differential` | 1 |
+| `drivetrain.driveline_inertia` | — | unknown | — | none | — | 1 |
+| `drivetrain.flywheel_inertia` | — | unknown | — | none | — | 1 |
 | `drivetrain.flywheel_part_number` | 22100-5CD-018 (replaces 22100-5CD-008) | confirmed | C | high | `dt:hondapartsnow-2024-civic-flywheel` | 1 |
 | `drivetrain.flywheel_shipping_weight` | 15.6943 kg | confirmed | C | low | `dt:hondapartsnow-2024-civic-flywheel` | 1 |
 | `drivetrain.flywheel_type` | dual-mass | confirmed | A | high | `dt:hondanews-ca-2022-hatch-debut` | 1 |
 | `drivetrain.hill_start_assist` | true | confirmed | A | high | `dt:hondanews-ca-2024-hatch-specs` | 1 |
 | `drivetrain.idle_stop_mt` | true (range 0–1) | estimated | E | low | `dt:hondanews-ca-2024-hatch-specs` | 1 |
-| `drivetrain.shift_mechanism` | cable-operated 6MT revised for shift rigidity and shorter throws | confirmed | A | medium | `dt:hondanews-ca-2022-hatch-debut` | 1 |
+| `drivetrain.obs_rpm_at_100kmh_6th` | — | unknown | — | none | — | 1 |
+| `drivetrain.obs_rpm_at_70mph_6th` | — | unknown | — | none | — | 1 |
+| `drivetrain.pred_rpm_at_100kmh_6th` | 2384.19 rpm (range 2348.96–2420.5) | estimated | D | high | derived | 1 |
+| `drivetrain.pred_rpm_at_70mph_6th` | 2685.89 rpm (range 2646.19–2726.79) | estimated | D | high | derived | 1 |
+| `drivetrain.ratio_step_1_2` | 1.75144 (range 1.75144–1.75144) | confirmed | D | high | derived | 1 |
+| `drivetrain.ratio_step_2_3` | 1.52829 (range 1.52829–1.52829) | confirmed | D | high | derived | 1 |
+| `drivetrain.ratio_step_3_4` | 1.3291 (range 1.3291–1.3291) | confirmed | D | high | derived | 1 |
+| `drivetrain.ratio_step_4_5` | 1.23373 (range 1.23373–1.23373) | confirmed | D | high | derived | 1 |
+| `drivetrain.ratio_step_5_6` | 1.20991 (range 1.20991–1.20991) | confirmed | D | high | derived | 1 |
+| `drivetrain.rev_hang_duration` | — | unknown | — | none | — | 1 |
+| `drivetrain.rev_hang_qualitative` | present (reviewer-reported); not quantified | confirmed | C | medium | `dt:tractionlife-2022-st-mt-review` | 1 |
+| `drivetrain.rev_match` | — | unknown | — | none | — | 1 |
+| `drivetrain.rpm_after_upshift_1_2_from_redline` | 3768.32 rpm (range 3655.27–3768.32) | estimated | D | high | derived | 1 |
+| `drivetrain.rpm_after_upshift_2_3_from_redline` | 4318.56 rpm (range 4189–4318.56) | estimated | D | high | derived | 1 |
+| `drivetrain.rpm_after_upshift_3_4_from_redline` | 4965.76 rpm (range 4816.79–4965.76) | estimated | D | high | derived | 1 |
+| `drivetrain.rpm_after_upshift_4_5_from_redline` | 5349.61 rpm (range 5189.12–5349.61) | estimated | D | high | derived | 1 |
+| `drivetrain.rpm_after_upshift_5_6_from_redline` | 5454.94 rpm (range 5291.29–5454.94) | estimated | D | high | derived | 1 |
+| `drivetrain.shift_indicator` | — | unknown | — | none | — | 1 |
+| `drivetrain.shift_mechanism` | 6MT revised for improved shift rigidity and shorter shift throws | confirmed | A | medium | `dt:hondanews-ca-2022-hatch-debut` | 1 |
+| `drivetrain.shift_time` | 0.3 s (range 0.2–0.5) | estimated | E | low | — | 1 |
 | `transmission.availability_ca_2024` | 6MT available on Sport Touring only (Sport is CVT only) | confirmed | A | high | `tx:hondanews-ca-2024-hatch-specs` | 1 |
 | `transmission.code` | — | unknown | — | none | — | 1 |
 | `transmission.final_drive` | 4.1 | confirmed | A | high | `tx:hondanews-us-2024-hatch-specs` | 4 |
@@ -89,20 +251,207 @@ _No parameter records in the database for this domain._
 
 ## 6. Steering and suspension
 
+Research log: `docs/research_log/06_steering_suspension.md`.
+
 | parameter | value | status | class | conf. | source | n |
 |---|---|---|---|---|---|---|
+| `alignment.front_camber` | — | unknown | — | none | — | 1 |
+| `alignment.front_caster` | — | unknown | — | none | — | 1 |
+| `alignment.front_toe_total` | — | unknown | — | none | — | 1 |
+| `alignment.kingpin_inclination` | — | unknown | — | none | — | 1 |
+| `alignment.rear_camber` | — | unknown | — | none | — | 1 |
+| `alignment.rear_toe_total` | — | unknown | — | none | — | 1 |
+| `alignment.scrub_radius` | — | unknown | — | none | — | 1 |
+| `alignment.thrust_angle` | — | unknown | — | none | — | 1 |
+| `hardpoints.front.arb_bushing` | — | unknown | — | none | — | 1 |
+| `hardpoints.front.arb_link_lower` | — | unknown | — | none | — | 1 |
+| `hardpoints.front.arb_link_upper` | — | unknown | — | none | — | 1 |
+| `hardpoints.front.lca_front_inner` | [-0.353, 0.02, 0.205] m | estimated | E | low | — | 1 |
+| `hardpoints.front.lca_rear_inner` | [-0.368, -0.33, 0.22] m | estimated | E | low | — | 1 |
+| `hardpoints.front.lower_ball_joint` | [-0.663, 0, 0.145] m | estimated | E | low | — | 1 |
+| `hardpoints.front.strut_top` | [-0.4748, -0.0713, 0.96] m | estimated | E | low | — | 1 |
+| `hardpoints.front.subframe_mounts` | — | unknown | — | none | — | 1 |
+| `hardpoints.front.tie_rod_inner` | [-0.36, -0.15, 0.3326] m | estimated | E | low | — | 1 |
+| `hardpoints.front.tie_rod_outer` | [-0.638, -0.135, 0.3076] m | estimated | E | low | — | 1 |
+| `hardpoints.front.wheel_center` | [-0.768, 0, 0.3076] m | estimated | D | medium | derived | 1 |
+| `hardpoints.rear.arb_bushing` | — | unknown | — | none | — | 1 |
+| `hardpoints.rear.arb_link_upper` | — | unknown | — | none | — | 1 |
+| `hardpoints.rear.damper_lower` | [-0.6725, -2.805, 0.2126] m | estimated | E | low | — | 1 |
+| `hardpoints.rear.damper_upper` | [-0.5425, -2.835, 0.8076] m | estimated | E | low | — | 1 |
+| `hardpoints.rear.lower_arm_a_inner` | [-0.2575, -2.615, 0.2476] m | estimated | E | low | — | 1 |
+| `hardpoints.rear.lower_arm_a_outer` | [-0.6775, -2.635, 0.2276] m | estimated | E | low | — | 1 |
+| `hardpoints.rear.lower_arm_b_inner` | [-0.2325, -2.805, 0.2276] m | estimated | E | low | — | 1 |
+| `hardpoints.rear.lower_arm_b_outer` | [-0.6975, -2.785, 0.1776] m | estimated | E | low | — | 1 |
+| `hardpoints.rear.spring_lower_seat` | [-0.6367, -2.788, 0.1841] m | estimated | E | low | — | 1 |
+| `hardpoints.rear.spring_upper_seat` | [-0.6367, -2.788, 0.4341] m | estimated | E | low | — | 1 |
+| `hardpoints.rear.subframe_mounts` | — | unknown | — | none | — | 1 |
+| `hardpoints.rear.trailing_arm_front` | [-0.5725, -2.235, 0.305] m | estimated | E | low | — | 1 |
+| `hardpoints.rear.upper_arm_inner` | [-0.3675, -2.735, 0.4776] m | estimated | E | low | — | 1 |
+| `hardpoints.rear.upper_arm_outer` | [-0.6575, -2.735, 0.4876] m | estimated | E | low | — | 1 |
+| `hardpoints.rear.wheel_center` | [-0.7825, -2.735, 0.3076] m | estimated | D | medium | derived | 1 |
+| `hardpoints.steering.rack_mounts` | — | unknown | — | none | — | 1 |
+| `steering.ackermann_pct_estimate` | 1.25353 (range 0.6–1.31887) | estimated | E | low | — | 1 |
+| `steering.assist_layout` | — | unknown | — | none | — | 1 |
+| `steering.crosscheck_ratio_vs_turning_circle` | 1.03642 (range 1.0279–1.04551) | estimated | D | medium | derived | 1 |
+| `steering.max_angle_inner` | 0.669 rad (range 0.662644–0.675065) | estimated | D | low | derived | 1 |
+| `steering.max_angle_outer` | 0.500935 rad (range 0.49712–0.504568) | estimated | D | medium | derived | 1 |
+| `steering.mean_lock_angle_from_ratio` | 0.606272 rad (range 0.604629–0.607917) | estimated | D | medium | derived | 1 |
+| `steering.ratio_center` | — | unknown | — | none | — | 1 |
+| `steering.ratio_lock` | — | unknown | — | none | — | 1 |
 | `steering.ratio_overall` | 11.4 | confirmed | A | high | `steer:hondanews-ca-2024-hatch-specs` | 4 |
 | `steering.turning_circle_diameter` | 11.6 m | confirmed | A | high | `steer:hondanews-ca-2024-hatch-specs` | 4 |
 | `steering.turns_lock_to_lock` | 2.2 turns | confirmed | A | high | `steer:hondanews-ca-2024-hatch-specs` | 3 |
 | `steering.type` | Variable-ratio electric power-assisted rack-and-pinion (EPS) | confirmed | A | high | `steer:hondanews-ca-2024-hatch-specs` | 2 |
+| `steering.wheel_diameter` | — | unknown | — | none | — | 1 |
+| `suspension.arb_front_active_length` | 0.85 m (range 0.7–1) | estimated | E | low | — | 1 |
+| `suspension.arb_front_construction` | tubular | confirmed | A | high | `susp:hondanews-us-2024-hatch-specs` | 1 |
+| `suspension.arb_front_diameter` | 0.0265 m | confirmed | A | high | `susp:hondanews-ca-2024-hatch-specs` | 3 |
+| `suspension.arb_front_lever_arm` | 0.2 m (range 0.15–0.27) | estimated | E | low | — | 1 |
+| `suspension.arb_front_motion_ratio` | 0.95 (range 0.85–1) | estimated | E | low | — | 1 |
+| `suspension.arb_front_polar_moment` | 3.92077e-08 m4 (range 3.73343e-08–4.10997e-08) | confirmed | D | high | derived | 1 |
+| `suspension.arb_front_roll_stiffness` | 97356.5 N*m/rad (range 25445.1–232871) | estimated | D | low | derived | 1 |
+| `suspension.arb_front_torsional_stiffness` | 3657.84 N*m/rad (range 3109.17–4441.67) | estimated | D | low | derived | 1 |
+| `suspension.arb_front_wall_thickness` | 0.0045 m | confirmed | A | high | `susp:hondanews-us-2024-hatch-specs` | 2 |
+| `suspension.arb_rear_active_length` | 0.95 m (range 0.8–1.1) | estimated | E | low | — | 1 |
+| `suspension.arb_rear_construction` | solid | confirmed | A | high | `susp:hondanews-us-2024-hatch-specs` | 1 |
+| `suspension.arb_rear_diameter` | 0.0175 m | confirmed | A | high | `susp:hondanews-ca-2024-hatch-specs` | 3 |
+| `suspension.arb_rear_lever_arm` | 0.18 m (range 0.12–0.25) | estimated | E | low | — | 1 |
+| `suspension.arb_rear_motion_ratio` | 0.75 (range 0.55–0.95) | estimated | E | low | — | 1 |
+| `suspension.arb_rear_polar_moment` | 9.20772e-09 m4 (range 8.79396e-09–9.63591e-09) | confirmed | D | high | derived | 1 |
+| `suspension.arb_rear_roll_stiffness` | 16341 N*m/rad (range 2754.07–70051.7) | estimated | D | low | derived | 1 |
+| `suspension.arb_rear_torsional_stiffness` | 768.602 N*m/rad (range 663.793–912.715) | estimated | D | low | derived | 1 |
+| `suspension.bump_stop_length_front` | — | unknown | — | none | — | 1 |
+| `suspension.bump_stop_length_rear` | — | unknown | — | none | — | 1 |
+| `suspension.damper_curve_front` | — | unknown | — | none | — | 1 |
+| `suspension.damper_curve_rear` | — | unknown | — | none | — | 1 |
+| `suspension.damping_wheel_front_inferred` | 1791.84 N*s/m (range 995.657–3087.15) | estimated | E | low | — | 1 |
+| `suspension.damping_wheel_rear_inferred` | 1164.02 N*s/m (range 586.846–2970.58) | estimated | E | low | — | 1 |
+| `suspension.front_type` | MacPherson strut | confirmed | A | high | `susp:hondanews-us-2024-hatch-specs` | 1 |
+| `suspension.motion_ratio_damper_front` | 0.97 (range 0.9–1) | estimated | E | low | — | 1 |
+| `suspension.motion_ratio_damper_rear` | 0.85 (range 0.7–1) | estimated | E | low | — | 1 |
+| `suspension.motion_ratio_front` | 0.97 (range 0.9–1) | estimated | E | low | — | 1 |
+| `suspension.motion_ratio_rear` | 0.75 (range 0.62–0.85) | estimated | E | low | — | 1 |
+| `suspension.rear_type` | Multi-link (independent) | confirmed | A | high | `susp:hondanews-ca-2024-hatch-specs` | 1 |
+| `suspension.ride_frequency_front` | 1.32881 Hz (range 1.0415–1.52686) | estimated | D | low | derived | 1 |
+| `suspension.ride_frequency_rear` | 1.26902 Hz (range 0.906443–2.16944) | estimated | D | low | derived | 1 |
+| `suspension.roll_center_height_front` | — | unknown | — | none | — | 1 |
+| `suspension.roll_center_height_rear` | — | unknown | — | none | — | 1 |
+| `suspension.spring_free_length_front` | — | unknown | — | none | — | 1 |
+| `suspension.spring_free_length_rear` | — | unknown | — | none | — | 1 |
+| `suspension.spring_rate_front` | 26500 N/m (range 22000–32000) | estimated | E | low | — | 1 |
+| `suspension.spring_rate_rear` | 27500 N/m (range 24000–60000) | estimated | E | low | — | 1 |
+| `suspension.spring_roll_stiffness_front` | 29413.2 N*m/rad (range 21021.3–37748.7) | estimated | D | low | derived | 1 |
+| `suspension.spring_roll_stiffness_rear` | 18943.2 N*m/rad (range 11297.8–53087) | estimated | D | low | derived | 1 |
+| `suspension.spring_wire_diameter_front` | — | unknown | — | none | — | 1 |
+| `suspension.spring_wire_diameter_rear` | — | unknown | — | none | — | 1 |
+| `suspension.travel_bump_front` | — | unknown | — | none | — | 1 |
+| `suspension.travel_bump_rear` | — | unknown | — | none | — | 1 |
+| `suspension.travel_rebound_front` | — | unknown | — | none | — | 1 |
+| `suspension.travel_rebound_rear` | — | unknown | — | none | — | 1 |
+| `suspension.unsprung_mass_corner_front` | 50 kg (range 40–60) | estimated | E | low | — | 1 |
+| `suspension.unsprung_mass_corner_rear` | 40 kg (range 32–50) | estimated | E | low | — | 1 |
+| `suspension.wheel_rate_front` | 24933.8 N/m (range 17820–32000) | estimated | D | low | derived | 1 |
+| `suspension.wheel_rate_rear` | 15468.8 N/m (range 9225.6–43350) | estimated | D | low | derived | 1 |
 
 ## 7. Wheels, tires, brakes and aero
 
-_No parameter records in the database for this domain._
+Research log: `docs/research_log/07_wheels_tires_brakes_aero.md`.
+
+| parameter | value | status | class | conf. | source | n |
+|---|---|---|---|---|---|---|
+| `aero.active_grille_shutter` | — | unknown | — | none | — | 1 |
+| `aero.balance` | — | unknown | — | none | — | 1 |
+| `aero.cd` | — | unknown | — | none | — | 1 |
+| `aero.cooling_openings` | — | unknown | — | none | — | 1 |
+| `aero.drag_reduction_note` | drag reduced ~3 percent vs 10th-gen hatchback | confirmed | A | high | `d7:hondanews-us-2022-hatch-presskit` | 1 |
+| `aero.features` | reshaped front bumper corners; larger A-pillar drip molding; vortex generators under mi… | confirmed | A | high | `d7:hondanews-us-2022-hatch-presskit` | 1 |
+| `aero.frontal_area` | — | unknown | — | none | — | 1 |
+| `aero.frontal_area_est` | 2.11636 m2 (range 2.03986–2.19285) | estimated | E | low | — | 1 |
+| `aero.lift_front` | — | unknown | — | none | — | 1 |
+| `aero.lift_rear` | — | unknown | — | none | — | 1 |
+| `aero.spoiler` | no separate wing; spoiler integrated into the resin hatch/tailgate trailing edge | confirmed | A | high | `d7:hondanews-us-2022-hatch-presskit` | 1 |
+| `aero.underbody` | floor undercover present (described for noise absorption); extent not published | confirmed | A | medium | `d7:hondanews-us-2022-hatch-presskit` | 1 |
+| `brakes.abs` | true | confirmed | A | high | `d7:hondanews-ca-2024-hatch-specs` | 1 |
+| `brakes.bias_front_hydraulic` | — | unknown | — | none | — | 1 |
+| `brakes.booster_type` | — | unknown | — | none | — | 1 |
+| `brakes.brake_assist` | true | confirmed | A | high | `d7:hondanews-ca-2024-hatch-specs` | 1 |
+| `brakes.ebd` | true | confirmed | A | high | `d7:hondanews-ca-2024-hatch-specs` | 1 |
+| `brakes.front_caliper_designation` | AD57-15" | confirmed | C | medium | `d7:hondapartsnow-2024-calipers` | 1 |
+| `brakes.front_caliper_type` | single-piston floating caliper | confirmed | A | high | `d7:hondanews-us-2022-hatch-presskit` | 1 |
+| `brakes.front_effective_radius` | 0.11597 m (range 0.11097–0.12097) | estimated | E | low | — | 1 |
+| `brakes.front_piston_diameter` | — | unknown | — | none | — | 1 |
+| `brakes.front_pistons` | 1 count | confirmed | A | high | `d7:hondanews-us-2022-hatch-presskit` | 1 |
+| `brakes.front_rotor_diameter` | 0.28194 m | confirmed | A | high | `d7:hondainfocenter-us-2024-hatch-specs` | 2 |
+| `brakes.front_rotor_thickness` | 0.02286 m | confirmed | A | medium | `d7:hondanews-us-2022-hatch-presskit` | 1 |
+| `brakes.front_rotor_type` | ventilated disc | confirmed | A | high | `d7:hondanews-ca-2024-hatch-specs` | 1 |
+| `brakes.pad_mu` | — | unknown | — | none | — | 1 |
+| `brakes.parking_brake_type` | electric parking brake (EPB) with automatic brake hold; rear caliper-mounted actuator | confirmed | A | high | `d7:hondanews-ca-2024-hatch-specs` | 1 |
+| `brakes.rear_caliper_type` | single-piston caliper with electric parking-brake actuator | confirmed | A | high | `d7:hondanews-us-2022-hatch-presskit` | 1 |
+| `brakes.rear_effective_radius` | 0.10954 m (range 0.10454–0.11454) | estimated | E | low | — | 1 |
+| `brakes.rear_piston_diameter` | — | unknown | — | none | — | 1 |
+| `brakes.rear_pistons` | 1 count | confirmed | A | high | `d7:hondanews-us-2022-hatch-presskit` | 1 |
+| `brakes.rear_rotor_diameter` | 0.25908 m | confirmed | A | high | `d7:hondainfocenter-us-2024-hatch-specs` | 2 |
+| `brakes.rear_rotor_thickness` | 0.01016 m | confirmed | A | medium | `d7:hondanews-us-2022-hatch-presskit` | 1 |
+| `brakes.rear_rotor_type` | solid disc | confirmed | A | high | `d7:hondanews-ca-2024-hatch-specs` | 1 |
+| `tires.aspect_ratio` | 0.4 | confirmed | A | high | `d7:hondanews-ca-2024-hatch-specs` | 2 |
+| `tires.load_index` | 91 count | confirmed | A | high | `d7:hondanews-ca-2024-hatch-specs` | 1 |
+| `tires.loaded_radius` | 0.3046 m (range 0.2976–0.3106) | estimated | E | low | — | 1 |
+| `tires.make_model` | Continental ContiProContact | confirmed | C | medium | `perf:cd-2022-civic-hatch-st-6mt` | 1 |
+| `tires.mass` | — | unknown | — | none | — | 1 |
+| `tires.oem_variant` | — | unknown | — | none | — | 1 |
+| `tires.overall_diameter` | 0.64516 m | confirmed | C | low | `tires:tirediscounters-contiprocontact-235-40r18` | 1 |
+| `tires.overall_diameter_nominal` | 0.6452 m (range 0.64144–0.64896) | confirmed | D | high | derived | 1 |
+| `tires.recommended_pressure_front` | 227527 Pa | confirmed | C | medium | `d7:tirepressure-2024-civic` | 1 |
+| `tires.recommended_pressure_rear` | 220632 Pa | confirmed | C | medium | `d7:tirepressure-2024-civic` | 1 |
+| `tires.revs_per_km` | — | unknown | — | none | — | 1 |
+| `tires.revs_per_mile` | 818 count | confirmed | C | low | `tires:tirediscounters-contiprocontact-235-40r18` | 1 |
+| `tires.rim_diameter` | 0.4572 m | confirmed | A | high | `d7:hondanews-ca-2024-hatch-specs` | 2 |
+| `tires.rolling_circumference` | 1.96615 m (range 1.94588–1.99655) | estimated | D | medium | derived | 1 |
+| `tires.rolling_circumference_from_revs` | 1.96741 m (range 1.96621–1.96862) | estimated | D | low | derived | 1 |
+| `tires.section_width` | 0.235 m | confirmed | A | high | `d7:hondanews-ca-2024-hatch-specs` | 2 |
+| `tires.sidewall_height_nominal` | 0.094 m (range 0.09212–0.09588) | confirmed | D | high | derived | 1 |
+| `tires.size` ⚠ | P235/40 R18 91W | confirmed | A | high | `d7:hondanews-ca-2024-hatch-specs` | 3 |
+| `tires.spare_size` | T125/85 D16 99M | confirmed | A | high | `d7:hondanews-ca-2024-hatch-specs` | 1 |
+| `tires.speed_rating` | W | confirmed | A | high | `d7:hondanews-ca-2024-hatch-specs` | 1 |
+| `tires.test_data` | — | unknown | — | none | — | 1 |
+| `tires.tread_depth_new` | — | unknown | — | none | — | 1 |
+| `tires.type` | all-season | confirmed | A | high | `d7:hondanews-ca-2024-hatch-specs` | 1 |
+| `tires.utqg` | — | unknown | — | none | — | 1 |
+| `wheels.bolt_pattern` | 5x114.3 | confirmed | C | medium | `d7:kamispeed-11thgen-fitment` | 1 |
+| `wheels.center_bore` | — | unknown | — | none | — | 1 |
+| `wheels.diameter` | 0.4572 m | confirmed | A | high | `d7:hondanews-ca-2024-hatch-specs` | 2 |
+| `wheels.finish` ⚠ | machined face with black inserts (2024 CA wording); 2022: 'machined-tinted with black i… | confirmed | A | high | `d7:hondanews-ca-2024-hatch-specs` | 2 |
+| `wheels.lug_torque` | — | unknown | — | none | — | 1 |
+| `wheels.mass` | 7.39356 kg | estimated | C | low | `d7:hondapartsnow-2024-rims` | 1 |
+| `wheels.offset` | 0.05 m | confirmed | C | low | `d7:kamispeed-11thgen-fitment` | 1 |
+| `wheels.part_number` | 42700-T20-A31 | confirmed | C | high | `d7:hondapartsnow-2024-rims` | 2 |
+| `wheels.spoke_design` | split 5-spoke, unique to Sport Touring | confirmed | A | high | `d7:hondanews-us-2022-hatch-presskit` | 1 |
+| `wheels.width` | 0.2032 m | confirmed | C | high | `d7:hondapartsnow-2024-rims` | 1 |
 
 ## 8. Performance targets
 
-_No parameter records in the database for this domain._
+Research log: `docs/research_log/08_performance.md`.
+
+| parameter | value | status | class | conf. | source | n |
+|---|---|---|---|---|---|---|
+| `perf.accel_0_100kmh` | — | unknown | — | none | — | 1 |
+| `perf.accel_0_100mph` | 19 s | confirmed | C | high | `perf:cd-2022-civic-hatch-st-6mt` | 1 |
+| `perf.accel_0_120mph` | 30.9 s | confirmed | C | high | `perf:cd-2022-civic-hatch-st-6mt` | 1 |
+| `perf.accel_0_30mph` | — | unknown | — | none | — | 1 |
+| `perf.accel_0_60mph` | 7.3 s | confirmed | C | high | `perf:cd-2022-civic-hatch-st-6mt` | 1 |
+| `perf.accel_5_60mph` | 8.3 s | confirmed | C | high | `perf:cd-2022-civic-hatch-st-6mt` | 1 |
+| `perf.braking_100_0kmh` | — | unknown | — | none | — | 1 |
+| `perf.braking_60_0mph` | — | unknown | — | none | — | 1 |
+| `perf.braking_70_0mph` | 52.7304 m | confirmed | C | high | `perf:cd-2022-civic-hatch-st-6mt` | 1 |
+| `perf.cd_rollout_1ft` | 0.4 s | confirmed | C | high | `perf:cd-2022-civic-hatch-st-6mt` | 1 |
+| `perf.honda_claim_0_100kmh` | — | unknown | — | none | — | 1 |
+| `perf.pass_30_50mph_top` | 12.1 s | confirmed | C | high | `perf:cd-2022-civic-hatch-st-6mt` | 1 |
+| `perf.pass_50_70mph_top` | 9.4 s | confirmed | C | high | `perf:cd-2022-civic-hatch-st-6mt` | 1 |
+| `perf.quarter_mile_time` | 15.5 s | confirmed | C | high | `perf:cd-2022-civic-hatch-st-6mt` | 1 |
+| `perf.quarter_mile_trap` | 40.6806 m/s | confirmed | C | high | `perf:cd-2022-civic-hatch-st-6mt` | 1 |
+| `perf.skidpad_g` | 8.82598 m/s2 | confirmed | C | medium | `perf:cd-2022-civic-hatch-st-6mt` | 1 |
+| `perf.test_weight` | 1371.66 kg | confirmed | C | high | `perf:cd-2022-civic-hatch-st-6mt` | 1 |
+| `perf.top_speed` | 58.1152 m/s | estimated | C | low | `perf:cd-2022-civic-hatch-st-6mt` | 1 |
 
 ## 9. Visual references, paint and cluster
 

@@ -6,21 +6,21 @@ Verdicts are judgments recorded in `docs/scorecard_input.json`; every count belo
 
 | # | domain | verdict | evidence |
 |---|---|---|---|
-| 1 | Identity | **NOT ASSESSED** |  (records: 0 confirmed, 0 estimated, 0 unknown) |
-| 2 | Dimensions | **NOT ASSESSED** |  (records: 20 confirmed, 0 estimated, 2 unknown) |
-| 3 | Mass and inertia | **NOT ASSESSED** |  (records: 3 confirmed, 0 estimated, 0 unknown) |
-| 4 | Engine and turbo | **NOT ASSESSED** |  (records: 0 confirmed, 0 estimated, 0 unknown) |
-| 5 | Drivetrain | **NOT ASSESSED** |  (records: 16 confirmed, 1 estimated, 1 unknown) |
-| 6 | Steering and suspension | **NOT ASSESSED** |  (records: 4 confirmed, 0 estimated, 0 unknown) |
-| 7 | Wheels, tires, brakes and aero | **NOT ASSESSED** |  (records: 0 confirmed, 0 estimated, 0 unknown) |
-| 8 | Performance targets | **NOT ASSESSED** |  (records: 0 confirmed, 0 estimated, 0 unknown) |
+| 1 | Identity | **NOT ASSESSED** |  (records: 17 confirmed, 3 estimated, 1 unknown) |
+| 2 | Dimensions | **NOT ASSESSED** |  (records: 24 confirmed, 31 estimated, 6 unknown) |
+| 3 | Mass and inertia | **NOT ASSESSED** |  (records: 7 confirmed, 14 estimated, 6 unknown) |
+| 4 | Engine and turbo | **NOT ASSESSED** |  (records: 31 confirmed, 4 estimated, 6 unknown) |
+| 5 | Drivetrain | **NOT ASSESSED** |  (records: 24 confirmed, 9 estimated, 11 unknown) |
+| 6 | Steering and suspension | **NOT ASSESSED** |  (records: 13 confirmed, 50 estimated, 34 unknown) |
+| 7 | Wheels, tires, brakes and aero | **NOT ASSESSED** |  (records: 41 confirmed, 7 estimated, 20 unknown) |
+| 8 | Performance targets | **NOT ASSESSED** |  (records: 12 confirmed, 1 estimated, 5 unknown) |
 | 9 | Visual references, paint and cluster | **NOT ASSESSED** |  (records: 0 confirmed, 0 estimated, 0 unknown) |
 | 10 | Audio | **NOT ASSESSED** |  (records: 0 confirmed, 0 estimated, 0 unknown) |
 | 11 | Platform | **NOT ASSESSED** |  (records: 0 confirmed, 0 estimated, 0 unknown) |
 
 ## Counts
 
-- Hard points: **0 confirmed, 0 estimated, 0 unknown**.
+- Hard points: **0 confirmed, 19 estimated, 8 unknown**.
 - Stock dyno sources in `engine_curves/`: **4**: `hondata_2022_civic_sedan_ex_cvt_stock.json`, `prl_2022_civic_cvt_stock_frontpipe_baseline.json`, `prl_2022_civic_touring_cvt_stock_intake_baseline.json`, `tsp_2022_civic_non_si_cvt_stock.json`.
 - User's reference clip (youtube.com/shorts/BDuJz3FTOpU): **not assessed**.
-- Validation: 12 errors, 6 warnings; Overall length = wheelbase + overhangs: not_run, Axle masses vs curb mass and ratings: not_run, Track + tire width vs overall width: not_run, Steering ratio x lock vs turning circle: pass, Gear speed vs real observation: not_run, Tire diameter: published vs nominal: not_run.
+- Validation: 0 errors, 1 warnings; Overall length = wheelbase + overhangs: pass, Axle masses vs curb mass and ratings: pass, Track + tire width vs overall width: pass, Steering ratio x lock vs turning circle: pass, Gear speed vs real observation: not_run, Tire diameter: published vs nominal: pass, Rolling circumference: size-based vs published revs/mile: pass.

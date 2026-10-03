@@ -11,9 +11,40 @@ Listed when two or more user/A/B/C candidates for the same parameter differ by m
 - Other: 4.6736 m — class A, `dim:hondainfocenter-us-2024-hatch-specs` ({"year": "2024", "market": "US", "trim": "Sport Touring", "body": "hatchback", "gearbox": "6MT and CVT", "engine": "1.5T", "notes": "US market; Canadian figure is selected where both exist"})
 - Rule: precedence: user > A > B/C; then applicability (2024, CA, Sport Touring, 6MT); then prefer flag; then confidence
 
+## `engine.fuel_recommended`
+
+- **Selected:** Regular — class A, `eng:hondanews-ca-2024-hatch-specs` ({"year": "2024", "market": "CA", "trim": "Sport, Sport Touring", "body": "hatchback", "gearbox": "6MT or CVT (engine ratings not split by gearbox)", "engine": "1.5T", "notes": ""})
+- Other: Regular Unleaded — class A, `eng:hic-us-2024-hatch-specs` ({"year": "2024", "market": "US", "trim": "EX-L, Sport Touring", "body": "hatchback", "gearbox": "6MT or CVT (not split)", "engine": "1.5T", "notes": ""})
+- Rule: precedence: user > A > B/C; then applicability (2024, CA, Sport Touring, 6MT); then prefer flag; then confidence
+
+## `engine.valvetrain`
+
+- **Selected:** 16-Valve DOHC VTEC — class A, `eng:hic-us-2024-hatch-specs` ({"year": "2024", "market": "US", "trim": "EX-L, Sport Touring", "body": "hatchback", "gearbox": "6MT or CVT (not split)", "engine": "1.5T", "notes": ""})
+- Other: DOHC 16-valve, chain-driven; dual VTC (intake and exhaust cam phasing); VTEC on exhaust… — class A, `eng:hondanews-us-15t-engine-2024` ({"year": "2022-2024", "market": "US", "trim": "Civic Hatchback EX-L, Sport Touring", "body": "hatchback", "gearbox": "not split", "engine": "1.5T", "notes": "Honda 1.5T technical release; Civic Sedan EX/Touring share the same code and ratings per the same table"})
+- Rule: precedence: user > A > B/C; then applicability (2024, CA, Sport Touring, 6MT); then prefer flag; then confidence
+
+## `identity.assembly_plant`
+
+- **Selected:** GREENSBURG, INDIANA, UNITED STATES (USA) — class A, `id:vpic` ({"year": "2024", "market": "CA (serial 4xxxxx; see notes)", "trim": "Sport Touring (vPIC)", "body": "hatchback", "gearbox": "6MT", "engine": "1.5T", "notes": ""})
+- Other: Honda Manufacturing of Indiana, Greensburg, Indiana, USA — class A, `id:hci-2022-debut` ({"year": "2022", "market": "North America", "trim": "all hatchback", "body": "hatchback", "gearbox": "all", "engine": "1.5T", "notes": ""})
+- Rule: precedence: user > A > B/C; then applicability (2024, CA, Sport Touring, 6MT); then prefer flag; then confidence
+
 ## `mass.fuel_capacity`
 
 - **Selected:** 0.046 m3 — class A, `mass:hondanews-ca-2024-hatch-specs` ({"year": "2024", "market": "CA", "trim": "Sport, Sport Touring", "body": "hatchback", "gearbox": "CVT and 6MT", "engine": "1.5T", "notes": ""})
 - Other: 0.0469013 m3 — class A, `mass:hondainfocenter-us-2024-hatch-specs` ({"year": "2024", "market": "US", "trim": "LX, Sport, EX-L, Sport Touring", "body": "hatchback", "gearbox": "CVT and 6MT", "engine": "1.5T", "notes": ""})
+- Other: 0.0469391 m3 — class A, `mass:hondanews-us-2024-hatch-specs` ({"year": "2024", "market": "US", "trim": "all hatchback trims", "body": "hatchback", "gearbox": "CVT and 6MT", "engine": "1.5T", "notes": ""})
+- Rule: precedence: user > A > B/C; then applicability (2024, CA, Sport Touring, 6MT); then prefer flag; then confidence
+
+## `tires.size`
+
+- **Selected:** P235/40 R18 91W — class A, `d7:hondanews-ca-2024-hatch-specs` ({"year": "2024", "market": "CA", "trim": "Sport Touring", "body": "hatchback", "gearbox": "6MT and CVT (table covers both)", "engine": "1.5T", "notes": ""})
+- Other: 235/40R18 91W — class A, `d7:hondainfocenter-us-2024-hatch-specs` ({"year": "2024", "market": "US", "trim": "Sport Touring", "body": "hatchback", "gearbox": "6MT and CVT", "engine": "1.5T", "notes": "US spec table, Sport Touring column (4th of LX/Sport/EX-L/Sport Touring)"})
+- Rule: precedence: user > A > B/C; then applicability (2024, CA, Sport Touring, 6MT); then prefer flag; then confidence
+
+## `wheels.finish`
+
+- **Selected:** machined face with black inserts (2024 CA wording); 2022: 'machined-tinted with black i… — class A, `d7:hondanews-ca-2024-hatch-specs` ({"year": "2024", "market": "CA", "trim": "Sport Touring", "body": "hatchback", "gearbox": "6MT and CVT (table covers both)", "engine": "1.5T", "notes": ""})
+- Other: dark clear-coated machined face, Berlina Black inserts — class A, `d7:hondanews-us-2022-hatch-presskit` ({"year": "2022", "market": "US", "trim": "Sport Touring (hatchback)", "body": "hatchback", "gearbox": "all", "engine": "1.5T", "notes": ""})
 - Rule: precedence: user > A > B/C; then applicability (2024, CA, Sport Touring, 6MT); then prefer flag; then confidence
 
