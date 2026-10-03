@@ -41,11 +41,11 @@
           },
           "confidence": "medium",
           "range": [
-            0.8063978163160394,
-            0.8958189634170596
+            0.7768576037467901,
+            0.9253591759863088
           ],
           "how_to_measure": "Plumb bob from the front bumper's foremost point and from the front hub centre; measure the floor distance (+-5 mm).",
-          "notes": "1-sigma 0.02236 m; range = +-2 sigma (localisation + scale + perspective).",
+          "notes": "Direct photo overhangs scaled by wheelbase sum to 1631 mm vs published length - wheelbase 1794 mm; prefer dimensions.overhang_front/rear derived from the scale-free fraction. 1-sigma 0.03713 m; range = +-2 sigma (localisation + scale + perspective).",
           "derivation": {
             "script": "scripts/domains/photo_measure_side.py",
             "function": "main",
@@ -65,7 +65,7 @@
             },
             "scale_mm_per_px": {
               "horizontal": 8.644943125467114,
-              "vertical": 8.039560745606778
+              "vertical": 8.691793416873226
             }
           }
         }
@@ -96,11 +96,11 @@
           },
           "confidence": "medium",
           "range": [
-            0.7383416779974341,
-            0.8208340989912515
+            0.711399868022507,
+            0.8477759089661786
           ],
           "how_to_measure": "Plumb bob from the rear bumper's rearmost point and from the rear hub centre; measure the floor distance (+-5 mm).",
-          "notes": "1-sigma 0.02062 m; range = +-2 sigma (localisation + scale + perspective).",
+          "notes": "Direct photo overhangs scaled by wheelbase sum to 1631 mm vs published length - wheelbase 1794 mm; prefer dimensions.overhang_front/rear derived from the scale-free fraction. 1-sigma 0.03409 m; range = +-2 sigma (localisation + scale + perspective).",
           "derivation": {
             "script": "scripts/domains/photo_measure_side.py",
             "function": "main",
@@ -120,7 +120,7 @@
             },
             "scale_mm_per_px": {
               "horizontal": 8.644943125467114,
-              "vertical": 8.039560745606778
+              "vertical": 8.691793416873226
             }
           }
         }
@@ -151,11 +151,11 @@
           },
           "confidence": "medium",
           "range": [
-            0.5144321509679163,
-            0.5294267222761534
+            0.5005703801780004,
+            0.5432884930660693
           ],
           "how_to_measure": "As for the overhangs.",
-          "notes": "Used by scripts/derivations/dimensions.py with the published length and wheelbase. 1-sigma 0.003749 1; range = +-2 sigma (localisation + scale + perspective).",
+          "notes": "Used by scripts/derivations/dimensions.py with the published length and wheelbase. Sigma includes a 0.01 allowance for front/rear differential perspective (the photo reproduces the published length only to 3.6%, consistent with a finite-distance camera magnifying the near-side wheels relative to the centreline bumper extremes). 1-sigma 0.01068 1; range = +-2 sigma (localisation + scale + perspective).",
           "derivation": {
             "script": "scripts/domains/photo_measure_side.py",
             "function": "main",
@@ -171,7 +171,7 @@
             },
             "scale_mm_per_px": {
               "horizontal": 8.644943125467114,
-              "vertical": 8.039560745606778
+              "vertical": 8.691793416873226
             }
           }
         }
@@ -183,7 +183,7 @@
       "impact": "low",
       "candidates": [
         {
-          "value": 0.3998770716673482,
+          "value": 0.399201654789249,
           "unit": "m",
           "status": "estimated",
           "class": "D",
@@ -202,11 +202,11 @@
           },
           "confidence": "low",
           "range": [
-            0.1585562938195765,
-            0.6411978495151199
+            0.1383030292768821,
+            0.6601002803016159
           ],
           "how_to_measure": "Measure the height of the bumper nose above the floor with a square (+-5 mm).",
-          "notes": "1-sigma 0.1207 m; range = +-2 sigma (localisation + scale + perspective).",
+          "notes": "1-sigma 0.1304 m; range = +-2 sigma (localisation + scale + perspective).",
           "derivation": {
             "script": "scripts/domains/photo_measure_side.py",
             "function": "main",
@@ -225,7 +225,7 @@
             },
             "scale_mm_per_px": {
               "horizontal": 8.644943125467114,
-              "vertical": 8.039560745606778
+              "vertical": 8.691793416873226
             }
           }
         }
@@ -237,7 +237,7 @@
       "impact": "low",
       "candidates": [
         {
-          "value": 0.41595619315856175,
+          "value": 0.4165852416229955,
           "unit": "m",
           "status": "estimated",
           "class": "D",
@@ -256,11 +256,11 @@
           },
           "confidence": "medium",
           "range": [
-            0.3979791888221461,
-            0.4339331974949774
+            0.39714980069648176,
+            0.4360206825495092
           ],
           "how_to_measure": "Measure the height of the rearmost bumper point above the floor (+-5 mm).",
-          "notes": "1-sigma 0.008989 m; range = +-2 sigma (localisation + scale + perspective).",
+          "notes": "1-sigma 0.009718 m; range = +-2 sigma (localisation + scale + perspective).",
           "derivation": {
             "script": "scripts/domains/photo_measure_side.py",
             "function": "main",
@@ -279,7 +279,7 @@
             },
             "scale_mm_per_px": {
               "horizontal": 8.644943125467114,
-              "vertical": 8.039560745606778
+              "vertical": 8.691793416873226
             }
           }
         }
@@ -310,11 +310,11 @@
           },
           "confidence": "medium",
           "range": [
-            4.1447587849695235,
-            4.586633771752261
+            3.989831938546547,
+            4.741560618175238
           ],
           "how_to_measure": "Tape between plumb marks of bumper extremes.",
-          "notes": "1-sigma 0.1105 m; range = +-2 sigma (localisation + scale + perspective).",
+          "notes": "1-sigma 0.1879 m; range = +-2 sigma (localisation + scale + perspective).",
           "derivation": {
             "script": "scripts/domains/photo_measure_side.py",
             "function": "main",
@@ -330,7 +330,7 @@
             },
             "scale_mm_per_px": {
               "horizontal": 8.644943125467114,
-              "vertical": 8.039560745606778
+              "vertical": 8.691793416873226
             }
           }
         }
@@ -342,12 +342,12 @@
       "impact": "low",
       "candidates": [
         {
-          "value": 1.348545239648948,
+          "value": 1.4248332779802897,
           "unit": "m",
           "status": "estimated",
           "class": "D",
           "source_id": "prop:hic-2022-hatch-strg-profile",
-          "locator": "image px {\"roof_row\": 25, \"ground_row\": 192.23867159171118}",
+          "locator": "image px {\"roof_row\": 25, \"ground_row\": 188.42857142857144}",
           "evidence": "Image feature located by algorithm: top silhouette row vs fitted tyre-bottom ground line",
           "as_printed": "",
           "applicability": {
@@ -361,11 +361,11 @@
           },
           "confidence": "medium",
           "range": [
-            1.2796614718542867,
-            1.4174290074436091
+            1.354207481357873,
+            1.4954590746027063
           ],
           "how_to_measure": "Straightedge on roof, tape to floor.",
-          "notes": "1-sigma 0.03444 m; range = +-2 sigma (localisation + scale + perspective).",
+          "notes": "1-sigma 0.03531 m; range = +-2 sigma (localisation + scale + perspective).",
           "derivation": {
             "script": "scripts/domains/photo_measure_side.py",
             "function": "main",
@@ -377,11 +377,11 @@
             "algorithm": "top silhouette row vs fitted tyre-bottom ground line",
             "pixels": {
               "roof_row": 25,
-              "ground_row": 192.23867159171118
+              "ground_row": 188.42857142857144
             },
             "scale_mm_per_px": {
               "horizontal": 8.644943125467114,
-              "vertical": 8.039560745606778
+              "vertical": 8.691793416873226
             }
           }
         }
@@ -393,7 +393,7 @@
       "impact": "medium",
       "candidates": [
         {
-          "value": 1.348545239648948,
+          "value": 1.4248332779802897,
           "unit": "m",
           "status": "estimated",
           "class": "D",
@@ -412,11 +412,11 @@
           },
           "confidence": "medium",
           "range": [
-            1.2796614718542867,
-            1.4174290074436091
+            1.354207481357873,
+            1.4954590746027063
           ],
           "how_to_measure": "Straightedge across the roof at its highest point; tape to floor (+-3 mm).",
-          "notes": "1-sigma 0.03444 m; range = +-2 sigma (localisation + scale + perspective).",
+          "notes": "1-sigma 0.03531 m; range = +-2 sigma (localisation + scale + perspective).",
           "derivation": {
             "script": "scripts/domains/photo_measure_side.py",
             "function": "main",
@@ -435,7 +435,7 @@
             },
             "scale_mm_per_px": {
               "horizontal": 8.644943125467114,
-              "vertical": 8.039560745606778
+              "vertical": 8.691793416873226
             }
           }
         }
@@ -488,7 +488,7 @@
             },
             "scale_mm_per_px": {
               "horizontal": 8.644943125467114,
-              "vertical": 8.039560745606778
+              "vertical": 8.691793416873226
             }
           }
         }
@@ -539,7 +539,7 @@
             },
             "scale_mm_per_px": {
               "horizontal": 8.644943125467114,
-              "vertical": 8.039560745606778
+              "vertical": 8.691793416873226
             }
           }
         }
@@ -551,7 +551,7 @@
       "impact": "medium",
       "candidates": [
         {
-          "value": 0.9827452257238396,
+          "value": 1.029356677512558,
           "unit": "m",
           "status": "estimated",
           "class": "D",
@@ -570,11 +570,11 @@
           },
           "confidence": "medium",
           "range": [
-            0.9230399228494808,
-            1.0424505285981984
+            0.9675161403661804,
+            1.0911972146589355
           ],
           "how_to_measure": "Tape from floor to the windshield base at the centreline (+-5 mm).",
-          "notes": "1-sigma 0.02985 m; range = +-2 sigma (localisation + scale + perspective).",
+          "notes": "1-sigma 0.03092 m; range = +-2 sigma (localisation + scale + perspective).",
           "derivation": {
             "script": "scripts/domains/photo_measure_side.py",
             "function": "main",
@@ -589,7 +589,7 @@
             },
             "scale_mm_per_px": {
               "horizontal": 8.644943125467114,
-              "vertical": 8.039560745606778
+              "vertical": 8.691793416873226
             }
           }
         }
@@ -639,7 +639,7 @@
             },
             "scale_mm_per_px": {
               "horizontal": 8.644943125467114,
-              "vertical": 8.039560745606778
+              "vertical": 8.691793416873226
             }
           }
         }
@@ -651,7 +651,7 @@
       "impact": "low",
       "candidates": [
         {
-          "value": 0.7162704563749877,
+          "value": 0.7550702112607619,
           "unit": "rad",
           "status": "estimated",
           "class": "D",
@@ -670,8 +670,8 @@
           },
           "confidence": "medium",
           "range": [
-            0.6464572862952145,
-            0.7860836264547608
+            0.6852570411809887,
+            0.8248833813405351
           ],
           "how_to_measure": "Inclinometer on the glass at the centreline.",
           "notes": "Silhouette (outer glass) line, not the glass at centreline; 2 deg sigma. 1-sigma 0.03491 rad; range = +-2 sigma (localisation + scale + perspective).",
@@ -694,7 +694,7 @@
             },
             "scale_mm_per_px": {
               "horizontal": 8.644943125467114,
-              "vertical": 8.039560745606778
+              "vertical": 8.691793416873226
             }
           }
         }
@@ -706,7 +706,7 @@
       "impact": "medium",
       "candidates": [
         {
-          "value": 0.32552212489763205,
+          "value": 0.3498974652062643,
           "unit": "rad",
           "status": "estimated",
           "class": "D",
@@ -725,8 +725,8 @@
           },
           "confidence": "low",
           "range": [
-            0.23825566229791556,
-            0.41278858749734854
+            0.2626310026065478,
+            0.4371639278059808
           ],
           "how_to_measure": "Inclinometer on the hatch glass at the centreline.",
           "notes": "Includes the effect of the roof spoiler on the silhouette; 2.5 deg sigma. 1-sigma 0.04363 rad; range = +-2 sigma (localisation + scale + perspective).",
@@ -754,7 +754,7 @@
             },
             "scale_mm_per_px": {
               "horizontal": 8.644943125467114,
-              "vertical": 8.039560745606778
+              "vertical": 8.691793416873226
             }
           }
         }
@@ -804,7 +804,7 @@
             },
             "scale_mm_per_px": {
               "horizontal": 8.644943125467114,
-              "vertical": 8.039560745606778
+              "vertical": 8.691793416873226
             }
           }
         }
@@ -816,7 +816,7 @@
       "impact": "medium",
       "candidates": [
         {
-          "value": 0.9103891790133786,
+          "value": 0.9511305367606989,
           "unit": "m",
           "status": "estimated",
           "class": "D",
@@ -835,11 +835,11 @@
           },
           "confidence": "medium",
           "range": [
-            0.8630029324959875,
-            0.9577754255307697
+            0.9029676446514812,
+            0.9992934288699167
           ],
           "how_to_measure": "Straightedge across the hood above the front hub; tape to floor (+-5 mm).",
-          "notes": "1-sigma 0.02369 m; range = +-2 sigma (localisation + scale + perspective).",
+          "notes": "1-sigma 0.02408 m; range = +-2 sigma (localisation + scale + perspective).",
           "derivation": {
             "script": "scripts/domains/photo_measure_side.py",
             "function": "main",
@@ -855,7 +855,7 @@
             },
             "scale_mm_per_px": {
               "horizontal": 8.644943125467114,
-              "vertical": 8.039560745606778
+              "vertical": 8.691793416873226
             }
           }
         }
@@ -867,7 +867,7 @@
       "impact": "medium",
       "candidates": [
         {
-          "value": 0.2149671745183923,
+          "value": 0.19929040620116484,
           "unit": "m",
           "status": "estimated",
           "class": "D",
@@ -886,11 +886,11 @@
           },
           "confidence": "medium",
           "range": [
-            0.19910171625744108,
-            0.23083263277934354
+            0.18346326275926497,
+            0.2151175496430647
           ],
           "how_to_measure": "Tape from floor to the sill lower edge at mid-wheelbase, both sides (+-3 mm).",
-          "notes": "Not the same quantity as the published minimum ground clearance (134 mm, no-load). 1-sigma 0.007933 m; range = +-2 sigma (localisation + scale + perspective).",
+          "notes": "Not the same quantity as the published minimum ground clearance (134 mm, no-load). 1-sigma 0.007914 m; range = +-2 sigma (localisation + scale + perspective).",
           "derivation": {
             "script": "scripts/domains/photo_measure_side.py",
             "function": "main",
@@ -909,7 +909,7 @@
             },
             "scale_mm_per_px": {
               "horizontal": 8.644943125467114,
-              "vertical": 8.039560745606778
+              "vertical": 8.691793416873226
             }
           }
         }
@@ -921,7 +921,7 @@
       "impact": "medium",
       "candidates": [
         {
-          "value": 0.3206018729495859,
+          "value": 0.3134950257656558,
           "unit": "m",
           "status": "estimated",
           "class": "D",
@@ -940,11 +940,11 @@
           },
           "confidence": "medium",
           "range": [
-            0.3008102007792792,
-            0.3403935451198926
+            0.29383076296745303,
+            0.33315928856385857
           ],
           "how_to_measure": "Tape from floor to hub centre (+-2 mm).",
-          "notes": "In a render the tyre is undeflected; a real loaded tyre sits ~10-20 mm lower. Equals the unloaded tyre radius here. 1-sigma 0.009896 m; range = +-2 sigma (localisation + scale + perspective).",
+          "notes": "In a render the tyre is undeflected; a real loaded tyre sits ~10-20 mm lower. Equals the unloaded tyre radius here. 1-sigma 0.009832 m; range = +-2 sigma (localisation + scale + perspective).",
           "derivation": {
             "script": "scripts/domains/photo_measure_side.py",
             "function": "main",
@@ -960,7 +960,7 @@
             },
             "scale_mm_per_px": {
               "horizontal": 8.644943125467114,
-              "vertical": 8.039560745606778
+              "vertical": 8.691793416873226
             }
           }
         }
@@ -972,7 +972,7 @@
       "impact": "high",
       "candidates": [
         {
-          "value": 0.36065982481399955,
+          "value": 0.3899193986141562,
           "unit": "m",
           "status": "estimated",
           "class": "D",
@@ -991,11 +991,11 @@
           },
           "confidence": "medium",
           "range": [
-            0.33520533810718134,
-            0.38611431152081777
+            0.36282490527149763,
+            0.41701389195681476
           ],
           "how_to_measure": "Tape from hub centre to the arch lip directly above it, car at curb weight (+-2 mm). Primary ride-height reference.",
-          "notes": "1-sigma 0.01273 m; range = +-2 sigma (localisation + scale + perspective).",
+          "notes": "1-sigma 0.01355 m; range = +-2 sigma (localisation + scale + perspective).",
           "derivation": {
             "script": "scripts/domains/photo_measure_side.py",
             "function": "main",
@@ -1012,7 +1012,7 @@
             },
             "scale_mm_per_px": {
               "horizontal": 8.644943125467114,
-              "vertical": 8.039560745606778
+              "vertical": 8.691793416873226
             }
           }
         }
@@ -1024,7 +1024,7 @@
       "impact": "high",
       "candidates": [
         {
-          "value": 0.6812616977635854,
+          "value": 0.7034144243798119,
           "unit": "m",
           "status": "estimated",
           "class": "D",
@@ -1043,11 +1043,11 @@
           },
           "confidence": "medium",
           "range": [
-            0.6426060973214462,
-            0.7199172982057245
+            0.6640544157799612,
+            0.7427744329796627
           ],
           "how_to_measure": "Tape from floor to the arch lip above the hub centre (+-2 mm).",
-          "notes": "1-sigma 0.01933 m; range = +-2 sigma (localisation + scale + perspective).",
+          "notes": "1-sigma 0.01968 m; range = +-2 sigma (localisation + scale + perspective).",
           "derivation": {
             "script": "scripts/domains/photo_measure_side.py",
             "function": "main",
@@ -1063,7 +1063,7 @@
             },
             "scale_mm_per_px": {
               "horizontal": 8.644943125467114,
-              "vertical": 8.039560745606778
+              "vertical": 8.691793416873226
             }
           }
         }
@@ -1075,7 +1075,7 @@
       "impact": "medium",
       "candidates": [
         {
-          "value": 0.32256648011526473,
+          "value": 0.3156190173828246,
           "unit": "m",
           "status": "estimated",
           "class": "D",
@@ -1094,11 +1094,11 @@
           },
           "confidence": "medium",
           "range": [
-            0.30269346941278225,
-            0.3424394908177472
+            0.2958734769543988,
+            0.3353645578112504
           ],
           "how_to_measure": "Tape from floor to hub centre (+-2 mm).",
-          "notes": "In a render the tyre is undeflected; a real loaded tyre sits ~10-20 mm lower. Equals the unloaded tyre radius here. 1-sigma 0.009937 m; range = +-2 sigma (localisation + scale + perspective).",
+          "notes": "In a render the tyre is undeflected; a real loaded tyre sits ~10-20 mm lower. Equals the unloaded tyre radius here. 1-sigma 0.009873 m; range = +-2 sigma (localisation + scale + perspective).",
           "derivation": {
             "script": "scripts/domains/photo_measure_side.py",
             "function": "main",
@@ -1114,7 +1114,7 @@
             },
             "scale_mm_per_px": {
               "horizontal": 8.644943125467114,
-              "vertical": 8.039560745606778
+              "vertical": 8.691793416873226
             }
           }
         }
@@ -1126,7 +1126,7 @@
       "impact": "high",
       "candidates": [
         {
-          "value": 0.35869521764832074,
+          "value": 0.38779540699698734,
           "unit": "m",
           "status": "estimated",
           "class": "D",
@@ -1145,11 +1145,11 @@
           },
           "confidence": "medium",
           "range": [
-            0.33331091568506155,
-            0.38407951961157993
+            0.36077326631041795,
+            0.4148175476835567
           ],
           "how_to_measure": "Tape from hub centre to the arch lip directly above it, car at curb weight (+-2 mm). Primary ride-height reference.",
-          "notes": "1-sigma 0.01269 m; range = +-2 sigma (localisation + scale + perspective).",
+          "notes": "1-sigma 0.01351 m; range = +-2 sigma (localisation + scale + perspective).",
           "derivation": {
             "script": "scripts/domains/photo_measure_side.py",
             "function": "main",
@@ -1166,7 +1166,7 @@
             },
             "scale_mm_per_px": {
               "horizontal": 8.644943125467114,
-              "vertical": 8.039560745606778
+              "vertical": 8.691793416873226
             }
           }
         }
@@ -1178,7 +1178,7 @@
       "impact": "high",
       "candidates": [
         {
-          "value": 0.6812616977635854,
+          "value": 0.7034144243798119,
           "unit": "m",
           "status": "estimated",
           "class": "D",
@@ -1197,11 +1197,11 @@
           },
           "confidence": "medium",
           "range": [
-            0.6426060973214462,
-            0.7199172982057245
+            0.6640544157799612,
+            0.7427744329796627
           ],
           "how_to_measure": "Tape from floor to the arch lip above the hub centre (+-2 mm).",
-          "notes": "1-sigma 0.01933 m; range = +-2 sigma (localisation + scale + perspective).",
+          "notes": "1-sigma 0.01968 m; range = +-2 sigma (localisation + scale + perspective).",
           "derivation": {
             "script": "scripts/domains/photo_measure_side.py",
             "function": "main",
@@ -1217,7 +1217,7 @@
             },
             "scale_mm_per_px": {
               "horizontal": 8.644943125467114,
-              "vertical": 8.039560745606778
+              "vertical": 8.691793416873226
             }
           }
         }
@@ -1229,12 +1229,12 @@
       "impact": "low",
       "candidates": [
         {
-          "value": 0.7432436045917926,
+          "value": 0.7510481007079992,
           "unit": "1",
           "status": "estimated",
           "class": "D",
           "source_id": "prop:hic-2022-hatch-strg-profile",
-          "locator": "image px {\"rim_r_px\": 28.688912844990057, \"tyre_r_px\": 38.59960942515839}",
+          "locator": "image px {\"rim_r_px\": 28.688912844990057, \"tyre_r_px\": 38.19850262312833}",
           "evidence": "Image feature located by algorithm: concentric HoughCircles",
           "as_printed": "",
           "applicability": {
@@ -1248,11 +1248,11 @@
           },
           "confidence": "medium",
           "range": [
-            0.6914296088082901,
-            0.7950576003752952
+            0.6986900274156433,
+            0.8034061740003551
           ],
           "how_to_measure": "Measure rim flange and tyre diameters.",
-          "notes": "Nominal 18 in / 645.2 mm = 0.709; visible rim lip is slightly smaller than the bead seat diameter. 1-sigma 0.02591 1; range = +-2 sigma (localisation + scale + perspective).",
+          "notes": "Nominal 18 in / 645.2 mm = 0.709; visible rim lip is slightly smaller than the bead seat diameter. 1-sigma 0.02618 1; range = +-2 sigma (localisation + scale + perspective).",
           "derivation": {
             "script": "scripts/domains/photo_measure_side.py",
             "function": "main",
@@ -1264,11 +1264,11 @@
             "algorithm": "concentric HoughCircles",
             "pixels": {
               "rim_r_px": 28.688912844990057,
-              "tyre_r_px": 38.59960942515839
+              "tyre_r_px": 38.19850262312833
             },
             "scale_mm_per_px": {
               "horizontal": 8.644943125467114,
-              "vertical": 8.039560745606778
+              "vertical": 8.691793416873226
             }
           }
         }
@@ -1280,12 +1280,12 @@
       "impact": "low",
       "candidates": [
         {
-          "value": 0.7393066153556677,
+          "value": 0.7447405257527473,
           "unit": "1",
           "status": "estimated",
           "class": "D",
           "source_id": "prop:hic-2022-hatch-strg-profile",
-          "locator": "image px {\"rim_r_px\": 28.40763912574396, \"tyre_r_px\": 38.42470571168572}",
+          "locator": "image px {\"rim_r_px\": 28.40763912574396, \"tyre_r_px\": 38.144344430606765}",
           "evidence": "Image feature located by algorithm: concentric HoughCircles",
           "as_printed": "",
           "applicability": {
@@ -1299,11 +1299,11 @@
           },
           "confidence": "medium",
           "range": [
-            0.6872567697431413,
-            0.791356460968194
+            0.6923081132980398,
+            0.7971729382074548
           ],
           "how_to_measure": "Measure rim flange and tyre diameters.",
-          "notes": "Nominal 18 in / 645.2 mm = 0.709; visible rim lip is slightly smaller than the bead seat diameter. 1-sigma 0.02602 1; range = +-2 sigma (localisation + scale + perspective).",
+          "notes": "Nominal 18 in / 645.2 mm = 0.709; visible rim lip is slightly smaller than the bead seat diameter. 1-sigma 0.02622 1; range = +-2 sigma (localisation + scale + perspective).",
           "derivation": {
             "script": "scripts/domains/photo_measure_side.py",
             "function": "main",
@@ -1315,11 +1315,11 @@
             "algorithm": "concentric HoughCircles",
             "pixels": {
               "rim_r_px": 28.40763912574396,
-              "tyre_r_px": 38.42470571168572
+              "tyre_r_px": 38.144344430606765
             },
             "scale_mm_per_px": {
               "horizontal": 8.644943125467114,
-              "vertical": 8.039560745606778
+              "vertical": 8.691793416873226
             }
           }
         }
@@ -1445,15 +1445,16 @@
       "rim_fit_resid_px": 0.6852414427470089,
       "cx": 156.45158927179887,
       "cy": 152.36063806546673,
-      "r": 38.59960942515839,
+      "r": 38.19850262312833,
       "tyre_free_fit_px": [
-        156.40162654522405,
-        156.89437235442674,
-        35.49910444956232
+        156.47289845916336,
+        151.70253190609694,
+        38.604037326886996
       ],
-      "fit_resid_px": 0.951482099977277,
-      "n_edge_pts": 40,
+      "fit_resid_px": 0.16399278427074748,
+      "n_edge_pts": 26,
       "ray_angles_deg": [
+        26,
         28,
         30,
         32,
@@ -1466,22 +1467,6 @@
         46,
         48,
         50,
-        52,
-        54,
-        56,
-        58,
-        60,
-        62,
-        64,
-        66,
-        114,
-        116,
-        118,
-        120,
-        122,
-        124,
-        126,
-        128,
         130,
         132,
         134,
@@ -1493,9 +1478,14 @@
         146,
         148,
         150,
-        152
+        152,
+        154
       ],
       "tyre_edge_pts_px": [
+        [
+          190.94,
+          169.18
+        ],
         [
           190.08,
           170.24
@@ -1545,70 +1535,6 @@
           181.56
         ],
         [
-          179.66,
-          182.06
-        ],
-        [
-          178.67,
-          182.94
-        ],
-        [
-          177.74,
-          183.92
-        ],
-        [
-          176.27,
-          184.08
-        ],
-        [
-          177.08,
-          188.1
-        ],
-        [
-          175.45,
-          188.09
-        ],
-        [
-          173.88,
-          188.1
-        ],
-        [
-          172.74,
-          188.93
-        ],
-        [
-          140.1,
-          189.09
-        ],
-        [
-          138.55,
-          189.06
-        ],
-        [
-          137.03,
-          188.89
-        ],
-        [
-          135.82,
-          188.1
-        ],
-        [
-          136.63,
-          184.09
-        ],
-        [
-          135.16,
-          183.92
-        ],
-        [
-          134.21,
-          182.98
-        ],
-        [
-          133.05,
-          182.32
-        ],
-        [
           132.03,
           181.46
         ],
@@ -1655,10 +1581,14 @@
         [
           122.93,
           170.18
+        ],
+        [
+          122.02,
+          169.15
         ]
       ],
-      "ellipse_semi_x": 37.02052787955051,
-      "ellipse_semi_y": 40.25116366381029,
+      "rim_ellipse_semi_x": 28.830577217153525,
+      "rim_ellipse_semi_y": 28.601574860479804,
       "rim_r": 28.688912844990057
     },
     "wheel_rear": {
@@ -1675,15 +1605,16 @@
       "rim_fit_resid_px": 0.6962487688385616,
       "cx": 472.82151331941594,
       "cy": 152.1162705896998,
-      "r": 38.42470571168572,
+      "r": 38.144344430606765,
       "tyre_free_fit_px": [
-        471.1514986799733,
-        155.88009099820977,
-        35.856924995449326
+        471.4053158175649,
+        150.21216696341418,
+        39.34657302616675
       ],
-      "fit_resid_px": 1.0713279011734582,
-      "n_edge_pts": 40,
+      "fit_resid_px": 0.3608195749511743,
+      "n_edge_pts": 26,
       "ray_angles_deg": [
+        26,
         28,
         30,
         32,
@@ -1696,22 +1627,6 @@
         46,
         48,
         50,
-        52,
-        54,
-        56,
-        58,
-        60,
-        62,
-        64,
-        66,
-        114,
-        116,
-        118,
-        120,
-        122,
-        124,
-        126,
-        128,
         130,
         132,
         134,
@@ -1723,9 +1638,14 @@
         146,
         148,
         150,
-        152
+        152,
+        154
       ],
       "tyre_edge_pts_px": [
+        [
+          506.06,
+          168.33
+        ],
         [
           505.08,
           169.27
@@ -1775,70 +1695,6 @@
           180.87
         ],
         [
-          495.43,
-          181.06
-        ],
-        [
-          494.55,
-          182.03
-        ],
-        [
-          493.61,
-          182.94
-        ],
-        [
-          492.18,
-          183.1
-        ],
-        [
-          491.27,
-          184.07
-        ],
-        [
-          490.26,
-          184.91
-        ],
-        [
-          489.03,
-          185.34
-        ],
-        [
-          488.84,
-          188.09
-        ],
-        [
-          456.44,
-          188.92
-        ],
-        [
-          455.27,
-          188.1
-        ],
-        [
-          453.7,
-          188.08
-        ],
-        [
-          452.06,
-          188.08
-        ],
-        [
-          450.34,
-          188.1
-        ],
-        [
-          448.56,
-          188.08
-        ],
-        [
-          450.33,
-          183.08
-        ],
-        [
-          449.04,
-          182.55
-        ],
-        [
           448.03,
           181.66
         ],
@@ -1885,10 +1741,14 @@
         [
           437.37,
           170.97
+        ],
+        [
+          436.09,
+          170.03
         ]
       ],
-      "ellipse_semi_x": 37.37768894273751,
-      "ellipse_semi_y": 39.74927086444554,
+      "rim_ellipse_semi_x": 28.481826498887933,
+      "rim_ellipse_semi_y": 28.401014632152577,
       "rim_r": 28.40763912574396
     },
     "image": {
@@ -1908,12 +1768,16 @@
     },
     "scale": {
       "s_wheelbase_mm_per_px": 8.644943125467114,
-      "s_tyre_mm_per_px": 8.672250862425411,
-      "s_vertical_mm_per_px": 8.039560745606778,
-      "wheel_ellipse_aspect_y_over_x": 1.0753004298389246,
-      "front_rear_tyre_radius_ratio": 1.004551855641655,
-      "relative_scale_error_1sigma": 0.02526503869026301,
+      "s_tyre_mm_per_px": 8.45134842228069,
+      "s_vertical_mm_per_px": 8.691793416873226,
+      "wheel_ellipse_aspect_y_over_x": 0.9946098245598931,
+      "front_rear_tyre_radius_ratio": 1.001419822344046,
+      "relative_scale_error_1sigma": 0.02347321163763972,
       "wheelbase_px": 316.3699240476171,
+      "length_reproduction_error": 0.036057346354406605,
+      "height_reproduction_error": 0.006949313060275353,
+      "relative_error_horizontal_1sigma": 0.043024689315636716,
+      "relative_error_vertical_1sigma": 0.024480290369910614,
       "inputs": {
         "wheelbase_mm": 2735.0,
         "tyre_nominal_diameter_mm": 645.2,
@@ -1922,7 +1786,7 @@
       }
     },
     "ground": {
-      "y_ground_fit_px": 192.23867159171118,
+      "y_ground_fit_px": 190.20412718484238,
       "lowest_opaque_rows_px": [
         188.5,
         188.35714285714286
@@ -1953,11 +1817,11 @@
     "body_colour_lab": [
       99.0,
       188.0,
-      172.0
+      171.0
     ],
     "door_box_px": [
       267,
-      90,
+      91,
       362,
       129
     ]

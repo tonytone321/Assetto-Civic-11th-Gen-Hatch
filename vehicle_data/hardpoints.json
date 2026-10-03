@@ -1,0 +1,1559 @@
+{
+  "domain": "hardpoints",
+  "title": "Suspension hard points (left side, vehicle coordinates)",
+  "schema_version": 1,
+  "updated": "2026-10-03",
+  "generator": {
+    "script": "scripts/domains/hardpoints_estimate.py",
+    "samples": 4000,
+    "seed": 20261003,
+    "method": "uniform Monte-Carlo over the stated constraint ranges; value = point from mid-range constraints; range = per-coordinate min/max over samples",
+    "frame": "origin on ground at centreline below front axle; +X right, +Y forward, +Z up; metres; LEFT side (right = mirror X -> -X)"
+  },
+  "inputs": {
+    "wheelbase": {
+      "value": 2.735,
+      "basis": "dimensions.wheelbase from vehicle_data/_resolved.json (source dim:hondanews-ca-2024-hatch-specs)"
+    },
+    "track_front": {
+      "value": 1.536,
+      "basis": "dimensions.track_front from vehicle_data/_resolved.json (source dim:hondanews-ca-2024-hatch-specs)"
+    },
+    "track_rear": {
+      "value": 1.565,
+      "basis": "dimensions.track_rear from vehicle_data/_resolved.json (source dim:hondanews-ca-2024-hatch-specs)"
+    },
+    "tyre_free_radius": {
+      "value": 0.3226,
+      "basis": "computed from 235/40R18: 18 in rim/2 + 0.235 m x 0.40 (hondanews.ca 2024 tyre size)"
+    },
+    "tyre_static_deflection": {
+      "range": [
+        0.008,
+        0.022
+      ],
+      "basis": "class E assumption for a 40-series tyre at curb load"
+    }
+  },
+  "constraints": {
+    "front": {
+      "lower_ball_joint": {
+        "inb": [
+          0.085,
+          0.125
+        ],
+        "dy": [
+          -0.02,
+          0.02
+        ],
+        "z": [
+          0.12,
+          0.17
+        ],
+        "basis": "MacPherson lower ball joint packaged inside an 18-in wheel barrel, below the hub"
+      },
+      "lca_front_inner": {
+        "inb": [
+          0.36,
+          0.47
+        ],
+        "dy": [
+          -0.02,
+          0.06
+        ],
+        "z": [
+          0.17,
+          0.24
+        ],
+        "basis": "front lower-arm front bushing on the subframe, roughly in line with the axle"
+      },
+      "lca_rear_inner": {
+        "inb": [
+          0.34,
+          0.46
+        ],
+        "dy": [
+          -0.4,
+          -0.26
+        ],
+        "z": [
+          0.18,
+          0.26
+        ],
+        "basis": "front lower-arm rear (compliance) bushing behind the axle; press kit: 'larger compliance bushing'"
+      },
+      "tie_rod_outer": {
+        "inb": [
+          0.1,
+          0.16
+        ],
+        "dy": [
+          -0.17,
+          -0.1
+        ],
+        "dz": [
+          -0.05,
+          0.05
+        ],
+        "basis": "steering arm behind the axle (rear-steer rack, usual for transverse-engine FWD); not confirmed"
+      },
+      "tie_rod_inner": {
+        "x_abs": [
+          0.3,
+          0.42
+        ],
+        "dy": [
+          -0.2,
+          -0.1
+        ],
+        "dz": [
+          -0.03,
+          0.08
+        ],
+        "basis": "rack ball joint ~0.30-0.42 m from centreline at rack height"
+      }
+    },
+    "strut": {
+      "kpi_deg": [
+        11.0,
+        15.0
+      ],
+      "caster_deg": [
+        3.5,
+        6.5
+      ],
+      "top_z": [
+        0.9,
+        1.02
+      ],
+      "basis": "strut top from lower ball joint along the steering axis: KPI 11-15 deg, caster 3.5-6.5 deg (typical road-car MacPherson; Honda alignment spec not accessible), top mount 0.90-1.02 m above ground"
+    },
+    "rear": {
+      "trailing_arm_front": {
+        "inb": [
+          0.15,
+          0.27
+        ],
+        "dy": [
+          0.4,
+          0.6
+        ],
+        "z": [
+          0.26,
+          0.35
+        ],
+        "basis": "trailing-arm front bushing to body ahead of the rear axle"
+      },
+      "upper_arm_outer": {
+        "inb": [
+          0.09,
+          0.16
+        ],
+        "dy": [
+          -0.05,
+          0.05
+        ],
+        "dz": [
+          0.13,
+          0.23
+        ],
+        "basis": "upper arm to knuckle above the hub"
+      },
+      "upper_arm_inner": {
+        "inb": [
+          0.35,
+          0.48
+        ],
+        "dy": [
+          -0.06,
+          0.06
+        ],
+        "dz": [
+          0.12,
+          0.22
+        ],
+        "basis": "upper arm to rear subframe"
+      },
+      "lower_arm_a_outer": {
+        "inb": [
+          0.07,
+          0.14
+        ],
+        "dy": [
+          0.04,
+          0.16
+        ],
+        "dz": [
+          -0.11,
+          -0.05
+        ],
+        "basis": "front lower lateral link (toe control) at knuckle, ahead of the axle"
+      },
+      "lower_arm_a_inner": {
+        "inb": [
+          0.45,
+          0.6
+        ],
+        "dy": [
+          0.06,
+          0.18
+        ],
+        "dz": [
+          -0.09,
+          -0.03
+        ],
+        "basis": "front lower lateral link to subframe"
+      },
+      "lower_arm_b_outer": {
+        "inb": [
+          0.06,
+          0.11
+        ],
+        "dy": [
+          -0.12,
+          0.02
+        ],
+        "dz": [
+          -0.17,
+          -0.09
+        ],
+        "basis": "rear lower arm B to knuckle, below the hub"
+      },
+      "lower_arm_b_inner": {
+        "inb": [
+          0.48,
+          0.62
+        ],
+        "dy": [
+          -0.14,
+          0.0
+        ],
+        "dz": [
+          -0.12,
+          -0.04
+        ],
+        "basis": "rear lower arm B to subframe"
+      },
+      "damper_lower": {
+        "inb": [
+          0.08,
+          0.14
+        ],
+        "dy": [
+          -0.12,
+          -0.02
+        ],
+        "dz": [
+          -0.13,
+          -0.06
+        ],
+        "basis": "separate rear damper to knuckle/arm B (layout not confirmed)"
+      },
+      "damper_upper": {
+        "inb": [
+          0.18,
+          0.3
+        ],
+        "dy": [
+          -0.16,
+          -0.04
+        ],
+        "dz": [
+          0.42,
+          0.58
+        ],
+        "basis": "damper top in the rear wheelhouse (layout not confirmed)"
+      }
+    },
+    "rear_spring": {
+      "mr": [
+        0.62,
+        0.85
+      ],
+      "height": [
+        0.2,
+        0.3
+      ],
+      "basis": "spring believed seated on lower arm B at the motion-ratio fraction of the arm's lateral span (suspension.motion_ratio_rear range 0.62-0.85); upper seat 0.20-0.30 m above (layout not confirmed)"
+    }
+  },
+  "sources": {},
+  "parameters": {
+    "hardpoints.front.lca_front_inner": {
+      "description": "front lca front inner (left side)",
+      "unit": "m",
+      "impact": "medium",
+      "candidates": [
+        {
+          "value": [
+            -0.353,
+            0.02,
+            0.205
+          ],
+          "unit": "m",
+          "status": "estimated",
+          "class": "E",
+          "source_id": null,
+          "locator": "",
+          "evidence": "",
+          "as_printed": "",
+          "applicability": {
+            "year": "2024",
+            "market": "CA",
+            "trim": "Sport Touring",
+            "body": "hatchback",
+            "gearbox": "6MT",
+            "engine": "1.5T",
+            "notes": "estimate for the target car"
+          },
+          "confidence": "low",
+          "range": [
+            [
+              -0.408,
+              -0.0199,
+              0.17
+            ],
+            [
+              -0.2981,
+              0.06,
+              0.24
+            ]
+          ],
+          "how_to_measure": "Car on a lift at curb ride height (or ride height recorded): plumb-bob/laser to the floor grid for X,Y and height gauge for Z at the bushing/ball-joint centre; +/-3 mm. Photogrammetry of the underside with a scale bar is an alternative.",
+          "notes": "Basis: front lower-arm front bushing on the subframe, roughly in line with the axle. Value/range are [x, y, z] (range = [[x_lo, y_lo, z_lo], [x_hi, y_hi, z_hi]]).",
+          "derivation": {
+            "script": "scripts/domains/hardpoints_estimate.py",
+            "function": "run",
+            "inputs": [
+              "dimensions.wheelbase",
+              "dimensions.track_front",
+              "dimensions.track_rear",
+              "tyre 235/40R18"
+            ]
+          }
+        }
+      ]
+    },
+    "hardpoints.front.lca_rear_inner": {
+      "description": "front lca rear inner (left side)",
+      "unit": "m",
+      "impact": "medium",
+      "candidates": [
+        {
+          "value": [
+            -0.368,
+            -0.33,
+            0.22
+          ],
+          "unit": "m",
+          "status": "estimated",
+          "class": "E",
+          "source_id": null,
+          "locator": "",
+          "evidence": "",
+          "as_printed": "",
+          "applicability": {
+            "year": "2024",
+            "market": "CA",
+            "trim": "Sport Touring",
+            "body": "hatchback",
+            "gearbox": "6MT",
+            "engine": "1.5T",
+            "notes": "estimate for the target car"
+          },
+          "confidence": "low",
+          "range": [
+            [
+              -0.428,
+              -0.4,
+              0.1801
+            ],
+            [
+              -0.308,
+              -0.26,
+              0.26
+            ]
+          ],
+          "how_to_measure": "Car on a lift at curb ride height (or ride height recorded): plumb-bob/laser to the floor grid for X,Y and height gauge for Z at the bushing/ball-joint centre; +/-3 mm. Photogrammetry of the underside with a scale bar is an alternative.",
+          "notes": "Basis: front lower-arm rear (compliance) bushing behind the axle; press kit: 'larger compliance bushing'. Value/range are [x, y, z] (range = [[x_lo, y_lo, z_lo], [x_hi, y_hi, z_hi]]).",
+          "derivation": {
+            "script": "scripts/domains/hardpoints_estimate.py",
+            "function": "run",
+            "inputs": [
+              "dimensions.wheelbase",
+              "dimensions.track_front",
+              "dimensions.track_rear",
+              "tyre 235/40R18"
+            ]
+          }
+        }
+      ]
+    },
+    "hardpoints.front.lower_ball_joint": {
+      "description": "front lower ball joint (left side)",
+      "unit": "m",
+      "impact": "medium",
+      "candidates": [
+        {
+          "value": [
+            -0.663,
+            0.0,
+            0.145
+          ],
+          "unit": "m",
+          "status": "estimated",
+          "class": "E",
+          "source_id": null,
+          "locator": "",
+          "evidence": "",
+          "as_printed": "",
+          "applicability": {
+            "year": "2024",
+            "market": "CA",
+            "trim": "Sport Touring",
+            "body": "hatchback",
+            "gearbox": "6MT",
+            "engine": "1.5T",
+            "notes": "estimate for the target car"
+          },
+          "confidence": "low",
+          "range": [
+            [
+              -0.683,
+              -0.02,
+              0.12
+            ],
+            [
+              -0.643,
+              0.02,
+              0.17
+            ]
+          ],
+          "how_to_measure": "Car on a lift at curb ride height (or ride height recorded): plumb-bob/laser to the floor grid for X,Y and height gauge for Z at the bushing/ball-joint centre; +/-3 mm. Photogrammetry of the underside with a scale bar is an alternative.",
+          "notes": "Basis: MacPherson lower ball joint packaged inside an 18-in wheel barrel, below the hub. Value/range are [x, y, z] (range = [[x_lo, y_lo, z_lo], [x_hi, y_hi, z_hi]]).",
+          "derivation": {
+            "script": "scripts/domains/hardpoints_estimate.py",
+            "function": "run",
+            "inputs": [
+              "dimensions.wheelbase",
+              "dimensions.track_front",
+              "dimensions.track_rear",
+              "tyre 235/40R18"
+            ]
+          }
+        }
+      ]
+    },
+    "hardpoints.front.strut_top": {
+      "description": "front strut top (left side)",
+      "unit": "m",
+      "impact": "medium",
+      "candidates": [
+        {
+          "value": [
+            -0.4748,
+            -0.0713,
+            0.96
+          ],
+          "unit": "m",
+          "status": "estimated",
+          "class": "E",
+          "source_id": null,
+          "locator": "",
+          "evidence": "",
+          "as_printed": "",
+          "applicability": {
+            "year": "2024",
+            "market": "CA",
+            "trim": "Sport Touring",
+            "body": "hatchback",
+            "gearbox": "6MT",
+            "engine": "1.5T",
+            "notes": "estimate for the target car"
+          },
+          "confidence": "low",
+          "range": [
+            [
+              -0.5364,
+              -0.1173,
+              0.9001
+            ],
+            [
+              -0.4106,
+              -0.0272,
+              1.02
+            ]
+          ],
+          "how_to_measure": "Car on a lift at curb ride height (or ride height recorded): plumb-bob/laser to the floor grid for X,Y and height gauge for Z at the bushing/ball-joint centre; +/-3 mm. Photogrammetry of the underside with a scale bar is an alternative.",
+          "notes": "Basis: strut top from lower ball joint along the steering axis: KPI 11-15 deg, caster 3.5-6.5 deg (typical road-car MacPherson; Honda alignment spec not accessible), top mount 0.90-1.02 m above ground. Value/range are [x, y, z] (range = [[x_lo, y_lo, z_lo], [x_hi, y_hi, z_hi]]).",
+          "derivation": {
+            "script": "scripts/domains/hardpoints_estimate.py",
+            "function": "run",
+            "inputs": [
+              "dimensions.wheelbase",
+              "dimensions.track_front",
+              "dimensions.track_rear",
+              "tyre 235/40R18"
+            ]
+          }
+        }
+      ]
+    },
+    "hardpoints.front.tie_rod_inner": {
+      "description": "front tie rod inner (left side)",
+      "unit": "m",
+      "impact": "medium",
+      "candidates": [
+        {
+          "value": [
+            -0.36,
+            -0.15,
+            0.3326
+          ],
+          "unit": "m",
+          "status": "estimated",
+          "class": "E",
+          "source_id": null,
+          "locator": "",
+          "evidence": "",
+          "as_printed": "",
+          "applicability": {
+            "year": "2024",
+            "market": "CA",
+            "trim": "Sport Touring",
+            "body": "hatchback",
+            "gearbox": "6MT",
+            "engine": "1.5T",
+            "notes": "estimate for the target car"
+          },
+          "confidence": "low",
+          "range": [
+            [
+              -0.4199,
+              -0.1999,
+              0.2713
+            ],
+            [
+              -0.3001,
+              -0.1,
+              0.394
+            ]
+          ],
+          "how_to_measure": "Car on a lift at curb ride height (or ride height recorded): plumb-bob/laser to the floor grid for X,Y and height gauge for Z at the bushing/ball-joint centre; +/-3 mm. Photogrammetry of the underside with a scale bar is an alternative.",
+          "notes": "Basis: rack ball joint ~0.30-0.42 m from centreline at rack height. Value/range are [x, y, z] (range = [[x_lo, y_lo, z_lo], [x_hi, y_hi, z_hi]]).",
+          "derivation": {
+            "script": "scripts/domains/hardpoints_estimate.py",
+            "function": "run",
+            "inputs": [
+              "dimensions.wheelbase",
+              "dimensions.track_front",
+              "dimensions.track_rear",
+              "tyre 235/40R18"
+            ]
+          }
+        }
+      ]
+    },
+    "hardpoints.front.tie_rod_outer": {
+      "description": "front tie rod outer (left side)",
+      "unit": "m",
+      "impact": "medium",
+      "candidates": [
+        {
+          "value": [
+            -0.638,
+            -0.135,
+            0.3076
+          ],
+          "unit": "m",
+          "status": "estimated",
+          "class": "E",
+          "source_id": null,
+          "locator": "",
+          "evidence": "",
+          "as_printed": "",
+          "applicability": {
+            "year": "2024",
+            "market": "CA",
+            "trim": "Sport Touring",
+            "body": "hatchback",
+            "gearbox": "6MT",
+            "engine": "1.5T",
+            "notes": "estimate for the target car"
+          },
+          "confidence": "low",
+          "range": [
+            [
+              -0.668,
+              -0.17,
+              0.2515
+            ],
+            [
+              -0.608,
+              -0.1,
+              0.3633
+            ]
+          ],
+          "how_to_measure": "Car on a lift at curb ride height (or ride height recorded): plumb-bob/laser to the floor grid for X,Y and height gauge for Z at the bushing/ball-joint centre; +/-3 mm. Photogrammetry of the underside with a scale bar is an alternative.",
+          "notes": "Basis: steering arm behind the axle (rear-steer rack, usual for transverse-engine FWD); not confirmed. Value/range are [x, y, z] (range = [[x_lo, y_lo, z_lo], [x_hi, y_hi, z_hi]]).",
+          "derivation": {
+            "script": "scripts/domains/hardpoints_estimate.py",
+            "function": "run",
+            "inputs": [
+              "dimensions.wheelbase",
+              "dimensions.track_front",
+              "dimensions.track_rear",
+              "tyre 235/40R18"
+            ]
+          }
+        }
+      ]
+    },
+    "hardpoints.front.wheel_center": {
+      "description": "front wheel center (left side)",
+      "unit": "m",
+      "impact": "high",
+      "candidates": [
+        {
+          "value": [
+            -0.768,
+            0.0,
+            0.3076
+          ],
+          "unit": "m",
+          "status": "estimated",
+          "class": "D",
+          "source_id": null,
+          "locator": "",
+          "evidence": "",
+          "as_printed": "",
+          "applicability": {
+            "year": "2024",
+            "market": "CA",
+            "trim": "Sport Touring",
+            "body": "hatchback",
+            "gearbox": "6MT",
+            "engine": "1.5T",
+            "notes": "estimate for the target car"
+          },
+          "confidence": "medium",
+          "range": [
+            [
+              -0.768,
+              0.0,
+              0.3006
+            ],
+            [
+              -0.768,
+              0.0,
+              0.3146
+            ]
+          ],
+          "how_to_measure": "Wheel centre: measure track at hub faces and hub height above ground at curb load.",
+          "notes": "Basis: X = -track_front/2, Y = 0, Z = tyre free radius - static deflection (published inputs + deflection assumption). Value/range are [x, y, z] (range = [[x_lo, y_lo, z_lo], [x_hi, y_hi, z_hi]]).",
+          "derivation": {
+            "script": "scripts/domains/hardpoints_estimate.py",
+            "function": "run",
+            "inputs": [
+              "dimensions.wheelbase",
+              "dimensions.track_front",
+              "dimensions.track_rear",
+              "tyre 235/40R18"
+            ]
+          }
+        }
+      ]
+    },
+    "hardpoints.rear.damper_lower": {
+      "description": "rear damper lower (left side)",
+      "unit": "m",
+      "impact": "medium",
+      "candidates": [
+        {
+          "value": [
+            -0.6725,
+            -2.805,
+            0.2126
+          ],
+          "unit": "m",
+          "status": "estimated",
+          "class": "E",
+          "source_id": null,
+          "locator": "",
+          "evidence": "",
+          "as_printed": "",
+          "applicability": {
+            "year": "2024",
+            "market": "CA",
+            "trim": "Sport Touring",
+            "body": "hatchback",
+            "gearbox": "6MT",
+            "engine": "1.5T",
+            "notes": "estimate for the target car"
+          },
+          "confidence": "low",
+          "range": [
+            [
+              -0.7025,
+              -2.855,
+              0.1708
+            ],
+            [
+              -0.6425,
+              -2.755,
+              0.2541
+            ]
+          ],
+          "how_to_measure": "Car on a lift at curb ride height (or ride height recorded): plumb-bob/laser to the floor grid for X,Y and height gauge for Z at the bushing/ball-joint centre; +/-3 mm. Photogrammetry of the underside with a scale bar is an alternative.",
+          "notes": "Basis: separate rear damper to knuckle/arm B (layout not confirmed). Value/range are [x, y, z] (range = [[x_lo, y_lo, z_lo], [x_hi, y_hi, z_hi]]).",
+          "derivation": {
+            "script": "scripts/domains/hardpoints_estimate.py",
+            "function": "run",
+            "inputs": [
+              "dimensions.wheelbase",
+              "dimensions.track_front",
+              "dimensions.track_rear",
+              "tyre 235/40R18"
+            ]
+          }
+        }
+      ]
+    },
+    "hardpoints.rear.damper_upper": {
+      "description": "rear damper upper (left side)",
+      "unit": "m",
+      "impact": "medium",
+      "candidates": [
+        {
+          "value": [
+            -0.5425,
+            -2.835,
+            0.8076
+          ],
+          "unit": "m",
+          "status": "estimated",
+          "class": "E",
+          "source_id": null,
+          "locator": "",
+          "evidence": "",
+          "as_printed": "",
+          "applicability": {
+            "year": "2024",
+            "market": "CA",
+            "trim": "Sport Touring",
+            "body": "hatchback",
+            "gearbox": "6MT",
+            "engine": "1.5T",
+            "notes": "estimate for the target car"
+          },
+          "confidence": "low",
+          "range": [
+            [
+              -0.6025,
+              -2.895,
+              0.7224
+            ],
+            [
+              -0.4825,
+              -2.775,
+              0.8939
+            ]
+          ],
+          "how_to_measure": "Car on a lift at curb ride height (or ride height recorded): plumb-bob/laser to the floor grid for X,Y and height gauge for Z at the bushing/ball-joint centre; +/-3 mm. Photogrammetry of the underside with a scale bar is an alternative.",
+          "notes": "Basis: damper top in the rear wheelhouse (layout not confirmed). Value/range are [x, y, z] (range = [[x_lo, y_lo, z_lo], [x_hi, y_hi, z_hi]]).",
+          "derivation": {
+            "script": "scripts/domains/hardpoints_estimate.py",
+            "function": "run",
+            "inputs": [
+              "dimensions.wheelbase",
+              "dimensions.track_front",
+              "dimensions.track_rear",
+              "tyre 235/40R18"
+            ]
+          }
+        }
+      ]
+    },
+    "hardpoints.rear.lower_arm_a_inner": {
+      "description": "rear lower arm a inner (left side)",
+      "unit": "m",
+      "impact": "medium",
+      "candidates": [
+        {
+          "value": [
+            -0.2575,
+            -2.615,
+            0.2476
+          ],
+          "unit": "m",
+          "status": "estimated",
+          "class": "E",
+          "source_id": null,
+          "locator": "",
+          "evidence": "",
+          "as_printed": "",
+          "applicability": {
+            "year": "2024",
+            "market": "CA",
+            "trim": "Sport Touring",
+            "body": "hatchback",
+            "gearbox": "6MT",
+            "engine": "1.5T",
+            "notes": "estimate for the target car"
+          },
+          "confidence": "low",
+          "range": [
+            [
+              -0.3324,
+              -2.6749,
+              0.211
+            ],
+            [
+              -0.1825,
+              -2.555,
+              0.2843
+            ]
+          ],
+          "how_to_measure": "Car on a lift at curb ride height (or ride height recorded): plumb-bob/laser to the floor grid for X,Y and height gauge for Z at the bushing/ball-joint centre; +/-3 mm. Photogrammetry of the underside with a scale bar is an alternative.",
+          "notes": "Basis: front lower lateral link to subframe. Value/range are [x, y, z] (range = [[x_lo, y_lo, z_lo], [x_hi, y_hi, z_hi]]).",
+          "derivation": {
+            "script": "scripts/domains/hardpoints_estimate.py",
+            "function": "run",
+            "inputs": [
+              "dimensions.wheelbase",
+              "dimensions.track_front",
+              "dimensions.track_rear",
+              "tyre 235/40R18"
+            ]
+          }
+        }
+      ]
+    },
+    "hardpoints.rear.lower_arm_a_outer": {
+      "description": "rear lower arm a outer (left side)",
+      "unit": "m",
+      "impact": "medium",
+      "candidates": [
+        {
+          "value": [
+            -0.6775,
+            -2.635,
+            0.2276
+          ],
+          "unit": "m",
+          "status": "estimated",
+          "class": "E",
+          "source_id": null,
+          "locator": "",
+          "evidence": "",
+          "as_printed": "",
+          "applicability": {
+            "year": "2024",
+            "market": "CA",
+            "trim": "Sport Touring",
+            "body": "hatchback",
+            "gearbox": "6MT",
+            "engine": "1.5T",
+            "notes": "estimate for the target car"
+          },
+          "confidence": "low",
+          "range": [
+            [
+              -0.7125,
+              -2.6948,
+              0.1911
+            ],
+            [
+              -0.6425,
+              -2.575,
+              0.264
+            ]
+          ],
+          "how_to_measure": "Car on a lift at curb ride height (or ride height recorded): plumb-bob/laser to the floor grid for X,Y and height gauge for Z at the bushing/ball-joint centre; +/-3 mm. Photogrammetry of the underside with a scale bar is an alternative.",
+          "notes": "Basis: front lower lateral link (toe control) at knuckle, ahead of the axle. Value/range are [x, y, z] (range = [[x_lo, y_lo, z_lo], [x_hi, y_hi, z_hi]]).",
+          "derivation": {
+            "script": "scripts/domains/hardpoints_estimate.py",
+            "function": "run",
+            "inputs": [
+              "dimensions.wheelbase",
+              "dimensions.track_front",
+              "dimensions.track_rear",
+              "tyre 235/40R18"
+            ]
+          }
+        }
+      ]
+    },
+    "hardpoints.rear.lower_arm_b_inner": {
+      "description": "rear lower arm b inner (left side)",
+      "unit": "m",
+      "impact": "medium",
+      "candidates": [
+        {
+          "value": [
+            -0.2325,
+            -2.805,
+            0.2276
+          ],
+          "unit": "m",
+          "status": "estimated",
+          "class": "E",
+          "source_id": null,
+          "locator": "",
+          "evidence": "",
+          "as_printed": "",
+          "applicability": {
+            "year": "2024",
+            "market": "CA",
+            "trim": "Sport Touring",
+            "body": "hatchback",
+            "gearbox": "6MT",
+            "engine": "1.5T",
+            "notes": "estimate for the target car"
+          },
+          "confidence": "low",
+          "range": [
+            [
+              -0.3025,
+              -2.875,
+              0.1809
+            ],
+            [
+              -0.1626,
+              -2.735,
+              0.274
+            ]
+          ],
+          "how_to_measure": "Car on a lift at curb ride height (or ride height recorded): plumb-bob/laser to the floor grid for X,Y and height gauge for Z at the bushing/ball-joint centre; +/-3 mm. Photogrammetry of the underside with a scale bar is an alternative.",
+          "notes": "Basis: rear lower arm B to subframe. Value/range are [x, y, z] (range = [[x_lo, y_lo, z_lo], [x_hi, y_hi, z_hi]]).",
+          "derivation": {
+            "script": "scripts/domains/hardpoints_estimate.py",
+            "function": "run",
+            "inputs": [
+              "dimensions.wheelbase",
+              "dimensions.track_front",
+              "dimensions.track_rear",
+              "tyre 235/40R18"
+            ]
+          }
+        }
+      ]
+    },
+    "hardpoints.rear.lower_arm_b_outer": {
+      "description": "rear lower arm b outer (left side)",
+      "unit": "m",
+      "impact": "medium",
+      "candidates": [
+        {
+          "value": [
+            -0.6975,
+            -2.785,
+            0.1776
+          ],
+          "unit": "m",
+          "status": "estimated",
+          "class": "E",
+          "source_id": null,
+          "locator": "",
+          "evidence": "",
+          "as_printed": "",
+          "applicability": {
+            "year": "2024",
+            "market": "CA",
+            "trim": "Sport Touring",
+            "body": "hatchback",
+            "gearbox": "6MT",
+            "engine": "1.5T",
+            "notes": "estimate for the target car"
+          },
+          "confidence": "low",
+          "range": [
+            [
+              -0.7225,
+              -2.855,
+              0.1317
+            ],
+            [
+              -0.6725,
+              -2.7151,
+              0.2241
+            ]
+          ],
+          "how_to_measure": "Car on a lift at curb ride height (or ride height recorded): plumb-bob/laser to the floor grid for X,Y and height gauge for Z at the bushing/ball-joint centre; +/-3 mm. Photogrammetry of the underside with a scale bar is an alternative.",
+          "notes": "Basis: rear lower arm B to knuckle, below the hub. Value/range are [x, y, z] (range = [[x_lo, y_lo, z_lo], [x_hi, y_hi, z_hi]]).",
+          "derivation": {
+            "script": "scripts/domains/hardpoints_estimate.py",
+            "function": "run",
+            "inputs": [
+              "dimensions.wheelbase",
+              "dimensions.track_front",
+              "dimensions.track_rear",
+              "tyre 235/40R18"
+            ]
+          }
+        }
+      ]
+    },
+    "hardpoints.rear.spring_lower_seat": {
+      "description": "rear spring lower seat (left side)",
+      "unit": "m",
+      "impact": "medium",
+      "candidates": [
+        {
+          "value": [
+            -0.6367,
+            -2.7876,
+            0.1841
+          ],
+          "unit": "m",
+          "status": "estimated",
+          "class": "E",
+          "source_id": null,
+          "locator": "",
+          "evidence": "",
+          "as_printed": "",
+          "applicability": {
+            "year": "2024",
+            "market": "CA",
+            "trim": "Sport Touring",
+            "body": "hatchback",
+            "gearbox": "6MT",
+            "engine": "1.5T",
+            "notes": "estimate for the target car"
+          },
+          "confidence": "low",
+          "range": [
+            [
+              -0.7104,
+              -2.8583,
+              0.1293
+            ],
+            [
+              -0.5491,
+              -2.7117,
+              0.2351
+            ]
+          ],
+          "how_to_measure": "Car on a lift at curb ride height (or ride height recorded): plumb-bob/laser to the floor grid for X,Y and height gauge for Z at the bushing/ball-joint centre; +/-3 mm. Photogrammetry of the underside with a scale bar is an alternative.",
+          "notes": "Basis: spring believed seated on lower arm B at the motion-ratio fraction of the arm's lateral span (suspension.motion_ratio_rear range 0.62-0.85); upper seat 0.20-0.30 m above (layout not confirmed). Value/range are [x, y, z] (range = [[x_lo, y_lo, z_lo], [x_hi, y_hi, z_hi]]).",
+          "derivation": {
+            "script": "scripts/domains/hardpoints_estimate.py",
+            "function": "run",
+            "inputs": [
+              "dimensions.wheelbase",
+              "dimensions.track_front",
+              "dimensions.track_rear",
+              "tyre 235/40R18"
+            ]
+          }
+        }
+      ]
+    },
+    "hardpoints.rear.spring_upper_seat": {
+      "description": "rear spring upper seat (left side)",
+      "unit": "m",
+      "impact": "medium",
+      "candidates": [
+        {
+          "value": [
+            -0.6367,
+            -2.7876,
+            0.4341
+          ],
+          "unit": "m",
+          "status": "estimated",
+          "class": "E",
+          "source_id": null,
+          "locator": "",
+          "evidence": "",
+          "as_printed": "",
+          "applicability": {
+            "year": "2024",
+            "market": "CA",
+            "trim": "Sport Touring",
+            "body": "hatchback",
+            "gearbox": "6MT",
+            "engine": "1.5T",
+            "notes": "estimate for the target car"
+          },
+          "confidence": "low",
+          "range": [
+            [
+              -0.7104,
+              -2.8583,
+              0.3364
+            ],
+            [
+              -0.5491,
+              -2.7117,
+              0.5275
+            ]
+          ],
+          "how_to_measure": "Car on a lift at curb ride height (or ride height recorded): plumb-bob/laser to the floor grid for X,Y and height gauge for Z at the bushing/ball-joint centre; +/-3 mm. Photogrammetry of the underside with a scale bar is an alternative.",
+          "notes": "Basis: spring believed seated on lower arm B at the motion-ratio fraction of the arm's lateral span (suspension.motion_ratio_rear range 0.62-0.85); upper seat 0.20-0.30 m above (layout not confirmed). Value/range are [x, y, z] (range = [[x_lo, y_lo, z_lo], [x_hi, y_hi, z_hi]]).",
+          "derivation": {
+            "script": "scripts/domains/hardpoints_estimate.py",
+            "function": "run",
+            "inputs": [
+              "dimensions.wheelbase",
+              "dimensions.track_front",
+              "dimensions.track_rear",
+              "tyre 235/40R18"
+            ]
+          }
+        }
+      ]
+    },
+    "hardpoints.rear.trailing_arm_front": {
+      "description": "rear trailing arm front (left side)",
+      "unit": "m",
+      "impact": "medium",
+      "candidates": [
+        {
+          "value": [
+            -0.5725,
+            -2.235,
+            0.305
+          ],
+          "unit": "m",
+          "status": "estimated",
+          "class": "E",
+          "source_id": null,
+          "locator": "",
+          "evidence": "",
+          "as_printed": "",
+          "applicability": {
+            "year": "2024",
+            "market": "CA",
+            "trim": "Sport Touring",
+            "body": "hatchback",
+            "gearbox": "6MT",
+            "engine": "1.5T",
+            "notes": "estimate for the target car"
+          },
+          "confidence": "low",
+          "range": [
+            [
+              -0.6325,
+              -2.3349,
+              0.2601
+            ],
+            [
+              -0.5126,
+              -2.135,
+              0.35
+            ]
+          ],
+          "how_to_measure": "Car on a lift at curb ride height (or ride height recorded): plumb-bob/laser to the floor grid for X,Y and height gauge for Z at the bushing/ball-joint centre; +/-3 mm. Photogrammetry of the underside with a scale bar is an alternative.",
+          "notes": "Basis: trailing-arm front bushing to body ahead of the rear axle. Value/range are [x, y, z] (range = [[x_lo, y_lo, z_lo], [x_hi, y_hi, z_hi]]).",
+          "derivation": {
+            "script": "scripts/domains/hardpoints_estimate.py",
+            "function": "run",
+            "inputs": [
+              "dimensions.wheelbase",
+              "dimensions.track_front",
+              "dimensions.track_rear",
+              "tyre 235/40R18"
+            ]
+          }
+        }
+      ]
+    },
+    "hardpoints.rear.upper_arm_inner": {
+      "description": "rear upper arm inner (left side)",
+      "unit": "m",
+      "impact": "medium",
+      "candidates": [
+        {
+          "value": [
+            -0.3675,
+            -2.735,
+            0.4776
+          ],
+          "unit": "m",
+          "status": "estimated",
+          "class": "E",
+          "source_id": null,
+          "locator": "",
+          "evidence": "",
+          "as_printed": "",
+          "applicability": {
+            "year": "2024",
+            "market": "CA",
+            "trim": "Sport Touring",
+            "body": "hatchback",
+            "gearbox": "6MT",
+            "engine": "1.5T",
+            "notes": "estimate for the target car"
+          },
+          "confidence": "low",
+          "range": [
+            [
+              -0.4325,
+              -2.795,
+              0.4223
+            ],
+            [
+              -0.3026,
+              -2.675,
+              0.5339
+            ]
+          ],
+          "how_to_measure": "Car on a lift at curb ride height (or ride height recorded): plumb-bob/laser to the floor grid for X,Y and height gauge for Z at the bushing/ball-joint centre; +/-3 mm. Photogrammetry of the underside with a scale bar is an alternative.",
+          "notes": "Basis: upper arm to rear subframe. Value/range are [x, y, z] (range = [[x_lo, y_lo, z_lo], [x_hi, y_hi, z_hi]]).",
+          "derivation": {
+            "script": "scripts/domains/hardpoints_estimate.py",
+            "function": "run",
+            "inputs": [
+              "dimensions.wheelbase",
+              "dimensions.track_front",
+              "dimensions.track_rear",
+              "tyre 235/40R18"
+            ]
+          }
+        }
+      ]
+    },
+    "hardpoints.rear.upper_arm_outer": {
+      "description": "rear upper arm outer (left side)",
+      "unit": "m",
+      "impact": "medium",
+      "candidates": [
+        {
+          "value": [
+            -0.6575,
+            -2.735,
+            0.4876
+          ],
+          "unit": "m",
+          "status": "estimated",
+          "class": "E",
+          "source_id": null,
+          "locator": "",
+          "evidence": "",
+          "as_printed": "",
+          "applicability": {
+            "year": "2024",
+            "market": "CA",
+            "trim": "Sport Touring",
+            "body": "hatchback",
+            "gearbox": "6MT",
+            "engine": "1.5T",
+            "notes": "estimate for the target car"
+          },
+          "confidence": "low",
+          "range": [
+            [
+              -0.6925,
+              -2.785,
+              0.431
+            ],
+            [
+              -0.6225,
+              -2.685,
+              0.5438
+            ]
+          ],
+          "how_to_measure": "Car on a lift at curb ride height (or ride height recorded): plumb-bob/laser to the floor grid for X,Y and height gauge for Z at the bushing/ball-joint centre; +/-3 mm. Photogrammetry of the underside with a scale bar is an alternative.",
+          "notes": "Basis: upper arm to knuckle above the hub. Value/range are [x, y, z] (range = [[x_lo, y_lo, z_lo], [x_hi, y_hi, z_hi]]).",
+          "derivation": {
+            "script": "scripts/domains/hardpoints_estimate.py",
+            "function": "run",
+            "inputs": [
+              "dimensions.wheelbase",
+              "dimensions.track_front",
+              "dimensions.track_rear",
+              "tyre 235/40R18"
+            ]
+          }
+        }
+      ]
+    },
+    "hardpoints.rear.wheel_center": {
+      "description": "rear wheel center (left side)",
+      "unit": "m",
+      "impact": "high",
+      "candidates": [
+        {
+          "value": [
+            -0.7825,
+            -2.735,
+            0.3076
+          ],
+          "unit": "m",
+          "status": "estimated",
+          "class": "D",
+          "source_id": null,
+          "locator": "",
+          "evidence": "",
+          "as_printed": "",
+          "applicability": {
+            "year": "2024",
+            "market": "CA",
+            "trim": "Sport Touring",
+            "body": "hatchback",
+            "gearbox": "6MT",
+            "engine": "1.5T",
+            "notes": "estimate for the target car"
+          },
+          "confidence": "medium",
+          "range": [
+            [
+              -0.7825,
+              -2.735,
+              0.3006
+            ],
+            [
+              -0.7825,
+              -2.735,
+              0.3146
+            ]
+          ],
+          "how_to_measure": "Wheel centre: measure track at hub faces and hub height above ground at curb load.",
+          "notes": "Basis: X = -track_rear/2, Y = -wheelbase, Z as front. Value/range are [x, y, z] (range = [[x_lo, y_lo, z_lo], [x_hi, y_hi, z_hi]]).",
+          "derivation": {
+            "script": "scripts/domains/hardpoints_estimate.py",
+            "function": "run",
+            "inputs": [
+              "dimensions.wheelbase",
+              "dimensions.track_front",
+              "dimensions.track_rear",
+              "tyre 235/40R18"
+            ]
+          }
+        }
+      ]
+    },
+    "hardpoints.front.arb_link_upper": {
+      "description": "front anti-roll-bar link on the strut (left side)",
+      "unit": "m",
+      "impact": "low",
+      "candidates": [
+        {
+          "value": null,
+          "unit": "m",
+          "status": "unknown",
+          "class": null,
+          "source_id": null,
+          "locator": "",
+          "evidence": "",
+          "as_printed": "",
+          "applicability": {},
+          "confidence": "none",
+          "range": null,
+          "how_to_measure": "Measure on a lift as for the other hard points (+/-5 mm adequate).",
+          "notes": "",
+          "searches": [
+            "Honda Canada/US spec tables and press releases (no geometry)",
+            "hondapartsnow.com parts listings (undimensioned)",
+            "hondapartsconnection.com diagrams (Cloudflare challenge, not worked around)",
+            "techinfo.honda.com (paywalled)"
+          ]
+        }
+      ]
+    },
+    "hardpoints.front.arb_link_lower": {
+      "description": "front anti-roll-bar link on the bar arm (left side)",
+      "unit": "m",
+      "impact": "low",
+      "candidates": [
+        {
+          "value": null,
+          "unit": "m",
+          "status": "unknown",
+          "class": null,
+          "source_id": null,
+          "locator": "",
+          "evidence": "",
+          "as_printed": "",
+          "applicability": {},
+          "confidence": "none",
+          "range": null,
+          "how_to_measure": "Measure on a lift as for the other hard points (+/-5 mm adequate).",
+          "notes": "",
+          "searches": [
+            "Honda Canada/US spec tables and press releases (no geometry)",
+            "hondapartsnow.com parts listings (undimensioned)",
+            "hondapartsconnection.com diagrams (Cloudflare challenge, not worked around)",
+            "techinfo.honda.com (paywalled)"
+          ]
+        }
+      ]
+    },
+    "hardpoints.front.arb_bushing": {
+      "description": "front anti-roll-bar body/subframe bushing (left side)",
+      "unit": "m",
+      "impact": "low",
+      "candidates": [
+        {
+          "value": null,
+          "unit": "m",
+          "status": "unknown",
+          "class": null,
+          "source_id": null,
+          "locator": "",
+          "evidence": "",
+          "as_printed": "",
+          "applicability": {},
+          "confidence": "none",
+          "range": null,
+          "how_to_measure": "Measure on a lift as for the other hard points (+/-5 mm adequate).",
+          "notes": "",
+          "searches": [
+            "Honda Canada/US spec tables and press releases (no geometry)",
+            "hondapartsnow.com parts listings (undimensioned)",
+            "hondapartsconnection.com diagrams (Cloudflare challenge, not worked around)",
+            "techinfo.honda.com (paywalled)"
+          ]
+        }
+      ]
+    },
+    "hardpoints.front.subframe_mounts": {
+      "description": "front subframe-to-body mounts (left side)",
+      "unit": "m",
+      "impact": "low",
+      "candidates": [
+        {
+          "value": null,
+          "unit": "m",
+          "status": "unknown",
+          "class": null,
+          "source_id": null,
+          "locator": "",
+          "evidence": "",
+          "as_printed": "",
+          "applicability": {},
+          "confidence": "none",
+          "range": null,
+          "how_to_measure": "Measure on a lift as for the other hard points (+/-5 mm adequate).",
+          "notes": "",
+          "searches": [
+            "Honda Canada/US spec tables and press releases (no geometry)",
+            "hondapartsnow.com parts listings (undimensioned)",
+            "hondapartsconnection.com diagrams (Cloudflare challenge, not worked around)",
+            "techinfo.honda.com (paywalled)"
+          ]
+        }
+      ]
+    },
+    "hardpoints.rear.arb_link_upper": {
+      "description": "rear anti-roll-bar link at arm/knuckle (left side)",
+      "unit": "m",
+      "impact": "low",
+      "candidates": [
+        {
+          "value": null,
+          "unit": "m",
+          "status": "unknown",
+          "class": null,
+          "source_id": null,
+          "locator": "",
+          "evidence": "",
+          "as_printed": "",
+          "applicability": {},
+          "confidence": "none",
+          "range": null,
+          "how_to_measure": "Measure on a lift as for the other hard points (+/-5 mm adequate).",
+          "notes": "",
+          "searches": [
+            "Honda Canada/US spec tables and press releases (no geometry)",
+            "hondapartsnow.com parts listings (undimensioned)",
+            "hondapartsconnection.com diagrams (Cloudflare challenge, not worked around)",
+            "techinfo.honda.com (paywalled)"
+          ]
+        }
+      ]
+    },
+    "hardpoints.rear.arb_bushing": {
+      "description": "rear anti-roll-bar bushing (left side)",
+      "unit": "m",
+      "impact": "low",
+      "candidates": [
+        {
+          "value": null,
+          "unit": "m",
+          "status": "unknown",
+          "class": null,
+          "source_id": null,
+          "locator": "",
+          "evidence": "",
+          "as_printed": "",
+          "applicability": {},
+          "confidence": "none",
+          "range": null,
+          "how_to_measure": "Measure on a lift as for the other hard points (+/-5 mm adequate).",
+          "notes": "",
+          "searches": [
+            "Honda Canada/US spec tables and press releases (no geometry)",
+            "hondapartsnow.com parts listings (undimensioned)",
+            "hondapartsconnection.com diagrams (Cloudflare challenge, not worked around)",
+            "techinfo.honda.com (paywalled)"
+          ]
+        }
+      ]
+    },
+    "hardpoints.rear.subframe_mounts": {
+      "description": "rear subframe-to-body mounts (left side)",
+      "unit": "m",
+      "impact": "low",
+      "candidates": [
+        {
+          "value": null,
+          "unit": "m",
+          "status": "unknown",
+          "class": null,
+          "source_id": null,
+          "locator": "",
+          "evidence": "",
+          "as_printed": "",
+          "applicability": {},
+          "confidence": "none",
+          "range": null,
+          "how_to_measure": "Measure on a lift as for the other hard points (+/-5 mm adequate).",
+          "notes": "",
+          "searches": [
+            "Honda Canada/US spec tables and press releases (no geometry)",
+            "hondapartsnow.com parts listings (undimensioned)",
+            "hondapartsconnection.com diagrams (Cloudflare challenge, not worked around)",
+            "techinfo.honda.com (paywalled)"
+          ]
+        }
+      ]
+    },
+    "hardpoints.steering.rack_mounts": {
+      "description": "steering rack mounting bushes (left side)",
+      "unit": "m",
+      "impact": "low",
+      "candidates": [
+        {
+          "value": null,
+          "unit": "m",
+          "status": "unknown",
+          "class": null,
+          "source_id": null,
+          "locator": "",
+          "evidence": "",
+          "as_printed": "",
+          "applicability": {},
+          "confidence": "none",
+          "range": null,
+          "how_to_measure": "Measure on a lift as for the other hard points (+/-5 mm adequate).",
+          "notes": "",
+          "searches": [
+            "Honda Canada/US spec tables and press releases (no geometry)",
+            "hondapartsnow.com parts listings (undimensioned)",
+            "hondapartsconnection.com diagrams (Cloudflare challenge, not worked around)",
+            "techinfo.honda.com (paywalled)"
+          ]
+        }
+      ]
+    }
+  },
+  "summary": {
+    "confirmed": 0,
+    "estimated": 19,
+    "unknown": 8,
+    "total": 27,
+    "note": "Counts are per left-side point (right side mirrors). No hard point is confirmed: no dimensioned public source exists."
+  }
+}

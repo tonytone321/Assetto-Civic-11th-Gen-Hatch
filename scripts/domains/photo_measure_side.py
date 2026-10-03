@@ -105,7 +105,7 @@ def ray_edge(alpha, cx, cy, ang_deg, r0, r1, step=0.05):
     return r, cx + r * math.cos(th), cy + r * math.sin(th), float(g[i])
 
 
-RAY_ANGLES = list(range(28, 68, 2)) + list(range(114, 154, 2))   # lower-side arcs (y down); avoids contact patch and body
+RAY_ANGLES = list(range(26, 52, 2)) + list(range(130, 156, 2))   # lower-side arcs (y down); avoids the flattened contact patch and body
 
 
 def fit_wheels(rgba, rim_r_guess_px, tyre_r_guess_px):
@@ -141,8 +141,8 @@ def fit_wheels(rgba, rim_r_guess_px, tyre_r_guess_px):
         pts = np.array(pts)
         cx, cy, r, sd = circle_lsq(pts)
         r_fixed = float(np.mean(np.hypot(pts[:, 0] - rcx, pts[:, 1] - rcy)))
-        # axis-aligned ellipse centred on the rim centre: (dx/ax)^2 + (dy/ay)^2 = 1 (linear in 1/ax^2, 1/ay^2)
-        dxs, dys = pts[:, 0] - rcx, pts[:, 1] - rcy
+        # pixel anisotropy from the full rim edge: axis-aligned ellipse (dx/ax)^2 + (dy/ay)^2 = 1 about the rim centre
+        dxs, dys = rpts[:, 0] / UP - rcx, rpts[:, 1] / UP - rcy
         (ia, ib), *_ = np.linalg.lstsq(np.c_[dxs ** 2, dys ** 2], np.ones(len(dxs)), rcond=None)
         ax_x, ax_y = 1 / math.sqrt(ia), 1 / math.sqrt(ib)
         out.append(dict(rim_hough_px=[float(hx) / UP, float(hy) / UP, float(hr) / UP],
@@ -150,7 +150,7 @@ def fit_wheels(rgba, rim_r_guess_px, tyre_r_guess_px):
                         cx=rcx, cy=rcy, r=r_fixed,
                         tyre_free_fit_px=[cx, cy, r], fit_resid_px=sd, n_edge_pts=int(len(pts)),
                         ray_angles_deg=RAY_ANGLES, tyre_edge_pts_px=[[round(p[0], 2), round(p[1], 2)] for p in pts],
-                        ellipse_semi_x=ax_x, ellipse_semi_y=ax_y, rim_r=rr))
+                        rim_ellipse_semi_x=ax_x, rim_ellipse_semi_y=ax_y, rim_r=rr))
     return out
 
 
@@ -195,20 +195,19 @@ def main():
 
     dx = rw["cx"] - fw["cx"]
     s_wb = wb_mm / dx                                              # mm per px (horizontal)
-    r_mean_x = (fw["ellipse_semi_x"] + rw["ellipse_semi_x"]) / 2
-    r_mean_y = (fw["ellipse_semi_y"] + rw["ellipse_semi_y"]) / 2
-    aniso = r_mean_y / r_mean_x                                    # vertical / horizontal pixel aspect
-    s_v = s_wb / aniso                                             # mm per px (vertical)
-    s_tyre = tyre_d_mm / (2 * r_mean_x)
+    aniso = ((fw["rim_ellipse_semi_y"] / fw["rim_ellipse_semi_x"]) + (rw["rim_ellipse_semi_y"] / rw["rim_ellipse_semi_x"])) / 2
+    s_v = s_wb / aniso                                             # mm per px (vertical); rim ellipse y/x aspect
+    s_tyre = tyre_d_mm / (fw["r"] + rw["r"])
     persp = abs(1 - fw["r"] / rw["r"])
-    scale_rel_err = math.sqrt((1 - s_tyre / s_wb) ** 2 + persp ** 2 + (fw["fit_resid_px"] / fw["r"]) ** 2)
+    scale_rel_err = math.sqrt((1 - s_tyre / s_wb) ** 2 + persp ** 2 + (1 - aniso) ** 2 + (fw["fit_resid_px"] / fw["r"]) ** 2)
 
-    y_ground_fit = (fw["cy"] + fw["ellipse_semi_y"] + rw["cy"] + rw["ellipse_semi_y"]) / 2
+    y_ground_fit = (fw["cy"] + fw["r"] * aniso + rw["cy"] + rw["r"] * aniso) / 2   # undeflected-tyre bottom
     low_opaque = []
     for w in wheels:
         xs = range(int(w["cx"] - 3), int(w["cx"] + 4))
         low_opaque.append(float(np.mean([bot[x] for x in xs])) + 0.5)
-    y_ground = y_ground_fit
+    # the render's tyres are flattened at the contact patch: the ground is the flat opaque bottom under the tyres
+    y_ground = float(np.mean(low_opaque))
     x_front_axle = fw["cx"]
 
     def Y(xpx):
@@ -217,10 +216,17 @@ def main():
     def Z(ypx):
         return (y_ground - ypx) * s_v / 1000.0
 
+    # empirical model error: how far the photo reproduces the published length and height
+    roof_row0 = int(np.min(np.where(top >= 0, top, H)))
+    e_len = abs(1 - (x_max - x_min) * s_wb / length_mm)
+    e_hgt = abs(1 - (y_ground - roof_row0 + 0.5) * s_v / height_mm)
+    rel_h = math.hypot(scale_rel_err, e_len)
+    rel_v = math.hypot(scale_rel_err, e_hgt)
+
     def err(len_px, sigma_px=SIGMA_PX, value_mm=None, vertical=False):
         s = s_v if vertical else s_wb
         e_loc = math.hypot(sigma_px, SIGMA_PX) * s           # feature + reference localisation
-        e_scale = abs(value_mm if value_mm is not None else len_px * s) * scale_rel_err
+        e_scale = abs(value_mm if value_mm is not None else len_px * s) * (rel_v if vertical else rel_h)
         return math.hypot(e_loc, e_scale) / 1000.0           # 1 sigma, metres
 
     meas = {}
@@ -235,21 +241,25 @@ def main():
     rows_rear = [int(y) for y in np.where(body[:, x_max])[0]]
     oh_f_px = x_front_axle - x_min
     oh_r_px = x_max - rw["cx"]
+    oh_note = (f"Direct photo overhangs scaled by wheelbase sum to {(oh_f_px + oh_r_px) * s_wb:.0f} mm vs published length - wheelbase "
+               f"{length_mm - wb_mm:.0f} mm; prefer dimensions.overhang_front/rear derived from the scale-free fraction.")
     put("proportions.overhang_front", "Front overhang: front axle to foremost body point (side view)",
         oh_f_px * s_wb / 1000, err(oh_f_px), {"x_min": x_min, "rows_at_extreme": [min(rows_front), max(rows_front)],
                                               "front_wheel_cx": fw["cx"]},
         "silhouette min column minus fitted front wheel centre", impact="high",
-        how="Plumb bob from the front bumper's foremost point and from the front hub centre; measure the floor distance (+-5 mm).")
+        how="Plumb bob from the front bumper's foremost point and from the front hub centre; measure the floor distance (+-5 mm).", notes=oh_note)
     put("proportions.overhang_rear", "Rear overhang: rear axle to rearmost body point (side view)",
         oh_r_px * s_wb / 1000, err(oh_r_px), {"x_max": x_max, "rows_at_extreme": [min(rows_rear), max(rows_rear)],
                                              "rear_wheel_cx": rw["cx"]},
         "silhouette max column minus fitted rear wheel centre", impact="high",
-        how="Plumb bob from the rear bumper's rearmost point and from the rear hub centre; measure the floor distance (+-5 mm).")
+        how="Plumb bob from the rear bumper's rearmost point and from the rear hub centre; measure the floor distance (+-5 mm).", notes=oh_note)
     put("proportions.overhang_front_fraction", "Front overhang / (front + rear overhang) (scale-free)",
         oh_f_px / (oh_f_px + oh_r_px),
-        math.hypot(SIGMA_PX, SIGMA_PX) / (oh_f_px + oh_r_px), {"oh_f_px": oh_f_px, "oh_r_px": oh_r_px},
+        math.hypot(math.hypot(SIGMA_PX, SIGMA_PX) / (oh_f_px + oh_r_px), 0.01), {"oh_f_px": oh_f_px, "oh_r_px": oh_r_px},
         "ratio of silhouette-derived overhang pixel lengths; independent of scale", impact="high",
-        how="As for the overhangs.", notes="Used by scripts/derivations/dimensions.py with the published length and wheelbase.")
+        how="As for the overhangs.", notes="Used by scripts/derivations/dimensions.py with the published length and wheelbase. "
+        "Sigma includes a 0.01 allowance for front/rear differential perspective (the photo reproduces the published length only to "
+        f"{e_len*100:.1f}%, consistent with a finite-distance camera magnifying the near-side wheels relative to the centreline bumper extremes).")
     put("proportions.front_bumper_extreme_z", "Height of the foremost bumper point (mid of rows at the extreme column)",
         Z((min(rows_front) + max(rows_front)) / 2), err(0, (max(rows_front) - min(rows_front)) / 2 + SIGMA_PX, 0, True),
         {"x": x_min, "rows": [min(rows_front), max(rows_front)]}, "rows where the silhouette reaches its min column", impact="low",
@@ -388,6 +398,8 @@ def main():
     meas["scale"] = {"s_wheelbase_mm_per_px": s_wb, "s_tyre_mm_per_px": s_tyre, "s_vertical_mm_per_px": s_v,
                      "wheel_ellipse_aspect_y_over_x": aniso, "front_rear_tyre_radius_ratio": fw["r"] / rw["r"],
                      "relative_scale_error_1sigma": scale_rel_err, "wheelbase_px": dx,
+                     "length_reproduction_error": e_len, "height_reproduction_error": e_hgt,
+                     "relative_error_horizontal_1sigma": rel_h, "relative_error_vertical_1sigma": rel_v,
                      "inputs": {"wheelbase_mm": wb_mm, "tyre_nominal_diameter_mm": tyre_d_mm,
                                 "published_length_mm": length_mm, "published_height_mm": height_mm}}
     meas["ground"] = {"y_ground_fit_px": y_ground_fit, "lowest_opaque_rows_px": low_opaque}
