@@ -26,25 +26,33 @@ def check_length_sum(res):
 
 
 def check_axle_masses(res):
-    k = ("mass.curb_mass", "mass.gvwr", "mass.gawr_front", "mass.gawr_rear")
-    m = _need(res, *k)
+    """Axle masses (curb x distribution) must sum to curb mass and fit inside the ratings.
+    Uses the trim GVWR/GAWRs when known; otherwise the NHTSA lineup minimum GVWR as a bound."""
+    m = _need(res, "mass.curb_mass")
     if m:
         return "not_run", f"missing {m}"
-    curb, gvwr, gf, gr = (_v(res, x) for x in k)
+    curb = _v(res, "mass.curb_mass")
     msgs, ok = [], True
-    if not gvwr > curb:
-        ok = False; msgs.append("GVWR <= curb")
-    if gf + gr < gvwr:
-        ok = False; msgs.append("GAWR_f+GAWR_r < GVWR")
-    ff = _v(res, "mass.front_fraction")
-    if isinstance(ff, (int, float)):
-        fa, ra = curb * ff, curb * (1 - ff)
-        if fa > gf or ra > gr:
-            ok = False
-        msgs.append(f"curb axle loads F {fa:.0f} kg (GAWR {gf:.0f}), R {ra:.0f} kg (GAWR {gr:.0f})")
+    fa, ra = _v(res, "mass.front_axle_mass"), _v(res, "mass.rear_axle_mass")
+    if isinstance(fa, (int, float)) and isinstance(ra, (int, float)):
+        d = fa + ra - curb
+        ok &= abs(d) <= 1.0
+        msgs.append(f"front {fa:.0f} + rear {ra:.0f} = {fa+ra:.0f} kg vs curb {curb:.0f} kg (diff {d:+.1f})")
     else:
-        msgs.append("front_fraction unresolved: axle-load part not run")
-    msgs.append(f"curb {curb:.0f} kg, GVWR {gvwr:.0f} kg, GAWR sum {gf+gr:.0f} kg")
+        msgs.append("axle masses unresolved")
+    gvwr = _v(res, "mass.gvwr")
+    label = "GVWR"
+    if not isinstance(gvwr, (int, float)):
+        gvwr, label = _v(res, "mass.gvwr_lineup_min"), "lineup-minimum GVWR (trim GVWR unknown)"
+    if isinstance(gvwr, (int, float)):
+        ok &= curb < gvwr
+        msgs.append(f"curb {curb:.0f} kg < {label} {gvwr:.0f} kg: {curb < gvwr} (payload margin {gvwr-curb:.0f} kg)")
+    gf, gr = _v(res, "mass.gawr_front"), _v(res, "mass.gawr_rear")
+    if isinstance(gf, (int, float)) and isinstance(gr, (int, float)) and isinstance(fa, (int, float)):
+        ok &= fa <= gf and ra <= gr
+        msgs.append(f"axle loads within GAWR F {gf:.0f} / R {gr:.0f} kg: {fa <= gf and ra <= gr}")
+    else:
+        msgs.append("GAWR unknown: per-axle rating check not run")
     return ("pass" if ok else "fail"), "; ".join(msgs)
 
 
@@ -127,6 +135,15 @@ def check_tire_diameter(res):
                                                      f"{n['value']*1000:.1f} mm ({dev*100:+.2f}%, tol ±2%)")
 
 
+def check_rolling_circumference(res):
+    a, b = res.get("tires.rolling_circumference"), res.get("tires.rolling_circumference_from_revs")
+    if not a or not b or a.get("value") is None or b.get("value") is None:
+        return "not_run", "need tires.rolling_circumference and tires.rolling_circumference_from_revs"
+    dev = (a["value"] - b["value"]) / b["value"]
+    return ("pass" if abs(dev) <= 0.015 else "fail"), (f"selected {a['value']:.4f} m vs published revs/mile "
+                                                      f"{b['value']:.4f} m ({dev*100:+.2f}%, tol ±1.5%)")
+
+
 CHECKS = [
     ("Overall length = wheelbase + overhangs", check_length_sum),
     ("Axle masses vs curb mass and ratings", check_axle_masses),
@@ -134,6 +151,7 @@ CHECKS = [
     ("Steering ratio x lock vs turning circle", check_steering),
     ("Gear speed vs real observation", check_gear_speed),
     ("Tire diameter: published vs nominal", check_tire_diameter),
+    ("Rolling circumference: size-based vs published revs/mile", check_rolling_circumference),
 ]
 
 

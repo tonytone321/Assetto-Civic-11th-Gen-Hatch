@@ -90,6 +90,7 @@ TABLES = [dict(
             "gr": "transmission.gear_reverse", "fd": "transmission.final_drive",
             "circ": "tires.rolling_circumference", "redline": "engine.redline_rpm",
             "limiter": "engine.limiter_rpm"},
+    optional=["limiter", "redline"],  # columns left blank while these are unknown
     fn=_gear_speed_rows,
     description="Speed per 1000 rpm and at redline/limiter per gear, from resolved ratios and tyre rolling "
                 "circumference (no slip). Reverse row included. Ratios are never tuned to match observations.",

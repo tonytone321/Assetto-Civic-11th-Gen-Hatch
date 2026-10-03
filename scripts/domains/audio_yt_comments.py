@@ -12,6 +12,7 @@ import argparse
 import hashlib
 import os
 import sys
+import re
 import time
 
 HERE = os.path.dirname(os.path.abspath(__file__))
@@ -52,7 +53,7 @@ def main():
             page.wait_for_timeout(1200)
         # expand reply threads
         for _ in range(3):
-            btns = page.locator("ytd-comment-replies-renderer #more-replies button")
+            btns = page.get_by_role("button", name=re.compile(r"^\s*\d+ repl|^\s*1 reply|Show more replies", re.I))
             n = btns.count()
             for i in range(n):
                 try:

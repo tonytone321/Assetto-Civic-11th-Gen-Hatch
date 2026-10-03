@@ -28,7 +28,8 @@ def norm(s):
     s = unicodedata.normalize("NFKC", s or "")
     s = s.replace("’", "'").replace("‘", "'").replace("“", '"').replace("”", '"')
     s = s.replace("–", "-").replace("—", "-").replace(" ", " ").replace("|", " ")
-    return re.sub(r"\s+", " ", s).strip().lower()
+    s = re.sub(r"\s+", " ", s).strip().lower()
+    return re.sub(r"\(\s+", "(", re.sub(r"\s+\)", ")", s))  # HTML line breaks inside parentheses
 
 
 def quote_check(files, sources):
@@ -49,7 +50,15 @@ def quote_check(files, sources):
                 if not os.path.exists(path):
                     continue
                 if path not in cache_txt:
-                    if path.endswith(".pdf"):
+                    if path.endswith(".csv"):
+                        # tabular data: evidence is quoted as "COLUMN = value" from one row
+                        import csv as _csv
+                        cells = set()
+                        with open(path, newline="", encoding="utf-8", errors="replace") as fh:
+                            for row in _csv.DictReader(fh):
+                                cells.update(norm(f"{k} = {v}") for k, v in row.items() if k and v)
+                        cache_txt[path] = cells
+                    elif path.endswith(".pdf"):
                         try:
                             import pymupdf
                             cache_txt[path] = norm(" ".join(pg.get_text() for pg in pymupdf.open(path)))
@@ -60,7 +69,7 @@ def quote_check(files, sources):
                 hay = cache_txt[path]
                 checked += 1
                 frags = [f for f in re.split(r"\s*(?:…|\.\.\.)\s*", r["evidence"]) if f.strip()]
-                bad = [f for f in frags if norm(f) not in hay]
+                bad = [f for f in frags if (norm(f) not in hay)]
                 if bad:
                     missing.append(f"{os.path.relpath(p, ROOT)} {key}[{i}] ({r.get('source_id')}): "
                                    f"not found in {cf}: {bad[0][:90]!r}")

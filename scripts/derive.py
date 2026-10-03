@@ -108,13 +108,15 @@ def evaluate():
     built = []
     for m, t in tables:
         ins = t.get("inputs", {})
-        missing = [p for p in ins.values() if p not in values]
+        optional = set(t.get("optional", []))
+        missing = [p for a, p in ins.items() if p not in values and a not in optional]
         entry = {"path": t["path"], "module": m.__name__, "description": t.get("description", ""),
                  "inputs": ins, "input_values": {a: values.get(p) for a, p in ins.items()},
                  "missing_inputs": missing, "rows": None}
         if not missing:
             try:
-                entry["rows"] = t["fn"](**{a: values[p] for a, p in ins.items()})
+                entry["rows"] = t["fn"](**{a: values.get(p) for a, p in ins.items()})
+                entry["unresolved_optional_inputs"] = [p for a, p in ins.items() if a in optional and p not in values]
             except Exception as e:
                 entry["error"] = f"{type(e).__name__}: {e}"
         built.append(entry)

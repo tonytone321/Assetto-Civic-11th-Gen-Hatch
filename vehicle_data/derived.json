@@ -162,6 +162,454 @@
         }
       ]
     },
+    "tires.rolling_circumference_from_revs": {
+      "description": "Rolling circumference from published revs per mile (cross-check of the size-based value)",
+      "unit": "m",
+      "impact": "medium",
+      "candidates": [
+        {
+          "value": 1.9674132029339855,
+          "unit": "m",
+          "status": "estimated",
+          "class": "D",
+          "source_id": null,
+          "locator": "scripts/derivations/coordinator.py",
+          "evidence": "",
+          "as_printed": "",
+          "applicability": {
+            "notes": "this car (derived)"
+          },
+          "confidence": "low",
+          "range": [
+            1.9662113622480146,
+            1.968616513761468
+          ],
+          "how_to_measure": "Roll the car 10 wheel turns at rated pressure and normal load; measure distance.",
+          "notes": "1 mile / revs-per-mile; range covers rounding of the printed integer only. Retailer figure for the tire on Car and Driver's 2022 test car.",
+          "derivation": {
+            "module": "scripts/derivations/coordinator.py",
+            "function": "fn=lambda rpm_: MILE / rpm_,",
+            "inputs": {
+              "rpm_": "tires.revs_per_mile"
+            },
+            "input_values": {
+              "rpm_": 818
+            },
+            "basis_sources": []
+          }
+        }
+      ]
+    },
+    "dimensions.overhang_total": {
+      "description": "Sum of front and rear overhangs = length - wheelbase",
+      "unit": "m",
+      "impact": "medium",
+      "candidates": [
+        {
+          "value": 1.794,
+          "unit": "m",
+          "status": "confirmed",
+          "class": "D",
+          "source_id": null,
+          "locator": "scripts/derivations/dimensions.py",
+          "evidence": "",
+          "as_printed": "",
+          "applicability": {
+            "notes": "this car (derived)"
+          },
+          "confidence": "high",
+          "range": [
+            1.792,
+            1.796
+          ],
+          "how_to_measure": "Plumb bobs at both bumper extremes and both hub centres; measure on the floor.",
+          "notes": "Exact arithmetic on published figures (each rounded to 1 mm).",
+          "derivation": {
+            "module": "scripts/derivations/dimensions.py",
+            "function": "fn=lambda L, wb: L - wb,",
+            "inputs": {
+              "L": "dimensions.length",
+              "wb": "dimensions.wheelbase"
+            },
+            "input_values": {
+              "L": 4.529,
+              "wb": 2.735
+            },
+            "basis_sources": []
+          }
+        }
+      ]
+    },
+    "dimensions.overhang_front": {
+      "description": "Front overhang: front axle to foremost body point",
+      "unit": "m",
+      "impact": "high",
+      "candidates": [
+        {
+          "value": 0.9363414092999305,
+          "unit": "m",
+          "status": "estimated",
+          "class": "D",
+          "source_id": null,
+          "locator": "scripts/derivations/dimensions.py",
+          "evidence": "",
+          "as_printed": "",
+          "applicability": {
+            "notes": "this car (derived)"
+          },
+          "confidence": "medium",
+          "range": [
+            0.8970221212789767,
+            0.9757461335466605
+          ],
+          "how_to_measure": "Plumb bob from the front bumper's foremost point and from the front hub centre; measure the floor distance (+-5 mm).",
+          "notes": "Manufacturer does not publish overhangs (Honda Canada/US 2022-2024 spec tables searched). (length - wheelbase) x photo-measured scale-free fraction front/(front+rear) from the Honda side render; range from the fraction's +-2 sigma range in proportions.json.",
+          "derivation": {
+            "module": "scripts/derivations/dimensions.py",
+            "function": "fn=lambda L, wb, f: _split(L - wb, f, True),",
+            "inputs": {
+              "L": "dimensions.length",
+              "wb": "dimensions.wheelbase",
+              "f": "proportions.overhang_front_fraction"
+            },
+            "input_values": {
+              "L": 4.529,
+              "wb": 2.735,
+              "f": 0.5219294366220348
+            },
+            "basis_sources": []
+          }
+        }
+      ]
+    },
+    "dimensions.overhang_rear": {
+      "description": "Rear overhang: rear axle to rearmost body point",
+      "unit": "m",
+      "impact": "high",
+      "candidates": [
+        {
+          "value": 0.8576585907000696,
+          "unit": "m",
+          "status": "estimated",
+          "class": "D",
+          "source_id": null,
+          "locator": "scripts/derivations/dimensions.py",
+          "evidence": "",
+          "as_printed": "",
+          "applicability": {
+            "notes": "this car (derived)"
+          },
+          "confidence": "medium",
+          "range": [
+            0.8184270204256038,
+            0.8969755972003114
+          ],
+          "how_to_measure": "Plumb bob from the rear bumper's rearmost point and from the rear hub centre; measure the floor distance (+-5 mm).",
+          "notes": "As dimensions.overhang_front, complement of the fraction.",
+          "derivation": {
+            "module": "scripts/derivations/dimensions.py",
+            "function": "fn=lambda L, wb, f: _split(L - wb, f, False),",
+            "inputs": {
+              "L": "dimensions.length",
+              "wb": "dimensions.wheelbase",
+              "f": "proportions.overhang_front_fraction"
+            },
+            "input_values": {
+              "L": 4.529,
+              "wb": 2.735,
+              "f": 0.5219294366220348
+            },
+            "basis_sources": []
+          }
+        }
+      ]
+    },
+    "dimensions.front_bumper_y": {
+      "description": "Y coordinate of the foremost body point (vehicle frame)",
+      "unit": "m",
+      "impact": "medium",
+      "candidates": [
+        {
+          "value": 0.9363414092999305,
+          "unit": "m",
+          "status": "estimated",
+          "class": "D",
+          "source_id": null,
+          "locator": "scripts/derivations/dimensions.py",
+          "evidence": "",
+          "as_printed": "",
+          "applicability": {
+            "notes": "this car (derived)"
+          },
+          "confidence": "medium",
+          "range": [
+            0.8970221212789767,
+            0.9757461335466605
+          ],
+          "how_to_measure": "As dimensions.overhang_front.",
+          "notes": "Equal to the front overhang because the origin is below the front axle.",
+          "derivation": {
+            "module": "scripts/derivations/dimensions.py",
+            "function": "fn=lambda L, wb, f: _split(L - wb, f, True),",
+            "inputs": {
+              "L": "dimensions.length",
+              "wb": "dimensions.wheelbase",
+              "f": "proportions.overhang_front_fraction"
+            },
+            "input_values": {
+              "L": 4.529,
+              "wb": 2.735,
+              "f": 0.5219294366220348
+            },
+            "basis_sources": []
+          }
+        }
+      ]
+    },
+    "dimensions.rear_bumper_y": {
+      "description": "Y coordinate of the rearmost body point (vehicle frame)",
+      "unit": "m",
+      "impact": "medium",
+      "candidates": [
+        {
+          "value": -3.5926585907000694,
+          "unit": "m",
+          "status": "estimated",
+          "class": "D",
+          "source_id": null,
+          "locator": "scripts/derivations/dimensions.py",
+          "evidence": "",
+          "as_printed": "",
+          "applicability": {
+            "notes": "this car (derived)"
+          },
+          "confidence": "medium",
+          "range": [
+            -3.631975597200311,
+            -3.5534270204256035
+          ],
+          "how_to_measure": "As dimensions.overhang_rear.",
+          "notes": "-(wheelbase + rear overhang).",
+          "derivation": {
+            "module": "scripts/derivations/dimensions.py",
+            "function": "fn=lambda L, wb, f: -(wb + _split(L - wb, f, False)),",
+            "inputs": {
+              "L": "dimensions.length",
+              "wb": "dimensions.wheelbase",
+              "f": "proportions.overhang_front_fraction"
+            },
+            "input_values": {
+              "L": 4.529,
+              "wb": 2.735,
+              "f": 0.5219294366220348
+            },
+            "basis_sources": []
+          }
+        }
+      ]
+    },
+    "dimensions.rear_axle_y": {
+      "description": "Y coordinate of the rear axle (vehicle frame)",
+      "unit": "m",
+      "impact": "high",
+      "candidates": [
+        {
+          "value": -2.735,
+          "unit": "m",
+          "status": "confirmed",
+          "class": "D",
+          "source_id": null,
+          "locator": "scripts/derivations/dimensions.py",
+          "evidence": "",
+          "as_printed": "",
+          "applicability": {
+            "notes": "this car (derived)"
+          },
+          "confidence": "high",
+          "range": [
+            -2.7359999999999998,
+            -2.734
+          ],
+          "how_to_measure": "Measure hub-centre to hub-centre on both sides.",
+          "notes": "-wheelbase by definition of the frame.",
+          "derivation": {
+            "module": "scripts/derivations/dimensions.py",
+            "function": "fn=lambda wb: -wb,",
+            "inputs": {
+              "wb": "dimensions.wheelbase"
+            },
+            "input_values": {
+              "wb": 2.735
+            },
+            "basis_sources": []
+          }
+        }
+      ]
+    },
+    "dimensions.mirror_protrusion_per_side": {
+      "description": "Lateral protrusion of each (open) mirror beyond the body width",
+      "unit": "m",
+      "impact": "low",
+      "candidates": [
+        {
+          "value": 0.13949999999999996,
+          "unit": "m",
+          "status": "confirmed",
+          "class": "D",
+          "source_id": null,
+          "locator": "scripts/derivations/dimensions.py",
+          "evidence": "",
+          "as_printed": "",
+          "applicability": {
+            "notes": "this car (derived)"
+          },
+          "confidence": "medium",
+          "range": [
+            0.13849999999999996,
+            0.14049999999999996
+          ],
+          "how_to_measure": "Measure mirror-to-mirror width with two squares and a tape (+-3 mm).",
+          "notes": "Mirror width is from the 2022/2023 Canadian tables (not reprinted for 2024).",
+          "derivation": {
+            "module": "scripts/derivations/dimensions.py",
+            "function": "fn=lambda wm, wbody: (wm - wbody) / 2,",
+            "inputs": {
+              "wm": "dimensions.width_mirrors",
+              "wbody": "dimensions.width_body"
+            },
+            "input_values": {
+              "wm": 2.081,
+              "wbody": 1.802
+            },
+            "basis_sources": []
+          }
+        }
+      ]
+    },
+    "dimensions.licence_bracket_depth": {
+      "description": "Length added by the front licence-plate bracket",
+      "unit": "m",
+      "impact": "low",
+      "candidates": [
+        {
+          "value": 0.017999999999999794,
+          "unit": "m",
+          "status": "confirmed",
+          "class": "D",
+          "source_id": null,
+          "locator": "scripts/derivations/dimensions.py",
+          "evidence": "",
+          "as_printed": "",
+          "applicability": {
+            "notes": "this car (derived)"
+          },
+          "confidence": "high",
+          "range": [
+            0.015999999999999792,
+            0.019999999999999796
+          ],
+          "how_to_measure": "Measure the bracket depth ahead of the bumper face.",
+          "notes": "Honda Canada prints both lengths (with/without bracket).",
+          "derivation": {
+            "module": "scripts/derivations/dimensions.py",
+            "function": "fn=lambda Lb, L: Lb - L,",
+            "inputs": {
+              "Lb": "dimensions.length_with_licence_bracket",
+              "L": "dimensions.length"
+            },
+            "input_values": {
+              "Lb": 4.547,
+              "L": 4.529
+            },
+            "basis_sources": []
+          }
+        }
+      ]
+    },
+    "dimensions.front_tyre_outer_margin_per_side": {
+      "description": "Cross-check: (body width - front track - tyre section width) / 2; must be > 0",
+      "unit": "m",
+      "impact": "low",
+      "candidates": [
+        {
+          "value": 0.0155,
+          "unit": "m",
+          "status": "estimated",
+          "class": "D",
+          "source_id": null,
+          "locator": "scripts/derivations/dimensions.py",
+          "evidence": "",
+          "as_printed": "",
+          "applicability": {
+            "notes": "this car (derived)"
+          },
+          "confidence": "medium",
+          "range": [
+            0.010499999999999999,
+            0.0205
+          ],
+          "how_to_measure": "Measure from the tyre sidewall's outer face to the body side (plumb) at axle height.",
+          "notes": "Nominal section width; real tyre bulge differs by a few mm (+-5 mm range). Negative means inconsistent inputs.",
+          "derivation": {
+            "module": "scripts/derivations/dimensions.py",
+            "function": "fn=lambda w, t, s: (w - t - s) / 2,",
+            "inputs": {
+              "w": "dimensions.width_body",
+              "t": "dimensions.track_front",
+              "s": "tires.section_width"
+            },
+            "input_values": {
+              "w": 1.802,
+              "t": 1.536,
+              "s": 0.23500000000000001
+            },
+            "basis_sources": []
+          }
+        }
+      ]
+    },
+    "dimensions.rear_tyre_outer_margin_per_side": {
+      "description": "Cross-check: (body width - rear track - tyre section width) / 2; must be > 0",
+      "unit": "m",
+      "impact": "low",
+      "candidates": [
+        {
+          "value": 0.0010000000000000425,
+          "unit": "m",
+          "status": "estimated",
+          "class": "D",
+          "source_id": null,
+          "locator": "scripts/derivations/dimensions.py",
+          "evidence": "",
+          "as_printed": "",
+          "applicability": {
+            "notes": "this car (derived)"
+          },
+          "confidence": "medium",
+          "range": [
+            -0.003999999999999958,
+            0.006000000000000043
+          ],
+          "how_to_measure": "As front.",
+          "notes": "As front.",
+          "derivation": {
+            "module": "scripts/derivations/dimensions.py",
+            "function": "fn=lambda w, t, s: (w - t - s) / 2,",
+            "inputs": {
+              "w": "dimensions.width_body",
+              "t": "dimensions.track_rear",
+              "s": "tires.section_width"
+            },
+            "input_values": {
+              "w": 1.802,
+              "t": 1.565,
+              "s": 0.23500000000000001
+            },
+            "basis_sources": []
+          }
+        }
+      ]
+    },
     "drivetrain.rpm_after_upshift_1_2_from_redline": {
       "description": "Engine speed after a 1-2 upshift taken at redline (road speed held)",
       "unit": "rpm",
@@ -1486,6 +1934,608 @@
         }
       ]
     },
+    "suspension.wheel_rate_front": {
+      "description": "Front spring wheel rate (k_s * MR^2)",
+      "unit": "N/m",
+      "impact": "high",
+      "candidates": [
+        {
+          "value": 24933.85,
+          "unit": "N/m",
+          "status": "estimated",
+          "class": "D",
+          "source_id": null,
+          "locator": "scripts/derivations/suspension.py",
+          "evidence": "",
+          "as_printed": "",
+          "applicability": {
+            "notes": "this car (derived)"
+          },
+          "confidence": "low",
+          "range": [
+            17820.0,
+            32000.0
+          ],
+          "how_to_measure": "Measure spring rate and motion ratio (see those records), or load the corner with known weights and measure wheel-centre deflection.",
+          "notes": "Inputs are class E estimates; range spans their ranges.",
+          "derivation": {
+            "module": "scripts/derivations/suspension.py",
+            "function": "def wheel_rate(k, mr):\n    return k * mr * mr",
+            "inputs": {
+              "k": "suspension.spring_rate_front",
+              "mr": "suspension.motion_ratio_front"
+            },
+            "input_values": {
+              "k": 26500.0,
+              "mr": 0.97
+            },
+            "basis_sources": []
+          }
+        }
+      ]
+    },
+    "suspension.wheel_rate_rear": {
+      "description": "Rear spring wheel rate (k_s * MR^2)",
+      "unit": "N/m",
+      "impact": "high",
+      "candidates": [
+        {
+          "value": 15468.75,
+          "unit": "N/m",
+          "status": "estimated",
+          "class": "D",
+          "source_id": null,
+          "locator": "scripts/derivations/suspension.py",
+          "evidence": "",
+          "as_printed": "",
+          "applicability": {
+            "notes": "this car (derived)"
+          },
+          "confidence": "low",
+          "range": [
+            9225.6,
+            43350.0
+          ],
+          "how_to_measure": "As for the front.",
+          "notes": "Inputs are class E estimates; range spans their ranges (wide because the rear spring-rate leads disagree 2x).",
+          "derivation": {
+            "module": "scripts/derivations/suspension.py",
+            "function": "def wheel_rate(k, mr):\n    return k * mr * mr",
+            "inputs": {
+              "k": "suspension.spring_rate_rear",
+              "mr": "suspension.motion_ratio_rear"
+            },
+            "input_values": {
+              "k": 27500.0,
+              "mr": 0.75
+            },
+            "basis_sources": []
+          }
+        }
+      ]
+    },
+    "suspension.ride_frequency_front": {
+      "description": "Front ride frequency (body bounce, tyre compliance ignored)",
+      "unit": "Hz",
+      "impact": "high",
+      "candidates": [
+        {
+          "value": 1.3288054587655687,
+          "unit": "Hz",
+          "status": "estimated",
+          "class": "D",
+          "source_id": null,
+          "locator": "scripts/derivations/suspension.py",
+          "evidence": "",
+          "as_printed": "",
+          "applicability": {
+            "notes": "this car (derived)"
+          },
+          "confidence": "low",
+          "range": [
+            1.0415039605604661,
+            1.5268593074158339
+          ],
+          "how_to_measure": "Bounce test: accelerometer on the body over each axle, push-and-release or drive over a single bump; or compute from measured spring rate, motion ratio and corner weights.",
+          "notes": "f = sqrt(k_s MR^2 / (m*frac/2 - m_u)) / 2pi; lower bound also x0.94 for tyre in series.",
+          "derivation": {
+            "module": "scripts/derivations/suspension.py",
+            "function": "def ride_freq(k, mr, m, frac, mu):\n    return math.sqrt(wheel_rate(k, mr) / sprung_corner(m, frac, mu)) / (2.0 * math.pi)",
+            "inputs": {
+              "k": "suspension.spring_rate_front",
+              "mr": "suspension.motion_ratio_front",
+              "m": "mass.curb_mass",
+              "frac": "mass.front_fraction",
+              "mu": "suspension.unsprung_mass_corner_front"
+            },
+            "input_values": {
+              "k": 26500.0,
+              "mr": 0.97,
+              "m": 1382.0,
+              "frac": 0.59,
+              "mu": 50.0
+            },
+            "basis_sources": []
+          }
+        }
+      ]
+    },
+    "suspension.ride_frequency_rear": {
+      "description": "Rear ride frequency (body bounce, tyre compliance ignored)",
+      "unit": "Hz",
+      "impact": "high",
+      "candidates": [
+        {
+          "value": 1.2690179425193162,
+          "unit": "Hz",
+          "status": "estimated",
+          "class": "D",
+          "source_id": null,
+          "locator": "scripts/derivations/suspension.py",
+          "evidence": "",
+          "as_printed": "",
+          "applicability": {
+            "notes": "this car (derived)"
+          },
+          "confidence": "low",
+          "range": [
+            0.9064428143130333,
+            2.1694418099117336
+          ],
+          "how_to_measure": "Bounce test: accelerometer on the body over each axle, push-and-release or drive over a single bump; or compute from measured spring rate, motion ratio and corner weights.",
+          "notes": "Rear axle fraction = 1 - mass.front_fraction.",
+          "derivation": {
+            "module": "scripts/derivations/suspension.py",
+            "function": "fn=lambda k, mr, m, frac, mu: ride_freq(k, mr, m, 1.0 - frac, mu),",
+            "inputs": {
+              "k": "suspension.spring_rate_rear",
+              "mr": "suspension.motion_ratio_rear",
+              "m": "mass.curb_mass",
+              "frac": "mass.front_fraction",
+              "mu": "suspension.unsprung_mass_corner_rear"
+            },
+            "input_values": {
+              "k": 27500.0,
+              "mr": 0.75,
+              "m": 1382.0,
+              "frac": 0.59,
+              "mu": 40.0
+            },
+            "basis_sources": []
+          }
+        }
+      ]
+    },
+    "suspension.arb_front_polar_moment": {
+      "description": "Front anti-roll bar section polar moment J (tube 26.5 x 4.5 mm)",
+      "unit": "m4",
+      "impact": "medium",
+      "candidates": [
+        {
+          "value": 3.9207665365423174e-08,
+          "unit": "m4",
+          "status": "confirmed",
+          "class": "D",
+          "source_id": null,
+          "locator": "scripts/derivations/suspension.py",
+          "evidence": "",
+          "as_printed": "",
+          "applicability": {
+            "notes": "this car (derived)"
+          },
+          "confidence": "high",
+          "range": [
+            3.733433680768022e-08,
+            4.109965498352842e-08
+          ],
+          "how_to_measure": "Calipers on the bar OD; wall thickness from the bar end.",
+          "notes": "J = pi/32 (D^4 - (D-2t)^4). Exact arithmetic on Honda's printed size; range +/-0.2 mm manufacturing/rounding.",
+          "derivation": {
+            "module": "scripts/derivations/suspension.py",
+            "function": "def J_tube(D, t):\n    di = max(D - 2.0 * t, 0.0)\n    return math.pi / 32.0 * (D ** 4 - di ** 4)",
+            "inputs": {
+              "D": "suspension.arb_front_diameter",
+              "t": "suspension.arb_front_wall_thickness"
+            },
+            "input_values": {
+              "D": 0.0265,
+              "t": 0.0045000000000000005
+            },
+            "basis_sources": []
+          }
+        }
+      ]
+    },
+    "suspension.arb_rear_polar_moment": {
+      "description": "Rear anti-roll bar section polar moment J (solid 17.5 mm)",
+      "unit": "m4",
+      "impact": "medium",
+      "candidates": [
+        {
+          "value": 9.207719679283565e-09,
+          "unit": "m4",
+          "status": "confirmed",
+          "class": "D",
+          "source_id": null,
+          "locator": "scripts/derivations/suspension.py",
+          "evidence": "",
+          "as_printed": "",
+          "applicability": {
+            "notes": "this car (derived)"
+          },
+          "confidence": "high",
+          "range": [
+            8.793956375922156e-09,
+            9.635914988056667e-09
+          ],
+          "how_to_measure": "Calipers on the bar.",
+          "notes": "J = pi/32 D^4.",
+          "derivation": {
+            "module": "scripts/derivations/suspension.py",
+            "function": "def J_solid(D):\n    return math.pi / 32.0 * D ** 4",
+            "inputs": {
+              "D": "suspension.arb_rear_diameter"
+            },
+            "input_values": {
+              "D": 0.0175
+            },
+            "basis_sources": []
+          }
+        }
+      ]
+    },
+    "suspension.arb_front_torsional_stiffness": {
+      "description": "Front bar torsional stiffness of the active length, K_t = G J / L",
+      "unit": "N*m/rad",
+      "impact": "medium",
+      "candidates": [
+        {
+          "value": 3657.8445452683036,
+          "unit": "N*m/rad",
+          "status": "estimated",
+          "class": "D",
+          "source_id": null,
+          "locator": "scripts/derivations/suspension.py",
+          "evidence": "",
+          "as_printed": "",
+          "applicability": {
+            "notes": "this car (derived)"
+          },
+          "confidence": "low",
+          "range": [
+            3109.167863478058,
+            4441.668376397226
+          ],
+          "how_to_measure": "Measure bushing-to-bushing length on the car.",
+          "notes": "G = 79.3 GPa. Active length is a class E estimate.",
+          "derivation": {
+            "module": "scripts/derivations/suspension.py",
+            "function": "fn=lambda D, t, L: G_STEEL * J_tube(D, t) / L,",
+            "inputs": {
+              "D": "suspension.arb_front_diameter",
+              "t": "suspension.arb_front_wall_thickness",
+              "L": "suspension.arb_front_active_length"
+            },
+            "input_values": {
+              "D": 0.0265,
+              "t": 0.0045000000000000005,
+              "L": 0.85
+            },
+            "basis_sources": []
+          }
+        }
+      ]
+    },
+    "suspension.arb_rear_torsional_stiffness": {
+      "description": "Rear bar torsional stiffness of the active length, K_t = G J / L",
+      "unit": "N*m/rad",
+      "impact": "medium",
+      "candidates": [
+        {
+          "value": 768.602284807565,
+          "unit": "N*m/rad",
+          "status": "estimated",
+          "class": "D",
+          "source_id": null,
+          "locator": "scripts/derivations/suspension.py",
+          "evidence": "",
+          "as_printed": "",
+          "applicability": {
+            "notes": "this car (derived)"
+          },
+          "confidence": "low",
+          "range": [
+            663.792882333806,
+            912.7152132089833
+          ],
+          "how_to_measure": "Measure bushing-to-bushing length on the car.",
+          "notes": "G = 79.3 GPa.",
+          "derivation": {
+            "module": "scripts/derivations/suspension.py",
+            "function": "fn=lambda D, L: G_STEEL * J_solid(D) / L,",
+            "inputs": {
+              "D": "suspension.arb_rear_diameter",
+              "L": "suspension.arb_rear_active_length"
+            },
+            "input_values": {
+              "D": 0.0175,
+              "L": 0.95
+            },
+            "basis_sources": []
+          }
+        }
+      ]
+    },
+    "suspension.arb_front_roll_stiffness": {
+      "description": "Front anti-roll bar roll stiffness at the wheels (bar only, rigid links)",
+      "unit": "N*m/rad",
+      "impact": "high",
+      "candidates": [
+        {
+          "value": 97356.48811070845,
+          "unit": "N*m/rad",
+          "status": "estimated",
+          "class": "D",
+          "source_id": null,
+          "locator": "scripts/derivations/suspension.py",
+          "evidence": "",
+          "as_printed": "",
+          "applicability": {
+            "notes": "this car (derived)"
+          },
+          "confidence": "low",
+          "range": [
+            25445.147282661517,
+            232871.34297245488
+          ],
+          "how_to_measure": "Measure bar length, lever arms and link motion ratio; or measure roll angle under a known lateral load with and without the bar links connected.",
+          "notes": "K_phi = (K_t / a^2) MR^2 * track^2 / 2. Lower bound also x0.7 for bushing/link compliance. Treats the bar as a pure torsion member (arm bending ignored, which overstates stiffness).",
+          "derivation": {
+            "module": "scripts/derivations/suspension.py",
+            "function": "fn=lambda D, t, L, a, mr, tw: arb_wheel_rate(G_STEEL * J_tube(D, t) / L, a, mr) * tw ** 2 / 2.0,",
+            "inputs": {
+              "D": "suspension.arb_front_diameter",
+              "t": "suspension.arb_front_wall_thickness",
+              "L": "suspension.arb_front_active_length",
+              "a": "suspension.arb_front_lever_arm",
+              "mr": "suspension.arb_front_motion_ratio",
+              "tw": "dimensions.track_front"
+            },
+            "input_values": {
+              "D": 0.0265,
+              "t": 0.0045000000000000005,
+              "L": 0.85,
+              "a": 0.2,
+              "mr": 0.95,
+              "tw": 1.536
+            },
+            "basis_sources": []
+          }
+        }
+      ]
+    },
+    "suspension.arb_rear_roll_stiffness": {
+      "description": "Rear anti-roll bar roll stiffness at the wheels (bar only, rigid links)",
+      "unit": "N*m/rad",
+      "impact": "high",
+      "candidates": [
+        {
+          "value": 16340.971623331669,
+          "unit": "N*m/rad",
+          "status": "estimated",
+          "class": "D",
+          "source_id": null,
+          "locator": "scripts/derivations/suspension.py",
+          "evidence": "",
+          "as_printed": "",
+          "applicability": {
+            "notes": "this car (derived)"
+          },
+          "confidence": "low",
+          "range": [
+            2754.068139064423,
+            70051.70272776994
+          ],
+          "how_to_measure": "As for the front bar.",
+          "notes": "As for the front bar.",
+          "derivation": {
+            "module": "scripts/derivations/suspension.py",
+            "function": "fn=lambda D, L, a, mr, tw: arb_wheel_rate(G_STEEL * J_solid(D) / L, a, mr) * tw ** 2 / 2.0,",
+            "inputs": {
+              "D": "suspension.arb_rear_diameter",
+              "L": "suspension.arb_rear_active_length",
+              "a": "suspension.arb_rear_lever_arm",
+              "mr": "suspension.arb_rear_motion_ratio",
+              "tw": "dimensions.track_rear"
+            },
+            "input_values": {
+              "D": 0.0175,
+              "L": 0.95,
+              "a": 0.18,
+              "mr": 0.75,
+              "tw": 1.565
+            },
+            "basis_sources": []
+          }
+        }
+      ]
+    },
+    "suspension.spring_roll_stiffness_front": {
+      "description": "Front roll stiffness from springs alone (k_w * track^2 / 2)",
+      "unit": "N*m/rad",
+      "impact": "medium",
+      "candidates": [
+        {
+          "value": 29413.166284799998,
+          "unit": "N*m/rad",
+          "status": "estimated",
+          "class": "D",
+          "source_id": null,
+          "locator": "scripts/derivations/suspension.py",
+          "evidence": "",
+          "as_printed": "",
+          "applicability": {
+            "notes": "this car (derived)"
+          },
+          "confidence": "low",
+          "range": [
+            21021.32736,
+            37748.736000000004
+          ],
+          "how_to_measure": "From measured spring rate and motion ratio.",
+          "notes": "",
+          "derivation": {
+            "module": "scripts/derivations/suspension.py",
+            "function": "fn=lambda k, mr, tw: wheel_rate(k, mr) * tw ** 2 / 2.0,",
+            "inputs": {
+              "k": "suspension.spring_rate_front",
+              "mr": "suspension.motion_ratio_front",
+              "tw": "dimensions.track_front"
+            },
+            "input_values": {
+              "k": 26500.0,
+              "mr": 0.97,
+              "tw": 1.536
+            },
+            "basis_sources": []
+          }
+        }
+      ]
+    },
+    "suspension.spring_roll_stiffness_rear": {
+      "description": "Rear roll stiffness from springs alone (k_w * track^2 / 2)",
+      "unit": "N*m/rad",
+      "impact": "medium",
+      "candidates": [
+        {
+          "value": 18943.224609374996,
+          "unit": "N*m/rad",
+          "status": "estimated",
+          "class": "D",
+          "source_id": null,
+          "locator": "scripts/derivations/suspension.py",
+          "evidence": "",
+          "as_printed": "",
+          "applicability": {
+            "notes": "this car (derived)"
+          },
+          "confidence": "low",
+          "range": [
+            11297.78508,
+            53086.95187499999
+          ],
+          "how_to_measure": "From measured spring rate and motion ratio.",
+          "notes": "",
+          "derivation": {
+            "module": "scripts/derivations/suspension.py",
+            "function": "fn=lambda k, mr, tw: wheel_rate(k, mr) * tw ** 2 / 2.0,",
+            "inputs": {
+              "k": "suspension.spring_rate_rear",
+              "mr": "suspension.motion_ratio_rear",
+              "tw": "dimensions.track_rear"
+            },
+            "input_values": {
+              "k": 27500.0,
+              "mr": 0.75,
+              "tw": 1.565
+            },
+            "basis_sources": []
+          }
+        }
+      ]
+    },
+    "suspension.damping_wheel_front_inferred": {
+      "description": "Inferred front wheel-referred damping coefficient at zeta 0.3 (low-speed, average bump/rebound) - NOT measured",
+      "unit": "N*s/m",
+      "impact": "high",
+      "candidates": [
+        {
+          "value": 1791.840386401646,
+          "unit": "N*s/m",
+          "status": "estimated",
+          "class": "E",
+          "source_id": null,
+          "locator": "scripts/derivations/suspension.py",
+          "evidence": "",
+          "as_printed": "",
+          "applicability": {
+            "notes": "this car (derived)"
+          },
+          "confidence": "low",
+          "range": [
+            995.6574350648922,
+            3087.1548066140126
+          ],
+          "how_to_measure": "Shock-dyno a stock front strut (0.025-1.0 m/s, bump and rebound) and divide by MR^2.",
+          "notes": "c = zeta * 2 sqrt(k_w m_s). Conservative linear placeholder for Phase 2 damper curves (real dampers are digressive, rebound > bump). zeta range 0.2-0.45 is an engineering judgment for road cars.",
+          "derivation": {
+            "module": "scripts/derivations/suspension.py",
+            "function": "fn=lambda k, mr, m, frac, mu: 0.3 * 2.0 * math.sqrt(wheel_rate(k, mr) * sprung_corner(m, frac, mu)),",
+            "inputs": {
+              "k": "suspension.spring_rate_front",
+              "mr": "suspension.motion_ratio_front",
+              "m": "mass.curb_mass",
+              "frac": "mass.front_fraction",
+              "mu": "suspension.unsprung_mass_corner_front"
+            },
+            "input_values": {
+              "k": 26500.0,
+              "mr": 0.97,
+              "m": 1382.0,
+              "frac": 0.59,
+              "mu": 50.0
+            },
+            "basis_sources": []
+          }
+        }
+      ]
+    },
+    "suspension.damping_wheel_rear_inferred": {
+      "description": "Inferred rear wheel-referred damping coefficient at zeta 0.3 - NOT measured",
+      "unit": "N*s/m",
+      "impact": "high",
+      "candidates": [
+        {
+          "value": 1164.0157054352833,
+          "unit": "N*s/m",
+          "status": "estimated",
+          "class": "E",
+          "source_id": null,
+          "locator": "scripts/derivations/suspension.py",
+          "evidence": "",
+          "as_printed": "",
+          "applicability": {
+            "notes": "this car (derived)"
+          },
+          "confidence": "low",
+          "range": [
+            586.8457699941272,
+            2970.5847378925246
+          ],
+          "how_to_measure": "Shock-dyno a stock rear damper and divide by the damper MR^2.",
+          "notes": "As front.",
+          "derivation": {
+            "module": "scripts/derivations/suspension.py",
+            "function": "fn=lambda k, mr, m, frac, mu: 0.3 * 2.0 * math.sqrt(wheel_rate(k, mr) * sprung_corner(m, 1.0 - frac, mu)),",
+            "inputs": {
+              "k": "suspension.spring_rate_rear",
+              "mr": "suspension.motion_ratio_rear",
+              "m": "mass.curb_mass",
+              "frac": "mass.front_fraction",
+              "mu": "suspension.unsprung_mass_corner_rear"
+            },
+            "input_values": {
+              "k": 27500.0,
+              "mr": 0.75,
+              "m": 1382.0,
+              "frac": 0.59,
+              "mu": 40.0
+            },
+            "basis_sources": []
+          }
+        }
+      ]
+    },
     "tires.sidewall_height_nominal": {
       "description": "Nominal sidewall height (width x aspect ratio)",
       "unit": "m",
@@ -1768,10 +2818,11 @@
         "redline": 6600.0,
         "limiter": null
       },
-      "missing_inputs": [
+      "missing_inputs": [],
+      "unresolved_optional_inputs": [
         "engine.limiter_rpm"
       ],
-      "n_rows": 0
+      "n_rows": 7
     },
     {
       "path": "vehicle_data/engine_curve.csv",
@@ -1784,6 +2835,7 @@
         "loss": 0.13
       },
       "missing_inputs": [],
+      "unresolved_optional_inputs": [],
       "n_rows": 0
     }
   ]

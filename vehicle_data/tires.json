@@ -58,6 +58,28 @@
       "applicability": "2024 Civic, US, by tire size and trim",
       "notes": "",
       "cache_file": "cache/pages/365ef712f5d6b5f1.txt"
+    },
+    "perf:cd-2022-civic-hatch-st-6mt": {
+      "title": "Tested: 2022 Honda Civic Hatchback Brings Stick-Shift Fun (Rich Ceppos, published Oct 12, 2021)",
+      "url": "https://www.caranddriver.com/reviews/a37936938/2022-honda-civic-hatchback-by-the-numbers/",
+      "publisher": "Car and Driver (Hearst Autos)",
+      "class": "C",
+      "accessed": "2026-10-03",
+      "access_method": "static",
+      "applicability": "2022 Civic Sport Touring Hatchback, 6MT, US, Continental ContiProContact 235/40R-18 91W M+S, curb weight 3024 lb as tested",
+      "notes": "Instrumented test (VBOX). Same numbers repeated on caranddriver.com/honda/civic-2022 (cache/pages/e2b19c8e54228dee.txt). Weather: corrected to 60 F at sea level per C/D method; actual test-day weather not printed. Front/rear % not printed.",
+      "cache_file": "cache/pages/2df590f6625a05ee.txt"
+    },
+    "tires:tirediscounters-contiprocontact-235-40r18": {
+      "title": "235/40R18 Continental ContiProContact 91W BSW SL (product page)",
+      "url": "https://tirediscounters.com/products/235-40r18-continental-contiprocontact-91w-bsw-sl-2354018-235-40-18",
+      "publisher": "Tire Discounters (retailer)",
+      "class": "C",
+      "accessed": "2026-10-03",
+      "access_method": "static",
+      "applicability": "Continental ContiProContact 235/40R18 91W (replacement-market listing, not OE-specific)",
+      "notes": "Retailer spec table; Continental's own product page returned 404.",
+      "cache_file": "cache/pages/d5faa74c61813f3e.txt"
     }
   },
   "parameters": {
@@ -513,32 +535,32 @@
       ]
     },
     "tires.make_model": {
-      "description": "OE tire make and model",
+      "description": "Factory tire make and model",
       "unit": "text",
       "impact": "high",
       "candidates": [
         {
-          "value": null,
+          "value": "Continental ContiProContact",
           "unit": "text",
-          "status": "unknown",
-          "class": null,
-          "source_id": null,
-          "locator": "",
-          "evidence": "",
-          "as_printed": "",
-          "applicability": {},
-          "confidence": "none",
+          "status": "confirmed",
+          "class": "C",
+          "source_id": "perf:cd-2022-civic-hatch-st-6mt",
+          "locator": "article body, paragraph 3; spec box 'Tires: Continental ContiProContact'",
+          "evidence": "Our Sonic Gray Civic Sport Touring test car … hunky 235/40R-18 Continental ContiProContact all-season tires",
+          "as_printed": "Continental ContiProContact",
+          "applicability": {
+            "year": "2022",
+            "market": "US",
+            "trim": "Sport Touring",
+            "body": "hatchback",
+            "gearbox": "6MT",
+            "engine": "1.5T",
+            "notes": ""
+          },
+          "confidence": "medium",
           "range": null,
-          "how_to_measure": "Photograph the sidewall of a factory tire (brand, model, DOT, any OE marking) and the door placard.",
-          "notes": "Lead: Goodyear Eagle Sport All-Season 235/40R18 91W is described by retailers as OE on 2023-2024 Honda Civic (trim unstated) - unverified for the hatchback Sport Touring.",
-          "searches": [
-            "Tire Rack OE search (Akamai 'page unavailable', blocked)",
-            "hondapartsnow 2022 tire listing (no 235/40R18 91W hatch tire listed; only Si Eagle F1 Asymmetric 2 95Y)",
-            "query: 2024 Civic Hatchback Sport Touring original equipment tire 235/40R18 91W",
-            "query: Eagle Sport All-Season OE Honda Civic (retailer text says OE on '2023/2024 Honda Civic' without trim: lead only)",
-            "query: forum stock tires Sport Touring hatch",
-            "goodyear.com / goodyear.ca product pages (404)"
-          ]
+          "how_to_measure": "Read the sidewall of the car's original tires (brand, line, OE marking, DOT date).",
+          "notes": "Fitted to Car and Driver's 2022 US Sport Touring 6MT test car. Honda may source more than one OE tire (the tire thread's unverified lead was Goodyear Eagle Sport All-Season); confirm on the target car."
         }
       ]
     },
@@ -570,29 +592,36 @@
       ]
     },
     "tires.overall_diameter": {
-      "description": "Maker-published overall diameter of the OE tire",
+      "description": "Tire overall diameter (unloaded, published)",
       "unit": "m",
       "impact": "high",
       "candidates": [
         {
-          "value": null,
+          "printed": {
+            "value": 25.4,
+            "unit": "in"
+          },
+          "value": 0.64516,
           "unit": "m",
-          "status": "unknown",
-          "class": null,
-          "source_id": null,
-          "locator": "",
-          "evidence": "",
-          "as_printed": "",
-          "applicability": {},
-          "confidence": "none",
+          "status": "confirmed",
+          "class": "C",
+          "source_id": "tires:tirediscounters-contiprocontact-235-40r18",
+          "locator": "spec table 'Overall Diameter'",
+          "evidence": "Overall Diameter … | 25.4 |",
+          "as_printed": "25.4",
+          "applicability": {
+            "year": "n/a",
+            "market": "US",
+            "trim": "tire: ContiProContact 235/40R18 91W",
+            "body": "hatchback",
+            "gearbox": "n/a",
+            "engine": "1.5T",
+            "notes": "tire spec, not vehicle-specific"
+          },
+          "confidence": "low",
           "range": null,
-          "how_to_measure": "Identify the OE tire from the sidewall, then read the maker's spec table (overall diameter, revs/km, weight, tread depth, UTQG); weigh one mounted tire minus the bare wheel.",
-          "notes": "Nominal geometry from the size is derived in scripts/derivations/wheels_tires.py (tires.overall_diameter_nominal, tires.rolling_circumference, tires.loaded_radius).",
-          "searches": [
-            "blocked on tires.make_model (OE make/model not established)",
-            "Tire Rack OE search (Akamai 'page unavailable', blocked)",
-            "hondapartsnow 2022 tire listing (no 235/40R18 91W hatch tire listed; only Si Eagle F1 Asymmetric 2 95Y)"
-          ]
+          "how_to_measure": "Tape the circumference of the inflated, unloaded tire and divide by pi.",
+          "notes": "Retailer figure for the tire model on Car and Driver's test car; OE fitment on the target car unconfirmed."
         }
       ]
     },
@@ -728,6 +757,36 @@
             "Tire Rack OE search (Akamai 'page unavailable', blocked)",
             "hondapartsnow 2022 tire listing (no 235/40R18 91W hatch tire listed; only Si Eagle F1 Asymmetric 2 95Y)"
           ]
+        }
+      ]
+    },
+    "tires.revs_per_mile": {
+      "description": "Tire revolutions per mile (published)",
+      "unit": "count",
+      "impact": "high",
+      "candidates": [
+        {
+          "value": 818,
+          "unit": "count",
+          "status": "confirmed",
+          "class": "C",
+          "source_id": "tires:tirediscounters-contiprocontact-235-40r18",
+          "locator": "spec table 'Revolutions Per Mile'",
+          "evidence": "Revolutions Per Mile | 818",
+          "as_printed": "818",
+          "applicability": {
+            "year": "n/a",
+            "market": "US",
+            "trim": "tire: ContiProContact 235/40R18 91W",
+            "body": "hatchback",
+            "gearbox": "n/a",
+            "engine": "1.5T",
+            "notes": "tire spec, not vehicle-specific"
+          },
+          "confidence": "low",
+          "range": null,
+          "how_to_measure": "Roll the car 10 wheel turns on level ground at rated pressure and measure the distance.",
+          "notes": "Per mile. Used by the coordinator derivation tires.rolling_circumference_from_revs as a cross-check."
         }
       ]
     }

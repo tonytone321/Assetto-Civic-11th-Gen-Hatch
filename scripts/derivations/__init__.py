@@ -27,6 +27,7 @@ TABLES = [
     dict(path="vehicle_data/gear_speed_table.csv",
          inputs={"g1": "transmission.gear_1", ...},
          fn=lambda **kw: [ {col: value, ...}, ... ],   # list of row dicts
+         optional=["arg"],   # inputs that may be unknown: passed as None, column left blank
          description="..."),
 ]
 
