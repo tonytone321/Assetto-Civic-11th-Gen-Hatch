@@ -1139,13 +1139,13 @@
     {
       "item": "Manual availability 2024",
       "canada": "Sport Touring only",
-      "us": "Sport and Sport Touring (US Sport = 2.0 L)",
+      "us": "UNCONFIRMED from an opened US 2024 page (search snippets say Sport 2.0 L MT and Sport Touring 1.5T MT)",
       "source_ids": [
         "id:hci-2024-specs"
       ],
       "locator": "DRIVETRAIN",
       "evidence": "6-speed manual transmission (MT)\t \tAvailable",
-      "notes": "US side from the 2021 debut release ('6-speed manual transmission is available in all grades') and US colour table MT rows; not a 2024 US spec sheet."
+      "notes": "automobiles.honda.com is 403; hondainfocenter colour table only shows 'CVT only' paint/interior restrictions, implying MT exists on US trims without stating which."
     },
     {
       "item": "Paint name spelling",
