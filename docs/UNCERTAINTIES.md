@@ -4,215 +4,235 @@
 
 Every effective value that is estimated or unknown, ordered by how much it affects the finished car (impact assigned per parameter by the researching thread: critical > high > medium > low), then unknown before estimated. `how to measure` says how to retire it; ranked capture work is in `docs/CAPTURE_REQUESTS.md`.
 
-208 entries.
+228 entries.
 
 | # | impact | parameter | status | class | value (range) | how to measure |
 |---|---|---|---|---|---|---|
-| 1 | critical | `mass.cg_height` | estimated | D | 0.523818 m (0.507054–0.540593) | Axle-lift method: weigh the rear axle with the front raised by >= 0.5 m (wheels on scales, suspension locked); h = r + L*dW/(W*tan(theta)). Or use a tilt table. |
-| 2 | critical | `mass.cg_y` | estimated | D | -1.12135 m (-1.13502–-1.10767) | Axle scales: distance behind front axle = L * m_rear / m. |
-| 3 | critical | `tires.rolling_circumference` | estimated | D | 1.96615 m (1.94588–1.99655) | Mark the tread and floor, roll the loaded car 5-10 revolutions in a straight line, divide distance by revolutions (+/-0.3 %); or use the OE tire maker's revs… |
-| 4 | high | `aero.cd` | unknown | — | — | Coast-down test (two directions, calm day, known mass) fitted to F = A + B v + C v^2 gives CdA; or EPA coast-down target coefficients if found. |
-| 5 | high | `aero.frontal_area` | unknown | — | — | Photograph the car head-on with a long lens next to a scale bar and integrate the silhouette by script. |
-| 6 | high | `alignment.front_camber` | unknown | — | — | Get a four-wheel alignment printout (before/after) from a Honda dealer or an alignment shop: it shows Honda's spec window (min/nominal/max) and the car's act… |
-| 7 | high | `alignment.front_caster` | unknown | — | — | Get a four-wheel alignment printout (before/after) from a Honda dealer or an alignment shop: it shows Honda's spec window (min/nominal/max) and the car's act… |
-| 8 | high | `alignment.front_toe_total` | unknown | — | — | Get a four-wheel alignment printout (before/after) from a Honda dealer or an alignment shop: it shows Honda's spec window (min/nominal/max) and the car's act… |
-| 9 | high | `alignment.rear_camber` | unknown | — | — | Get a four-wheel alignment printout (before/after) from a Honda dealer or an alignment shop: it shows Honda's spec window (min/nominal/max) and the car's act… |
-| 10 | high | `alignment.rear_toe_total` | unknown | — | — | Get a four-wheel alignment printout (before/after) from a Honda dealer or an alignment shop: it shows Honda's spec window (min/nominal/max) and the car's act… |
-| 11 | high | `brakes.bias_front_hydraulic` | unknown | — | — | Measure piston diameters and pad heights; or log front/rear line pressure. |
-| 12 | high | `brakes.front_piston_diameter` | unknown | — | — | Measure the front caliper piston OD with calipers (±0.1 mm) during a pad change. |
-| 13 | high | `brakes.rear_piston_diameter` | unknown | — | — | Measure the rear caliper piston OD with calipers (±0.1 mm) during a pad change. |
-| 14 | high | `drivetrain.flywheel_inertia` | unknown | — | — | Remove the DMF and clutch cover; bifilar/trifilar pendulum or measure mass and outer/inner radii of each disc; or estimate from free-revving rpm decay logged… |
-| 15 | high | `drivetrain.obs_rpm_at_100kmh_6th` | unknown | — | — | Cruise at GPS-verified speed in 6th on level road, photograph the tach or log OBD rpm. |
-| 16 | high | `drivetrain.obs_rpm_at_70mph_6th` | unknown | — | — | Cruise at GPS-verified speed in 6th on level road, photograph the tach or log OBD rpm. |
-| 17 | high | `drivetrain.rev_hang_duration` | unknown | — | — | OBD-II log (>=10 Hz rpm, throttle, clutch switch if available) of 3000->idle and 6000->idle drops with clutch in after a full-throttle pull; and rpm trace du… |
-| 18 | high | `engine.fuel_cut_behavior` | unknown | — | — | OBD-II log of rpm, throttle, short-term fuel trim / injector pulse (KTuner/Hondata datalog ideal) during lift-offs at 2000-6000 rpm in gear and during clutch… |
-| 19 | high | `engine.limiter_rpm` | unknown | — | — | In neutral or 2nd gear, record OBD-II rpm (10 Hz+) or the tach on video while holding WOT into the limiter; note the cut rpm, the re-enable rpm and the cut p… |
-| 20 | high | `mass.corner_weights` | unknown | — | — | Four-pad corner scales, full tank, no driver, tyres at placard pressure, level floor; record each corner ±1 kg. |
-| 21 | high | `mass.unsprung_mass_front` | unknown | — | — | Weigh wheel+tyre, rotor, caliper, knuckle/hub during a brake or strut job; add half of strut, driveshaft and control arm masses. |
-| 22 | high | `mass.unsprung_mass_rear` | unknown | — | — | Weigh wheel+tyre, rotor, caliper, hub/knuckle; add half of link, damper and spring masses. |
-| 23 | high | `perf.accel_0_100kmh` | unknown | — | — | GPS logger (VBOX/Dragy-class, >=10 Hz) on level dry ground, two directions, record temperature/pressure; report with and without 1-ft rollout. |
-| 24 | high | `suspension.damper_curve_front` | unknown | — | — | Dyno a stock damper (shock dyno, 0.025-1.0 m/s), or borrow published dyno sheets for Honda part numbers of the FL hatch struts/dampers. |
-| 25 | high | `suspension.damper_curve_rear` | unknown | — | — | Dyno a stock damper (shock dyno, 0.025-1.0 m/s), or borrow published dyno sheets for Honda part numbers of the FL hatch struts/dampers. |
-| 26 | high | `suspension.roll_center_height_front` | unknown | — | — | Requires hard points (front: lower-arm and strut geometry; rear: link geometry); measure pickup points and compute. |
-| 27 | high | `suspension.roll_center_height_rear` | unknown | — | — | Requires hard points (front: lower-arm and strut geometry; rear: link geometry); measure pickup points and compute. |
-| 28 | high | `suspension.travel_bump_front` | unknown | — | — | With the spring removed (or using a lift and a dial gauge), move the wheel from ride height to bump-stop contact and to full droop; record wheel-centre trave… |
-| 29 | high | `suspension.travel_bump_rear` | unknown | — | — | With the spring removed (or using a lift and a dial gauge), move the wheel from ride height to bump-stop contact and to full droop; record wheel-centre trave… |
-| 30 | high | `tires.mass` | unknown | — | — | Identify the OE tire from the sidewall, then read the maker's spec table (overall diameter, revs/km, weight, tread depth, UTQG); weigh one mounted tire minus… |
-| 31 | high | `tires.revs_per_km` | unknown | — | — | Identify the OE tire from the sidewall, then read the maker's spec table (overall diameter, revs/km, weight, tread depth, UTQG); weigh one mounted tire minus… |
-| 32 | high | `turbo.boost_taper` | unknown | — | — | Same WOT log as boost_onset_rpm to the limiter; torque falls from 177 lb-ft at 4500 to ~158 lb-ft at 6000 (computed from rating), so boost is expected to tap… |
-| 33 | high | `aero.frontal_area_est` | estimated | E | 2.11636 m2 (2.03986–2.19285) | Head-on long-lens photo with a scale; integrate the silhouette (incl. mirrors and tires) by script. |
-| 34 | high | `engine.driveline_loss_assumed` | estimated | E | 0.13 (0.1–0.18) | Back-to-back engine dyno and chassis dyno of the same engine (not practical); or coastdown-corrected chassis dyno with known tire losses. |
-| 35 | high | `engine.inertia` | estimated | E | 0.05 kg*m2 (0.035–0.08) | Free-rev test: log rpm at 50-100 Hz with clutch disengaged after a blip; dw/dt with known friction torque gives engine+flywheel inertia; subtract the flywhee… |
-| 36 | high | `identity.sonic_grey_offered_2024_ca_st` | estimated | E | true (true–true) | Check the real car's colour label (driver door jamb / VIN label) for NH877P, or a Honda Canada 2024 brochure / Build & Price archive. |
-| 37 | high | `mass.inertia_yaw` | estimated | E | 2991.32 kg*m2 (2514.14–3513.59) | Yaw inertia rig (bifilar/trifilar pendulum or NHTSA IPMD-type facility); not practical at home. |
-| 38 | high | `suspension.damping_wheel_front_inferred` | estimated | E | 1791.84 N*s/m (995.657–3087.15) | Shock-dyno a stock front strut (0.025-1.0 m/s, bump and rebound) and divide by MR^2. |
-| 39 | high | `suspension.damping_wheel_rear_inferred` | estimated | E | 1164.02 N*s/m (586.846–2970.58) | Shock-dyno a stock rear damper and divide by the damper MR^2. |
-| 40 | high | `suspension.motion_ratio_front` | estimated | E | 0.97 (0.9–1) | Jack one front wheel through +/-30 mm about ride height (spring removed or with a dial gauge on the strut) and record strut compression vs wheel-centre travel. |
-| 41 | high | `suspension.motion_ratio_rear` | estimated | E | 0.75 (0.62–0.85) | Measure spring-seat travel vs wheel-centre travel with the wheel jacked through +/-30 mm (or measure spring-seat and ball-joint distances from the lower arm … |
-| 42 | high | `suspension.spring_rate_front` | estimated | E | 26500 N/m (22000–32000) | Remove a front spring and load-test it (or measure wire diameter d, mean coil diameter D and active coils n: k = G d^4 / (8 D^3 n), G = 79.3 GPa). Precision … |
-| 43 | high | `suspension.spring_rate_rear` | estimated | E | 27500 N/m (24000–60000) | Load-test a rear spring off the car, or measure d, D, n as for the front. Precision +/-3 %. |
-| 44 | high | `suspension.unsprung_mass_corner_front` | estimated | E | 50 kg (40–60) | Weigh wheel+tyre, rotor, caliper, knuckle/hub separately on a scale; add half of strut, lower arm, driveshaft and anti-roll link masses. |
-| 45 | high | `suspension.unsprung_mass_corner_rear` | estimated | E | 40 kg (32–50) | Weigh wheel+tyre, rotor, caliper, trailing arm/knuckle and hub; add half of the four links, spring and damper. |
-| 46 | high | `tires.loaded_radius` | estimated | E | 0.3046 m (0.2976–0.3106) | With the car at curb weight and placard pressure, measure hub-centre height above the floor at each corner (+/-1 mm). |
-| 47 | high | `turbo.boost_onset_rpm` | estimated | E | 1700 rpm (1500–2200) | WOT pull in 3rd/4th from 1200 rpm with OBD-II MAP (or Hondata/KTuner log) at 10 Hz+: record MAP vs rpm. |
-| 48 | high | `dimensions.overhang_front` | estimated | D | 0.936341 m (0.897022–0.975746) | Plumb bob from the front bumper's foremost point and from the front hub centre; measure the floor distance (+-5 mm). |
-| 49 | high | `dimensions.overhang_rear` | estimated | D | 0.857659 m (0.818427–0.896976) | Plumb bob from the rear bumper's rearmost point and from the rear hub centre; measure the floor distance (+-5 mm). |
-| 50 | high | `drivetrain.pred_rpm_at_100kmh_6th` | estimated | D | 2384.19 rpm (2348.96–2420.5) | Hold a GPS-verified 100 km/h in 6th on level road and log engine rpm via OBD-II (PID 0x0C). |
-| 51 | high | `drivetrain.pred_rpm_at_70mph_6th` | estimated | D | 2685.89 rpm (2646.19–2726.79) | Hold a GPS-verified 70 mph in 6th on level road and log engine rpm via OBD-II (PID 0x0C). |
-| 52 | high | `hardpoints.front.wheel_center` | estimated | D | [-0.768, 0, 0.3076] m | Wheel centre: measure track at hub faces and hub height above ground at curb load. |
-| 53 | high | `hardpoints.rear.wheel_center` | estimated | D | [-0.7825, -2.735, 0.3076] m | Wheel centre: measure track at hub faces and hub height above ground at curb load. |
-| 54 | high | `mass.front_axle_mass` | estimated | D | 815.38 kg (808.47–822.29) | Axle or corner scales, full tank, no driver. |
-| 55 | high | `mass.rear_axle_mass` | estimated | D | 566.62 kg (559.71–573.53) | Axle or corner scales, full tank, no driver. |
-| 56 | high | `proportions.arch_gap_front` | estimated | D | 0.389919 m (0.362825–0.417014) | Tape from hub centre to the arch lip directly above it, car at curb weight (+-2 mm). Primary ride-height reference. |
-| 57 | high | `proportions.arch_gap_rear` | estimated | D | 0.387795 m (0.360773–0.414818) | Tape from hub centre to the arch lip directly above it, car at curb weight (+-2 mm). Primary ride-height reference. |
-| 58 | high | `proportions.arch_top_z_front` | estimated | D | 0.703414 m (0.664054–0.742774) | Tape from floor to the arch lip above the hub centre (+-2 mm). |
-| 59 | high | `proportions.arch_top_z_rear` | estimated | D | 0.703414 m (0.664054–0.742774) | Tape from floor to the arch lip above the hub centre (+-2 mm). |
-| 60 | high | `proportions.overhang_front` | estimated | D | 0.851108 m (0.776858–0.925359) | Plumb bob from the front bumper's foremost point and from the front hub centre; measure the floor distance (+-5 mm). |
-| 61 | high | `proportions.overhang_front_fraction` | estimated | D | 0.521929 (0.50057–0.543288) | As for the overhangs. |
-| 62 | high | `proportions.overhang_rear` | estimated | D | 0.779588 m (0.7114–0.847776) | Plumb bob from the rear bumper's rearmost point and from the rear hub centre; measure the floor distance (+-5 mm). |
-| 63 | high | `steering.max_angle_inner` | estimated | D | 0.669 rad (0.662644–0.675065) | Turn plates at full lock; read the inner wheel angle directly. |
-| 64 | high | `steering.max_angle_outer` | estimated | D | 0.500935 rad (0.49712–0.504568) | Turn plates at full lock left and right (alignment rig turning-angle readout); +/-0.5 deg. |
-| 65 | high | `suspension.arb_front_roll_stiffness` | estimated | D | 97356.5 N*m/rad (25445.1–232871) | Measure bar length, lever arms and link motion ratio; or measure roll angle under a known lateral load with and without the bar links connected. |
-| 66 | high | `suspension.arb_rear_roll_stiffness` | estimated | D | 16341 N*m/rad (2754.07–70051.7) | As for the front bar. |
-| 67 | high | `suspension.ride_frequency_front` | estimated | D | 1.32881 Hz (1.0415–1.52686) | Bounce test: accelerometer on the body over each axle, push-and-release or drive over a single bump; or compute from measured spring rate, motion ratio and c… |
-| 68 | high | `suspension.ride_frequency_rear` | estimated | D | 1.26902 Hz (0.906443–2.16944) | Bounce test: accelerometer on the body over each axle, push-and-release or drive over a single bump; or compute from measured spring rate, motion ratio and c… |
-| 69 | high | `suspension.wheel_rate_front` | estimated | D | 24933.8 N/m (17820–32000) | Measure spring rate and motion ratio (see those records), or load the corner with known weights and measure wheel-centre deflection. |
-| 70 | high | `suspension.wheel_rate_rear` | estimated | D | 15468.8 N/m (9225.6–43350) | As for the front. |
-| 71 | high | `wheels.mass` | estimated | C | 7.39356 kg (7.39356–10.8862) | Weigh one bare wheel (tire, valve, weights removed) on a scale (±0.1 kg). |
-| 72 | medium | `aero.lift_front` | unknown | — | — | Not measurable without a wind tunnel; leave unknown. |
-| 73 | medium | `aero.lift_rear` | unknown | — | — | Not measurable without a wind tunnel; leave unknown. |
-| 74 | medium | `alignment.kingpin_inclination` | unknown | — | — | Get a four-wheel alignment printout (before/after) from a Honda dealer or an alignment shop: the printout shows Honda's spec window (min/nominal/max) for 202… |
-| 75 | medium | `alignment.scrub_radius` | unknown | — | — | Get a four-wheel alignment printout (before/after) from a Honda dealer or an alignment shop: the printout shows Honda's spec window (min/nominal/max) for 202… |
-| 76 | medium | `brakes.booster_type` | unknown | — | — | Look at the firewall behind the master cylinder: vacuum booster with hose from intake/pump vs electric booster; photograph. |
-| 77 | medium | `brakes.pad_mu` | unknown | — | — | Not directly measurable at home; use OE pad edge code (e.g. FF) from a pad photo. |
-| 78 | medium | `drivetrain.clutch_disc_outer_diameter` | unknown | — | — | Measure the removed OEM disc (22200-series part) with calipers during a clutch job, or read an OEM/aftermarket kit spec sheet that names the OEM size. |
-| 79 | medium | `drivetrain.clutch_torque_capacity` | unknown | — | — | Not measurable without a test rig; derive from pressure-plate clamp load (published by aftermarket makers for the OEM unit), facing diameters and friction co… |
-| 80 | medium | `drivetrain.driveline_inertia` | unknown | — | — | Coast-down / free-roll test with the car on a lift (wheel spin-down in neutral vs in gear), or CAD of the gearset; small relative to wheel+tyre inertia. |
-| 81 | medium | `drivetrain.rev_match` | unknown | — | — | Check owner's manual for 'Rev Match Control' or test: downshift with clutch in and watch for an automatic blip. |
-| 82 | medium | `engine.limiter_behavior` | unknown | — | — | As engine.limiter_rpm; record audio + OBD at the limiter in neutral and in 2nd. |
-| 83 | medium | `engine.rev_hang_engine_side` | unknown | — | — | Datalog rpm, pedal and commanded throttle during clutch-in upshifts (drivetrain thread owns rev-hang numbers). |
-| 84 | medium | `identity.transmission_code` | unknown | — | — | Read the transmission ID number stamped on the gearbox case (Honda prints the type code at the start of the transmission number), or ask a Honda parts counte… |
-| 85 | medium | `mass.gvwr` | unknown | — | — | Photograph the certification label on the driver's door B-pillar (GVWR, GAWR FRT, GAWR RR in kg and lb). |
-| 86 | medium | `perf.braking_100_0kmh` | unknown | — | — | GPS logger, tape switch on brake pedal, several stops, correct to exact 100.0 km/h. |
-| 87 | medium | `perf.braking_60_0mph` | unknown | — | — | As above from 60 mph. (MotorTrend's 117 ft is a CVT car - excluded.) |
-| 88 | medium | `steering.ratio_center` | unknown | — | — | With front wheels on turn plates, read road-wheel angle at handwheel +/-30 deg and +/-90 deg (or log steering-angle sensor via OBD and wheel angle); ratio = … |
-| 89 | medium | `steering.ratio_lock` | unknown | — | — | Turn plates: road-wheel angle per handwheel degree over the last 90 deg before lock. |
-| 90 | medium | `steering.wheel_diameter` | unknown | — | — | Tape across the rim at 3 and 9 o'clock (outside edges) and rim grip thickness with calipers; +/-2 mm. |
-| 91 | medium | `suspension.bump_stop_length_front` | unknown | — | — | Remove the dust boot and measure the bump stop and the shaft gap at ride height. |
-| 92 | medium | `suspension.bump_stop_length_rear` | unknown | — | — | Remove the dust boot and measure the bump stop and the shaft gap at ride height. |
-| 93 | medium | `suspension.travel_rebound_front` | unknown | — | — | With the spring removed (or using a lift and a dial gauge), move the wheel from ride height to bump-stop contact and to full droop; record wheel-centre trave… |
-| 94 | medium | `suspension.travel_rebound_rear` | unknown | — | — | With the spring removed (or using a lift and a dial gauge), move the wheel from ride height to bump-stop contact and to full droop; record wheel-centre trave… |
-| 95 | medium | `tires.test_data` | unknown | — | — | Identify the OE tire from the sidewall, then read the maker's spec table (overall diameter, revs/km, weight, tread depth, UTQG); weigh one mounted tire minus… |
-| 96 | medium | `turbo.torque_management` | unknown | — | — | WOT logs in 1st, 2nd and 3rd from the same rpm: compare MAP and calculated load; a lower 1st/2nd plateau indicates per-gear torque limits. |
-| 97 | medium | `brakes.front_effective_radius` | estimated | E | 0.11597 m (0.11097–0.12097) | Measure pad radial height and rotor OD; r_eff ~ OD/2 - pad height/2. |
-| 98 | medium | `brakes.rear_effective_radius` | estimated | E | 0.10954 m (0.10454–0.11454) | Measure pad radial height and rotor OD. |
-| 99 | medium | `drivetrain.shift_time` | estimated | E | 0.3 s (0.2–0.5) | Datalog clutch switch / rpm during brisk shifts; or time from video with on-screen tach. |
-| 100 | medium | `engine.idle_rpm` | estimated | E | 750 rpm (650–850) | Warm engine (fan cycled), A/C off, neutral: read rpm via OBD-II; repeat with A/C on. |
-| 101 | medium | `hardpoints.front.lca_front_inner` | estimated | E | [-0.353, 0.02, 0.205] m | Car on a lift at curb ride height (or ride height recorded): plumb-bob/laser to the floor grid for X,Y and height gauge for Z at the bushing/ball-joint centr… |
-| 102 | medium | `hardpoints.front.lca_rear_inner` | estimated | E | [-0.368, -0.33, 0.22] m | Car on a lift at curb ride height (or ride height recorded): plumb-bob/laser to the floor grid for X,Y and height gauge for Z at the bushing/ball-joint centr… |
-| 103 | medium | `hardpoints.front.lower_ball_joint` | estimated | E | [-0.663, 0, 0.145] m | Car on a lift at curb ride height (or ride height recorded): plumb-bob/laser to the floor grid for X,Y and height gauge for Z at the bushing/ball-joint centr… |
-| 104 | medium | `hardpoints.front.strut_top` | estimated | E | [-0.4748, -0.0713, 0.96] m | Car on a lift at curb ride height (or ride height recorded): plumb-bob/laser to the floor grid for X,Y and height gauge for Z at the bushing/ball-joint centr… |
-| 105 | medium | `hardpoints.front.tie_rod_inner` | estimated | E | [-0.36, -0.15, 0.3326] m | Car on a lift at curb ride height (or ride height recorded): plumb-bob/laser to the floor grid for X,Y and height gauge for Z at the bushing/ball-joint centr… |
-| 106 | medium | `hardpoints.front.tie_rod_outer` | estimated | E | [-0.638, -0.135, 0.3076] m | Car on a lift at curb ride height (or ride height recorded): plumb-bob/laser to the floor grid for X,Y and height gauge for Z at the bushing/ball-joint centr… |
-| 107 | medium | `hardpoints.rear.damper_lower` | estimated | E | [-0.6725, -2.805, 0.2126] m | Car on a lift at curb ride height (or ride height recorded): plumb-bob/laser to the floor grid for X,Y and height gauge for Z at the bushing/ball-joint centr… |
-| 108 | medium | `hardpoints.rear.damper_upper` | estimated | E | [-0.5425, -2.835, 0.8076] m | Car on a lift at curb ride height (or ride height recorded): plumb-bob/laser to the floor grid for X,Y and height gauge for Z at the bushing/ball-joint centr… |
-| 109 | medium | `hardpoints.rear.lower_arm_a_inner` | estimated | E | [-0.2575, -2.615, 0.2476] m | Car on a lift at curb ride height (or ride height recorded): plumb-bob/laser to the floor grid for X,Y and height gauge for Z at the bushing/ball-joint centr… |
-| 110 | medium | `hardpoints.rear.lower_arm_a_outer` | estimated | E | [-0.6775, -2.635, 0.2276] m | Car on a lift at curb ride height (or ride height recorded): plumb-bob/laser to the floor grid for X,Y and height gauge for Z at the bushing/ball-joint centr… |
-| 111 | medium | `hardpoints.rear.lower_arm_b_inner` | estimated | E | [-0.2325, -2.805, 0.2276] m | Car on a lift at curb ride height (or ride height recorded): plumb-bob/laser to the floor grid for X,Y and height gauge for Z at the bushing/ball-joint centr… |
-| 112 | medium | `hardpoints.rear.lower_arm_b_outer` | estimated | E | [-0.6975, -2.785, 0.1776] m | Car on a lift at curb ride height (or ride height recorded): plumb-bob/laser to the floor grid for X,Y and height gauge for Z at the bushing/ball-joint centr… |
-| 113 | medium | `hardpoints.rear.spring_lower_seat` | estimated | E | [-0.6367, -2.788, 0.1841] m | Car on a lift at curb ride height (or ride height recorded): plumb-bob/laser to the floor grid for X,Y and height gauge for Z at the bushing/ball-joint centr… |
-| 114 | medium | `hardpoints.rear.spring_upper_seat` | estimated | E | [-0.6367, -2.788, 0.4341] m | Car on a lift at curb ride height (or ride height recorded): plumb-bob/laser to the floor grid for X,Y and height gauge for Z at the bushing/ball-joint centr… |
-| 115 | medium | `hardpoints.rear.trailing_arm_front` | estimated | E | [-0.5725, -2.235, 0.305] m | Car on a lift at curb ride height (or ride height recorded): plumb-bob/laser to the floor grid for X,Y and height gauge for Z at the bushing/ball-joint centr… |
-| 116 | medium | `hardpoints.rear.upper_arm_inner` | estimated | E | [-0.3675, -2.735, 0.4776] m | Car on a lift at curb ride height (or ride height recorded): plumb-bob/laser to the floor grid for X,Y and height gauge for Z at the bushing/ball-joint centr… |
-| 117 | medium | `hardpoints.rear.upper_arm_outer` | estimated | E | [-0.6575, -2.735, 0.4876] m | Car on a lift at curb ride height (or ride height recorded): plumb-bob/laser to the floor grid for X,Y and height gauge for Z at the bushing/ball-joint centr… |
-| 118 | medium | `identity.model_code` | estimated | E | FL1 | Read the VIN and the model code on the door-jamb / firewall ID plate of the real car; Honda parts catalogs for the VIN list the frame code. |
-| 119 | medium | `identity.options_ca_2024_st` | estimated | E | Transmission (6MT or CVT) and colour only; no packages listed | Check the real car's window sticker / Honda Canada order guide. |
-| 120 | medium | `mass.fuel_level_assumed` | estimated | E | 1 (0.9–1) | Weigh the car on four corner scales with a full tank (filled to first click) and again near empty; the difference over 46 L fuel mass confirms the convention. |
-| 121 | medium | `mass.inertia_pitch` | estimated | E | 2777.97 kg*m2 (2313.5–3292.7) | Pitch inertia pendulum test (specialist facility). |
-| 122 | medium | `mass.inertia_roll` | estimated | E | 669.054 kg*m2 (544.9–810.424) | Roll inertia pendulum test (specialist facility). |
-| 123 | medium | `steering.ackermann_pct_estimate` | estimated | E | 1.25353 (0.6–1.31887) | Turn plates: inner and outer angles at full lock and at 20 deg outer (toe-out-on-turns spec on an alignment printout). |
-| 124 | medium | `suspension.arb_front_active_length` | estimated | E | 0.85 m (0.7–1) | Measure on the car (wheels on ramps or lift): bushing-to-bushing distance, arm length from bar axis to link eye, and link travel vs wheel travel. |
-| 125 | medium | `suspension.arb_front_lever_arm` | estimated | E | 0.2 m (0.15–0.27) | Measure on the car (wheels on ramps or lift): bushing-to-bushing distance, arm length from bar axis to link eye, and link travel vs wheel travel. |
-| 126 | medium | `suspension.arb_front_motion_ratio` | estimated | E | 0.95 (0.85–1) | Measure on the car (wheels on ramps or lift): bushing-to-bushing distance, arm length from bar axis to link eye, and link travel vs wheel travel. |
-| 127 | medium | `suspension.arb_rear_active_length` | estimated | E | 0.95 m (0.8–1.1) | Measure on the car (wheels on ramps or lift): bushing-to-bushing distance, arm length from bar axis to link eye, and link travel vs wheel travel. |
-| 128 | medium | `suspension.arb_rear_lever_arm` | estimated | E | 0.18 m (0.12–0.25) | Measure on the car (wheels on ramps or lift): bushing-to-bushing distance, arm length from bar axis to link eye, and link travel vs wheel travel. |
-| 129 | medium | `suspension.arb_rear_motion_ratio` | estimated | E | 0.75 (0.55–0.95) | Measure on the car (wheels on ramps or lift): bushing-to-bushing distance, arm length from bar axis to link eye, and link travel vs wheel travel. |
-| 130 | medium | `suspension.motion_ratio_damper_front` | estimated | E | 0.97 (0.9–1) | Same test as the front spring motion ratio (damper is concentric with the spring). |
-| 131 | medium | `suspension.motion_ratio_damper_rear` | estimated | E | 0.85 (0.7–1) | Measure damper length change vs wheel-centre travel (+/-30 mm) with the wheel jacked. |
-| 132 | medium | `dimensions.front_bumper_y` | estimated | D | 0.936341 m (0.897022–0.975746) | As dimensions.overhang_front. |
-| 133 | medium | `dimensions.rear_bumper_y` | estimated | D | -3.59266 m (-3.63198–-3.55343) | As dimensions.overhang_rear. |
-| 134 | medium | `drivetrain.rpm_after_upshift_1_2_from_redline` | estimated | D | 3768.32 rpm (3655.27–3768.32) | Datalog rpm and wheel speed through full-throttle upshifts. |
-| 135 | medium | `drivetrain.rpm_after_upshift_2_3_from_redline` | estimated | D | 4318.56 rpm (4189–4318.56) | Datalog rpm and wheel speed through full-throttle upshifts. |
-| 136 | medium | `drivetrain.rpm_after_upshift_3_4_from_redline` | estimated | D | 4965.76 rpm (4816.79–4965.76) | Datalog rpm and wheel speed through full-throttle upshifts. |
-| 137 | medium | `drivetrain.rpm_after_upshift_4_5_from_redline` | estimated | D | 5349.61 rpm (5189.12–5349.61) | Datalog rpm and wheel speed through full-throttle upshifts. |
-| 138 | medium | `drivetrain.rpm_after_upshift_5_6_from_redline` | estimated | D | 5454.94 rpm (5291.29–5454.94) | Datalog rpm and wheel speed through full-throttle upshifts. |
-| 139 | medium | `mass.fuel_mass_full` | estimated | D | 34.73 kg (32.66–35.42) | Weigh the car with a full and a near-empty tank. |
-| 140 | medium | `proportions.hatch_angle` | estimated | D | 0.342297 rad (0.255031–0.429563) | Inclinometer on the hatch glass at the centreline. |
-| 141 | medium | `proportions.hood_z_at_front_axle` | estimated | D | 0.951131 m (0.902968–0.999293) | Straightedge across the hood above the front hub; tape to floor (+-5 mm). |
-| 142 | medium | `proportions.roof_peak_y` | estimated | D | -1.66457 m (-2.16122–-1.16792) | Level laid on the roof: find the highest point, plumb down, measure from front hub centre. |
-| 143 | medium | `proportions.roof_peak_z` | estimated | D | 1.42483 m (1.35421–1.49546) | Straightedge across the roof at its highest point; tape to floor (+-3 mm). |
-| 144 | medium | `proportions.sill_z_mid_wheelbase` | estimated | D | 0.19929 m (0.183463–0.215118) | Tape from floor to the sill lower edge at mid-wheelbase, both sides (+-3 mm). |
-| 145 | medium | `proportions.wheel_center_z_front` | estimated | D | 0.313495 m (0.293831–0.333159) | Tape from floor to hub centre (+-2 mm). |
-| 146 | medium | `proportions.wheel_center_z_rear` | estimated | D | 0.315619 m (0.295873–0.335365) | Tape from floor to hub centre (+-2 mm). |
-| 147 | medium | `proportions.windshield_base_y` | estimated | D | -0.341894 m (-0.388111–-0.295677) | Measure from front hub centre to the windshield base at the centreline (tape along the hood + plumb), +-10 mm. |
-| 148 | medium | `proportions.windshield_base_z` | estimated | D | 0.985898 m (0.925779–1.04602) | Tape from floor to the windshield base at the centreline (+-5 mm). |
-| 149 | medium | `steering.mean_lock_angle_from_ratio` | estimated | D | 0.606272 rad (0.604629–0.607917) | Turn plates at full lock (average of inner and outer). |
-| 150 | medium | `suspension.arb_front_torsional_stiffness` | estimated | D | 3657.84 N*m/rad (3109.17–4441.67) | Measure bushing-to-bushing length on the car. |
-| 151 | medium | `suspension.arb_rear_torsional_stiffness` | estimated | D | 768.602 N*m/rad (663.793–912.715) | Measure bushing-to-bushing length on the car. |
-| 152 | medium | `suspension.spring_roll_stiffness_front` | estimated | D | 29413.2 N*m/rad (21021.3–37748.7) | From measured spring rate and motion ratio. |
-| 153 | medium | `suspension.spring_roll_stiffness_rear` | estimated | D | 18943.2 N*m/rad (11297.8–53087) | From measured spring rate and motion ratio. |
-| 154 | medium | `tires.rolling_circumference_from_revs` | estimated | D | 1.96741 m (1.96621–1.96862) | Roll the car 10 wheel turns at rated pressure and normal load; measure distance. |
-| 155 | medium | `perf.top_speed` | estimated | C | 58.1152 m/s (58.1152–58.1152) | Not measured by C/D (their estimate). Governed or drag-limited is not stated for this car; C/D's 2022 Civic Touring sedan CVT was 'gov ltd' at 126 mph (diffe… |
-| 156 | low | `aero.active_grille_shutter` | unknown | — | — | Look behind the lower grille for shutter vanes (photo with flashlight). |
-| 157 | low | `aero.balance` | unknown | — | — | Not measurable without a wind tunnel. |
-| 158 | low | `aero.cooling_openings` | unknown | — | — | Front photos scaled by wheelbase; measure open grille areas by script. |
-| 159 | low | `alignment.thrust_angle` | unknown | — | — | Get a four-wheel alignment printout (before/after) from a Honda dealer or an alignment shop: it shows Honda's spec window (min/nominal/max) and the car's act… |
-| 160 | low | `dimensions.approach_angle` | unknown | — | — | Car at curb weight on level floor: measure bumper lower-edge height and its horizontal distance ahead of/behind the tyre contact patch; angle = atan(h / x). |
-| 161 | low | `dimensions.departure_angle` | unknown | — | — | Car at curb weight on level floor: measure bumper lower-edge height and its horizontal distance ahead of/behind the tyre contact patch; angle = atan(h / x). |
-| 162 | low | `drivetrain.clutch_disc_inner_diameter` | unknown | — | — | Measure the removed OEM disc facing inner diameter with calipers. |
-| 163 | low | `drivetrain.shift_indicator` | unknown | — | — | Owner's manual cluster section, or photo of the cluster while driving the MT. |
-| 164 | low | `hardpoints.front.arb_bushing` | unknown | — | — | Measure on a lift as for the other hard points (+/-5 mm adequate). |
-| 165 | low | `hardpoints.front.arb_link_lower` | unknown | — | — | Measure on a lift as for the other hard points (+/-5 mm adequate). |
-| 166 | low | `hardpoints.front.arb_link_upper` | unknown | — | — | Measure on a lift as for the other hard points (+/-5 mm adequate). |
-| 167 | low | `hardpoints.front.subframe_mounts` | unknown | — | — | Measure on a lift as for the other hard points (+/-5 mm adequate). |
-| 168 | low | `hardpoints.rear.arb_bushing` | unknown | — | — | Measure on a lift as for the other hard points (+/-5 mm adequate). |
-| 169 | low | `hardpoints.rear.arb_link_upper` | unknown | — | — | Measure on a lift as for the other hard points (+/-5 mm adequate). |
-| 170 | low | `hardpoints.rear.subframe_mounts` | unknown | — | — | Measure on a lift as for the other hard points (+/-5 mm adequate). |
-| 171 | low | `hardpoints.steering.rack_mounts` | unknown | — | — | Measure on a lift as for the other hard points (+/-5 mm adequate). |
-| 172 | low | `mass.gawr_front` | unknown | — | — | Read from the door-jamb certification label (GAWR FRT / GAWR RR). |
-| 173 | low | `mass.gawr_rear` | unknown | — | — | Read from the door-jamb certification label (GAWR FRT / GAWR RR). |
-| 174 | low | `perf.accel_0_30mph` | unknown | — | — | GPS logger; C/D did not print 0-30 in this test. |
-| 175 | low | `perf.honda_claim_0_100kmh` | unknown | — | — | No Honda Canada/US claim found; Honda NA typically publishes none. |
-| 176 | low | `proportions.front_view_track_ratio` | unknown | — | — | Long-lens (>=200 mm equiv.) straight-on front photo from >=15 m with a tape on the ground, or tape the mirror glass centre position from the front hub centre… |
-| 177 | low | `proportions.mirror_width_ratio` | unknown | — | — | Long-lens (>=200 mm equiv.) straight-on front photo from >=15 m with a tape on the ground, or tape the mirror glass centre position from the front hub centre… |
-| 178 | low | `proportions.mirror_y` | unknown | — | — | Long-lens (>=200 mm equiv.) straight-on front photo from >=15 m with a tape on the ground, or tape the mirror glass centre position from the front hub centre… |
-| 179 | low | `proportions.mirror_z` | unknown | — | — | Long-lens (>=200 mm equiv.) straight-on front photo from >=15 m with a tape on the ground, or tape the mirror glass centre position from the front hub centre… |
-| 180 | low | `steering.assist_layout` | unknown | — | — | Underside/engine-bay photo of the steering rack (a second pinion housing with motor = dual-pinion). |
-| 181 | low | `suspension.spring_free_length_front` | unknown | — | — | Remove the spring and measure with calipers / tape; or read off the Honda parts label. |
-| 182 | low | `suspension.spring_free_length_rear` | unknown | — | — | Remove the spring and measure with calipers / tape; or read off the Honda parts label. |
-| 183 | low | `suspension.spring_wire_diameter_front` | unknown | — | — | Remove the spring and measure with calipers / tape; or read off the Honda parts label. |
-| 184 | low | `suspension.spring_wire_diameter_rear` | unknown | — | — | Remove the spring and measure with calipers / tape; or read off the Honda parts label. |
-| 185 | low | `tires.oem_variant` | unknown | — | — | Identify the OE tire from the sidewall, then read the maker's spec table (overall diameter, revs/km, weight, tread depth, UTQG); weigh one mounted tire minus… |
-| 186 | low | `tires.tread_depth_new` | unknown | — | — | Identify the OE tire from the sidewall, then read the maker's spec table (overall diameter, revs/km, weight, tread depth, UTQG); weigh one mounted tire minus… |
-| 187 | low | `tires.utqg` | unknown | — | — | Identify the OE tire from the sidewall, then read the maker's spec table (overall diameter, revs/km, weight, tread depth, UTQG); weigh one mounted tire minus… |
-| 188 | low | `transmission.code` | unknown | — | — | Read the transmission identification label/stamp on the gearbox case (near the clutch housing), or a Honda service manual / EPC 'transmission assembly' entry. |
-| 189 | low | `wheels.center_bore` | unknown | — | — | Measure the hub bore with calipers (±0.1 mm), or read the hub pilot diameter. |
-| 190 | low | `wheels.lug_torque` | unknown | — | — | Owner's manual / service information; torque wrench spec in the spare-tire section. |
-| 191 | low | `drivetrain.idle_stop_mt` | estimated | E | true (0–1) | Stop the real car in neutral with the clutch released, engine warm: note whether the engine shuts off and the idle-stop lamp lights; or read the owner's manu… |
-| 192 | low | `mass.cg_x` | estimated | E | 0 m (-0.015–0.015) | Corner scales: x_cg = (T/2)*((FR+RR)-(FL+RL))/m using front/rear tracks per axle. |
-| 193 | low | `dimensions.front_tyre_outer_margin_per_side` | estimated | D | 0.0155 m (0.0105–0.0205) | Measure from the tyre sidewall's outer face to the body side (plumb) at axle height. |
-| 194 | low | `dimensions.rear_tyre_outer_margin_per_side` | estimated | D | 0.001 m (-0.004–0.006) | As front. |
-| 195 | low | `mass.check_axle_sum` | estimated | D | 0 kg (-0.5–0.5) | n/a |
-| 196 | low | `mass.check_rollover_risk_from_ssf` | estimated | D | 0.0951313 (0.0942713–0.0960058) | n/a (consistency check of government data). |
-| 197 | low | `mass.check_yaw_over_roll` | estimated | D | 4.47098 (4.38–6) | n/a (consistency check). |
-| 198 | low | `proportions.front_bumper_extreme_z` | estimated | D | 0.399202 m (0.138303–0.6601) | Measure the height of the bumper nose above the floor with a square (+-5 mm). |
-| 199 | low | `proportions.hatch_glass_top_y` | estimated | D | -2.44261 m (-2.65928–-2.22595) | Plumb from the roof-spoiler trailing edge, measure from front hub centre. |
-| 200 | low | `proportions.height_check` | estimated | D | 1.42483 m (1.35421–1.49546) | Straightedge on roof, tape to floor. |
-| 201 | low | `proportions.length_check` | estimated | D | 4.3657 m (3.98983–4.74156) | Tape between plumb marks of bumper extremes. |
-| 202 | low | `proportions.rear_bumper_extreme_z` | estimated | D | 0.416585 m (0.39715–0.436021) | Measure the height of the rearmost bumper point above the floor (+-5 mm). |
-| 203 | low | `proportions.rim_to_tyre_ratio_front` | estimated | D | 0.751048 (0.69869–0.803406) | Measure rim flange and tyre diameters. |
-| 204 | low | `proportions.rim_to_tyre_ratio_rear` | estimated | D | 0.744741 (0.692308–0.797173) | Measure rim flange and tyre diameters. |
-| 205 | low | `proportions.windshield_angle` | estimated | D | 0.513757 rad (0.443944–0.58357) | Inclinometer on the glass at the centreline. |
-| 206 | low | `proportions.windshield_header_y` | estimated | D | -0.990264 m (-1.0904–-0.890133) | Measure from front hub centre to the top edge of the windshield glass (plumb), +-10 mm. |
-| 207 | low | `steering.crosscheck_ratio_vs_turning_circle` | estimated | D | 1.03642 (1.0279–1.04551) | Turn plates at full lock. |
-| 208 | low | `mass.fuel_density` | estimated | C | 755 kg/m3 (710–770) | Hydrometer on a sample of the fuel actually used (Canadian regular, summer/winter blend), at 15 C. |
+| 1 | critical | `engine.torque_curve_stock_6mt` | unknown | — | — | Stock car, chassis dyno (state make: Dynojet/Mustang/Dynapack), SAE J1349 correction, 4th gear (or 3rd), 3 pulls from 1500 rpm to fuel cut, with a simultaneo… |
+| 2 | critical | `platform.ac_axis_x_sign` | unknown | — | — | In ksEditor or Content Manager showroom, open any stock Kunos car (structure only) and read the X translation of WHEEL_LF; positive => +X is the car's left. … |
+| 3 | critical | `mass.cg_height` | estimated | D | 0.523818 m (0.507054–0.540593) | Axle-lift method: weigh the rear axle with the front raised by >= 0.5 m (wheels on scales, suspension locked); h = r + L*dW/(W*tan(theta)). Or use a tilt table. |
+| 4 | critical | `mass.cg_y` | estimated | D | -1.12135 m (-1.13502–-1.10767) | Axle scales: distance behind front axle = L * m_rear / m. |
+| 5 | critical | `tires.rolling_circumference` | estimated | D | 1.96615 m (1.94588–1.99655) | Mark the tread and floor, roll the loaded car 5-10 revolutions in a straight line, divide distance by revolutions (+/-0.3 %); or use the OE tire maker's revs… |
+| 6 | high | `aero.cd` | unknown | — | — | Coast-down test (two directions, calm day, known mass) fitted to F = A + B v + C v^2 gives CdA; or EPA coast-down target coefficients if found. |
+| 7 | high | `aero.frontal_area` | unknown | — | — | Photograph the car head-on with a long lens next to a scale bar and integrate the silhouette by script. |
+| 8 | high | `alignment.front_camber` | unknown | — | — | Get a four-wheel alignment printout (before/after) from a Honda dealer or an alignment shop: it shows Honda's spec window (min/nominal/max) and the car's act… |
+| 9 | high | `alignment.front_caster` | unknown | — | — | Get a four-wheel alignment printout (before/after) from a Honda dealer or an alignment shop: it shows Honda's spec window (min/nominal/max) and the car's act… |
+| 10 | high | `alignment.front_toe_total` | unknown | — | — | Get a four-wheel alignment printout (before/after) from a Honda dealer or an alignment shop: it shows Honda's spec window (min/nominal/max) and the car's act… |
+| 11 | high | `alignment.rear_camber` | unknown | — | — | Get a four-wheel alignment printout (before/after) from a Honda dealer or an alignment shop: it shows Honda's spec window (min/nominal/max) and the car's act… |
+| 12 | high | `alignment.rear_toe_total` | unknown | — | — | Get a four-wheel alignment printout (before/after) from a Honda dealer or an alignment shop: it shows Honda's spec window (min/nominal/max) and the car's act… |
+| 13 | high | `audio.overrun_fuel_cut_this_car` | unknown | — | — | OBD-II log (>=10 Hz) of rpm, throttle/pedal, short-term fuel trim or injector pulse, O2/lambda, coolant temp and gear during lift-offs from 2000-6000 rpm in … |
+| 14 | high | `brakes.bias_front_hydraulic` | unknown | — | — | Measure piston diameters and pad heights; or log front/rear line pressure. |
+| 15 | high | `brakes.front_piston_diameter` | unknown | — | — | Measure the front caliper piston OD with calipers (±0.1 mm) during a pad change. |
+| 16 | high | `brakes.rear_piston_diameter` | unknown | — | — | Measure the rear caliper piston OD with calipers (±0.1 mm) during a pad change. |
+| 17 | high | `dashboard.gear_position_indicator_mt` | unknown | — | — | Photograph the real car's cluster while driving the 6MT in each gear (passenger, phone on a mount) and at a steady cruise where Honda's shift indicator would… |
+| 18 | high | `drivetrain.flywheel_inertia` | unknown | — | — | Remove the DMF and clutch cover; bifilar/trifilar pendulum or measure mass and outer/inner radii of each disc; or estimate from free-revving rpm decay logged… |
+| 19 | high | `drivetrain.obs_rpm_at_100kmh_6th` | unknown | — | — | Cruise at GPS-verified speed in 6th on level road, photograph the tach or log OBD rpm. |
+| 20 | high | `drivetrain.obs_rpm_at_70mph_6th` | unknown | — | — | Cruise at GPS-verified speed in 6th on level road, photograph the tach or log OBD rpm. |
+| 21 | high | `drivetrain.rev_hang_duration` | unknown | — | — | OBD-II log (>=10 Hz rpm, throttle, clutch switch if available) of 3000->idle and 6000->idle drops with clutch in after a full-throttle pull; and rpm trace du… |
+| 22 | high | `engine.fuel_cut_behavior` | unknown | — | — | OBD-II log of rpm, throttle, short-term fuel trim / injector pulse (KTuner/Hondata datalog ideal) during lift-offs at 2000-6000 rpm in gear and during clutch… |
+| 23 | high | `engine.limiter_rpm` | unknown | — | — | In neutral or 2nd gear, record OBD-II rpm (10 Hz+) or the tach on video while holding WOT into the limiter; note the cut rpm, the re-enable rpm and the cut p… |
+| 24 | high | `mass.corner_weights` | unknown | — | — | Four-pad corner scales, full tank, no driver, tyres at placard pressure, level floor; record each corner ±1 kg. |
+| 25 | high | `mass.unsprung_mass_front` | unknown | — | — | Weigh wheel+tyre, rotor, caliper, knuckle/hub during a brake or strut job; add half of strut, driveshaft and control arm masses. |
+| 26 | high | `mass.unsprung_mass_rear` | unknown | — | — | Weigh wheel+tyre, rotor, caliper, hub/knuckle; add half of link, damper and spring masses. |
+| 27 | high | `perf.accel_0_100kmh` | unknown | — | — | GPS logger (VBOX/Dragy-class, >=10 Hz) on level dry ground, two directions, record temperature/pressure; report with and without 1-ft rollout. |
+| 28 | high | `suspension.damper_curve_front` | unknown | — | — | Dyno a stock damper (shock dyno, 0.025-1.0 m/s), or borrow published dyno sheets for Honda part numbers of the FL hatch struts/dampers. |
+| 29 | high | `suspension.damper_curve_rear` | unknown | — | — | Dyno a stock damper (shock dyno, 0.025-1.0 m/s), or borrow published dyno sheets for Honda part numbers of the FL hatch struts/dampers. |
+| 30 | high | `suspension.roll_center_height_front` | unknown | — | — | Requires hard points (front: lower-arm and strut geometry; rear: link geometry); measure pickup points and compute. |
+| 31 | high | `suspension.roll_center_height_rear` | unknown | — | — | Requires hard points (front: lower-arm and strut geometry; rear: link geometry); measure pickup points and compute. |
+| 32 | high | `suspension.travel_bump_front` | unknown | — | — | With the spring removed (or using a lift and a dial gauge), move the wheel from ride height to bump-stop contact and to full droop; record wheel-centre trave… |
+| 33 | high | `suspension.travel_bump_rear` | unknown | — | — | With the spring removed (or using a lift and a dial gauge), move the wheel from ride height to bump-stop contact and to full droop; record wheel-centre trave… |
+| 34 | high | `tires.mass` | unknown | — | — | Identify the OE tire from the sidewall, then read the maker's spec table (overall diameter, revs/km, weight, tread depth, UTQG); weigh one mounted tire minus… |
+| 35 | high | `tires.revs_per_km` | unknown | — | — | Identify the OE tire from the sidewall, then read the maker's spec table (overall diameter, revs/km, weight, tread depth, UTQG); weigh one mounted tire minus… |
+| 36 | high | `turbo.boost_taper` | unknown | — | — | Same WOT log as boost_onset_rpm to the limiter; torque falls from 177 lb-ft at 4500 to ~158 lb-ft at 6000 (computed from rating), so boost is expected to tap… |
+| 37 | high | `aero.frontal_area_est` | estimated | E | 2.11636 m2 (2.03986–2.19285) | Head-on long-lens photo with a scale; integrate the silhouette (incl. mirrors and tires) by script. |
+| 38 | high | `engine.driveline_loss_assumed` | estimated | E | 0.13 (0.1–0.18) | Back-to-back engine dyno and chassis dyno of the same engine (not practical); or coastdown-corrected chassis dyno with known tire losses. |
+| 39 | high | `engine.inertia` | estimated | E | 0.05 kg*m2 (0.035–0.08) | Free-rev test: log rpm at 50-100 Hz with clutch disengaged after a blip; dw/dt with known friction torque gives engine+flywheel inertia; subtract the flywhee… |
+| 40 | high | `identity.sonic_grey_offered_2024_ca_st` | estimated | E | true (true–true) | Check the real car's colour label (driver door jamb / VIN label) for NH877P, or a Honda Canada 2024 brochure / Build & Price archive. |
+| 41 | high | `mass.inertia_yaw` | estimated | E | 2991.32 kg*m2 (2514.14–3513.59) | Yaw inertia rig (bifilar/trifilar pendulum or NHTSA IPMD-type facility); not practical at home. |
+| 42 | high | `paint.base_albedo_linear` | estimated | E | [0.1819, 0.2054, 0.2367] | Spectrophotometer reading of a clean door panel (L*a*b* D65/10, multi-angle), or RAW photo of the panel next to an X-Rite ColorChecker in open shade with whi… |
+| 43 | high | `paint.base_lab` | estimated | E | [50.92, 0.19, -4.97] | Spectrophotometer reading of a clean door panel (L*a*b* D65/10, multi-angle), or RAW photo of the panel next to an X-Rite ColorChecker in open shade with whi… |
+| 44 | high | `paint.base_srgb` | estimated | E | [117, 122, 131] | Spectrophotometer reading of a clean door panel (L*a*b* D65/10, multi-angle), or RAW photo of the panel next to an X-Rite ColorChecker in open shade with whi… |
+| 45 | high | `suspension.damping_wheel_front_inferred` | estimated | E | 1791.84 N*s/m (995.657–3087.15) | Shock-dyno a stock front strut (0.025-1.0 m/s, bump and rebound) and divide by MR^2. |
+| 46 | high | `suspension.damping_wheel_rear_inferred` | estimated | E | 1164.02 N*s/m (586.846–2970.58) | Shock-dyno a stock rear damper and divide by the damper MR^2. |
+| 47 | high | `suspension.motion_ratio_front` | estimated | E | 0.97 (0.9–1) | Jack one front wheel through +/-30 mm about ride height (spring removed or with a dial gauge on the strut) and record strut compression vs wheel-centre travel. |
+| 48 | high | `suspension.motion_ratio_rear` | estimated | E | 0.75 (0.62–0.85) | Measure spring-seat travel vs wheel-centre travel with the wheel jacked through +/-30 mm (or measure spring-seat and ball-joint distances from the lower arm … |
+| 49 | high | `suspension.spring_rate_front` | estimated | E | 26500 N/m (22000–32000) | Remove a front spring and load-test it (or measure wire diameter d, mean coil diameter D and active coils n: k = G d^4 / (8 D^3 n), G = 79.3 GPa). Precision … |
+| 50 | high | `suspension.spring_rate_rear` | estimated | E | 27500 N/m (24000–60000) | Load-test a rear spring off the car, or measure d, D, n as for the front. Precision +/-3 %. |
+| 51 | high | `suspension.unsprung_mass_corner_front` | estimated | E | 50 kg (40–60) | Weigh wheel+tyre, rotor, caliper, knuckle/hub separately on a scale; add half of strut, lower arm, driveshaft and anti-roll link masses. |
+| 52 | high | `suspension.unsprung_mass_corner_rear` | estimated | E | 40 kg (32–50) | Weigh wheel+tyre, rotor, caliper, trailing arm/knuckle and hub; add half of the four links, spring and damper. |
+| 53 | high | `tires.loaded_radius` | estimated | E | 0.3046 m (0.2976–0.3106) | With the car at curb weight and placard pressure, measure hub-centre height above the floor at each corner (+/-1 mm). |
+| 54 | high | `turbo.boost_onset_rpm` | estimated | E | 1700 rpm (1500–2200) | WOT pull in 3rd/4th from 1200 rpm with OBD-II MAP (or Hondata/KTuner log) at 10 Hz+: record MAP vs rpm. |
+| 55 | high | `dimensions.overhang_front` | estimated | D | 0.936341 m (0.897022–0.975746) | Plumb bob from the front bumper's foremost point and from the front hub centre; measure the floor distance (+-5 mm). |
+| 56 | high | `dimensions.overhang_rear` | estimated | D | 0.857659 m (0.818427–0.896976) | Plumb bob from the rear bumper's rearmost point and from the rear hub centre; measure the floor distance (+-5 mm). |
+| 57 | high | `drivetrain.pred_rpm_at_100kmh_6th` | estimated | D | 2384.19 rpm (2348.96–2420.5) | Hold a GPS-verified 100 km/h in 6th on level road and log engine rpm via OBD-II (PID 0x0C). |
+| 58 | high | `drivetrain.pred_rpm_at_70mph_6th` | estimated | D | 2685.89 rpm (2646.19–2726.79) | Hold a GPS-verified 70 mph in 6th on level road and log engine rpm via OBD-II (PID 0x0C). |
+| 59 | high | `hardpoints.front.wheel_center` | estimated | D | [-0.768, 0, 0.3076] m | Wheel centre: measure track at hub faces and hub height above ground at curb load. |
+| 60 | high | `hardpoints.rear.wheel_center` | estimated | D | [-0.7825, -2.735, 0.3076] m | Wheel centre: measure track at hub faces and hub height above ground at curb load. |
+| 61 | high | `mass.front_axle_mass` | estimated | D | 815.38 kg (808.47–822.29) | Axle or corner scales, full tank, no driver. |
+| 62 | high | `mass.rear_axle_mass` | estimated | D | 566.62 kg (559.71–573.53) | Axle or corner scales, full tank, no driver. |
+| 63 | high | `proportions.arch_gap_front` | estimated | D | 0.389919 m (0.362825–0.417014) | Tape from hub centre to the arch lip directly above it, car at curb weight (+-2 mm). Primary ride-height reference. |
+| 64 | high | `proportions.arch_gap_rear` | estimated | D | 0.387795 m (0.360773–0.414818) | Tape from hub centre to the arch lip directly above it, car at curb weight (+-2 mm). Primary ride-height reference. |
+| 65 | high | `proportions.arch_top_z_front` | estimated | D | 0.703414 m (0.664054–0.742774) | Tape from floor to the arch lip above the hub centre (+-2 mm). |
+| 66 | high | `proportions.arch_top_z_rear` | estimated | D | 0.703414 m (0.664054–0.742774) | Tape from floor to the arch lip above the hub centre (+-2 mm). |
+| 67 | high | `proportions.overhang_front` | estimated | D | 0.851108 m (0.776858–0.925359) | Plumb bob from the front bumper's foremost point and from the front hub centre; measure the floor distance (+-5 mm). |
+| 68 | high | `proportions.overhang_front_fraction` | estimated | D | 0.521929 (0.50057–0.543288) | As for the overhangs. |
+| 69 | high | `proportions.overhang_rear` | estimated | D | 0.779588 m (0.7114–0.847776) | Plumb bob from the rear bumper's rearmost point and from the rear hub centre; measure the floor distance (+-5 mm). |
+| 70 | high | `steering.max_angle_inner` | estimated | D | 0.669 rad (0.662644–0.675065) | Turn plates at full lock; read the inner wheel angle directly. |
+| 71 | high | `steering.max_angle_outer` | estimated | D | 0.500935 rad (0.49712–0.504568) | Turn plates at full lock left and right (alignment rig turning-angle readout); +/-0.5 deg. |
+| 72 | high | `suspension.arb_front_roll_stiffness` | estimated | D | 97356.5 N*m/rad (25445.1–232871) | Measure bar length, lever arms and link motion ratio; or measure roll angle under a known lateral load with and without the bar links connected. |
+| 73 | high | `suspension.arb_rear_roll_stiffness` | estimated | D | 16341 N*m/rad (2754.07–70051.7) | As for the front bar. |
+| 74 | high | `suspension.ride_frequency_front` | estimated | D | 1.32881 Hz (1.0415–1.52686) | Bounce test: accelerometer on the body over each axle, push-and-release or drive over a single bump; or compute from measured spring rate, motion ratio and c… |
+| 75 | high | `suspension.ride_frequency_rear` | estimated | D | 1.26902 Hz (0.906443–2.16944) | Bounce test: accelerometer on the body over each axle, push-and-release or drive over a single bump; or compute from measured spring rate, motion ratio and c… |
+| 76 | high | `suspension.wheel_rate_front` | estimated | D | 24933.8 N/m (17820–32000) | Measure spring rate and motion ratio (see those records), or load the corner with known weights and measure wheel-centre deflection. |
+| 77 | high | `suspension.wheel_rate_rear` | estimated | D | 15468.8 N/m (9225.6–43350) | As for the front. |
+| 78 | high | `wheels.mass` | estimated | C | 7.39356 kg (7.39356–10.8862) | Weigh one bare wheel (tire, valve, weights removed) on a scale (±0.1 kg). |
+| 79 | medium | `aero.lift_front` | unknown | — | — | Not measurable without a wind tunnel; leave unknown. |
+| 80 | medium | `aero.lift_rear` | unknown | — | — | Not measurable without a wind tunnel; leave unknown. |
+| 81 | medium | `alignment.kingpin_inclination` | unknown | — | — | Get a four-wheel alignment printout (before/after) from a Honda dealer or an alignment shop: the printout shows Honda's spec window (min/nominal/max) for 202… |
+| 82 | medium | `alignment.scrub_radius` | unknown | — | — | Get a four-wheel alignment printout (before/after) from a Honda dealer or an alignment shop: the printout shows Honda's spec window (min/nominal/max) for 202… |
+| 83 | medium | `audio.exhaust_pipe_diameter` | unknown | — | — | Calipers or a tape around the centre pipe ahead of the resonator and at a muffler inlet (circumference / pi), car on ramps; +/-1 mm. |
+| 84 | medium | `brakes.booster_type` | unknown | — | — | Look at the firewall behind the master cylinder: vacuum booster with hose from intake/pump vs electric booster; photograph. |
+| 85 | medium | `brakes.pad_mu` | unknown | — | — | Not directly measurable at home; use OE pad edge code (e.g. FF) from a pad photo. |
+| 86 | medium | `dashboard.redzone_and_scale_ca` | unknown | — | — | Straight-on photo of the cluster in round-gauge mode with ignition on, engine off (all scales visible). |
+| 87 | medium | `dashboard.units_canada` | unknown | — | — | Photograph the Canadian car's cluster (speed scale, odometer unit, outside temperature, fuel-economy page). |
+| 88 | medium | `drivetrain.clutch_disc_outer_diameter` | unknown | — | — | Measure the removed OEM disc (22200-series part) with calipers during a clutch job, or read an OEM/aftermarket kit spec sheet that names the OEM size. |
+| 89 | medium | `drivetrain.clutch_torque_capacity` | unknown | — | — | Not measurable without a test rig; derive from pressure-plate clamp load (published by aftermarket makers for the OEM unit), facing diameters and friction co… |
+| 90 | medium | `drivetrain.driveline_inertia` | unknown | — | — | Coast-down / free-roll test with the car on a lift (wheel spin-down in neutral vs in gear), or CAD of the gearset; small relative to wheel+tyre inertia. |
+| 91 | medium | `drivetrain.rev_match` | unknown | — | — | Check owner's manual for 'Rev Match Control' or test: downshift with clutch in and watch for an automatic blip. |
+| 92 | medium | `engine.limiter_behavior` | unknown | — | — | As engine.limiter_rpm; record audio + OBD at the limiter in neutral and in 2nd. |
+| 93 | medium | `engine.rev_hang_engine_side` | unknown | — | — | Datalog rpm, pedal and commanded throttle during clutch-in upshifts (drivetrain thread owns rev-hang numbers). |
+| 94 | medium | `identity.transmission_code` | unknown | — | — | Read the transmission ID number stamped on the gearbox case (Honda prints the type code at the start of the transmission number), or ask a Honda parts counte… |
+| 95 | medium | `mass.gvwr` | unknown | — | — | Photograph the certification label on the driver's door B-pillar (GVWR, GAWR FRT, GAWR RR in kg and lb). |
+| 96 | medium | `paint.flake` | unknown | — | — | Macro photograph (1:1, ring light, 45 deg) of a clean panel next to a mm scale to see flake size and density; or a sparkle/graininess reading from a BYK-mac … |
+| 97 | medium | `paint.pearl_shift` | unknown | — | — | Measure a clean, polished body panel (door skin) of the real car with a multi-angle spectrophotometer (e.g. X-Rite MA-T12 / BYK-mac i: L*a*b* at 15/25/45/75/… |
+| 98 | medium | `perf.braking_100_0kmh` | unknown | — | — | GPS logger, tape switch on brake pedal, several stops, correct to exact 100.0 km/h. |
+| 99 | medium | `perf.braking_60_0mph` | unknown | — | — | As above from 60 mph. (MotorTrend's 117 ft is a CVT car - excluded.) |
+| 100 | medium | `platform.csp_min_version_visual_car_script` | unknown | — | — | Set [_EXTENSION] REQUIRED_VERSION / test on the CSP build the user runs; CSP changelog (acstuff.club/patch) could date it. |
+| 101 | medium | `steering.ratio_center` | unknown | — | — | With front wheels on turn plates, read road-wheel angle at handwheel +/-30 deg and +/-90 deg (or log steering-angle sensor via OBD and wheel angle); ratio = … |
+| 102 | medium | `steering.ratio_lock` | unknown | — | — | Turn plates: road-wheel angle per handwheel degree over the last 90 deg before lock. |
+| 103 | medium | `steering.wheel_diameter` | unknown | — | — | Tape across the rim at 3 and 9 o'clock (outside edges) and rim grip thickness with calipers; +/-2 mm. |
+| 104 | medium | `suspension.bump_stop_length_front` | unknown | — | — | Remove the dust boot and measure the bump stop and the shaft gap at ride height. |
+| 105 | medium | `suspension.bump_stop_length_rear` | unknown | — | — | Remove the dust boot and measure the bump stop and the shaft gap at ride height. |
+| 106 | medium | `suspension.travel_rebound_front` | unknown | — | — | With the spring removed (or using a lift and a dial gauge), move the wheel from ride height to bump-stop contact and to full droop; record wheel-centre trave… |
+| 107 | medium | `suspension.travel_rebound_rear` | unknown | — | — | With the spring removed (or using a lift and a dial gauge), move the wheel from ride height to bump-stop contact and to full droop; record wheel-centre trave… |
+| 108 | medium | `tires.test_data` | unknown | — | — | Identify the OE tire from the sidewall, then read the maker's spec table (overall diameter, revs/km, weight, tread depth, UTQG); weigh one mounted tire minus… |
+| 109 | medium | `turbo.torque_management` | unknown | — | — | WOT logs in 1st, 2nd and 3rd from the same rpm: compare MAP and calculated load; a lower 1st/2nd plateau indicates per-gear torque limits. |
+| 110 | medium | `brakes.front_effective_radius` | estimated | E | 0.11597 m (0.11097–0.12097) | Measure pad radial height and rotor OD; r_eff ~ OD/2 - pad height/2. |
+| 111 | medium | `brakes.rear_effective_radius` | estimated | E | 0.10954 m (0.10454–0.11454) | Measure pad radial height and rotor OD. |
+| 112 | medium | `drivetrain.shift_time` | estimated | E | 0.3 s (0.2–0.5) | Datalog clutch switch / rpm during brisk shifts; or time from video with on-screen tach. |
+| 113 | medium | `engine.idle_rpm` | estimated | E | 750 rpm (650–850) | Warm engine (fan cycled), A/C off, neutral: read rpm via OBD-II; repeat with A/C on. |
+| 114 | medium | `hardpoints.front.lca_front_inner` | estimated | E | [-0.353, 0.02, 0.205] m | Car on a lift at curb ride height (or ride height recorded): plumb-bob/laser to the floor grid for X,Y and height gauge for Z at the bushing/ball-joint centr… |
+| 115 | medium | `hardpoints.front.lca_rear_inner` | estimated | E | [-0.368, -0.33, 0.22] m | Car on a lift at curb ride height (or ride height recorded): plumb-bob/laser to the floor grid for X,Y and height gauge for Z at the bushing/ball-joint centr… |
+| 116 | medium | `hardpoints.front.lower_ball_joint` | estimated | E | [-0.663, 0, 0.145] m | Car on a lift at curb ride height (or ride height recorded): plumb-bob/laser to the floor grid for X,Y and height gauge for Z at the bushing/ball-joint centr… |
+| 117 | medium | `hardpoints.front.strut_top` | estimated | E | [-0.4748, -0.0713, 0.96] m | Car on a lift at curb ride height (or ride height recorded): plumb-bob/laser to the floor grid for X,Y and height gauge for Z at the bushing/ball-joint centr… |
+| 118 | medium | `hardpoints.front.tie_rod_inner` | estimated | E | [-0.36, -0.15, 0.3326] m | Car on a lift at curb ride height (or ride height recorded): plumb-bob/laser to the floor grid for X,Y and height gauge for Z at the bushing/ball-joint centr… |
+| 119 | medium | `hardpoints.front.tie_rod_outer` | estimated | E | [-0.638, -0.135, 0.3076] m | Car on a lift at curb ride height (or ride height recorded): plumb-bob/laser to the floor grid for X,Y and height gauge for Z at the bushing/ball-joint centr… |
+| 120 | medium | `hardpoints.rear.damper_lower` | estimated | E | [-0.6725, -2.805, 0.2126] m | Car on a lift at curb ride height (or ride height recorded): plumb-bob/laser to the floor grid for X,Y and height gauge for Z at the bushing/ball-joint centr… |
+| 121 | medium | `hardpoints.rear.damper_upper` | estimated | E | [-0.5425, -2.835, 0.8076] m | Car on a lift at curb ride height (or ride height recorded): plumb-bob/laser to the floor grid for X,Y and height gauge for Z at the bushing/ball-joint centr… |
+| 122 | medium | `hardpoints.rear.lower_arm_a_inner` | estimated | E | [-0.2575, -2.615, 0.2476] m | Car on a lift at curb ride height (or ride height recorded): plumb-bob/laser to the floor grid for X,Y and height gauge for Z at the bushing/ball-joint centr… |
+| 123 | medium | `hardpoints.rear.lower_arm_a_outer` | estimated | E | [-0.6775, -2.635, 0.2276] m | Car on a lift at curb ride height (or ride height recorded): plumb-bob/laser to the floor grid for X,Y and height gauge for Z at the bushing/ball-joint centr… |
+| 124 | medium | `hardpoints.rear.lower_arm_b_inner` | estimated | E | [-0.2325, -2.805, 0.2276] m | Car on a lift at curb ride height (or ride height recorded): plumb-bob/laser to the floor grid for X,Y and height gauge for Z at the bushing/ball-joint centr… |
+| 125 | medium | `hardpoints.rear.lower_arm_b_outer` | estimated | E | [-0.6975, -2.785, 0.1776] m | Car on a lift at curb ride height (or ride height recorded): plumb-bob/laser to the floor grid for X,Y and height gauge for Z at the bushing/ball-joint centr… |
+| 126 | medium | `hardpoints.rear.spring_lower_seat` | estimated | E | [-0.6367, -2.788, 0.1841] m | Car on a lift at curb ride height (or ride height recorded): plumb-bob/laser to the floor grid for X,Y and height gauge for Z at the bushing/ball-joint centr… |
+| 127 | medium | `hardpoints.rear.spring_upper_seat` | estimated | E | [-0.6367, -2.788, 0.4341] m | Car on a lift at curb ride height (or ride height recorded): plumb-bob/laser to the floor grid for X,Y and height gauge for Z at the bushing/ball-joint centr… |
+| 128 | medium | `hardpoints.rear.trailing_arm_front` | estimated | E | [-0.5725, -2.235, 0.305] m | Car on a lift at curb ride height (or ride height recorded): plumb-bob/laser to the floor grid for X,Y and height gauge for Z at the bushing/ball-joint centr… |
+| 129 | medium | `hardpoints.rear.upper_arm_inner` | estimated | E | [-0.3675, -2.735, 0.4776] m | Car on a lift at curb ride height (or ride height recorded): plumb-bob/laser to the floor grid for X,Y and height gauge for Z at the bushing/ball-joint centr… |
+| 130 | medium | `hardpoints.rear.upper_arm_outer` | estimated | E | [-0.6575, -2.735, 0.4876] m | Car on a lift at curb ride height (or ride height recorded): plumb-bob/laser to the floor grid for X,Y and height gauge for Z at the bushing/ball-joint centr… |
+| 131 | medium | `identity.model_code` | estimated | E | FL1 | Read the VIN and the model code on the door-jamb / firewall ID plate of the real car; Honda parts catalogs for the VIN list the frame code. |
+| 132 | medium | `identity.options_ca_2024_st` | estimated | E | Transmission (6MT or CVT) and colour only; no packages listed | Check the real car's window sticker / Honda Canada order guide. |
+| 133 | medium | `mass.fuel_level_assumed` | estimated | E | 1 (0.9–1) | Weigh the car on four corner scales with a full tank (filled to first click) and again near empty; the difference over 46 L fuel mass confirms the convention. |
+| 134 | medium | `mass.inertia_pitch` | estimated | E | 2777.97 kg*m2 (2313.5–3292.7) | Pitch inertia pendulum test (specialist facility). |
+| 135 | medium | `mass.inertia_roll` | estimated | E | 669.054 kg*m2 (544.9–810.424) | Roll inertia pendulum test (specialist facility). |
+| 136 | medium | `paint.base_chroma` | estimated | E | 5.03 (4.31–11.78) | Spectrophotometer reading of a clean door panel (L*a*b* D65/10, multi-angle), or RAW photo of the panel next to an X-Rite ColorChecker in open shade with whi… |
+| 137 | medium | `paint.base_hue_deg` | estimated | E | 272.2 deg (242.2–302.2) | Spectrophotometer reading of a clean door panel (L*a*b* D65/10, multi-angle), or RAW photo of the panel next to an X-Rite ColorChecker in open shade with whi… |
+| 138 | medium | `paint.clearcoat_roughness` | estimated | E | 0.05 (0.02–0.12) | Measure 20-degree gloss (GU) on a cleaned panel with a glossmeter (OEM clearcoats are typically 85-95 GU at 20 deg) and map to roughness, or photograph a str… |
+| 139 | medium | `steering.ackermann_pct_estimate` | estimated | E | 1.25353 (0.6–1.31887) | Turn plates: inner and outer angles at full lock and at 20 deg outer (toe-out-on-turns spec on an alignment printout). |
+| 140 | medium | `suspension.arb_front_active_length` | estimated | E | 0.85 m (0.7–1) | Measure on the car (wheels on ramps or lift): bushing-to-bushing distance, arm length from bar axis to link eye, and link travel vs wheel travel. |
+| 141 | medium | `suspension.arb_front_lever_arm` | estimated | E | 0.2 m (0.15–0.27) | Measure on the car (wheels on ramps or lift): bushing-to-bushing distance, arm length from bar axis to link eye, and link travel vs wheel travel. |
+| 142 | medium | `suspension.arb_front_motion_ratio` | estimated | E | 0.95 (0.85–1) | Measure on the car (wheels on ramps or lift): bushing-to-bushing distance, arm length from bar axis to link eye, and link travel vs wheel travel. |
+| 143 | medium | `suspension.arb_rear_active_length` | estimated | E | 0.95 m (0.8–1.1) | Measure on the car (wheels on ramps or lift): bushing-to-bushing distance, arm length from bar axis to link eye, and link travel vs wheel travel. |
+| 144 | medium | `suspension.arb_rear_lever_arm` | estimated | E | 0.18 m (0.12–0.25) | Measure on the car (wheels on ramps or lift): bushing-to-bushing distance, arm length from bar axis to link eye, and link travel vs wheel travel. |
+| 145 | medium | `suspension.arb_rear_motion_ratio` | estimated | E | 0.75 (0.55–0.95) | Measure on the car (wheels on ramps or lift): bushing-to-bushing distance, arm length from bar axis to link eye, and link travel vs wheel travel. |
+| 146 | medium | `suspension.motion_ratio_damper_front` | estimated | E | 0.97 (0.9–1) | Same test as the front spring motion ratio (damper is concentric with the spring). |
+| 147 | medium | `suspension.motion_ratio_damper_rear` | estimated | E | 0.85 (0.7–1) | Measure damper length change vs wheel-centre travel (+/-30 mm) with the wheel jacked. |
+| 148 | medium | `dimensions.front_bumper_y` | estimated | D | 0.936341 m (0.897022–0.975746) | As dimensions.overhang_front. |
+| 149 | medium | `dimensions.rear_bumper_y` | estimated | D | -3.59266 m (-3.63198–-3.55343) | As dimensions.overhang_rear. |
+| 150 | medium | `drivetrain.rpm_after_upshift_1_2_from_redline` | estimated | D | 3768.32 rpm (3655.27–3768.32) | Datalog rpm and wheel speed through full-throttle upshifts. |
+| 151 | medium | `drivetrain.rpm_after_upshift_2_3_from_redline` | estimated | D | 4318.56 rpm (4189–4318.56) | Datalog rpm and wheel speed through full-throttle upshifts. |
+| 152 | medium | `drivetrain.rpm_after_upshift_3_4_from_redline` | estimated | D | 4965.76 rpm (4816.79–4965.76) | Datalog rpm and wheel speed through full-throttle upshifts. |
+| 153 | medium | `drivetrain.rpm_after_upshift_4_5_from_redline` | estimated | D | 5349.61 rpm (5189.12–5349.61) | Datalog rpm and wheel speed through full-throttle upshifts. |
+| 154 | medium | `drivetrain.rpm_after_upshift_5_6_from_redline` | estimated | D | 5454.94 rpm (5291.29–5454.94) | Datalog rpm and wheel speed through full-throttle upshifts. |
+| 155 | medium | `mass.fuel_mass_full` | estimated | D | 34.73 kg (32.66–35.42) | Weigh the car with a full and a near-empty tank. |
+| 156 | medium | `proportions.hatch_angle` | estimated | D | 0.342297 rad (0.255031–0.429563) | Inclinometer on the hatch glass at the centreline. |
+| 157 | medium | `proportions.hood_z_at_front_axle` | estimated | D | 0.951131 m (0.902968–0.999293) | Straightedge across the hood above the front hub; tape to floor (+-5 mm). |
+| 158 | medium | `proportions.roof_peak_y` | estimated | D | -1.66457 m (-2.16122–-1.16792) | Level laid on the roof: find the highest point, plumb down, measure from front hub centre. |
+| 159 | medium | `proportions.roof_peak_z` | estimated | D | 1.42483 m (1.35421–1.49546) | Straightedge across the roof at its highest point; tape to floor (+-3 mm). |
+| 160 | medium | `proportions.sill_z_mid_wheelbase` | estimated | D | 0.19929 m (0.183463–0.215118) | Tape from floor to the sill lower edge at mid-wheelbase, both sides (+-3 mm). |
+| 161 | medium | `proportions.wheel_center_z_front` | estimated | D | 0.313495 m (0.293831–0.333159) | Tape from floor to hub centre (+-2 mm). |
+| 162 | medium | `proportions.wheel_center_z_rear` | estimated | D | 0.315619 m (0.295873–0.335365) | Tape from floor to hub centre (+-2 mm). |
+| 163 | medium | `proportions.windshield_base_y` | estimated | D | -0.341894 m (-0.388111–-0.295677) | Measure from front hub centre to the windshield base at the centreline (tape along the hood + plumb), +-10 mm. |
+| 164 | medium | `proportions.windshield_base_z` | estimated | D | 0.985898 m (0.925779–1.04602) | Tape from floor to the windshield base at the centreline (+-5 mm). |
+| 165 | medium | `steering.mean_lock_angle_from_ratio` | estimated | D | 0.606272 rad (0.604629–0.607917) | Turn plates at full lock (average of inner and outer). |
+| 166 | medium | `suspension.arb_front_torsional_stiffness` | estimated | D | 3657.84 N*m/rad (3109.17–4441.67) | Measure bushing-to-bushing length on the car. |
+| 167 | medium | `suspension.arb_rear_torsional_stiffness` | estimated | D | 768.602 N*m/rad (663.793–912.715) | Measure bushing-to-bushing length on the car. |
+| 168 | medium | `suspension.spring_roll_stiffness_front` | estimated | D | 29413.2 N*m/rad (21021.3–37748.7) | From measured spring rate and motion ratio. |
+| 169 | medium | `suspension.spring_roll_stiffness_rear` | estimated | D | 18943.2 N*m/rad (11297.8–53087) | From measured spring rate and motion ratio. |
+| 170 | medium | `tires.rolling_circumference_from_revs` | estimated | D | 1.96741 m (1.96621–1.96862) | Roll the car 10 wheel turns at rated pressure and normal load; measure distance. |
+| 171 | medium | `perf.top_speed` | estimated | C | 58.1152 m/s (58.1152–58.1152) | Not measured by C/D (their estimate). Governed or drag-limited is not stated for this car; C/D's 2022 Civic Touring sedan CVT was 'gov ltd' at 126 mph (diffe… |
+| 172 | low | `aero.active_grille_shutter` | unknown | — | — | Look behind the lower grille for shutter vanes (photo with flashlight). |
+| 173 | low | `aero.balance` | unknown | — | — | Not measurable without a wind tunnel. |
+| 174 | low | `aero.cooling_openings` | unknown | — | — | Front photos scaled by wheelbase; measure open grille areas by script. |
+| 175 | low | `alignment.thrust_angle` | unknown | — | — | Get a four-wheel alignment printout (before/after) from a Honda dealer or an alignment shop: it shows Honda's spec window (min/nominal/max) and the car's act… |
+| 176 | low | `dimensions.approach_angle` | unknown | — | — | Car at curb weight on level floor: measure bumper lower-edge height and its horizontal distance ahead of/behind the tyre contact patch; angle = atan(h / x). |
+| 177 | low | `dimensions.departure_angle` | unknown | — | — | Car at curb weight on level floor: measure bumper lower-edge height and its horizontal distance ahead of/behind the tyre contact patch; angle = atan(h / x). |
+| 178 | low | `drivetrain.clutch_disc_inner_diameter` | unknown | — | — | Measure the removed OEM disc facing inner diameter with calipers. |
+| 179 | low | `drivetrain.shift_indicator` | unknown | — | — | Owner's manual cluster section, or photo of the cluster while driving the MT. |
+| 180 | low | `hardpoints.front.arb_bushing` | unknown | — | — | Measure on a lift as for the other hard points (+/-5 mm adequate). |
+| 181 | low | `hardpoints.front.arb_link_lower` | unknown | — | — | Measure on a lift as for the other hard points (+/-5 mm adequate). |
+| 182 | low | `hardpoints.front.arb_link_upper` | unknown | — | — | Measure on a lift as for the other hard points (+/-5 mm adequate). |
+| 183 | low | `hardpoints.front.subframe_mounts` | unknown | — | — | Measure on a lift as for the other hard points (+/-5 mm adequate). |
+| 184 | low | `hardpoints.rear.arb_bushing` | unknown | — | — | Measure on a lift as for the other hard points (+/-5 mm adequate). |
+| 185 | low | `hardpoints.rear.arb_link_upper` | unknown | — | — | Measure on a lift as for the other hard points (+/-5 mm adequate). |
+| 186 | low | `hardpoints.rear.subframe_mounts` | unknown | — | — | Measure on a lift as for the other hard points (+/-5 mm adequate). |
+| 187 | low | `hardpoints.steering.rack_mounts` | unknown | — | — | Measure on a lift as for the other hard points (+/-5 mm adequate). |
+| 188 | low | `mass.gawr_front` | unknown | — | — | Read from the door-jamb certification label (GAWR FRT / GAWR RR). |
+| 189 | low | `mass.gawr_rear` | unknown | — | — | Read from the door-jamb certification label (GAWR FRT / GAWR RR). |
+| 190 | low | `paint.layer_structure` | unknown | — | — | Ask a Honda body shop / paint supplier (PPG, Axalta, BASF) for the NH-877P refinish formula: it states whether a mid-coat is needed. Measure a clean, polishe… |
+| 191 | low | `perf.accel_0_30mph` | unknown | — | — | GPS logger; C/D did not print 0-30 in this test. |
+| 192 | low | `perf.honda_claim_0_100kmh` | unknown | — | — | No Honda Canada/US claim found; Honda NA typically publishes none. |
+| 193 | low | `proportions.front_view_track_ratio` | unknown | — | — | Long-lens (>=200 mm equiv.) straight-on front photo from >=15 m with a tape on the ground, or tape the mirror glass centre position from the front hub centre… |
+| 194 | low | `proportions.mirror_width_ratio` | unknown | — | — | Long-lens (>=200 mm equiv.) straight-on front photo from >=15 m with a tape on the ground, or tape the mirror glass centre position from the front hub centre… |
+| 195 | low | `proportions.mirror_y` | unknown | — | — | Long-lens (>=200 mm equiv.) straight-on front photo from >=15 m with a tape on the ground, or tape the mirror glass centre position from the front hub centre… |
+| 196 | low | `proportions.mirror_z` | unknown | — | — | Long-lens (>=200 mm equiv.) straight-on front photo from >=15 m with a tape on the ground, or tape the mirror glass centre position from the front hub centre… |
+| 197 | low | `steering.assist_layout` | unknown | — | — | Underside/engine-bay photo of the steering rack (a second pinion housing with motor = dual-pinion). |
+| 198 | low | `suspension.spring_free_length_front` | unknown | — | — | Remove the spring and measure with calipers / tape; or read off the Honda parts label. |
+| 199 | low | `suspension.spring_free_length_rear` | unknown | — | — | Remove the spring and measure with calipers / tape; or read off the Honda parts label. |
+| 200 | low | `suspension.spring_wire_diameter_front` | unknown | — | — | Remove the spring and measure with calipers / tape; or read off the Honda parts label. |
+| 201 | low | `suspension.spring_wire_diameter_rear` | unknown | — | — | Remove the spring and measure with calipers / tape; or read off the Honda parts label. |
+| 202 | low | `tires.oem_variant` | unknown | — | — | Identify the OE tire from the sidewall, then read the maker's spec table (overall diameter, revs/km, weight, tread depth, UTQG); weigh one mounted tire minus… |
+| 203 | low | `tires.tread_depth_new` | unknown | — | — | Identify the OE tire from the sidewall, then read the maker's spec table (overall diameter, revs/km, weight, tread depth, UTQG); weigh one mounted tire minus… |
+| 204 | low | `tires.utqg` | unknown | — | — | Identify the OE tire from the sidewall, then read the maker's spec table (overall diameter, revs/km, weight, tread depth, UTQG); weigh one mounted tire minus… |
+| 205 | low | `transmission.code` | unknown | — | — | Read the transmission identification label/stamp on the gearbox case (near the clutch housing), or a Honda service manual / EPC 'transmission assembly' entry. |
+| 206 | low | `wheels.center_bore` | unknown | — | — | Measure the hub bore with calipers (±0.1 mm), or read the hub pilot diameter. |
+| 207 | low | `wheels.lug_torque` | unknown | — | — | Owner's manual / service information; torque wrench spec in the spare-tire section. |
+| 208 | low | `dashboard.head_up_display` | estimated | E | false (false–false) | Look at the dash top of the real car (no HUD combiner/projection window). |
+| 209 | low | `drivetrain.idle_stop_mt` | estimated | E | true (0–1) | Stop the real car in neutral with the clutch released, engine warm: note whether the engine shuts off and the idle-stop lamp lights; or read the owner's manu… |
+| 210 | low | `mass.cg_x` | estimated | E | 0 m (-0.015–0.015) | Corner scales: x_cg = (T/2)*((FR+RR)-(FL+RL))/m using front/rear tracks per axle. |
+| 211 | low | `paint.base_roughness` | estimated | E | 0.4 (0.25–0.6) | Measure a clean, polished body panel (door skin) of the real car with a multi-angle spectrophotometer (e.g. X-Rite MA-T12 / BYK-mac i: L*a*b* at 15/25/45/75/… |
+| 212 | low | `paint.clearcoat_ior` | estimated | E | 1.5 (1.45–1.55) | Not practical to measure on the car; accept the generic value or ask the refinish supplier for the clearcoat chemistry. |
+| 213 | low | `dimensions.front_tyre_outer_margin_per_side` | estimated | D | 0.0155 m (0.0105–0.0205) | Measure from the tyre sidewall's outer face to the body side (plumb) at axle height. |
+| 214 | low | `dimensions.rear_tyre_outer_margin_per_side` | estimated | D | 0.001 m (-0.004–0.006) | As front. |
+| 215 | low | `mass.check_axle_sum` | estimated | D | 0 kg (-0.5–0.5) | n/a |
+| 216 | low | `mass.check_rollover_risk_from_ssf` | estimated | D | 0.0951313 (0.0942713–0.0960058) | n/a (consistency check of government data). |
+| 217 | low | `mass.check_yaw_over_roll` | estimated | D | 4.47098 (4.38–6) | n/a (consistency check). |
+| 218 | low | `proportions.front_bumper_extreme_z` | estimated | D | 0.399202 m (0.138303–0.6601) | Measure the height of the bumper nose above the floor with a square (+-5 mm). |
+| 219 | low | `proportions.hatch_glass_top_y` | estimated | D | -2.44261 m (-2.65928–-2.22595) | Plumb from the roof-spoiler trailing edge, measure from front hub centre. |
+| 220 | low | `proportions.height_check` | estimated | D | 1.42483 m (1.35421–1.49546) | Straightedge on roof, tape to floor. |
+| 221 | low | `proportions.length_check` | estimated | D | 4.3657 m (3.98983–4.74156) | Tape between plumb marks of bumper extremes. |
+| 222 | low | `proportions.rear_bumper_extreme_z` | estimated | D | 0.416585 m (0.39715–0.436021) | Measure the height of the rearmost bumper point above the floor (+-5 mm). |
+| 223 | low | `proportions.rim_to_tyre_ratio_front` | estimated | D | 0.751048 (0.69869–0.803406) | Measure rim flange and tyre diameters. |
+| 224 | low | `proportions.rim_to_tyre_ratio_rear` | estimated | D | 0.744741 (0.692308–0.797173) | Measure rim flange and tyre diameters. |
+| 225 | low | `proportions.windshield_angle` | estimated | D | 0.513757 rad (0.443944–0.58357) | Inclinometer on the glass at the centreline. |
+| 226 | low | `proportions.windshield_header_y` | estimated | D | -0.990264 m (-1.0904–-0.890133) | Measure from front hub centre to the top edge of the windshield glass (plumb), +-10 mm. |
+| 227 | low | `steering.crosscheck_ratio_vs_turning_circle` | estimated | D | 1.03642 (1.0279–1.04551) | Turn plates at full lock. |
+| 228 | low | `mass.fuel_density` | estimated | C | 755 kg/m3 (710–770) | Hydrometer on a sample of the fuel actually used (Canadian regular, summer/winter blend), at 15 C. |

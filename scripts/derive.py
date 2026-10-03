@@ -155,7 +155,9 @@ def main():
           f"{len(out['tables'])} tables written -> {os.path.relpath(OUT, ROOT)}")
     for t in out["tables"]:
         if not t["n_rows"]:
-            print(f"  table {t['path']} not built: missing {t['missing_inputs']} {t.get('error', '')}")
+            why = (f"missing inputs {t['missing_inputs']}" if t["missing_inputs"] else
+                   t.get("error") or "inputs resolved but the source data yields no rows")
+            print(f"  table {t['path']} has no rows: {why}")
 
 
 if __name__ == "__main__":

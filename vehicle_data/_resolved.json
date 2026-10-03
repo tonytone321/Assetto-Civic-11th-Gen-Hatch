@@ -402,6 +402,151 @@
         "notes": "estimate made for the target car"
       }
     },
+    "audio.catalytic_converter": {
+      "value": "one 'CONVERTER ASSY' 18150-64A-L00 listed for all 2024 1.5T trims incl. Si and hatch Sport Touring 6MT; position not established from this page",
+      "unit": "text",
+      "status": "confirmed",
+      "class": "A",
+      "confidence": "medium",
+      "source_id": "hpn-2024-civic-exhaust-pipe",
+      "range": null,
+      "file": "audio/reference_database.json",
+      "candidate_index": 0,
+      "n_candidates": 1,
+      "impact": "low",
+      "description": "Catalytic converter part and sharing across 1.5T trims",
+      "applicability": {
+        "year": "2024",
+        "market": "US",
+        "trim": "all 1.5T (sedan EX/Touring, Si, hatch EX-L, Sport Touring)",
+        "body": "sedan and hatchback",
+        "gearbox": "6MT, CVT",
+        "engine": "1.5T",
+        "notes": ""
+      }
+    },
+    "audio.exhaust_layout": {
+      "value": "front pipe A with flexible section (ref 1) -> centre pipe with one in-line resonator/silencer and a Y-split (ref 9, sold with the right rear muffler as 18307-T47-A51 'MUFFLER, R- EX') -> two rear mufflers, right (ref 9) and left (ref 8, 18305-T47-A51, flange-joined with gasket ref 6), each with a finisher (refs 10, 11)",
+      "unit": "text",
+      "status": "confirmed",
+      "class": "A",
+      "confidence": "medium",
+      "source_id": "hpn-18307-T47-A51",
+      "range": null,
+      "file": "audio/reference_database.json",
+      "candidate_index": 0,
+      "n_candidates": 1,
+      "impact": "medium",
+      "description": "Stock exhaust layout, front to rear (Honda illustration T404B0200)",
+      "applicability": {
+        "year": "2024",
+        "market": "US",
+        "trim": "Sport Touring (5 Door 1.5T)",
+        "body": "hatchback",
+        "gearbox": "6MT, CVT",
+        "engine": "1.5T",
+        "notes": "US parts catalog; same part numbers listed for 6MT and CVT"
+      }
+    },
+    "audio.exhaust_pipe_diameter": {
+      "value": null,
+      "unit": "m",
+      "status": "unknown",
+      "class": null,
+      "confidence": "none",
+      "source_id": null,
+      "range": null,
+      "file": "audio/reference_database.json",
+      "candidate_index": 0,
+      "n_candidates": 1,
+      "impact": "medium",
+      "description": "Stock exhaust pipe outside diameter",
+      "applicability": {}
+    },
+    "audio.exhaust_rear_muffler_count": {
+      "value": 2,
+      "unit": "1",
+      "status": "confirmed",
+      "class": "A",
+      "confidence": "high",
+      "source_id": "hpn-2024-civic-muffler",
+      "range": null,
+      "file": "audio/reference_database.json",
+      "candidate_index": 0,
+      "n_candidates": 1,
+      "impact": "medium",
+      "description": "Number of rear mufflers on the stock exhaust",
+      "applicability": {
+        "year": "2024",
+        "market": "US",
+        "trim": "Sport Touring (5 Door 1.5T)",
+        "body": "hatchback",
+        "gearbox": "6MT, CVT",
+        "engine": "1.5T",
+        "notes": "US parts catalog; same part numbers listed for 6MT and CVT"
+      }
+    },
+    "audio.exhaust_rear_muffler_left": {
+      "value": "18305-T47-A51 MUFFLER, L- EX, diagram ref 8",
+      "unit": "text",
+      "status": "confirmed",
+      "class": "A",
+      "confidence": "high",
+      "source_id": "hpn-18305-T47-A51",
+      "range": null,
+      "file": "audio/reference_database.json",
+      "candidate_index": 0,
+      "n_candidates": 1,
+      "impact": "medium",
+      "description": "Left rear muffler part and diagram position",
+      "applicability": {
+        "year": "2022-2024",
+        "market": "US",
+        "trim": "Sport Touring",
+        "body": "hatchback",
+        "gearbox": "6MT, CVT",
+        "engine": "1.5T",
+        "notes": ""
+      }
+    },
+    "audio.front_pipe_shared": {
+      "value": "PIPE A ASSY- EX 18200-T20-A01 shared by all 2024 1.5T trims incl. Si",
+      "unit": "text",
+      "status": "confirmed",
+      "class": "A",
+      "confidence": "high",
+      "source_id": "hpn-2024-civic-exhaust-pipe",
+      "range": null,
+      "file": "audio/reference_database.json",
+      "candidate_index": 0,
+      "n_candidates": 1,
+      "impact": "low",
+      "description": "Front exhaust pipe A shared with Si and sedan",
+      "applicability": {
+        "year": "2024",
+        "market": "US",
+        "trim": "all 1.5T (sedan EX/Touring, Si, hatch EX-L, Sport Touring)",
+        "body": "sedan and hatchback",
+        "gearbox": "6MT, CVT",
+        "engine": "1.5T",
+        "notes": ""
+      }
+    },
+    "audio.overrun_fuel_cut_this_car": {
+      "value": null,
+      "unit": "text",
+      "status": "unknown",
+      "class": null,
+      "confidence": "none",
+      "source_id": null,
+      "range": null,
+      "file": "audio/reference_database.json",
+      "candidate_index": 0,
+      "n_candidates": 1,
+      "impact": "high",
+      "description": "Stock ECU overrun (DFCO) behaviour on this engine",
+      "applicability": {}
+    },
     "brakes.abs": {
       "value": true,
       "unit": "bool",
@@ -861,6 +1006,393 @@
         "engine": "1.5T",
         "notes": ""
       }
+    },
+    "dashboard.cluster_diagonal": {
+      "value": 0.25908,
+      "unit": "m",
+      "status": "confirmed",
+      "class": "A",
+      "confidence": "high",
+      "source_id": "hci-2024-specs",
+      "range": null,
+      "file": "vehicle_data/dashboard.json",
+      "candidate_index": 0,
+      "n_candidates": 1,
+      "impact": "medium",
+      "description": "Instrument display diagonal",
+      "applicability": {
+        "year": "2024",
+        "market": "CA",
+        "trim": "Sport Touring",
+        "body": "hatchback",
+        "gearbox": "6MT and CVT",
+        "engine": "1.5T",
+        "notes": ""
+      }
+    },
+    "dashboard.cluster_type": {
+      "value": "10.2-inch colour TFT full digital driver meter display",
+      "unit": "text",
+      "status": "confirmed",
+      "class": "A",
+      "confidence": "high",
+      "source_id": "hci-2024-specs",
+      "range": null,
+      "file": "vehicle_data/dashboard.json",
+      "candidate_index": 0,
+      "n_candidates": 3,
+      "impact": "high",
+      "description": "Instrument cluster type",
+      "applicability": {
+        "year": "2024",
+        "market": "CA",
+        "trim": "Sport Touring",
+        "body": "hatchback",
+        "gearbox": "6MT and CVT",
+        "engine": "1.5T",
+        "notes": ""
+      },
+      "conflict": true
+    },
+    "dashboard.coolant_temp_gauge": {
+      "value": "Segmented arc bar gauge at far left of the display, H (top, red) to C (bottom)",
+      "unit": "text",
+      "status": "confirmed",
+      "class": "A",
+      "confidence": "medium",
+      "source_id": "ahm-presskit-2022",
+      "range": null,
+      "file": "vehicle_data/dashboard.json",
+      "candidate_index": 0,
+      "n_candidates": 1,
+      "impact": "medium",
+      "description": "Coolant temperature gauge",
+      "applicability": {
+        "year": "2022",
+        "market": "US",
+        "trim": "Sport Touring",
+        "body": "hatchback",
+        "gearbox": "CVT",
+        "engine": "1.5T",
+        "notes": "US car: mph and deg F; gear letter 'D' shows it is a CVT. Layout applies; units and the gear field differ on the Canadian 6MT car."
+      }
+    },
+    "dashboard.exterior_temperature_indicator": {
+      "value": true,
+      "unit": "bool",
+      "status": "confirmed",
+      "class": "A",
+      "confidence": "high",
+      "source_id": "hci-2024-specs",
+      "range": null,
+      "file": "vehicle_data/dashboard.json",
+      "candidate_index": 0,
+      "n_candidates": 1,
+      "impact": "low",
+      "description": "Exterior temperature indicator",
+      "applicability": {
+        "year": "2024",
+        "market": "CA",
+        "trim": "Sport Touring",
+        "body": "hatchback",
+        "gearbox": "6MT and CVT",
+        "engine": "1.5T",
+        "notes": ""
+      }
+    },
+    "dashboard.fuel_gauge": {
+      "value": "Segmented arc bar gauge at far right of the display, F (top) to E (bottom, red), fuel-pump icon",
+      "unit": "text",
+      "status": "confirmed",
+      "class": "A",
+      "confidence": "medium",
+      "source_id": "ahm-presskit-2022",
+      "range": null,
+      "file": "vehicle_data/dashboard.json",
+      "candidate_index": 0,
+      "n_candidates": 1,
+      "impact": "medium",
+      "description": "Fuel gauge",
+      "applicability": {
+        "year": "2022",
+        "market": "US",
+        "trim": "Sport Touring",
+        "body": "hatchback",
+        "gearbox": "CVT",
+        "engine": "1.5T",
+        "notes": "US car: mph and deg F; gear letter 'D' shows it is a CVT. Layout applies; units and the gear field differ on the Canadian 6MT car."
+      }
+    },
+    "dashboard.gauge_styles": {
+      "value": "Round tachometer + round speedometer, or bar graphs at the left/right edges; ACC-only mode hides both gauges but keeps a numerical speed readout",
+      "unit": "text",
+      "status": "confirmed",
+      "class": "A",
+      "confidence": "high",
+      "source_id": "ahm-presskit-2022",
+      "range": null,
+      "file": "vehicle_data/dashboard.json",
+      "candidate_index": 0,
+      "n_candidates": 1,
+      "impact": "high",
+      "description": "Selectable gauge layouts of the 10.2-inch display",
+      "applicability": {
+        "year": "2022",
+        "market": "US",
+        "trim": "Sport Touring",
+        "body": "hatchback",
+        "gearbox": "6MT and CVT",
+        "engine": "1.5T",
+        "notes": "2022 launch press kit; the 10.2-inch cluster and 9-inch screen are listed for Sport Touring in the 2024 Canadian table too (no model-year change found for the cluster)."
+      }
+    },
+    "dashboard.gear_position_indicator_mt": {
+      "value": null,
+      "unit": "text",
+      "status": "unknown",
+      "class": null,
+      "confidence": "none",
+      "source_id": null,
+      "range": null,
+      "file": "vehicle_data/dashboard.json",
+      "candidate_index": 0,
+      "n_candidates": 1,
+      "impact": "high",
+      "description": "Gear position / shift-up indicator on the 6MT car",
+      "applicability": {}
+    },
+    "dashboard.head_up_display": {
+      "value": false,
+      "unit": "bool",
+      "status": "estimated",
+      "class": "E",
+      "confidence": "medium",
+      "source_id": null,
+      "range": [
+        false,
+        false
+      ],
+      "file": "vehicle_data/dashboard.json",
+      "candidate_index": 0,
+      "n_candidates": 1,
+      "impact": "low",
+      "description": "Head-up display",
+      "applicability": {}
+    },
+    "dashboard.infotainment_diagonal": {
+      "value": 0.2286,
+      "unit": "m",
+      "status": "confirmed",
+      "class": "A",
+      "confidence": "high",
+      "source_id": "hci-2024-specs",
+      "range": null,
+      "file": "vehicle_data/dashboard.json",
+      "candidate_index": 0,
+      "n_candidates": 1,
+      "impact": "low",
+      "description": "Centre touchscreen diagonal",
+      "applicability": {
+        "year": "2024",
+        "market": "CA",
+        "trim": "Sport Touring",
+        "body": "hatchback",
+        "gearbox": "6MT and CVT",
+        "engine": "1.5T",
+        "notes": ""
+      }
+    },
+    "dashboard.infotainment_screen": {
+      "value": "9-inch colour touchscreen including navigation",
+      "unit": "text",
+      "status": "confirmed",
+      "class": "A",
+      "confidence": "high",
+      "source_id": "hci-2024-specs",
+      "range": null,
+      "file": "vehicle_data/dashboard.json",
+      "candidate_index": 0,
+      "n_candidates": 2,
+      "impact": "medium",
+      "description": "Centre touchscreen",
+      "applicability": {
+        "year": "2024",
+        "market": "CA",
+        "trim": "Sport Touring",
+        "body": "hatchback",
+        "gearbox": "6MT and CVT",
+        "engine": "1.5T",
+        "notes": ""
+      },
+      "conflict": true
+    },
+    "dashboard.layout_zones": {
+      "value": "Left customizable area: audio/phone (left steering-wheel controls). Right area: driving info, Honda Sensing settings, navigation (right controls). Centre between gauges: vehicle functions, Honda Sensing status graphic (bird's-eye car icon whose brake/head/turn lights mirror the real car) and numerical speed.",
+      "unit": "text",
+      "status": "confirmed",
+      "class": "A",
+      "confidence": "high",
+      "source_id": "ahm-presskit-2022",
+      "range": null,
+      "file": "vehicle_data/dashboard.json",
+      "candidate_index": 0,
+      "n_candidates": 1,
+      "impact": "high",
+      "description": "Zones of the 10.2-inch display",
+      "applicability": {
+        "year": "2022",
+        "market": "US",
+        "trim": "Sport Touring",
+        "body": "hatchback",
+        "gearbox": "6MT and CVT",
+        "engine": "1.5T",
+        "notes": "2022 launch press kit; the 10.2-inch cluster and 9-inch screen are listed for Sport Touring in the 2024 Canadian table too (no model-year change found for the cluster)."
+      }
+    },
+    "dashboard.lower_trim_cluster": {
+      "value": "7-inch colour digital display (left) with depicted analog tachometer plus a physical (mechanical-needle) speedometer on the right",
+      "unit": "text",
+      "status": "confirmed",
+      "class": "A",
+      "confidence": "high",
+      "source_id": "ahm-presskit-2022",
+      "range": null,
+      "file": "vehicle_data/dashboard.json",
+      "candidate_index": 0,
+      "n_candidates": 1,
+      "impact": "low",
+      "description": "Cluster on lower hatchback trims (what the Sport Touring does NOT have)",
+      "applicability": {
+        "year": "2022",
+        "market": "US",
+        "trim": "LX/Sport/EX-L",
+        "body": "hatchback",
+        "gearbox": "6MT and CVT",
+        "engine": "1.5T",
+        "notes": ""
+      }
+    },
+    "dashboard.maintenance_minder": {
+      "value": true,
+      "unit": "bool",
+      "status": "confirmed",
+      "class": "A",
+      "confidence": "high",
+      "source_id": "hci-2024-specs",
+      "range": null,
+      "file": "vehicle_data/dashboard.json",
+      "candidate_index": 0,
+      "n_candidates": 1,
+      "impact": "low",
+      "description": "Maintenance Minder system (service messages on the display)",
+      "applicability": {
+        "year": "2024",
+        "market": "CA",
+        "trim": "Sport Touring",
+        "body": "hatchback",
+        "gearbox": "6MT and CVT",
+        "engine": "1.5T",
+        "notes": ""
+      }
+    },
+    "dashboard.odometer_location": {
+      "value": "Bottom right of centre, below the speedometer (shown '000008 miles' on the US car); outside temperature at bottom left under the tachometer; drive-mode text ('NORMAL') bottom centre",
+      "unit": "text",
+      "status": "confirmed",
+      "class": "A",
+      "confidence": "medium",
+      "source_id": "ahm-presskit-2022",
+      "range": null,
+      "file": "vehicle_data/dashboard.json",
+      "candidate_index": 0,
+      "n_candidates": 1,
+      "impact": "medium",
+      "description": "Odometer location",
+      "applicability": {
+        "year": "2022",
+        "market": "US",
+        "trim": "Sport Touring",
+        "body": "hatchback",
+        "gearbox": "CVT",
+        "engine": "1.5T",
+        "notes": "US car: mph and deg F; gear letter 'D' shows it is a CVT. Layout applies; units and the gear field differ on the Canadian 6MT car."
+      }
+    },
+    "dashboard.redzone_and_scale_ca": {
+      "value": null,
+      "unit": "text",
+      "status": "unknown",
+      "class": null,
+      "confidence": "none",
+      "source_id": null,
+      "range": null,
+      "file": "vehicle_data/dashboard.json",
+      "candidate_index": 0,
+      "n_candidates": 1,
+      "impact": "medium",
+      "description": "Tachometer red-zone start and km/h speedometer scale maximum on the Canadian car",
+      "applicability": {}
+    },
+    "dashboard.speedometer": {
+      "value": "Round speedometer on the right plus large numerical speed at top centre (US car: 0-160 mph scale)",
+      "unit": "text",
+      "status": "confirmed",
+      "class": "A",
+      "confidence": "medium",
+      "source_id": "ahm-presskit-2022",
+      "range": null,
+      "file": "vehicle_data/dashboard.json",
+      "candidate_index": 0,
+      "n_candidates": 1,
+      "impact": "medium",
+      "description": "Speedometer presentation (round mode)",
+      "applicability": {
+        "year": "2022",
+        "market": "US",
+        "trim": "Sport Touring",
+        "body": "hatchback",
+        "gearbox": "CVT",
+        "engine": "1.5T",
+        "notes": "US car: mph and deg F; gear letter 'D' shows it is a CVT. Layout applies; units and the gear field differ on the Canadian 6MT car."
+      }
+    },
+    "dashboard.tachometer": {
+      "value": "Round tachometer on the left, scale 0-8 x1000 r/min with red band at the top of the scale",
+      "unit": "text",
+      "status": "confirmed",
+      "class": "A",
+      "confidence": "medium",
+      "source_id": "ahm-presskit-2022",
+      "range": null,
+      "file": "vehicle_data/dashboard.json",
+      "candidate_index": 0,
+      "n_candidates": 1,
+      "impact": "medium",
+      "description": "Tachometer presentation (round mode)",
+      "applicability": {
+        "year": "2022",
+        "market": "US",
+        "trim": "Sport Touring",
+        "body": "hatchback",
+        "gearbox": "CVT",
+        "engine": "1.5T",
+        "notes": "US car: mph and deg F; gear letter 'D' shows it is a CVT. Layout applies; units and the gear field differ on the Canadian 6MT car."
+      }
+    },
+    "dashboard.units_canada": {
+      "value": null,
+      "unit": "text",
+      "status": "unknown",
+      "class": null,
+      "confidence": "none",
+      "source_id": null,
+      "range": null,
+      "file": "vehicle_data/dashboard.json",
+      "candidate_index": 0,
+      "n_candidates": 1,
+      "impact": "medium",
+      "description": "Display units on the Canadian car (speed, distance, fuel economy, temperature)",
+      "applicability": {}
     },
     "dimensions.approach_angle": {
       "value": null,
@@ -2804,6 +3336,21 @@
       "applicability": {
         "notes": "this car (derived)"
       }
+    },
+    "engine.torque_curve_stock_6mt": {
+      "value": null,
+      "unit": "N*m",
+      "status": "unknown",
+      "class": null,
+      "confidence": "none",
+      "source_id": null,
+      "range": null,
+      "file": "vehicle_data/engine.json",
+      "candidate_index": 0,
+      "n_candidates": 2,
+      "impact": "critical",
+      "description": "Stock torque/power vs rpm curve for the 1.5T 6MT (crank or wheel, with boost onset, plateau and taper)",
+      "applicability": {}
     },
     "engine.torque_max": {
       "value": 239.97977685465787,
@@ -4758,6 +5305,363 @@
       "description": "Unsprung mass per rear corner",
       "applicability": {}
     },
+    "paint.base_albedo_linear": {
+      "value": [
+        0.1819,
+        0.2054,
+        0.2367
+      ],
+      "unit": "1",
+      "status": "estimated",
+      "class": "E",
+      "confidence": "low",
+      "source_id": "ahm-infocenter-2024-colors",
+      "range": [
+        [
+          0.1091,
+          0.1232,
+          0.142
+        ],
+        [
+          0.2729,
+          0.3081,
+          0.355
+        ]
+      ],
+      "file": "vehicle_data/paint.json",
+      "candidate_index": 0,
+      "n_candidates": 1,
+      "impact": "high",
+      "description": "Base albedo (linear RGB) for a PBR base layer",
+      "applicability": {}
+    },
+    "paint.base_chroma": {
+      "value": 5.03,
+      "unit": "1",
+      "status": "estimated",
+      "class": "E",
+      "confidence": "low",
+      "source_id": "ahm-infocenter-2024-colors",
+      "range": [
+        4.31,
+        11.78
+      ],
+      "file": "vehicle_data/paint.json",
+      "candidate_index": 0,
+      "n_candidates": 1,
+      "impact": "medium",
+      "description": "Chroma C*ab of the body colour (how far from neutral grey)",
+      "applicability": {}
+    },
+    "paint.base_hue_deg": {
+      "value": 272.2,
+      "unit": "deg",
+      "status": "estimated",
+      "class": "E",
+      "confidence": "low",
+      "source_id": "ahm-infocenter-2024-colors",
+      "range": [
+        242.2,
+        302.2
+      ],
+      "file": "vehicle_data/paint.json",
+      "candidate_index": 0,
+      "n_candidates": 1,
+      "impact": "medium",
+      "description": "Hue angle h_ab of the body colour (deg; ~200-260 = blue-ish grey)",
+      "applicability": {}
+    },
+    "paint.base_lab": {
+      "value": [
+        50.92,
+        0.19,
+        -4.97
+      ],
+      "unit": "1",
+      "status": "estimated",
+      "class": "E",
+      "confidence": "low",
+      "source_id": "ahm-infocenter-2024-colors",
+      "range": [
+        [
+          34.89,
+          -4.28,
+          -11.07
+        ],
+        [
+          63.89,
+          0.83,
+          -3.77
+        ]
+      ],
+      "file": "vehicle_data/paint.json",
+      "candidate_index": 0,
+      "n_candidates": 1,
+      "impact": "high",
+      "description": "Representative body colour, CIELAB (D65) median of swatch pixels",
+      "applicability": {
+        "year": "2024 (MY18 swatch asset)",
+        "market": "US",
+        "trim": "all trims",
+        "body": "hatchback",
+        "gearbox": "any",
+        "engine": "1.5T",
+        "notes": ""
+      }
+    },
+    "paint.base_roughness": {
+      "value": 0.4,
+      "unit": "1",
+      "status": "estimated",
+      "class": "E",
+      "confidence": "low",
+      "source_id": null,
+      "range": [
+        0.25,
+        0.6
+      ],
+      "file": "vehicle_data/paint.json",
+      "candidate_index": 0,
+      "n_candidates": 1,
+      "impact": "low",
+      "description": "Base/pearl layer roughness under the clearcoat (GGX perceptual)",
+      "applicability": {}
+    },
+    "paint.base_srgb": {
+      "value": [
+        117,
+        122,
+        131
+      ],
+      "unit": "1",
+      "status": "estimated",
+      "class": "E",
+      "confidence": "low",
+      "source_id": "ahm-infocenter-2024-colors",
+      "range": [
+        [
+          70,
+          85,
+          94
+        ],
+        [
+          149,
+          156,
+          163
+        ]
+      ],
+      "file": "vehicle_data/paint.json",
+      "candidate_index": 0,
+      "n_candidates": 1,
+      "impact": "high",
+      "description": "Representative body colour, sRGB 0-255 (diffuse, mid-tone)",
+      "applicability": {
+        "year": "2024 (MY18 swatch asset)",
+        "market": "US",
+        "trim": "all trims",
+        "body": "hatchback",
+        "gearbox": "any",
+        "engine": "1.5T",
+        "notes": ""
+      }
+    },
+    "paint.clearcoat_ior": {
+      "value": 1.5,
+      "unit": "1",
+      "status": "estimated",
+      "class": "E",
+      "confidence": "low",
+      "source_id": null,
+      "range": [
+        1.45,
+        1.55
+      ],
+      "file": "vehicle_data/paint.json",
+      "candidate_index": 0,
+      "n_candidates": 1,
+      "impact": "low",
+      "description": "Clearcoat refractive index (for a layered BRDF)",
+      "applicability": {}
+    },
+    "paint.clearcoat_roughness": {
+      "value": 0.05,
+      "unit": "1",
+      "status": "estimated",
+      "class": "E",
+      "confidence": "low",
+      "source_id": null,
+      "range": [
+        0.02,
+        0.12
+      ],
+      "file": "vehicle_data/paint.json",
+      "candidate_index": 0,
+      "n_candidates": 1,
+      "impact": "medium",
+      "description": "Clearcoat roughness (GGX perceptual roughness, new clean car)",
+      "applicability": {}
+    },
+    "paint.code": {
+      "value": "NH-877P",
+      "unit": "text",
+      "status": "confirmed",
+      "class": "A",
+      "confidence": "high",
+      "source_id": "hci-2023-specs",
+      "range": null,
+      "file": "vehicle_data/paint.json",
+      "candidate_index": 0,
+      "n_candidates": 4,
+      "impact": "high",
+      "description": "Honda paint code of Sonic Grey Pearl",
+      "applicability": {
+        "year": "2023",
+        "market": "CA",
+        "trim": "Sport Touring",
+        "body": "hatchback",
+        "gearbox": "6MT and CVT",
+        "engine": "1.5T",
+        "notes": ""
+      }
+    },
+    "paint.finish_family": {
+      "value": "pearl (pearlescent effect pigment under clearcoat)",
+      "unit": "text",
+      "status": "confirmed",
+      "class": "A",
+      "confidence": "medium",
+      "source_id": "hci-2023-specs",
+      "range": null,
+      "file": "vehicle_data/paint.json",
+      "candidate_index": 0,
+      "n_candidates": 1,
+      "impact": "medium",
+      "description": "Paint finish family (from Honda's name: Pearl = mica/pearlescent effect pigment)",
+      "applicability": {
+        "year": "2023",
+        "market": "CA",
+        "trim": "Sport Touring",
+        "body": "hatchback",
+        "gearbox": "6MT and CVT",
+        "engine": "1.5T",
+        "notes": ""
+      }
+    },
+    "paint.flake": {
+      "value": null,
+      "unit": "text",
+      "status": "unknown",
+      "class": null,
+      "confidence": "none",
+      "source_id": null,
+      "range": null,
+      "file": "vehicle_data/paint.json",
+      "candidate_index": 0,
+      "n_candidates": 1,
+      "impact": "medium",
+      "description": "Flake / effect pigment type, size and density",
+      "applicability": {}
+    },
+    "paint.interior_with_paint": {
+      "value": "Black Leather",
+      "unit": "text",
+      "status": "confirmed",
+      "class": "A",
+      "confidence": "high",
+      "source_id": "hci-2023-specs",
+      "range": null,
+      "file": "vehicle_data/paint.json",
+      "candidate_index": 0,
+      "n_candidates": 1,
+      "impact": "low",
+      "description": "Interior offered with Sonic Grey Pearl on Sport Touring",
+      "applicability": {
+        "year": "2023",
+        "market": "CA",
+        "trim": "Sport Touring",
+        "body": "hatchback",
+        "gearbox": "6MT and CVT",
+        "engine": "1.5T",
+        "notes": ""
+      }
+    },
+    "paint.layer_structure": {
+      "value": null,
+      "unit": "text",
+      "status": "unknown",
+      "class": null,
+      "confidence": "none",
+      "source_id": null,
+      "range": null,
+      "file": "vehicle_data/paint.json",
+      "candidate_index": 0,
+      "n_candidates": 1,
+      "impact": "low",
+      "description": "Paint layer structure (e-coat/primer/base/[mid-coat]/clear)",
+      "applicability": {}
+    },
+    "paint.name": {
+      "value": "Sonic Grey Pearl",
+      "unit": "text",
+      "status": "confirmed",
+      "class": "A",
+      "confidence": "high",
+      "source_id": "hci-2023-specs",
+      "range": null,
+      "file": "vehicle_data/paint.json",
+      "candidate_index": 0,
+      "n_candidates": 2,
+      "impact": "medium",
+      "description": "Paint name (Canadian spelling selected)",
+      "applicability": {
+        "year": "2023",
+        "market": "CA",
+        "trim": "Sport Touring",
+        "body": "hatchback",
+        "gearbox": "6MT and CVT",
+        "engine": "1.5T",
+        "notes": ""
+      },
+      "conflict": true
+    },
+    "paint.option_cost_us_2022": {
+      "value": "Sonic Gray paint, $395 (US 2022)",
+      "unit": "text",
+      "status": "confirmed",
+      "class": "C",
+      "confidence": "high",
+      "source_id": "cd-2022-hatch-st-6mt",
+      "range": null,
+      "file": "vehicle_data/paint.json",
+      "candidate_index": 0,
+      "n_candidates": 1,
+      "impact": "low",
+      "description": "Sonic Gray paint was an extra-cost option on the C&D 2022 test car (identity cross-check only)",
+      "applicability": {
+        "year": "2022",
+        "market": "US",
+        "trim": "Sport Touring",
+        "body": "hatchback",
+        "gearbox": "6MT",
+        "engine": "1.5T",
+        "notes": ""
+      }
+    },
+    "paint.pearl_shift": {
+      "value": null,
+      "unit": "text",
+      "status": "unknown",
+      "class": null,
+      "confidence": "none",
+      "source_id": null,
+      "range": null,
+      "file": "vehicle_data/paint.json",
+      "candidate_index": 0,
+      "n_candidates": 1,
+      "impact": "medium",
+      "description": "Pearl flop / colour shift with viewing angle",
+      "applicability": {}
+    },
     "perf.accel_0_100kmh": {
       "value": null,
       "unit": "s",
@@ -5134,6 +6038,697 @@
         "engine": "1.5T",
         "notes": "Car and Driver test car: 2022 Civic Sport Touring Hatchback, 6-speed manual, Sonic Gray paint, Continental ContiProContact 235/40R-18 91W M+S, C/D-measured curb weight 3024 lb. Same body/engine/gearbox as the 2024 target; model-year powertrain/chassis changes 2022->2024 to be confirmed by the identity thread (none known to this thread)."
       }
+    },
+    "platform.ac_axis_up_forward": {
+      "value": "+Y up, +Z forward (dummies Z forward, Y up)",
+      "unit": "text",
+      "status": "confirmed",
+      "class": "C",
+      "confidence": "medium",
+      "source_id": "acm-first-car",
+      "range": null,
+      "file": "vehicle_data/platform.json",
+      "candidate_index": 0,
+      "n_candidates": 1,
+      "impact": "critical",
+      "description": "AC/KN5 car-space up and forward axes",
+      "applicability": {
+        "year": "",
+        "market": "",
+        "trim": "",
+        "body": "",
+        "gearbox": "",
+        "engine": "",
+        "notes": "Platform documentation (Assetto Corsa / Custom Shaders Patch); not vehicle-specific."
+      }
+    },
+    "platform.ac_axis_x_sign": {
+      "value": null,
+      "unit": "text",
+      "status": "unknown",
+      "class": null,
+      "confidence": "none",
+      "source_id": null,
+      "range": null,
+      "file": "vehicle_data/platform.json",
+      "candidate_index": 0,
+      "n_candidates": 1,
+      "impact": "critical",
+      "description": "Sign of AC car-space +X (car's left or right)",
+      "applicability": {
+        "year": "",
+        "market": "",
+        "trim": "",
+        "body": "",
+        "gearbox": "",
+        "engine": "",
+        "notes": "Platform documentation (Assetto Corsa / Custom Shaders Patch); not vehicle-specific."
+      }
+    },
+    "platform.ac_vertical_origin": {
+      "value": "ground plane = 0 (wheels touching Y=0)",
+      "unit": "text",
+      "status": "confirmed",
+      "class": "C",
+      "confidence": "medium",
+      "source_id": "acm-first-car",
+      "range": null,
+      "file": "vehicle_data/platform.json",
+      "candidate_index": 0,
+      "n_candidates": 1,
+      "impact": "high",
+      "description": "Vertical origin of the car model",
+      "applicability": {
+        "year": "",
+        "market": "",
+        "trim": "",
+        "body": "",
+        "gearbox": "",
+        "engine": "",
+        "notes": "Platform documentation (Assetto Corsa / Custom Shaders Patch); not vehicle-specific."
+      }
+    },
+    "platform.animation_pipeline": {
+      "value": "animations/*.ksanim produced from baked FBX animation imported into ksEditor (or a Blender ksanim exporter); CSP [ANIMATION_...] binds a .ksanim to any instrument input",
+      "unit": "text",
+      "status": "confirmed",
+      "class": "A",
+      "confidence": "medium",
+      "source_id": "csp-wiki-animations",
+      "range": null,
+      "file": "vehicle_data/platform.json",
+      "candidate_index": 0,
+      "n_candidates": 1,
+      "impact": "high",
+      "description": "How .ksanim animations are produced and used",
+      "applicability": {
+        "year": "",
+        "market": "",
+        "trim": "",
+        "body": "",
+        "gearbox": "",
+        "engine": "",
+        "notes": "Platform documentation (Assetto Corsa / Custom Shaders Patch); not vehicle-specific."
+      }
+    },
+    "platform.audio_engine_event_params": {
+      "value": "engine_ext/engine_int: rpms, throttle; turbo: boost, bov, bov_decay; backfire_ext/int: throttle; limiter: decay; transmission: drivetrain_speed, throttle; gear_ext/int: state",
+      "unit": "text",
+      "status": "confirmed",
+      "class": "A",
+      "confidence": "medium",
+      "source_id": "csp-wiki-audio",
+      "range": null,
+      "file": "vehicle_data/platform.json",
+      "candidate_index": 0,
+      "n_candidates": 1,
+      "impact": "critical",
+      "description": "Game-supplied parameters on engine/turbo/backfire/etc. events (as exposed by CSP's transform keys)",
+      "applicability": {
+        "year": "",
+        "market": "",
+        "trim": "",
+        "body": "",
+        "gearbox": "",
+        "engine": "",
+        "notes": "Platform documentation (Assetto Corsa / Custom Shaders Patch); not vehicle-specific."
+      }
+    },
+    "platform.audio_event_path_format": {
+      "value": "event:/cars/<car_folder_id>/<event> (e.g. engine_ext, engine_int, door)",
+      "unit": "text",
+      "status": "confirmed",
+      "class": "A",
+      "confidence": "high",
+      "source_id": "csp-lua-audio",
+      "range": null,
+      "file": "vehicle_data/platform.json",
+      "candidate_index": 0,
+      "n_candidates": 1,
+      "impact": "high",
+      "description": "FMOD event path convention for car sound events",
+      "applicability": {
+        "year": "",
+        "market": "",
+        "trim": "",
+        "body": "",
+        "gearbox": "",
+        "engine": "",
+        "notes": "Platform documentation (Assetto Corsa / Custom Shaders Patch); not vehicle-specific."
+      }
+    },
+    "platform.audio_sfx_files": {
+      "value": "sfx/<car_folder_id>.bank + sfx/GUIDs.txt",
+      "unit": "text",
+      "status": "confirmed",
+      "class": "C",
+      "confidence": "high",
+      "source_id": "cm-workshop",
+      "range": null,
+      "file": "vehicle_data/platform.json",
+      "candidate_index": 0,
+      "n_candidates": 1,
+      "impact": "high",
+      "description": "Files the car's sound needs",
+      "applicability": {
+        "year": "",
+        "market": "",
+        "trim": "",
+        "body": "",
+        "gearbox": "",
+        "engine": "",
+        "notes": "Platform documentation (Assetto Corsa / Custom Shaders Patch); not vehicle-specific."
+      }
+    },
+    "platform.blender_to_kn5_mapping": {
+      "value": "kn5(x, y, z) = blender(x, z, -y)",
+      "unit": "text",
+      "status": "confirmed",
+      "class": "C",
+      "confidence": "medium",
+      "source_id": "blender-kn5",
+      "range": null,
+      "file": "vehicle_data/platform.json",
+      "candidate_index": 0,
+      "n_candidates": 1,
+      "impact": "medium",
+      "description": "Axis mapping used by a community Blender->KN5 exporter",
+      "applicability": {
+        "year": "",
+        "market": "",
+        "trim": "",
+        "body": "",
+        "gearbox": "",
+        "engine": "",
+        "notes": "Platform documentation (Assetto Corsa / Custom Shaders Patch); not vehicle-specific."
+      }
+    },
+    "platform.car_folder_name_max_length": {
+      "value": 32,
+      "unit": "count",
+      "status": "confirmed",
+      "class": "C",
+      "confidence": "high",
+      "source_id": "acm-first-car",
+      "range": null,
+      "file": "vehicle_data/platform.json",
+      "candidate_index": 0,
+      "n_candidates": 1,
+      "impact": "low",
+      "description": "Max length of the car folder name",
+      "applicability": {
+        "year": "",
+        "market": "",
+        "trim": "",
+        "body": "",
+        "gearbox": "",
+        "engine": "",
+        "notes": "Platform documentation (Assetto Corsa / Custom Shaders Patch); not vehicle-specific."
+      }
+    },
+    "platform.collider_rules": {
+      "value": "very low poly (40-60 tris) box-like shape, material named GL with GL shader in ksEditor, no vertex below car bottom, pivot at ground 0",
+      "unit": "text",
+      "status": "confirmed",
+      "class": "C",
+      "confidence": "medium",
+      "source_id": "acm-first-car",
+      "range": null,
+      "file": "vehicle_data/platform.json",
+      "candidate_index": 0,
+      "n_candidates": 1,
+      "impact": "high",
+      "description": "collider.kn5 construction",
+      "applicability": {
+        "year": "",
+        "market": "",
+        "trim": "",
+        "body": "",
+        "gearbox": "",
+        "engine": "",
+        "notes": "Platform documentation (Assetto Corsa / Custom Shaders Patch); not vehicle-specific."
+      }
+    },
+    "platform.csp_min_version_cphys_turbo_boost_read": {
+      "value": "0.3.0-preview445",
+      "unit": "text",
+      "status": "confirmed",
+      "class": "A",
+      "confidence": "high",
+      "source_id": "csp-wiki-physics-scripts",
+      "range": null,
+      "file": "vehicle_data/platform.json",
+      "candidate_index": 0,
+      "n_candidates": 1,
+      "impact": "medium",
+      "description": "CSP build needed for carPh.turboBoost in physics scripts",
+      "applicability": {
+        "year": "",
+        "market": "",
+        "trim": "",
+        "body": "",
+        "gearbox": "",
+        "engine": "",
+        "notes": "Platform documentation (Assetto Corsa / Custom Shaders Patch); not vehicle-specific."
+      }
+    },
+    "platform.csp_min_version_physics_script": {
+      "value": "0.1.77",
+      "unit": "text",
+      "status": "confirmed",
+      "class": "A",
+      "confidence": "high",
+      "source_id": "csp-wiki-physics-scripts",
+      "range": null,
+      "file": "vehicle_data/platform.json",
+      "candidate_index": 0,
+      "n_candidates": 1,
+      "impact": "high",
+      "description": "Minimum CSP version for a car physics Lua script (data/script.lua)",
+      "applicability": {
+        "year": "",
+        "market": "",
+        "trim": "",
+        "body": "",
+        "gearbox": "",
+        "engine": "",
+        "notes": "Platform documentation (Assetto Corsa / Custom Shaders Patch); not vehicle-specific."
+      }
+    },
+    "platform.csp_min_version_visual_car_script": {
+      "value": null,
+      "unit": "text",
+      "status": "unknown",
+      "class": null,
+      "confidence": "none",
+      "source_id": null,
+      "range": null,
+      "file": "vehicle_data/platform.json",
+      "candidate_index": 0,
+      "n_candidates": 1,
+      "impact": "medium",
+      "description": "Minimum CSP version for a visual (ext_config [SCRIPT_...]) car Lua script",
+      "applicability": {
+        "year": "",
+        "market": "",
+        "trim": "",
+        "body": "",
+        "gearbox": "",
+        "engine": "",
+        "notes": "Platform documentation (Assetto Corsa / Custom Shaders Patch); not vehicle-specific."
+      }
+    },
+    "platform.csp_turbo_v1": {
+      "value": "CSP 0.2.8 (05/2025): engine.ini [HEADER] TURBO_VERSION=1, [TURBO_n] FLOW_ON_CUT",
+      "unit": "text",
+      "status": "confirmed",
+      "class": "A",
+      "confidence": "high",
+      "source_id": "csp-wiki-powertrain",
+      "range": null,
+      "file": "vehicle_data/platform.json",
+      "candidate_index": 0,
+      "n_candidates": 1,
+      "impact": "medium",
+      "description": "CSP extended turbo model (TURBO_VERSION=1) availability",
+      "applicability": {
+        "year": "",
+        "market": "",
+        "trim": "",
+        "body": "",
+        "gearbox": "",
+        "engine": "",
+        "notes": "Platform documentation (Assetto Corsa / Custom Shaders Patch); not vehicle-specific."
+      }
+    },
+    "platform.data_packing": {
+      "value": "data/ folder packed to data.acd; encryption key derived from the car folder name",
+      "unit": "text",
+      "status": "confirmed",
+      "class": "C",
+      "confidence": "medium",
+      "source_id": "cm-acd",
+      "range": null,
+      "file": "vehicle_data/platform.json",
+      "candidate_index": 0,
+      "n_candidates": 1,
+      "impact": "high",
+      "description": "Release packing of data folder",
+      "applicability": {
+        "year": "",
+        "market": "",
+        "trim": "",
+        "body": "",
+        "gearbox": "",
+        "engine": "",
+        "notes": "Platform documentation (Assetto Corsa / Custom Shaders Patch); not vehicle-specific."
+      }
+    },
+    "platform.digital_instrument_options": {
+      "value": "Kunos data/digital_instruments.ini + analog_instruments.ini; CSP can only re-format existing digital items ([DI_*] DIGITAL_ITEM=n) or draw full displays with [SCRIPTABLE_DISPLAY_...] Lua on a mesh",
+      "unit": "text",
+      "status": "confirmed",
+      "class": "A",
+      "confidence": "high",
+      "source_id": "csp-wiki-digital",
+      "range": null,
+      "file": "vehicle_data/platform.json",
+      "candidate_index": 0,
+      "n_candidates": 1,
+      "impact": "high",
+      "description": "Instrument options for the digital cluster",
+      "applicability": {
+        "year": "",
+        "market": "",
+        "trim": "",
+        "body": "",
+        "gearbox": "",
+        "engine": "",
+        "notes": "Platform documentation (Assetto Corsa / Custom Shaders Patch); not vehicle-specific."
+      }
+    },
+    "platform.extended_physics_switch": {
+      "value": "car.ini [HEADER] VERSION=extended-2 (optionally [_EXTENSION] REQUIRED_VERSION=<build id>)",
+      "unit": "text",
+      "status": "confirmed",
+      "class": "A",
+      "confidence": "high",
+      "source_id": "csp-wiki-extended-physics",
+      "range": null,
+      "file": "vehicle_data/platform.json",
+      "candidate_index": 0,
+      "n_candidates": 1,
+      "impact": "high",
+      "description": "How CSP extended physics is enabled for a car",
+      "applicability": {
+        "year": "",
+        "market": "",
+        "trim": "",
+        "body": "",
+        "gearbox": "",
+        "engine": "",
+        "notes": "Platform documentation (Assetto Corsa / Custom Shaders Patch); not vehicle-specific."
+      }
+    },
+    "platform.fbx_version": {
+      "value": "FBX 2014/2015 (2016 unsupported)",
+      "unit": "text",
+      "status": "confirmed",
+      "class": "C",
+      "confidence": "medium",
+      "source_id": "acm-first-car",
+      "range": null,
+      "file": "vehicle_data/platform.json",
+      "candidate_index": 0,
+      "n_candidates": 1,
+      "impact": "high",
+      "description": "FBX version accepted by ksEditor",
+      "applicability": {
+        "year": "",
+        "market": "",
+        "trim": "",
+        "body": "",
+        "gearbox": "",
+        "engine": "",
+        "notes": "Platform documentation (Assetto Corsa / Custom Shaders Patch); not vehicle-specific."
+      }
+    },
+    "platform.fmod_studio_version": {
+      "value": "1.08.12",
+      "unit": "text",
+      "status": "confirmed",
+      "class": "C",
+      "confidence": "medium",
+      "source_id": "acm-sound-guide",
+      "range": null,
+      "file": "vehicle_data/platform.json",
+      "candidate_index": 0,
+      "n_candidates": 1,
+      "impact": "critical",
+      "description": "FMOD Studio version required to build AC car soundbanks",
+      "applicability": {
+        "year": "",
+        "market": "",
+        "trim": "",
+        "body": "",
+        "gearbox": "",
+        "engine": "",
+        "notes": "Platform documentation (Assetto Corsa / Custom Shaders Patch); not vehicle-specific."
+      }
+    },
+    "platform.instrument_inputs": {
+      "value": "SPEED, RPM, GAS, BRAKE, CLUTCH, FUEL (l), WATER_TEMPERATURE (°C), TURBO, GEAR, ENGINE_TORQUE, TURNSIGNAL_LEFT/RIGHT, HAZARD, LOWBEAM/HIGHBEAM, SEATBELT, ABS_INACTION, TC_INACTION, CPHYS_SCRIPT_0..7, ...",
+      "unit": "text",
+      "status": "confirmed",
+      "class": "A",
+      "confidence": "high",
+      "source_id": "csp-wiki-inputs",
+      "range": null,
+      "file": "vehicle_data/platform.json",
+      "candidate_index": 0,
+      "n_candidates": 1,
+      "impact": "high",
+      "description": "Car-state inputs available to CSP instruments/emissives/animations",
+      "applicability": {
+        "year": "",
+        "market": "",
+        "trim": "",
+        "body": "",
+        "gearbox": "",
+        "engine": "",
+        "notes": "Platform documentation (Assetto Corsa / Custom Shaders Patch); not vehicle-specific."
+      }
+    },
+    "platform.lod_structure": {
+      "value": "One KN5 per LOD listed in data/lods.ini ([LOD_0..n] FILE, IN, OUT; optional [LOD_HR]); [COCKPIT_HR] DISTANCE_SWITCH toggles COCKPIT_HR/COCKPIT_LR; physics collider is a separate collider.kn5 in the car root",
+      "unit": "text",
+      "status": "confirmed",
+      "class": "C",
+      "confidence": "medium",
+      "source_id": "cm-carobject",
+      "range": null,
+      "file": "vehicle_data/platform.json",
+      "candidate_index": 0,
+      "n_candidates": 1,
+      "impact": "high",
+      "description": "LOD / collider structure",
+      "applicability": {
+        "year": "",
+        "market": "",
+        "trim": "",
+        "body": "",
+        "gearbox": "",
+        "engine": "",
+        "notes": "Platform documentation (Assetto Corsa / Custom Shaders Patch); not vehicle-specific."
+      }
+    },
+    "platform.lod_triangle_targets": {
+      "value": "LOD_1 <= 45k tris (superb 22k), LOD_2 <= 11k (6k), LOD_3 <= 5k (3k); LOD_0 OUT ~15 m, LOD_1 OUT 25-60 m, LOD_2 OUT 60-250 m; 4 LODs; COCKPIT_HR < 20k tris or COCKPIT_LR with switch ~7 m",
+      "unit": "text",
+      "status": "confirmed",
+      "class": "C",
+      "confidence": "low",
+      "source_id": "cm-analyzer",
+      "range": null,
+      "file": "vehicle_data/platform.json",
+      "candidate_index": 0,
+      "n_candidates": 1,
+      "impact": "low",
+      "description": "LOD triangle/distance targets used by Content Manager's car analyzer (heuristic)",
+      "applicability": {
+        "year": "",
+        "market": "",
+        "trim": "",
+        "body": "",
+        "gearbox": "",
+        "engine": "",
+        "notes": "Platform documentation (Assetto Corsa / Custom Shaders Patch); not vehicle-specific."
+      }
+    },
+    "platform.model_units": {
+      "value": "meters",
+      "unit": "text",
+      "status": "confirmed",
+      "class": "C",
+      "confidence": "medium",
+      "source_id": "acm-first-car",
+      "range": null,
+      "file": "vehicle_data/platform.json",
+      "candidate_index": 0,
+      "n_candidates": 1,
+      "impact": "high",
+      "description": "Model units",
+      "applicability": {
+        "year": "",
+        "market": "",
+        "trim": "",
+        "body": "",
+        "gearbox": "",
+        "engine": "",
+        "notes": "Platform documentation (Assetto Corsa / Custom Shaders Patch); not vehicle-specific."
+      }
+    },
+    "platform.node_names_cockpit": {
+      "value": "COCKPIT_HR/COCKPIT_LR, STEER_HR/STEER_LR, SHIFT_HD/SHIFT_LD, CINTURE_ON/CINTURE_OFF",
+      "unit": "text",
+      "status": "confirmed",
+      "class": "C",
+      "confidence": "medium",
+      "source_id": "cm-utils",
+      "range": null,
+      "file": "vehicle_data/platform.json",
+      "candidate_index": 0,
+      "n_candidates": 1,
+      "impact": "high",
+      "description": "Cockpit/steering/shifter/seatbelt node names",
+      "applicability": {
+        "year": "",
+        "market": "",
+        "trim": "",
+        "body": "",
+        "gearbox": "",
+        "engine": "",
+        "notes": "Platform documentation (Assetto Corsa / Custom Shaders Patch); not vehicle-specific."
+      }
+    },
+    "platform.node_names_wheels": {
+      "value": "WHEEL_LF/RF/LR/RR, SUSP_LF/RF/LR/RR, HUB_xx (optional), DISC_xx (or DISC_xx_ANIM)",
+      "unit": "text",
+      "status": "confirmed",
+      "class": "C",
+      "confidence": "medium",
+      "source_id": "cm-wheels",
+      "range": null,
+      "file": "vehicle_data/platform.json",
+      "candidate_index": 0,
+      "n_candidates": 1,
+      "impact": "critical",
+      "description": "Wheel/suspension node names",
+      "applicability": {
+        "year": "",
+        "market": "",
+        "trim": "",
+        "body": "",
+        "gearbox": "",
+        "engine": "",
+        "notes": "Platform documentation (Assetto Corsa / Custom Shaders Patch); not vehicle-specific."
+      }
+    },
+    "platform.power_curve_file": {
+      "value": "engine.ini [HEADER] POWER_CURVE=power.lut (rpm|torque N*m), limiter at [ENGINE_DATA] LIMITER, idle at [ENGINE_DATA] MINIMUM",
+      "unit": "text",
+      "status": "confirmed",
+      "class": "C",
+      "confidence": "medium",
+      "source_id": "cm-torque",
+      "range": null,
+      "file": "vehicle_data/platform.json",
+      "candidate_index": 0,
+      "n_candidates": 1,
+      "impact": "critical",
+      "description": "Engine torque curve file",
+      "applicability": {
+        "year": "",
+        "market": "",
+        "trim": "",
+        "body": "",
+        "gearbox": "",
+        "engine": "",
+        "notes": "Platform documentation (Assetto Corsa / Custom Shaders Patch); not vehicle-specific."
+      }
+    },
+    "platform.required_data_files": {
+      "value": "aero.ini (+wing LUTs), cameras.ini, car.ini, driver3d.ini, engine.ini (+power.lut), lods.ini, suspensions.ini, tyres.ini (+LUTs); brakes.ini, colliders.ini, drivetrain.ini, setup.ini needed for sane behaviour",
+      "unit": "text",
+      "status": "confirmed",
+      "class": "C",
+      "confidence": "medium",
+      "source_id": "acm-first-car",
+      "range": null,
+      "file": "vehicle_data/platform.json",
+      "candidate_index": 0,
+      "n_candidates": 1,
+      "impact": "critical",
+      "description": "Data files without which the car will not load (per community guide)",
+      "applicability": {
+        "year": "",
+        "market": "",
+        "trim": "",
+        "body": "",
+        "gearbox": "",
+        "engine": "",
+        "notes": "Platform documentation (Assetto Corsa / Custom Shaders Patch); not vehicle-specific."
+      }
+    },
+    "platform.texture_rules": {
+      "value": "DDS; power-of-two sizes; BC7 allowed but must include mipmaps",
+      "unit": "text",
+      "status": "confirmed",
+      "class": "C",
+      "confidence": "low",
+      "source_id": "gtp-dds",
+      "range": null,
+      "file": "vehicle_data/platform.json",
+      "candidate_index": 0,
+      "n_candidates": 1,
+      "impact": "medium",
+      "description": "Texture format constraints",
+      "applicability": {
+        "year": "",
+        "market": "",
+        "trim": "",
+        "body": "",
+        "gearbox": "",
+        "engine": "",
+        "notes": "Platform documentation (Assetto Corsa / Custom Shaders Patch); not vehicle-specific."
+      }
+    },
+    "platform.turbo_definition_location": {
+      "value": "engine.ini [TURBO_0..N] sections (keys MAX_BOOST, WASTEGATE, REFERENCE_RPM, GAMMA, LAG_UP, LAG_DN, DISPLAY_MAX_BOOST, COCKPIT_ADJUSTABLE); optional ctrl_turbo<N>.ini controllers; no turbo.ini",
+      "unit": "text",
+      "status": "confirmed",
+      "class": "A",
+      "confidence": "high",
+      "source_id": "csp-lua-ex-turbo",
+      "range": null,
+      "file": "vehicle_data/platform.json",
+      "candidate_index": 0,
+      "n_candidates": 1,
+      "impact": "critical",
+      "description": "Where AC defines turbochargers",
+      "applicability": {
+        "year": "",
+        "market": "",
+        "trim": "",
+        "body": "",
+        "gearbox": "",
+        "engine": "",
+        "notes": "Platform documentation (Assetto Corsa / Custom Shaders Patch); not vehicle-specific."
+      }
+    },
+    "platform.turbo_torque_model": {
+      "value": "intensity = saturate(rpm*gas/REFERENCE_RPM)^GAMMA; spinning += (intensity - spinning)*(LAG_UP or LAG_DN)*dt; boost = MAX_BOOST*spinning (wastegate clip)",
+      "unit": "text",
+      "status": "confirmed",
+      "class": "A",
+      "confidence": "medium",
+      "source_id": "csp-lua-ex-turbo",
+      "range": null,
+      "file": "vehicle_data/platform.json",
+      "candidate_index": 1,
+      "n_candidates": 2,
+      "impact": "critical",
+      "description": "How boost scales torque in AC (steady state, full throttle)",
+      "applicability": {
+        "year": "",
+        "market": "",
+        "trim": "",
+        "body": "",
+        "gearbox": "",
+        "engine": "",
+        "notes": "Platform documentation (Assetto Corsa / Custom Shaders Patch); not vehicle-specific."
+      },
+      "conflict": true
     },
     "proportions.arch_gap_front": {
       "value": 0.3899193986141562,
@@ -8375,6 +9970,105 @@
   },
   "conflicts": [
     {
+      "key": "dashboard.cluster_type",
+      "selected": {
+        "file": "vehicle_data/dashboard.json",
+        "index": 0,
+        "value": "10.2-inch colour TFT full digital driver meter display",
+        "unit": "text",
+        "class": "A",
+        "source_id": "hci-2024-specs",
+        "applicability": {
+          "year": "2024",
+          "market": "CA",
+          "trim": "Sport Touring",
+          "body": "hatchback",
+          "gearbox": "6MT and CVT",
+          "engine": "1.5T",
+          "notes": ""
+        },
+        "selection_reason": "Canadian 2024 source for the exact trim."
+      },
+      "others": [
+        {
+          "file": "vehicle_data/dashboard.json",
+          "index": 1,
+          "value": "10.2-inch digital instrument cluster",
+          "unit": "text",
+          "class": "A",
+          "source_id": "ahm-hondanews-2024-specs",
+          "applicability": {
+            "year": "2024",
+            "market": "US",
+            "trim": "Sport Touring",
+            "body": "hatchback",
+            "gearbox": "6MT and CVT",
+            "engine": "1.5T",
+            "notes": ""
+          }
+        },
+        {
+          "file": "vehicle_data/dashboard.json",
+          "index": 2,
+          "value": "10.2-inch all-digital colour instrument display",
+          "unit": "text",
+          "class": "A",
+          "source_id": "ahm-presskit-2022",
+          "applicability": {
+            "year": "2022",
+            "market": "US",
+            "trim": "Sport Touring",
+            "body": "hatchback",
+            "gearbox": "6MT and CVT",
+            "engine": "1.5T",
+            "notes": "2022 launch press kit; the 10.2-inch cluster and 9-inch screen are listed for Sport Touring in the 2024 Canadian table too (no model-year change found for the cluster)."
+          }
+        }
+      ],
+      "rule": "precedence: user > A > B/C; then applicability (2024, CA, Sport Touring, 6MT); then prefer flag; then confidence"
+    },
+    {
+      "key": "dashboard.infotainment_screen",
+      "selected": {
+        "file": "vehicle_data/dashboard.json",
+        "index": 0,
+        "value": "9-inch colour touchscreen including navigation",
+        "unit": "text",
+        "class": "A",
+        "source_id": "hci-2024-specs",
+        "applicability": {
+          "year": "2024",
+          "market": "CA",
+          "trim": "Sport Touring",
+          "body": "hatchback",
+          "gearbox": "6MT and CVT",
+          "engine": "1.5T",
+          "notes": ""
+        },
+        "selection_reason": "Canadian 2024 exact trim."
+      },
+      "others": [
+        {
+          "file": "vehicle_data/dashboard.json",
+          "index": 1,
+          "value": "9-inch colour touchscreen",
+          "unit": "text",
+          "class": "A",
+          "source_id": "ahm-hondanews-2024-specs",
+          "applicability": {
+            "year": "2024",
+            "market": "US",
+            "trim": "Sport Touring",
+            "body": "hatchback",
+            "gearbox": "6MT and CVT",
+            "engine": "1.5T",
+            "notes": ""
+          }
+        }
+      ],
+      "rule": "precedence: user > A > B/C; then applicability (2024, CA, Sport Touring, 6MT); then prefer flag; then confidence"
+    },
+    {
       "key": "dimensions.length",
       "selected": {
         "file": "vehicle_data/dimensions.json",
@@ -8591,6 +10285,88 @@
             "gearbox": "CVT and 6MT",
             "engine": "1.5T",
             "notes": ""
+          }
+        }
+      ],
+      "rule": "precedence: user > A > B/C; then applicability (2024, CA, Sport Touring, 6MT); then prefer flag; then confidence"
+    },
+    {
+      "key": "paint.name",
+      "selected": {
+        "file": "vehicle_data/paint.json",
+        "index": 0,
+        "value": "Sonic Grey Pearl",
+        "unit": "text",
+        "class": "A",
+        "source_id": "hci-2023-specs",
+        "applicability": {
+          "year": "2023",
+          "market": "CA",
+          "trim": "Sport Touring",
+          "body": "hatchback",
+          "gearbox": "6MT and CVT",
+          "engine": "1.5T",
+          "notes": ""
+        },
+        "selection_reason": "Canadian name; US name is 'Sonic Gray Pearl'."
+      },
+      "others": [
+        {
+          "file": "vehicle_data/paint.json",
+          "index": 1,
+          "value": "Sonic Gray Pearl",
+          "unit": "text",
+          "class": "A",
+          "source_id": "ahm-hondanews-2024-specs",
+          "applicability": {
+            "year": "2024",
+            "market": "US",
+            "trim": "Sport Touring",
+            "body": "hatchback",
+            "gearbox": "6MT and CVT",
+            "engine": "1.5T",
+            "notes": ""
+          }
+        }
+      ],
+      "rule": "precedence: user > A > B/C; then applicability (2024, CA, Sport Touring, 6MT); then prefer flag; then confidence"
+    },
+    {
+      "key": "platform.turbo_torque_model",
+      "selected": {
+        "file": "vehicle_data/platform.json",
+        "index": 1,
+        "value": "intensity = saturate(rpm*gas/REFERENCE_RPM)^GAMMA; spinning += (intensity - spinning)*(LAG_UP or LAG_DN)*dt; boost = MAX_BOOST*spinning (wastegate clip)",
+        "unit": "text",
+        "class": "A",
+        "source_id": "csp-lua-ex-turbo",
+        "applicability": {
+          "year": "",
+          "market": "",
+          "trim": "",
+          "body": "",
+          "gearbox": "",
+          "engine": "",
+          "notes": "Platform documentation (Assetto Corsa / Custom Shaders Patch); not vehicle-specific."
+        },
+        "selection_reason": null
+      },
+      "others": [
+        {
+          "file": "vehicle_data/platform.json",
+          "index": 0,
+          "value": "T(rpm) = power.lut(rpm) * (1 + sum_i boost_i); boost_i = MAX_BOOST * min(1, (rpm*gas/REFERENCE_RPM)^GAMMA), clipped at WASTEGATE (if non-zero), approached through LAG_UP/LAG_DN",
+          "unit": "text",
+          "class": "C",
+          "source_id": "cm-torque",
+          "applicability": {
+            "year": "",
+            "market": "",
+            "trim": "",
+            "body": "",
+            "gearbox": "",
+            "engine": "",
+            "notes": "Platform documentation (Assetto Corsa / Custom Shaders Patch); not vehicle-specific."
           }
         }
       ],

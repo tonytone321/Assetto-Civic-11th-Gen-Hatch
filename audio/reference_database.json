@@ -44,7 +44,7 @@
       "class": "A",
       "accessed": "2026-10-03",
       "access_method": "static",
-      "applicability": "2022-2024 Honda Civic; 2024 fitment 5 Door 1.5T Sport Touring 6MT, CVT",
+      "applicability": "2022-2024 Civic 5-door Sport Touring 6MT, CVT (fitment list)",
       "notes": "",
       "cache_file": "cache/pages/5310f0c70dcb3019.txt"
     },
@@ -213,7 +213,7 @@
           "class": "A",
           "source_id": "hpn-18307-T47-A51",
           "locator": "part page 'Ref No.' lines + diagram image T404B0200",
-          "evidence": "18307-T47-A51 MUFFLER, R- EX is Ref No. 9 in the diagram below … (18305-T47-A51 page:) 18305-T47-A51 MUFFLER, L- EX is Ref No. 8 in the diagram below … (related parts:) Honda 18310-T47-A52 FINISHER, R- EX; diagram: ref 9 drawn as centre pipe with a cylindrical in-line silencer, Y-junction and a rear box; ref 8 a second rear box; refs 10/11 tip finishers",
+          "evidence": "18307-T47-A51 MUFFLER, R- EX is Ref No. 9 in the diagram below … [image] diagram T404B0200: ref 9 drawn as centre pipe with a cylindrical in-line silencer, Y-junction and a rear box; ref 8 a second rear box; refs 10/11 tip finishers",
           "as_printed": "Ref No. 9 / Ref No. 8 (diagram T404B0200)",
           "applicability": {
             "year": "2024",
@@ -227,7 +227,7 @@
           "confidence": "medium",
           "range": null,
           "how_to_measure": null,
-          "notes": "Topology read from the drawing (not to scale). The drawing is the one the retailer shows for 18307-T47-A51/18305-T47-A51; whether its finisher shapes are Sport Touring-specific is not established. Pipe diameters are not in the catalog."
+          "notes": "Topology read from the drawing (not to scale). The drawing is the one the retailer shows for 18307-T47-A51/18305-T47-A51; whether its finisher shapes are Sport Touring-specific is not established. Pipe diameters are not in the catalog. Coordinator: evidence re-quoted from this source's cached page only; the left-muffler fact is a separate candidate citing hpn-18305-T47-A51; the 18310-T47-A52 finisher line was not found on the cached page and was dropped from the quote."
         }
       ]
     },
@@ -344,6 +344,36 @@
             "civicx/civicxi FlashPro threads (search snippets only)",
             "engine thread (04_engine.md) also found nothing"
           ]
+        }
+      ]
+    },
+    "audio.exhaust_rear_muffler_left": {
+      "description": "Left rear muffler part and diagram position",
+      "unit": "text",
+      "impact": "medium",
+      "candidates": [
+        {
+          "value": "18305-T47-A51 MUFFLER, L- EX, diagram ref 8",
+          "unit": "text",
+          "status": "confirmed",
+          "class": "A",
+          "source_id": "hpn-18305-T47-A51",
+          "locator": "part page 'Ref No.' line and Vehicle Fitment table",
+          "evidence": "18305-T47-A51 MUFFLER, L- EX is … Ref No. 8 … 2024 Honda Civic | 5 Door 1.5T Sport Touring | 6MT, CVT",
+          "as_printed": "18305-T47-A51 MUFFLER, L- EX … Ref No. 8",
+          "applicability": {
+            "year": "2022-2024",
+            "market": "US",
+            "trim": "Sport Touring",
+            "body": "hatchback",
+            "gearbox": "6MT, CVT",
+            "engine": "1.5T",
+            "notes": ""
+          },
+          "confidence": "high",
+          "range": null,
+          "how_to_measure": "Underside photo of the rear exhaust.",
+          "notes": "US parts catalog (HondaPartsNow, Honda OEM retailer). Canadian part numbers not checked."
         }
       ]
     }

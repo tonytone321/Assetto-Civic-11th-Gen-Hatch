@@ -77,3 +77,33 @@ db.add_candidate(e, "engine.torque_curve_stock_6mt", "Stock torque/power vs rpm 
           "between them, boost onset below 1700 rpm and the taper above 4500 rpm are unsourced."))
 db.save(e)
 print("engine.json updated")
+
+# audio.exhaust_layout quoted two part pages under one source id, and one fragment
+# ("FINISHER" line) was not on the cached page. Re-quote from the cached source page only,
+# keep the diagram reading as an explicit [image] description, and add the left-muffler
+# page as its own source and candidate.
+au = db.load(os.path.join(ROOT, "audio", "reference_database.json"))
+lay = au["parameters"]["audio.exhaust_layout"]["candidates"][0]
+lay["evidence"] = cached("cache/pages/cc897d0f556a8710.txt",
+                         "18307-T47-A51 MUFFLER, R- EX is Ref No. 9 in the diagram below") + \
+    " … [image] diagram T404B0200: ref 9 drawn as centre pipe with a cylindrical in-line silencer, " \
+    "Y-junction and a rear box; ref 8 a second rear box; refs 10/11 tip finishers"
+lay["notes"] = (lay.get("notes", "") + " Coordinator: evidence re-quoted from this source's cached page only; "
+                "the left-muffler fact is a separate candidate citing hpn-18305-T47-A51; the 18310-T47-A52 "
+                "finisher line was not found on the cached page and was dropped from the quote.").strip()
+HL = "hpn-18305-T47-A51"
+db.add_source(au, HL, "18305-T47-A51 Genuine Honda MUFFLER, L- EX (part page)",
+              "https://www.hondapartsnow.com/genuine/honda~muffler~l~ex~18305-t47-a51.html", "HondaPartsNow", "A",
+              access_method="static", applicability="2022-2024 Civic 5-door Sport Touring 6MT, CVT (fitment list)",
+              cache_file="cache/pages/5310f0c70dcb3019.txt")
+db.add_candidate(au, "audio.exhaust_rear_muffler_left", "Left rear muffler part and diagram position", "text", "medium",
+    db.record(value="18305-T47-A51 MUFFLER, L- EX, diagram ref 8", unit="text", status="confirmed", cls="A",
+              source_id=HL, locator="part page 'Ref No.' line and Vehicle Fitment table",
+              evidence=cached("cache/pages/5310f0c70dcb3019.txt", "18305-T47-A51 MUFFLER, L- EX is", "Ref No. 8",
+                              "2024 Honda Civic | 5 Door 1.5T Sport Touring | 6MT, CVT"),
+              as_printed="18305-T47-A51 MUFFLER, L- EX … Ref No. 8",
+              applicability=db.app("2022-2024", "US", "Sport Touring", "6MT, CVT"), confidence="high",
+              how_to_measure="Underside photo of the rear exhaust.",
+              notes="US parts catalog (HondaPartsNow, Honda OEM retailer). Canadian part numbers not checked."))
+db.save(au, os.path.join(ROOT, "audio", "reference_database.json"))
+print("audio/reference_database.json updated")

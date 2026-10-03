@@ -4,6 +4,21 @@
 
 Listed when two or more user/A/B/C candidates for the same parameter differ by more than 1 % (numbers) or textually. Both candidates are kept in the data files; the selected one is what `scripts/resolve.py` chose and why. Many numeric conflicts are rounding between metric and imperial printings; those are still listed so nothing is averaged silently.
 
+## `dashboard.cluster_type`
+
+- **Selected:** 10.2-inch colour TFT full digital driver meter display — class A, `hci-2024-specs` ({"year": "2024", "market": "CA", "trim": "Sport Touring", "body": "hatchback", "gearbox": "6MT and CVT", "engine": "1.5T", "notes": ""})
+  - reason given: Canadian 2024 source for the exact trim.
+- Other: 10.2-inch digital instrument cluster — class A, `ahm-hondanews-2024-specs` ({"year": "2024", "market": "US", "trim": "Sport Touring", "body": "hatchback", "gearbox": "6MT and CVT", "engine": "1.5T", "notes": ""})
+- Other: 10.2-inch all-digital colour instrument display — class A, `ahm-presskit-2022` ({"year": "2022", "market": "US", "trim": "Sport Touring", "body": "hatchback", "gearbox": "6MT and CVT", "engine": "1.5T", "notes": "2022 launch press kit; the 10.2-inch cluster and 9-inch screen are listed for Sport Touring in the 2024 Canadian table too (no model-year change found for the cluster)."})
+- Rule: precedence: user > A > B/C; then applicability (2024, CA, Sport Touring, 6MT); then prefer flag; then confidence
+
+## `dashboard.infotainment_screen`
+
+- **Selected:** 9-inch colour touchscreen including navigation — class A, `hci-2024-specs` ({"year": "2024", "market": "CA", "trim": "Sport Touring", "body": "hatchback", "gearbox": "6MT and CVT", "engine": "1.5T", "notes": ""})
+  - reason given: Canadian 2024 exact trim.
+- Other: 9-inch colour touchscreen — class A, `ahm-hondanews-2024-specs` ({"year": "2024", "market": "US", "trim": "Sport Touring", "body": "hatchback", "gearbox": "6MT and CVT", "engine": "1.5T", "notes": ""})
+- Rule: precedence: user > A > B/C; then applicability (2024, CA, Sport Touring, 6MT); then prefer flag; then confidence
+
 ## `dimensions.length`
 
 - **Selected:** 4.529 m — class A, `dim:hondanews-ca-2024-hatch-specs` ({"year": "2024", "market": "CA", "trim": "Sport Touring (table also covers Sport)", "body": "hatchback", "gearbox": "6MT and CVT", "engine": "1.5T", "notes": "Honda Canada 2024 table; trim columns identical for these rows"})
@@ -34,6 +49,19 @@ Listed when two or more user/A/B/C candidates for the same parameter differ by m
 - **Selected:** 0.046 m3 — class A, `mass:hondanews-ca-2024-hatch-specs` ({"year": "2024", "market": "CA", "trim": "Sport, Sport Touring", "body": "hatchback", "gearbox": "CVT and 6MT", "engine": "1.5T", "notes": ""})
 - Other: 0.0469013 m3 — class A, `mass:hondainfocenter-us-2024-hatch-specs` ({"year": "2024", "market": "US", "trim": "LX, Sport, EX-L, Sport Touring", "body": "hatchback", "gearbox": "CVT and 6MT", "engine": "1.5T", "notes": ""})
 - Other: 0.0469391 m3 — class A, `mass:hondanews-us-2024-hatch-specs` ({"year": "2024", "market": "US", "trim": "all hatchback trims", "body": "hatchback", "gearbox": "CVT and 6MT", "engine": "1.5T", "notes": ""})
+- Rule: precedence: user > A > B/C; then applicability (2024, CA, Sport Touring, 6MT); then prefer flag; then confidence
+
+## `paint.name`
+
+- **Selected:** Sonic Grey Pearl — class A, `hci-2023-specs` ({"year": "2023", "market": "CA", "trim": "Sport Touring", "body": "hatchback", "gearbox": "6MT and CVT", "engine": "1.5T", "notes": ""})
+  - reason given: Canadian name; US name is 'Sonic Gray Pearl'.
+- Other: Sonic Gray Pearl — class A, `ahm-hondanews-2024-specs` ({"year": "2024", "market": "US", "trim": "Sport Touring", "body": "hatchback", "gearbox": "6MT and CVT", "engine": "1.5T", "notes": ""})
+- Rule: precedence: user > A > B/C; then applicability (2024, CA, Sport Touring, 6MT); then prefer flag; then confidence
+
+## `platform.turbo_torque_model`
+
+- **Selected:** intensity = saturate(rpm*gas/REFERENCE_RPM)^GAMMA; spinning += (intensity - spinning)*(… — class A, `csp-lua-ex-turbo` ({"year": "", "market": "", "trim": "", "body": "", "gearbox": "", "engine": "", "notes": "Platform documentation (Assetto Corsa / Custom Shaders Patch); not vehicle-specific."})
+- Other: T(rpm) = power.lut(rpm) * (1 + sum_i boost_i); boost_i = MAX_BOOST * min(1, (rpm*gas/RE… — class C, `cm-torque` ({"year": "", "market": "", "trim": "", "body": "", "gearbox": "", "engine": "", "notes": "Platform documentation (Assetto Corsa / Custom Shaders Patch); not vehicle-specific."})
 - Rule: precedence: user > A > B/C; then applicability (2024, CA, Sport Touring, 6MT); then prefer flag; then confidence
 
 ## `tires.size`

@@ -4,11 +4,11 @@
 
 Each row is the **effective** record chosen by `scripts/resolve.py` (precedence: user measurement > A > B/C > D > E > F; then closest applicability to 2024 / Canada / Sport Touring / 6MT). `n` = number of candidate records kept. Class: A manufacturer/government, B measurement, C third party, D derived by script, E engineering estimate, F fallback. Status `unknown` means not found after the primary sources and ~5 searches; see `docs/UNCERTAINTIES.md`.
 
-**377 parameters**: 169 confirmed, 119 estimated, 89 unknown. By class: A: 122, C: 31, D: 83, E: 52, None: 89. Conflicts: 7 (see `docs/CONFLICTS.md`).
+**449 parameters**: 221 confirmed, 128 estimated, 100 unknown. By class: A: 156, C: 49, D: 83, E: 61, None: 100. Conflicts: 11 (see `docs/CONFLICTS.md`).
 
 ## Validation
 
-`scripts/validate_db.py`: **0 errors, 1 warnings**; 260 evidence quotes re-found in cached page text, 0 not found (listed as warnings).
+`scripts/validate_db.py`: **0 errors, 1 warnings**; 320 evidence quotes re-found in cached page text, 0 not found (listed as warnings).
 
 | cross-check | result | detail |
 |---|---|---|
@@ -184,6 +184,7 @@ Research log: `docs/research_log/04_engine.md`.
 | `engine.stroke` | 0.0895 m | confirmed | A | high | `eng:hondanews-ca-2024-hatch-specs` | 2 |
 | `engine.throttle` | Drive-by-wire (electronic throttle) | confirmed | A | high | `eng:hondanews-ca-2023-hatch-specs` | 1 |
 | `engine.torque_at_power_peak` | 213.627 N*m (range 212.559–214.695) | confirmed | D | high | derived | 1 |
+| `engine.torque_curve_stock_6mt` | — | unknown | — | none | — | 2 |
 | `engine.torque_max` | 239.98 N*m | confirmed | A | high | `eng:hondanews-ca-2024-hatch-specs` | 5 |
 | `engine.torque_max_rpm_high` | 4500 rpm | confirmed | A | high | `eng:hondanews-ca-2024-hatch-specs` | 5 |
 | `engine.torque_max_rpm_low` | 1700 rpm | confirmed | A | high | `eng:hondanews-ca-2024-hatch-specs` | 5 |
@@ -457,13 +458,91 @@ Research log: `docs/research_log/08_performance.md`.
 
 Research log: `docs/research_log/09_visual.md`.
 
-_No parameter records in the database for this domain._
+| parameter | value | status | class | conf. | source | n |
+|---|---|---|---|---|---|---|
+| `dashboard.cluster_diagonal` | 0.25908 m | confirmed | A | high | `hci-2024-specs` | 1 |
+| `dashboard.cluster_type` ⚠ | 10.2-inch colour TFT full digital driver meter display | confirmed | A | high | `hci-2024-specs` | 3 |
+| `dashboard.coolant_temp_gauge` | Segmented arc bar gauge at far left of the display, H (top, red) to C (bottom) | confirmed | A | medium | `ahm-presskit-2022` | 1 |
+| `dashboard.exterior_temperature_indicator` | true | confirmed | A | high | `hci-2024-specs` | 1 |
+| `dashboard.fuel_gauge` | Segmented arc bar gauge at far right of the display, F (top) to E (bottom, red), fuel-p… | confirmed | A | medium | `ahm-presskit-2022` | 1 |
+| `dashboard.gauge_styles` | Round tachometer + round speedometer, or bar graphs at the left/right edges; ACC-only m… | confirmed | A | high | `ahm-presskit-2022` | 1 |
+| `dashboard.gear_position_indicator_mt` | — | unknown | — | none | — | 1 |
+| `dashboard.head_up_display` | false (range false–false) | estimated | E | medium | — | 1 |
+| `dashboard.infotainment_diagonal` | 0.2286 m | confirmed | A | high | `hci-2024-specs` | 1 |
+| `dashboard.infotainment_screen` ⚠ | 9-inch colour touchscreen including navigation | confirmed | A | high | `hci-2024-specs` | 2 |
+| `dashboard.layout_zones` | Left customizable area: audio/phone (left steering-wheel controls). Right area: driving… | confirmed | A | high | `ahm-presskit-2022` | 1 |
+| `dashboard.lower_trim_cluster` | 7-inch colour digital display (left) with depicted analog tachometer plus a physical (m… | confirmed | A | high | `ahm-presskit-2022` | 1 |
+| `dashboard.maintenance_minder` | true | confirmed | A | high | `hci-2024-specs` | 1 |
+| `dashboard.odometer_location` | Bottom right of centre, below the speedometer (shown '000008 miles' on the US car); out… | confirmed | A | medium | `ahm-presskit-2022` | 1 |
+| `dashboard.redzone_and_scale_ca` | — | unknown | — | none | — | 1 |
+| `dashboard.speedometer` | Round speedometer on the right plus large numerical speed at top centre (US car: 0-160 … | confirmed | A | medium | `ahm-presskit-2022` | 1 |
+| `dashboard.tachometer` | Round tachometer on the left, scale 0-8 x1000 r/min with red band at the top of the scale | confirmed | A | medium | `ahm-presskit-2022` | 1 |
+| `dashboard.units_canada` | — | unknown | — | none | — | 1 |
+| `paint.base_albedo_linear` | [0.1819, 0.2054, 0.2367] | estimated | E | low | `ahm-infocenter-2024-colors` | 1 |
+| `paint.base_chroma` | 5.03 (range 4.31–11.78) | estimated | E | low | `ahm-infocenter-2024-colors` | 1 |
+| `paint.base_hue_deg` | 272.2 deg (range 242.2–302.2) | estimated | E | low | `ahm-infocenter-2024-colors` | 1 |
+| `paint.base_lab` | [50.92, 0.19, -4.97] | estimated | E | low | `ahm-infocenter-2024-colors` | 1 |
+| `paint.base_roughness` | 0.4 (range 0.25–0.6) | estimated | E | low | — | 1 |
+| `paint.base_srgb` | [117, 122, 131] | estimated | E | low | `ahm-infocenter-2024-colors` | 1 |
+| `paint.clearcoat_ior` | 1.5 (range 1.45–1.55) | estimated | E | low | — | 1 |
+| `paint.clearcoat_roughness` | 0.05 (range 0.02–0.12) | estimated | E | low | — | 1 |
+| `paint.code` | NH-877P | confirmed | A | high | `hci-2023-specs` | 4 |
+| `paint.finish_family` | pearl (pearlescent effect pigment under clearcoat) | confirmed | A | medium | `hci-2023-specs` | 1 |
+| `paint.flake` | — | unknown | — | none | — | 1 |
+| `paint.interior_with_paint` | Black Leather | confirmed | A | high | `hci-2023-specs` | 1 |
+| `paint.layer_structure` | — | unknown | — | none | — | 1 |
+| `paint.name` ⚠ | Sonic Grey Pearl | confirmed | A | high | `hci-2023-specs` | 2 |
+| `paint.option_cost_us_2022` | Sonic Gray paint, $395 (US 2022) | confirmed | C | high | `cd-2022-hatch-st-6mt` | 1 |
+| `paint.pearl_shift` | — | unknown | — | none | — | 1 |
 
 ## 10. Audio
 
-_No parameter records in the database for this domain._
+Research log: `docs/research_log/10_audio.md`.
+
+| parameter | value | status | class | conf. | source | n |
+|---|---|---|---|---|---|---|
+| `audio.catalytic_converter` | one 'CONVERTER ASSY' 18150-64A-L00 listed for all 2024 1.5T trims incl. Si and hatch Sp… | confirmed | A | medium | `hpn-2024-civic-exhaust-pipe` | 1 |
+| `audio.exhaust_layout` | front pipe A with flexible section (ref 1) -> centre pipe with one in-line resonator/si… | confirmed | A | medium | `hpn-18307-T47-A51` | 1 |
+| `audio.exhaust_pipe_diameter` | — | unknown | — | none | — | 1 |
+| `audio.exhaust_rear_muffler_count` | 2 | confirmed | A | high | `hpn-2024-civic-muffler` | 1 |
+| `audio.exhaust_rear_muffler_left` | 18305-T47-A51 MUFFLER, L- EX, diagram ref 8 | confirmed | A | high | `hpn-18305-T47-A51` | 1 |
+| `audio.front_pipe_shared` | PIPE A ASSY- EX 18200-T20-A01 shared by all 2024 1.5T trims incl. Si | confirmed | A | high | `hpn-2024-civic-exhaust-pipe` | 1 |
+| `audio.overrun_fuel_cut_this_car` | — | unknown | — | none | — | 1 |
 
 ## 11. Platform
 
-_No parameter records in the database for this domain._
+Research log: `docs/research_log/11_platform.md`.
+
+| parameter | value | status | class | conf. | source | n |
+|---|---|---|---|---|---|---|
+| `platform.ac_axis_up_forward` | +Y up, +Z forward (dummies Z forward, Y up) | confirmed | C | medium | `acm-first-car` | 1 |
+| `platform.ac_axis_x_sign` | — | unknown | — | none | — | 1 |
+| `platform.ac_vertical_origin` | ground plane = 0 (wheels touching Y=0) | confirmed | C | medium | `acm-first-car` | 1 |
+| `platform.animation_pipeline` | animations/*.ksanim produced from baked FBX animation imported into ksEditor (or a Blen… | confirmed | A | medium | `csp-wiki-animations` | 1 |
+| `platform.audio_engine_event_params` | engine_ext/engine_int: rpms, throttle; turbo: boost, bov, bov_decay; backfire_ext/int: … | confirmed | A | medium | `csp-wiki-audio` | 1 |
+| `platform.audio_event_path_format` | event:/cars/<car_folder_id>/<event> (e.g. engine_ext, engine_int, door) | confirmed | A | high | `csp-lua-audio` | 1 |
+| `platform.audio_sfx_files` | sfx/<car_folder_id>.bank + sfx/GUIDs.txt | confirmed | C | high | `cm-workshop` | 1 |
+| `platform.blender_to_kn5_mapping` | kn5(x, y, z) = blender(x, z, -y) | confirmed | C | medium | `blender-kn5` | 1 |
+| `platform.car_folder_name_max_length` | 32 count | confirmed | C | high | `acm-first-car` | 1 |
+| `platform.collider_rules` | very low poly (40-60 tris) box-like shape, material named GL with GL shader in ksEditor… | confirmed | C | medium | `acm-first-car` | 1 |
+| `platform.csp_min_version_cphys_turbo_boost_read` | 0.3.0-preview445 | confirmed | A | high | `csp-wiki-physics-scripts` | 1 |
+| `platform.csp_min_version_physics_script` | 0.1.77 | confirmed | A | high | `csp-wiki-physics-scripts` | 1 |
+| `platform.csp_min_version_visual_car_script` | — | unknown | — | none | — | 1 |
+| `platform.csp_turbo_v1` | CSP 0.2.8 (05/2025): engine.ini [HEADER] TURBO_VERSION=1, [TURBO_n] FLOW_ON_CUT | confirmed | A | high | `csp-wiki-powertrain` | 1 |
+| `platform.data_packing` | data/ folder packed to data.acd; encryption key derived from the car folder name | confirmed | C | medium | `cm-acd` | 1 |
+| `platform.digital_instrument_options` | Kunos data/digital_instruments.ini + analog_instruments.ini; CSP can only re-format exi… | confirmed | A | high | `csp-wiki-digital` | 1 |
+| `platform.extended_physics_switch` | car.ini [HEADER] VERSION=extended-2 (optionally [_EXTENSION] REQUIRED_VERSION=<build id>) | confirmed | A | high | `csp-wiki-extended-physics` | 1 |
+| `platform.fbx_version` | FBX 2014/2015 (2016 unsupported) | confirmed | C | medium | `acm-first-car` | 1 |
+| `platform.fmod_studio_version` | 1.08.12 | confirmed | C | medium | `acm-sound-guide` | 1 |
+| `platform.instrument_inputs` | SPEED, RPM, GAS, BRAKE, CLUTCH, FUEL (l), WATER_TEMPERATURE (°C), TURBO, GEAR, ENGINE_T… | confirmed | A | high | `csp-wiki-inputs` | 1 |
+| `platform.lod_structure` | One KN5 per LOD listed in data/lods.ini ([LOD_0..n] FILE, IN, OUT; optional [LOD_HR]); … | confirmed | C | medium | `cm-carobject` | 1 |
+| `platform.lod_triangle_targets` | LOD_1 <= 45k tris (superb 22k), LOD_2 <= 11k (6k), LOD_3 <= 5k (3k); LOD_0 OUT ~15 m, L… | confirmed | C | low | `cm-analyzer` | 1 |
+| `platform.model_units` | meters | confirmed | C | medium | `acm-first-car` | 1 |
+| `platform.node_names_cockpit` | COCKPIT_HR/COCKPIT_LR, STEER_HR/STEER_LR, SHIFT_HD/SHIFT_LD, CINTURE_ON/CINTURE_OFF | confirmed | C | medium | `cm-utils` | 1 |
+| `platform.node_names_wheels` | WHEEL_LF/RF/LR/RR, SUSP_LF/RF/LR/RR, HUB_xx (optional), DISC_xx (or DISC_xx_ANIM) | confirmed | C | medium | `cm-wheels` | 1 |
+| `platform.power_curve_file` | engine.ini [HEADER] POWER_CURVE=power.lut (rpm/torque N*m), limiter at [ENGINE_DATA] LI… | confirmed | C | medium | `cm-torque` | 1 |
+| `platform.required_data_files` | aero.ini (+wing LUTs), cameras.ini, car.ini, driver3d.ini, engine.ini (+power.lut), lod… | confirmed | C | medium | `acm-first-car` | 1 |
+| `platform.texture_rules` | DDS; power-of-two sizes; BC7 allowed but must include mipmaps | confirmed | C | low | `gtp-dds` | 1 |
+| `platform.turbo_definition_location` | engine.ini [TURBO_0..N] sections (keys MAX_BOOST, WASTEGATE, REFERENCE_RPM, GAMMA, LAG_… | confirmed | A | high | `csp-lua-ex-turbo` | 1 |
+| `platform.turbo_torque_model` ⚠ | intensity = saturate(rpm*gas/REFERENCE_RPM)^GAMMA; spinning += (intensity - spinning)*(… | confirmed | A | medium | `csp-lua-ex-turbo` | 2 |
 

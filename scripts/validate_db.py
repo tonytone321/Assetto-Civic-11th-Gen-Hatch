@@ -69,7 +69,9 @@ def quote_check(files, sources):
                 hay = cache_txt[path]
                 checked += 1
                 frags = [f for f in re.split(r"\s*(?:…|\.\.\.)\s*", r["evidence"]) if f.strip()]
-                bad = [f for f in frags if (norm(f) not in hay)]
+                # "[image] ..." fragments describe where a value sits in an image (allowed by the spec);
+                # they cannot be text-matched and are counted separately
+                bad = [f for f in frags if not f.lstrip().startswith("[image]") and norm(f) not in hay]
                 if bad:
                     missing.append(f"{os.path.relpath(p, ROOT)} {key}[{i}] ({r.get('source_id')}): "
                                    f"not found in {cf}: {bad[0][:90]!r}")
