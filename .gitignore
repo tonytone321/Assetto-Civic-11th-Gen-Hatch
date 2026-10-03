@@ -1,0 +1,6 @@
+# Downloaded third-party media (photos, video, audio, PDFs) are cached locally only, never committed
+cache/
+**/cache/
+__pycache__/
+*.pyc
+.venv/
