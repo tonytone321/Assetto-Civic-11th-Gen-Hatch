@@ -1,0 +1,344 @@
+{
+  "domain": "turbo",
+  "title": "Turbocharger and boost",
+  "schema_version": 1,
+  "updated": "2026-10-03",
+  "sources": {
+    "eng:hondanews-us-15t-engine-2024": {
+      "title": "Honda 1.5-Liter Turbo Engine (hondanews.com technical release, May 16, 2024)",
+      "url": "https://hondanews.com/en-US/releases/release-40b876fa88ce36bf41449f6e441f9b95-honda-15-liter-turbo-engine",
+      "publisher": "American Honda Motor Co., Inc. (Honda News)",
+      "class": "A",
+      "accessed": "2026-10-03",
+      "access_method": "static",
+      "applicability": "All US 1.5T applications; specific section and applications table for Civic Hatchback 2022-2024 EX-L, Sport Touring (L15B7 w/VTEC)",
+      "notes": "",
+      "cache_file": "cache/pages/799735a051baae71.txt"
+    },
+    "eng:hic-us-2024-hatch-specs": {
+      "title": "2024 Civic Hatchback Specifications - Honda Info Center",
+      "url": "https://www.hondainfocenter.com/2024/civic-hatchback/feature-guide/civic-hatchback-specifications/",
+      "publisher": "American Honda Motor Co., Inc.",
+      "class": "A",
+      "accessed": "2026-10-03",
+      "access_method": "static",
+      "applicability": "2024 Civic Hatchback LX/Sport/EX-L/Sport Touring, USA (Engineering table; Sport Touring column)",
+      "notes": "Page footer: 'All information contained herein applies to U.S. vehicles only.' Engineering table columns LX | Sport | EX-L | Sport Touring; parsed with BeautifulSoup from the cached HTML.",
+      "cache_file": "cache/pages/b2916d402fafb825.txt"
+    },
+    "eng:hic-us-2022-hatch-specs": {
+      "title": "2022 Civic Hatchback Specifications - Honda Info Center",
+      "url": "https://www.hondainfocenter.com/2022/civic-hatchback/feature-guide/civic-hatchback-specifications/",
+      "publisher": "American Honda Motor Co., Inc.",
+      "class": "A",
+      "accessed": "2026-10-03",
+      "access_method": "static",
+      "applicability": "2022 Civic Hatchback, USA",
+      "notes": "",
+      "cache_file": "cache/pages/304f563463881e56.txt"
+    },
+    "eng:hic-us-2024-turbo-feature": {
+      "title": "Turbocharged 1.5-liter Engine (EX-L and Sport Touring) - 2024 Civic Hatchback feature guide",
+      "url": "https://www.hondainfocenter.com/2024/civic-hatchback/feature-guide/engine-chassis-features/turbocharged-1-5-liter-engine/",
+      "publisher": "American Honda Motor Co., Inc.",
+      "class": "A",
+      "accessed": "2026-10-03",
+      "access_method": "static",
+      "applicability": "2024 Civic Hatchback EX-L and Sport Touring, USA",
+      "notes": "",
+      "cache_file": "cache/pages/9b044a27ab7f7a52.txt"
+    }
+  },
+  "parameters": {
+    "turbo.make_model": {
+      "description": "Turbocharger make/model",
+      "unit": "text",
+      "impact": "medium",
+      "candidates": [
+        {
+          "value": "Mitsubishi Heavy Industries (MHI) TD03 family, small-diameter, single-scroll; 11-blade reshaped turbine with diagonal exhaust entry on 2022-2024 Civic",
+          "unit": "text",
+          "status": "confirmed",
+          "class": "A",
+          "source_id": "eng:hondanews-us-15t-engine-2024",
+          "locator": "'Turbo System' and '11th-Generation Civic' sections",
+          "evidence": "For maximum responsiveness, a small-diameter MHI TD03 turbo is used. The single-scroll housing design helps the turbo build boost even at relatively small throttle openings and low engine speeds. … In the latest Civic the engine also uses a reshaped 11-blade turbine impeller design in the turbocharger … Exhaust channeled to the turbo now enters the turbine wheel diagonally, rather than from the side as before.",
+          "as_printed": "small-diameter MHI TD03 turbo",
+          "applicability": {
+            "year": "2022-2024",
+            "market": "US",
+            "trim": "Civic Hatchback EX-L, Sport Touring",
+            "body": "hatchback",
+            "gearbox": "not split",
+            "engine": "1.5T",
+            "notes": "Honda 1.5T technical release; Civic Sedan EX/Touring share the same code and ratings per the same table"
+          },
+          "confidence": "medium",
+          "range": null,
+          "how_to_measure": null,
+          "notes": "The 'Turbo System' section describes all 1.5T versions; the 11th-gen section adds the 11-blade turbine. Exact TD03 sub-model/trim not published."
+        }
+      ]
+    },
+    "turbo.wastegate": {
+      "description": "Wastegate type and control",
+      "unit": "text",
+      "impact": "high",
+      "candidates": [
+        {
+          "value": "Internal wastegate, electrically actuated (ECU-controlled)",
+          "unit": "text",
+          "status": "confirmed",
+          "class": "A",
+          "source_id": "eng:hondanews-us-15t-engine-2024",
+          "locator": "Opening summary and 'Turbo System' section",
+          "evidence": "a low-inertia mono-scroll turbo system that uses an electric wastegate to control boost pressure … The electrically actuated wastegate enables precise control of boost pressure.",
+          "as_printed": "electric wastegate",
+          "applicability": {
+            "year": "2022-2024",
+            "market": "US",
+            "trim": "Civic Hatchback EX-L, Sport Touring",
+            "body": "hatchback",
+            "gearbox": "not split",
+            "engine": "1.5T",
+            "notes": "Honda 1.5T technical release; Civic Sedan EX/Touring share the same code and ratings per the same table"
+          },
+          "confidence": "high",
+          "range": null,
+          "how_to_measure": null,
+          "notes": "'Internal' inferred from the integrated exhaust manifold/turbo layout; not stated."
+        }
+      ]
+    },
+    "turbo.exhaust_manifold": {
+      "description": "Exhaust manifold layout",
+      "unit": "text",
+      "impact": "low",
+      "candidates": [
+        {
+          "value": "Cast into cylinder head, 4-into-2 (cyl 1+4, 2+3)",
+          "unit": "text",
+          "status": "confirmed",
+          "class": "A",
+          "source_id": "eng:hondanews-us-15t-engine-2024",
+          "locator": "'DOHC Cylinder Head' and '11th-Generation Civic' sections",
+          "evidence": "with the exhaust manifold cast directly into the cylinder head … The new Civic engine also uses a \"4 into 2\" exhaust manifold design, similar to the one used on Accord",
+          "as_printed": "4 into 2",
+          "applicability": {
+            "year": "2022-2024",
+            "market": "US",
+            "trim": "Civic Hatchback EX-L, Sport Touring",
+            "body": "hatchback",
+            "gearbox": "not split",
+            "engine": "1.5T",
+            "notes": "Honda 1.5T technical release; Civic Sedan EX/Touring share the same code and ratings per the same table"
+          },
+          "confidence": "high",
+          "range": null,
+          "how_to_measure": null,
+          "notes": ""
+        }
+      ]
+    },
+    "turbo.intercooler": {
+      "description": "Intercooler layout",
+      "unit": "text",
+      "impact": "medium",
+      "candidates": [
+        {
+          "value": "Air-to-air, front-mounted low in the front of the car, resin composite inlet pipes",
+          "unit": "text",
+          "status": "confirmed",
+          "class": "A",
+          "source_id": "eng:hondanews-us-15t-engine-2024",
+          "locator": "'Turbo System' section",
+          "evidence": "Cooling the intake charge is a large low-restriction intercooler, in all cases positioned low in the front of the car where it receives essentially unobstructed airflow when the vehicle is in motion. … Lightweight resin composite inlet pipes carry air to and from the intercooler",
+          "as_printed": "large low-restriction intercooler … positioned low in the front",
+          "applicability": {
+            "year": "2022-2024",
+            "market": "US",
+            "trim": "Civic Hatchback EX-L, Sport Touring",
+            "body": "hatchback",
+            "gearbox": "not split",
+            "engine": "1.5T",
+            "notes": "Honda 1.5T technical release; Civic Sedan EX/Touring share the same code and ratings per the same table"
+          },
+          "confidence": "high",
+          "range": null,
+          "how_to_measure": null,
+          "notes": ""
+        }
+      ]
+    },
+    "turbo.boost_peak": {
+      "description": "Peak boost pressure (gauge)",
+      "unit": "Pa",
+      "impact": "high",
+      "candidates": [
+        {
+          "printed": {
+            "value": 16.5,
+            "unit": "psi"
+          },
+          "value": 113763.49533727199,
+          "unit": "Pa",
+          "status": "confirmed",
+          "class": "A",
+          "source_id": "eng:hic-us-2024-hatch-specs",
+          "locator": "Engineering table Boost Pressure row / 11th-gen section",
+          "evidence": "Boost Pressure 16.5 psi 16.5 psi",
+          "as_printed": "16.5 psi",
+          "applicability": {
+            "year": "2024",
+            "market": "US",
+            "trim": "EX-L, Sport Touring",
+            "body": "hatchback",
+            "gearbox": "6MT or CVT (not split)",
+            "engine": "1.5T",
+            "notes": ""
+          },
+          "confidence": "high",
+          "range": null,
+          "how_to_measure": null,
+          "notes": "Gauge pressure as printed by Honda (psi of boost). Rpm at which it is reached and how it tapers are not published."
+        },
+        {
+          "printed": {
+            "value": 16.5,
+            "unit": "psi"
+          },
+          "value": 113763.49533727199,
+          "unit": "Pa",
+          "status": "confirmed",
+          "class": "A",
+          "source_id": "eng:hondanews-us-15t-engine-2024",
+          "locator": "Engineering table Boost Pressure row / 11th-gen section",
+          "evidence": "are possible at 16.5 psi of boost on regular unleaded fuel",
+          "as_printed": "16.5 psi",
+          "applicability": {
+            "year": "2022-2024",
+            "market": "US",
+            "trim": "Civic Hatchback EX-L, Sport Touring",
+            "body": "hatchback",
+            "gearbox": "not split",
+            "engine": "1.5T",
+            "notes": "Honda 1.5T technical release; Civic Sedan EX/Touring share the same code and ratings per the same table"
+          },
+          "confidence": "high",
+          "range": null,
+          "how_to_measure": null,
+          "notes": "Gauge pressure as printed by Honda (psi of boost). Rpm at which it is reached and how it tapers are not published."
+        }
+      ]
+    },
+    "turbo.response": {
+      "description": "Transient response (manufacturer description)",
+      "unit": "text",
+      "impact": "medium",
+      "candidates": [
+        {
+          "value": "Negligible turbo lag; quick throttle response (small-diameter turbine)",
+          "unit": "text",
+          "status": "confirmed",
+          "class": "A",
+          "source_id": "eng:hic-us-2024-turbo-feature",
+          "locator": "Feature text",
+          "evidence": "Thanks to careful tuning and use of a relatively small-diameter turbine wheel, the Honda version of the forced-induction engine exhibits negligible turbo lag—a phenomenon that bedevils many of its turbocharged competitors—so response to the throttle is quick.",
+          "as_printed": "negligible turbo lag",
+          "applicability": {
+            "year": "2024",
+            "market": "US",
+            "trim": "EX-L, Sport Touring",
+            "body": "hatchback",
+            "gearbox": "6MT or CVT (not split)",
+            "engine": "1.5T",
+            "notes": ""
+          },
+          "confidence": "medium",
+          "range": null,
+          "how_to_measure": null,
+          "notes": "Marketing description; consistent with the rated torque plateau starting at 1700 rpm. No measured spool time found."
+        }
+      ]
+    },
+    "turbo.boost_onset_rpm": {
+      "description": "Engine speed at which full-load boost is reached (WOT, steady)",
+      "unit": "rpm",
+      "impact": "high",
+      "candidates": [
+        {
+          "value": 1700,
+          "unit": "rpm",
+          "status": "estimated",
+          "class": "E",
+          "source_id": null,
+          "locator": "",
+          "evidence": "",
+          "as_printed": "",
+          "applicability": {},
+          "confidence": "low",
+          "range": [
+            1500,
+            2200
+          ],
+          "how_to_measure": "WOT pull in 3rd/4th from 1200 rpm with OBD-II MAP (or Hondata/KTuner log) at 10 Hz+: record MAP vs rpm.",
+          "notes": "Inference: the rated 177 lb-ft plateau begins at 1700 rpm (class A), which on a turbo engine requires near-target boost there. Not a measurement; no public stock 11th-gen boost log was found (Hondata/KTuner logs not public/accessible)."
+        }
+      ]
+    },
+    "turbo.boost_taper": {
+      "description": "Boost vs rpm above the torque plateau",
+      "unit": "text",
+      "impact": "high",
+      "candidates": [
+        {
+          "value": null,
+          "unit": "text",
+          "status": "unknown",
+          "class": null,
+          "source_id": null,
+          "locator": "",
+          "evidence": "",
+          "as_printed": "",
+          "applicability": {},
+          "confidence": "none",
+          "range": null,
+          "how_to_measure": "Same WOT log as boost_onset_rpm to the limiter; torque falls from 177 lb-ft at 4500 to ~158 lb-ft at 6000 (computed from rating), so boost is expected to taper, but only a log shows it.",
+          "notes": "",
+          "searches": [
+            "Honda 1.5T release (peak only)",
+            "PRL/TSP/Hondata dyno pages (no boost traces for stock)",
+            "civicxi searches for stock datalogs"
+          ]
+        }
+      ]
+    },
+    "turbo.torque_management": {
+      "description": "Torque limiting by gear / torque management (6MT)",
+      "unit": "text",
+      "impact": "medium",
+      "candidates": [
+        {
+          "value": null,
+          "unit": "text",
+          "status": "unknown",
+          "class": null,
+          "source_id": null,
+          "locator": "",
+          "evidence": "",
+          "as_printed": "",
+          "applicability": {},
+          "confidence": "none",
+          "range": null,
+          "how_to_measure": "WOT logs in 1st, 2nd and 3rd from the same rpm: compare MAP and calculated load; a lower 1st/2nd plateau indicates per-gear torque limits.",
+          "notes": "",
+          "searches": [
+            "Honda spec/feature pages (none)",
+            "civicxi tuning threads (tuners mention raised boost limits, no stock per-gear tables)",
+            "Hondata product page blocked by robots.txt"
+          ]
+        }
+      ]
+    }
+  }
+}

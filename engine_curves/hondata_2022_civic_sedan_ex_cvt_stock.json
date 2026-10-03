@@ -1,0 +1,38 @@
+{
+  "run_id": "hondata_2022_civic_sedan_ex_cvt_stock",
+  "source_id": "eng:thedrive-hondata-2022-ex",
+  "vehicle": "2022 Honda Civic Sedan EX (US), 1.5T L15B7, CVT",
+  "stock": true,
+  "dyno_type": null,
+  "correction": null,
+  "gear": null,
+  "fuel": null,
+  "ambient": null,
+  "peak": {
+    "wheel_power": {
+      "printed": [
+        162.46,
+        "hp"
+      ],
+      "value": 121146.4011372556,
+      "unit": "W"
+    },
+    "wheel_torque": {
+      "printed": [
+        163.63,
+        "lb-ft"
+      ],
+      "value": 221.85249088546703,
+      "unit": "N*m"
+    }
+  },
+  "evidence": "When Hondata put the untuned car on the dyno, it showed 162.46 hp and 163.63 pound-feet at the axle",
+  "equivalence": "Same engine code and rating as the target (Honda 1.5T release), but sedan + CVT: wheel figures include CVT losses and CVT/torque-management behaviour; not equivalent for a curve.",
+  "chart_url": null,
+  "points": [],
+  "use_for_curve": false,
+  "source_url": "https://www.thedrive.com/news/41686/2022-honda-civic-gains-an-impressive-34-hp-from-a-simple-ecu-tune",
+  "cache_file": "cache/pages/15bf21fbac0943ac.txt",
+  "digitizing": null,
+  "notes": "Stock run of the same engine code/rating but NOT the target body/gearbox. Peak figures only; no rpm-resolved points were available, so this run contributes no rows to engine_curve.csv."
+}

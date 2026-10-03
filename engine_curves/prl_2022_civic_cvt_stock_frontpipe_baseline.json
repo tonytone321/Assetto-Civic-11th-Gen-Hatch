@@ -1,0 +1,30 @@
+{
+  "run_id": "prl_2022_civic_cvt_stock_frontpipe_baseline",
+  "source_id": "eng:prl-frontpipe-2021",
+  "vehicle": "PRL 11th-gen 1.5T development car (2022 Civic Touring sedan, CVT)",
+  "stock": true,
+  "dyno_type": null,
+  "correction": null,
+  "gear": null,
+  "fuel": null,
+  "ambient": "59 F, 1160 ft",
+  "peak": {
+    "wheel_power": {
+      "printed": [
+        171,
+        "hp"
+      ],
+      "value": 127514.67804056818,
+      "unit": "W"
+    }
+  },
+  "evidence": "With the car completely stock, we saw a maximum horsepower of 171WHP.",
+  "equivalence": "CVT sedan; same engine code; peak only.",
+  "chart_url": null,
+  "points": [],
+  "use_for_curve": false,
+  "source_url": "https://prlmotorsports.com/blogs/news/11th-gen-civic-1-5t-front-pipe-upgrade-dyno-testing",
+  "cache_file": "cache/pages/39835d22ed7eaa96.txt",
+  "digitizing": null,
+  "notes": "Stock run of the same engine code/rating but NOT the target body/gearbox. Peak figures only; no rpm-resolved points were available, so this run contributes no rows to engine_curve.csv."
+}

@@ -1,0 +1,1670 @@
+{
+  "domain": "engine",
+  "title": "Engine",
+  "schema_version": 1,
+  "updated": "2026-10-03",
+  "sources": {
+    "eng:hondanews-ca-2024-hatch-specs": {
+      "title": "2024 Honda Civic Hatchback Specifications (Honda Canada newsroom, April 4, 2024)",
+      "url": "https://hondanews.ca/en-CA/hci-automobiles/releases/release-1128768177ab00a73471b1938c152ddf-2024-honda-civic-hatchback-specifications",
+      "publisher": "Honda Canada Inc.",
+      "class": "A",
+      "accessed": "2026-10-03",
+      "access_method": "rendered",
+      "applicability": "2024 Civic Hatchback Sport and Sport Touring, Canada; 6MT available on Sport Touring",
+      "notes": "",
+      "cache_file": "cache/pages/41e62125b9f268de.txt"
+    },
+    "eng:hondanews-ca-2023-hatch-specs": {
+      "title": "2023 Civic Hatchback Specifications (Honda Canada newsroom)",
+      "url": "https://hondanews.ca/en-CA/hci-automobiles/releases/release-f61ab7d13cb83fb181b8bc22df100303-2023-civic-hatchback-specifications",
+      "publisher": "Honda Canada Inc.",
+      "class": "A",
+      "accessed": "2026-10-03",
+      "access_method": "rendered",
+      "applicability": "2023 Civic Hatchback LX/Sport/Sport-B/Sport Touring, Canada",
+      "notes": "",
+      "cache_file": "cache/pages/374416cf6bc6db5d.txt"
+    },
+    "eng:hondanews-ca-2022-hatch-specs": {
+      "title": "2022 Civic Hatchback Specifications (Honda Canada newsroom)",
+      "url": "https://hondanews.ca/en-CA/hci-automobiles/releases/release-9d4b663caef09e412c833d744c4365f9-2022-civic-hatchback-specifications",
+      "publisher": "Honda Canada Inc.",
+      "class": "A",
+      "accessed": "2026-10-03",
+      "access_method": "rendered",
+      "applicability": "2022 Civic Hatchback LX/Sport/Sport Touring, Canada",
+      "notes": "",
+      "cache_file": "cache/pages/344bc90bb36560a9.txt"
+    },
+    "eng:hic-us-2024-hatch-specs": {
+      "title": "2024 Civic Hatchback Specifications - Honda Info Center",
+      "url": "https://www.hondainfocenter.com/2024/civic-hatchback/feature-guide/civic-hatchback-specifications/",
+      "publisher": "American Honda Motor Co., Inc.",
+      "class": "A",
+      "accessed": "2026-10-03",
+      "access_method": "static",
+      "applicability": "2024 Civic Hatchback LX/Sport/EX-L/Sport Touring, USA (Engineering table; Sport Touring column)",
+      "notes": "Page footer: 'All information contained herein applies to U.S. vehicles only.' Engineering table columns LX | Sport | EX-L | Sport Touring; parsed with BeautifulSoup from the cached HTML.",
+      "cache_file": "cache/pages/b2916d402fafb825.txt"
+    },
+    "eng:hic-us-2022-hatch-specs": {
+      "title": "2022 Civic Hatchback Specifications - Honda Info Center",
+      "url": "https://www.hondainfocenter.com/2022/civic-hatchback/feature-guide/civic-hatchback-specifications/",
+      "publisher": "American Honda Motor Co., Inc.",
+      "class": "A",
+      "accessed": "2026-10-03",
+      "access_method": "static",
+      "applicability": "2022 Civic Hatchback, USA",
+      "notes": "",
+      "cache_file": "cache/pages/304f563463881e56.txt"
+    },
+    "eng:hic-us-2024-turbo-feature": {
+      "title": "Turbocharged 1.5-liter Engine (EX-L and Sport Touring) - 2024 Civic Hatchback feature guide",
+      "url": "https://www.hondainfocenter.com/2024/civic-hatchback/feature-guide/engine-chassis-features/turbocharged-1-5-liter-engine/",
+      "publisher": "American Honda Motor Co., Inc.",
+      "class": "A",
+      "accessed": "2026-10-03",
+      "access_method": "static",
+      "applicability": "2024 Civic Hatchback EX-L and Sport Touring, USA",
+      "notes": "",
+      "cache_file": "cache/pages/9b044a27ab7f7a52.txt"
+    },
+    "eng:hondanews-us-15t-engine-2024": {
+      "title": "Honda 1.5-Liter Turbo Engine (hondanews.com technical release, May 16, 2024)",
+      "url": "https://hondanews.com/en-US/releases/release-40b876fa88ce36bf41449f6e441f9b95-honda-15-liter-turbo-engine",
+      "publisher": "American Honda Motor Co., Inc. (Honda News)",
+      "class": "A",
+      "accessed": "2026-10-03",
+      "access_method": "static",
+      "applicability": "All US 1.5T applications; specific section and applications table for Civic Hatchback 2022-2024 EX-L, Sport Touring (L15B7 w/VTEC)",
+      "notes": "",
+      "cache_file": "cache/pages/799735a051baae71.txt"
+    },
+    "eng:thedrive-hondata-2022-ex": {
+      "title": "2022 Honda Civic Gains an Impressive 34 HP From a Simple ECU Tune (The Drive, reporting Hondata dyno)",
+      "url": "https://www.thedrive.com/news/41686/2022-honda-civic-gains-an-impressive-34-hp-from-a-simple-ecu-tune",
+      "publisher": "The Drive (data: Hondata)",
+      "class": "C",
+      "accessed": "2026-10-03",
+      "access_method": "static",
+      "applicability": "2022 Civic Sedan EX (US EX sedan is CVT-only), stock, Hondata dyno; dyno type/correction/gear not stated in the article",
+      "notes": "Hondata's own page (hondata.com) is disallowed to ClaudeBot by robots.txt and was not fetched.",
+      "cache_file": "cache/pages/15bf21fbac0943ac.txt"
+    },
+    "eng:prl-civicxi-intake-baseline-2021": {
+      "title": "PRL Motorsports 1.5T Civic Stage 1 Intake Development, post #3 (civicxi.com)",
+      "url": "https://www.civicxi.com/forum/threads/prl-motorsports-1-5t-civic-stage-1-intake-development.49861/post-811911",
+      "publisher": "PRL Motorsports (sponsor post on CivicXI forum)",
+      "class": "C",
+      "accessed": "2026-10-03",
+      "access_method": "static",
+      "applicability": "2022 Civic Touring sedan 1.5T CVT, stock; DynoJet 224X, 4th (CVT mode) gear 70-90 mph, 95 F, 1000 ft",
+      "notes": "",
+      "cache_file": "cache/pages/060fc065a7a61b16.txt"
+    },
+    "eng:prl-frontpipe-2021": {
+      "title": "11th Gen Civic 1.5T Front Pipe Upgrade Dyno Testing (PRL Motorsports blog, Nov 17, 2021)",
+      "url": "https://prlmotorsports.com/blogs/news/11th-gen-civic-1-5t-front-pipe-upgrade-dyno-testing",
+      "publisher": "PRL Motorsports",
+      "class": "C",
+      "accessed": "2026-10-03",
+      "access_method": "static",
+      "applicability": "PRL's 11th-gen 1.5T development car (a 2022 Civic Touring sedan CVT per PRL's CivicXI thread), stock baseline; 59 F, 1160 ft",
+      "notes": "",
+      "cache_file": "cache/pages/39835d22ed7eaa96.txt"
+    },
+    "eng:tsp-stage1-non-si": {
+      "title": "TSP Stage 1 Tune for 2022+ Honda Civic 1.5T Non-Si (Two Step Performance product page)",
+      "url": "https://www.twostepperformance.com/products/tsp-stage-1-tune-for-2022-honda-civic-1-5t-non-si",
+      "publisher": "Two Step Performance",
+      "class": "C",
+      "accessed": "2026-10-03",
+      "access_method": "static",
+      "applicability": "Unmodified 2022 non-Si Civic 1.5T CVT (body not stated), factory calibration",
+      "notes": "",
+      "cache_file": "cache/pages/004eb1d37a3e1be8.txt"
+    }
+  },
+  "parameters": {
+    "engine.code": {
+      "description": "Honda engine code",
+      "unit": "text",
+      "impact": "medium",
+      "candidates": [
+        {
+          "value": "L15B7 (w/VTEC)",
+          "unit": "text",
+          "status": "confirmed",
+          "class": "A",
+          "source_id": "eng:hondanews-us-15t-engine-2024",
+          "locator": "Section '11th-Generation Civic (2022-present)' and 'Honda 1.5-Liter Turbo Applications' table",
+          "evidence": "From 2022 to 2024, the 11th generation Civic Sedan EX and Touring grades, as well as the Civic Hatchback EX-L and Sport Touring, were also powered by the 1.5-liter Turbo (L15B7 with VTEC®). … Civic Hatchback 2022-2024 EX-L, Sport Touring L15B7 (w/VTEC®) 180 @ 6000 rpm 177 @ 1700-4500 rpm",
+          "as_printed": "L15B7 (w/VTEC®)",
+          "applicability": {
+            "year": "2022-2024",
+            "market": "US",
+            "trim": "Civic Hatchback EX-L, Sport Touring",
+            "body": "hatchback",
+            "gearbox": "not split",
+            "engine": "1.5T",
+            "notes": "Honda 1.5T technical release; Civic Sedan EX/Touring share the same code and ratings per the same table"
+          },
+          "confidence": "high",
+          "range": null,
+          "how_to_measure": null,
+          "notes": "US release; Canadian sheets give no code but identical ratings/bore/stroke/CR. NOT the Si's L15CA (200 hp, 11-blade turbine, 17.8 psi)."
+        }
+      ]
+    },
+    "engine.description": {
+      "description": "Engine description as printed by Honda Canada",
+      "unit": "text",
+      "impact": "low",
+      "candidates": [
+        {
+          "value": "1.5-litre, 16-valve, Direct Injection, DOHC, VTEC turbocharged 4-cylinder",
+          "unit": "text",
+          "status": "confirmed",
+          "class": "A",
+          "source_id": "eng:hondanews-ca-2024-hatch-specs",
+          "locator": "ENGINE table, first row",
+          "evidence": "1.5-litre, 16-valve, Direct Injection, DOHC, VTEC® turbocharged 4-cylinder",
+          "as_printed": "1.5-litre, 16-valve, Direct Injection, DOHC, VTEC® turbocharged 4-cylinder",
+          "applicability": {
+            "year": "2024",
+            "market": "CA",
+            "trim": "Sport, Sport Touring",
+            "body": "hatchback",
+            "gearbox": "6MT or CVT (engine ratings not split by gearbox)",
+            "engine": "1.5T",
+            "notes": ""
+          },
+          "confidence": "high",
+          "range": null,
+          "how_to_measure": null,
+          "notes": "Model-year check: Honda Canada 2022, 2023 and 2024 hatchback spec sheets list identical engine figures."
+        }
+      ]
+    },
+    "engine.valvetrain": {
+      "description": "Valvetrain",
+      "unit": "text",
+      "impact": "medium",
+      "candidates": [
+        {
+          "value": "DOHC 16-valve, chain-driven; dual VTC (intake and exhaust cam phasing); VTEC on exhaust cam (lift/timing/duration)",
+          "unit": "text",
+          "status": "confirmed",
+          "class": "A",
+          "source_id": "eng:hondanews-us-15t-engine-2024",
+          "locator": "'DOHC Cylinder Head and Valvetrain' and '11th-Generation Civic' sections",
+          "evidence": "A low-friction, silent chain drives the dual overhead cams … Variable Timing Control™ (VTC™) varies the phase of both the intake and exhaust camshafts independently … The most significant was the addition of VTEC® to the exhaust cam, improving exhaust efficiency and optimizing valve overlap.",
+          "as_printed": "DOHC; dual VTC; VTEC® on exhaust cam",
+          "applicability": {
+            "year": "2022-2024",
+            "market": "US",
+            "trim": "Civic Hatchback EX-L, Sport Touring",
+            "body": "hatchback",
+            "gearbox": "not split",
+            "engine": "1.5T",
+            "notes": "Honda 1.5T technical release; Civic Sedan EX/Touring share the same code and ratings per the same table"
+          },
+          "confidence": "high",
+          "range": null,
+          "how_to_measure": null,
+          "notes": ""
+        },
+        {
+          "value": "16-Valve DOHC VTEC",
+          "unit": "text",
+          "status": "confirmed",
+          "class": "A",
+          "source_id": "eng:hic-us-2024-hatch-specs",
+          "locator": "Engineering table, Valve Train row, Sport Touring column",
+          "evidence": "Valve Train 16-Valve DOHC i-VTEC® 16-Valve DOHC i-VTEC® 16-Valve DOHC VTEC® 16-Valve DOHC VTEC®",
+          "as_printed": "16-Valve DOHC VTEC®",
+          "applicability": {
+            "year": "2024",
+            "market": "US",
+            "trim": "EX-L, Sport Touring",
+            "body": "hatchback",
+            "gearbox": "6MT or CVT (not split)",
+            "engine": "1.5T",
+            "notes": ""
+          },
+          "confidence": "high",
+          "range": null,
+          "how_to_measure": null,
+          "notes": ""
+        }
+      ]
+    },
+    "engine.injection": {
+      "description": "Fuel injection type",
+      "unit": "text",
+      "impact": "low",
+      "candidates": [
+        {
+          "value": "Direct",
+          "unit": "text",
+          "status": "confirmed",
+          "class": "A",
+          "source_id": "eng:hic-us-2024-hatch-specs",
+          "locator": "Engineering table, Fuel Injection row, Sport Touring column",
+          "evidence": "Fuel Injection Multi-Point Multi-Point Direct Direct",
+          "as_printed": "Direct",
+          "applicability": {
+            "year": "2024",
+            "market": "US",
+            "trim": "EX-L, Sport Touring",
+            "body": "hatchback",
+            "gearbox": "6MT or CVT (not split)",
+            "engine": "1.5T",
+            "notes": ""
+          },
+          "confidence": "high",
+          "range": null,
+          "how_to_measure": null,
+          "notes": ""
+        },
+        {
+          "value": "Direct",
+          "unit": "text",
+          "status": "confirmed",
+          "class": "A",
+          "source_id": "eng:hondanews-ca-2024-hatch-specs",
+          "locator": "ENGINE table, first row",
+          "evidence": "1.5-litre, 16-valve, Direct Injection, DOHC, VTEC® turbocharged 4-cylinder",
+          "as_printed": "Direct Injection",
+          "applicability": {
+            "year": "2024",
+            "market": "CA",
+            "trim": "Sport, Sport Touring",
+            "body": "hatchback",
+            "gearbox": "6MT or CVT (engine ratings not split by gearbox)",
+            "engine": "1.5T",
+            "notes": ""
+          },
+          "confidence": "high",
+          "range": null,
+          "how_to_measure": null,
+          "notes": ""
+        }
+      ]
+    },
+    "engine.fuel_recommended": {
+      "description": "Recommended fuel",
+      "unit": "text",
+      "impact": "medium",
+      "candidates": [
+        {
+          "value": "Regular",
+          "unit": "text",
+          "status": "confirmed",
+          "class": "A",
+          "source_id": "eng:hondanews-ca-2024-hatch-specs",
+          "locator": "ENGINE table, Recommended fuel row",
+          "evidence": "Recommended fuel Regular Regular",
+          "as_printed": "Regular",
+          "applicability": {
+            "year": "2024",
+            "market": "CA",
+            "trim": "Sport, Sport Touring",
+            "body": "hatchback",
+            "gearbox": "6MT or CVT (engine ratings not split by gearbox)",
+            "engine": "1.5T",
+            "notes": ""
+          },
+          "confidence": "high",
+          "range": null,
+          "how_to_measure": null,
+          "notes": "Ratings are on regular (US: 87 AKI). The 10th-gen Sport hatch (L15BA) needed premium; this one does not."
+        },
+        {
+          "value": "Regular Unleaded",
+          "unit": "text",
+          "status": "confirmed",
+          "class": "A",
+          "source_id": "eng:hic-us-2024-hatch-specs",
+          "locator": "Required Fuel row",
+          "evidence": "Required Fuel Regular Unleaded Regular Unleaded Regular Unleaded Regular Unleaded",
+          "as_printed": "Regular Unleaded",
+          "applicability": {
+            "year": "2024",
+            "market": "US",
+            "trim": "EX-L, Sport Touring",
+            "body": "hatchback",
+            "gearbox": "6MT or CVT (not split)",
+            "engine": "1.5T",
+            "notes": ""
+          },
+          "confidence": "high",
+          "range": null,
+          "how_to_measure": null,
+          "notes": ""
+        }
+      ]
+    },
+    "engine.rating_standard": {
+      "description": "Power/torque rating standard",
+      "unit": "text",
+      "impact": "medium",
+      "candidates": [
+        {
+          "value": "SAE net, SAE J1349 (Rev. 08/04)",
+          "unit": "text",
+          "status": "confirmed",
+          "class": "A",
+          "source_id": "eng:hondanews-ca-2024-hatch-specs",
+          "locator": "Footnote 1",
+          "evidence": "Horsepower and torque calculations reflect SAE net, Rev. 08/04, SAE J1349 procedures.",
+          "as_printed": "SAE net, Rev. 08/04, SAE J1349",
+          "applicability": {
+            "year": "2024",
+            "market": "CA",
+            "trim": "Sport, Sport Touring",
+            "body": "hatchback",
+            "gearbox": "6MT or CVT (engine ratings not split by gearbox)",
+            "engine": "1.5T",
+            "notes": ""
+          },
+          "confidence": "high",
+          "range": null,
+          "how_to_measure": null,
+          "notes": ""
+        }
+      ]
+    },
+    "engine.throttle": {
+      "description": "Throttle actuation",
+      "unit": "text",
+      "impact": "low",
+      "candidates": [
+        {
+          "value": "Drive-by-wire (electronic throttle)",
+          "unit": "text",
+          "status": "confirmed",
+          "class": "A",
+          "source_id": "eng:hondanews-ca-2023-hatch-specs",
+          "locator": "ENGINE table, Drive-by-Wire Throttle System row",
+          "evidence": "Drive-by-Wire Throttle System™ • • • •",
+          "as_printed": "Drive-by-Wire Throttle System™",
+          "applicability": {
+            "year": "2023",
+            "market": "CA",
+            "trim": "Sport, Sport-B, Sport Touring",
+            "body": "hatchback",
+            "gearbox": "6MT or CVT (not split)",
+            "engine": "1.5T",
+            "notes": ""
+          },
+          "confidence": "high",
+          "range": null,
+          "how_to_measure": null,
+          "notes": "Row not repeated on the 2024 sheet; no hardware change is indicated."
+        }
+      ]
+    },
+    "engine.idle_stop": {
+      "description": "Idle-stop fitted",
+      "unit": "bool",
+      "impact": "low",
+      "candidates": [
+        {
+          "value": true,
+          "unit": "bool",
+          "status": "confirmed",
+          "class": "A",
+          "source_id": "eng:hondanews-ca-2024-hatch-specs",
+          "locator": "ENGINE table, Idle-stop row",
+          "evidence": "Idle-stop • •",
+          "as_printed": "•",
+          "applicability": {
+            "year": "2024",
+            "market": "CA",
+            "trim": "Sport, Sport Touring",
+            "body": "hatchback",
+            "gearbox": "6MT or CVT (engine ratings not split by gearbox)",
+            "engine": "1.5T",
+            "notes": ""
+          },
+          "confidence": "medium",
+          "range": null,
+          "how_to_measure": null,
+          "notes": "Listed for both Sport and Sport Touring columns; the sheet does not say whether it applies to the 6MT."
+        }
+      ]
+    },
+    "engine.displacement": {
+      "description": "Swept volume",
+      "unit": "m3",
+      "impact": "high",
+      "candidates": [
+        {
+          "printed": {
+            "value": 1498,
+            "unit": "cc"
+          },
+          "value": 0.001498,
+          "unit": "m3",
+          "status": "confirmed",
+          "class": "A",
+          "source_id": "eng:hondanews-ca-2024-hatch-specs",
+          "locator": "Displacement row (Sport Touring column)",
+          "evidence": "Displacement (cc) 1498 1498",
+          "as_printed": "1498",
+          "applicability": {
+            "year": "2024",
+            "market": "CA",
+            "trim": "Sport, Sport Touring",
+            "body": "hatchback",
+            "gearbox": "6MT or CVT (engine ratings not split by gearbox)",
+            "engine": "1.5T",
+            "notes": ""
+          },
+          "confidence": "high",
+          "range": null,
+          "how_to_measure": null,
+          "notes": "Model-year check: Honda Canada 2022, 2023 and 2024 hatchback spec sheets list identical engine figures."
+        },
+        {
+          "printed": {
+            "value": 1498,
+            "unit": "cc"
+          },
+          "value": 0.001498,
+          "unit": "m3",
+          "status": "confirmed",
+          "class": "A",
+          "source_id": "eng:hic-us-2024-hatch-specs",
+          "locator": "Displacement row (Sport Touring column)",
+          "evidence": "Displacement 1996 cc 1996 cc 1498 cc 1498 cc",
+          "as_printed": "1498 cc",
+          "applicability": {
+            "year": "2024",
+            "market": "US",
+            "trim": "EX-L, Sport Touring",
+            "body": "hatchback",
+            "gearbox": "6MT or CVT (not split)",
+            "engine": "1.5T",
+            "notes": ""
+          },
+          "confidence": "high",
+          "range": null,
+          "how_to_measure": null,
+          "notes": "Model-year check: Honda Canada 2022, 2023 and 2024 hatchback spec sheets list identical engine figures."
+        }
+      ]
+    },
+    "engine.bore": {
+      "description": "Cylinder bore",
+      "unit": "m",
+      "impact": "medium",
+      "candidates": [
+        {
+          "printed": {
+            "value": 73.0,
+            "unit": "mm"
+          },
+          "value": 0.073,
+          "unit": "m",
+          "status": "confirmed",
+          "class": "A",
+          "source_id": "eng:hondanews-ca-2024-hatch-specs",
+          "locator": "Bore and stroke row",
+          "evidence": "Bore and stroke (mm) 73 x 89.5 73 x 89.5",
+          "as_printed": "73 x 89.5",
+          "applicability": {
+            "year": "2024",
+            "market": "CA",
+            "trim": "Sport, Sport Touring",
+            "body": "hatchback",
+            "gearbox": "6MT or CVT (engine ratings not split by gearbox)",
+            "engine": "1.5T",
+            "notes": ""
+          },
+          "confidence": "high",
+          "range": null,
+          "how_to_measure": null,
+          "notes": ""
+        },
+        {
+          "printed": {
+            "value": 73.0,
+            "unit": "mm"
+          },
+          "value": 0.073,
+          "unit": "m",
+          "status": "confirmed",
+          "class": "A",
+          "source_id": "eng:hic-us-2024-hatch-specs",
+          "locator": "Bore and stroke row",
+          "evidence": "Bore and Stroke 86.0 mm / 85.9 mm 86.0 mm / 85.9 mm 73.0 mm / 89.5 mm 73.0 mm / 89.5 mm",
+          "as_printed": "73.0 mm / 89.5 mm",
+          "applicability": {
+            "year": "2024",
+            "market": "US",
+            "trim": "EX-L, Sport Touring",
+            "body": "hatchback",
+            "gearbox": "6MT or CVT (not split)",
+            "engine": "1.5T",
+            "notes": ""
+          },
+          "confidence": "high",
+          "range": null,
+          "how_to_measure": null,
+          "notes": ""
+        }
+      ]
+    },
+    "engine.stroke": {
+      "description": "Piston stroke",
+      "unit": "m",
+      "impact": "medium",
+      "candidates": [
+        {
+          "printed": {
+            "value": 89.5,
+            "unit": "mm"
+          },
+          "value": 0.0895,
+          "unit": "m",
+          "status": "confirmed",
+          "class": "A",
+          "source_id": "eng:hondanews-ca-2024-hatch-specs",
+          "locator": "Bore and stroke row",
+          "evidence": "Bore and stroke (mm) 73 x 89.5 73 x 89.5",
+          "as_printed": "73 x 89.5",
+          "applicability": {
+            "year": "2024",
+            "market": "CA",
+            "trim": "Sport, Sport Touring",
+            "body": "hatchback",
+            "gearbox": "6MT or CVT (engine ratings not split by gearbox)",
+            "engine": "1.5T",
+            "notes": ""
+          },
+          "confidence": "high",
+          "range": null,
+          "how_to_measure": null,
+          "notes": ""
+        },
+        {
+          "printed": {
+            "value": 89.5,
+            "unit": "mm"
+          },
+          "value": 0.0895,
+          "unit": "m",
+          "status": "confirmed",
+          "class": "A",
+          "source_id": "eng:hic-us-2024-hatch-specs",
+          "locator": "Bore and stroke row",
+          "evidence": "Bore and Stroke 86.0 mm / 85.9 mm 86.0 mm / 85.9 mm 73.0 mm / 89.5 mm 73.0 mm / 89.5 mm",
+          "as_printed": "73.0 mm / 89.5 mm",
+          "applicability": {
+            "year": "2024",
+            "market": "US",
+            "trim": "EX-L, Sport Touring",
+            "body": "hatchback",
+            "gearbox": "6MT or CVT (not split)",
+            "engine": "1.5T",
+            "notes": ""
+          },
+          "confidence": "high",
+          "range": null,
+          "how_to_measure": null,
+          "notes": ""
+        }
+      ]
+    },
+    "engine.compression_ratio": {
+      "description": "Geometric compression ratio",
+      "unit": "1",
+      "impact": "low",
+      "candidates": [
+        {
+          "printed": {
+            "value": 10.3,
+            "unit": "ratio"
+          },
+          "value": 10.3,
+          "unit": "1",
+          "status": "confirmed",
+          "class": "A",
+          "source_id": "eng:hondanews-ca-2024-hatch-specs",
+          "locator": "Compression ratio row",
+          "evidence": "Compression ratio 10.3:1 10.3:1",
+          "as_printed": "10.3:1",
+          "applicability": {
+            "year": "2024",
+            "market": "CA",
+            "trim": "Sport, Sport Touring",
+            "body": "hatchback",
+            "gearbox": "6MT or CVT (engine ratings not split by gearbox)",
+            "engine": "1.5T",
+            "notes": ""
+          },
+          "confidence": "high",
+          "range": null,
+          "how_to_measure": null,
+          "notes": ""
+        },
+        {
+          "printed": {
+            "value": 10.3,
+            "unit": "ratio"
+          },
+          "value": 10.3,
+          "unit": "1",
+          "status": "confirmed",
+          "class": "A",
+          "source_id": "eng:hic-us-2024-hatch-specs",
+          "locator": "Compression ratio row",
+          "evidence": "Compression Ratio 10.8 : 1 10.8 : 1 10.3 : 1 10.3 : 1",
+          "as_printed": "10.3 : 1",
+          "applicability": {
+            "year": "2024",
+            "market": "US",
+            "trim": "EX-L, Sport Touring",
+            "body": "hatchback",
+            "gearbox": "6MT or CVT (not split)",
+            "engine": "1.5T",
+            "notes": ""
+          },
+          "confidence": "high",
+          "range": null,
+          "how_to_measure": null,
+          "notes": ""
+        }
+      ]
+    },
+    "engine.cylinders": {
+      "description": "Number of cylinders (inline)",
+      "unit": "count",
+      "impact": "medium",
+      "candidates": [
+        {
+          "printed": {
+            "value": 4,
+            "unit": "count"
+          },
+          "value": 4.0,
+          "unit": "count",
+          "status": "confirmed",
+          "class": "A",
+          "source_id": "eng:hondanews-ca-2024-hatch-specs",
+          "locator": "ENGINE table, first row",
+          "evidence": "1.5-litre, 16-valve, Direct Injection, DOHC, VTEC® turbocharged 4-cylinder",
+          "as_printed": "4-cylinder",
+          "applicability": {
+            "year": "2024",
+            "market": "CA",
+            "trim": "Sport, Sport Touring",
+            "body": "hatchback",
+            "gearbox": "6MT or CVT (engine ratings not split by gearbox)",
+            "engine": "1.5T",
+            "notes": ""
+          },
+          "confidence": "high",
+          "range": null,
+          "how_to_measure": null,
+          "notes": ""
+        }
+      ]
+    },
+    "engine.power_max": {
+      "description": "Rated peak power (SAE J1349 net, crank)",
+      "unit": "W",
+      "impact": "critical",
+      "candidates": [
+        {
+          "printed": {
+            "value": 180,
+            "unit": "hp"
+          },
+          "value": 134225.9768848086,
+          "unit": "W",
+          "status": "confirmed",
+          "class": "A",
+          "source_id": "eng:hondanews-ca-2024-hatch-specs",
+          "locator": "Horsepower row (Sport Touring column) / applications table",
+          "evidence": "Horsepower @ rpm1 180 @ 6000 180 @ 6000",
+          "as_printed": "180 @ 6000",
+          "applicability": {
+            "year": "2024",
+            "market": "CA",
+            "trim": "Sport, Sport Touring",
+            "body": "hatchback",
+            "gearbox": "6MT or CVT (engine ratings not split by gearbox)",
+            "engine": "1.5T",
+            "notes": ""
+          },
+          "confidence": "high",
+          "range": null,
+          "how_to_measure": null,
+          "notes": "SAE net hp (745.7 W). Ratings are not split by gearbox in any 2022-2024 source (the 10th-gen L15BA did split them: 6MT 180 @ 5500 / 177 @ 1900-5000)."
+        },
+        {
+          "printed": {
+            "value": 180,
+            "unit": "hp"
+          },
+          "value": 134225.9768848086,
+          "unit": "W",
+          "status": "confirmed",
+          "class": "A",
+          "source_id": "eng:hondanews-ca-2023-hatch-specs",
+          "locator": "Horsepower row (Sport Touring column) / applications table",
+          "evidence": "Horsepower @ rpm1 158 @ 6500 180 @ 6000 180 @ 6000 180 @ 6000",
+          "as_printed": "180 @ 6000",
+          "applicability": {
+            "year": "2023",
+            "market": "CA",
+            "trim": "Sport, Sport-B, Sport Touring",
+            "body": "hatchback",
+            "gearbox": "6MT or CVT (not split)",
+            "engine": "1.5T",
+            "notes": ""
+          },
+          "confidence": "high",
+          "range": null,
+          "how_to_measure": null,
+          "notes": "SAE net hp (745.7 W). Ratings are not split by gearbox in any 2022-2024 source (the 10th-gen L15BA did split them: 6MT 180 @ 5500 / 177 @ 1900-5000)."
+        },
+        {
+          "printed": {
+            "value": 180,
+            "unit": "hp"
+          },
+          "value": 134225.9768848086,
+          "unit": "W",
+          "status": "confirmed",
+          "class": "A",
+          "source_id": "eng:hondanews-ca-2022-hatch-specs",
+          "locator": "Horsepower row (Sport Touring column) / applications table",
+          "evidence": "Horsepower @ rpm1 158 @ 6500 180 @ 6000 180 @ 6000",
+          "as_printed": "180 @ 6000",
+          "applicability": {
+            "year": "2022",
+            "market": "CA",
+            "trim": "Sport, Sport Touring",
+            "body": "hatchback",
+            "gearbox": "6MT or CVT (not split)",
+            "engine": "1.5T",
+            "notes": ""
+          },
+          "confidence": "high",
+          "range": null,
+          "how_to_measure": null,
+          "notes": "SAE net hp (745.7 W). Ratings are not split by gearbox in any 2022-2024 source (the 10th-gen L15BA did split them: 6MT 180 @ 5500 / 177 @ 1900-5000)."
+        },
+        {
+          "printed": {
+            "value": 180,
+            "unit": "hp"
+          },
+          "value": 134225.9768848086,
+          "unit": "W",
+          "status": "confirmed",
+          "class": "A",
+          "source_id": "eng:hic-us-2024-hatch-specs",
+          "locator": "Horsepower row (Sport Touring column) / applications table",
+          "evidence": "Horsepower (SAE net) * 158 @ 6500 rpm 158 @ 6500 rpm 180 @ 6000 rpm 180 @ 6000 rpm",
+          "as_printed": "180 @ 6000 rpm",
+          "applicability": {
+            "year": "2024",
+            "market": "US",
+            "trim": "EX-L, Sport Touring",
+            "body": "hatchback",
+            "gearbox": "6MT or CVT (not split)",
+            "engine": "1.5T",
+            "notes": ""
+          },
+          "confidence": "high",
+          "range": null,
+          "how_to_measure": null,
+          "notes": "SAE net hp (745.7 W). Ratings are not split by gearbox in any 2022-2024 source (the 10th-gen L15BA did split them: 6MT 180 @ 5500 / 177 @ 1900-5000)."
+        },
+        {
+          "printed": {
+            "value": 180,
+            "unit": "hp"
+          },
+          "value": 134225.9768848086,
+          "unit": "W",
+          "status": "confirmed",
+          "class": "A",
+          "source_id": "eng:hondanews-us-15t-engine-2024",
+          "locator": "Horsepower row (Sport Touring column) / applications table",
+          "evidence": "Civic Hatchback 2022-2024 EX-L, Sport Touring L15B7 (w/VTEC®) 180 @ 6000 rpm 177 @ 1700-4500 rpm",
+          "as_printed": "180 @ 6000 rpm",
+          "applicability": {
+            "year": "2022-2024",
+            "market": "US",
+            "trim": "Civic Hatchback EX-L, Sport Touring",
+            "body": "hatchback",
+            "gearbox": "not split",
+            "engine": "1.5T",
+            "notes": "Honda 1.5T technical release; Civic Sedan EX/Touring share the same code and ratings per the same table"
+          },
+          "confidence": "high",
+          "range": null,
+          "how_to_measure": null,
+          "notes": "SAE net hp (745.7 W). Ratings are not split by gearbox in any 2022-2024 source (the 10th-gen L15BA did split them: 6MT 180 @ 5500 / 177 @ 1900-5000)."
+        }
+      ]
+    },
+    "engine.power_max_rpm": {
+      "description": "Engine speed at rated peak power",
+      "unit": "rpm",
+      "impact": "high",
+      "candidates": [
+        {
+          "printed": {
+            "value": 6000,
+            "unit": "rpm"
+          },
+          "value": 6000.0,
+          "unit": "rpm",
+          "status": "confirmed",
+          "class": "A",
+          "source_id": "eng:hondanews-ca-2024-hatch-specs",
+          "locator": "Horsepower row",
+          "evidence": "Horsepower @ rpm1 180 @ 6000 180 @ 6000",
+          "as_printed": "180 @ 6000",
+          "applicability": {
+            "year": "2024",
+            "market": "CA",
+            "trim": "Sport, Sport Touring",
+            "body": "hatchback",
+            "gearbox": "6MT or CVT (engine ratings not split by gearbox)",
+            "engine": "1.5T",
+            "notes": ""
+          },
+          "confidence": "high",
+          "range": null,
+          "how_to_measure": null,
+          "notes": ""
+        },
+        {
+          "printed": {
+            "value": 6000,
+            "unit": "rpm"
+          },
+          "value": 6000.0,
+          "unit": "rpm",
+          "status": "confirmed",
+          "class": "A",
+          "source_id": "eng:hondanews-ca-2023-hatch-specs",
+          "locator": "Horsepower row",
+          "evidence": "Horsepower @ rpm1 158 @ 6500 180 @ 6000 180 @ 6000 180 @ 6000",
+          "as_printed": "180 @ 6000",
+          "applicability": {
+            "year": "2023",
+            "market": "CA",
+            "trim": "Sport, Sport-B, Sport Touring",
+            "body": "hatchback",
+            "gearbox": "6MT or CVT (not split)",
+            "engine": "1.5T",
+            "notes": ""
+          },
+          "confidence": "high",
+          "range": null,
+          "how_to_measure": null,
+          "notes": ""
+        },
+        {
+          "printed": {
+            "value": 6000,
+            "unit": "rpm"
+          },
+          "value": 6000.0,
+          "unit": "rpm",
+          "status": "confirmed",
+          "class": "A",
+          "source_id": "eng:hondanews-ca-2022-hatch-specs",
+          "locator": "Horsepower row",
+          "evidence": "Horsepower @ rpm1 158 @ 6500 180 @ 6000 180 @ 6000",
+          "as_printed": "180 @ 6000",
+          "applicability": {
+            "year": "2022",
+            "market": "CA",
+            "trim": "Sport, Sport Touring",
+            "body": "hatchback",
+            "gearbox": "6MT or CVT (not split)",
+            "engine": "1.5T",
+            "notes": ""
+          },
+          "confidence": "high",
+          "range": null,
+          "how_to_measure": null,
+          "notes": ""
+        },
+        {
+          "printed": {
+            "value": 6000,
+            "unit": "rpm"
+          },
+          "value": 6000.0,
+          "unit": "rpm",
+          "status": "confirmed",
+          "class": "A",
+          "source_id": "eng:hic-us-2024-hatch-specs",
+          "locator": "Horsepower row",
+          "evidence": "Horsepower (SAE net) * 158 @ 6500 rpm 158 @ 6500 rpm 180 @ 6000 rpm 180 @ 6000 rpm",
+          "as_printed": "180 @ 6000 rpm",
+          "applicability": {
+            "year": "2024",
+            "market": "US",
+            "trim": "EX-L, Sport Touring",
+            "body": "hatchback",
+            "gearbox": "6MT or CVT (not split)",
+            "engine": "1.5T",
+            "notes": ""
+          },
+          "confidence": "high",
+          "range": null,
+          "how_to_measure": null,
+          "notes": ""
+        },
+        {
+          "printed": {
+            "value": 6000,
+            "unit": "rpm"
+          },
+          "value": 6000.0,
+          "unit": "rpm",
+          "status": "confirmed",
+          "class": "A",
+          "source_id": "eng:hondanews-us-15t-engine-2024",
+          "locator": "Horsepower row",
+          "evidence": "Civic Hatchback 2022-2024 EX-L, Sport Touring L15B7 (w/VTEC®) 180 @ 6000 rpm 177 @ 1700-4500 rpm",
+          "as_printed": "180 @ 6000 rpm",
+          "applicability": {
+            "year": "2022-2024",
+            "market": "US",
+            "trim": "Civic Hatchback EX-L, Sport Touring",
+            "body": "hatchback",
+            "gearbox": "not split",
+            "engine": "1.5T",
+            "notes": "Honda 1.5T technical release; Civic Sedan EX/Touring share the same code and ratings per the same table"
+          },
+          "confidence": "high",
+          "range": null,
+          "how_to_measure": null,
+          "notes": ""
+        }
+      ]
+    },
+    "engine.torque_max": {
+      "description": "Rated peak torque (SAE J1349 net, crank)",
+      "unit": "N*m",
+      "impact": "critical",
+      "candidates": [
+        {
+          "printed": {
+            "value": 177,
+            "unit": "lb-ft"
+          },
+          "value": 239.97977685465787,
+          "unit": "N*m",
+          "status": "confirmed",
+          "class": "A",
+          "source_id": "eng:hondanews-ca-2024-hatch-specs",
+          "locator": "Torque row (Sport Touring column) / 11th-gen section",
+          "evidence": "Torque (lb.-ft. @ rpm)1 177 @ 1700-4500 177 @ 1700-4500",
+          "as_printed": "177 @ 1700-4500",
+          "applicability": {
+            "year": "2024",
+            "market": "CA",
+            "trim": "Sport, Sport Touring",
+            "body": "hatchback",
+            "gearbox": "6MT or CVT (engine ratings not split by gearbox)",
+            "engine": "1.5T",
+            "notes": ""
+          },
+          "confidence": "high",
+          "range": null,
+          "how_to_measure": null,
+          "notes": ""
+        },
+        {
+          "printed": {
+            "value": 177,
+            "unit": "lb-ft"
+          },
+          "value": 239.97977685465787,
+          "unit": "N*m",
+          "status": "confirmed",
+          "class": "A",
+          "source_id": "eng:hondanews-ca-2023-hatch-specs",
+          "locator": "Torque row (Sport Touring column) / 11th-gen section",
+          "evidence": "Torque (lb.-ft. @ rpm)1 138 @ 4200 177 @ 1700-4500 177 @ 1700-4500 177 @ 1700-4500",
+          "as_printed": "177 @ 1700-4500",
+          "applicability": {
+            "year": "2023",
+            "market": "CA",
+            "trim": "Sport, Sport-B, Sport Touring",
+            "body": "hatchback",
+            "gearbox": "6MT or CVT (not split)",
+            "engine": "1.5T",
+            "notes": ""
+          },
+          "confidence": "high",
+          "range": null,
+          "how_to_measure": null,
+          "notes": ""
+        },
+        {
+          "printed": {
+            "value": 177,
+            "unit": "lb-ft"
+          },
+          "value": 239.97977685465787,
+          "unit": "N*m",
+          "status": "confirmed",
+          "class": "A",
+          "source_id": "eng:hondanews-ca-2022-hatch-specs",
+          "locator": "Torque row (Sport Touring column) / 11th-gen section",
+          "evidence": "Torque (lb.-ft. @ rpm)1 138 @ 4200 177 @ 1700-4500 177 @ 1700-4500",
+          "as_printed": "177 @ 1700-4500",
+          "applicability": {
+            "year": "2022",
+            "market": "CA",
+            "trim": "Sport, Sport Touring",
+            "body": "hatchback",
+            "gearbox": "6MT or CVT (not split)",
+            "engine": "1.5T",
+            "notes": ""
+          },
+          "confidence": "high",
+          "range": null,
+          "how_to_measure": null,
+          "notes": ""
+        },
+        {
+          "printed": {
+            "value": 177,
+            "unit": "lb-ft"
+          },
+          "value": 239.97977685465787,
+          "unit": "N*m",
+          "status": "confirmed",
+          "class": "A",
+          "source_id": "eng:hic-us-2024-hatch-specs",
+          "locator": "Torque row (Sport Touring column) / 11th-gen section",
+          "evidence": "Torque (SAE net) * 138 lb-ft @ 4200 rpm 138 lb-ft @ 4200 rpm 177 lb-ft @ 1700-4500 rpm 177 lb-ft @ 1700-4500 rpm",
+          "as_printed": "177 lb-ft @ 1700-4500 rpm",
+          "applicability": {
+            "year": "2024",
+            "market": "US",
+            "trim": "EX-L, Sport Touring",
+            "body": "hatchback",
+            "gearbox": "6MT or CVT (not split)",
+            "engine": "1.5T",
+            "notes": ""
+          },
+          "confidence": "high",
+          "range": null,
+          "how_to_measure": null,
+          "notes": ""
+        },
+        {
+          "printed": {
+            "value": 177,
+            "unit": "lb-ft"
+          },
+          "value": 239.97977685465787,
+          "unit": "N*m",
+          "status": "confirmed",
+          "class": "A",
+          "source_id": "eng:hondanews-us-15t-engine-2024",
+          "locator": "Torque row (Sport Touring column) / 11th-gen section",
+          "evidence": "the engine's peak output of 180 hp (SAE net @ 6,000 rpm) and 177 lb.-ft. of torque (SAE net @ 1,700-4,500 rpm) are possible at 16.5 psi of boost on regular unleaded fuel",
+          "as_printed": "177 lb.-ft. (SAE net @ 1,700-4,500 rpm)",
+          "applicability": {
+            "year": "2022-2024",
+            "market": "US",
+            "trim": "Civic Hatchback EX-L, Sport Touring",
+            "body": "hatchback",
+            "gearbox": "not split",
+            "engine": "1.5T",
+            "notes": "Honda 1.5T technical release; Civic Sedan EX/Touring share the same code and ratings per the same table"
+          },
+          "confidence": "high",
+          "range": null,
+          "how_to_measure": null,
+          "notes": ""
+        }
+      ]
+    },
+    "engine.torque_max_rpm_low": {
+      "description": "Start of rated peak-torque plateau",
+      "unit": "rpm",
+      "impact": "high",
+      "candidates": [
+        {
+          "printed": {
+            "value": 1700,
+            "unit": "rpm"
+          },
+          "value": 1700.0,
+          "unit": "rpm",
+          "status": "confirmed",
+          "class": "A",
+          "source_id": "eng:hondanews-ca-2024-hatch-specs",
+          "locator": "Torque row",
+          "evidence": "Torque (lb.-ft. @ rpm)1 177 @ 1700-4500 177 @ 1700-4500",
+          "as_printed": "177 @ 1700-4500",
+          "applicability": {
+            "year": "2024",
+            "market": "CA",
+            "trim": "Sport, Sport Touring",
+            "body": "hatchback",
+            "gearbox": "6MT or CVT (engine ratings not split by gearbox)",
+            "engine": "1.5T",
+            "notes": ""
+          },
+          "confidence": "high",
+          "range": null,
+          "how_to_measure": null,
+          "notes": ""
+        },
+        {
+          "printed": {
+            "value": 1700,
+            "unit": "rpm"
+          },
+          "value": 1700.0,
+          "unit": "rpm",
+          "status": "confirmed",
+          "class": "A",
+          "source_id": "eng:hondanews-ca-2023-hatch-specs",
+          "locator": "Torque row",
+          "evidence": "Torque (lb.-ft. @ rpm)1 138 @ 4200 177 @ 1700-4500 177 @ 1700-4500 177 @ 1700-4500",
+          "as_printed": "177 @ 1700-4500",
+          "applicability": {
+            "year": "2023",
+            "market": "CA",
+            "trim": "Sport, Sport-B, Sport Touring",
+            "body": "hatchback",
+            "gearbox": "6MT or CVT (not split)",
+            "engine": "1.5T",
+            "notes": ""
+          },
+          "confidence": "high",
+          "range": null,
+          "how_to_measure": null,
+          "notes": ""
+        },
+        {
+          "printed": {
+            "value": 1700,
+            "unit": "rpm"
+          },
+          "value": 1700.0,
+          "unit": "rpm",
+          "status": "confirmed",
+          "class": "A",
+          "source_id": "eng:hondanews-ca-2022-hatch-specs",
+          "locator": "Torque row",
+          "evidence": "Torque (lb.-ft. @ rpm)1 138 @ 4200 177 @ 1700-4500 177 @ 1700-4500",
+          "as_printed": "177 @ 1700-4500",
+          "applicability": {
+            "year": "2022",
+            "market": "CA",
+            "trim": "Sport, Sport Touring",
+            "body": "hatchback",
+            "gearbox": "6MT or CVT (not split)",
+            "engine": "1.5T",
+            "notes": ""
+          },
+          "confidence": "high",
+          "range": null,
+          "how_to_measure": null,
+          "notes": ""
+        },
+        {
+          "printed": {
+            "value": 1700,
+            "unit": "rpm"
+          },
+          "value": 1700.0,
+          "unit": "rpm",
+          "status": "confirmed",
+          "class": "A",
+          "source_id": "eng:hic-us-2024-hatch-specs",
+          "locator": "Torque row",
+          "evidence": "Torque (SAE net) * 138 lb-ft @ 4200 rpm 138 lb-ft @ 4200 rpm 177 lb-ft @ 1700-4500 rpm 177 lb-ft @ 1700-4500 rpm",
+          "as_printed": "177 lb-ft @ 1700-4500 rpm",
+          "applicability": {
+            "year": "2024",
+            "market": "US",
+            "trim": "EX-L, Sport Touring",
+            "body": "hatchback",
+            "gearbox": "6MT or CVT (not split)",
+            "engine": "1.5T",
+            "notes": ""
+          },
+          "confidence": "high",
+          "range": null,
+          "how_to_measure": null,
+          "notes": ""
+        },
+        {
+          "printed": {
+            "value": 1700,
+            "unit": "rpm"
+          },
+          "value": 1700.0,
+          "unit": "rpm",
+          "status": "confirmed",
+          "class": "A",
+          "source_id": "eng:hondanews-us-15t-engine-2024",
+          "locator": "Torque row",
+          "evidence": "the engine's peak output of 180 hp (SAE net @ 6,000 rpm) and 177 lb.-ft. of torque (SAE net @ 1,700-4,500 rpm) are possible at 16.5 psi of boost on regular unleaded fuel",
+          "as_printed": "177 lb.-ft. (SAE net @ 1,700-4,500 rpm)",
+          "applicability": {
+            "year": "2022-2024",
+            "market": "US",
+            "trim": "Civic Hatchback EX-L, Sport Touring",
+            "body": "hatchback",
+            "gearbox": "not split",
+            "engine": "1.5T",
+            "notes": "Honda 1.5T technical release; Civic Sedan EX/Touring share the same code and ratings per the same table"
+          },
+          "confidence": "high",
+          "range": null,
+          "how_to_measure": null,
+          "notes": ""
+        }
+      ]
+    },
+    "engine.torque_max_rpm_high": {
+      "description": "End of rated peak-torque plateau",
+      "unit": "rpm",
+      "impact": "high",
+      "candidates": [
+        {
+          "printed": {
+            "value": 4500,
+            "unit": "rpm"
+          },
+          "value": 4500.0,
+          "unit": "rpm",
+          "status": "confirmed",
+          "class": "A",
+          "source_id": "eng:hondanews-ca-2024-hatch-specs",
+          "locator": "Torque row",
+          "evidence": "Torque (lb.-ft. @ rpm)1 177 @ 1700-4500 177 @ 1700-4500",
+          "as_printed": "177 @ 1700-4500",
+          "applicability": {
+            "year": "2024",
+            "market": "CA",
+            "trim": "Sport, Sport Touring",
+            "body": "hatchback",
+            "gearbox": "6MT or CVT (engine ratings not split by gearbox)",
+            "engine": "1.5T",
+            "notes": ""
+          },
+          "confidence": "high",
+          "range": null,
+          "how_to_measure": null,
+          "notes": ""
+        },
+        {
+          "printed": {
+            "value": 4500,
+            "unit": "rpm"
+          },
+          "value": 4500.0,
+          "unit": "rpm",
+          "status": "confirmed",
+          "class": "A",
+          "source_id": "eng:hondanews-ca-2023-hatch-specs",
+          "locator": "Torque row",
+          "evidence": "Torque (lb.-ft. @ rpm)1 138 @ 4200 177 @ 1700-4500 177 @ 1700-4500 177 @ 1700-4500",
+          "as_printed": "177 @ 1700-4500",
+          "applicability": {
+            "year": "2023",
+            "market": "CA",
+            "trim": "Sport, Sport-B, Sport Touring",
+            "body": "hatchback",
+            "gearbox": "6MT or CVT (not split)",
+            "engine": "1.5T",
+            "notes": ""
+          },
+          "confidence": "high",
+          "range": null,
+          "how_to_measure": null,
+          "notes": ""
+        },
+        {
+          "printed": {
+            "value": 4500,
+            "unit": "rpm"
+          },
+          "value": 4500.0,
+          "unit": "rpm",
+          "status": "confirmed",
+          "class": "A",
+          "source_id": "eng:hondanews-ca-2022-hatch-specs",
+          "locator": "Torque row",
+          "evidence": "Torque (lb.-ft. @ rpm)1 138 @ 4200 177 @ 1700-4500 177 @ 1700-4500",
+          "as_printed": "177 @ 1700-4500",
+          "applicability": {
+            "year": "2022",
+            "market": "CA",
+            "trim": "Sport, Sport Touring",
+            "body": "hatchback",
+            "gearbox": "6MT or CVT (not split)",
+            "engine": "1.5T",
+            "notes": ""
+          },
+          "confidence": "high",
+          "range": null,
+          "how_to_measure": null,
+          "notes": ""
+        },
+        {
+          "printed": {
+            "value": 4500,
+            "unit": "rpm"
+          },
+          "value": 4500.0,
+          "unit": "rpm",
+          "status": "confirmed",
+          "class": "A",
+          "source_id": "eng:hic-us-2024-hatch-specs",
+          "locator": "Torque row",
+          "evidence": "Torque (SAE net) * 138 lb-ft @ 4200 rpm 138 lb-ft @ 4200 rpm 177 lb-ft @ 1700-4500 rpm 177 lb-ft @ 1700-4500 rpm",
+          "as_printed": "177 lb-ft @ 1700-4500 rpm",
+          "applicability": {
+            "year": "2024",
+            "market": "US",
+            "trim": "EX-L, Sport Touring",
+            "body": "hatchback",
+            "gearbox": "6MT or CVT (not split)",
+            "engine": "1.5T",
+            "notes": ""
+          },
+          "confidence": "high",
+          "range": null,
+          "how_to_measure": null,
+          "notes": ""
+        },
+        {
+          "printed": {
+            "value": 4500,
+            "unit": "rpm"
+          },
+          "value": 4500.0,
+          "unit": "rpm",
+          "status": "confirmed",
+          "class": "A",
+          "source_id": "eng:hondanews-us-15t-engine-2024",
+          "locator": "Torque row",
+          "evidence": "the engine's peak output of 180 hp (SAE net @ 6,000 rpm) and 177 lb.-ft. of torque (SAE net @ 1,700-4,500 rpm) are possible at 16.5 psi of boost on regular unleaded fuel",
+          "as_printed": "177 lb.-ft. (SAE net @ 1,700-4,500 rpm)",
+          "applicability": {
+            "year": "2022-2024",
+            "market": "US",
+            "trim": "Civic Hatchback EX-L, Sport Touring",
+            "body": "hatchback",
+            "gearbox": "not split",
+            "engine": "1.5T",
+            "notes": "Honda 1.5T technical release; Civic Sedan EX/Touring share the same code and ratings per the same table"
+          },
+          "confidence": "high",
+          "range": null,
+          "how_to_measure": null,
+          "notes": ""
+        }
+      ]
+    },
+    "engine.redline_rpm": {
+      "description": "Redline (tachometer red zone start, as published)",
+      "unit": "rpm",
+      "impact": "high",
+      "candidates": [
+        {
+          "printed": {
+            "value": 6600,
+            "unit": "rpm"
+          },
+          "value": 6600.0,
+          "unit": "rpm",
+          "status": "confirmed",
+          "class": "A",
+          "source_id": "eng:hic-us-2024-hatch-specs",
+          "locator": "Engineering table, Redline row, Sport Touring column",
+          "evidence": "Redline 6800 rpm 6800 rpm 6600 rpm 6600 rpm",
+          "as_printed": "6600 rpm",
+          "applicability": {
+            "year": "2024",
+            "market": "US",
+            "trim": "EX-L, Sport Touring",
+            "body": "hatchback",
+            "gearbox": "6MT or CVT (not split)",
+            "engine": "1.5T",
+            "notes": ""
+          },
+          "confidence": "high",
+          "range": null,
+          "how_to_measure": null,
+          "notes": "US source; the Honda Canada spec sheets do not list a redline. No US/Canada engine difference is indicated (identical ratings, bore/stroke, CR). The Si (L15CA) release also cites a 6600 rpm redline."
+        },
+        {
+          "printed": {
+            "value": 6600,
+            "unit": "rpm"
+          },
+          "value": 6600.0,
+          "unit": "rpm",
+          "status": "confirmed",
+          "class": "A",
+          "source_id": "eng:hic-us-2022-hatch-specs",
+          "locator": "Engineering table, Redline row, Sport Touring column",
+          "evidence": "Redline 6800 rpm 6800 rpm 6600 rpm 6600 rpm",
+          "as_printed": "6600 rpm",
+          "applicability": {
+            "year": "2022",
+            "market": "US",
+            "trim": "EX-L, Sport Touring",
+            "body": "hatchback",
+            "gearbox": "6MT or CVT (not split)",
+            "engine": "1.5T",
+            "notes": ""
+          },
+          "confidence": "high",
+          "range": null,
+          "how_to_measure": null,
+          "notes": "US source; the Honda Canada spec sheets do not list a redline. No US/Canada engine difference is indicated (identical ratings, bore/stroke, CR). The Si (L15CA) release also cites a 6600 rpm redline."
+        }
+      ]
+    },
+    "engine.limiter_rpm": {
+      "description": "Fuel-cut (rev limiter) engine speed, stock calibration",
+      "unit": "rpm",
+      "impact": "high",
+      "candidates": [
+        {
+          "value": null,
+          "unit": "rpm",
+          "status": "unknown",
+          "class": null,
+          "source_id": null,
+          "locator": "",
+          "evidence": "",
+          "as_printed": "",
+          "applicability": {},
+          "confidence": "none",
+          "range": null,
+          "how_to_measure": "In neutral or 2nd gear, record OBD-II rpm (10 Hz+) or the tach on video while holding WOT into the limiter; note the cut rpm, the re-enable rpm and the cut pattern (fuel/spark).",
+          "notes": "Lead only: limiter expected slightly above the 6600 rpm redline; do not use as data.",
+          "searches": [
+            "Honda Canada/US spec sheets (no limiter figure)",
+            "hondanews.com 1.5T technical release (redline only)",
+            "WebSearch: Car and Driver 2022 Civic hatch manual test (Redline/Fuel Cutoff) - syndicated copy on autos.yahoo.com is robots-disallowed",
+            "civicxi.com threads (rev hang, dyno) - no stock 6MT limiter figure found",
+            "PRL blog 2026 gives a stock 6500 rpm limit for a 10th-gen Si only (different engine/calibration; not used)"
+          ]
+        }
+      ]
+    },
+    "engine.idle_rpm": {
+      "description": "Warm idle speed",
+      "unit": "rpm",
+      "impact": "medium",
+      "candidates": [
+        {
+          "value": 750,
+          "unit": "rpm",
+          "status": "estimated",
+          "class": "E",
+          "source_id": null,
+          "locator": "",
+          "evidence": "",
+          "as_printed": "",
+          "applicability": {},
+          "confidence": "low",
+          "range": [
+            650,
+            850
+          ],
+          "how_to_measure": "Warm engine (fan cycled), A/C off, neutral: read rpm via OBD-II; repeat with A/C on.",
+          "notes": "Engineering estimate: typical warm idle of modern Honda L-series DI engines; no published figure found for this car (service manual on techinfo.honda.com is paywalled; owner's manual gives none)."
+        }
+      ]
+    },
+    "engine.fuel_cut_behavior": {
+      "description": "Overrun (deceleration) fuel cut behaviour",
+      "unit": "text",
+      "impact": "high",
+      "candidates": [
+        {
+          "value": null,
+          "unit": "text",
+          "status": "unknown",
+          "class": null,
+          "source_id": null,
+          "locator": "",
+          "evidence": "",
+          "as_printed": "",
+          "applicability": {},
+          "confidence": "none",
+          "range": null,
+          "how_to_measure": "OBD-II log of rpm, throttle, short-term fuel trim / injector pulse (KTuner/Hondata datalog ideal) during lift-offs at 2000-6000 rpm in gear and during clutch-in revs; DFCO is visible as fuel trim/injection going to zero.",
+          "notes": "Matters for overrun burble modelling (audio domain): burble with a cat-back needs combustion on overrun, i.e. before DFCO engages or after it re-enables.",
+          "searches": [
+            "Honda spec sheets and 1.5T release (not described)",
+            "civicxi rev-hang threads (rev hang discussed, no logged DFCO thresholds)"
+          ]
+        }
+      ]
+    },
+    "engine.limiter_behavior": {
+      "description": "Rev-limiter behaviour (hard/soft cut, pattern)",
+      "unit": "text",
+      "impact": "medium",
+      "candidates": [
+        {
+          "value": null,
+          "unit": "text",
+          "status": "unknown",
+          "class": null,
+          "source_id": null,
+          "locator": "",
+          "evidence": "",
+          "as_printed": "",
+          "applicability": {},
+          "confidence": "none",
+          "range": null,
+          "how_to_measure": "As engine.limiter_rpm; record audio + OBD at the limiter in neutral and in 2nd.",
+          "notes": "",
+          "searches": [
+            "as engine.limiter_rpm"
+          ]
+        }
+      ]
+    },
+    "engine.rev_hang_engine_side": {
+      "description": "Engine-side causes of rev hang between shifts",
+      "unit": "text",
+      "impact": "medium",
+      "candidates": [
+        {
+          "value": null,
+          "unit": "text",
+          "status": "unknown",
+          "class": null,
+          "source_id": null,
+          "locator": "",
+          "evidence": "",
+          "as_printed": "",
+          "applicability": {},
+          "confidence": "none",
+          "range": null,
+          "how_to_measure": "Datalog rpm, pedal and commanded throttle during clutch-in upshifts (drivetrain thread owns rev-hang numbers).",
+          "notes": "Lead only (forum): civicxi 'Chilly's 2023 Civic FL1 Sport Touring 6MT Build' (cache/pages/d759f192e18e2393.txt) says 'Still running a stock tune, but I reduced the rev hang.' with KTuner, suggesting a calibration (throttle/ignition decay) cause, not hardware.",
+          "searches": [
+            "Honda spec/feature pages (not described)",
+            "civicxi.com build/rev-hang threads"
+          ]
+        }
+      ]
+    },
+    "engine.inertia": {
+      "description": "Rotating inertia of engine (crank, damper, rods/pistons equivalent, cam drive) excluding flywheel",
+      "unit": "kg*m2",
+      "impact": "high",
+      "candidates": [
+        {
+          "value": 0.05,
+          "unit": "kg*m2",
+          "status": "estimated",
+          "class": "E",
+          "source_id": null,
+          "locator": "",
+          "evidence": "",
+          "as_printed": "",
+          "applicability": {},
+          "confidence": "low",
+          "range": [
+            0.035,
+            0.08
+          ],
+          "how_to_measure": "Free-rev test: log rpm at 50-100 Hz with clutch disengaged after a blip; dw/dt with known friction torque gives engine+flywheel inertia; subtract the flywheel (weigh/measure or swing-test it when the clutch is serviced).",
+          "notes": "Engineering estimate. Basis: 1.5 L inline-4 with forged micropolished crank, crack-split rods and light pistons (Honda 1.5T release); crank+damper inertia for small I4s is commonly a few hundredths kg*m2. Flywheel (dual-mass vs single-mass) is owned by the drivetrain thread; none was found in public sources here."
+        }
+      ]
+    },
+    "engine.driveline_loss_assumed": {
+      "description": "Assumed fraction of crank power lost between crank and chassis-dyno roller (FWD manual)",
+      "unit": "1",
+      "impact": "high",
+      "candidates": [
+        {
+          "value": 0.13,
+          "unit": "1",
+          "status": "estimated",
+          "class": "E",
+          "source_id": null,
+          "locator": "",
+          "evidence": "",
+          "as_printed": "",
+          "applicability": {},
+          "confidence": "low",
+          "range": [
+            0.1,
+            0.18
+          ],
+          "how_to_measure": "Back-to-back engine dyno and chassis dyno of the same engine (not practical); or coastdown-corrected chassis dyno with known tire losses.",
+          "notes": "Rule-of-thumb range for transverse FWD manual on an inertia chassis dyno; used only to convert wheel to crank in engine_curve.csv. No stock 6MT hatch dyno was found to cross-check it against the 180 hp rating."
+        }
+      ]
+    }
+  }
+}

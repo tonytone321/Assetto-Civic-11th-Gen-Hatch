@@ -1,0 +1,30 @@
+{
+  "run_id": "prl_2022_civic_touring_cvt_stock_intake_baseline",
+  "source_id": "eng:prl-civicxi-intake-baseline-2021",
+  "vehicle": "2022 Honda Civic Touring sedan, 1.5T, CVT",
+  "stock": true,
+  "dyno_type": "DynoJet 224X (chassis, inertia)",
+  "correction": null,
+  "gear": "4th (CVT), 70-90 mph",
+  "fuel": null,
+  "ambient": "95 F, 1000 ft",
+  "peak": {
+    "wheel_power": {
+      "printed": [
+        168.6,
+        "hp"
+      ],
+      "value": 125724.99834877072,
+      "unit": "W"
+    }
+  },
+  "evidence": "For the set of dyno runs with the completely stock car, we saw an average power across all runs of 165.4 HP and an average peak power of 168.6 HP.",
+  "equivalence": "CVT sedan; x-axis was road speed (no tach signal), so no rpm curve exists.",
+  "chart_url": null,
+  "points": [],
+  "use_for_curve": false,
+  "source_url": "https://www.civicxi.com/forum/threads/prl-motorsports-1-5t-civic-stage-1-intake-development.49861/post-811911",
+  "cache_file": "cache/pages/060fc065a7a61b16.txt",
+  "digitizing": null,
+  "notes": "Stock run of the same engine code/rating but NOT the target body/gearbox. Peak figures only; no rpm-resolved points were available, so this run contributes no rows to engine_curve.csv."
+}

@@ -1,0 +1,1041 @@
+{
+  "domain": "transmission",
+  "title": "Transmission",
+  "schema_version": 1,
+  "updated": "2026-10-03",
+  "sources": {
+    "tx:hondanews-us-2024-hatch-specs": {
+      "title": "2024 Honda Civic Hatchback Specifications & Features",
+      "url": "https://hondanews.com/en-US/honda-automobiles/releases/2024-honda-civic-hatchback-specifications-features",
+      "publisher": "American Honda Motor Co. (hondanews.com)",
+      "class": "A",
+      "accessed": "2026-10-03",
+      "access_method": "static",
+      "applicability": "2024 Civic Hatchback, US market, all trims; 6MT column on Sport (2.0L) and Sport Touring (1.5T)",
+      "notes": "Table columns LX/Sport/EX-L/Sport Touring checked in raw HTML; 6MT values in Sport and Sport Touring columns.",
+      "cache_file": "cache/pages/2b1524caf89378a3.txt"
+    },
+    "tx:hondanews-us-2023-hatch-specs": {
+      "title": "2023 Honda Civic Hatchback Specifications & Features",
+      "url": "https://hondanews.com/en-US/honda-automobiles/releases/2023-honda-civic-hatchback-specifications-features",
+      "publisher": "American Honda Motor Co. (hondanews.com)",
+      "class": "A",
+      "accessed": "2026-10-03",
+      "access_method": "static",
+      "applicability": "2023 Civic Hatchback, US",
+      "notes": "Used for model-year-change check.",
+      "cache_file": "cache/pages/ae42e10b45b3e86f.txt"
+    },
+    "tx:hondanews-us-2022-hatch-specs": {
+      "title": "2022 Honda Civic Hatchback Specifications & Features (Sept 20, 2021)",
+      "url": "https://hondanews.com/en-US/honda-automobiles/releases/release-cb177600e922c8a5fcfa01b9b80149e2-2022-honda-civic-hatchback-specifications-features",
+      "publisher": "American Honda Motor Co. (hondanews.com)",
+      "class": "A",
+      "accessed": "2026-10-03",
+      "access_method": "static",
+      "applicability": "2022 Civic Hatchback, US",
+      "notes": "Used for model-year-change check.",
+      "cache_file": "cache/pages/fb1d5790fd3bfda8.txt"
+    },
+    "tx:hondainfocenter-us-2024-hatch-specs": {
+      "title": "2024 Civic Hatchback Specifications - Honda Information Center",
+      "url": "https://www.hondainfocenter.com/2024/Civic-Hatchback/Feature-Guide/Civic-Hatchback-Specifications/",
+      "publisher": "American Honda Motor Co. (Honda Information Center)",
+      "class": "A",
+      "accessed": "2026-10-03",
+      "access_method": "static",
+      "applicability": "2024 Civic Hatchback, US",
+      "notes": "data-model-identifier 2=Sport, 4=Sport Touring (checked in raw HTML). Prints trailing zeros dropped (2.08, 0.83, 4.1). Same publisher as hondanews.com, so not fully independent.",
+      "cache_file": "cache/pages/b67f7f855816944e.txt"
+    },
+    "tx:hondanews-ca-2024-hatch-specs": {
+      "title": "2024 Honda Civic Hatchback Specifications (Honda Canada)",
+      "url": "https://hondanews.ca/en-CA/releases/release-1128768177ab00a73471b1938c152ddf-2024-honda-civic-hatchback-specifications",
+      "publisher": "Honda Canada Inc. (hondanews.ca)",
+      "class": "A",
+      "accessed": "2026-10-03",
+      "access_method": "static",
+      "applicability": "2024 Civic Hatchback, Canada, Sport and Sport Touring",
+      "notes": "Lists 6MT as 'Available' on Sport Touring only; prints NO gear ratios.",
+      "cache_file": "cache/pages/22157798d6e48e1c.txt"
+    }
+  },
+  "parameters": {
+    "transmission.gear_1": {
+      "description": "1st gear ratio",
+      "unit": "1",
+      "impact": "high",
+      "candidates": [
+        {
+          "printed": {
+            "value": 3.643,
+            "unit": "ratio"
+          },
+          "value": 3.643,
+          "unit": "1",
+          "status": "confirmed",
+          "class": "A",
+          "source_id": "tx:hondanews-us-2024-hatch-specs",
+          "locator": "DRIVETRAIN > 6-Speed Manual Transmission (6MT) > Gear Ratios, row '1st', Sport Touring column",
+          "evidence": "6-Speed Manual Transmission (6MT) … Gear Ratios: … 1st - 3.643 - 3.643",
+          "as_printed": "3.643",
+          "applicability": {
+            "year": "2024",
+            "market": "US",
+            "trim": "Sport Touring (and 2.0L Sport 6MT, same values)",
+            "body": "hatchback",
+            "gearbox": "6MT",
+            "engine": "1.5T",
+            "notes": ""
+          },
+          "confidence": "high",
+          "range": null,
+          "how_to_measure": null,
+          "notes": "US-market source. Honda Canada's 2024 spec sheet prints no ratios; no Canadian-specific ratio found. Unchanged 2022-2024 (see other candidates); 2.0L Sport 6MT column prints the same values. Si ratios/final drive differ and are excluded."
+        },
+        {
+          "printed": {
+            "value": 3.643,
+            "unit": "ratio"
+          },
+          "value": 3.643,
+          "unit": "1",
+          "status": "confirmed",
+          "class": "A",
+          "source_id": "tx:hondainfocenter-us-2024-hatch-specs",
+          "locator": "Transmissions table, row '1st', Sport Touring column (data-model-identifier 4)",
+          "evidence": "6-Speed Manual Transmission (6MT) … 1st 3.643 3.643",
+          "as_printed": "3.643",
+          "applicability": {
+            "year": "2024",
+            "market": "US",
+            "trim": "Sport Touring (and 2.0L Sport 6MT, same values)",
+            "body": "hatchback",
+            "gearbox": "6MT",
+            "engine": "1.5T",
+            "notes": ""
+          },
+          "confidence": "high",
+          "range": null,
+          "how_to_measure": null,
+          "notes": "Same publisher (American Honda) as hondanews.com; second Honda page, not fully independent. Trailing zeros dropped by the site."
+        },
+        {
+          "printed": {
+            "value": 3.643,
+            "unit": "ratio"
+          },
+          "value": 3.643,
+          "unit": "1",
+          "status": "confirmed",
+          "class": "A",
+          "source_id": "tx:hondanews-us-2023-hatch-specs",
+          "locator": "DRIVETRAIN > 6MT Gear Ratios, row '1st'",
+          "evidence": "Gear Ratios: … 1st - 3.643 - 3.643",
+          "as_printed": "3.643",
+          "applicability": {
+            "year": "2023",
+            "market": "US",
+            "trim": "Sport Touring (and 2.0L Sport 6MT, same values)",
+            "body": "hatchback",
+            "gearbox": "6MT",
+            "engine": "1.5T",
+            "notes": ""
+          },
+          "confidence": "high",
+          "range": null,
+          "how_to_measure": null,
+          "notes": "Model-year check: identical to 2024."
+        },
+        {
+          "printed": {
+            "value": 3.643,
+            "unit": "ratio"
+          },
+          "value": 3.643,
+          "unit": "1",
+          "status": "confirmed",
+          "class": "A",
+          "source_id": "tx:hondanews-us-2022-hatch-specs",
+          "locator": "TRANSMISSIONS > 6-Speed Manual Transmission (6MT), row '1st'",
+          "evidence": "6-Speed Manual Transmission (6MT) … 1st 3.643 3.643",
+          "as_printed": "3.643",
+          "applicability": {
+            "year": "2022",
+            "market": "US",
+            "trim": "Sport Touring (and 2.0L Sport 6MT, same values)",
+            "body": "hatchback",
+            "gearbox": "6MT",
+            "engine": "1.5T",
+            "notes": ""
+          },
+          "confidence": "high",
+          "range": null,
+          "how_to_measure": null,
+          "notes": "Model-year check: identical to 2024."
+        }
+      ]
+    },
+    "transmission.gear_2": {
+      "description": "2nd gear ratio",
+      "unit": "1",
+      "impact": "high",
+      "candidates": [
+        {
+          "printed": {
+            "value": 2.08,
+            "unit": "ratio"
+          },
+          "value": 2.08,
+          "unit": "1",
+          "status": "confirmed",
+          "class": "A",
+          "source_id": "tx:hondanews-us-2024-hatch-specs",
+          "locator": "DRIVETRAIN > 6-Speed Manual Transmission (6MT) > Gear Ratios, row '2nd', Sport Touring column",
+          "evidence": "6-Speed Manual Transmission (6MT) … Gear Ratios: … 2nd - 2.080 - 2.080",
+          "as_printed": "2.080",
+          "applicability": {
+            "year": "2024",
+            "market": "US",
+            "trim": "Sport Touring (and 2.0L Sport 6MT, same values)",
+            "body": "hatchback",
+            "gearbox": "6MT",
+            "engine": "1.5T",
+            "notes": ""
+          },
+          "confidence": "high",
+          "range": null,
+          "how_to_measure": null,
+          "notes": "US-market source. Honda Canada's 2024 spec sheet prints no ratios; no Canadian-specific ratio found. Unchanged 2022-2024 (see other candidates); 2.0L Sport 6MT column prints the same values. Si ratios/final drive differ and are excluded."
+        },
+        {
+          "printed": {
+            "value": 2.08,
+            "unit": "ratio"
+          },
+          "value": 2.08,
+          "unit": "1",
+          "status": "confirmed",
+          "class": "A",
+          "source_id": "tx:hondainfocenter-us-2024-hatch-specs",
+          "locator": "Transmissions table, row '2nd', Sport Touring column (data-model-identifier 4)",
+          "evidence": "6-Speed Manual Transmission (6MT) … 2nd 2.08 2.08",
+          "as_printed": "2.08",
+          "applicability": {
+            "year": "2024",
+            "market": "US",
+            "trim": "Sport Touring (and 2.0L Sport 6MT, same values)",
+            "body": "hatchback",
+            "gearbox": "6MT",
+            "engine": "1.5T",
+            "notes": ""
+          },
+          "confidence": "high",
+          "range": null,
+          "how_to_measure": null,
+          "notes": "Same publisher (American Honda) as hondanews.com; second Honda page, not fully independent. Trailing zeros dropped by the site."
+        },
+        {
+          "printed": {
+            "value": 2.08,
+            "unit": "ratio"
+          },
+          "value": 2.08,
+          "unit": "1",
+          "status": "confirmed",
+          "class": "A",
+          "source_id": "tx:hondanews-us-2023-hatch-specs",
+          "locator": "DRIVETRAIN > 6MT Gear Ratios, row '2nd'",
+          "evidence": "Gear Ratios: … 2nd - 2.080 - 2.080",
+          "as_printed": "2.080",
+          "applicability": {
+            "year": "2023",
+            "market": "US",
+            "trim": "Sport Touring (and 2.0L Sport 6MT, same values)",
+            "body": "hatchback",
+            "gearbox": "6MT",
+            "engine": "1.5T",
+            "notes": ""
+          },
+          "confidence": "high",
+          "range": null,
+          "how_to_measure": null,
+          "notes": "Model-year check: identical to 2024."
+        },
+        {
+          "printed": {
+            "value": 2.08,
+            "unit": "ratio"
+          },
+          "value": 2.08,
+          "unit": "1",
+          "status": "confirmed",
+          "class": "A",
+          "source_id": "tx:hondanews-us-2022-hatch-specs",
+          "locator": "TRANSMISSIONS > 6-Speed Manual Transmission (6MT), row '2nd'",
+          "evidence": "6-Speed Manual Transmission (6MT) … 2nd 2.080 2.080",
+          "as_printed": "2.080",
+          "applicability": {
+            "year": "2022",
+            "market": "US",
+            "trim": "Sport Touring (and 2.0L Sport 6MT, same values)",
+            "body": "hatchback",
+            "gearbox": "6MT",
+            "engine": "1.5T",
+            "notes": ""
+          },
+          "confidence": "high",
+          "range": null,
+          "how_to_measure": null,
+          "notes": "Model-year check: identical to 2024."
+        }
+      ]
+    },
+    "transmission.gear_3": {
+      "description": "3rd gear ratio",
+      "unit": "1",
+      "impact": "high",
+      "candidates": [
+        {
+          "printed": {
+            "value": 1.361,
+            "unit": "ratio"
+          },
+          "value": 1.361,
+          "unit": "1",
+          "status": "confirmed",
+          "class": "A",
+          "source_id": "tx:hondanews-us-2024-hatch-specs",
+          "locator": "DRIVETRAIN > 6-Speed Manual Transmission (6MT) > Gear Ratios, row '3rd', Sport Touring column",
+          "evidence": "6-Speed Manual Transmission (6MT) … Gear Ratios: … 3rd - 1.361 - 1.361",
+          "as_printed": "1.361",
+          "applicability": {
+            "year": "2024",
+            "market": "US",
+            "trim": "Sport Touring (and 2.0L Sport 6MT, same values)",
+            "body": "hatchback",
+            "gearbox": "6MT",
+            "engine": "1.5T",
+            "notes": ""
+          },
+          "confidence": "high",
+          "range": null,
+          "how_to_measure": null,
+          "notes": "US-market source. Honda Canada's 2024 spec sheet prints no ratios; no Canadian-specific ratio found. Unchanged 2022-2024 (see other candidates); 2.0L Sport 6MT column prints the same values. Si ratios/final drive differ and are excluded."
+        },
+        {
+          "printed": {
+            "value": 1.361,
+            "unit": "ratio"
+          },
+          "value": 1.361,
+          "unit": "1",
+          "status": "confirmed",
+          "class": "A",
+          "source_id": "tx:hondainfocenter-us-2024-hatch-specs",
+          "locator": "Transmissions table, row '3rd', Sport Touring column (data-model-identifier 4)",
+          "evidence": "6-Speed Manual Transmission (6MT) … 3rd 1.361 1.361",
+          "as_printed": "1.361",
+          "applicability": {
+            "year": "2024",
+            "market": "US",
+            "trim": "Sport Touring (and 2.0L Sport 6MT, same values)",
+            "body": "hatchback",
+            "gearbox": "6MT",
+            "engine": "1.5T",
+            "notes": ""
+          },
+          "confidence": "high",
+          "range": null,
+          "how_to_measure": null,
+          "notes": "Same publisher (American Honda) as hondanews.com; second Honda page, not fully independent. Trailing zeros dropped by the site."
+        },
+        {
+          "printed": {
+            "value": 1.361,
+            "unit": "ratio"
+          },
+          "value": 1.361,
+          "unit": "1",
+          "status": "confirmed",
+          "class": "A",
+          "source_id": "tx:hondanews-us-2023-hatch-specs",
+          "locator": "DRIVETRAIN > 6MT Gear Ratios, row '3rd'",
+          "evidence": "Gear Ratios: … 3rd - 1.361 - 1.361",
+          "as_printed": "1.361",
+          "applicability": {
+            "year": "2023",
+            "market": "US",
+            "trim": "Sport Touring (and 2.0L Sport 6MT, same values)",
+            "body": "hatchback",
+            "gearbox": "6MT",
+            "engine": "1.5T",
+            "notes": ""
+          },
+          "confidence": "high",
+          "range": null,
+          "how_to_measure": null,
+          "notes": "Model-year check: identical to 2024."
+        },
+        {
+          "printed": {
+            "value": 1.361,
+            "unit": "ratio"
+          },
+          "value": 1.361,
+          "unit": "1",
+          "status": "confirmed",
+          "class": "A",
+          "source_id": "tx:hondanews-us-2022-hatch-specs",
+          "locator": "TRANSMISSIONS > 6-Speed Manual Transmission (6MT), row '3rd'",
+          "evidence": "6-Speed Manual Transmission (6MT) … 3rd 1.361 1.361",
+          "as_printed": "1.361",
+          "applicability": {
+            "year": "2022",
+            "market": "US",
+            "trim": "Sport Touring (and 2.0L Sport 6MT, same values)",
+            "body": "hatchback",
+            "gearbox": "6MT",
+            "engine": "1.5T",
+            "notes": ""
+          },
+          "confidence": "high",
+          "range": null,
+          "how_to_measure": null,
+          "notes": "Model-year check: identical to 2024."
+        }
+      ]
+    },
+    "transmission.gear_4": {
+      "description": "4th gear ratio",
+      "unit": "1",
+      "impact": "high",
+      "candidates": [
+        {
+          "printed": {
+            "value": 1.024,
+            "unit": "ratio"
+          },
+          "value": 1.024,
+          "unit": "1",
+          "status": "confirmed",
+          "class": "A",
+          "source_id": "tx:hondanews-us-2024-hatch-specs",
+          "locator": "DRIVETRAIN > 6-Speed Manual Transmission (6MT) > Gear Ratios, row '4th', Sport Touring column",
+          "evidence": "6-Speed Manual Transmission (6MT) … Gear Ratios: … 4th - 1.024 - 1.024",
+          "as_printed": "1.024",
+          "applicability": {
+            "year": "2024",
+            "market": "US",
+            "trim": "Sport Touring (and 2.0L Sport 6MT, same values)",
+            "body": "hatchback",
+            "gearbox": "6MT",
+            "engine": "1.5T",
+            "notes": ""
+          },
+          "confidence": "high",
+          "range": null,
+          "how_to_measure": null,
+          "notes": "US-market source. Honda Canada's 2024 spec sheet prints no ratios; no Canadian-specific ratio found. Unchanged 2022-2024 (see other candidates); 2.0L Sport 6MT column prints the same values. Si ratios/final drive differ and are excluded."
+        },
+        {
+          "printed": {
+            "value": 1.024,
+            "unit": "ratio"
+          },
+          "value": 1.024,
+          "unit": "1",
+          "status": "confirmed",
+          "class": "A",
+          "source_id": "tx:hondainfocenter-us-2024-hatch-specs",
+          "locator": "Transmissions table, row '4th', Sport Touring column (data-model-identifier 4)",
+          "evidence": "6-Speed Manual Transmission (6MT) … 4th 1.024 1.024",
+          "as_printed": "1.024",
+          "applicability": {
+            "year": "2024",
+            "market": "US",
+            "trim": "Sport Touring (and 2.0L Sport 6MT, same values)",
+            "body": "hatchback",
+            "gearbox": "6MT",
+            "engine": "1.5T",
+            "notes": ""
+          },
+          "confidence": "high",
+          "range": null,
+          "how_to_measure": null,
+          "notes": "Same publisher (American Honda) as hondanews.com; second Honda page, not fully independent. Trailing zeros dropped by the site."
+        },
+        {
+          "printed": {
+            "value": 1.024,
+            "unit": "ratio"
+          },
+          "value": 1.024,
+          "unit": "1",
+          "status": "confirmed",
+          "class": "A",
+          "source_id": "tx:hondanews-us-2023-hatch-specs",
+          "locator": "DRIVETRAIN > 6MT Gear Ratios, row '4th'",
+          "evidence": "Gear Ratios: … 4th - 1.024 - 1.024",
+          "as_printed": "1.024",
+          "applicability": {
+            "year": "2023",
+            "market": "US",
+            "trim": "Sport Touring (and 2.0L Sport 6MT, same values)",
+            "body": "hatchback",
+            "gearbox": "6MT",
+            "engine": "1.5T",
+            "notes": ""
+          },
+          "confidence": "high",
+          "range": null,
+          "how_to_measure": null,
+          "notes": "Model-year check: identical to 2024."
+        },
+        {
+          "printed": {
+            "value": 1.024,
+            "unit": "ratio"
+          },
+          "value": 1.024,
+          "unit": "1",
+          "status": "confirmed",
+          "class": "A",
+          "source_id": "tx:hondanews-us-2022-hatch-specs",
+          "locator": "TRANSMISSIONS > 6-Speed Manual Transmission (6MT), row '4th'",
+          "evidence": "6-Speed Manual Transmission (6MT) … 4th 1.024 1.024",
+          "as_printed": "1.024",
+          "applicability": {
+            "year": "2022",
+            "market": "US",
+            "trim": "Sport Touring (and 2.0L Sport 6MT, same values)",
+            "body": "hatchback",
+            "gearbox": "6MT",
+            "engine": "1.5T",
+            "notes": ""
+          },
+          "confidence": "high",
+          "range": null,
+          "how_to_measure": null,
+          "notes": "Model-year check: identical to 2024."
+        }
+      ]
+    },
+    "transmission.gear_5": {
+      "description": "5th gear ratio",
+      "unit": "1",
+      "impact": "high",
+      "candidates": [
+        {
+          "printed": {
+            "value": 0.83,
+            "unit": "ratio"
+          },
+          "value": 0.83,
+          "unit": "1",
+          "status": "confirmed",
+          "class": "A",
+          "source_id": "tx:hondanews-us-2024-hatch-specs",
+          "locator": "DRIVETRAIN > 6-Speed Manual Transmission (6MT) > Gear Ratios, row '5th', Sport Touring column",
+          "evidence": "6-Speed Manual Transmission (6MT) … Gear Ratios: … 5th - 0.830 - 0.830",
+          "as_printed": "0.830",
+          "applicability": {
+            "year": "2024",
+            "market": "US",
+            "trim": "Sport Touring (and 2.0L Sport 6MT, same values)",
+            "body": "hatchback",
+            "gearbox": "6MT",
+            "engine": "1.5T",
+            "notes": ""
+          },
+          "confidence": "high",
+          "range": null,
+          "how_to_measure": null,
+          "notes": "US-market source. Honda Canada's 2024 spec sheet prints no ratios; no Canadian-specific ratio found. Unchanged 2022-2024 (see other candidates); 2.0L Sport 6MT column prints the same values. Si ratios/final drive differ and are excluded."
+        },
+        {
+          "printed": {
+            "value": 0.83,
+            "unit": "ratio"
+          },
+          "value": 0.83,
+          "unit": "1",
+          "status": "confirmed",
+          "class": "A",
+          "source_id": "tx:hondainfocenter-us-2024-hatch-specs",
+          "locator": "Transmissions table, row '5th', Sport Touring column (data-model-identifier 4)",
+          "evidence": "6-Speed Manual Transmission (6MT) … 5th 0.83 0.83",
+          "as_printed": "0.83",
+          "applicability": {
+            "year": "2024",
+            "market": "US",
+            "trim": "Sport Touring (and 2.0L Sport 6MT, same values)",
+            "body": "hatchback",
+            "gearbox": "6MT",
+            "engine": "1.5T",
+            "notes": ""
+          },
+          "confidence": "high",
+          "range": null,
+          "how_to_measure": null,
+          "notes": "Same publisher (American Honda) as hondanews.com; second Honda page, not fully independent. Trailing zeros dropped by the site."
+        },
+        {
+          "printed": {
+            "value": 0.83,
+            "unit": "ratio"
+          },
+          "value": 0.83,
+          "unit": "1",
+          "status": "confirmed",
+          "class": "A",
+          "source_id": "tx:hondanews-us-2023-hatch-specs",
+          "locator": "DRIVETRAIN > 6MT Gear Ratios, row '5th'",
+          "evidence": "Gear Ratios: … 5th - 0.830 - 0.830",
+          "as_printed": "0.830",
+          "applicability": {
+            "year": "2023",
+            "market": "US",
+            "trim": "Sport Touring (and 2.0L Sport 6MT, same values)",
+            "body": "hatchback",
+            "gearbox": "6MT",
+            "engine": "1.5T",
+            "notes": ""
+          },
+          "confidence": "high",
+          "range": null,
+          "how_to_measure": null,
+          "notes": "Model-year check: identical to 2024."
+        },
+        {
+          "printed": {
+            "value": 0.83,
+            "unit": "ratio"
+          },
+          "value": 0.83,
+          "unit": "1",
+          "status": "confirmed",
+          "class": "A",
+          "source_id": "tx:hondanews-us-2022-hatch-specs",
+          "locator": "TRANSMISSIONS > 6-Speed Manual Transmission (6MT), row '5th'",
+          "evidence": "6-Speed Manual Transmission (6MT) … 5th 0.830 0.830",
+          "as_printed": "0.830",
+          "applicability": {
+            "year": "2022",
+            "market": "US",
+            "trim": "Sport Touring (and 2.0L Sport 6MT, same values)",
+            "body": "hatchback",
+            "gearbox": "6MT",
+            "engine": "1.5T",
+            "notes": ""
+          },
+          "confidence": "high",
+          "range": null,
+          "how_to_measure": null,
+          "notes": "Model-year check: identical to 2024."
+        }
+      ]
+    },
+    "transmission.gear_6": {
+      "description": "6th gear ratio",
+      "unit": "1",
+      "impact": "high",
+      "candidates": [
+        {
+          "printed": {
+            "value": 0.686,
+            "unit": "ratio"
+          },
+          "value": 0.686,
+          "unit": "1",
+          "status": "confirmed",
+          "class": "A",
+          "source_id": "tx:hondanews-us-2024-hatch-specs",
+          "locator": "DRIVETRAIN > 6-Speed Manual Transmission (6MT) > Gear Ratios, row '6th', Sport Touring column",
+          "evidence": "6-Speed Manual Transmission (6MT) … Gear Ratios: … 6th - 0.686 - 0.686",
+          "as_printed": "0.686",
+          "applicability": {
+            "year": "2024",
+            "market": "US",
+            "trim": "Sport Touring (and 2.0L Sport 6MT, same values)",
+            "body": "hatchback",
+            "gearbox": "6MT",
+            "engine": "1.5T",
+            "notes": ""
+          },
+          "confidence": "high",
+          "range": null,
+          "how_to_measure": null,
+          "notes": "US-market source. Honda Canada's 2024 spec sheet prints no ratios; no Canadian-specific ratio found. Unchanged 2022-2024 (see other candidates); 2.0L Sport 6MT column prints the same values. Si ratios/final drive differ and are excluded."
+        },
+        {
+          "printed": {
+            "value": 0.686,
+            "unit": "ratio"
+          },
+          "value": 0.686,
+          "unit": "1",
+          "status": "confirmed",
+          "class": "A",
+          "source_id": "tx:hondainfocenter-us-2024-hatch-specs",
+          "locator": "Transmissions table, row '6th', Sport Touring column (data-model-identifier 4)",
+          "evidence": "6-Speed Manual Transmission (6MT) … 6th 0.686 0.686",
+          "as_printed": "0.686",
+          "applicability": {
+            "year": "2024",
+            "market": "US",
+            "trim": "Sport Touring (and 2.0L Sport 6MT, same values)",
+            "body": "hatchback",
+            "gearbox": "6MT",
+            "engine": "1.5T",
+            "notes": ""
+          },
+          "confidence": "high",
+          "range": null,
+          "how_to_measure": null,
+          "notes": "Same publisher (American Honda) as hondanews.com; second Honda page, not fully independent. Trailing zeros dropped by the site."
+        },
+        {
+          "printed": {
+            "value": 0.686,
+            "unit": "ratio"
+          },
+          "value": 0.686,
+          "unit": "1",
+          "status": "confirmed",
+          "class": "A",
+          "source_id": "tx:hondanews-us-2023-hatch-specs",
+          "locator": "DRIVETRAIN > 6MT Gear Ratios, row '6th'",
+          "evidence": "Gear Ratios: … 6th - 0.686 - 0.686",
+          "as_printed": "0.686",
+          "applicability": {
+            "year": "2023",
+            "market": "US",
+            "trim": "Sport Touring (and 2.0L Sport 6MT, same values)",
+            "body": "hatchback",
+            "gearbox": "6MT",
+            "engine": "1.5T",
+            "notes": ""
+          },
+          "confidence": "high",
+          "range": null,
+          "how_to_measure": null,
+          "notes": "Model-year check: identical to 2024."
+        },
+        {
+          "printed": {
+            "value": 0.686,
+            "unit": "ratio"
+          },
+          "value": 0.686,
+          "unit": "1",
+          "status": "confirmed",
+          "class": "A",
+          "source_id": "tx:hondanews-us-2022-hatch-specs",
+          "locator": "TRANSMISSIONS > 6-Speed Manual Transmission (6MT), row '6th'",
+          "evidence": "6-Speed Manual Transmission (6MT) … 6th 0.686 0.686",
+          "as_printed": "0.686",
+          "applicability": {
+            "year": "2022",
+            "market": "US",
+            "trim": "Sport Touring (and 2.0L Sport 6MT, same values)",
+            "body": "hatchback",
+            "gearbox": "6MT",
+            "engine": "1.5T",
+            "notes": ""
+          },
+          "confidence": "high",
+          "range": null,
+          "how_to_measure": null,
+          "notes": "Model-year check: identical to 2024."
+        }
+      ]
+    },
+    "transmission.gear_reverse": {
+      "description": "Reverse gear ratio",
+      "unit": "1",
+      "impact": "low",
+      "candidates": [
+        {
+          "printed": {
+            "value": 3.673,
+            "unit": "ratio"
+          },
+          "value": 3.673,
+          "unit": "1",
+          "status": "confirmed",
+          "class": "A",
+          "source_id": "tx:hondanews-us-2024-hatch-specs",
+          "locator": "DRIVETRAIN > 6-Speed Manual Transmission (6MT) > Gear Ratios, row 'Reverse', Sport Touring column",
+          "evidence": "6-Speed Manual Transmission (6MT) … Gear Ratios: … Reverse - 3.673 - 3.673",
+          "as_printed": "3.673",
+          "applicability": {
+            "year": "2024",
+            "market": "US",
+            "trim": "Sport Touring (and 2.0L Sport 6MT, same values)",
+            "body": "hatchback",
+            "gearbox": "6MT",
+            "engine": "1.5T",
+            "notes": ""
+          },
+          "confidence": "high",
+          "range": null,
+          "how_to_measure": null,
+          "notes": "US-market source. Honda Canada's 2024 spec sheet prints no ratios; no Canadian-specific ratio found. Unchanged 2022-2024 (see other candidates); 2.0L Sport 6MT column prints the same values. Si ratios/final drive differ and are excluded."
+        },
+        {
+          "printed": {
+            "value": 3.673,
+            "unit": "ratio"
+          },
+          "value": 3.673,
+          "unit": "1",
+          "status": "confirmed",
+          "class": "A",
+          "source_id": "tx:hondainfocenter-us-2024-hatch-specs",
+          "locator": "Transmissions table, row 'Reverse', Sport Touring column (data-model-identifier 4)",
+          "evidence": "6-Speed Manual Transmission (6MT) … Reverse 3.673 3.673",
+          "as_printed": "3.673",
+          "applicability": {
+            "year": "2024",
+            "market": "US",
+            "trim": "Sport Touring (and 2.0L Sport 6MT, same values)",
+            "body": "hatchback",
+            "gearbox": "6MT",
+            "engine": "1.5T",
+            "notes": ""
+          },
+          "confidence": "high",
+          "range": null,
+          "how_to_measure": null,
+          "notes": "Same publisher (American Honda) as hondanews.com; second Honda page, not fully independent. Trailing zeros dropped by the site."
+        },
+        {
+          "printed": {
+            "value": 3.673,
+            "unit": "ratio"
+          },
+          "value": 3.673,
+          "unit": "1",
+          "status": "confirmed",
+          "class": "A",
+          "source_id": "tx:hondanews-us-2023-hatch-specs",
+          "locator": "DRIVETRAIN > 6MT Gear Ratios, row 'Reverse'",
+          "evidence": "Gear Ratios: … Reverse - 3.673 - 3.673",
+          "as_printed": "3.673",
+          "applicability": {
+            "year": "2023",
+            "market": "US",
+            "trim": "Sport Touring (and 2.0L Sport 6MT, same values)",
+            "body": "hatchback",
+            "gearbox": "6MT",
+            "engine": "1.5T",
+            "notes": ""
+          },
+          "confidence": "high",
+          "range": null,
+          "how_to_measure": null,
+          "notes": "Model-year check: identical to 2024."
+        },
+        {
+          "printed": {
+            "value": 3.673,
+            "unit": "ratio"
+          },
+          "value": 3.673,
+          "unit": "1",
+          "status": "confirmed",
+          "class": "A",
+          "source_id": "tx:hondanews-us-2022-hatch-specs",
+          "locator": "TRANSMISSIONS > 6-Speed Manual Transmission (6MT), row 'Reverse'",
+          "evidence": "6-Speed Manual Transmission (6MT) … Reverse 3.673 3.673",
+          "as_printed": "3.673",
+          "applicability": {
+            "year": "2022",
+            "market": "US",
+            "trim": "Sport Touring (and 2.0L Sport 6MT, same values)",
+            "body": "hatchback",
+            "gearbox": "6MT",
+            "engine": "1.5T",
+            "notes": ""
+          },
+          "confidence": "high",
+          "range": null,
+          "how_to_measure": null,
+          "notes": "Model-year check: identical to 2024."
+        }
+      ]
+    },
+    "transmission.final_drive": {
+      "description": "Final drive ratio",
+      "unit": "1",
+      "impact": "critical",
+      "candidates": [
+        {
+          "printed": {
+            "value": 4.1,
+            "unit": "ratio"
+          },
+          "value": 4.1,
+          "unit": "1",
+          "status": "confirmed",
+          "class": "A",
+          "source_id": "tx:hondanews-us-2024-hatch-specs",
+          "locator": "DRIVETRAIN > 6-Speed Manual Transmission (6MT) > Gear Ratios, row 'Final Drive', Sport Touring column",
+          "evidence": "6-Speed Manual Transmission (6MT) … Gear Ratios: … Final Drive - 4.100 - 4.100",
+          "as_printed": "4.100",
+          "applicability": {
+            "year": "2024",
+            "market": "US",
+            "trim": "Sport Touring (and 2.0L Sport 6MT, same values)",
+            "body": "hatchback",
+            "gearbox": "6MT",
+            "engine": "1.5T",
+            "notes": ""
+          },
+          "confidence": "high",
+          "range": null,
+          "how_to_measure": null,
+          "notes": "US-market source. Honda Canada's 2024 spec sheet prints no ratios; no Canadian-specific ratio found. Unchanged 2022-2024 (see other candidates); 2.0L Sport 6MT column prints the same values. Si ratios/final drive differ and are excluded."
+        },
+        {
+          "printed": {
+            "value": 4.1,
+            "unit": "ratio"
+          },
+          "value": 4.1,
+          "unit": "1",
+          "status": "confirmed",
+          "class": "A",
+          "source_id": "tx:hondainfocenter-us-2024-hatch-specs",
+          "locator": "Transmissions table, row 'Final Drive', Sport Touring column (data-model-identifier 4)",
+          "evidence": "6-Speed Manual Transmission (6MT) … Final Drive 4.1 4.1",
+          "as_printed": "4.1",
+          "applicability": {
+            "year": "2024",
+            "market": "US",
+            "trim": "Sport Touring (and 2.0L Sport 6MT, same values)",
+            "body": "hatchback",
+            "gearbox": "6MT",
+            "engine": "1.5T",
+            "notes": ""
+          },
+          "confidence": "high",
+          "range": null,
+          "how_to_measure": null,
+          "notes": "Same publisher (American Honda) as hondanews.com; second Honda page, not fully independent. Trailing zeros dropped by the site."
+        },
+        {
+          "printed": {
+            "value": 4.1,
+            "unit": "ratio"
+          },
+          "value": 4.1,
+          "unit": "1",
+          "status": "confirmed",
+          "class": "A",
+          "source_id": "tx:hondanews-us-2023-hatch-specs",
+          "locator": "DRIVETRAIN > 6MT Gear Ratios, row 'Final Drive'",
+          "evidence": "Gear Ratios: … Final Drive - 4.100 - 4.100",
+          "as_printed": "4.100",
+          "applicability": {
+            "year": "2023",
+            "market": "US",
+            "trim": "Sport Touring (and 2.0L Sport 6MT, same values)",
+            "body": "hatchback",
+            "gearbox": "6MT",
+            "engine": "1.5T",
+            "notes": ""
+          },
+          "confidence": "high",
+          "range": null,
+          "how_to_measure": null,
+          "notes": "Model-year check: identical to 2024."
+        },
+        {
+          "printed": {
+            "value": 4.1,
+            "unit": "ratio"
+          },
+          "value": 4.1,
+          "unit": "1",
+          "status": "confirmed",
+          "class": "A",
+          "source_id": "tx:hondanews-us-2022-hatch-specs",
+          "locator": "TRANSMISSIONS > 6-Speed Manual Transmission (6MT), row 'Final Drive'",
+          "evidence": "6-Speed Manual Transmission (6MT) … Final Drive 4.10 4.10",
+          "as_printed": "4.10",
+          "applicability": {
+            "year": "2022",
+            "market": "US",
+            "trim": "Sport Touring (and 2.0L Sport 6MT, same values)",
+            "body": "hatchback",
+            "gearbox": "6MT",
+            "engine": "1.5T",
+            "notes": ""
+          },
+          "confidence": "high",
+          "range": null,
+          "how_to_measure": null,
+          "notes": "Model-year check: identical to 2024."
+        }
+      ]
+    },
+    "transmission.availability_ca_2024": {
+      "description": "6MT availability, 2024 Canadian Civic Hatchback",
+      "unit": "text",
+      "impact": "medium",
+      "candidates": [
+        {
+          "value": "6MT available on Sport Touring only (Sport is CVT only)",
+          "unit": "text",
+          "status": "confirmed",
+          "class": "A",
+          "source_id": "tx:hondanews-ca-2024-hatch-specs",
+          "locator": "DRIVETRAIN table, row '6-speed manual transmission (MT)'",
+          "evidence": "6-speed manual transmission (MT) Available",
+          "as_printed": "Available (Sport Touring column; Sport column blank)",
+          "applicability": {
+            "year": "2024",
+            "market": "CA",
+            "trim": "Sport / Sport Touring",
+            "body": "hatchback",
+            "gearbox": "6MT",
+            "engine": "1.5T",
+            "notes": ""
+          },
+          "confidence": "high",
+          "range": null,
+          "how_to_measure": null,
+          "notes": "Column checked in raw HTML: ['6-speed manual transmission (MT)', '', 'Available']."
+        }
+      ]
+    },
+    "transmission.code": {
+      "description": "Manual gearbox designation / type code",
+      "unit": "text",
+      "impact": "low",
+      "candidates": [
+        {
+          "value": null,
+          "unit": "text",
+          "status": "unknown",
+          "class": null,
+          "source_id": null,
+          "locator": "",
+          "evidence": "",
+          "as_printed": "",
+          "applicability": {},
+          "confidence": "none",
+          "range": null,
+          "how_to_measure": "Read the transmission identification label/stamp on the gearbox case (near the clutch housing), or a Honda service manual / EPC 'transmission assembly' entry.",
+          "notes": "",
+          "searches": [
+            "hondanews.com/hondanews.ca 2022-2024 Civic Hatchback spec tables (no code printed)",
+            "hondapartsnow transmission listings (part numbers only)"
+          ]
+        }
+      ]
+    }
+  }
+}

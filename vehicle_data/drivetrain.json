@@ -1,0 +1,731 @@
+{
+  "domain": "drivetrain",
+  "title": "Drivetrain",
+  "schema_version": 1,
+  "updated": "2026-10-03",
+  "sources": {
+    "dt:hondanews-ca-2022-hatch-debut": {
+      "title": "2022 Honda Civic Hatchback Makes Global Debut During Honda Civic Tour “Remix” Virtual Performance (June 23, 2021)",
+      "url": "https://hondanews.ca/en-CA/hci-automobiles/releases/release-f62a8a2e1d52802dd04a2618822ad44329120a90-2022-honda-civic-hatchback-makes-global-debut-during-honda-civic-tour-remix-virtual-performance",
+      "publisher": "Honda Canada Inc. (hondanews.ca)",
+      "class": "A",
+      "accessed": "2026-10-03",
+      "access_method": "static",
+      "applicability": "2022 Civic Hatchback, Canada, all grades",
+      "notes": "",
+      "cache_file": "cache/pages/011b73eb9216ebcd.txt"
+    },
+    "dt:hondapartsnow-2024-civic-flywheel": {
+      "title": "2024 Honda Civic Flywheel (OEM parts listing)",
+      "url": "https://www.hondapartsnow.com/oem-2024-honda-civic-flywheel.html",
+      "publisher": "HondaPartsNow (OEM parts retailer, Honda EPC data)",
+      "class": "C",
+      "accessed": "2026-10-03",
+      "access_method": "static",
+      "applicability": "2024 Civic, by submodel",
+      "notes": "",
+      "cache_file": "cache/pages/1954cdd7ca9be057.txt"
+    },
+    "dt:hondapartsnow-2024-civic-differential": {
+      "title": "2024 Honda Civic Differential (OEM parts listing)",
+      "url": "https://www.hondapartsnow.com/oem-2024-honda-civic-differential.html",
+      "publisher": "HondaPartsNow (OEM parts retailer, Honda EPC data)",
+      "class": "C",
+      "accessed": "2026-10-03",
+      "access_method": "static",
+      "applicability": "2024 Civic, by submodel",
+      "notes": "",
+      "cache_file": "cache/pages/e97ba8fbe304ceb5.txt"
+    },
+    "dt:hondanews-ca-2024-hatch-specs": {
+      "title": "2024 Honda Civic Hatchback Specifications (Honda Canada)",
+      "url": "https://hondanews.ca/en-CA/releases/release-1128768177ab00a73471b1938c152ddf-2024-honda-civic-hatchback-specifications",
+      "publisher": "Honda Canada Inc. (hondanews.ca)",
+      "class": "A",
+      "accessed": "2026-10-03",
+      "access_method": "static",
+      "applicability": "2024 Civic Hatchback, Canada",
+      "notes": "",
+      "cache_file": "cache/pages/22157798d6e48e1c.txt"
+    },
+    "dt:hondanews-us-2024-hatch-specs": {
+      "title": "2024 Honda Civic Hatchback Specifications & Features",
+      "url": "https://hondanews.com/en-US/honda-automobiles/releases/2024-honda-civic-hatchback-specifications-features",
+      "publisher": "American Honda Motor Co.",
+      "class": "A",
+      "accessed": "2026-10-03",
+      "access_method": "static",
+      "applicability": "2024 Civic Hatchback, US",
+      "notes": "",
+      "cache_file": "cache/pages/2b1524caf89378a3.txt"
+    },
+    "dt:civicxi-clutch-thread": {
+      "title": "1.5T - Has the clutch system of the 11th generation Civic weakened? (CivicXI forum, post #2 by cwtechshiz, Dec 9, 2024)",
+      "url": "https://www.civicxi.com/forum/threads/has-the-clutch-system-of-the-11th-generation-civic-weakened.53431/",
+      "publisher": "CivicXI forum (owner post)",
+      "class": "C",
+      "accessed": "2026-10-03",
+      "access_method": "static",
+      "applicability": "11th-gen Civic 1.5T 6MT hatch (owner's car, clutch/flywheel replacement)",
+      "notes": "Single owner teardown report: weak source, corroborating only.",
+      "cache_file": "cache/pages/b3c87c11a636fa75.txt"
+    },
+    "dt:tractionlife-2022-st-mt-review": {
+      "title": "2022 Honda Civic Sport Touring Hatchback Review (Manual)",
+      "url": "https://tractionlife.com/2022-honda-civic-hatchback-sport-touring-manual-review/",
+      "publisher": "Traction Life",
+      "class": "C",
+      "accessed": "2026-10-03",
+      "access_method": "static",
+      "applicability": "2022 Civic Hatchback Sport Touring 6MT",
+      "notes": "",
+      "cache_file": "cache/pages/0e3fb114824cb550.txt"
+    }
+  },
+  "parameters": {
+    "drivetrain.flywheel_type": {
+      "description": "Flywheel type",
+      "unit": "text",
+      "impact": "high",
+      "candidates": [
+        {
+          "value": "dual-mass",
+          "unit": "text",
+          "status": "confirmed",
+          "class": "A",
+          "source_id": "dt:hondanews-ca-2022-hatch-debut",
+          "locator": "Powertrain section, paragraph beginning 'A new 6-speed manual transmission'",
+          "evidence": "A new 6-speed manual transmission is available in all grades. The transmission has been revised for an even sportier feel with improved shift rigidity and shorter shift throws. A new dual-mass flywheel helps reduce noise and vibration transmitted through the drivetrain.",
+          "as_printed": "dual-mass flywheel",
+          "applicability": {
+            "year": "2022",
+            "market": "CA",
+            "trim": "all grades (LX, Sport, Sport Touring)",
+            "body": "hatchback",
+            "gearbox": "6MT",
+            "engine": "1.5T",
+            "notes": "2022 launch release; 6MT carried over unchanged 2022-2024 per identical US ratio tables"
+          },
+          "confidence": "high",
+          "range": null,
+          "how_to_measure": null,
+          "notes": "Contrast: the 11th-gen Si uses a single-mass flywheel (different part 22100-65P-003); not applicable here."
+        }
+      ]
+    },
+    "drivetrain.flywheel_part_number": {
+      "description": "OEM flywheel part number (1.5T Sport Touring 6MT)",
+      "unit": "text",
+      "impact": "low",
+      "candidates": [
+        {
+          "value": "22100-5CD-018 (replaces 22100-5CD-008)",
+          "unit": "text",
+          "status": "confirmed",
+          "class": "C",
+          "source_id": "dt:hondapartsnow-2024-civic-flywheel",
+          "locator": "listing 'Part Number: 22100-5CD-018'",
+          "evidence": "2024 Honda Civic Flywheel Part Number: 22100-5CD-018 … Replaces : 22100-5CD-008 … Fits the following 2024 Honda Civic Submodels: 5 Door 1.5T Sport Touring | 6MT",
+          "as_printed": "22100-5CD-018",
+          "applicability": {
+            "year": "2024",
+            "market": "US (EPC)",
+            "trim": "Sport Touring",
+            "body": "hatchback",
+            "gearbox": "6MT",
+            "engine": "1.5T",
+            "notes": ""
+          },
+          "confidence": "high",
+          "range": null,
+          "how_to_measure": null,
+          "notes": "Distinct from the Si (22100-65P-003), Type R (22100-65W-003) and 2.0L Sport 6MT (22100-65M-003) flywheels. MSRP $2458.10 vs $635.23 for the Si single-mass part is consistent with a dual-mass unit. Listed 'Item Weight: 34.60 Pounds' with box dimensions 15.5 x 15.2 x 6.1 in is a shipping weight, NOT a flywheel mass."
+        }
+      ]
+    },
+    "drivetrain.flywheel_shipping_weight": {
+      "description": "Listed item (shipping) weight of OEM flywheel 22100-5CD-018 — upper bound on flywheel mass only",
+      "unit": "kg",
+      "impact": "low",
+      "candidates": [
+        {
+          "printed": {
+            "value": 34.6,
+            "unit": "lb"
+          },
+          "value": 15.694296002000002,
+          "unit": "kg",
+          "status": "confirmed",
+          "class": "C",
+          "source_id": "dt:hondapartsnow-2024-civic-flywheel",
+          "locator": "22100-5CD-018 Product Specifications",
+          "evidence": "Item Weight : 34.60 Pounds Item Dimensions : 15.5 x 15.2 x 6.1 inches",
+          "as_printed": "34.60 Pounds",
+          "applicability": {
+            "year": "2024",
+            "market": "US (EPC)",
+            "trim": "Sport Touring",
+            "body": "hatchback",
+            "gearbox": "6MT",
+            "engine": "1.5T",
+            "notes": ""
+          },
+          "confidence": "low",
+          "range": null,
+          "how_to_measure": null,
+          "notes": "Retailer shipping data (box dims listed); includes packaging. Use only as an upper bound for flywheel mass."
+        }
+      ]
+    },
+    "drivetrain.differential_type": {
+      "description": "Front differential type",
+      "unit": "text",
+      "impact": "critical",
+      "candidates": [
+        {
+          "value": "open (bevel-gear) differential; no mechanical LSD",
+          "unit": "text",
+          "status": "confirmed",
+          "class": "C",
+          "source_id": "dt:hondapartsnow-2024-civic-differential",
+          "locator": "listing 'Part Number: 41100-57A-000'",
+          "evidence": "2024 Honda Civic Differential Complete Part Number: 41100-57A-000 … Other Name : Differential Case … Fits the following 2024 Honda Civic Submodels: 5 Door 1.5T Sport Touring, 5 Door 2.0L Sport | 6MT",
+          "as_printed": "Differential Complete 41100-57A-000",
+          "applicability": {
+            "year": "2024",
+            "market": "US (EPC)",
+            "trim": "Sport Touring (shared with 2.0L Sport)",
+            "body": "hatchback",
+            "gearbox": "6MT",
+            "engine": "1.5T",
+            "notes": ""
+          },
+          "confidence": "high",
+          "range": null,
+          "how_to_measure": null,
+          "notes": "Same listing shows the Si gets 'Differential Assembly, Helical Limited Slip' 41200-5CD-003 and the Type R 'LSD, ASSY- HELICAL' 41200-R3P-003; the Sport Touring 6MT part is not an LSD. No Honda spec sheet lists an LSD for the hatchback. Brake-based yaw control is separate: see drivetrain.agile_handling_assist."
+        }
+      ]
+    },
+    "drivetrain.agile_handling_assist": {
+      "description": "Agile Handling Assist (brake-based yaw-moment control) fitted",
+      "unit": "bool",
+      "impact": "medium",
+      "candidates": [
+        {
+          "value": true,
+          "unit": "bool",
+          "status": "confirmed",
+          "class": "A",
+          "source_id": "dt:hondanews-ca-2024-hatch-specs",
+          "locator": "CHASSIS table, row 'Agile Handling Assist2 (AHA)'",
+          "evidence": "Agile Handling Assist2 (AHA) • •",
+          "as_printed": "•",
+          "applicability": {
+            "year": "2024",
+            "market": "CA",
+            "trim": "Sport and Sport Touring",
+            "body": "hatchback",
+            "gearbox": "CVT and 6MT",
+            "engine": "1.5T",
+            "notes": ""
+          },
+          "confidence": "high",
+          "range": null,
+          "how_to_measure": null,
+          "notes": "Listed as a chassis feature, not as a differential. AHA applies light individual-wheel braking to aid turn-in (yaw moment); Honda does not describe it as a limited-slip substitute and no evidence was found that it acts as a brake-based LSD on power. Do not model as an LSD."
+        }
+      ]
+    },
+    "drivetrain.hill_start_assist": {
+      "description": "Hill Start Assist fitted",
+      "unit": "bool",
+      "impact": "low",
+      "candidates": [
+        {
+          "value": true,
+          "unit": "bool",
+          "status": "confirmed",
+          "class": "A",
+          "source_id": "dt:hondanews-ca-2024-hatch-specs",
+          "locator": "CHASSIS table, row 'Hill Start Assist2'",
+          "evidence": "Hill Start Assist2 • •",
+          "as_printed": "•",
+          "applicability": {
+            "year": "2024",
+            "market": "CA",
+            "trim": "Sport and Sport Touring",
+            "body": "hatchback",
+            "gearbox": "CVT and 6MT",
+            "engine": "1.5T",
+            "notes": ""
+          },
+          "confidence": "high",
+          "range": null,
+          "how_to_measure": null,
+          "notes": ""
+        }
+      ]
+    },
+    "drivetrain.idle_stop_mt": {
+      "description": "Auto idle-stop on the 6MT",
+      "unit": "bool",
+      "impact": "low",
+      "candidates": [
+        {
+          "value": true,
+          "unit": "bool",
+          "status": "estimated",
+          "class": "E",
+          "source_id": "dt:hondanews-ca-2024-hatch-specs",
+          "locator": "ENGINE table, row 'Idle-stop'",
+          "evidence": "Idle-stop • •",
+          "as_printed": "•",
+          "applicability": {
+            "year": "2024",
+            "market": "CA",
+            "trim": "Sport and Sport Touring",
+            "body": "hatchback",
+            "gearbox": "CVT and 6MT (not split by gearbox)",
+            "engine": "1.5T",
+            "notes": ""
+          },
+          "confidence": "low",
+          "range": [
+            0,
+            1
+          ],
+          "how_to_measure": "Stop the real car in neutral with the clutch released, engine warm: note whether the engine shuts off and the idle-stop lamp lights; or read the owner's manual 'Auto Idle Stop' section for the MT.",
+          "notes": "CONFLICTING EVIDENCE: 2024 Canadian and US spec tables mark Idle-stop for every trim column (the ST column includes the 6MT), but the 2022 Honda Canada launch release says 'a new standard idle-stop system (CVT only)' (dt:hondanews-ca-2022-hatch-debut, Powertrain paragraph on the 2.0L LX). Owner's manual not checked. Not decisive; treated as unknown-leaning-yes."
+        }
+      ]
+    },
+    "drivetrain.shift_mechanism": {
+      "description": "Shift mechanism description",
+      "unit": "text",
+      "impact": "low",
+      "candidates": [
+        {
+          "value": "6MT revised for improved shift rigidity and shorter shift throws",
+          "unit": "text",
+          "status": "confirmed",
+          "class": "A",
+          "source_id": "dt:hondanews-ca-2022-hatch-debut",
+          "locator": "Powertrain section",
+          "evidence": "The transmission has been revised for an even sportier feel with improved shift rigidity and shorter shift throws.",
+          "as_printed": "improved shift rigidity and shorter shift throws",
+          "applicability": {
+            "year": "2022",
+            "market": "CA",
+            "trim": "all grades (LX, Sport, Sport Touring)",
+            "body": "hatchback",
+            "gearbox": "6MT",
+            "engine": "1.5T",
+            "notes": "2022 launch release; 6MT carried over unchanged 2022-2024 per identical US ratio tables"
+          },
+          "confidence": "medium",
+          "range": null,
+          "how_to_measure": null,
+          "notes": "'cable-operated' is not stated by this source; hondapartsnow lists 'Shift Cable' among related 2024 Civic parts (lead only)."
+        }
+      ]
+    },
+    "drivetrain.clutch_type": {
+      "description": "Clutch type",
+      "unit": "text",
+      "impact": "medium",
+      "candidates": [
+        {
+          "value": "single dry plate, rigid (unsprung) hub disc; torsional damping in the dual-mass flywheel",
+          "unit": "text",
+          "status": "confirmed",
+          "class": "C",
+          "source_id": "dt:civicxi-clutch-thread",
+          "locator": "post #2",
+          "evidence": "Also blown away the oem clutch disc has no springs on it at all. All of the dampening for the oem system comes from the dual mass flywheel",
+          "as_printed": "oem clutch disc has no springs",
+          "applicability": {
+            "year": "2022-2024 (owner car, year not stated)",
+            "market": "US/CA (not stated)",
+            "trim": "hatch (1.5T)",
+            "body": "hatchback",
+            "gearbox": "6MT",
+            "engine": "1.5T",
+            "notes": ""
+          },
+          "confidence": "low",
+          "range": null,
+          "how_to_measure": null,
+          "notes": "'single dry plate' is the conventional FWD manual layout, not stated by the source. Rigid disc is consistent with a DMF (dt flywheel_type, class A)."
+        }
+      ]
+    },
+    "drivetrain.clutch_actuation": {
+      "description": "Clutch actuation",
+      "unit": "text",
+      "impact": "low",
+      "candidates": [
+        {
+          "value": "hydraulic (master cylinder, line with in-line damper)",
+          "unit": "text",
+          "status": "confirmed",
+          "class": "C",
+          "source_id": "dt:civicxi-clutch-thread",
+          "locator": "original post and post #2",
+          "evidence": "even when I adjusted the stroke of the clutch master cylinder to the longest … I even deleted on the stupid in-line clutch damper and replaced the rubber oem clutch line",
+          "as_printed": "clutch master cylinder … in-line clutch damper … oem clutch line",
+          "applicability": {
+            "year": "2022-2024 (owner car, year not stated)",
+            "market": "US/CA (not stated)",
+            "trim": "hatch (1.5T)",
+            "body": "hatchback",
+            "gearbox": "6MT",
+            "engine": "1.5T",
+            "notes": ""
+          },
+          "confidence": "medium",
+          "range": null,
+          "how_to_measure": null,
+          "notes": "Owner posts; parts catalog clutch-hydraulics diagram not opened (lead)."
+        }
+      ]
+    },
+    "drivetrain.clutch_disc_outer_diameter": {
+      "description": "Clutch disc outer diameter",
+      "unit": "m",
+      "impact": "medium",
+      "candidates": [
+        {
+          "value": null,
+          "unit": "m",
+          "status": "unknown",
+          "class": null,
+          "source_id": null,
+          "locator": "",
+          "evidence": "",
+          "as_printed": "",
+          "applicability": {},
+          "confidence": "none",
+          "range": null,
+          "how_to_measure": "Measure the removed OEM disc (22200-series part) with calipers during a clutch job, or read an OEM/aftermarket kit spec sheet that names the OEM size.",
+          "notes": "Lead only (search snippet, not opened): an Exedy Stage 2 kit for the 11th-gen 1.5T is described with a 230 mm disc and 24T spline; that is the aftermarket disc, not verified OEM.",
+          "searches": [
+            "hondapartsnow 2024 Civic flywheel/differential listings (no clutch dimensions)",
+            "hondapartsnow clutch-disc/pressure-plate category URLs (404)",
+            "WebSearch: 11th gen Civic 1.5T 6MT clutch kit OEM disc diameter (Exedy/ACT/Clutch Masters)",
+            "prlmotorsports Exedy 2022+ Civic 1.5T kit page (404)",
+            "civicxi clutch thread (no diameter)"
+          ]
+        }
+      ]
+    },
+    "drivetrain.clutch_disc_inner_diameter": {
+      "description": "Clutch friction-facing inner diameter",
+      "unit": "m",
+      "impact": "low",
+      "candidates": [
+        {
+          "value": null,
+          "unit": "m",
+          "status": "unknown",
+          "class": null,
+          "source_id": null,
+          "locator": "",
+          "evidence": "",
+          "as_printed": "",
+          "applicability": {},
+          "confidence": "none",
+          "range": null,
+          "how_to_measure": "Measure the removed OEM disc facing inner diameter with calipers.",
+          "notes": "",
+          "searches": [
+            "hondapartsnow 2024 Civic flywheel/differential listings (no clutch dimensions)",
+            "hondapartsnow clutch-disc/pressure-plate category URLs (404)",
+            "WebSearch: 11th gen Civic 1.5T 6MT clutch kit OEM disc diameter (Exedy/ACT/Clutch Masters)",
+            "prlmotorsports Exedy 2022+ Civic 1.5T kit page (404)",
+            "civicxi clutch thread (no diameter)"
+          ]
+        }
+      ]
+    },
+    "drivetrain.clutch_torque_capacity": {
+      "description": "Clutch static torque capacity (or clamp load)",
+      "unit": "N*m",
+      "impact": "medium",
+      "candidates": [
+        {
+          "value": null,
+          "unit": "N*m",
+          "status": "unknown",
+          "class": null,
+          "source_id": null,
+          "locator": "",
+          "evidence": "",
+          "as_printed": "",
+          "applicability": {},
+          "confidence": "none",
+          "range": null,
+          "how_to_measure": "Not measurable without a test rig; derive from pressure-plate clamp load (published by aftermarket makers for the OEM unit), facing diameters and friction coefficient (~0.27-0.32 organic).",
+          "notes": "An owner post says the OEM pressure plate is 'approximately 500kg, I believe' — hearsay, not recorded as a value. Stock car does not slip at 177 lb-ft (240 N*m), so capacity > 240 N*m.",
+          "searches": [
+            "hondapartsnow 2024 Civic flywheel/differential listings (no clutch dimensions)",
+            "hondapartsnow clutch-disc/pressure-plate category URLs (404)",
+            "WebSearch: 11th gen Civic 1.5T 6MT clutch kit OEM disc diameter (Exedy/ACT/Clutch Masters)",
+            "prlmotorsports Exedy 2022+ Civic 1.5T kit page (404)",
+            "civicxi clutch thread (no diameter)"
+          ]
+        }
+      ]
+    },
+    "drivetrain.flywheel_inertia": {
+      "description": "Flywheel + clutch assembly inertia (engine side)",
+      "unit": "kg*m2",
+      "impact": "high",
+      "candidates": [
+        {
+          "value": null,
+          "unit": "kg*m2",
+          "status": "unknown",
+          "class": null,
+          "source_id": null,
+          "locator": "",
+          "evidence": "",
+          "as_printed": "",
+          "applicability": {},
+          "confidence": "none",
+          "range": null,
+          "how_to_measure": "Remove the DMF and clutch cover; bifilar/trifilar pendulum or measure mass and outer/inner radii of each disc; or estimate from free-revving rpm decay logged at clutch-in with known engine friction.",
+          "notes": "DMF primary and secondary inertias differ; for a sim a lumped value is used. Shipping weight 34.6 lb (incl. box) is an upper bound on mass.",
+          "searches": [
+            "hondapartsnow flywheel listing (only a shipping weight)",
+            "Honda press releases (type only)",
+            "civicxi forum clutch threads"
+          ]
+        }
+      ]
+    },
+    "drivetrain.driveline_inertia": {
+      "description": "Driveline rotating inertia downstream of clutch (gearbox, diff, halfshafts), referred to wheels",
+      "unit": "kg*m2",
+      "impact": "medium",
+      "candidates": [
+        {
+          "value": null,
+          "unit": "kg*m2",
+          "status": "unknown",
+          "class": null,
+          "source_id": null,
+          "locator": "",
+          "evidence": "",
+          "as_printed": "",
+          "applicability": {},
+          "confidence": "none",
+          "range": null,
+          "how_to_measure": "Coast-down / free-roll test with the car on a lift (wheel spin-down in neutral vs in gear), or CAD of the gearset; small relative to wheel+tyre inertia.",
+          "notes": "",
+          "searches": [
+            "no published data for this gearbox",
+            "Honda press materials",
+            "parts listings"
+          ]
+        }
+      ]
+    },
+    "drivetrain.rev_hang_qualitative": {
+      "description": "Rev hang on throttle lift / clutch-in (qualitative)",
+      "unit": "text",
+      "impact": "high",
+      "candidates": [
+        {
+          "value": "present (reviewer-reported); not quantified",
+          "unit": "text",
+          "status": "confirmed",
+          "class": "C",
+          "source_id": "dt:tractionlife-2022-st-mt-review",
+          "locator": "driving impressions paragraph",
+          "evidence": "There’s also some rev hang, so you’ll need to be patient before dumping the clutch on your next gear.",
+          "as_printed": "some rev hang",
+          "applicability": {
+            "year": "2022",
+            "market": "US",
+            "trim": "Sport Touring",
+            "body": "hatchback",
+            "gearbox": "6MT",
+            "engine": "1.5T",
+            "notes": ""
+          },
+          "confidence": "medium",
+          "range": null,
+          "how_to_measure": null,
+          "notes": "Qualitative only; duration and rpm amount unknown (see drivetrain.rev_hang_duration)."
+        }
+      ]
+    },
+    "drivetrain.rev_hang_duration": {
+      "description": "Rev hang: time for rpm to fall after clutch-in at high rpm, and rpm held",
+      "unit": "s",
+      "impact": "high",
+      "candidates": [
+        {
+          "value": null,
+          "unit": "s",
+          "status": "unknown",
+          "class": null,
+          "source_id": null,
+          "locator": "",
+          "evidence": "",
+          "as_printed": "",
+          "applicability": {},
+          "confidence": "none",
+          "range": null,
+          "how_to_measure": "OBD-II log (>=10 Hz rpm, throttle, clutch switch if available) of 3000->idle and 6000->idle drops with clutch in after a full-throttle pull; and rpm trace during 1-2 and 2-3 upshifts. Report time to drop 1000 rpm and any plateau.",
+          "notes": "Do not model a specific hang until logged.",
+          "searches": [
+            "tractionlife review (qualitative only)",
+            "WebSearch: 2022 Civic hatchback Sport Touring manual rpm/rev hang review",
+            "civicxi forum threads (lead)"
+          ]
+        }
+      ]
+    },
+    "drivetrain.shift_time": {
+      "description": "Gear-change time (clutch open to closed) for a brisk human shift",
+      "unit": "s",
+      "impact": "medium",
+      "candidates": [
+        {
+          "value": 0.3,
+          "unit": "s",
+          "status": "estimated",
+          "class": "E",
+          "source_id": null,
+          "locator": "engineering judgment",
+          "evidence": "",
+          "as_printed": "",
+          "applicability": {
+            "year": "generic",
+            "market": "-",
+            "trim": "-",
+            "body": "hatchback",
+            "gearbox": "6MT",
+            "engine": "1.5T",
+            "notes": "judgment"
+          },
+          "confidence": "low",
+          "range": [
+            0.2,
+            0.5
+          ],
+          "how_to_measure": "Datalog clutch switch / rpm during brisk shifts; or time from video with on-screen tach.",
+          "notes": "Basis: typical brisk manual shifts in road tests take ~0.2-0.5 s; reviewer-reported rev hang argues against shorter values. Not a measurement of this car."
+        }
+      ]
+    },
+    "drivetrain.rev_match": {
+      "description": "Automatic rev-matching on downshifts",
+      "unit": "bool",
+      "impact": "medium",
+      "candidates": [
+        {
+          "value": null,
+          "unit": "bool",
+          "status": "unknown",
+          "class": null,
+          "source_id": null,
+          "locator": "",
+          "evidence": "",
+          "as_printed": "",
+          "applicability": {},
+          "confidence": "none",
+          "range": null,
+          "how_to_measure": "Check owner's manual for 'Rev Match Control' or test: downshift with clutch in and watch for an automatic blip.",
+          "notes": "Absence from all Honda spec tables suggests not fitted (unlike Si/Type R), but absence is not recorded as evidence.",
+          "searches": [
+            "2022/2023/2024 US hondanews spec tables (no rev-match row)",
+            "2024 Honda Canada spec table (no rev-match row)",
+            "2022 Honda Canada launch release (not mentioned)"
+          ]
+        }
+      ]
+    },
+    "drivetrain.shift_indicator": {
+      "description": "Upshift/gear indicator in cluster (MT)",
+      "unit": "bool",
+      "impact": "low",
+      "candidates": [
+        {
+          "value": null,
+          "unit": "bool",
+          "status": "unknown",
+          "class": null,
+          "source_id": null,
+          "locator": "",
+          "evidence": "",
+          "as_printed": "",
+          "applicability": {},
+          "confidence": "none",
+          "range": null,
+          "how_to_measure": "Owner's manual cluster section, or photo of the cluster while driving the MT.",
+          "notes": "Lead for domain 9 (dashboard.json).",
+          "searches": [
+            "Honda US/CA spec tables (no shift-indicator row)"
+          ]
+        }
+      ]
+    },
+    "drivetrain.obs_rpm_at_100kmh_6th": {
+      "description": "Observed engine rpm at 100 km/h in 6th (real-world cross-check)",
+      "unit": "rpm",
+      "impact": "high",
+      "candidates": [
+        {
+          "value": null,
+          "unit": "rpm",
+          "status": "unknown",
+          "class": null,
+          "source_id": null,
+          "locator": "",
+          "evidence": "",
+          "as_printed": "",
+          "applicability": {},
+          "confidence": "none",
+          "range": null,
+          "how_to_measure": "Cruise at GPS-verified speed in 6th on level road, photograph the tach or log OBD rpm.",
+          "notes": "Compare with drivetrain.pred_rpm_at_* derivations. None found in an opened source.",
+          "searches": [
+            "WebSearch: 2022 Civic hatchback Sport Touring manual 6th gear rpm at 70 mph / 100 km/h review",
+            "tractionlife review (no cruise rpm)",
+            "autotrader.ca editorial (blocked host)"
+          ]
+        }
+      ]
+    },
+    "drivetrain.obs_rpm_at_70mph_6th": {
+      "description": "Observed engine rpm at 70 mph in 6th (real-world cross-check)",
+      "unit": "rpm",
+      "impact": "high",
+      "candidates": [
+        {
+          "value": null,
+          "unit": "rpm",
+          "status": "unknown",
+          "class": null,
+          "source_id": null,
+          "locator": "",
+          "evidence": "",
+          "as_printed": "",
+          "applicability": {},
+          "confidence": "none",
+          "range": null,
+          "how_to_measure": "Cruise at GPS-verified speed in 6th on level road, photograph the tach or log OBD rpm.",
+          "notes": "Compare with drivetrain.pred_rpm_at_* derivations. None found in an opened source.",
+          "searches": [
+            "WebSearch: 2022 Civic hatchback Sport Touring manual 6th gear rpm at 70 mph / 100 km/h review",
+            "tractionlife review (no cruise rpm)",
+            "autotrader.ca editorial (blocked host)"
+          ]
+        }
+      ]
+    }
+  }
+}

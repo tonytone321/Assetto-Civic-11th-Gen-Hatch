@@ -1,0 +1,1454 @@
+{
+  "domain": "dimensions",
+  "title": "Dimensions",
+  "schema_version": 1,
+  "updated": "2026-10-03",
+  "sources": {
+    "dim:hondanews-ca-2024-hatch-specs": {
+      "title": "2024 Honda Civic Hatchback Specifications (release, April 4, 2024)",
+      "url": "https://hondanews.ca/en-CA/hci-automobiles/releases/release-1128768177ab00a73471b1938c152ddf-2024-honda-civic-hatchback-specifications",
+      "publisher": "Honda Canada Inc. (hondanews.ca newsroom)",
+      "class": "A",
+      "accessed": "2026-10-03",
+      "access_method": "static",
+      "applicability": "2024 Canada Civic Hatchback, columns SPORT and SPORT TOURING (1.5T, MT/CVT)",
+      "notes": "Same table is also distributed by dealers as a PDF (di-uploads-pod2.dealerinspire.com/harmonyhonda/.../2024-Honda-Civic-Hatchback-Specifications.pdf, page 3); not an independent source.",
+      "cache_file": "cache/pages/41e62125b9f268de.txt"
+    },
+    "dim:hondanews-ca-2023-hatch-specs": {
+      "title": "2023 Civic Hatchback Specifications (release, April 13, 2023)",
+      "url": "https://hondanews.ca/en-CA/hci-automobiles/releases/release-f61ab7d13cb83fb181b8bc22df100303-2023-civic-hatchback-specifications",
+      "publisher": "Honda Canada Inc. (hondanews.ca newsroom)",
+      "class": "A",
+      "accessed": "2026-10-03",
+      "access_method": "static",
+      "applicability": "2023 Canada Civic Hatchback, columns LX, Sport, Sport-B, Sport Touring",
+      "notes": "",
+      "cache_file": "cache/pages/374416cf6bc6db5d.txt"
+    },
+    "dim:hondanews-ca-2022-hatch-specs": {
+      "title": "2022 Civic Hatchback Specifications (release, October 12, 2021)",
+      "url": "https://hondanews.ca/en-CA/hci-automobiles/releases/release-9d4b663caef09e412c833d744c4365f9-2022-civic-hatchback-specifications",
+      "publisher": "Honda Canada Inc. (hondanews.ca newsroom)",
+      "class": "A",
+      "accessed": "2026-10-03",
+      "access_method": "static",
+      "applicability": "2022 Canada Civic Hatchback, columns LX, Sport, Sport Touring",
+      "notes": "",
+      "cache_file": "cache/pages/344bc90bb36560a9.txt"
+    },
+    "dim:hondanews-us-2024-hatch-specs": {
+      "title": "2024 Honda Civic Hatchback Specifications & Features (release, August 9, 2023)",
+      "url": "https://hondanews.com/en-US/honda-automobiles/releases/release-5003aaa39c009393f5d06d620f0fc923-2024-honda-civic-hatchback-specifications-features",
+      "publisher": "American Honda Motor Co. (hondanews.com)",
+      "class": "A",
+      "accessed": "2026-10-03",
+      "access_method": "static",
+      "applicability": "2024 US Civic Hatchback, columns LX, Sport, EX-L, Sport Touring ('<<' = same as left column)",
+      "notes": "",
+      "cache_file": "cache/pages/dd2e2052fcb1a220.txt"
+    },
+    "dim:hondanews-us-2022-hatch-specs": {
+      "title": "2022 Honda Civic Hatchback Specifications & Features",
+      "url": "https://hondanews.com/en-US/honda-automobiles/releases/release-cb177600e922c8a5fcfa01b9b80149e2-2022-honda-civic-hatchback-specifications-features",
+      "publisher": "American Honda Motor Co. (hondanews.com)",
+      "class": "A",
+      "accessed": "2026-10-03",
+      "access_method": "static",
+      "applicability": "2022 US Civic Hatchback, columns LX, Sport, EX-L, Sport Touring",
+      "notes": "",
+      "cache_file": "cache/pages/fb1d5790fd3bfda8.txt"
+    },
+    "dim:hondainfocenter-us-2024-hatch-specs": {
+      "title": "2024 Civic Hatchback - Civic Hatchback Specifications (Honda Information Center)",
+      "url": "https://www.hondainfocenter.com/2024/Civic-Hatchback/Feature-Guide/Civic-Hatchback-Specifications/",
+      "publisher": "American Honda Motor Co. (Honda Information Center)",
+      "class": "A",
+      "accessed": "2026-10-03",
+      "access_method": "static",
+      "applicability": "2024 US Civic Hatchback, columns LX, Sport, EX-L, Sport Touring",
+      "notes": "HTML <title> reads '2023 Honda Civic Hatchback' while the page heading reads '2024 Civic Hatchback'. Its Length (184.0 in) equals the Civic Sedan figure on the same site and disagrees with hondanews.com and Honda Canada; treated as a transcription error.",
+      "cache_file": "cache/pages/b67f7f855816944e.txt"
+    },
+    "dim:hondainfocenter-us-2024-sedan-specs": {
+      "title": "2024 Civic Sedan - Civic Sedan Specifications (Honda Information Center)",
+      "url": "https://www.hondainfocenter.com/2024/Civic-Sedan/Feature-Guide/Civic-Sedan-Specifications/",
+      "publisher": "American Honda Motor Co. (Honda Information Center)",
+      "class": "A",
+      "accessed": "2026-10-03",
+      "access_method": "static",
+      "applicability": "2024 US Civic SEDAN (excluded body; used only to explain the 184.0 in hatchback length anomaly)",
+      "notes": "",
+      "cache_file": "cache/pages/67adc76510e3bc91.txt"
+    }
+  },
+  "parameters": {
+    "dimensions.length": {
+      "description": "Overall length (body, without front licence-plate bracket)",
+      "unit": "m",
+      "impact": "high",
+      "candidates": [
+        {
+          "printed": {
+            "value": 4529,
+            "unit": "mm"
+          },
+          "value": 4.529,
+          "unit": "m",
+          "status": "confirmed",
+          "class": "A",
+          "source_id": "dim:hondanews-ca-2024-hatch-specs",
+          "locator": "DIMENSIONS table, row 'Length (mm)', SPORT TOURING column",
+          "evidence": "DIMENSIONS SPORT SPORT TOURING … Length (mm) 4529 4529",
+          "as_printed": "4529",
+          "applicability": {
+            "year": "2024",
+            "market": "CA",
+            "trim": "Sport Touring (table also covers Sport)",
+            "body": "hatchback",
+            "gearbox": "6MT and CVT",
+            "engine": "1.5T",
+            "notes": "Honda Canada 2024 table; trim columns identical for these rows"
+          },
+          "confidence": "high",
+          "range": null,
+          "how_to_measure": null,
+          "notes": "2024 table does not say whether the bracket is included; 2022/2023 tables print 4547/4529 with/without bracket, so 4529 = without.",
+          "prefer": true,
+          "selection_reason": "Canadian 2024 figure; the 2022/2023 Canadian tables identify 4529 mm as the length without the front licence bracket, i.e. the body itself. US 179.0 in (4546.6 mm) equals the with-bracket figure 4547 mm."
+        },
+        {
+          "printed": {
+            "value": 4529,
+            "unit": "mm"
+          },
+          "value": 4.529,
+          "unit": "m",
+          "status": "confirmed",
+          "class": "A",
+          "source_id": "dim:hondanews-ca-2023-hatch-specs",
+          "locator": "DIMENSIONS table, row 'Length (mm) - With licence bracket/without licence bracket', Sport Touring column",
+          "evidence": "Length (mm) - With licence bracket/without licence bracket 4547/4529 4547/4529 4547/4529 4547/4529",
+          "as_printed": "4547/4529 (value after slash = without licence bracket)",
+          "applicability": {
+            "year": "2023",
+            "market": "CA",
+            "trim": "Sport Touring (all hatch trims identical for this row)",
+            "body": "hatchback",
+            "gearbox": "6MT and CVT",
+            "engine": "1.5T",
+            "notes": "Same body/engine/gearbox as 2024; model-year check: every row also printed in the 2024 Canadian table (length w/o bracket, height, wheelbase, track, ground clearance) is identical, so 2023 values are taken as applicable"
+          },
+          "confidence": "high",
+          "range": null,
+          "how_to_measure": null,
+          "notes": ""
+        },
+        {
+          "printed": {
+            "value": 179.0,
+            "unit": "in"
+          },
+          "value": 4.5466,
+          "unit": "m",
+          "status": "confirmed",
+          "class": "A",
+          "source_id": "dim:hondanews-us-2024-hatch-specs",
+          "locator": "DIMENSIONS / EXTERIOR, row 'Length (in.)' (all trims, '<<')",
+          "evidence": "Length (in.) … 179.0",
+          "as_printed": "179.0",
+          "applicability": {
+            "year": "2024",
+            "market": "US",
+            "trim": "Sport Touring",
+            "body": "hatchback",
+            "gearbox": "6MT and CVT",
+            "engine": "1.5T",
+            "notes": "US market; Canadian figure is selected where both exist"
+          },
+          "confidence": "medium",
+          "range": null,
+          "how_to_measure": null,
+          "notes": "179.0 in = 4546.6 mm, matching Honda Canada's WITH-licence-bracket length 4547 mm (US cars carry a front plate bracket in most states). Not a disagreement about the body; kept as a candidate for the with-bracket length."
+        },
+        {
+          "printed": {
+            "value": 184.0,
+            "unit": "in"
+          },
+          "value": 4.6735999999999995,
+          "unit": "m",
+          "status": "confirmed",
+          "class": "A",
+          "source_id": "dim:hondainfocenter-us-2024-hatch-specs",
+          "locator": "Exterior Measurements, row 'Length', Sport Touring column",
+          "evidence": "Exterior Measurements LX Sport EX-L Sport Touring … Length 184.0 in 184.0 in 184.0 in 184.0 in",
+          "as_printed": "184.0 in",
+          "applicability": {
+            "year": "2024",
+            "market": "US",
+            "trim": "Sport Touring",
+            "body": "hatchback",
+            "gearbox": "6MT and CVT",
+            "engine": "1.5T",
+            "notes": "US market; Canadian figure is selected where both exist"
+          },
+          "confidence": "low",
+          "range": null,
+          "how_to_measure": null,
+          "notes": "REJECTED: 184.0 in (4673.6 mm) is the 2024 Civic SEDAN length on the same site (dim:hondainfocenter-us-2024-sedan-specs, 'Length 184.0 in') and contradicts hondanews.com 2024 hatchback (179.0 in) and Honda Canada (4547/4529 mm). Kept as a losing candidate; see CONFLICTS."
+        }
+      ]
+    },
+    "dimensions.length_with_licence_bracket": {
+      "description": "Overall length including front licence-plate bracket",
+      "unit": "m",
+      "impact": "medium",
+      "candidates": [
+        {
+          "printed": {
+            "value": 4547,
+            "unit": "mm"
+          },
+          "value": 4.547,
+          "unit": "m",
+          "status": "confirmed",
+          "class": "A",
+          "source_id": "dim:hondanews-ca-2023-hatch-specs",
+          "locator": "DIMENSIONS table, row 'Length (mm) - With licence bracket/without licence bracket'",
+          "evidence": "Length (mm) - With licence bracket/without licence bracket 4547/4529 4547/4529 4547/4529 4547/4529",
+          "as_printed": "4547/4529 (value before slash = with licence bracket)",
+          "applicability": {
+            "year": "2023",
+            "market": "CA",
+            "trim": "Sport Touring (all hatch trims identical for this row)",
+            "body": "hatchback",
+            "gearbox": "6MT and CVT",
+            "engine": "1.5T",
+            "notes": "Same body/engine/gearbox as 2024; model-year check: every row also printed in the 2024 Canadian table (length w/o bracket, height, wheelbase, track, ground clearance) is identical, so 2023 values are taken as applicable"
+          },
+          "confidence": "high",
+          "range": null,
+          "how_to_measure": null,
+          "notes": "",
+          "prefer": true,
+          "selection_reason": "Canadian figure; 2024 Canadian table omits the with-bracket value."
+        },
+        {
+          "printed": {
+            "value": 4547,
+            "unit": "mm"
+          },
+          "value": 4.547,
+          "unit": "m",
+          "status": "confirmed",
+          "class": "A",
+          "source_id": "dim:hondanews-ca-2022-hatch-specs",
+          "locator": "DIMENSIONS table, row 'Length (mm) - With licence bracket/without licence bracket'",
+          "evidence": "Length (mm) - With licence bracket/without licence bracket 4547/4529 4547/4529 4547/4529",
+          "as_printed": "4547/4529",
+          "applicability": {
+            "year": "2022",
+            "market": "CA",
+            "trim": "Sport Touring (all hatch trims identical for this row)",
+            "body": "hatchback",
+            "gearbox": "6MT and CVT",
+            "engine": "1.5T",
+            "notes": "Launch year of same body; values identical to 2023 and to the rows repeated in 2024"
+          },
+          "confidence": "high",
+          "range": null,
+          "how_to_measure": null,
+          "notes": ""
+        }
+      ]
+    },
+    "dimensions.width_body": {
+      "description": "Overall width without mirrors",
+      "unit": "m",
+      "impact": "high",
+      "candidates": [
+        {
+          "printed": {
+            "value": 1802,
+            "unit": "mm"
+          },
+          "value": 1.802,
+          "unit": "m",
+          "status": "confirmed",
+          "class": "A",
+          "source_id": "dim:hondanews-ca-2024-hatch-specs",
+          "locator": "DIMENSIONS table, row 'Width (mm)', SPORT TOURING column",
+          "evidence": "Width (mm) 1802 1802",
+          "as_printed": "1802",
+          "applicability": {
+            "year": "2024",
+            "market": "CA",
+            "trim": "Sport Touring (table also covers Sport)",
+            "body": "hatchback",
+            "gearbox": "6MT and CVT",
+            "engine": "1.5T",
+            "notes": "Honda Canada 2024 table; trim columns identical for these rows"
+          },
+          "confidence": "high",
+          "range": null,
+          "how_to_measure": null,
+          "notes": "Taken as body width without mirrors: 2022/2023 Canadian tables give 2081 mm mirrors open and 1900 mm mirrors folded, both larger, and the US 70.9 in (1800.9 mm) agrees."
+        },
+        {
+          "printed": {
+            "value": 70.9,
+            "unit": "in"
+          },
+          "value": 1.8008600000000001,
+          "unit": "m",
+          "status": "confirmed",
+          "class": "A",
+          "source_id": "dim:hondanews-us-2024-hatch-specs",
+          "locator": "DIMENSIONS / EXTERIOR, row 'Width (in.)' (all trims)",
+          "evidence": "Width (in.) … 70.9",
+          "as_printed": "70.9",
+          "applicability": {
+            "year": "2024",
+            "market": "US",
+            "trim": "Sport Touring",
+            "body": "hatchback",
+            "gearbox": "6MT and CVT",
+            "engine": "1.5T",
+            "notes": "US market; Canadian figure is selected where both exist"
+          },
+          "confidence": "high",
+          "range": null,
+          "how_to_measure": null,
+          "notes": "1800.9 mm; agrees with 1802 mm within the 0.05 in rounding of the printed figure."
+        }
+      ]
+    },
+    "dimensions.width_mirrors": {
+      "description": "Overall width with mirrors open",
+      "unit": "m",
+      "impact": "high",
+      "candidates": [
+        {
+          "printed": {
+            "value": 2081,
+            "unit": "mm"
+          },
+          "value": 2.081,
+          "unit": "m",
+          "status": "confirmed",
+          "class": "A",
+          "source_id": "dim:hondanews-ca-2023-hatch-specs",
+          "locator": "DIMENSIONS table, row 'Width (mm) – Mirrors open/Mirrors folded', Sport Touring column",
+          "evidence": "Width (mm) – Mirrors open/Mirrors folded 2081/1900 2081/1900 2081/1900 2081/1900",
+          "as_printed": "2081/1900 (mirrors open)",
+          "applicability": {
+            "year": "2023",
+            "market": "CA",
+            "trim": "Sport Touring (all hatch trims identical for this row)",
+            "body": "hatchback",
+            "gearbox": "6MT and CVT",
+            "engine": "1.5T",
+            "notes": "Same body/engine/gearbox as 2024; model-year check: every row also printed in the 2024 Canadian table (length w/o bracket, height, wheelbase, track, ground clearance) is identical, so 2023 values are taken as applicable"
+          },
+          "confidence": "medium",
+          "range": null,
+          "how_to_measure": null,
+          "notes": "Not printed for 2024. Mirrors are not listed as changed for 2024 (2024 table repeats all other exterior rows unchanged). Cross-checked by photo in proportions.json (proportions.mirror_width_ratio).",
+          "prefer": true,
+          "selection_reason": "Only manufacturer figure for 2023; the 2024 Canadian table omits it."
+        },
+        {
+          "printed": {
+            "value": 2081,
+            "unit": "mm"
+          },
+          "value": 2.081,
+          "unit": "m",
+          "status": "confirmed",
+          "class": "A",
+          "source_id": "dim:hondanews-ca-2022-hatch-specs",
+          "locator": "DIMENSIONS table, row 'Width (mm) – Mirrors open/Mirrors folded'",
+          "evidence": "Width (mm) – Mirrors open/Mirrors folded 2081/1900 2081/1900 2081/1900",
+          "as_printed": "2081/1900",
+          "applicability": {
+            "year": "2022",
+            "market": "CA",
+            "trim": "Sport Touring (all hatch trims identical for this row)",
+            "body": "hatchback",
+            "gearbox": "6MT and CVT",
+            "engine": "1.5T",
+            "notes": "Launch year of same body; values identical to 2023 and to the rows repeated in 2024"
+          },
+          "confidence": "medium",
+          "range": null,
+          "how_to_measure": null,
+          "notes": ""
+        }
+      ]
+    },
+    "dimensions.width_mirrors_folded": {
+      "description": "Overall width with mirrors folded",
+      "unit": "m",
+      "impact": "low",
+      "candidates": [
+        {
+          "printed": {
+            "value": 1900,
+            "unit": "mm"
+          },
+          "value": 1.9000000000000001,
+          "unit": "m",
+          "status": "confirmed",
+          "class": "A",
+          "source_id": "dim:hondanews-ca-2023-hatch-specs",
+          "locator": "DIMENSIONS table, row 'Width (mm) – Mirrors open/Mirrors folded'",
+          "evidence": "Width (mm) – Mirrors open/Mirrors folded 2081/1900 2081/1900 2081/1900 2081/1900",
+          "as_printed": "2081/1900 (mirrors folded)",
+          "applicability": {
+            "year": "2023",
+            "market": "CA",
+            "trim": "Sport Touring (all hatch trims identical for this row)",
+            "body": "hatchback",
+            "gearbox": "6MT and CVT",
+            "engine": "1.5T",
+            "notes": "Same body/engine/gearbox as 2024; model-year check: every row also printed in the 2024 Canadian table (length w/o bracket, height, wheelbase, track, ground clearance) is identical, so 2023 values are taken as applicable"
+          },
+          "confidence": "medium",
+          "range": null,
+          "how_to_measure": null,
+          "notes": ""
+        }
+      ]
+    },
+    "dimensions.height": {
+      "description": "Overall height (unladen)",
+      "unit": "m",
+      "impact": "high",
+      "candidates": [
+        {
+          "printed": {
+            "value": 1415,
+            "unit": "mm"
+          },
+          "value": 1.415,
+          "unit": "m",
+          "status": "confirmed",
+          "class": "A",
+          "source_id": "dim:hondanews-ca-2024-hatch-specs",
+          "locator": "DIMENSIONS table, row 'Height (mm)'",
+          "evidence": "Height (mm) 1415 1415",
+          "as_printed": "1415",
+          "applicability": {
+            "year": "2024",
+            "market": "CA",
+            "trim": "Sport Touring (table also covers Sport)",
+            "body": "hatchback",
+            "gearbox": "6MT and CVT",
+            "engine": "1.5T",
+            "notes": "Honda Canada 2024 table; trim columns identical for these rows"
+          },
+          "confidence": "high",
+          "range": null,
+          "how_to_measure": null,
+          "notes": ""
+        },
+        {
+          "printed": {
+            "value": 55.7,
+            "unit": "in"
+          },
+          "value": 1.41478,
+          "unit": "m",
+          "status": "confirmed",
+          "class": "A",
+          "source_id": "dim:hondanews-us-2024-hatch-specs",
+          "locator": "DIMENSIONS / EXTERIOR, row 'Height (in.)' (all trims)",
+          "evidence": "Height (in.) … 55.7",
+          "as_printed": "55.7",
+          "applicability": {
+            "year": "2024",
+            "market": "US",
+            "trim": "Sport Touring",
+            "body": "hatchback",
+            "gearbox": "6MT and CVT",
+            "engine": "1.5T",
+            "notes": "US market; Canadian figure is selected where both exist"
+          },
+          "confidence": "high",
+          "range": null,
+          "how_to_measure": null,
+          "notes": "1414.8 mm; agrees."
+        }
+      ]
+    },
+    "dimensions.wheelbase": {
+      "description": "Wheelbase",
+      "unit": "m",
+      "impact": "critical",
+      "candidates": [
+        {
+          "printed": {
+            "value": 2735,
+            "unit": "mm"
+          },
+          "value": 2.735,
+          "unit": "m",
+          "status": "confirmed",
+          "class": "A",
+          "source_id": "dim:hondanews-ca-2024-hatch-specs",
+          "locator": "DIMENSIONS table, row 'Wheelbase (mm)'",
+          "evidence": "Wheelbase (mm) 2735 2735",
+          "as_printed": "2735",
+          "applicability": {
+            "year": "2024",
+            "market": "CA",
+            "trim": "Sport Touring (table also covers Sport)",
+            "body": "hatchback",
+            "gearbox": "6MT and CVT",
+            "engine": "1.5T",
+            "notes": "Honda Canada 2024 table; trim columns identical for these rows"
+          },
+          "confidence": "high",
+          "range": null,
+          "how_to_measure": null,
+          "notes": ""
+        },
+        {
+          "printed": {
+            "value": 107.7,
+            "unit": "in"
+          },
+          "value": 2.73558,
+          "unit": "m",
+          "status": "confirmed",
+          "class": "A",
+          "source_id": "dim:hondanews-us-2024-hatch-specs",
+          "locator": "DIMENSIONS / EXTERIOR, row 'Wheelbase (in.)' (all trims)",
+          "evidence": "Wheelbase (in.) … 107.7",
+          "as_printed": "107.7",
+          "applicability": {
+            "year": "2024",
+            "market": "US",
+            "trim": "Sport Touring",
+            "body": "hatchback",
+            "gearbox": "6MT and CVT",
+            "engine": "1.5T",
+            "notes": "US market; Canadian figure is selected where both exist"
+          },
+          "confidence": "high",
+          "range": null,
+          "how_to_measure": null,
+          "notes": "2735.6 mm; agrees."
+        },
+        {
+          "printed": {
+            "value": 107.7,
+            "unit": "in"
+          },
+          "value": 2.73558,
+          "unit": "m",
+          "status": "confirmed",
+          "class": "A",
+          "source_id": "dim:hondainfocenter-us-2024-hatch-specs",
+          "locator": "Exterior Measurements, row 'Wheelbase'",
+          "evidence": "Wheelbase 107.7 in 107.7 in 107.7 in 107.7 in",
+          "as_printed": "107.7 in",
+          "applicability": {
+            "year": "2024",
+            "market": "US",
+            "trim": "Sport Touring",
+            "body": "hatchback",
+            "gearbox": "6MT and CVT",
+            "engine": "1.5T",
+            "notes": "US market; Canadian figure is selected where both exist"
+          },
+          "confidence": "high",
+          "range": null,
+          "how_to_measure": null,
+          "notes": ""
+        }
+      ]
+    },
+    "dimensions.track_front": {
+      "description": "Front track (18-in wheels)",
+      "unit": "m",
+      "impact": "high",
+      "candidates": [
+        {
+          "printed": {
+            "value": 1536,
+            "unit": "mm"
+          },
+          "value": 1.536,
+          "unit": "m",
+          "status": "confirmed",
+          "class": "A",
+          "source_id": "dim:hondanews-ca-2024-hatch-specs",
+          "locator": "DIMENSIONS table, row 'Track – front/rear (mm)', SPORT TOURING column",
+          "evidence": "Track – front/rear (mm) 1536/1565 1536/1565",
+          "as_printed": "1536/1565",
+          "applicability": {
+            "year": "2024",
+            "market": "CA",
+            "trim": "Sport Touring (table also covers Sport)",
+            "body": "hatchback",
+            "gearbox": "6MT and CVT",
+            "engine": "1.5T",
+            "notes": "Honda Canada 2024 table; trim columns identical for these rows"
+          },
+          "confidence": "high",
+          "range": null,
+          "how_to_measure": null,
+          "notes": "Track depends on wheel: 2022/2023 Canadian LX (16/17-in) prints 1546/1575; Sport and Sport Touring (18-in, 235/40R18) 1536/1565."
+        },
+        {
+          "printed": {
+            "value": 1536,
+            "unit": "mm"
+          },
+          "value": 1.536,
+          "unit": "m",
+          "status": "confirmed",
+          "class": "A",
+          "source_id": "dim:hondanews-ca-2023-hatch-specs",
+          "locator": "DIMENSIONS table, row 'Track (mm) – front/rear', Sport Touring column",
+          "evidence": "Track (mm) – front/rear 1546/1575 1536/1565 1536/1565 1536/1565",
+          "as_printed": "1536/1565",
+          "applicability": {
+            "year": "2023",
+            "market": "CA",
+            "trim": "Sport Touring (all hatch trims identical for this row)",
+            "body": "hatchback",
+            "gearbox": "6MT and CVT",
+            "engine": "1.5T",
+            "notes": "Same body/engine/gearbox as 2024; model-year check: every row also printed in the 2024 Canadian table (length w/o bracket, height, wheelbase, track, ground clearance) is identical, so 2023 values are taken as applicable"
+          },
+          "confidence": "high",
+          "range": null,
+          "how_to_measure": null,
+          "notes": ""
+        },
+        {
+          "printed": {
+            "value": 60.5,
+            "unit": "in"
+          },
+          "value": 1.5367,
+          "unit": "m",
+          "status": "confirmed",
+          "class": "A",
+          "source_id": "dim:hondanews-us-2024-hatch-specs",
+          "locator": "DIMENSIONS / EXTERIOR, row 'Track (in.) (front/rear)', 4th column = Sport Touring",
+          "evidence": "Track (in.) (front/rear) 60.9 / 62.0 60.5 / 61.6 60.9 / 62.0 60.5 / 61.6",
+          "as_printed": "60.5 / 61.6",
+          "applicability": {
+            "year": "2024",
+            "market": "US",
+            "trim": "Sport Touring",
+            "body": "hatchback",
+            "gearbox": "6MT and CVT",
+            "engine": "1.5T",
+            "notes": "US market; Canadian figure is selected where both exist"
+          },
+          "confidence": "high",
+          "range": null,
+          "how_to_measure": null,
+          "notes": "Column order LX, Sport, EX-L, Sport Touring; 18-in trims 60.5/61.6 in."
+        }
+      ]
+    },
+    "dimensions.track_rear": {
+      "description": "Rear track (18-in wheels)",
+      "unit": "m",
+      "impact": "high",
+      "candidates": [
+        {
+          "printed": {
+            "value": 1565,
+            "unit": "mm"
+          },
+          "value": 1.565,
+          "unit": "m",
+          "status": "confirmed",
+          "class": "A",
+          "source_id": "dim:hondanews-ca-2024-hatch-specs",
+          "locator": "DIMENSIONS table, row 'Track – front/rear (mm)', SPORT TOURING column",
+          "evidence": "Track – front/rear (mm) 1536/1565 1536/1565",
+          "as_printed": "1536/1565",
+          "applicability": {
+            "year": "2024",
+            "market": "CA",
+            "trim": "Sport Touring (table also covers Sport)",
+            "body": "hatchback",
+            "gearbox": "6MT and CVT",
+            "engine": "1.5T",
+            "notes": "Honda Canada 2024 table; trim columns identical for these rows"
+          },
+          "confidence": "high",
+          "range": null,
+          "how_to_measure": null,
+          "notes": "Track depends on wheel: 2022/2023 Canadian LX (16/17-in) prints 1546/1575; Sport and Sport Touring (18-in, 235/40R18) 1536/1565."
+        },
+        {
+          "printed": {
+            "value": 1565,
+            "unit": "mm"
+          },
+          "value": 1.565,
+          "unit": "m",
+          "status": "confirmed",
+          "class": "A",
+          "source_id": "dim:hondanews-ca-2023-hatch-specs",
+          "locator": "DIMENSIONS table, row 'Track (mm) – front/rear', Sport Touring column",
+          "evidence": "Track (mm) – front/rear 1546/1575 1536/1565 1536/1565 1536/1565",
+          "as_printed": "1536/1565",
+          "applicability": {
+            "year": "2023",
+            "market": "CA",
+            "trim": "Sport Touring (all hatch trims identical for this row)",
+            "body": "hatchback",
+            "gearbox": "6MT and CVT",
+            "engine": "1.5T",
+            "notes": "Same body/engine/gearbox as 2024; model-year check: every row also printed in the 2024 Canadian table (length w/o bracket, height, wheelbase, track, ground clearance) is identical, so 2023 values are taken as applicable"
+          },
+          "confidence": "high",
+          "range": null,
+          "how_to_measure": null,
+          "notes": ""
+        },
+        {
+          "printed": {
+            "value": 61.6,
+            "unit": "in"
+          },
+          "value": 1.56464,
+          "unit": "m",
+          "status": "confirmed",
+          "class": "A",
+          "source_id": "dim:hondanews-us-2024-hatch-specs",
+          "locator": "DIMENSIONS / EXTERIOR, row 'Track (in.) (front/rear)', 4th column = Sport Touring",
+          "evidence": "Track (in.) (front/rear) 60.9 / 62.0 60.5 / 61.6 60.9 / 62.0 60.5 / 61.6",
+          "as_printed": "60.5 / 61.6",
+          "applicability": {
+            "year": "2024",
+            "market": "US",
+            "trim": "Sport Touring",
+            "body": "hatchback",
+            "gearbox": "6MT and CVT",
+            "engine": "1.5T",
+            "notes": "US market; Canadian figure is selected where both exist"
+          },
+          "confidence": "high",
+          "range": null,
+          "how_to_measure": null,
+          "notes": "Column order LX, Sport, EX-L, Sport Touring; 18-in trims 60.5/61.6 in."
+        }
+      ]
+    },
+    "dimensions.ground_clearance": {
+      "description": "Minimum ground clearance, no load",
+      "unit": "m",
+      "impact": "medium",
+      "candidates": [
+        {
+          "printed": {
+            "value": 134,
+            "unit": "mm"
+          },
+          "value": 0.134,
+          "unit": "m",
+          "status": "confirmed",
+          "class": "A",
+          "source_id": "dim:hondanews-ca-2024-hatch-specs",
+          "locator": "DIMENSIONS table, row 'Ground clearance – no-load (mm)'",
+          "evidence": "Ground clearance – no-load (mm) 134 134",
+          "as_printed": "134",
+          "applicability": {
+            "year": "2024",
+            "market": "CA",
+            "trim": "Sport Touring (table also covers Sport)",
+            "body": "hatchback",
+            "gearbox": "6MT and CVT",
+            "engine": "1.5T",
+            "notes": "Honda Canada 2024 table; trim columns identical for these rows"
+          },
+          "confidence": "medium",
+          "range": null,
+          "how_to_measure": null,
+          "notes": "Single manufacturer source (US tables do not print ground clearance). Point of measurement not stated; photo rocker height in proportions.json is a different quantity."
+        },
+        {
+          "printed": {
+            "value": 134,
+            "unit": "mm"
+          },
+          "value": 0.134,
+          "unit": "m",
+          "status": "confirmed",
+          "class": "A",
+          "source_id": "dim:hondanews-ca-2022-hatch-specs",
+          "locator": "DIMENSIONS table, row 'Ground clearance (mm) – no-load'",
+          "evidence": "Ground clearance (mm) – no-load 134 134 134",
+          "as_printed": "134",
+          "applicability": {
+            "year": "2022",
+            "market": "CA",
+            "trim": "Sport Touring (all hatch trims identical for this row)",
+            "body": "hatchback",
+            "gearbox": "6MT and CVT",
+            "engine": "1.5T",
+            "notes": "Launch year of same body; values identical to 2023 and to the rows repeated in 2024"
+          },
+          "confidence": "medium",
+          "range": null,
+          "how_to_measure": null,
+          "notes": ""
+        }
+      ]
+    },
+    "dimensions.approach_angle": {
+      "description": "Approach angle",
+      "unit": "rad",
+      "impact": "low",
+      "candidates": [
+        {
+          "value": null,
+          "unit": "rad",
+          "status": "unknown",
+          "class": null,
+          "source_id": null,
+          "locator": "",
+          "evidence": "",
+          "as_printed": "",
+          "applicability": {},
+          "confidence": "none",
+          "range": null,
+          "how_to_measure": "Car at curb weight on level floor: measure bumper lower-edge height and its horizontal distance ahead of/behind the tyre contact patch; angle = atan(h / x).",
+          "notes": "",
+          "searches": [
+            "Honda Canada 2022/2023/2024 hatchback spec releases (hondanews.ca): no overhang rows",
+            "hondanews.com 2022/2023/2024 hatchback specifications & features: no overhang rows",
+            "hondainfocenter.com 2024 hatchback specifications: no overhang rows",
+            "WebSearch '2022 Honda Civic Hatchback front overhang rear overhang mm dimensions' (only non-NA spec sites; none print overhangs)",
+            "Owner's manual: honda.ca manuals selector did not render a document list headlessly; its API needs a private consumerId header (not worked around)",
+            "NHTSA crash-test database (nrd.nhtsa.dot.gov) blocked by egress proxy (502)"
+          ]
+        }
+      ]
+    },
+    "dimensions.departure_angle": {
+      "description": "Departure angle",
+      "unit": "rad",
+      "impact": "low",
+      "candidates": [
+        {
+          "value": null,
+          "unit": "rad",
+          "status": "unknown",
+          "class": null,
+          "source_id": null,
+          "locator": "",
+          "evidence": "",
+          "as_printed": "",
+          "applicability": {},
+          "confidence": "none",
+          "range": null,
+          "how_to_measure": "Car at curb weight on level floor: measure bumper lower-edge height and its horizontal distance ahead of/behind the tyre contact patch; angle = atan(h / x).",
+          "notes": "",
+          "searches": [
+            "Honda Canada 2022/2023/2024 hatchback spec releases (hondanews.ca): no overhang rows",
+            "hondanews.com 2022/2023/2024 hatchback specifications & features: no overhang rows",
+            "hondainfocenter.com 2024 hatchback specifications: no overhang rows",
+            "WebSearch '2022 Honda Civic Hatchback front overhang rear overhang mm dimensions' (only non-NA spec sites; none print overhangs)",
+            "Owner's manual: honda.ca manuals selector did not render a document list headlessly; its API needs a private consumerId header (not worked around)",
+            "NHTSA crash-test database (nrd.nhtsa.dot.gov) blocked by egress proxy (502)"
+          ]
+        }
+      ]
+    },
+    "dimensions.headroom_front": {
+      "description": "Front headroom (with moonroof)",
+      "unit": "m",
+      "impact": "medium",
+      "candidates": [
+        {
+          "printed": {
+            "value": 956,
+            "unit": "mm"
+          },
+          "value": 0.9560000000000001,
+          "unit": "m",
+          "status": "confirmed",
+          "class": "A",
+          "source_id": "dim:hondanews-ca-2024-hatch-specs",
+          "locator": "DIMENSIONS table, row 'Headroom – front/rear (mm)'",
+          "evidence": "Headroom – front/rear (mm) 956/942 956/942",
+          "as_printed": "956/942",
+          "applicability": {
+            "year": "2024",
+            "market": "CA",
+            "trim": "Sport Touring (table also covers Sport)",
+            "body": "hatchback",
+            "gearbox": "6MT and CVT",
+            "engine": "1.5T",
+            "notes": "Honda Canada 2024 table; trim columns identical for these rows"
+          },
+          "confidence": "high",
+          "range": null,
+          "how_to_measure": null,
+          "notes": "SAE interior dimension (SAE J1100 style); useful for cockpit modelling, not a direct coordinate."
+        },
+        {
+          "printed": {
+            "value": 37.6,
+            "unit": "in"
+          },
+          "value": 0.95504,
+          "unit": "m",
+          "status": "confirmed",
+          "class": "A",
+          "source_id": "dim:hondanews-us-2024-hatch-specs",
+          "locator": "INTERIOR, row 'Headroom (in.) (front/rear)'",
+          "evidence": "Headroom (in.) (front/rear)",
+          "as_printed": "37.6",
+          "applicability": {
+            "year": "2024",
+            "market": "US",
+            "trim": "Sport Touring",
+            "body": "hatchback",
+            "gearbox": "6MT and CVT",
+            "engine": "1.5T",
+            "notes": "US market; Canadian figure is selected where both exist"
+          },
+          "confidence": "medium",
+          "range": null,
+          "how_to_measure": null,
+          "notes": "Sport Touring column (EX-L/Sport Touring share the moonroof headroom figure)."
+        }
+      ]
+    },
+    "dimensions.headroom_rear": {
+      "description": "Rear headroom",
+      "unit": "m",
+      "impact": "medium",
+      "candidates": [
+        {
+          "printed": {
+            "value": 942,
+            "unit": "mm"
+          },
+          "value": 0.9420000000000001,
+          "unit": "m",
+          "status": "confirmed",
+          "class": "A",
+          "source_id": "dim:hondanews-ca-2024-hatch-specs",
+          "locator": "DIMENSIONS table, row 'Headroom – front/rear (mm)'",
+          "evidence": "Headroom – front/rear (mm) 956/942 956/942",
+          "as_printed": "956/942",
+          "applicability": {
+            "year": "2024",
+            "market": "CA",
+            "trim": "Sport Touring (table also covers Sport)",
+            "body": "hatchback",
+            "gearbox": "6MT and CVT",
+            "engine": "1.5T",
+            "notes": "Honda Canada 2024 table; trim columns identical for these rows"
+          },
+          "confidence": "high",
+          "range": null,
+          "how_to_measure": null,
+          "notes": "SAE interior dimension (SAE J1100 style); useful for cockpit modelling, not a direct coordinate."
+        },
+        {
+          "printed": {
+            "value": 37.1,
+            "unit": "in"
+          },
+          "value": 0.94234,
+          "unit": "m",
+          "status": "confirmed",
+          "class": "A",
+          "source_id": "dim:hondanews-us-2024-hatch-specs",
+          "locator": "INTERIOR, row 'Headroom (in.) (front/rear)'",
+          "evidence": "Headroom (in.) (front/rear)",
+          "as_printed": "37.1",
+          "applicability": {
+            "year": "2024",
+            "market": "US",
+            "trim": "Sport Touring",
+            "body": "hatchback",
+            "gearbox": "6MT and CVT",
+            "engine": "1.5T",
+            "notes": "US market; Canadian figure is selected where both exist"
+          },
+          "confidence": "medium",
+          "range": null,
+          "how_to_measure": null,
+          "notes": "Sport Touring column (EX-L/Sport Touring share the moonroof headroom figure)."
+        }
+      ]
+    },
+    "dimensions.legroom_front": {
+      "description": "Front legroom",
+      "unit": "m",
+      "impact": "medium",
+      "candidates": [
+        {
+          "printed": {
+            "value": 1074,
+            "unit": "mm"
+          },
+          "value": 1.074,
+          "unit": "m",
+          "status": "confirmed",
+          "class": "A",
+          "source_id": "dim:hondanews-ca-2024-hatch-specs",
+          "locator": "DIMENSIONS table, row 'Legroom – front/rear (mm)'",
+          "evidence": "Legroom – front/rear (mm) 1074/950 1074/950",
+          "as_printed": "1074/950",
+          "applicability": {
+            "year": "2024",
+            "market": "CA",
+            "trim": "Sport Touring (table also covers Sport)",
+            "body": "hatchback",
+            "gearbox": "6MT and CVT",
+            "engine": "1.5T",
+            "notes": "Honda Canada 2024 table; trim columns identical for these rows"
+          },
+          "confidence": "high",
+          "range": null,
+          "how_to_measure": null,
+          "notes": "SAE interior dimension (SAE J1100 style); useful for cockpit modelling, not a direct coordinate."
+        },
+        {
+          "printed": {
+            "value": 42.3,
+            "unit": "in"
+          },
+          "value": 1.07442,
+          "unit": "m",
+          "status": "confirmed",
+          "class": "A",
+          "source_id": "dim:hondanews-us-2024-hatch-specs",
+          "locator": "INTERIOR, row 'Legroom (in.) (front/rear)'",
+          "evidence": "Legroom (in.) (front/rear)",
+          "as_printed": "42.3",
+          "applicability": {
+            "year": "2024",
+            "market": "US",
+            "trim": "Sport Touring",
+            "body": "hatchback",
+            "gearbox": "6MT and CVT",
+            "engine": "1.5T",
+            "notes": "US market; Canadian figure is selected where both exist"
+          },
+          "confidence": "medium",
+          "range": null,
+          "how_to_measure": null,
+          "notes": "Sport Touring column (EX-L/Sport Touring share the moonroof headroom figure)."
+        }
+      ]
+    },
+    "dimensions.legroom_rear": {
+      "description": "Rear legroom",
+      "unit": "m",
+      "impact": "medium",
+      "candidates": [
+        {
+          "printed": {
+            "value": 950,
+            "unit": "mm"
+          },
+          "value": 0.9500000000000001,
+          "unit": "m",
+          "status": "confirmed",
+          "class": "A",
+          "source_id": "dim:hondanews-ca-2024-hatch-specs",
+          "locator": "DIMENSIONS table, row 'Legroom – front/rear (mm)'",
+          "evidence": "Legroom – front/rear (mm) 1074/950 1074/950",
+          "as_printed": "1074/950",
+          "applicability": {
+            "year": "2024",
+            "market": "CA",
+            "trim": "Sport Touring (table also covers Sport)",
+            "body": "hatchback",
+            "gearbox": "6MT and CVT",
+            "engine": "1.5T",
+            "notes": "Honda Canada 2024 table; trim columns identical for these rows"
+          },
+          "confidence": "high",
+          "range": null,
+          "how_to_measure": null,
+          "notes": "SAE interior dimension (SAE J1100 style); useful for cockpit modelling, not a direct coordinate."
+        },
+        {
+          "printed": {
+            "value": 37.4,
+            "unit": "in"
+          },
+          "value": 0.9499599999999999,
+          "unit": "m",
+          "status": "confirmed",
+          "class": "A",
+          "source_id": "dim:hondanews-us-2024-hatch-specs",
+          "locator": "INTERIOR, row 'Legroom (in.) (front/rear)'",
+          "evidence": "Legroom (in.) (front/rear)",
+          "as_printed": "37.4",
+          "applicability": {
+            "year": "2024",
+            "market": "US",
+            "trim": "Sport Touring",
+            "body": "hatchback",
+            "gearbox": "6MT and CVT",
+            "engine": "1.5T",
+            "notes": "US market; Canadian figure is selected where both exist"
+          },
+          "confidence": "medium",
+          "range": null,
+          "how_to_measure": null,
+          "notes": "Sport Touring column (EX-L/Sport Touring share the moonroof headroom figure)."
+        }
+      ]
+    },
+    "dimensions.shoulder_room_front": {
+      "description": "Front shoulder room",
+      "unit": "m",
+      "impact": "medium",
+      "candidates": [
+        {
+          "printed": {
+            "value": 1447,
+            "unit": "mm"
+          },
+          "value": 1.447,
+          "unit": "m",
+          "status": "confirmed",
+          "class": "A",
+          "source_id": "dim:hondanews-ca-2024-hatch-specs",
+          "locator": "DIMENSIONS table, row 'Shoulder room – front/rear (mm)'",
+          "evidence": "Shoulder room – front/rear (mm) 1447/1422 1447/1422",
+          "as_printed": "1447/1422",
+          "applicability": {
+            "year": "2024",
+            "market": "CA",
+            "trim": "Sport Touring (table also covers Sport)",
+            "body": "hatchback",
+            "gearbox": "6MT and CVT",
+            "engine": "1.5T",
+            "notes": "Honda Canada 2024 table; trim columns identical for these rows"
+          },
+          "confidence": "high",
+          "range": null,
+          "how_to_measure": null,
+          "notes": "SAE interior dimension (SAE J1100 style); useful for cockpit modelling, not a direct coordinate."
+        },
+        {
+          "printed": {
+            "value": 57.0,
+            "unit": "in"
+          },
+          "value": 1.4478,
+          "unit": "m",
+          "status": "confirmed",
+          "class": "A",
+          "source_id": "dim:hondanews-us-2024-hatch-specs",
+          "locator": "INTERIOR, row 'Shoulder Room (in.) (front/rear)'",
+          "evidence": "Shoulder Room (in.) (front/rear)",
+          "as_printed": "57.0",
+          "applicability": {
+            "year": "2024",
+            "market": "US",
+            "trim": "Sport Touring",
+            "body": "hatchback",
+            "gearbox": "6MT and CVT",
+            "engine": "1.5T",
+            "notes": "US market; Canadian figure is selected where both exist"
+          },
+          "confidence": "medium",
+          "range": null,
+          "how_to_measure": null,
+          "notes": "Sport Touring column (EX-L/Sport Touring share the moonroof headroom figure)."
+        }
+      ]
+    },
+    "dimensions.shoulder_room_rear": {
+      "description": "Rear shoulder room",
+      "unit": "m",
+      "impact": "medium",
+      "candidates": [
+        {
+          "printed": {
+            "value": 1422,
+            "unit": "mm"
+          },
+          "value": 1.422,
+          "unit": "m",
+          "status": "confirmed",
+          "class": "A",
+          "source_id": "dim:hondanews-ca-2024-hatch-specs",
+          "locator": "DIMENSIONS table, row 'Shoulder room – front/rear (mm)'",
+          "evidence": "Shoulder room – front/rear (mm) 1447/1422 1447/1422",
+          "as_printed": "1447/1422",
+          "applicability": {
+            "year": "2024",
+            "market": "CA",
+            "trim": "Sport Touring (table also covers Sport)",
+            "body": "hatchback",
+            "gearbox": "6MT and CVT",
+            "engine": "1.5T",
+            "notes": "Honda Canada 2024 table; trim columns identical for these rows"
+          },
+          "confidence": "high",
+          "range": null,
+          "how_to_measure": null,
+          "notes": "SAE interior dimension (SAE J1100 style); useful for cockpit modelling, not a direct coordinate."
+        },
+        {
+          "printed": {
+            "value": 56.0,
+            "unit": "in"
+          },
+          "value": 1.4223999999999999,
+          "unit": "m",
+          "status": "confirmed",
+          "class": "A",
+          "source_id": "dim:hondanews-us-2024-hatch-specs",
+          "locator": "INTERIOR, row 'Shoulder Room (in.) (front/rear)'",
+          "evidence": "Shoulder Room (in.) (front/rear)",
+          "as_printed": "56.0",
+          "applicability": {
+            "year": "2024",
+            "market": "US",
+            "trim": "Sport Touring",
+            "body": "hatchback",
+            "gearbox": "6MT and CVT",
+            "engine": "1.5T",
+            "notes": "US market; Canadian figure is selected where both exist"
+          },
+          "confidence": "medium",
+          "range": null,
+          "how_to_measure": null,
+          "notes": "Sport Touring column (EX-L/Sport Touring share the moonroof headroom figure)."
+        }
+      ]
+    },
+    "dimensions.hip_room_front": {
+      "description": "Front hip room",
+      "unit": "m",
+      "impact": "medium",
+      "candidates": [
+        {
+          "printed": {
+            "value": 1380,
+            "unit": "mm"
+          },
+          "value": 1.3800000000000001,
+          "unit": "m",
+          "status": "confirmed",
+          "class": "A",
+          "source_id": "dim:hondanews-ca-2024-hatch-specs",
+          "locator": "DIMENSIONS table, row 'Hip room – front/rear (mm)'",
+          "evidence": "Hip room – front/rear (mm) 1380/1243 1380/1243",
+          "as_printed": "1380/1243",
+          "applicability": {
+            "year": "2024",
+            "market": "CA",
+            "trim": "Sport Touring (table also covers Sport)",
+            "body": "hatchback",
+            "gearbox": "6MT and CVT",
+            "engine": "1.5T",
+            "notes": "Honda Canada 2024 table; trim columns identical for these rows"
+          },
+          "confidence": "high",
+          "range": null,
+          "how_to_measure": null,
+          "notes": "SAE interior dimension (SAE J1100 style); useful for cockpit modelling, not a direct coordinate."
+        },
+        {
+          "printed": {
+            "value": 54.3,
+            "unit": "in"
+          },
+          "value": 1.37922,
+          "unit": "m",
+          "status": "confirmed",
+          "class": "A",
+          "source_id": "dim:hondanews-us-2024-hatch-specs",
+          "locator": "INTERIOR, row 'Hiproom (in.) (front/rear)'",
+          "evidence": "Hiproom (in.) (front/rear)",
+          "as_printed": "54.3",
+          "applicability": {
+            "year": "2024",
+            "market": "US",
+            "trim": "Sport Touring",
+            "body": "hatchback",
+            "gearbox": "6MT and CVT",
+            "engine": "1.5T",
+            "notes": "US market; Canadian figure is selected where both exist"
+          },
+          "confidence": "medium",
+          "range": null,
+          "how_to_measure": null,
+          "notes": "Sport Touring column (EX-L/Sport Touring share the moonroof headroom figure)."
+        }
+      ]
+    },
+    "dimensions.hip_room_rear": {
+      "description": "Rear hip room",
+      "unit": "m",
+      "impact": "medium",
+      "candidates": [
+        {
+          "printed": {
+            "value": 1243,
+            "unit": "mm"
+          },
+          "value": 1.243,
+          "unit": "m",
+          "status": "confirmed",
+          "class": "A",
+          "source_id": "dim:hondanews-ca-2024-hatch-specs",
+          "locator": "DIMENSIONS table, row 'Hip room – front/rear (mm)'",
+          "evidence": "Hip room – front/rear (mm) 1380/1243 1380/1243",
+          "as_printed": "1380/1243",
+          "applicability": {
+            "year": "2024",
+            "market": "CA",
+            "trim": "Sport Touring (table also covers Sport)",
+            "body": "hatchback",
+            "gearbox": "6MT and CVT",
+            "engine": "1.5T",
+            "notes": "Honda Canada 2024 table; trim columns identical for these rows"
+          },
+          "confidence": "high",
+          "range": null,
+          "how_to_measure": null,
+          "notes": "SAE interior dimension (SAE J1100 style); useful for cockpit modelling, not a direct coordinate."
+        },
+        {
+          "printed": {
+            "value": 48.9,
+            "unit": "in"
+          },
+          "value": 1.24206,
+          "unit": "m",
+          "status": "confirmed",
+          "class": "A",
+          "source_id": "dim:hondanews-us-2024-hatch-specs",
+          "locator": "INTERIOR, row 'Hiproom (in.) (front/rear)'",
+          "evidence": "Hiproom (in.) (front/rear)",
+          "as_printed": "48.9",
+          "applicability": {
+            "year": "2024",
+            "market": "US",
+            "trim": "Sport Touring",
+            "body": "hatchback",
+            "gearbox": "6MT and CVT",
+            "engine": "1.5T",
+            "notes": "US market; Canadian figure is selected where both exist"
+          },
+          "confidence": "medium",
+          "range": null,
+          "how_to_measure": null,
+          "notes": "Sport Touring column (EX-L/Sport Touring share the moonroof headroom figure)."
+        }
+      ]
+    },
+    "dimensions.cargo_volume": {
+      "description": "Cargo volume, rear seat up",
+      "unit": "m3",
+      "impact": "low",
+      "candidates": [
+        {
+          "printed": {
+            "value": 693,
+            "unit": "L"
+          },
+          "value": 0.6930000000000001,
+          "unit": "m3",
+          "status": "confirmed",
+          "class": "A",
+          "source_id": "dim:hondanews-ca-2024-hatch-specs",
+          "locator": "DIMENSIONS table, row 'Cargo volume (L)'",
+          "evidence": "Cargo volume (L) 693 693",
+          "as_printed": "693",
+          "applicability": {
+            "year": "2024",
+            "market": "CA",
+            "trim": "Sport Touring (table also covers Sport)",
+            "body": "hatchback",
+            "gearbox": "6MT and CVT",
+            "engine": "1.5T",
+            "notes": "Honda Canada 2024 table; trim columns identical for these rows"
+          },
+          "confidence": "high",
+          "range": null,
+          "how_to_measure": null,
+          "notes": ""
+        },
+        {
+          "printed": {
+            "value": 24.5,
+            "unit": "ft3"
+          },
+          "value": 0.6937627415040001,
+          "unit": "m3",
+          "status": "confirmed",
+          "class": "A",
+          "source_id": "dim:hondanews-us-2024-hatch-specs",
+          "locator": "INTERIOR, row 'Cargo Volume (in.) (rear seat up)'",
+          "evidence": "Cargo Volume (in.) (rear seat up)5 24.5",
+          "as_printed": "24.5 (printed unit label 'in.' is a Honda typo for cu ft; footnote 5 cites SAE J1100)",
+          "applicability": {
+            "year": "2024",
+            "market": "US",
+            "trim": "Sport Touring",
+            "body": "hatchback",
+            "gearbox": "6MT and CVT",
+            "engine": "1.5T",
+            "notes": "US market; Canadian figure is selected where both exist"
+          },
+          "confidence": "medium",
+          "range": null,
+          "how_to_measure": null,
+          "notes": ""
+        }
+      ]
+    },
+    "dimensions.passenger_volume": {
+      "description": "Passenger volume (with moonroof)",
+      "unit": "m3",
+      "impact": "low",
+      "candidates": [
+        {
+          "printed": {
+            "value": 2735,
+            "unit": "L"
+          },
+          "value": 2.735,
+          "unit": "m3",
+          "status": "confirmed",
+          "class": "A",
+          "source_id": "dim:hondanews-ca-2024-hatch-specs",
+          "locator": "DIMENSIONS table, row 'Passenger volume (L)'",
+          "evidence": "Passenger volume (L) 2735 2735",
+          "as_printed": "2735",
+          "applicability": {
+            "year": "2024",
+            "market": "CA",
+            "trim": "Sport Touring (table also covers Sport)",
+            "body": "hatchback",
+            "gearbox": "6MT and CVT",
+            "engine": "1.5T",
+            "notes": "Honda Canada 2024 table; trim columns identical for these rows"
+          },
+          "confidence": "high",
+          "range": null,
+          "how_to_measure": null,
+          "notes": ""
+        }
+      ]
+    }
+  }
+}

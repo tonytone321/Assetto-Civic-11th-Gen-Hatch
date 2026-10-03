@@ -1,0 +1,38 @@
+{
+  "run_id": "tsp_2022_civic_non_si_cvt_stock",
+  "source_id": "eng:tsp-stage1-non-si",
+  "vehicle": "Unmodified 2022 non-Si Civic 1.5T, CVT (body not stated)",
+  "stock": true,
+  "dyno_type": null,
+  "correction": null,
+  "gear": null,
+  "fuel": null,
+  "ambient": null,
+  "peak": {
+    "wheel_power": {
+      "printed": [
+        154,
+        "hp"
+      ],
+      "value": 114837.78022366959,
+      "unit": "W"
+    },
+    "wheel_torque": {
+      "printed": [
+        163,
+        "lb-ft"
+      ],
+      "value": 220.99832557801827,
+      "unit": "N*m"
+    }
+  },
+  "evidence": "154whp / 163tq - Factory Calibration (Dyno testing was completed on an unmodified 2022 Non-Si Civic 1.5T with a CVT.)",
+  "equivalence": "CVT; peak only; chart image on the page not digitized (CVT rpm axis not representative of a 6MT pull).",
+  "chart_url": null,
+  "points": [],
+  "use_for_curve": false,
+  "source_url": "https://www.twostepperformance.com/products/tsp-stage-1-tune-for-2022-honda-civic-1-5t-non-si",
+  "cache_file": "cache/pages/004eb1d37a3e1be8.txt",
+  "digitizing": null,
+  "notes": "Stock run of the same engine code/rating but NOT the target body/gearbox. Peak figures only; no rpm-resolved points were available, so this run contributes no rows to engine_curve.csv."
+}
