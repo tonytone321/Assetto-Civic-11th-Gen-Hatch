@@ -398,7 +398,7 @@
           "status": "estimated",
           "class": "D",
           "source_id": "prop:hic-2022-hatch-strg-profile",
-          "locator": "image px {\"row\": 25, \"cols\": [337, 348]}",
+          "locator": "image px {\"row\": 25, \"cols\": [322, 376]}",
           "evidence": "Image feature located by algorithm: minimum of the top silhouette profile",
           "as_printed": "",
           "applicability": {
@@ -429,8 +429,8 @@
             "pixels": {
               "row": 25,
               "cols": [
-                337,
-                348
+                322,
+                376
               ]
             },
             "scale_mm_per_px": {
@@ -447,12 +447,12 @@
       "impact": "medium",
       "candidates": [
         {
-          "value": -1.6083779293288445,
+          "value": -1.6645700596443804,
           "unit": "m",
           "status": "estimated",
           "class": "D",
           "source_id": "prop:hic-2022-hatch-strg-profile",
-          "locator": "image px {\"cols\": [337, 348]}",
+          "locator": "image px {\"cols\": [322, 376]}",
           "evidence": "Image feature located by algorithm: centre of the flat run at the minimum top-profile row; range covers the run",
           "as_printed": "",
           "applicability": {
@@ -464,13 +464,13 @@
             "engine": "1.5T",
             "notes": "Exterior body identical 2022-2024 per Honda spec tables (length, width, height, wheelbase, track unchanged)"
           },
-          "confidence": "medium",
+          "confidence": "low",
           "range": [
-            -1.712476829602437,
-            -1.504279029055252
+            -2.161223423736698,
+            -1.1679166955520628
           ],
           "how_to_measure": "Level laid on the roof: find the highest point, plumb down, measure from front hub centre.",
-          "notes": "1-sigma 0.05205 m; range = +-2 sigma (localisation + scale + perspective).",
+          "notes": "1-sigma 0.2483 m; range = +-2 sigma (localisation + scale + perspective).",
           "derivation": {
             "script": "scripts/domains/photo_measure_side.py",
             "function": "main",
@@ -482,8 +482,8 @@
             "algorithm": "centre of the flat run at the minimum top-profile row; range covers the run",
             "pixels": {
               "cols": [
-                337,
-                348
+                322,
+                376
               ]
             },
             "scale_mm_per_px": {
@@ -500,12 +500,12 @@
       "impact": "medium",
       "candidates": [
         {
-          "value": -0.6012420552119256,
+          "value": -0.3418937614479123,
           "unit": "m",
           "status": "estimated",
           "class": "D",
           "source_id": "prop:hic-2022-hatch-strg-profile",
-          "locator": "image px {\"break_px\": 226.0, \"row\": 70.0}",
+          "locator": "image px {\"break_px\": 196.0, \"row\": 75.0}",
           "evidence": "Image feature located by algorithm: first breakpoint of a continuous 3-segment line fit to the top profile, front axle -> roof peak",
           "as_printed": "",
           "applicability": {
@@ -517,13 +517,13 @@
             "engine": "1.5T",
             "notes": "Exterior body identical 2022-2024 per Honda spec tables (length, width, height, wheelbase, track unchanged)"
           },
-          "confidence": "medium",
+          "confidence": "low",
           "range": [
-            -0.6368860688456838,
-            -0.5655980415781675
+            -0.38811082698404203,
+            -0.2956766959117825
           ],
           "how_to_measure": "Measure from front hub centre to the windshield base at the centreline (tape along the hood + plumb), +-10 mm.",
-          "notes": "Silhouette break: the true glass base can sit slightly behind the visible hood/cowl edge. Localisation sigma 2 px. 1-sigma 0.01782 m; range = +-2 sigma (localisation + scale + perspective).",
+          "notes": "Silhouette break: the true glass base can sit slightly behind the visible hood/cowl edge. Localisation sigma 2 px. 1-sigma 0.02311 m; range = +-2 sigma (localisation + scale + perspective).",
           "derivation": {
             "script": "scripts/domains/photo_measure_side.py",
             "function": "main",
@@ -534,8 +534,8 @@
             },
             "algorithm": "first breakpoint of a continuous 3-segment line fit to the top profile, front axle -> roof peak",
             "pixels": {
-              "break_px": 226.0,
-              "row": 70.0
+              "break_px": 196.0,
+              "row": 75.0
             },
             "scale_mm_per_px": {
               "horizontal": 8.644943125467114,
@@ -551,12 +551,12 @@
       "impact": "medium",
       "candidates": [
         {
-          "value": 1.029356677512558,
+          "value": 0.9858977104281917,
           "unit": "m",
           "status": "estimated",
           "class": "D",
           "source_id": "prop:hic-2022-hatch-strg-profile",
-          "locator": "image px {\"break_px\": 226.0}",
+          "locator": "image px {\"break_px\": 196.0}",
           "evidence": "Image feature located by algorithm: top profile at the first breakpoint",
           "as_printed": "",
           "applicability": {
@@ -570,11 +570,11 @@
           },
           "confidence": "medium",
           "range": [
-            0.9675161403661804,
-            1.0911972146589355
+            0.9257785907382041,
+            1.0460168301181794
           ],
           "how_to_measure": "Tape from floor to the windshield base at the centreline (+-5 mm).",
-          "notes": "1-sigma 0.03092 m; range = +-2 sigma (localisation + scale + perspective).",
+          "notes": "1-sigma 0.03006 m; range = +-2 sigma (localisation + scale + perspective).",
           "derivation": {
             "script": "scripts/domains/photo_measure_side.py",
             "function": "main",
@@ -585,7 +585,7 @@
             },
             "algorithm": "top profile at the first breakpoint",
             "pixels": {
-              "break_px": 226.0
+              "break_px": 196.0
             },
             "scale_mm_per_px": {
               "horizontal": 8.644943125467114,
@@ -601,12 +601,12 @@
       "impact": "low",
       "candidates": [
         {
-          "value": -0.9556847233560772,
+          "value": -0.9902644958579458,
           "unit": "m",
           "status": "estimated",
           "class": "D",
           "source_id": "prop:hic-2022-hatch-strg-profile",
-          "locator": "image px {\"break_px\": 267.0}",
+          "locator": "image px {\"break_px\": 271.0}",
           "evidence": "Image feature located by algorithm: second breakpoint of the same fit",
           "as_printed": "",
           "applicability": {
@@ -618,13 +618,13 @@
             "engine": "1.5T",
             "notes": "Exterior body identical 2022-2024 per Honda spec tables (length, width, height, wheelbase, track unchanged)"
           },
-          "confidence": "medium",
+          "confidence": "low",
           "range": [
-            -1.0082698594762278,
-            -0.9030995872359266
+            -1.0903955145661954,
+            -0.8901334771496963
           ],
           "how_to_measure": "Measure from front hub centre to the top edge of the windshield glass (plumb), +-10 mm.",
-          "notes": "1-sigma 0.02629 m; range = +-2 sigma (localisation + scale + perspective).",
+          "notes": "1-sigma 0.05007 m; range = +-2 sigma (localisation + scale + perspective).",
           "derivation": {
             "script": "scripts/domains/photo_measure_side.py",
             "function": "main",
@@ -635,7 +635,7 @@
             },
             "algorithm": "second breakpoint of the same fit",
             "pixels": {
-              "break_px": 267.0
+              "break_px": 271.0
             },
             "scale_mm_per_px": {
               "horizontal": 8.644943125467114,
@@ -651,12 +651,12 @@
       "impact": "low",
       "candidates": [
         {
-          "value": 0.7550702112607619,
+          "value": 0.5137567927313965,
           "unit": "rad",
           "status": "estimated",
           "class": "D",
           "source_id": "prop:hic-2022-hatch-strg-profile",
-          "locator": "image px {\"slopes_px\": [-0.10943893953089107, -0.9360392337805292, -0.13228067745845618], \"rms_px\": 1.2735616810222934}",
+          "locator": "image px {\"slopes_px\": [-0.11148408962516784, -0.5612596682447161, -0.15000373802394978], \"rms_px\": 0.5779156000863138}",
           "evidence": "Image feature located by algorithm: atan of the middle-segment slope (scale-anisotropy corrected)",
           "as_printed": "",
           "applicability": {
@@ -668,10 +668,10 @@
             "engine": "1.5T",
             "notes": "Exterior body identical 2022-2024 per Honda spec tables (length, width, height, wheelbase, track unchanged)"
           },
-          "confidence": "medium",
+          "confidence": "low",
           "range": [
-            0.6852570411809887,
-            0.8248833813405351
+            0.44394362265162335,
+            0.5835699628111697
           ],
           "how_to_measure": "Inclinometer on the glass at the centreline.",
           "notes": "Silhouette (outer glass) line, not the glass at centreline; 2 deg sigma. 1-sigma 0.03491 rad; range = +-2 sigma (localisation + scale + perspective).",
@@ -686,11 +686,11 @@
             "algorithm": "atan of the middle-segment slope (scale-anisotropy corrected)",
             "pixels": {
               "slopes_px": [
-                -0.10943893953089107,
-                -0.9360392337805292,
-                -0.13228067745845618
+                -0.11148408962516784,
+                -0.5612596682447161,
+                -0.15000373802394978
               ],
-              "rms_px": 1.2735616810222934
+              "rms_px": 0.5779156000863138
             },
             "scale_mm_per_px": {
               "horizontal": 8.644943125467114,
@@ -706,12 +706,12 @@
       "impact": "medium",
       "candidates": [
         {
-          "value": 0.3498974652062643,
+          "value": 0.3422969861991938,
           "unit": "rad",
           "status": "estimated",
           "class": "D",
           "source_id": "prop:hic-2022-hatch-strg-profile",
-          "locator": "image px {\"slopes_px\": [0.04200071345960045, 0.3629453607260047, 5.808787094945763], \"breaks_px\": [437.0, 552.0], \"segment_used\": 1, \"rms_px\": 2.2783884020587033}",
+          "locator": "image px {\"slopes_px\": [0.03591127769639908, 0.3544027461840785, 5.911235648988665], \"breaks_px\": [439.0, 552.0], \"segment_used\": 1, \"rms_px\": 1.9660764325254532}",
           "evidence": "Image feature located by algorithm: continuous 3-segment line fit to the top profile, roof peak -> rear extreme; steepest of the first two segments",
           "as_printed": "",
           "applicability": {
@@ -725,8 +725,8 @@
           },
           "confidence": "low",
           "range": [
-            0.2626310026065478,
-            0.4371639278059808
+            0.2550305235994773,
+            0.4295634487989103
           ],
           "how_to_measure": "Inclinometer on the hatch glass at the centreline.",
           "notes": "Includes the effect of the roof spoiler on the silhouette; 2.5 deg sigma. 1-sigma 0.04363 rad; range = +-2 sigma (localisation + scale + perspective).",
@@ -741,16 +741,16 @@
             "algorithm": "continuous 3-segment line fit to the top profile, roof peak -> rear extreme; steepest of the first two segments",
             "pixels": {
               "slopes_px": [
-                0.04200071345960045,
-                0.3629453607260047,
-                5.808787094945763
+                0.03591127769639908,
+                0.3544027461840785,
+                5.911235648988665
               ],
               "breaks_px": [
-                437.0,
+                439.0,
                 552.0
               ],
               "segment_used": 1,
-              "rms_px": 2.2783884020587033
+              "rms_px": 1.9660764325254532
             },
             "scale_mm_per_px": {
               "horizontal": 8.644943125467114,
@@ -766,12 +766,12 @@
       "impact": "low",
       "candidates": [
         {
-          "value": -2.4253250546854863,
+          "value": -2.4426149409364206,
           "unit": "m",
           "status": "estimated",
           "class": "D",
           "source_id": "prop:hic-2022-hatch-strg-profile",
-          "locator": "image px {\"break_px\": 437.0}",
+          "locator": "image px {\"break_px\": 439.0}",
           "evidence": "Image feature located by algorithm: first breakpoint of the rear fit",
           "as_printed": "",
           "applicability": {
@@ -785,11 +785,11 @@
           },
           "confidence": "medium",
           "range": [
-            -2.4779101908056367,
-            -2.372739918565336
+            -2.6592785974862103,
+            -2.225951284386631
           ],
           "how_to_measure": "Plumb from the roof-spoiler trailing edge, measure from front hub centre.",
-          "notes": "1-sigma 0.02629 m; range = +-2 sigma (localisation + scale + perspective).",
+          "notes": "1-sigma 0.1083 m; range = +-2 sigma (localisation + scale + perspective).",
           "derivation": {
             "script": "scripts/domains/photo_measure_side.py",
             "function": "main",
@@ -800,7 +800,7 @@
             },
             "algorithm": "first breakpoint of the rear fit",
             "pixels": {
-              "break_px": 437.0
+              "break_px": 439.0
             },
             "scale_mm_per_px": {
               "horizontal": 8.644943125467114,
@@ -1794,24 +1794,24 @@
     },
     "top_profile_fits": {
       "front": {
-        "break1_x": 226.0,
-        "break2_x": 267.0,
+        "break1_x": 196.0,
+        "break2_x": 271.0,
         "slopes": [
-          -0.10943893953089107,
-          -0.9360392337805292,
-          -0.13228067745845618
+          -0.11148408962516784,
+          -0.5612596682447161,
+          -0.15000373802394978
         ],
-        "rms_px": 1.2735616810222934
+        "rms_px": 0.5779156000863138
       },
       "rear": {
-        "break1_x": 437.0,
+        "break1_x": 439.0,
         "break2_x": 552.0,
         "slopes": [
-          0.04200071345960045,
-          0.3629453607260047,
-          5.808787094945763
+          0.03591127769639908,
+          0.3544027461840785,
+          5.911235648988665
         ],
-        "rms_px": 2.2783884020587033
+        "rms_px": 1.9660764325254532
       }
     },
     "body_colour_lab": [

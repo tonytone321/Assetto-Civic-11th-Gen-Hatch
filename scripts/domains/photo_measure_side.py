@@ -5,7 +5,8 @@ Input image: Honda Information Center profile header for the Civic Hatchback Spo
 (manufacturer studio render, RGBA PNG with transparent background, car facing left).
 Every feature is located algorithmically; nothing is picked by eye:
 
-  silhouette      alpha channel >= ALPHA_BODY (the soft ground shadow is semi-transparent, < ALPHA_BODY)
+  silhouette      alpha channel >= ALPHA_BODY (the soft ground shadow is semi-transparent, < ALPHA_BODY);
+                  top profile uses alpha >= ALPHA_TOP because the glass is rendered semi-transparent
   wheels          cv2.HoughCircles on the 4x-upsampled grey image (search radius from the published
                   wheelbase and nominal tyre size), then least-squares circle and ellipse fits to
                   Canny edge points in a +-4 px annulus around the Hough circle (tyre outer edge)
@@ -50,6 +51,7 @@ OVERLAY = os.path.join(ROOT, "cache", "photos", "side_overlay.png")
 SCRIPT = "scripts/domains/photo_measure_side.py"
 
 ALPHA_BODY = 250
+ALPHA_TOP = 128             # glass is rendered semi-transparent (alpha ~190); the ground shadow lies only below the car
 UP = 4                      # upsampling factor for sub-pixel fits
 SIGMA_PX = 0.5              # localisation sigma for well-defined edges (original px)
 WHEELBASE_MM = 2735.0       # dimensions.wheelbase (Honda Canada 2024), read from dimensions.json below
@@ -180,7 +182,8 @@ def main():
     body = alpha >= ALPHA_BODY
     cols = np.where(body.any(axis=0))[0]
     x_min, x_max = int(cols.min()), int(cols.max())
-    top = np.array([np.argmax(body[:, x]) if body[:, x].any() else -1 for x in range(W)])
+    topmask = alpha >= ALPHA_TOP
+    top = np.array([np.argmax(topmask[:, x]) if topmask[:, x].any() else -1 for x in range(W)])
     bot = np.array([H - 1 - np.argmax(body[::-1, x]) if body[:, x].any() else -1 for x in range(W)])
 
     wb_mm = published("dimensions.wheelbase") * 1000.0
@@ -285,7 +288,7 @@ def main():
         "minimum of the top silhouette profile", impact="medium",
         how="Straightedge across the roof at its highest point; tape to floor (+-3 mm).")
     put("proportions.roof_peak_y", "Longitudinal position of roof peak (centre of the columns at the minimum row)",
-        Y((roof_cols.min() + roof_cols.max()) / 2), err(0, (roof_cols.max() - roof_cols.min()) / 2 + SIGMA_PX, 0),
+        Y((roof_cols.min() + roof_cols.max()) / 2), err(0, (roof_cols.max() - roof_cols.min()) / 2 + SIGMA_PX, abs(Y((roof_cols.min() + roof_cols.max()) / 2)) * 1000),
         {"cols": [int(roof_cols.min()), int(roof_cols.max())]},
         "centre of the flat run at the minimum top-profile row; range covers the run", impact="medium",
         how="Level laid on the roof: find the highest point, plumb down, measure from front hub centre.")
@@ -294,7 +297,7 @@ def main():
     xs = np.arange(int(x_front_axle), roof_x + 1)
     seg_f = seg3_fit(xs.astype(float), top[xs].astype(float))
     put("proportions.windshield_base_y", "Windshield base / cowl (silhouette slope break hood -> glass): Y",
-        Y(seg_f["break1_x"]), err(0, 2.0), {"break_px": seg_f["break1_x"], "row": float(top[int(round(seg_f["break1_x"]))])},
+        Y(seg_f["break1_x"]), err(0, 2.0, abs(Y(seg_f["break1_x"])) * 1000), {"break_px": seg_f["break1_x"], "row": float(top[int(round(seg_f["break1_x"]))])},
         "first breakpoint of a continuous 3-segment line fit to the top profile, front axle -> roof peak", impact="medium",
         how="Measure from front hub centre to the windshield base at the centreline (tape along the hood + plumb), +-10 mm.",
         notes="Silhouette break: the true glass base can sit slightly behind the visible hood/cowl edge. Localisation sigma 2 px.")
@@ -303,7 +306,7 @@ def main():
         {"break_px": seg_f["break1_x"]}, "top profile at the first breakpoint", impact="medium",
         how="Tape from floor to the windshield base at the centreline (+-5 mm).")
     put("proportions.windshield_header_y", "Windshield top / roof header (second slope break): Y",
-        Y(seg_f["break2_x"]), err(0, 3.0), {"break_px": seg_f["break2_x"]},
+        Y(seg_f["break2_x"]), err(0, 3.0, abs(Y(seg_f["break2_x"])) * 1000), {"break_px": seg_f["break2_x"]},
         "second breakpoint of the same fit", impact="low",
         how="Measure from front hub centre to the top edge of the windshield glass (plumb), +-10 mm.")
     ws_angle = math.degrees(math.atan(abs(seg_f["slopes"][1]) * s_v / s_wb))
@@ -324,7 +327,7 @@ def main():
         impact="medium", how="Inclinometer on the hatch glass at the centreline.",
         notes="Includes the effect of the roof spoiler on the silhouette; 2.5 deg sigma.")
     put("proportions.hatch_glass_top_y", "Start of the rear slope (first rear breakpoint): Y",
-        Y(seg_r["break1_x"]), err(0, 3.0), {"break_px": seg_r["break1_x"]}, "first breakpoint of the rear fit", impact="low",
+        Y(seg_r["break1_x"]), err(0, 3.0, abs(Y(seg_r["break1_x"])) * 1000), {"break_px": seg_r["break1_x"]}, "first breakpoint of the rear fit", impact="low",
         how="Plumb from the roof-spoiler trailing edge, measure from front hub centre.")
 
     # ---- hood height at front axle station
