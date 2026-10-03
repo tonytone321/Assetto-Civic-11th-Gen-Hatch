@@ -1,0 +1,216 @@
+{
+  "domain": "audio",
+  "title": "Audio reference database",
+  "schema_version": 1,
+  "updated": "2026-10-03",
+  "sources": {
+    "hpn-2024-civic-exhaust-pipe": {
+      "title": "Genuine 2024 Honda Civic Exhaust Pipe (catalog listing with submodel fitment)",
+      "url": "https://www.hondapartsnow.com/oem-2024-honda-civic-exhaust_pipe.html",
+      "publisher": "HondaPartsNow (Genuine Parts Now Inc., US Honda parts retailer; Honda EPC data)",
+      "class": "A",
+      "accessed": "2026-10-03",
+      "access_method": "static",
+      "applicability": "2024 Honda Civic, US catalog, all trims, fitment listed per submodel",
+      "notes": "Class A as a reproduction of Honda's parts catalog (part numbers/fitment), US market. Canadian EPC not checked (no open Canadian catalog found).",
+      "cache_file": "cache/pages/220275fc0acb9df8.txt"
+    },
+    "hpn-2024-civic-muffler": {
+      "title": "Genuine 2024 Honda Civic Muffler (catalog listing with submodel fitment)",
+      "url": "https://www.hondapartsnow.com/oem-2024-honda-civic-muffler.html",
+      "publisher": "HondaPartsNow",
+      "class": "A",
+      "accessed": "2026-10-03",
+      "access_method": "static",
+      "applicability": "2024 Honda Civic, US catalog",
+      "notes": "",
+      "cache_file": "cache/pages/27d21fe7b393c3a0.txt"
+    },
+    "hpn-18307-T47-A51": {
+      "title": "18307-T47-A51 Genuine Honda MUFFLER, R- EX (part page + diagram T404B0200)",
+      "url": "https://www.hondapartsnow.com/genuine/honda~muffler~r~ex~18307-t47-a51.html",
+      "publisher": "HondaPartsNow",
+      "class": "A",
+      "accessed": "2026-10-03",
+      "access_method": "static",
+      "applicability": "2022-2024 Honda Civic (part page title); 2024 fitment 5 Door 1.5T Sport Touring 6MT, CVT",
+      "notes": "Diagram image (cache/audio_refs/hpn_exhaust_diagram_large.png, Honda illustration T404B0200) downloaded to the git-ignored cache for reading only.",
+      "cache_file": "cache/pages/cc897d0f556a8710.txt"
+    },
+    "hpn-18305-T47-A51": {
+      "title": "18305-T47-A51 Genuine Honda MUFFLER, L- EX (part page)",
+      "url": "https://www.hondapartsnow.com/genuine/honda~muffler~l~ex~18305-t47-a51.html",
+      "publisher": "HondaPartsNow",
+      "class": "A",
+      "accessed": "2026-10-03",
+      "access_method": "static",
+      "applicability": "2022-2024 Honda Civic; 2024 fitment 5 Door 1.5T Sport Touring 6MT, CVT",
+      "notes": "",
+      "cache_file": "cache/pages/5310f0c70dcb3019.txt"
+    },
+    "hpn-18150-64A-L00": {
+      "title": "18150-64A-L00 Genuine Honda CONVERTER ASSY (part page)",
+      "url": "https://www.hondapartsnow.com/genuine/honda~converter~assy~18150-64a-l00.html",
+      "publisher": "HondaPartsNow",
+      "class": "A",
+      "accessed": "2026-10-03",
+      "access_method": "static",
+      "applicability": "2022-2026 Honda Civic",
+      "notes": "",
+      "cache_file": "cache/pages/8684f83f0c79a7de.txt"
+    }
+  },
+  "parameters": {
+    "audio.exhaust_rear_muffler_count": {
+      "description": "Number of rear mufflers on the stock exhaust",
+      "unit": "1",
+      "impact": "medium",
+      "candidates": [
+        {
+          "value": 2,
+          "unit": "1",
+          "status": "confirmed",
+          "class": "A",
+          "source_id": "hpn-2024-civic-muffler",
+          "locator": "listing rows 18305-T47-A51 and 18307-T47-A51",
+          "evidence": "2024 Honda Civic MUFFLER, L- EX Part Number: 18305-T47-A51 … Position : Driver Side … Fits the following 2024 Honda Civic Submodels: 5 Door 1.5T Sport Touring | 6MT, CVT … 2024 Honda Civic MUFFLER, R- EX … 18307-T47-A51 … Position : Passenger Side … 5 Door 1.5T Sport Touring | 6MT, CVT",
+          "as_printed": "MUFFLER, L- EX 18305-T47-A51; MUFFLER, R- EX 18307-T47-A51",
+          "applicability": {
+            "year": "2024",
+            "market": "US",
+            "trim": "Sport Touring (5 Door 1.5T)",
+            "body": "hatchback",
+            "gearbox": "6MT, CVT",
+            "engine": "1.5T",
+            "notes": "US parts catalog; same part numbers listed for 6MT and CVT"
+          },
+          "confidence": "high",
+          "range": null,
+          "how_to_measure": null,
+          "notes": "Separate left (driver side) and right (passenger side) rear mufflers. The 1.5T hatch EX-L (CVT) uses different numbers (-A01), so the Sport Touring rear section is trim-specific. Model years: part pages are titled 2022-2024."
+        }
+      ]
+    },
+    "audio.exhaust_layout": {
+      "description": "Stock exhaust layout, front to rear (Honda illustration T404B0200)",
+      "unit": "text",
+      "impact": "medium",
+      "candidates": [
+        {
+          "value": "front pipe A with flexible section (ref 1) -> centre pipe with one in-line resonator/silencer and a Y-split (ref 9, sold with the right rear muffler as 18307-T47-A51 'MUFFLER, R- EX') -> two rear mufflers, right (ref 9) and left (ref 8, 18305-T47-A51, flange-joined with gasket ref 6), each with a finisher (refs 10, 11)",
+          "unit": "text",
+          "status": "confirmed",
+          "class": "A",
+          "source_id": "hpn-18307-T47-A51",
+          "locator": "part page 'Ref No.' lines + diagram image T404B0200",
+          "evidence": "18307-T47-A51 MUFFLER, R- EX is Ref No. 9 in the diagram below … (18305-T47-A51 page:) 18305-T47-A51 MUFFLER, L- EX is Ref No. 8 in the diagram below … (related parts:) Honda 18310-T47-A52 FINISHER, R- EX; diagram: ref 9 drawn as centre pipe with a cylindrical in-line silencer, Y-junction and a rear box; ref 8 a second rear box; refs 10/11 tip finishers",
+          "as_printed": "Ref No. 9 / Ref No. 8 (diagram T404B0200)",
+          "applicability": {
+            "year": "2024",
+            "market": "US",
+            "trim": "Sport Touring (5 Door 1.5T)",
+            "body": "hatchback",
+            "gearbox": "6MT, CVT",
+            "engine": "1.5T",
+            "notes": "US parts catalog; same part numbers listed for 6MT and CVT"
+          },
+          "confidence": "medium",
+          "range": null,
+          "how_to_measure": null,
+          "notes": "Topology read from the drawing (not to scale). The drawing is the one the retailer shows for 18307-T47-A51/18305-T47-A51; whether its finisher shapes are Sport Touring-specific is not established. Pipe diameters are not in the catalog."
+        }
+      ]
+    },
+    "audio.catalytic_converter": {
+      "description": "Catalytic converter part and sharing across 1.5T trims",
+      "unit": "text",
+      "impact": "low",
+      "candidates": [
+        {
+          "value": "one 'CONVERTER ASSY' 18150-64A-L00 listed for all 2024 1.5T trims incl. Si and hatch Sport Touring 6MT; position not established from this page",
+          "unit": "text",
+          "status": "confirmed",
+          "class": "A",
+          "source_id": "hpn-2024-civic-exhaust-pipe",
+          "locator": "listing row 18150-64A-L00",
+          "evidence": "2024 Honda Civic CONVERTER ASSY Part Number: 18150-64A-L00 … Fits the following 2024 Honda Civic Submodels: 4 Door 1.5T EX, 4 Door 1.5T Touring, 4 Door Si, 5 Door 1.5T EX-L, 5 Door 1.5T Sport Touring | 6MT, CVT",
+          "as_printed": "18150-64A-L00",
+          "applicability": {
+            "year": "2024",
+            "market": "US",
+            "trim": "all 1.5T (sedan EX/Touring, Si, hatch EX-L, Sport Touring)",
+            "body": "sedan and hatchback",
+            "gearbox": "6MT, CVT",
+            "engine": "1.5T",
+            "notes": ""
+          },
+          "confidence": "medium",
+          "range": null,
+          "how_to_measure": null,
+          "notes": "The part page says 'Ref No. 4' but ref 4 in drawing T404B0200 is a small bracket (related part 11942-5AA-A00 'Stay L,Converter'); the converter itself is not drawn there (diagram points to E-4 at the manifold end), so its exact position and the count of catalyst bricks are UNKNOWN. A commenter on the reference clip mentions a 'Secondary cat' (unverified)."
+        }
+      ]
+    },
+    "audio.front_pipe_shared": {
+      "description": "Front exhaust pipe A shared with Si and sedan",
+      "unit": "text",
+      "impact": "low",
+      "candidates": [
+        {
+          "value": "PIPE A ASSY- EX 18200-T20-A01 shared by all 2024 1.5T trims incl. Si",
+          "unit": "text",
+          "status": "confirmed",
+          "class": "A",
+          "source_id": "hpn-2024-civic-exhaust-pipe",
+          "locator": "listing row 18200-T20-A01",
+          "evidence": "2024 Honda Civic PIPE A ASSY- EX … 18200-T20-A01 … Fits the following 2024 Honda Civic Submodels: 4 Door 1.5T EX, 4 Door 1.5T Touring, 4 Door Si, 5 Door 1.5T EX-L, 5 Door 1.5T Sport Touring | 6MT, CVT",
+          "as_printed": "18200-T20-A01",
+          "applicability": {
+            "year": "2024",
+            "market": "US",
+            "trim": "all 1.5T (sedan EX/Touring, Si, hatch EX-L, Sport Touring)",
+            "body": "sedan and hatchback",
+            "gearbox": "6MT, CVT",
+            "engine": "1.5T",
+            "notes": ""
+          },
+          "confidence": "high",
+          "range": null,
+          "how_to_measure": null,
+          "notes": "Only the front pipe and converter are shared with the Si; the Si has its own mufflers (18305-T22-A01 / 18307-T22-A01), so Si exhaust sound is not equivalent."
+        }
+      ]
+    },
+    "audio.exhaust_pipe_diameter": {
+      "description": "Stock exhaust pipe outside diameter",
+      "unit": "m",
+      "impact": "medium",
+      "candidates": [
+        {
+          "value": null,
+          "unit": "m",
+          "status": "unknown",
+          "class": null,
+          "source_id": null,
+          "locator": "",
+          "evidence": "",
+          "as_printed": "",
+          "applicability": {},
+          "confidence": "none",
+          "range": null,
+          "how_to_measure": "Calipers or a tape around the centre pipe ahead of the resonator and at a muffler inlet (circumference / pi), car on ramps; +/-1 mm.",
+          "notes": "A reference-clip commenter wrote 'I know the stock ones are “2”' (unverified forum lead, not a source).",
+          "searches": [
+            "hondapartsnow 2024 exhaust pipe and muffler listings (no dimensions)",
+            "honda.oempartsonline.com (Cloudflare 403)",
+            "hondapartsconnection.com (Cloudflare challenge)",
+            "aftermarket cat-back pages (see products; diameters given are for the aftermarket systems)"
+          ]
+        }
+      ]
+    }
+  },
+  "clips": [],
+  "products": [],
+  "reference_clip": {}
+}
