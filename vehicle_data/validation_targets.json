@@ -1,0 +1,872 @@
+{
+  "domain": "validation_targets",
+  "title": "Performance validation targets",
+  "schema_version": 1,
+  "updated": "2026-10-03",
+  "sources": {
+    "perf:cd-2022-civic-hatch-st-6mt": {
+      "title": "Tested: 2022 Honda Civic Hatchback Brings Stick-Shift Fun (Rich Ceppos, published Oct 12, 2021)",
+      "url": "https://www.caranddriver.com/reviews/a37936938/2022-honda-civic-hatchback-by-the-numbers/",
+      "publisher": "Car and Driver (Hearst Autos)",
+      "class": "C",
+      "accessed": "2026-10-03",
+      "access_method": "static",
+      "applicability": "2022 Civic Sport Touring Hatchback, 6MT, US, Continental ContiProContact 235/40R-18 91W M+S, curb weight 3024 lb as tested",
+      "notes": "Instrumented test (VBOX). Same numbers repeated on caranddriver.com/honda/civic-2022 (cache/pages/e2b19c8e54228dee.txt). Weather: corrected to 60 F at sea level per C/D method; actual test-day weather not printed. Front/rear % not printed.",
+      "cache_file": "cache/pages/2df590f6625a05ee.txt"
+    },
+    "perf:cd-how-we-test": {
+      "title": "Car and Driver's Comprehensive Car Testing Explained",
+      "url": "https://www.caranddriver.com/features/a32018270/how-we-test-cars/",
+      "publisher": "Car and Driver (Hearst Autos)",
+      "class": "C",
+      "accessed": "2026-10-03",
+      "access_method": "static",
+      "applicability": "Test methodology (current page, read 2026; rollout convention dates from 2019, before the 2021 test)",
+      "notes": "",
+      "cache_file": "cache/pages/8c550355c08b8a10.txt"
+    }
+  },
+  "parameters": {
+    "perf.accel_0_60mph": {
+      "description": "0-60 mph, standing start (C/D convention: 1-ft rollout omitted)",
+      "unit": "s",
+      "impact": "high",
+      "candidates": [
+        {
+          "printed": {
+            "value": 7.3,
+            "unit": "s"
+          },
+          "value": 7.3,
+          "unit": "s",
+          "status": "confirmed",
+          "class": "C",
+          "source_id": "perf:cd-2022-civic-hatch-st-6mt",
+          "locator": "Specifications box, 'C/D TEST RESULTS'",
+          "evidence": "60 mph: 7.3 sec",
+          "as_printed": "7.3 sec",
+          "applicability": {
+            "year": "2022",
+            "market": "US",
+            "trim": "Sport Touring",
+            "body": "hatchback",
+            "gearbox": "6MT",
+            "engine": "1.5T",
+            "notes": "Car and Driver test car: 2022 Civic Sport Touring Hatchback, 6-speed manual, Sonic Gray paint, Continental ContiProContact 235/40R-18 91W M+S, C/D-measured curb weight 3024 lb. Same body/engine/gearbox as the 2024 target; model-year powertrain/chassis changes 2022->2024 to be confirmed by the identity thread (none known to this thread)."
+          },
+          "confidence": "high",
+          "range": null,
+          "how_to_measure": null,
+          "notes": "C/D standing-start times omit a 1-ft rollout; this test printed the rollout as 0.4 s (see perf.cd_rollout_1ft). Add it back for a timer-from-standstill comparison."
+        }
+      ]
+    },
+    "perf.cd_rollout_1ft": {
+      "description": "1-ft rollout time omitted from C/D standing-start results",
+      "unit": "s",
+      "impact": "medium",
+      "candidates": [
+        {
+          "printed": {
+            "value": 0.4,
+            "unit": "s"
+          },
+          "value": 0.4,
+          "unit": "s",
+          "status": "confirmed",
+          "class": "C",
+          "source_id": "perf:cd-2022-civic-hatch-st-6mt",
+          "locator": "Specifications box, 'C/D TEST RESULTS'",
+          "evidence": "Results above omit 1-ft rollout of 0.4 sec.",
+          "as_printed": "0.4 sec",
+          "applicability": {
+            "year": "2022",
+            "market": "US",
+            "trim": "Sport Touring",
+            "body": "hatchback",
+            "gearbox": "6MT",
+            "engine": "1.5T",
+            "notes": "Car and Driver test car: 2022 Civic Sport Touring Hatchback, 6-speed manual, Sonic Gray paint, Continental ContiProContact 235/40R-18 91W M+S, C/D-measured curb weight 3024 lb. Same body/engine/gearbox as the 2024 target; model-year powertrain/chassis changes 2022->2024 to be confirmed by the identity thread (none known to this thread)."
+          },
+          "confidence": "high",
+          "range": null,
+          "how_to_measure": null,
+          "notes": ""
+        }
+      ]
+    },
+    "perf.accel_0_100mph": {
+      "description": "0-100 mph (rollout omitted)",
+      "unit": "s",
+      "impact": "medium",
+      "candidates": [
+        {
+          "printed": {
+            "value": 19.0,
+            "unit": "s"
+          },
+          "value": 19.0,
+          "unit": "s",
+          "status": "confirmed",
+          "class": "C",
+          "source_id": "perf:cd-2022-civic-hatch-st-6mt",
+          "locator": "Specifications box, 'C/D TEST RESULTS'",
+          "evidence": "100 mph: 19.0 sec",
+          "as_printed": "19.0 sec",
+          "applicability": {
+            "year": "2022",
+            "market": "US",
+            "trim": "Sport Touring",
+            "body": "hatchback",
+            "gearbox": "6MT",
+            "engine": "1.5T",
+            "notes": "Car and Driver test car: 2022 Civic Sport Touring Hatchback, 6-speed manual, Sonic Gray paint, Continental ContiProContact 235/40R-18 91W M+S, C/D-measured curb weight 3024 lb. Same body/engine/gearbox as the 2024 target; model-year powertrain/chassis changes 2022->2024 to be confirmed by the identity thread (none known to this thread)."
+          },
+          "confidence": "high",
+          "range": null,
+          "how_to_measure": null,
+          "notes": "C/D standing-start times omit a 1-ft rollout; this test printed the rollout as 0.4 s (see perf.cd_rollout_1ft). Add it back for a timer-from-standstill comparison."
+        }
+      ]
+    },
+    "perf.accel_0_120mph": {
+      "description": "0-120 mph (rollout omitted)",
+      "unit": "s",
+      "impact": "low",
+      "candidates": [
+        {
+          "printed": {
+            "value": 30.9,
+            "unit": "s"
+          },
+          "value": 30.9,
+          "unit": "s",
+          "status": "confirmed",
+          "class": "C",
+          "source_id": "perf:cd-2022-civic-hatch-st-6mt",
+          "locator": "Specifications box, 'C/D TEST RESULTS'",
+          "evidence": "120 mph: 30.9 sec",
+          "as_printed": "30.9 sec",
+          "applicability": {
+            "year": "2022",
+            "market": "US",
+            "trim": "Sport Touring",
+            "body": "hatchback",
+            "gearbox": "6MT",
+            "engine": "1.5T",
+            "notes": "Car and Driver test car: 2022 Civic Sport Touring Hatchback, 6-speed manual, Sonic Gray paint, Continental ContiProContact 235/40R-18 91W M+S, C/D-measured curb weight 3024 lb. Same body/engine/gearbox as the 2024 target; model-year powertrain/chassis changes 2022->2024 to be confirmed by the identity thread (none known to this thread)."
+          },
+          "confidence": "high",
+          "range": null,
+          "how_to_measure": null,
+          "notes": "C/D standing-start times omit a 1-ft rollout; this test printed the rollout as 0.4 s (see perf.cd_rollout_1ft). Add it back for a timer-from-standstill comparison."
+        }
+      ]
+    },
+    "perf.quarter_mile_time": {
+      "description": "Standing quarter mile, elapsed time (rollout omitted)",
+      "unit": "s",
+      "impact": "high",
+      "candidates": [
+        {
+          "printed": {
+            "value": 15.5,
+            "unit": "s"
+          },
+          "value": 15.5,
+          "unit": "s",
+          "status": "confirmed",
+          "class": "C",
+          "source_id": "perf:cd-2022-civic-hatch-st-6mt",
+          "locator": "Specifications box, 'C/D TEST RESULTS'",
+          "evidence": "1/4-Mile: 15.5 sec @ 91 mph",
+          "as_printed": "15.5 sec",
+          "applicability": {
+            "year": "2022",
+            "market": "US",
+            "trim": "Sport Touring",
+            "body": "hatchback",
+            "gearbox": "6MT",
+            "engine": "1.5T",
+            "notes": "Car and Driver test car: 2022 Civic Sport Touring Hatchback, 6-speed manual, Sonic Gray paint, Continental ContiProContact 235/40R-18 91W M+S, C/D-measured curb weight 3024 lb. Same body/engine/gearbox as the 2024 target; model-year powertrain/chassis changes 2022->2024 to be confirmed by the identity thread (none known to this thread)."
+          },
+          "confidence": "high",
+          "range": null,
+          "how_to_measure": null,
+          "notes": "C/D standing-start times omit a 1-ft rollout; this test printed the rollout as 0.4 s (see perf.cd_rollout_1ft). Add it back for a timer-from-standstill comparison."
+        }
+      ]
+    },
+    "perf.quarter_mile_trap": {
+      "description": "Standing quarter mile, trap speed",
+      "unit": "m/s",
+      "impact": "high",
+      "candidates": [
+        {
+          "printed": {
+            "value": 91,
+            "unit": "mph"
+          },
+          "value": 40.68064,
+          "unit": "m/s",
+          "status": "confirmed",
+          "class": "C",
+          "source_id": "perf:cd-2022-civic-hatch-st-6mt",
+          "locator": "Specifications box, 'C/D TEST RESULTS'",
+          "evidence": "1/4-Mile: 15.5 sec @ 91 mph",
+          "as_printed": "91 mph",
+          "applicability": {
+            "year": "2022",
+            "market": "US",
+            "trim": "Sport Touring",
+            "body": "hatchback",
+            "gearbox": "6MT",
+            "engine": "1.5T",
+            "notes": "Car and Driver test car: 2022 Civic Sport Touring Hatchback, 6-speed manual, Sonic Gray paint, Continental ContiProContact 235/40R-18 91W M+S, C/D-measured curb weight 3024 lb. Same body/engine/gearbox as the 2024 target; model-year powertrain/chassis changes 2022->2024 to be confirmed by the identity thread (none known to this thread)."
+          },
+          "confidence": "high",
+          "range": null,
+          "how_to_measure": null,
+          "notes": ""
+        }
+      ]
+    },
+    "perf.accel_5_60mph": {
+      "description": "Rolling start 5-60 mph",
+      "unit": "s",
+      "impact": "high",
+      "candidates": [
+        {
+          "printed": {
+            "value": 8.3,
+            "unit": "s"
+          },
+          "value": 8.3,
+          "unit": "s",
+          "status": "confirmed",
+          "class": "C",
+          "source_id": "perf:cd-2022-civic-hatch-st-6mt",
+          "locator": "Specifications box, 'C/D TEST RESULTS'",
+          "evidence": "Rolling Start, 5–60 mph: 8.3 sec",
+          "as_printed": "8.3 sec",
+          "applicability": {
+            "year": "2022",
+            "market": "US",
+            "trim": "Sport Touring",
+            "body": "hatchback",
+            "gearbox": "6MT",
+            "engine": "1.5T",
+            "notes": "Car and Driver test car: 2022 Civic Sport Touring Hatchback, 6-speed manual, Sonic Gray paint, Continental ContiProContact 235/40R-18 91W M+S, C/D-measured curb weight 3024 lb. Same body/engine/gearbox as the 2024 target; model-year powertrain/chassis changes 2022->2024 to be confirmed by the identity thread (none known to this thread)."
+          },
+          "confidence": "high",
+          "range": null,
+          "how_to_measure": null,
+          "notes": "Rolling start: creep at 5 mph then full throttle (C/D method). Larger 5-60 vs 0-60 gap indicates lag; here 5-60 is 1.0 s slower than the rollout-omitted 0-60."
+        }
+      ]
+    },
+    "perf.pass_30_50mph_top": {
+      "description": "30-50 mph in top gear (6th), no downshift",
+      "unit": "s",
+      "impact": "high",
+      "candidates": [
+        {
+          "printed": {
+            "value": 12.1,
+            "unit": "s"
+          },
+          "value": 12.1,
+          "unit": "s",
+          "status": "confirmed",
+          "class": "C",
+          "source_id": "perf:cd-2022-civic-hatch-st-6mt",
+          "locator": "Specifications box, 'C/D TEST RESULTS'",
+          "evidence": "Top Gear, 30–50 mph: 12.1 sec",
+          "as_printed": "12.1 sec",
+          "applicability": {
+            "year": "2022",
+            "market": "US",
+            "trim": "Sport Touring",
+            "body": "hatchback",
+            "gearbox": "6MT",
+            "engine": "1.5T",
+            "notes": "Car and Driver test car: 2022 Civic Sport Touring Hatchback, 6-speed manual, Sonic Gray paint, Continental ContiProContact 235/40R-18 91W M+S, C/D-measured curb weight 3024 lb. Same body/engine/gearbox as the 2024 target; model-year powertrain/chassis changes 2022->2024 to be confirmed by the identity thread (none known to this thread)."
+          },
+          "confidence": "high",
+          "range": null,
+          "how_to_measure": null,
+          "notes": "Manual car: top gear = 6th, throttle only, no downshift (C/D method). Very sensitive to 6th-gear ratio and low-rpm boost: 30 mph in 6th is roughly 1000-1300 rpm."
+        }
+      ]
+    },
+    "perf.pass_50_70mph_top": {
+      "description": "50-70 mph in top gear (6th), no downshift",
+      "unit": "s",
+      "impact": "high",
+      "candidates": [
+        {
+          "printed": {
+            "value": 9.4,
+            "unit": "s"
+          },
+          "value": 9.4,
+          "unit": "s",
+          "status": "confirmed",
+          "class": "C",
+          "source_id": "perf:cd-2022-civic-hatch-st-6mt",
+          "locator": "Specifications box, 'C/D TEST RESULTS'",
+          "evidence": "Top Gear, 50–70 mph: 9.4 sec",
+          "as_printed": "9.4 sec",
+          "applicability": {
+            "year": "2022",
+            "market": "US",
+            "trim": "Sport Touring",
+            "body": "hatchback",
+            "gearbox": "6MT",
+            "engine": "1.5T",
+            "notes": "Car and Driver test car: 2022 Civic Sport Touring Hatchback, 6-speed manual, Sonic Gray paint, Continental ContiProContact 235/40R-18 91W M+S, C/D-measured curb weight 3024 lb. Same body/engine/gearbox as the 2024 target; model-year powertrain/chassis changes 2022->2024 to be confirmed by the identity thread (none known to this thread)."
+          },
+          "confidence": "high",
+          "range": null,
+          "how_to_measure": null,
+          "notes": "Manual car, 6th gear, no downshift."
+        }
+      ]
+    },
+    "perf.top_speed": {
+      "description": "Top speed",
+      "unit": "m/s",
+      "impact": "medium",
+      "candidates": [
+        {
+          "printed": {
+            "value": 130,
+            "unit": "mph"
+          },
+          "value": 58.1152,
+          "unit": "m/s",
+          "status": "estimated",
+          "class": "C",
+          "source_id": "perf:cd-2022-civic-hatch-st-6mt",
+          "locator": "Specifications box, 'C/D TEST RESULTS'",
+          "evidence": "Top Speed (C/D est): 130 mph",
+          "as_printed": "130 mph",
+          "applicability": {
+            "year": "2022",
+            "market": "US",
+            "trim": "Sport Touring",
+            "body": "hatchback",
+            "gearbox": "6MT",
+            "engine": "1.5T",
+            "notes": "Car and Driver test car: 2022 Civic Sport Touring Hatchback, 6-speed manual, Sonic Gray paint, Continental ContiProContact 235/40R-18 91W M+S, C/D-measured curb weight 3024 lb. Same body/engine/gearbox as the 2024 target; model-year powertrain/chassis changes 2022->2024 to be confirmed by the identity thread (none known to this thread)."
+          },
+          "confidence": "low",
+          "range": [
+            58.1152,
+            58.1152
+          ],
+          "how_to_measure": "Not measured by C/D (their estimate). Governed or drag-limited is not stated for this car; C/D's 2022 Civic Touring sedan CVT was 'gov ltd' at 126 mph (different car, not used). Measure only on a closed course or read Honda's speed-limiter spec if one is ever published.",
+          "notes": "Car and Driver estimate, not a measurement; whether a governor applies to the 6MT hatch is unknown. Range is the single printed estimate (n=1), not a tolerance."
+        }
+      ]
+    },
+    "perf.braking_70_0mph": {
+      "description": "Braking 70-0 mph",
+      "unit": "m",
+      "impact": "high",
+      "candidates": [
+        {
+          "printed": {
+            "value": 173,
+            "unit": "ft"
+          },
+          "value": 52.7304,
+          "unit": "m",
+          "status": "confirmed",
+          "class": "C",
+          "source_id": "perf:cd-2022-civic-hatch-st-6mt",
+          "locator": "Specifications box, 'C/D TEST RESULTS'",
+          "evidence": "Braking, 70–0 mph: 173 ft",
+          "as_printed": "173 ft",
+          "applicability": {
+            "year": "2022",
+            "market": "US",
+            "trim": "Sport Touring",
+            "body": "hatchback",
+            "gearbox": "6MT",
+            "engine": "1.5T",
+            "notes": "Car and Driver test car: 2022 Civic Sport Touring Hatchback, 6-speed manual, Sonic Gray paint, Continental ContiProContact 235/40R-18 91W M+S, C/D-measured curb weight 3024 lb. Same body/engine/gearbox as the 2024 target; model-year powertrain/chassis changes 2022->2024 to be confirmed by the identity thread (none known to this thread)."
+          },
+          "confidence": "high",
+          "range": null,
+          "how_to_measure": null,
+          "notes": "C/D reports the second-best of six stops, corrected to exactly 70.0 mph (method page)."
+        }
+      ]
+    },
+    "perf.skidpad_g": {
+      "description": "Steady-state lateral grip on skidpad (C/D: usually 300-ft circle)",
+      "unit": "m/s2",
+      "impact": "high",
+      "candidates": [
+        {
+          "printed": {
+            "value": 0.9,
+            "unit": "g0"
+          },
+          "value": 8.825985,
+          "unit": "m/s2",
+          "status": "confirmed",
+          "class": "C",
+          "source_id": "perf:cd-2022-civic-hatch-st-6mt",
+          "locator": "Article body, paragraph beginning 'Stick shift or no'",
+          "evidence": "We recorded an impressive 0.90 g of cornering grip on our skidpad, which would easily have been higher had the stability control not intervened.",
+          "as_printed": "0.90 g",
+          "applicability": {
+            "year": "2022",
+            "market": "US",
+            "trim": "Sport Touring",
+            "body": "hatchback",
+            "gearbox": "6MT",
+            "engine": "1.5T",
+            "notes": "Car and Driver test car: 2022 Civic Sport Touring Hatchback, 6-speed manual, Sonic Gray paint, Continental ContiProContact 235/40R-18 91W M+S, C/D-measured curb weight 3024 lb. Same body/engine/gearbox as the 2024 target; model-year powertrain/chassis changes 2022->2024 to be confirmed by the identity thread (none known to this thread)."
+          },
+          "confidence": "medium",
+          "range": null,
+          "how_to_measure": null,
+          "notes": "Diameter not printed in this article; C/D method page: 'we usually use a 300-foot-diameter circle'. Stability control intervened, so this is an ESC-limited lower bound of tire/chassis grip. Not in the spec box."
+        }
+      ]
+    },
+    "perf.test_weight": {
+      "description": "Test weight as measured by the tester (lead for mass thread)",
+      "unit": "kg",
+      "impact": "high",
+      "candidates": [
+        {
+          "printed": {
+            "value": 3024,
+            "unit": "lb"
+          },
+          "value": 1371.66332688,
+          "unit": "kg",
+          "status": "confirmed",
+          "class": "C",
+          "source_id": "perf:cd-2022-civic-hatch-st-6mt",
+          "locator": "Specifications box, DIMENSIONS",
+          "evidence": "Curb Weight: 3024 lb",
+          "as_printed": "3024 lb",
+          "applicability": {
+            "year": "2022",
+            "market": "US",
+            "trim": "Sport Touring",
+            "body": "hatchback",
+            "gearbox": "6MT",
+            "engine": "1.5T",
+            "notes": "Car and Driver test car: 2022 Civic Sport Touring Hatchback, 6-speed manual, Sonic Gray paint, Continental ContiProContact 235/40R-18 91W M+S, C/D-measured curb weight 3024 lb. Same body/engine/gearbox as the 2024 target; model-year powertrain/chassis changes 2022->2024 to be confirmed by the identity thread (none known to this thread)."
+          },
+          "confidence": "high",
+          "range": null,
+          "how_to_measure": null,
+          "notes": "C/D weighs each test car on Intercomp scales after topping off fuel (method page: 'First, the vehicle is carefully topped off with fuel and weighed'). So: full tank, no driver. Front/rear distribution not printed."
+        }
+      ]
+    },
+    "perf.accel_0_100kmh": {
+      "description": "0-100 km/h (instrumented)",
+      "unit": "s",
+      "impact": "high",
+      "candidates": [
+        {
+          "value": null,
+          "unit": "s",
+          "status": "unknown",
+          "class": null,
+          "source_id": null,
+          "locator": "",
+          "evidence": "",
+          "as_printed": "",
+          "applicability": {},
+          "confidence": "none",
+          "range": null,
+          "how_to_measure": "GPS logger (VBOX/Dragy-class, >=10 Hz) on level dry ground, two directions, record temperature/pressure; report with and without 1-ft rollout.",
+          "notes": "No instrumented 6MT Sport Touring hatch figure found.",
+          "searches": [
+            "caranddriver.com honda/civic-2022, -2023, -2024 pages (only the 2022 ST 6MT hatch test exists)",
+            "MotorTrend 2022 Civic Sport Touring Hatchback First Test (opened; car was a CVT - excluded)",
+            "Edmunds hatchback review 2022/2023/2024 (HTTP 403, not worked around)",
+            "MotorWeek 2022 Civic Hatchback first impressions (opened; no figures)",
+            "WebSearch: 'Civic Hatchback Sport Touring manual 0-100 km/h mesuré essai guideautoweb / Motor Illustrated / edmunds'",
+            "WebSearch: 'MotorTrend 2022 Civic Hatchback Sport Touring manual first test'",
+            "autos.yahoo.com C/D syndication (robots.txt disallows ClaudeBot; not fetched)",
+            "Consumer Reports road test (paywalled; not bypassed)"
+          ]
+        }
+      ]
+    },
+    "perf.honda_claim_0_100kmh": {
+      "description": "Honda (manufacturer) 0-100 km/h claim",
+      "unit": "s",
+      "impact": "low",
+      "candidates": [
+        {
+          "value": null,
+          "unit": "s",
+          "status": "unknown",
+          "class": null,
+          "source_id": null,
+          "locator": "",
+          "evidence": "",
+          "as_printed": "",
+          "applicability": {},
+          "confidence": "none",
+          "range": null,
+          "how_to_measure": "No Honda Canada/US claim found; Honda NA typically publishes none.",
+          "notes": "No instrumented 6MT Sport Touring hatch figure found.",
+          "searches": [
+            "caranddriver.com honda/civic-2022, -2023, -2024 pages (only the 2022 ST 6MT hatch test exists)",
+            "MotorTrend 2022 Civic Sport Touring Hatchback First Test (opened; car was a CVT - excluded)",
+            "Edmunds hatchback review 2022/2023/2024 (HTTP 403, not worked around)",
+            "MotorWeek 2022 Civic Hatchback first impressions (opened; no figures)",
+            "WebSearch: 'Civic Hatchback Sport Touring manual 0-100 km/h mesuré essai guideautoweb / Motor Illustrated / edmunds'",
+            "WebSearch: 'MotorTrend 2022 Civic Hatchback Sport Touring manual first test'",
+            "autos.yahoo.com C/D syndication (robots.txt disallows ClaudeBot; not fetched)",
+            "Consumer Reports road test (paywalled; not bypassed)"
+          ]
+        }
+      ]
+    },
+    "perf.braking_100_0kmh": {
+      "description": "Braking 100-0 km/h",
+      "unit": "m",
+      "impact": "medium",
+      "candidates": [
+        {
+          "value": null,
+          "unit": "m",
+          "status": "unknown",
+          "class": null,
+          "source_id": null,
+          "locator": "",
+          "evidence": "",
+          "as_printed": "",
+          "applicability": {},
+          "confidence": "none",
+          "range": null,
+          "how_to_measure": "GPS logger, tape switch on brake pedal, several stops, correct to exact 100.0 km/h.",
+          "notes": "No instrumented 6MT Sport Touring hatch figure found.",
+          "searches": [
+            "caranddriver.com honda/civic-2022, -2023, -2024 pages (only the 2022 ST 6MT hatch test exists)",
+            "MotorTrend 2022 Civic Sport Touring Hatchback First Test (opened; car was a CVT - excluded)",
+            "Edmunds hatchback review 2022/2023/2024 (HTTP 403, not worked around)",
+            "MotorWeek 2022 Civic Hatchback first impressions (opened; no figures)",
+            "WebSearch: 'Civic Hatchback Sport Touring manual 0-100 km/h mesuré essai guideautoweb / Motor Illustrated / edmunds'",
+            "WebSearch: 'MotorTrend 2022 Civic Hatchback Sport Touring manual first test'",
+            "autos.yahoo.com C/D syndication (robots.txt disallows ClaudeBot; not fetched)",
+            "Consumer Reports road test (paywalled; not bypassed)"
+          ]
+        }
+      ]
+    },
+    "perf.braking_60_0mph": {
+      "description": "Braking 60-0 mph (6MT hatch)",
+      "unit": "m",
+      "impact": "medium",
+      "candidates": [
+        {
+          "value": null,
+          "unit": "m",
+          "status": "unknown",
+          "class": null,
+          "source_id": null,
+          "locator": "",
+          "evidence": "",
+          "as_printed": "",
+          "applicability": {},
+          "confidence": "none",
+          "range": null,
+          "how_to_measure": "As above from 60 mph. (MotorTrend's 117 ft is a CVT car - excluded.)",
+          "notes": "No instrumented 6MT Sport Touring hatch figure found.",
+          "searches": [
+            "caranddriver.com honda/civic-2022, -2023, -2024 pages (only the 2022 ST 6MT hatch test exists)",
+            "MotorTrend 2022 Civic Sport Touring Hatchback First Test (opened; car was a CVT - excluded)",
+            "Edmunds hatchback review 2022/2023/2024 (HTTP 403, not worked around)",
+            "MotorWeek 2022 Civic Hatchback first impressions (opened; no figures)",
+            "WebSearch: 'Civic Hatchback Sport Touring manual 0-100 km/h mesuré essai guideautoweb / Motor Illustrated / edmunds'",
+            "WebSearch: 'MotorTrend 2022 Civic Hatchback Sport Touring manual first test'",
+            "autos.yahoo.com C/D syndication (robots.txt disallows ClaudeBot; not fetched)",
+            "Consumer Reports road test (paywalled; not bypassed)"
+          ]
+        }
+      ]
+    },
+    "perf.accel_0_30mph": {
+      "description": "0-30 mph",
+      "unit": "s",
+      "impact": "low",
+      "candidates": [
+        {
+          "value": null,
+          "unit": "s",
+          "status": "unknown",
+          "class": null,
+          "source_id": null,
+          "locator": "",
+          "evidence": "",
+          "as_printed": "",
+          "applicability": {},
+          "confidence": "none",
+          "range": null,
+          "how_to_measure": "GPS logger; C/D did not print 0-30 in this test.",
+          "notes": "No instrumented 6MT Sport Touring hatch figure found.",
+          "searches": [
+            "caranddriver.com honda/civic-2022, -2023, -2024 pages (only the 2022 ST 6MT hatch test exists)",
+            "MotorTrend 2022 Civic Sport Touring Hatchback First Test (opened; car was a CVT - excluded)",
+            "Edmunds hatchback review 2022/2023/2024 (HTTP 403, not worked around)",
+            "MotorWeek 2022 Civic Hatchback first impressions (opened; no figures)",
+            "WebSearch: 'Civic Hatchback Sport Touring manual 0-100 km/h mesuré essai guideautoweb / Motor Illustrated / edmunds'",
+            "WebSearch: 'MotorTrend 2022 Civic Hatchback Sport Touring manual first test'",
+            "autos.yahoo.com C/D syndication (robots.txt disallows ClaudeBot; not fetched)",
+            "Consumer Reports road test (paywalled; not bypassed)"
+          ]
+        }
+      ]
+    }
+  },
+  "tests": [
+    {
+      "id": "cd-2021-10",
+      "source_id": "perf:cd-2022-civic-hatch-st-6mt",
+      "publication": "Car and Driver",
+      "title": "Tested: 2022 Honda Civic Hatchback Brings Stick-Shift Fun",
+      "url": "https://www.caranddriver.com/reviews/a37936938/2022-honda-civic-hatchback-by-the-numbers/",
+      "date": "2021-10-12",
+      "author": "Rich Ceppos",
+      "car": "2022 Honda Civic Sport Touring Hatchback, 6-speed manual, US, Sonic Gray (option $395)",
+      "tires": "Continental ContiProContact 235/40R-18 91W M+S",
+      "test_weight_lb_as_printed": "3024 lb (curb, full fuel, C/D scales)",
+      "front_rear_pct": null,
+      "weather_correction": "corrected to 60 F at sea level (C/D method page); test-day weather not printed",
+      "rollout": "1-ft rollout omitted from standing-start times; printed as 0.4 s",
+      "surface": "not stated",
+      "applicability_rank": "primary (trim, body, engine, gearbox match; 2022 MY, US)"
+    }
+  ],
+  "excluded_tests": [
+    {
+      "publication": "MotorTrend",
+      "url": "https://www.motortrend.com/reviews/2022-honda-civic-sport-touring-hatchback-first-test-review",
+      "date": "2021-11-24",
+      "cache_file": "cache/pages/f7e5fe67a115d807.txt",
+      "reason": "Test car was a CVT ('This hatchback was an automatic model'); spec excludes CVT results. Figures (0-60 7.7 s, 1/4 15.9 s @ 89.8 mph, 60-0 117 ft, figure-eight 26.8 s @ 0.65 g) kept here only as context, not as targets."
+    }
+  ],
+  "targets": {
+    "perf.accel_0_60mph": {
+      "unit": "s",
+      "n": 1,
+      "min": 7.3,
+      "max": 7.3,
+      "tests": [
+        "cd-2021-10"
+      ],
+      "note": "n=1: single test; this is not a cross-test range and has not been widened"
+    },
+    "perf.cd_rollout_1ft": {
+      "unit": "s",
+      "n": 1,
+      "min": 0.4,
+      "max": 0.4,
+      "tests": [
+        "cd-2021-10"
+      ],
+      "note": "n=1: single test; this is not a cross-test range and has not been widened"
+    },
+    "perf.accel_0_100mph": {
+      "unit": "s",
+      "n": 1,
+      "min": 19.0,
+      "max": 19.0,
+      "tests": [
+        "cd-2021-10"
+      ],
+      "note": "n=1: single test; this is not a cross-test range and has not been widened"
+    },
+    "perf.accel_0_120mph": {
+      "unit": "s",
+      "n": 1,
+      "min": 30.9,
+      "max": 30.9,
+      "tests": [
+        "cd-2021-10"
+      ],
+      "note": "n=1: single test; this is not a cross-test range and has not been widened"
+    },
+    "perf.quarter_mile_time": {
+      "unit": "s",
+      "n": 1,
+      "min": 15.5,
+      "max": 15.5,
+      "tests": [
+        "cd-2021-10"
+      ],
+      "note": "n=1: single test; this is not a cross-test range and has not been widened"
+    },
+    "perf.quarter_mile_trap": {
+      "unit": "m/s",
+      "n": 1,
+      "min": 40.68064,
+      "max": 40.68064,
+      "tests": [
+        "cd-2021-10"
+      ],
+      "note": "n=1: single test; this is not a cross-test range and has not been widened"
+    },
+    "perf.accel_5_60mph": {
+      "unit": "s",
+      "n": 1,
+      "min": 8.3,
+      "max": 8.3,
+      "tests": [
+        "cd-2021-10"
+      ],
+      "note": "n=1: single test; this is not a cross-test range and has not been widened"
+    },
+    "perf.pass_30_50mph_top": {
+      "unit": "s",
+      "n": 1,
+      "min": 12.1,
+      "max": 12.1,
+      "tests": [
+        "cd-2021-10"
+      ],
+      "note": "n=1: single test; this is not a cross-test range and has not been widened"
+    },
+    "perf.pass_50_70mph_top": {
+      "unit": "s",
+      "n": 1,
+      "min": 9.4,
+      "max": 9.4,
+      "tests": [
+        "cd-2021-10"
+      ],
+      "note": "n=1: single test; this is not a cross-test range and has not been widened"
+    },
+    "perf.top_speed": {
+      "unit": "m/s",
+      "n": 1,
+      "min": 58.1152,
+      "max": 58.1152,
+      "tests": [
+        "cd-2021-10"
+      ],
+      "note": "n=1: single test; this is not a cross-test range and has not been widened; includes a tester estimate, not a measurement"
+    },
+    "perf.braking_70_0mph": {
+      "unit": "m",
+      "n": 1,
+      "min": 52.7304,
+      "max": 52.7304,
+      "tests": [
+        "cd-2021-10"
+      ],
+      "note": "n=1: single test; this is not a cross-test range and has not been widened"
+    },
+    "perf.skidpad_g": {
+      "unit": "m/s2",
+      "n": 1,
+      "min": 8.825985,
+      "max": 8.825985,
+      "tests": [
+        "cd-2021-10"
+      ],
+      "note": "n=1: single test; this is not a cross-test range and has not been widened"
+    },
+    "perf.test_weight": {
+      "unit": "kg",
+      "n": 1,
+      "min": 1371.66332688,
+      "max": 1371.66332688,
+      "tests": [
+        "cd-2021-10"
+      ],
+      "note": "n=1: single test; this is not a cross-test range and has not been widened"
+    },
+    "perf.accel_0_100kmh": {
+      "unit": "s",
+      "n": 0,
+      "min": null,
+      "max": null,
+      "tests": [],
+      "note": "no instrumented 6MT Sport Touring hatch result found"
+    },
+    "perf.honda_claim_0_100kmh": {
+      "unit": "s",
+      "n": 0,
+      "min": null,
+      "max": null,
+      "tests": [],
+      "note": "no instrumented 6MT Sport Touring hatch result found"
+    },
+    "perf.braking_100_0kmh": {
+      "unit": "m",
+      "n": 0,
+      "min": null,
+      "max": null,
+      "tests": [],
+      "note": "no instrumented 6MT Sport Touring hatch result found"
+    },
+    "perf.braking_60_0mph": {
+      "unit": "m",
+      "n": 0,
+      "min": null,
+      "max": null,
+      "tests": [],
+      "note": "no instrumented 6MT Sport Touring hatch result found"
+    },
+    "perf.accel_0_30mph": {
+      "unit": "s",
+      "n": 0,
+      "min": null,
+      "max": null,
+      "tests": [],
+      "note": "no instrumented 6MT Sport Touring hatch result found"
+    },
+    "perf.accel_0_60mph_incl_rollout": {
+      "unit": "s",
+      "n": 1,
+      "min": 7.7,
+      "max": 7.7,
+      "tests": [
+        "cd-2021-10"
+      ],
+      "derivation": "perf.accel_0_60mph + perf.cd_rollout_1ft (same test)",
+      "note": "C/D time with its printed 1-ft rollout added back: compare with an in-game timer started at first wheel motion"
+    },
+    "perf.accel_0_100mph_incl_rollout": {
+      "unit": "s",
+      "n": 1,
+      "min": 19.4,
+      "max": 19.4,
+      "tests": [
+        "cd-2021-10"
+      ],
+      "derivation": "perf.accel_0_100mph + perf.cd_rollout_1ft (same test)",
+      "note": "C/D time with its printed 1-ft rollout added back: compare with an in-game timer started at first wheel motion"
+    },
+    "perf.quarter_mile_time_incl_rollout": {
+      "unit": "s",
+      "n": 1,
+      "min": 15.9,
+      "max": 15.9,
+      "tests": [
+        "cd-2021-10"
+      ],
+      "derivation": "perf.quarter_mile_time + perf.cd_rollout_1ft (same test)",
+      "note": "C/D time with its printed 1-ft rollout added back: compare with an in-game timer started at first wheel motion"
+    }
+  },
+  "targets_script": "scripts/domains/perf_targets.py",
+  "targets_policy": "Per metric: min/max/n across instrumented tests of 2022-2024 Civic Hatchback Sport Touring 6MT; CVT, sedan, Si, Type R and 2.0 L results excluded. n=1 is flagged, never widened by hand."
+}

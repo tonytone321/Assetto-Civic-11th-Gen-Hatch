@@ -1,0 +1,485 @@
+{
+  "domain": "wheels",
+  "title": "Wheels",
+  "schema_version": 1,
+  "updated": "2026-10-03",
+  "sources": {
+    "d7:hondanews-ca-2024-hatch-specs": {
+      "title": "2024 Honda Civic Hatchback Specifications (April 4, 2024)",
+      "url": "https://hondanews.ca/en-CA/releases/release-1128768177ab00a73471b1938c152ddf-2024-honda-civic-hatchback-specifications",
+      "publisher": "Honda Canada (newsroom)",
+      "class": "A",
+      "accessed": "2026-10-03",
+      "access_method": "static",
+      "applicability": "2024 Civic Hatchback Sport and Sport Touring, Canada",
+      "notes": "",
+      "cache_file": "cache/pages/22157798d6e48e1c.txt"
+    },
+    "d7:hondainfocenter-us-2024-hatch-specs": {
+      "title": "2024 Civic Hatchback Specifications (Honda Info Center)",
+      "url": "https://www.hondainfocenter.com/2024/Civic-Hatchback/Feature-Guide/Civic-Hatchback-Specifications/",
+      "publisher": "American Honda Motor Co.",
+      "class": "A",
+      "accessed": "2026-10-03",
+      "access_method": "static",
+      "applicability": "2024 Civic Hatchback LX/Sport/EX-L/Sport Touring, US",
+      "notes": "",
+      "cache_file": "cache/pages/b67f7f855816944e.txt"
+    },
+    "d7:hondainfocenter-us-2024-wheels": {
+      "title": "Wheels and Tires (2024 Civic Hatchback feature guide)",
+      "url": "https://www.hondainfocenter.com/2024/Civic-Hatchback/Feature-Guide/Exterior-Features/Wheels-and-Tires/",
+      "publisher": "American Honda Motor Co.",
+      "class": "A",
+      "accessed": "2026-10-03",
+      "access_method": "static",
+      "applicability": "2024 URL, page title reads 2023; US hatchback lineup",
+      "notes": "",
+      "cache_file": "cache/pages/d32ce19bfbb50617.txt"
+    },
+    "d7:hondaca-2022-hatch-specpdf": {
+      "title": "2022 Civic Hatchback header spec sheet (PDF)",
+      "url": "https://www.honda.ca/Content/honda.ca/86525d2a-11fa-4527-8754-5ed987f3510e/ModelPage_Downloads/028382_01_22MY_Civic_Hatchback_HeaderSpec_EN_V2_hires.pdf",
+      "publisher": "Honda Canada",
+      "class": "A",
+      "accessed": "2026-10-03",
+      "access_method": "pdf",
+      "applicability": "2022 Civic Hatchback LX/Sport/Sport Touring, Canada",
+      "notes": "",
+      "cache_file": "cache/pdf/d3af82f728361fd5.pdf"
+    },
+    "d7:hondanews-us-2022-hatch-presskit": {
+      "title": "2022 Honda Civic Hatchback Press Kit (September 29, 2021)",
+      "url": "https://hondanews.com/en-US/releases/release-20c92b0d934f0bc63982bd3eee0149e9-2022-honda-civic-hatchback-press-kit",
+      "publisher": "American Honda (hondanews.com)",
+      "class": "A",
+      "accessed": "2026-10-03",
+      "access_method": "rendered",
+      "applicability": "2022 Civic Hatchback, US",
+      "notes": "",
+      "cache_file": "cache/pages/9964dff4363f93bf.txt"
+    },
+    "d7:hondapartsnow-2024-rims": {
+      "title": "Genuine 2024 Honda Civic Rims",
+      "url": "https://www.hondapartsnow.com/oem-2024-honda-civic-rims.html",
+      "publisher": "HondaPartsNow (Genuine Parts Now, Inc., Honda parts retailer)",
+      "class": "C",
+      "accessed": "2026-10-03",
+      "access_method": "static",
+      "applicability": "2024 Civic all bodies, US parts catalog data",
+      "notes": "",
+      "cache_file": "cache/pages/8e7d6cb35e32b697.txt"
+    },
+    "d7:hondapartsnow-2022-rims": {
+      "title": "Genuine 2022 Honda Civic Rims",
+      "url": "https://www.hondapartsnow.com/oem-2022-honda-civic-rims.html",
+      "publisher": "HondaPartsNow (Genuine Parts Now, Inc., Honda parts retailer)",
+      "class": "C",
+      "accessed": "2026-10-03",
+      "access_method": "static",
+      "applicability": "2022 Civic all bodies, US parts catalog data",
+      "notes": "",
+      "cache_file": "cache/pages/ce063aa3d9e29654.txt"
+    },
+    "d7:kamispeed-11thgen-fitment": {
+      "title": "2022 Civic 11th Gen wheel fitment (blog)",
+      "url": "https://www.kamispeed.com/blogs/news/2022-civic-11th-gen-wheel-fitment",
+      "publisher": "Kami Speed (aftermarket wheel/parts retailer)",
+      "class": "C",
+      "accessed": "2026-10-03",
+      "access_method": "static",
+      "applicability": "2022+ Civic generic ('factory 18\" wheels'); trim not stated",
+      "notes": "",
+      "cache_file": "cache/pages/b2fa02ebafd3854d.txt"
+    }
+  },
+  "parameters": {
+    "wheels.diameter": {
+      "description": "Wheel (rim) nominal diameter",
+      "unit": "m",
+      "impact": "high",
+      "candidates": [
+        {
+          "printed": {
+            "value": 18,
+            "unit": "in"
+          },
+          "value": 0.4572,
+          "unit": "m",
+          "status": "confirmed",
+          "class": "A",
+          "source_id": "d7:hondanews-ca-2024-hatch-specs",
+          "locator": "CHASSIS table, Sport Touring column",
+          "evidence": "18\" aluminum-alloy wheels (machined with black inserts)",
+          "as_printed": "18\"",
+          "applicability": {
+            "year": "2024",
+            "market": "CA",
+            "trim": "Sport Touring",
+            "body": "hatchback",
+            "gearbox": "6MT and CVT (table covers both)",
+            "engine": "1.5T",
+            "notes": ""
+          },
+          "confidence": "high",
+          "range": null,
+          "how_to_measure": null,
+          "notes": ""
+        },
+        {
+          "printed": {
+            "value": 18,
+            "unit": "in"
+          },
+          "value": 0.4572,
+          "unit": "m",
+          "status": "confirmed",
+          "class": "A",
+          "source_id": "d7:hondainfocenter-us-2024-hatch-specs",
+          "locator": "Engine & Chassis table, row 'Wheels', 4th column",
+          "evidence": "Wheels 16 in Alloys 18 in Alloys 17 in Alloys 18 in Alloys",
+          "as_printed": "18 in Alloys",
+          "applicability": {
+            "year": "2024",
+            "market": "US",
+            "trim": "Sport Touring",
+            "body": "hatchback",
+            "gearbox": "6MT and CVT",
+            "engine": "1.5T",
+            "notes": "US spec table, Sport Touring column (4th of LX/Sport/EX-L/Sport Touring)"
+          },
+          "confidence": "high",
+          "range": null,
+          "how_to_measure": null,
+          "notes": ""
+        }
+      ]
+    },
+    "wheels.width": {
+      "description": "Wheel rim width",
+      "unit": "m",
+      "impact": "high",
+      "candidates": [
+        {
+          "printed": {
+            "value": 8,
+            "unit": "in"
+          },
+          "value": 0.2032,
+          "unit": "m",
+          "status": "confirmed",
+          "class": "C",
+          "source_id": "d7:hondapartsnow-2024-rims",
+          "locator": "listing 42700-T20-A31",
+          "evidence": "2024 Honda Civic 18x8 Hatchback Sport Touring Alloy Wheels Part Number: 42700-T20-A31 … Other Name : W-DISK (18X8J); Wheel, Alloy … Fits the following 2024 Honda Civic Submodels: 5 Door 1.5T Sport Touring | 6MT, CVT",
+          "as_printed": "18X8J",
+          "applicability": {
+            "year": "2024",
+            "market": "US",
+            "trim": "Sport Touring",
+            "body": "hatchback",
+            "gearbox": "6MT, CVT",
+            "engine": "1.5T",
+            "notes": "Honda part name W-DISK (18X8J) from parts catalog data"
+          },
+          "confidence": "high",
+          "range": null,
+          "how_to_measure": null,
+          "notes": "Honda part designation 18X8J = 18 in diameter, 8.0 in width, J flange. Same part number listed for 2022 and 2023 5 Door Sport Touring. Canadian part number not checked (Honda Canada parts catalog not opened)."
+        }
+      ]
+    },
+    "wheels.part_number": {
+      "description": "Honda part number, Sport Touring 18-in wheel",
+      "unit": "text",
+      "impact": "low",
+      "candidates": [
+        {
+          "value": "42700-T20-A31",
+          "unit": "text",
+          "status": "confirmed",
+          "class": "C",
+          "source_id": "d7:hondapartsnow-2024-rims",
+          "locator": "listing 42700-T20-A31",
+          "evidence": "2024 Honda Civic 18x8 Hatchback Sport Touring Alloy Wheels Part Number: 42700-T20-A31",
+          "as_printed": "42700-T20-A31",
+          "applicability": {
+            "year": "2024",
+            "market": "US",
+            "trim": "Sport Touring",
+            "body": "hatchback",
+            "gearbox": "6MT, CVT",
+            "engine": "1.5T",
+            "notes": ""
+          },
+          "confidence": "high",
+          "range": null,
+          "how_to_measure": null,
+          "notes": "Same number on the 2022 listing ('Fits ... 5 Door Sport Touring | 6MT, CVT'). The Sport hatch wheel is a different part (42700-T20-A72 / -T47-A71)."
+        },
+        {
+          "value": "42700-T20-A31",
+          "unit": "text",
+          "status": "confirmed",
+          "class": "C",
+          "source_id": "d7:hondapartsnow-2022-rims",
+          "locator": "listing 42700-T20-A31",
+          "evidence": "2022 Honda Civic 18x8 Hatchback Sport Touring Alloy Wheels Part Number: 42700-T20-A31",
+          "as_printed": "42700-T20-A31",
+          "applicability": {
+            "year": "2022",
+            "market": "US",
+            "trim": "Sport Touring",
+            "body": "hatchback",
+            "gearbox": "6MT, CVT",
+            "engine": "1.5T",
+            "notes": ""
+          },
+          "confidence": "high",
+          "range": null,
+          "how_to_measure": null,
+          "notes": ""
+        }
+      ]
+    },
+    "wheels.finish": {
+      "description": "Wheel finish",
+      "unit": "text",
+      "impact": "medium",
+      "candidates": [
+        {
+          "value": "machined face with black inserts (2024 CA wording); 2022: 'machined-tinted with black inserts' / 'dark clear-coated machined face and Berlina Black inserts'",
+          "unit": "text",
+          "status": "confirmed",
+          "class": "A",
+          "source_id": "d7:hondanews-ca-2024-hatch-specs",
+          "locator": "CHASSIS table",
+          "evidence": "18\" aluminum-alloy wheels (machined with black inserts)",
+          "as_printed": "machined with black inserts",
+          "applicability": {
+            "year": "2024",
+            "market": "CA",
+            "trim": "Sport Touring",
+            "body": "hatchback",
+            "gearbox": "6MT and CVT (table covers both)",
+            "engine": "1.5T",
+            "notes": ""
+          },
+          "confidence": "high",
+          "range": null,
+          "how_to_measure": null,
+          "notes": ""
+        },
+        {
+          "value": "dark clear-coated machined face, Berlina Black inserts",
+          "unit": "text",
+          "status": "confirmed",
+          "class": "A",
+          "source_id": "d7:hondanews-us-2022-hatch-presskit",
+          "locator": "Exterior Design: 'Four New Wheel Designs'",
+          "evidence": "On the top-line Sport Touring is an upscale 18-inch split 5-spoke design with a dark clear-coated machined face and Berlina Black inserts.",
+          "as_printed": "dark clear-coated machined face and Berlina Black inserts",
+          "applicability": {
+            "year": "2022",
+            "market": "US",
+            "trim": "Sport Touring (hatchback)",
+            "body": "hatchback",
+            "gearbox": "all",
+            "engine": "1.5T",
+            "notes": ""
+          },
+          "confidence": "high",
+          "range": null,
+          "how_to_measure": null,
+          "notes": "Canada 2022 spec PDF: '18\" aluminum-alloy wheels (machined-tinted with black inserts)'. Same part number 2022-2024 per parts catalog, so design unchanged."
+        }
+      ]
+    },
+    "wheels.spoke_design": {
+      "description": "Spoke design",
+      "unit": "text",
+      "impact": "medium",
+      "candidates": [
+        {
+          "value": "split 5-spoke, unique to Sport Touring",
+          "unit": "text",
+          "status": "confirmed",
+          "class": "A",
+          "source_id": "d7:hondanews-us-2022-hatch-presskit",
+          "locator": "Exterior Design: 'Four New Wheel Designs'",
+          "evidence": "On the top-line Sport Touring is an upscale 18-inch split 5-spoke design with a dark clear-coated machined face and Berlina Black inserts.",
+          "as_printed": "split 5-spoke",
+          "applicability": {
+            "year": "2022",
+            "market": "US",
+            "trim": "Sport Touring (hatchback)",
+            "body": "hatchback",
+            "gearbox": "all",
+            "engine": "1.5T",
+            "notes": ""
+          },
+          "confidence": "high",
+          "range": null,
+          "how_to_measure": null,
+          "notes": "2024 US feature guide: 'Civic Sport Touring Hatchback shows off its own unique 18-inch alloy wheel design'."
+        }
+      ]
+    },
+    "wheels.offset": {
+      "description": "Wheel offset (ET)",
+      "unit": "m",
+      "impact": "high",
+      "candidates": [
+        {
+          "printed": {
+            "value": 50,
+            "unit": "mm"
+          },
+          "value": 0.05,
+          "unit": "m",
+          "status": "confirmed",
+          "class": "C",
+          "source_id": "d7:kamispeed-11thgen-fitment",
+          "locator": "article body, first paragraph",
+          "evidence": "If you're running the factory 18\" wheels, then you have an 18x8\" wheel with a +50 offset.",
+          "as_printed": "+50",
+          "applicability": {
+            "year": "2022+",
+            "market": "US",
+            "trim": "unspecified 18-in factory wheel (Sport/Si/ST not distinguished)",
+            "body": "sedan/hatchback unspecified",
+            "gearbox": "unspecified",
+            "engine": "1.5T",
+            "notes": ""
+          },
+          "confidence": "low",
+          "range": null,
+          "how_to_measure": "Read the ET stamping on the back of a wheel spoke/hub face, or measure hub-face to inner/outer flange with a straightedge and tape (±1 mm).",
+          "notes": "Aftermarket retailer statement, not Honda; does not say which 18-in wheel. No Honda source found for offset. Treat as lead."
+        }
+      ]
+    },
+    "wheels.bolt_pattern": {
+      "description": "Bolt pattern",
+      "unit": "text",
+      "impact": "medium",
+      "candidates": [
+        {
+          "value": "5x114.3",
+          "unit": "text",
+          "status": "confirmed",
+          "class": "C",
+          "source_id": "d7:kamispeed-11thgen-fitment",
+          "locator": "article body",
+          "evidence": "what will work on the 11th Gen Civic with 5x114.3 bolt pattern",
+          "as_printed": "5x114.3",
+          "applicability": {
+            "year": "2022+",
+            "market": "US",
+            "trim": "11th-gen Civic (generic)",
+            "body": "all",
+            "gearbox": "all",
+            "engine": "1.5T",
+            "notes": ""
+          },
+          "confidence": "medium",
+          "range": null,
+          "how_to_measure": null,
+          "notes": "Third-party statement for the generation; no Honda-published value opened."
+        }
+      ]
+    },
+    "wheels.center_bore": {
+      "description": "Wheel centre bore",
+      "unit": "m",
+      "impact": "low",
+      "candidates": [
+        {
+          "value": null,
+          "unit": "m",
+          "status": "unknown",
+          "class": null,
+          "source_id": null,
+          "locator": "",
+          "evidence": "",
+          "as_printed": "",
+          "applicability": {},
+          "confidence": "none",
+          "range": null,
+          "how_to_measure": "Measure the hub bore with calipers (±0.1 mm), or read the hub pilot diameter.",
+          "notes": "Lead (unverified): typical Honda 64.1 mm bore / 108 N*m nut torque from recollection; not recorded as a value.",
+          "searches": [
+            "wheel-size.com (403 blocked)",
+            "hondapartsnow rims listings (no bore)",
+            "kamispeed fitment blog (question unanswered)",
+            "query: 11th gen civic center bore 64.1"
+          ]
+        }
+      ]
+    },
+    "wheels.lug_torque": {
+      "description": "Wheel nut torque",
+      "unit": "N*m",
+      "impact": "low",
+      "candidates": [
+        {
+          "value": null,
+          "unit": "N*m",
+          "status": "unknown",
+          "class": null,
+          "source_id": null,
+          "locator": "",
+          "evidence": "",
+          "as_printed": "",
+          "applicability": {},
+          "confidence": "none",
+          "range": null,
+          "how_to_measure": "Owner's manual / service information; torque wrench spec in the spare-tire section.",
+          "notes": "Lead (unverified): typical Honda 64.1 mm bore / 108 N*m nut torque from recollection; not recorded as a value.",
+          "searches": [
+            "owner's manual not opened (techinfo.honda.com treated as blocked)",
+            "hondainfocenter spec page",
+            "press kit"
+          ]
+        }
+      ]
+    },
+    "wheels.mass": {
+      "description": "Mass of one bare wheel",
+      "unit": "kg",
+      "impact": "high",
+      "candidates": [
+        {
+          "printed": {
+            "value": 16.3,
+            "unit": "lb"
+          },
+          "value": 7.393555631000001,
+          "unit": "kg",
+          "status": "estimated",
+          "class": "C",
+          "source_id": "d7:hondapartsnow-2024-rims",
+          "locator": "listing 42700-T20-A31, 'Item Weight'",
+          "evidence": "Item Weight : 16.30 Pounds",
+          "as_printed": "16.30 Pounds",
+          "applicability": {
+            "year": "2024",
+            "market": "US",
+            "trim": "Sport Touring",
+            "body": "hatchback",
+            "gearbox": "6MT, CVT",
+            "engine": "1.5T",
+            "notes": ""
+          },
+          "confidence": "low",
+          "range": [
+            7.393555631000001,
+            10.886216880000001
+          ],
+          "how_to_measure": "Weigh one bare wheel (tire, valve, weights removed) on a scale (±0.1 kg).",
+          "notes": "Retailer 'Item Weight' field; unreliable: the same site lists a 215/50R17 tire at 4.80 lb. A 18x8 cast wheel is plausibly heavier; upper range bound 24 lb is a judgment, not a source. Treat as weak lead."
+        }
+      ]
+    }
+  }
+}

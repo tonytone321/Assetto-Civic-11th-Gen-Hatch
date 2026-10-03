@@ -453,6 +453,148 @@
           "notes": "Model-year check 2022 vs 2024 (Canada): unchanged. Label says radius; value is the diameter (see 2024 record)."
         }
       ]
+    },
+    "steering.ratio_center": {
+      "description": "On-centre steering ratio of the variable-ratio rack",
+      "unit": "1",
+      "impact": "medium",
+      "candidates": [
+        {
+          "value": null,
+          "unit": "1",
+          "status": "unknown",
+          "class": null,
+          "source_id": null,
+          "locator": "",
+          "evidence": "",
+          "as_printed": "",
+          "applicability": {
+            "year": "2024",
+            "market": "CA",
+            "trim": "Sport Touring",
+            "body": "hatchback",
+            "gearbox": "6MT",
+            "engine": "1.5T",
+            "notes": "estimate made for the target car"
+          },
+          "confidence": "none",
+          "range": null,
+          "how_to_measure": "With front wheels on turn plates, read road-wheel angle at handwheel +/-30 deg and +/-90 deg (or log steering-angle sensor via OBD and wheel angle); ratio = handwheel delta / road-wheel delta.",
+          "notes": "Honda publishes one ratio (11.41:1 US, 11.4:1 CA) for a variable-ratio rack; the on-centre value is expected to be slower (higher) than that.",
+          "searches": [
+            "Honda Canada / hondanews.com / hondainfocenter 2022-2024 hatch spec tables",
+            "hondanews.com 2022 hatch debut press release (only 'electronic power steering has been re-tuned')",
+            "techinfo.honda.com (paywalled; not accessed)"
+          ]
+        }
+      ]
+    },
+    "steering.ratio_lock": {
+      "description": "Near-lock steering ratio of the variable-ratio rack",
+      "unit": "1",
+      "impact": "medium",
+      "candidates": [
+        {
+          "value": null,
+          "unit": "1",
+          "status": "unknown",
+          "class": null,
+          "source_id": null,
+          "locator": "",
+          "evidence": "",
+          "as_printed": "",
+          "applicability": {
+            "year": "2024",
+            "market": "CA",
+            "trim": "Sport Touring",
+            "body": "hatchback",
+            "gearbox": "6MT",
+            "engine": "1.5T",
+            "notes": "estimate made for the target car"
+          },
+          "confidence": "none",
+          "range": null,
+          "how_to_measure": "Turn plates: road-wheel angle per handwheel degree over the last 90 deg before lock.",
+          "notes": "",
+          "searches": [
+            "Honda Canada / hondanews.com / hondainfocenter 2022-2024 hatch spec tables",
+            "hondanews.com 2022 hatch debut press release (only 'electronic power steering has been re-tuned')",
+            "techinfo.honda.com (paywalled; not accessed)"
+          ]
+        }
+      ]
+    },
+    "steering.wheel_diameter": {
+      "description": "Steering wheel outside diameter",
+      "unit": "m",
+      "impact": "medium",
+      "candidates": [
+        {
+          "value": null,
+          "unit": "m",
+          "status": "unknown",
+          "class": null,
+          "source_id": null,
+          "locator": "",
+          "evidence": "",
+          "as_printed": "",
+          "applicability": {
+            "year": "2024",
+            "market": "CA",
+            "trim": "Sport Touring",
+            "body": "hatchback",
+            "gearbox": "6MT",
+            "engine": "1.5T",
+            "notes": "estimate made for the target car"
+          },
+          "confidence": "none",
+          "range": null,
+          "how_to_measure": "Tape across the rim at 3 and 9 o'clock (outside edges) and rim grip thickness with calipers; +/-2 mm.",
+          "notes": "",
+          "searches": [
+            "Honda Canada / hondanews.com / hondainfocenter 2022-2024 hatch spec tables",
+            "hondanews.com 2022 hatch debut press release (only 'electronic power steering has been re-tuned')",
+            "techinfo.honda.com (paywalled; not accessed)",
+            "Owner's manual not opened for this item (no dimension expected)",
+            "No dimensioned straight-on cabin photo identified; not photo-scaled"
+          ]
+        }
+      ]
+    },
+    "steering.assist_layout": {
+      "description": "EPS assist motor layout (column, pinion, dual-pinion or rack-concentric)",
+      "unit": "text",
+      "impact": "low",
+      "candidates": [
+        {
+          "value": null,
+          "unit": "text",
+          "status": "unknown",
+          "class": null,
+          "source_id": null,
+          "locator": "",
+          "evidence": "",
+          "as_printed": "",
+          "applicability": {
+            "year": "2024",
+            "market": "CA",
+            "trim": "Sport Touring",
+            "body": "hatchback",
+            "gearbox": "6MT",
+            "engine": "1.5T",
+            "notes": "estimate made for the target car"
+          },
+          "confidence": "none",
+          "range": null,
+          "how_to_measure": "Underside/engine-bay photo of the steering rack (a second pinion housing with motor = dual-pinion).",
+          "notes": "Earlier Civics used dual-pinion EPS; not confirmed for this car.",
+          "searches": [
+            "Honda Canada / hondanews.com / hondainfocenter 2022-2024 hatch spec tables",
+            "hondanews.com 2022 hatch debut press release (only 'electronic power steering has been re-tuned')",
+            "techinfo.honda.com (paywalled; not accessed)"
+          ]
+        }
+      ]
     }
   }
 }

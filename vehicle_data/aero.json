@@ -1,0 +1,349 @@
+{
+  "domain": "aero",
+  "title": "Aerodynamics",
+  "schema_version": 1,
+  "updated": "2026-10-03",
+  "sources": {
+    "d7:hondanews-ca-2024-hatch-specs": {
+      "title": "2024 Honda Civic Hatchback Specifications (April 4, 2024)",
+      "url": "https://hondanews.ca/en-CA/releases/release-1128768177ab00a73471b1938c152ddf-2024-honda-civic-hatchback-specifications",
+      "publisher": "Honda Canada (newsroom)",
+      "class": "A",
+      "accessed": "2026-10-03",
+      "access_method": "static",
+      "applicability": "2024 Civic Hatchback Sport and Sport Touring, Canada",
+      "notes": "",
+      "cache_file": "cache/pages/22157798d6e48e1c.txt"
+    },
+    "d7:hondanews-us-2022-hatch-presskit": {
+      "title": "2022 Honda Civic Hatchback Press Kit (September 29, 2021)",
+      "url": "https://hondanews.com/en-US/releases/release-20c92b0d934f0bc63982bd3eee0149e9-2022-honda-civic-hatchback-press-kit",
+      "publisher": "American Honda (hondanews.com)",
+      "class": "A",
+      "accessed": "2026-10-03",
+      "access_method": "rendered",
+      "applicability": "2022 Civic Hatchback, US",
+      "notes": "",
+      "cache_file": "cache/pages/9964dff4363f93bf.txt"
+    }
+  },
+  "parameters": {
+    "aero.cd": {
+      "description": "Drag coefficient",
+      "unit": "1",
+      "impact": "high",
+      "candidates": [
+        {
+          "value": null,
+          "unit": "1",
+          "status": "unknown",
+          "class": null,
+          "source_id": null,
+          "locator": "",
+          "evidence": "",
+          "as_printed": "",
+          "applicability": {},
+          "confidence": "none",
+          "range": null,
+          "how_to_measure": "Coast-down test (two directions, calm day, known mass) fitted to F = A + B v + C v^2 gives CdA; or EPA coast-down target coefficients if found.",
+          "notes": "A search summary mentioned '0.29' for the 2024 hatch without a source page; not recorded. Press kit: Careful tuning of its design has given the 11th-generation Civic Hatchback outstanding aerodynamic performance, including a drag reduction of approximately 3 percent.",
+          "searches": [
+            "2022 hatch press kit 'Aerodynamic Performance' (only '~3 percent' reduction, no Cd)",
+            "hondainfocenter 2024 spec table (no Cd)",
+            "hondanews.ca 2024 spec (no Cd)",
+            "query: 2022 Civic Hatchback drag coefficient press release",
+            "query: 11th generation Civic hatchback drag coefficient Cd official"
+          ]
+        }
+      ]
+    },
+    "aero.drag_reduction_note": {
+      "description": "Published aero statement",
+      "unit": "text",
+      "impact": "low",
+      "candidates": [
+        {
+          "value": "drag reduced ~3 percent vs 10th-gen hatchback",
+          "unit": "text",
+          "status": "confirmed",
+          "class": "A",
+          "source_id": "d7:hondanews-us-2022-hatch-presskit",
+          "locator": "Exterior: 'Aerodynamic Performance'",
+          "evidence": "Careful tuning of its design has given the 11th-generation Civic Hatchback outstanding aerodynamic performance, including a drag reduction of approximately 3 percent.",
+          "as_printed": "approximately 3 percent",
+          "applicability": {
+            "year": "2022",
+            "market": "US",
+            "trim": "all hatchback trims",
+            "body": "hatchback",
+            "gearbox": "all",
+            "engine": "1.5T",
+            "notes": ""
+          },
+          "confidence": "high",
+          "range": null,
+          "how_to_measure": null,
+          "notes": ""
+        }
+      ]
+    },
+    "aero.spoiler": {
+      "description": "Rear spoiler",
+      "unit": "text",
+      "impact": "medium",
+      "candidates": [
+        {
+          "value": "no separate wing; spoiler integrated into the resin hatch/tailgate trailing edge",
+          "unit": "text",
+          "status": "confirmed",
+          "class": "A",
+          "source_id": "d7:hondanews-us-2022-hatch-presskit",
+          "locator": "Exterior Design 'What's New' and body text",
+          "evidence": "Distinct styling cues include a honeycomb grille, a unique integrated rear spoiler, exhaust finishers and standard alloy wheels … The 2022 Civic Hatchback eliminates the previous rear spoiler, giving the rear end a much cleaner and more integrated appearance without any loss of visibility.",
+          "as_printed": "integrated rear spoiler",
+          "applicability": {
+            "year": "2022",
+            "market": "US",
+            "trim": "all hatchback trims",
+            "body": "hatchback",
+            "gearbox": "all",
+            "engine": "1.5T",
+            "notes": ""
+          },
+          "confidence": "high",
+          "range": null,
+          "how_to_measure": null,
+          "notes": "HPD accessory tailgate spoiler is an option, not stock. 2024 Canadian spec lists no spoiler item."
+        }
+      ]
+    },
+    "aero.underbody": {
+      "description": "Underbody covers",
+      "unit": "text",
+      "impact": "medium",
+      "candidates": [
+        {
+          "value": "floor undercover present (described for noise absorption); extent not published",
+          "unit": "text",
+          "status": "confirmed",
+          "class": "A",
+          "source_id": "d7:hondanews-us-2022-hatch-presskit",
+          "locator": "Interior/NVH section",
+          "evidence": "Road noise is reduced through the use of a noise-absorbing floor undercover and rear inner fender liner, plus noise-absorbing carpeting.",
+          "as_printed": "noise-absorbing floor undercover",
+          "applicability": {
+            "year": "2022",
+            "market": "US",
+            "trim": "all hatchback trims",
+            "body": "hatchback",
+            "gearbox": "all",
+            "engine": "1.5T",
+            "notes": ""
+          },
+          "confidence": "medium",
+          "range": null,
+          "how_to_measure": "Underbody photos on a lift showing engine undercover and floor panels.",
+          "notes": ""
+        }
+      ]
+    },
+    "aero.features": {
+      "description": "Published aero detail features",
+      "unit": "text",
+      "impact": "low",
+      "candidates": [
+        {
+          "value": "reshaped front bumper corners; larger A-pillar drip molding; vortex generators under mirror housings; optimised tailgate trailing-edge height; taillights shaped to reduce trailing vortex",
+          "unit": "text",
+          "status": "confirmed",
+          "class": "A",
+          "source_id": "d7:hondanews-us-2022-hatch-presskit",
+          "locator": "Exterior: 'Aerodynamic Performance'",
+          "evidence": "In front, a new and better bumper corner shape was used … airflow turbulence under the door mirror was reduced by adding small vortex generators to the underside of the door mirror housing. In the rear, the height of the trailing edge of the tailgate is optimized to reduce downwash.",
+          "as_printed": "",
+          "applicability": {
+            "year": "2022",
+            "market": "US",
+            "trim": "all hatchback trims",
+            "body": "hatchback",
+            "gearbox": "all",
+            "engine": "1.5T",
+            "notes": ""
+          },
+          "confidence": "high",
+          "range": null,
+          "how_to_measure": null,
+          "notes": ""
+        }
+      ]
+    },
+    "aero.frontal_area": {
+      "description": "Frontal area (published)",
+      "unit": "m2",
+      "impact": "high",
+      "candidates": [
+        {
+          "value": null,
+          "unit": "m2",
+          "status": "unknown",
+          "class": null,
+          "source_id": null,
+          "locator": "",
+          "evidence": "",
+          "as_printed": "",
+          "applicability": {},
+          "confidence": "none",
+          "range": null,
+          "how_to_measure": "Photograph the car head-on with a long lens next to a scale bar and integrate the silhouette by script.",
+          "notes": "Not published. Frontal-area estimate from width x height is derived in scripts/derivations/brakes_aero.py (aero.frontal_area_est).",
+          "searches": [
+            "2022 hatch press kit (aero section)",
+            "hondanews.ca 2024 spec",
+            "hondainfocenter 2024 spec",
+            "query: Civic hatchback drag coefficient / aerodynamics"
+          ]
+        }
+      ]
+    },
+    "aero.active_grille_shutter": {
+      "description": "Active grille shutter",
+      "unit": "bool",
+      "impact": "low",
+      "candidates": [
+        {
+          "value": null,
+          "unit": "bool",
+          "status": "unknown",
+          "class": null,
+          "source_id": null,
+          "locator": "",
+          "evidence": "",
+          "as_printed": "",
+          "applicability": {},
+          "confidence": "none",
+          "range": null,
+          "how_to_measure": "Look behind the lower grille for shutter vanes (photo with flashlight).",
+          "notes": "Not published by Honda in sources opened.",
+          "searches": [
+            "2022 hatch press kit (aero section)",
+            "hondanews.ca 2024 spec",
+            "hondainfocenter 2024 spec",
+            "query: Civic hatchback drag coefficient / aerodynamics"
+          ]
+        }
+      ]
+    },
+    "aero.cooling_openings": {
+      "description": "Cooling opening areas",
+      "unit": "m2",
+      "impact": "low",
+      "candidates": [
+        {
+          "value": null,
+          "unit": "m2",
+          "status": "unknown",
+          "class": null,
+          "source_id": null,
+          "locator": "",
+          "evidence": "",
+          "as_printed": "",
+          "applicability": {},
+          "confidence": "none",
+          "range": null,
+          "how_to_measure": "Front photos scaled by wheelbase; measure open grille areas by script.",
+          "notes": "Not published by Honda in sources opened.",
+          "searches": [
+            "2022 hatch press kit (aero section)",
+            "hondanews.ca 2024 spec",
+            "hondainfocenter 2024 spec",
+            "query: Civic hatchback drag coefficient / aerodynamics"
+          ]
+        }
+      ]
+    },
+    "aero.lift_front": {
+      "description": "Front lift coefficient",
+      "unit": "1",
+      "impact": "medium",
+      "candidates": [
+        {
+          "value": null,
+          "unit": "1",
+          "status": "unknown",
+          "class": null,
+          "source_id": null,
+          "locator": "",
+          "evidence": "",
+          "as_printed": "",
+          "applicability": {},
+          "confidence": "none",
+          "range": null,
+          "how_to_measure": "Not measurable without a wind tunnel; leave unknown.",
+          "notes": "Not published by Honda in sources opened.",
+          "searches": [
+            "2022 hatch press kit (aero section)",
+            "hondanews.ca 2024 spec",
+            "hondainfocenter 2024 spec",
+            "query: Civic hatchback drag coefficient / aerodynamics"
+          ]
+        }
+      ]
+    },
+    "aero.lift_rear": {
+      "description": "Rear lift coefficient",
+      "unit": "1",
+      "impact": "medium",
+      "candidates": [
+        {
+          "value": null,
+          "unit": "1",
+          "status": "unknown",
+          "class": null,
+          "source_id": null,
+          "locator": "",
+          "evidence": "",
+          "as_printed": "",
+          "applicability": {},
+          "confidence": "none",
+          "range": null,
+          "how_to_measure": "Not measurable without a wind tunnel; leave unknown.",
+          "notes": "Not published by Honda in sources opened.",
+          "searches": [
+            "2022 hatch press kit (aero section)",
+            "hondanews.ca 2024 spec",
+            "hondainfocenter 2024 spec",
+            "query: Civic hatchback drag coefficient / aerodynamics"
+          ]
+        }
+      ]
+    },
+    "aero.balance": {
+      "description": "Aero balance",
+      "unit": "1",
+      "impact": "low",
+      "candidates": [
+        {
+          "value": null,
+          "unit": "1",
+          "status": "unknown",
+          "class": null,
+          "source_id": null,
+          "locator": "",
+          "evidence": "",
+          "as_printed": "",
+          "applicability": {},
+          "confidence": "none",
+          "range": null,
+          "how_to_measure": "Not measurable without a wind tunnel.",
+          "notes": "Not published by Honda in sources opened.",
+          "searches": [
+            "2022 hatch press kit (aero section)",
+            "hondanews.ca 2024 spec",
+            "hondainfocenter 2024 spec",
+            "query: Civic hatchback drag coefficient / aerodynamics"
+          ]
+        }
+      ]
+    }
+  }
+}

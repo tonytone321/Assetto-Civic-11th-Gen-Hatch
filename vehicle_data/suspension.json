@@ -1,0 +1,1582 @@
+{
+  "domain": "suspension",
+  "title": "Suspension",
+  "schema_version": 1,
+  "updated": "2026-10-03",
+  "sources": {
+    "susp:hondanews-ca-2024-hatch-specs": {
+      "title": "2024 Honda Civic Hatchback Specifications (release, April 4, 2024)",
+      "url": "https://hondanews.ca/en-CA/releases/release-1128768177ab00a73471b1938c152ddf-2024-honda-civic-hatchback-specifications",
+      "publisher": "Honda Canada Inc. (Honda Canada News)",
+      "class": "A",
+      "accessed": "2026-10-03",
+      "access_method": "rendered",
+      "applicability": "2024 Civic Hatchback, Canada, SPORT and SPORT TOURING columns",
+      "notes": "",
+      "cache_file": "cache/pages/22157798d6e48e1c.txt"
+    },
+    "susp:hondanews-ca-2022-hatch-specs": {
+      "title": "2022 Civic Hatchback Specifications (release, October 12, 2021)",
+      "url": "https://hondanews.ca/en-CA/hci-automobiles/releases/release-9d4b663caef09e412c833d744c4365f9-2022-civic-hatchback-specifications",
+      "publisher": "Honda Canada Inc. (Honda Canada News)",
+      "class": "A",
+      "accessed": "2026-10-03",
+      "access_method": "static",
+      "applicability": "2022 Civic Hatchback, Canada, LX / Sport / Sport Touring",
+      "notes": "",
+      "cache_file": "cache/pages/344bc90bb36560a9.txt"
+    },
+    "susp:hondanews-us-2024-hatch-specs": {
+      "title": "2024 Honda Civic Hatchback Specifications & Features",
+      "url": "https://hondanews.com/en-US/honda-automobiles/releases/2024-honda-civic-hatchback-specifications-features",
+      "publisher": "American Honda Motor Co., Inc. (Honda News)",
+      "class": "A",
+      "accessed": "2026-10-03",
+      "access_method": "static",
+      "applicability": "2024 Civic Hatchback, US, LX / Sport / EX-L / Sport Touring; stabilizer cell spans all trims ('<<' = same as left)",
+      "notes": "",
+      "cache_file": "cache/pages/2b1524caf89378a3.txt"
+    },
+    "susp:hondainfocenter-us-2024-hatch-specs": {
+      "title": "2024 Civic Hatchback - Specifications (Honda Information Center feature guide)",
+      "url": "https://www.hondainfocenter.com/2024/Civic-Hatchback/Feature-Guide/Civic-Hatchback-Specifications/",
+      "publisher": "American Honda Motor Co., Inc.",
+      "class": "A",
+      "accessed": "2026-10-03",
+      "access_method": "static",
+      "applicability": "2024 Civic Hatchback, US, LX / Sport / EX-L / Sport Touring",
+      "notes": "Prints rear bar 17.0 mm for LX/Sport/EX-L and 17.5 mm for Sport Touring, while hondanews.com 2024 prints 17.5 for all trims. Both agree on 17.5 mm for Sport Touring.",
+      "cache_file": "cache/pages/b67f7f855816944e.txt"
+    },
+    "susp:hondanews-us-2022-hatch-debut": {
+      "title": "2022 Honda Civic Hatchback Makes Global Debut During Honda Civic Remix Virtual Performance",
+      "url": "https://hondanews.com/en-US/releases/release-53541be6030b25a47a2899aba12f09d7-2022-honda-civic-hatchback-makes-global-debut-during-honda-civic-remix-virtual-performance",
+      "publisher": "American Honda Motor Co., Inc. (Honda News)",
+      "class": "A",
+      "accessed": "2026-10-03",
+      "access_method": "static",
+      "applicability": "2022 Civic Hatchback, US, all trims (narrative)",
+      "notes": "",
+      "cache_file": "cache/pages/6b8fd454f6a040ce.txt"
+    },
+    "susp:hondapartsnow-2024-civic-control-arm": {
+      "title": "OEM 2024 Honda Civic Control Arm (parts catalogue listing with submodel fitment)",
+      "url": "https://www.hondapartsnow.com/oem-2024-honda-civic-control_arm.html",
+      "publisher": "HondaPartsNow (Honda dealer parts retailer)",
+      "class": "C",
+      "accessed": "2026-10-03",
+      "access_method": "static",
+      "applicability": "2024 Civic, all bodies; each part lists fitting submodels incl. '5 Door 1.5T Sport Touring | 6MT, CVT'",
+      "notes": "Dealer catalogue derived from Honda EPC; class C because it is a retailer page, not Honda's own catalogue. Diagram images were not analysed.",
+      "cache_file": "cache/pages/e9f731ff6b9e9d47.txt"
+    },
+    "susp:hondapartsnow-2024-civic-trailing-arm": {
+      "title": "OEM 2024 Honda Civic Trailing Arm (parts catalogue listing with submodel fitment)",
+      "url": "https://www.hondapartsnow.com/oem-2024-honda-civic-trailing_arm.html",
+      "publisher": "HondaPartsNow (Honda dealer parts retailer)",
+      "class": "C",
+      "accessed": "2026-10-03",
+      "access_method": "static",
+      "applicability": "2024 Civic, all bodies",
+      "notes": "",
+      "cache_file": "cache/pages/b8b52890c32a91d3.txt"
+    },
+    "susp:spoon-fl1-progressive-spring": {
+      "title": "[New item] CIVIC FL1 PROGRESSIVE SPRING (Spoon Sports blog, 2022-08-16)",
+      "url": "https://www.spoonsports.jp/blog/?p=4237",
+      "publisher": "Spoon Sports (Tokyo)",
+      "class": "C",
+      "accessed": "2026-10-03",
+      "access_method": "static",
+      "applicability": "Japanese-market Civic hatchback FL1 (1.5T). NOT North American: lead only (identity rule).",
+      "notes": "States the stock ('normal') rates F 2.7 / R 2.8 kgf/mm. Market differs from target; no evidence the NA Sport Touring springs share part numbers.",
+      "cache_file": "cache/pages/bbd81e64ddfb48f3.txt"
+    },
+    "susp:civicxi-si-spring-rates-2023": {
+      "title": "2023 Civic Si Spring Rates, Motion Ratio, Ride Frequencies, Autocross (CivicXI forum, user eromani, 2023-08-09)",
+      "url": "https://www.civicxi.com/forum/threads/2023-civic-si-spring-rates-motion-ratio-ride-frequencies-autocross.52362/",
+      "publisher": "CivicXI forum",
+      "class": "C",
+      "accessed": "2026-10-03",
+      "access_method": "static",
+      "applicability": "2023 Civic Si sedan 6MT (excluded variant): lead only.",
+      "notes": "Owner's table: front spring 27.0 N/mm, rear 55.9 N/mm, motion ratio (wheel/spring) front 1.029, rear 1.333, unsprung 55/45 kg estimated. Source of the spring rates not stated; motion ratios 'measuring calculating'.",
+      "cache_file": "cache/pages/b0264e7152552462.txt"
+    }
+  },
+  "parameters": {
+    "suspension.arb_front_diameter": {
+      "description": "Front anti-roll bar outside diameter",
+      "unit": "m",
+      "impact": "high",
+      "candidates": [
+        {
+          "printed": {
+            "value": 26.5,
+            "unit": "mm"
+          },
+          "value": 0.0265,
+          "unit": "m",
+          "status": "confirmed",
+          "class": "A",
+          "source_id": "susp:hondanews-ca-2024-hatch-specs",
+          "locator": "CHASSIS table, row 'Front and rear stabilizer bars (mm)', SPORT TOURING column",
+          "evidence": "Front and rear stabilizer bars (mm) 26.5/17.5 26.5/17.5",
+          "as_printed": "26.5/17.5",
+          "applicability": {
+            "year": "2024",
+            "market": "CA",
+            "trim": "Sport Touring",
+            "body": "hatchback",
+            "gearbox": "6MT or CVT (row not split by gearbox)",
+            "engine": "1.5T",
+            "notes": ""
+          },
+          "confidence": "high",
+          "range": null,
+          "how_to_measure": null,
+          "notes": "Canadian table gives diameters only (no tubular/solid)."
+        },
+        {
+          "printed": {
+            "value": 26.5,
+            "unit": "mm"
+          },
+          "value": 0.0265,
+          "unit": "m",
+          "status": "confirmed",
+          "class": "A",
+          "source_id": "susp:hondanews-us-2024-hatch-specs",
+          "locator": "CHASSIS table, row 'Stabilizer Bar (mm) (front/rear)' (cell spans all trims)",
+          "evidence": "Stabilizer Bar (mm) (front/rear) 26.5 x 4.5 (tubular) 17.5 (solid) << << <<",
+          "as_printed": "26.5 x 4.5 (tubular)",
+          "applicability": {
+            "year": "2024",
+            "market": "US",
+            "trim": "Sport Touring",
+            "body": "hatchback",
+            "gearbox": "6MT or CVT (row not split by gearbox)",
+            "engine": "1.5T",
+            "notes": ""
+          },
+          "confidence": "high",
+          "range": null,
+          "how_to_measure": null,
+          "notes": ""
+        },
+        {
+          "printed": {
+            "value": 26.5,
+            "unit": "mm"
+          },
+          "value": 0.0265,
+          "unit": "m",
+          "status": "confirmed",
+          "class": "A",
+          "source_id": "susp:hondainfocenter-us-2024-hatch-specs",
+          "locator": "Body/Suspension/Chassis table, row 'Stabilizer Bar (front/rear)', Sport Touring column",
+          "evidence": "26.5 mm x 4.5 mm (tubular) / 17.5 mm (solid)",
+          "as_printed": "26.5 mm x 4.5 mm (tubular)",
+          "applicability": {
+            "year": "2024",
+            "market": "US",
+            "trim": "Sport Touring",
+            "body": "hatchback",
+            "gearbox": "6MT or CVT (row not split by gearbox)",
+            "engine": "1.5T",
+            "notes": ""
+          },
+          "confidence": "high",
+          "range": null,
+          "how_to_measure": null,
+          "notes": ""
+        }
+      ]
+    },
+    "suspension.arb_front_wall_thickness": {
+      "description": "Front anti-roll bar wall thickness (tubular bar)",
+      "unit": "m",
+      "impact": "high",
+      "candidates": [
+        {
+          "printed": {
+            "value": 4.5,
+            "unit": "mm"
+          },
+          "value": 0.0045000000000000005,
+          "unit": "m",
+          "status": "confirmed",
+          "class": "A",
+          "source_id": "susp:hondanews-us-2024-hatch-specs",
+          "locator": "CHASSIS table, row 'Stabilizer Bar (mm) (front/rear)'",
+          "evidence": "Stabilizer Bar (mm) (front/rear) 26.5 x 4.5 (tubular) 17.5 (solid) << << <<",
+          "as_printed": "26.5 x 4.5 (tubular)",
+          "applicability": {
+            "year": "2024",
+            "market": "US",
+            "trim": "Sport Touring",
+            "body": "hatchback",
+            "gearbox": "6MT or CVT (row not split by gearbox)",
+            "engine": "1.5T",
+            "notes": ""
+          },
+          "confidence": "high",
+          "range": null,
+          "how_to_measure": null,
+          "notes": "Not printed by Honda Canada; the bar diameter matches, so the US wall thickness is taken for the Canadian car."
+        },
+        {
+          "printed": {
+            "value": 4.5,
+            "unit": "mm"
+          },
+          "value": 0.0045000000000000005,
+          "unit": "m",
+          "status": "confirmed",
+          "class": "A",
+          "source_id": "susp:hondainfocenter-us-2024-hatch-specs",
+          "locator": "Body/Suspension/Chassis table, row 'Stabilizer Bar (front/rear)', Sport Touring column",
+          "evidence": "26.5 mm x 4.5 mm (tubular) / 17.5 mm (solid)",
+          "as_printed": "4.5 mm",
+          "applicability": {
+            "year": "2024",
+            "market": "US",
+            "trim": "Sport Touring",
+            "body": "hatchback",
+            "gearbox": "6MT or CVT (row not split by gearbox)",
+            "engine": "1.5T",
+            "notes": ""
+          },
+          "confidence": "high",
+          "range": null,
+          "how_to_measure": null,
+          "notes": ""
+        }
+      ]
+    },
+    "suspension.arb_rear_diameter": {
+      "description": "Rear anti-roll bar diameter (solid)",
+      "unit": "m",
+      "impact": "high",
+      "candidates": [
+        {
+          "printed": {
+            "value": 17.5,
+            "unit": "mm"
+          },
+          "value": 0.0175,
+          "unit": "m",
+          "status": "confirmed",
+          "class": "A",
+          "source_id": "susp:hondanews-ca-2024-hatch-specs",
+          "locator": "CHASSIS table, row 'Front and rear stabilizer bars (mm)', SPORT TOURING column",
+          "evidence": "Front and rear stabilizer bars (mm) 26.5/17.5 26.5/17.5",
+          "as_printed": "26.5/17.5",
+          "applicability": {
+            "year": "2024",
+            "market": "CA",
+            "trim": "Sport Touring",
+            "body": "hatchback",
+            "gearbox": "6MT or CVT (row not split by gearbox)",
+            "engine": "1.5T",
+            "notes": ""
+          },
+          "confidence": "high",
+          "range": null,
+          "how_to_measure": null,
+          "notes": ""
+        },
+        {
+          "printed": {
+            "value": 17.5,
+            "unit": "mm"
+          },
+          "value": 0.0175,
+          "unit": "m",
+          "status": "confirmed",
+          "class": "A",
+          "source_id": "susp:hondainfocenter-us-2024-hatch-specs",
+          "locator": "Body/Suspension/Chassis table, row 'Stabilizer Bar (front/rear)', Sport Touring column (4th)",
+          "evidence": "26.5 mm x 4.5 mm (tubular) / 17.5 mm (solid) Steering Wheel Turns",
+          "as_printed": "17.5 mm (solid)",
+          "applicability": {
+            "year": "2024",
+            "market": "US",
+            "trim": "Sport Touring",
+            "body": "hatchback",
+            "gearbox": "6MT or CVT (row not split by gearbox)",
+            "engine": "1.5T",
+            "notes": ""
+          },
+          "confidence": "high",
+          "range": null,
+          "how_to_measure": null,
+          "notes": "This page prints 17.0 mm for LX/Sport/EX-L; hondanews.com 2024 prints 17.5 for all trims. For Sport Touring all sources agree."
+        },
+        {
+          "printed": {
+            "value": 17.5,
+            "unit": "mm"
+          },
+          "value": 0.0175,
+          "unit": "m",
+          "status": "confirmed",
+          "class": "A",
+          "source_id": "susp:hondanews-ca-2022-hatch-specs",
+          "locator": "CHASSIS table, row 'Front and rear stabilizer bars', Sport Touring column",
+          "evidence": "Front and rear stabilizer bars 26.5/17.5 26.5/17.5 26.5/17.5",
+          "as_printed": "26.5/17.5",
+          "applicability": {
+            "year": "2022",
+            "market": "CA",
+            "trim": "Sport Touring",
+            "body": "hatchback",
+            "gearbox": "6MT or CVT",
+            "engine": "1.5T",
+            "notes": "Model-year check: same value in 2023 and 2024 Canadian tables."
+          },
+          "confidence": "high",
+          "range": null,
+          "how_to_measure": null,
+          "notes": "Model-year check 2022 vs 2024: unchanged."
+        }
+      ]
+    },
+    "suspension.arb_front_construction": {
+      "description": "Front anti-roll bar construction",
+      "unit": "text",
+      "impact": "medium",
+      "candidates": [
+        {
+          "value": "tubular",
+          "unit": "text",
+          "status": "confirmed",
+          "class": "A",
+          "source_id": "susp:hondanews-us-2024-hatch-specs",
+          "locator": "CHASSIS table, row 'Stabilizer Bar (mm) (front/rear)'",
+          "evidence": "Stabilizer Bar (mm) (front/rear) 26.5 x 4.5 (tubular) 17.5 (solid)",
+          "as_printed": "tubular",
+          "applicability": {
+            "year": "2024",
+            "market": "US",
+            "trim": "Sport Touring",
+            "body": "hatchback",
+            "gearbox": "6MT or CVT (row not split by gearbox)",
+            "engine": "1.5T",
+            "notes": ""
+          },
+          "confidence": "high",
+          "range": null,
+          "how_to_measure": null,
+          "notes": ""
+        }
+      ]
+    },
+    "suspension.arb_rear_construction": {
+      "description": "Rear anti-roll bar construction",
+      "unit": "text",
+      "impact": "medium",
+      "candidates": [
+        {
+          "value": "solid",
+          "unit": "text",
+          "status": "confirmed",
+          "class": "A",
+          "source_id": "susp:hondanews-us-2024-hatch-specs",
+          "locator": "CHASSIS table, row 'Stabilizer Bar (mm) (front/rear)'",
+          "evidence": "Stabilizer Bar (mm) (front/rear) 26.5 x 4.5 (tubular) 17.5 (solid)",
+          "as_printed": "solid",
+          "applicability": {
+            "year": "2024",
+            "market": "US",
+            "trim": "Sport Touring",
+            "body": "hatchback",
+            "gearbox": "6MT or CVT (row not split by gearbox)",
+            "engine": "1.5T",
+            "notes": ""
+          },
+          "confidence": "high",
+          "range": null,
+          "how_to_measure": null,
+          "notes": ""
+        }
+      ]
+    },
+    "suspension.front_type": {
+      "description": "Front suspension type",
+      "unit": "text",
+      "impact": "medium",
+      "candidates": [
+        {
+          "value": "MacPherson strut",
+          "unit": "text",
+          "status": "confirmed",
+          "class": "A",
+          "source_id": "susp:hondanews-us-2024-hatch-specs",
+          "locator": "CHASSIS table",
+          "evidence": "MacPherson Strut Front Suspension • • • •",
+          "as_printed": "MacPherson strut",
+          "applicability": {
+            "year": "2024",
+            "market": "US",
+            "trim": "Sport Touring",
+            "body": "hatchback",
+            "gearbox": "6MT or CVT (row not split by gearbox)",
+            "engine": "1.5T",
+            "notes": ""
+          },
+          "confidence": "high",
+          "range": null,
+          "how_to_measure": null,
+          "notes": ""
+        }
+      ]
+    },
+    "suspension.rear_type": {
+      "description": "Rear suspension type",
+      "unit": "text",
+      "impact": "medium",
+      "candidates": [
+        {
+          "value": "Multi-link (independent)",
+          "unit": "text",
+          "status": "confirmed",
+          "class": "A",
+          "source_id": "susp:hondanews-ca-2024-hatch-specs",
+          "locator": "CHASSIS table, SPORT TOURING column",
+          "evidence": "Independent multi-link rear suspension • •",
+          "as_printed": "Multi-link (independent)",
+          "applicability": {
+            "year": "2024",
+            "market": "CA",
+            "trim": "Sport Touring",
+            "body": "hatchback",
+            "gearbox": "6MT or CVT (row not split by gearbox)",
+            "engine": "1.5T",
+            "notes": ""
+          },
+          "confidence": "high",
+          "range": null,
+          "how_to_measure": null,
+          "notes": ""
+        }
+      ]
+    },
+    "suspension.spring_rate_front": {
+      "description": "Front coil spring rate (at the spring)",
+      "unit": "N/m",
+      "impact": "high",
+      "candidates": [
+        {
+          "value": 26500.0,
+          "unit": "N/m",
+          "status": "estimated",
+          "class": "E",
+          "source_id": null,
+          "locator": "",
+          "evidence": "",
+          "as_printed": "",
+          "applicability": {
+            "year": "2024",
+            "market": "CA",
+            "trim": "Sport Touring",
+            "body": "hatchback",
+            "gearbox": "6MT",
+            "engine": "1.5T",
+            "notes": "estimate made for the target car"
+          },
+          "confidence": "low",
+          "range": [
+            22000.0,
+            32000.0
+          ],
+          "how_to_measure": "Remove a front spring and load-test it (or measure wire diameter d, mean coil diameter D and active coils n: k = G d^4 / (8 D^3 n), G = 79.3 GPa). Precision +/-3 %.",
+          "notes": "Basis: two leads, neither for the target. Spoon Sports gives the JDM FL1 1.5T hatch 'normal rate' F 2.7 kgf/mm (26.5 N/mm); a CivicXI owner gives 27.0 N/mm for a 2023 Si sedan. The two agree, but the NA Sport Touring spring part number is not verified to match either.",
+          "searches": [
+            "Honda Canada / hondanews.com / hondainfocenter 2022-2024 hatch spec tables (no spring rates)",
+            "WebSearch: '2022 Civic hatchback 1.5T OEM stock spring rate front rear kg/mm'",
+            "WebSearch: 'FL1 Civic hatchback stock spring rates front rear Sport Touring EX-L'",
+            "Eibach Pro-Kit listing onefastshop.com (progressive, no stock rate)",
+            "Spoon Sports FL1 progressive spring blog (JDM stock rate F2.7/R2.8 kgf/mm)",
+            "CivicXI 2023 Si spring-rate thread (Si: F27.0/R55.9 N/mm)"
+          ]
+        }
+      ]
+    },
+    "suspension.spring_rate_rear": {
+      "description": "Rear coil spring rate (at the spring)",
+      "unit": "N/m",
+      "impact": "high",
+      "candidates": [
+        {
+          "value": 27500.0,
+          "unit": "N/m",
+          "status": "estimated",
+          "class": "E",
+          "source_id": null,
+          "locator": "",
+          "evidence": "",
+          "as_printed": "",
+          "applicability": {
+            "year": "2024",
+            "market": "CA",
+            "trim": "Sport Touring",
+            "body": "hatchback",
+            "gearbox": "6MT",
+            "engine": "1.5T",
+            "notes": "estimate made for the target car"
+          },
+          "confidence": "low",
+          "range": [
+            24000.0,
+            60000.0
+          ],
+          "how_to_measure": "Load-test a rear spring off the car, or measure d, D, n as for the front. Precision +/-3 %.",
+          "notes": "Basis: Spoon Sports JDM FL1 'normal rate' R 2.8 kgf/mm (27.5 N/mm) vs CivicXI 2023 Si owner 55.9 N/mm (5.7 kgf/mm). The leads disagree by 2x (Si may simply be stiffer, or one figure is wrong); the range spans both. Value uses the hatch-body lead. Not averaged.",
+          "searches": [
+            "Honda Canada / hondanews.com / hondainfocenter 2022-2024 hatch spec tables (no spring rates)",
+            "WebSearch: '2022 Civic hatchback 1.5T OEM stock spring rate front rear kg/mm'",
+            "WebSearch: 'FL1 Civic hatchback stock spring rates front rear Sport Touring EX-L'",
+            "Eibach Pro-Kit listing onefastshop.com (progressive, no stock rate)",
+            "Spoon Sports FL1 progressive spring blog (JDM stock rate F2.7/R2.8 kgf/mm)",
+            "CivicXI 2023 Si spring-rate thread (Si: F27.0/R55.9 N/mm)"
+          ]
+        }
+      ]
+    },
+    "suspension.motion_ratio_front": {
+      "description": "Front spring motion ratio (spring travel / wheel travel); wheel rate = k * MR^2",
+      "unit": "1",
+      "impact": "high",
+      "candidates": [
+        {
+          "value": 0.97,
+          "unit": "1",
+          "status": "estimated",
+          "class": "E",
+          "source_id": null,
+          "locator": "",
+          "evidence": "",
+          "as_printed": "",
+          "applicability": {
+            "year": "2024",
+            "market": "CA",
+            "trim": "Sport Touring",
+            "body": "hatchback",
+            "gearbox": "6MT",
+            "engine": "1.5T",
+            "notes": "estimate made for the target car"
+          },
+          "confidence": "low",
+          "range": [
+            0.9,
+            1.0
+          ],
+          "how_to_measure": "Jack one front wheel through +/-30 mm about ride height (spring removed or with a dial gauge on the strut) and record strut compression vs wheel-centre travel.",
+          "notes": "Basis: MacPherson struts are near 1:1 (strut nearly vertical, lower mount close to the wheel centre). Lead: CivicXI 2023 Si owner measured wheel/spring 1.029 (= spring/wheel 0.972). The Si shares the front lower arm part family but not verified as identical."
+        }
+      ]
+    },
+    "suspension.motion_ratio_rear": {
+      "description": "Rear spring motion ratio (spring travel / wheel travel); wheel rate = k * MR^2",
+      "unit": "1",
+      "impact": "high",
+      "candidates": [
+        {
+          "value": 0.75,
+          "unit": "1",
+          "status": "estimated",
+          "class": "E",
+          "source_id": null,
+          "locator": "",
+          "evidence": "",
+          "as_printed": "",
+          "applicability": {
+            "year": "2024",
+            "market": "CA",
+            "trim": "Sport Touring",
+            "body": "hatchback",
+            "gearbox": "6MT",
+            "engine": "1.5T",
+            "notes": "estimate made for the target car"
+          },
+          "confidence": "low",
+          "range": [
+            0.62,
+            0.85
+          ],
+          "how_to_measure": "Measure spring-seat travel vs wheel-centre travel with the wheel jacked through +/-30 mm (or measure spring-seat and ball-joint distances from the lower arm B inner pivot).",
+          "notes": "Basis: spring believed seated part-way along lower arm B (inboard of the wheel). Lead: CivicXI 2023 Si owner gives wheel/spring 1.333 (= 0.75). Rear lower arm B on the Si is a different part number (T22) from the 1.5T hatch (T20)."
+        }
+      ]
+    },
+    "suspension.motion_ratio_damper_front": {
+      "description": "Front damper motion ratio (damper travel / wheel travel)",
+      "unit": "1",
+      "impact": "medium",
+      "candidates": [
+        {
+          "value": 0.97,
+          "unit": "1",
+          "status": "estimated",
+          "class": "E",
+          "source_id": null,
+          "locator": "",
+          "evidence": "",
+          "as_printed": "",
+          "applicability": {
+            "year": "2024",
+            "market": "CA",
+            "trim": "Sport Touring",
+            "body": "hatchback",
+            "gearbox": "6MT",
+            "engine": "1.5T",
+            "notes": "estimate made for the target car"
+          },
+          "confidence": "low",
+          "range": [
+            0.9,
+            1.0
+          ],
+          "how_to_measure": "Same test as the front spring motion ratio (damper is concentric with the spring).",
+          "notes": "Concentric coil-over strut: damper and spring ratios are equal."
+        }
+      ]
+    },
+    "suspension.motion_ratio_damper_rear": {
+      "description": "Rear damper motion ratio (damper travel / wheel travel)",
+      "unit": "1",
+      "impact": "medium",
+      "candidates": [
+        {
+          "value": 0.85,
+          "unit": "1",
+          "status": "estimated",
+          "class": "E",
+          "source_id": null,
+          "locator": "",
+          "evidence": "",
+          "as_printed": "",
+          "applicability": {
+            "year": "2024",
+            "market": "CA",
+            "trim": "Sport Touring",
+            "body": "hatchback",
+            "gearbox": "6MT",
+            "engine": "1.5T",
+            "notes": "estimate made for the target car"
+          },
+          "confidence": "low",
+          "range": [
+            0.7,
+            1.0
+          ],
+          "how_to_measure": "Measure damper length change vs wheel-centre travel (+/-30 mm) with the wheel jacked.",
+          "notes": "Basis: separate rear damper believed mounted near the knuckle, so closer to 1 than the spring; layout not confirmed."
+        }
+      ]
+    },
+    "suspension.unsprung_mass_corner_front": {
+      "description": "Unsprung mass per front corner (wheel, tyre, brake, knuckle, hub + share of links/strut/driveshaft)",
+      "unit": "kg",
+      "impact": "high",
+      "candidates": [
+        {
+          "value": 50.0,
+          "unit": "kg",
+          "status": "estimated",
+          "class": "E",
+          "source_id": null,
+          "locator": "",
+          "evidence": "",
+          "as_printed": "",
+          "applicability": {
+            "year": "2024",
+            "market": "CA",
+            "trim": "Sport Touring",
+            "body": "hatchback",
+            "gearbox": "6MT",
+            "engine": "1.5T",
+            "notes": "estimate made for the target car"
+          },
+          "confidence": "low",
+          "range": [
+            40.0,
+            60.0
+          ],
+          "how_to_measure": "Weigh wheel+tyre, rotor, caliper, knuckle/hub separately on a scale; add half of strut, lower arm, driveshaft and anti-roll link masses.",
+          "notes": "Basis: 18x8 alloy + 235/40R18 (~20-24 kg combined), 282 mm vented rotor and caliper (~10 kg), knuckle/hub/bearing (~8-10 kg), plus half-masses of strut, arm and driveshaft. CivicXI Si owner estimated 55 kg. Wheels/tyres thread may later supply measured wheel and tyre masses."
+        }
+      ]
+    },
+    "suspension.unsprung_mass_corner_rear": {
+      "description": "Unsprung mass per rear corner",
+      "unit": "kg",
+      "impact": "high",
+      "candidates": [
+        {
+          "value": 40.0,
+          "unit": "kg",
+          "status": "estimated",
+          "class": "E",
+          "source_id": null,
+          "locator": "",
+          "evidence": "",
+          "as_printed": "",
+          "applicability": {
+            "year": "2024",
+            "market": "CA",
+            "trim": "Sport Touring",
+            "body": "hatchback",
+            "gearbox": "6MT",
+            "engine": "1.5T",
+            "notes": "estimate made for the target car"
+          },
+          "confidence": "low",
+          "range": [
+            32.0,
+            50.0
+          ],
+          "how_to_measure": "Weigh wheel+tyre, rotor, caliper, trailing arm/knuckle and hub; add half of the four links, spring and damper.",
+          "notes": "Basis: same wheel/tyre as front, 259 mm solid rotor, no driveshaft. CivicXI Si owner estimated 45 kg."
+        }
+      ]
+    },
+    "suspension.arb_front_active_length": {
+      "description": "Front anti-roll bar effective torsion length (between bushings)",
+      "unit": "m",
+      "impact": "medium",
+      "candidates": [
+        {
+          "value": 0.85,
+          "unit": "m",
+          "status": "estimated",
+          "class": "E",
+          "source_id": null,
+          "locator": "",
+          "evidence": "",
+          "as_printed": "",
+          "applicability": {
+            "year": "2024",
+            "market": "CA",
+            "trim": "Sport Touring",
+            "body": "hatchback",
+            "gearbox": "6MT",
+            "engine": "1.5T",
+            "notes": "estimate made for the target car"
+          },
+          "confidence": "low",
+          "range": [
+            0.7,
+            1.0
+          ],
+          "how_to_measure": "Measure on the car (wheels on ramps or lift): bushing-to-bushing distance, arm length from bar axis to link eye, and link travel vs wheel travel.",
+          "notes": "Basis: body width 1.802 m, front track 1.536 m; a strut-car front bar typically spans most of the subframe width."
+        }
+      ]
+    },
+    "suspension.arb_front_lever_arm": {
+      "description": "Front anti-roll bar lever arm length (bar axis to link)",
+      "unit": "m",
+      "impact": "medium",
+      "candidates": [
+        {
+          "value": 0.2,
+          "unit": "m",
+          "status": "estimated",
+          "class": "E",
+          "source_id": null,
+          "locator": "",
+          "evidence": "",
+          "as_printed": "",
+          "applicability": {
+            "year": "2024",
+            "market": "CA",
+            "trim": "Sport Touring",
+            "body": "hatchback",
+            "gearbox": "6MT",
+            "engine": "1.5T",
+            "notes": "estimate made for the target car"
+          },
+          "confidence": "low",
+          "range": [
+            0.15,
+            0.27
+          ],
+          "how_to_measure": "Measure on the car (wheels on ramps or lift): bushing-to-bushing distance, arm length from bar axis to link eye, and link travel vs wheel travel.",
+          "notes": "Basis: typical strut-link bar arm; unmeasured."
+        }
+      ]
+    },
+    "suspension.arb_front_motion_ratio": {
+      "description": "Front anti-roll bar link motion ratio (link travel / wheel travel)",
+      "unit": "1",
+      "impact": "medium",
+      "candidates": [
+        {
+          "value": 0.95,
+          "unit": "1",
+          "status": "estimated",
+          "class": "E",
+          "source_id": null,
+          "locator": "",
+          "evidence": "",
+          "as_printed": "",
+          "applicability": {
+            "year": "2024",
+            "market": "CA",
+            "trim": "Sport Touring",
+            "body": "hatchback",
+            "gearbox": "6MT",
+            "engine": "1.5T",
+            "notes": "estimate made for the target car"
+          },
+          "confidence": "low",
+          "range": [
+            0.85,
+            1.0
+          ],
+          "how_to_measure": "Measure on the car (wheels on ramps or lift): bushing-to-bushing distance, arm length from bar axis to link eye, and link travel vs wheel travel.",
+          "notes": "Basis: link to the strut body near the wheel (inferred)."
+        }
+      ]
+    },
+    "suspension.arb_rear_active_length": {
+      "description": "Rear anti-roll bar effective torsion length",
+      "unit": "m",
+      "impact": "medium",
+      "candidates": [
+        {
+          "value": 0.95,
+          "unit": "m",
+          "status": "estimated",
+          "class": "E",
+          "source_id": null,
+          "locator": "",
+          "evidence": "",
+          "as_printed": "",
+          "applicability": {
+            "year": "2024",
+            "market": "CA",
+            "trim": "Sport Touring",
+            "body": "hatchback",
+            "gearbox": "6MT",
+            "engine": "1.5T",
+            "notes": "estimate made for the target car"
+          },
+          "confidence": "low",
+          "range": [
+            0.8,
+            1.1
+          ],
+          "how_to_measure": "Measure on the car (wheels on ramps or lift): bushing-to-bushing distance, arm length from bar axis to link eye, and link travel vs wheel travel.",
+          "notes": "Basis: rear track 1.565 m; bar mounted to the rear subframe."
+        }
+      ]
+    },
+    "suspension.arb_rear_lever_arm": {
+      "description": "Rear anti-roll bar lever arm length",
+      "unit": "m",
+      "impact": "medium",
+      "candidates": [
+        {
+          "value": 0.18,
+          "unit": "m",
+          "status": "estimated",
+          "class": "E",
+          "source_id": null,
+          "locator": "",
+          "evidence": "",
+          "as_printed": "",
+          "applicability": {
+            "year": "2024",
+            "market": "CA",
+            "trim": "Sport Touring",
+            "body": "hatchback",
+            "gearbox": "6MT",
+            "engine": "1.5T",
+            "notes": "estimate made for the target car"
+          },
+          "confidence": "low",
+          "range": [
+            0.12,
+            0.25
+          ],
+          "how_to_measure": "Measure on the car (wheels on ramps or lift): bushing-to-bushing distance, arm length from bar axis to link eye, and link travel vs wheel travel.",
+          "notes": "Basis: typical; unmeasured."
+        }
+      ]
+    },
+    "suspension.arb_rear_motion_ratio": {
+      "description": "Rear anti-roll bar link motion ratio (link travel / wheel travel)",
+      "unit": "1",
+      "impact": "medium",
+      "candidates": [
+        {
+          "value": 0.75,
+          "unit": "1",
+          "status": "estimated",
+          "class": "E",
+          "source_id": null,
+          "locator": "",
+          "evidence": "",
+          "as_printed": "",
+          "applicability": {
+            "year": "2024",
+            "market": "CA",
+            "trim": "Sport Touring",
+            "body": "hatchback",
+            "gearbox": "6MT",
+            "engine": "1.5T",
+            "notes": "estimate made for the target car"
+          },
+          "confidence": "low",
+          "range": [
+            0.55,
+            0.95
+          ],
+          "how_to_measure": "Measure on the car (wheels on ramps or lift): bushing-to-bushing distance, arm length from bar axis to link eye, and link travel vs wheel travel.",
+          "notes": "Basis: link believed to a lower arm or knuckle; layout not confirmed."
+        }
+      ]
+    },
+    "suspension.spring_free_length_front": {
+      "description": "Front spring free length",
+      "unit": "m",
+      "impact": "low",
+      "candidates": [
+        {
+          "value": null,
+          "unit": "m",
+          "status": "unknown",
+          "class": null,
+          "source_id": null,
+          "locator": "",
+          "evidence": "",
+          "as_printed": "",
+          "applicability": {
+            "year": "2024",
+            "market": "CA",
+            "trim": "Sport Touring",
+            "body": "hatchback",
+            "gearbox": "6MT",
+            "engine": "1.5T",
+            "notes": "estimate made for the target car"
+          },
+          "confidence": "none",
+          "range": null,
+          "how_to_measure": "Remove the spring and measure with calipers / tape; or read off the Honda parts label.",
+          "notes": "",
+          "searches": [
+            "Honda Canada/US spec tables 2022-2024 (not published)",
+            "hondanews.com 2022 hatch debut press release (narrative only)",
+            "WebSearch: OEM spring rates FL1 hatch (no NA data)",
+            "hondapartsnow parts listings (no dimensions beyond shipping size)",
+            "techinfo.honda.com service manual is paywalled (not accessed)"
+          ]
+        }
+      ]
+    },
+    "suspension.spring_free_length_rear": {
+      "description": "Rear spring free length",
+      "unit": "m",
+      "impact": "low",
+      "candidates": [
+        {
+          "value": null,
+          "unit": "m",
+          "status": "unknown",
+          "class": null,
+          "source_id": null,
+          "locator": "",
+          "evidence": "",
+          "as_printed": "",
+          "applicability": {
+            "year": "2024",
+            "market": "CA",
+            "trim": "Sport Touring",
+            "body": "hatchback",
+            "gearbox": "6MT",
+            "engine": "1.5T",
+            "notes": "estimate made for the target car"
+          },
+          "confidence": "none",
+          "range": null,
+          "how_to_measure": "Remove the spring and measure with calipers / tape; or read off the Honda parts label.",
+          "notes": "",
+          "searches": [
+            "Honda Canada/US spec tables 2022-2024 (not published)",
+            "hondanews.com 2022 hatch debut press release (narrative only)",
+            "WebSearch: OEM spring rates FL1 hatch (no NA data)",
+            "hondapartsnow parts listings (no dimensions beyond shipping size)",
+            "techinfo.honda.com service manual is paywalled (not accessed)"
+          ]
+        }
+      ]
+    },
+    "suspension.spring_wire_diameter_front": {
+      "description": "Front spring wire diameter",
+      "unit": "m",
+      "impact": "low",
+      "candidates": [
+        {
+          "value": null,
+          "unit": "m",
+          "status": "unknown",
+          "class": null,
+          "source_id": null,
+          "locator": "",
+          "evidence": "",
+          "as_printed": "",
+          "applicability": {
+            "year": "2024",
+            "market": "CA",
+            "trim": "Sport Touring",
+            "body": "hatchback",
+            "gearbox": "6MT",
+            "engine": "1.5T",
+            "notes": "estimate made for the target car"
+          },
+          "confidence": "none",
+          "range": null,
+          "how_to_measure": "Remove the spring and measure with calipers / tape; or read off the Honda parts label.",
+          "notes": "",
+          "searches": [
+            "Honda Canada/US spec tables 2022-2024 (not published)",
+            "hondanews.com 2022 hatch debut press release (narrative only)",
+            "WebSearch: OEM spring rates FL1 hatch (no NA data)",
+            "hondapartsnow parts listings (no dimensions beyond shipping size)",
+            "techinfo.honda.com service manual is paywalled (not accessed)"
+          ]
+        }
+      ]
+    },
+    "suspension.spring_wire_diameter_rear": {
+      "description": "Rear spring wire diameter",
+      "unit": "m",
+      "impact": "low",
+      "candidates": [
+        {
+          "value": null,
+          "unit": "m",
+          "status": "unknown",
+          "class": null,
+          "source_id": null,
+          "locator": "",
+          "evidence": "",
+          "as_printed": "",
+          "applicability": {
+            "year": "2024",
+            "market": "CA",
+            "trim": "Sport Touring",
+            "body": "hatchback",
+            "gearbox": "6MT",
+            "engine": "1.5T",
+            "notes": "estimate made for the target car"
+          },
+          "confidence": "none",
+          "range": null,
+          "how_to_measure": "Remove the spring and measure with calipers / tape; or read off the Honda parts label.",
+          "notes": "",
+          "searches": [
+            "Honda Canada/US spec tables 2022-2024 (not published)",
+            "hondanews.com 2022 hatch debut press release (narrative only)",
+            "WebSearch: OEM spring rates FL1 hatch (no NA data)",
+            "hondapartsnow parts listings (no dimensions beyond shipping size)",
+            "techinfo.honda.com service manual is paywalled (not accessed)"
+          ]
+        }
+      ]
+    },
+    "suspension.travel_bump_front": {
+      "description": "Front wheel travel, ride height to bump-stop contact",
+      "unit": "m",
+      "impact": "high",
+      "candidates": [
+        {
+          "value": null,
+          "unit": "m",
+          "status": "unknown",
+          "class": null,
+          "source_id": null,
+          "locator": "",
+          "evidence": "",
+          "as_printed": "",
+          "applicability": {
+            "year": "2024",
+            "market": "CA",
+            "trim": "Sport Touring",
+            "body": "hatchback",
+            "gearbox": "6MT",
+            "engine": "1.5T",
+            "notes": "estimate made for the target car"
+          },
+          "confidence": "none",
+          "range": null,
+          "how_to_measure": "With the spring removed (or using a lift and a dial gauge), move the wheel from ride height to bump-stop contact and to full droop; record wheel-centre travel. Or measure exposed damper shaft and bump-stop gap at ride height.",
+          "notes": "",
+          "searches": [
+            "Honda Canada/US spec tables 2022-2024 (not published)",
+            "hondanews.com 2022 hatch debut press release (narrative only)",
+            "WebSearch: OEM spring rates FL1 hatch (no NA data)",
+            "hondapartsnow parts listings (no dimensions beyond shipping size)",
+            "techinfo.honda.com service manual is paywalled (not accessed)"
+          ]
+        }
+      ]
+    },
+    "suspension.travel_rebound_front": {
+      "description": "Front wheel travel, ride height to full droop",
+      "unit": "m",
+      "impact": "medium",
+      "candidates": [
+        {
+          "value": null,
+          "unit": "m",
+          "status": "unknown",
+          "class": null,
+          "source_id": null,
+          "locator": "",
+          "evidence": "",
+          "as_printed": "",
+          "applicability": {
+            "year": "2024",
+            "market": "CA",
+            "trim": "Sport Touring",
+            "body": "hatchback",
+            "gearbox": "6MT",
+            "engine": "1.5T",
+            "notes": "estimate made for the target car"
+          },
+          "confidence": "none",
+          "range": null,
+          "how_to_measure": "With the spring removed (or using a lift and a dial gauge), move the wheel from ride height to bump-stop contact and to full droop; record wheel-centre travel. Or measure exposed damper shaft and bump-stop gap at ride height.",
+          "notes": "",
+          "searches": [
+            "Honda Canada/US spec tables 2022-2024 (not published)",
+            "hondanews.com 2022 hatch debut press release (narrative only)",
+            "WebSearch: OEM spring rates FL1 hatch (no NA data)",
+            "hondapartsnow parts listings (no dimensions beyond shipping size)",
+            "techinfo.honda.com service manual is paywalled (not accessed)"
+          ]
+        }
+      ]
+    },
+    "suspension.travel_bump_rear": {
+      "description": "Rear wheel travel, ride height to bump-stop contact",
+      "unit": "m",
+      "impact": "high",
+      "candidates": [
+        {
+          "value": null,
+          "unit": "m",
+          "status": "unknown",
+          "class": null,
+          "source_id": null,
+          "locator": "",
+          "evidence": "",
+          "as_printed": "",
+          "applicability": {
+            "year": "2024",
+            "market": "CA",
+            "trim": "Sport Touring",
+            "body": "hatchback",
+            "gearbox": "6MT",
+            "engine": "1.5T",
+            "notes": "estimate made for the target car"
+          },
+          "confidence": "none",
+          "range": null,
+          "how_to_measure": "With the spring removed (or using a lift and a dial gauge), move the wheel from ride height to bump-stop contact and to full droop; record wheel-centre travel. Or measure exposed damper shaft and bump-stop gap at ride height.",
+          "notes": "",
+          "searches": [
+            "Honda Canada/US spec tables 2022-2024 (not published)",
+            "hondanews.com 2022 hatch debut press release (narrative only)",
+            "WebSearch: OEM spring rates FL1 hatch (no NA data)",
+            "hondapartsnow parts listings (no dimensions beyond shipping size)",
+            "techinfo.honda.com service manual is paywalled (not accessed)"
+          ]
+        }
+      ]
+    },
+    "suspension.travel_rebound_rear": {
+      "description": "Rear wheel travel, ride height to full droop",
+      "unit": "m",
+      "impact": "medium",
+      "candidates": [
+        {
+          "value": null,
+          "unit": "m",
+          "status": "unknown",
+          "class": null,
+          "source_id": null,
+          "locator": "",
+          "evidence": "",
+          "as_printed": "",
+          "applicability": {
+            "year": "2024",
+            "market": "CA",
+            "trim": "Sport Touring",
+            "body": "hatchback",
+            "gearbox": "6MT",
+            "engine": "1.5T",
+            "notes": "estimate made for the target car"
+          },
+          "confidence": "none",
+          "range": null,
+          "how_to_measure": "With the spring removed (or using a lift and a dial gauge), move the wheel from ride height to bump-stop contact and to full droop; record wheel-centre travel. Or measure exposed damper shaft and bump-stop gap at ride height.",
+          "notes": "",
+          "searches": [
+            "Honda Canada/US spec tables 2022-2024 (not published)",
+            "hondanews.com 2022 hatch debut press release (narrative only)",
+            "WebSearch: OEM spring rates FL1 hatch (no NA data)",
+            "hondapartsnow parts listings (no dimensions beyond shipping size)",
+            "techinfo.honda.com service manual is paywalled (not accessed)"
+          ]
+        }
+      ]
+    },
+    "suspension.bump_stop_length_front": {
+      "description": "Front bump stop free length / gap at ride height",
+      "unit": "m",
+      "impact": "medium",
+      "candidates": [
+        {
+          "value": null,
+          "unit": "m",
+          "status": "unknown",
+          "class": null,
+          "source_id": null,
+          "locator": "",
+          "evidence": "",
+          "as_printed": "",
+          "applicability": {
+            "year": "2024",
+            "market": "CA",
+            "trim": "Sport Touring",
+            "body": "hatchback",
+            "gearbox": "6MT",
+            "engine": "1.5T",
+            "notes": "estimate made for the target car"
+          },
+          "confidence": "none",
+          "range": null,
+          "how_to_measure": "Remove the dust boot and measure the bump stop and the shaft gap at ride height.",
+          "notes": "",
+          "searches": [
+            "Honda Canada/US spec tables 2022-2024 (not published)",
+            "hondanews.com 2022 hatch debut press release (narrative only)",
+            "WebSearch: OEM spring rates FL1 hatch (no NA data)",
+            "hondapartsnow parts listings (no dimensions beyond shipping size)",
+            "techinfo.honda.com service manual is paywalled (not accessed)"
+          ]
+        }
+      ]
+    },
+    "suspension.bump_stop_length_rear": {
+      "description": "Rear bump stop free length / gap at ride height",
+      "unit": "m",
+      "impact": "medium",
+      "candidates": [
+        {
+          "value": null,
+          "unit": "m",
+          "status": "unknown",
+          "class": null,
+          "source_id": null,
+          "locator": "",
+          "evidence": "",
+          "as_printed": "",
+          "applicability": {
+            "year": "2024",
+            "market": "CA",
+            "trim": "Sport Touring",
+            "body": "hatchback",
+            "gearbox": "6MT",
+            "engine": "1.5T",
+            "notes": "estimate made for the target car"
+          },
+          "confidence": "none",
+          "range": null,
+          "how_to_measure": "Remove the dust boot and measure the bump stop and the shaft gap at ride height.",
+          "notes": "",
+          "searches": [
+            "Honda Canada/US spec tables 2022-2024 (not published)",
+            "hondanews.com 2022 hatch debut press release (narrative only)",
+            "WebSearch: OEM spring rates FL1 hatch (no NA data)",
+            "hondapartsnow parts listings (no dimensions beyond shipping size)",
+            "techinfo.honda.com service manual is paywalled (not accessed)"
+          ]
+        }
+      ]
+    },
+    "suspension.damper_curve_front": {
+      "description": "Front damper force-velocity curve (bump and rebound)",
+      "unit": "N",
+      "impact": "high",
+      "candidates": [
+        {
+          "value": null,
+          "unit": "N",
+          "status": "unknown",
+          "class": null,
+          "source_id": null,
+          "locator": "",
+          "evidence": "",
+          "as_printed": "",
+          "applicability": {
+            "year": "2024",
+            "market": "CA",
+            "trim": "Sport Touring",
+            "body": "hatchback",
+            "gearbox": "6MT",
+            "engine": "1.5T",
+            "notes": "estimate made for the target car"
+          },
+          "confidence": "none",
+          "range": null,
+          "how_to_measure": "Dyno a stock damper (shock dyno, 0.025-1.0 m/s), or borrow published dyno sheets for Honda part numbers of the FL hatch struts/dampers.",
+          "notes": "",
+          "searches": [
+            "Honda Canada/US spec tables 2022-2024 (not published)",
+            "hondanews.com 2022 hatch debut press release (narrative only)",
+            "WebSearch: OEM spring rates FL1 hatch (no NA data)",
+            "hondapartsnow parts listings (no dimensions beyond shipping size)",
+            "techinfo.honda.com service manual is paywalled (not accessed)"
+          ]
+        }
+      ]
+    },
+    "suspension.damper_curve_rear": {
+      "description": "Rear damper force-velocity curve (bump and rebound)",
+      "unit": "N",
+      "impact": "high",
+      "candidates": [
+        {
+          "value": null,
+          "unit": "N",
+          "status": "unknown",
+          "class": null,
+          "source_id": null,
+          "locator": "",
+          "evidence": "",
+          "as_printed": "",
+          "applicability": {
+            "year": "2024",
+            "market": "CA",
+            "trim": "Sport Touring",
+            "body": "hatchback",
+            "gearbox": "6MT",
+            "engine": "1.5T",
+            "notes": "estimate made for the target car"
+          },
+          "confidence": "none",
+          "range": null,
+          "how_to_measure": "Dyno a stock damper (shock dyno, 0.025-1.0 m/s), or borrow published dyno sheets for Honda part numbers of the FL hatch struts/dampers.",
+          "notes": "",
+          "searches": [
+            "Honda Canada/US spec tables 2022-2024 (not published)",
+            "hondanews.com 2022 hatch debut press release (narrative only)",
+            "WebSearch: OEM spring rates FL1 hatch (no NA data)",
+            "hondapartsnow parts listings (no dimensions beyond shipping size)",
+            "techinfo.honda.com service manual is paywalled (not accessed)"
+          ]
+        }
+      ]
+    },
+    "suspension.roll_center_height_front": {
+      "description": "Front roll-centre height at ride height",
+      "unit": "m",
+      "impact": "high",
+      "candidates": [
+        {
+          "value": null,
+          "unit": "m",
+          "status": "unknown",
+          "class": null,
+          "source_id": null,
+          "locator": "",
+          "evidence": "",
+          "as_printed": "",
+          "applicability": {
+            "year": "2024",
+            "market": "CA",
+            "trim": "Sport Touring",
+            "body": "hatchback",
+            "gearbox": "6MT",
+            "engine": "1.5T",
+            "notes": "estimate made for the target car"
+          },
+          "confidence": "none",
+          "range": null,
+          "how_to_measure": "Requires hard points (front: lower-arm and strut geometry; rear: link geometry); measure pickup points and compute.",
+          "notes": "",
+          "searches": [
+            "Honda Canada/US spec tables 2022-2024 (not published)",
+            "hondanews.com 2022 hatch debut press release (narrative only)",
+            "WebSearch: OEM spring rates FL1 hatch (no NA data)",
+            "hondapartsnow parts listings (no dimensions beyond shipping size)",
+            "techinfo.honda.com service manual is paywalled (not accessed)"
+          ]
+        }
+      ]
+    },
+    "suspension.roll_center_height_rear": {
+      "description": "Rear roll-centre height at ride height",
+      "unit": "m",
+      "impact": "high",
+      "candidates": [
+        {
+          "value": null,
+          "unit": "m",
+          "status": "unknown",
+          "class": null,
+          "source_id": null,
+          "locator": "",
+          "evidence": "",
+          "as_printed": "",
+          "applicability": {
+            "year": "2024",
+            "market": "CA",
+            "trim": "Sport Touring",
+            "body": "hatchback",
+            "gearbox": "6MT",
+            "engine": "1.5T",
+            "notes": "estimate made for the target car"
+          },
+          "confidence": "none",
+          "range": null,
+          "how_to_measure": "Requires hard points (front: lower-arm and strut geometry; rear: link geometry); measure pickup points and compute.",
+          "notes": "",
+          "searches": [
+            "Honda Canada/US spec tables 2022-2024 (not published)",
+            "hondanews.com 2022 hatch debut press release (narrative only)",
+            "WebSearch: OEM spring rates FL1 hatch (no NA data)",
+            "hondapartsnow parts listings (no dimensions beyond shipping size)",
+            "techinfo.honda.com service manual is paywalled (not accessed)"
+          ]
+        }
+      ]
+    }
+  },
+  "architecture": {
+    "notes": "Members and functions for the target car. 'status' is confirmed only where a cited page names the item for the 1.5T Sport Touring hatch; function assignments that rest on the usual Honda layout are marked inferred.",
+    "front": [
+      {
+        "item": "Suspension type",
+        "description": "MacPherson strut (independent)",
+        "status": "confirmed",
+        "source_ids": [
+          "susp:hondanews-ca-2024-hatch-specs",
+          "susp:hondanews-us-2024-hatch-specs"
+        ],
+        "evidence": "Independent strut front suspension • • | MacPherson Strut Front Suspension • • • •"
+      },
+      {
+        "item": "Strut top",
+        "description": "Damper mount bearing; low-friction ball joints; spring and damper alignment optimised for low friction; larger compliance bushing",
+        "status": "confirmed",
+        "source_ids": [
+          "susp:hondanews-us-2022-hatch-debut"
+        ],
+        "evidence": "the front MacPherson struts feature new low-friction ball joints and front damper mount bearings to improve steering feel and self-centering. The spring and damper alignment has been optimized to minimize operational friction, and a new larger compliance bushing with an improved bushing axis minimizes harshness."
+      },
+      {
+        "item": "Front lower arm (L/R)",
+        "description": "One lower control arm per side ('LOWER ARM COMP, FR', 51350-T20-A10 / 51360-T20-A10), listed for 5 Door 1.5T Sport Touring 6MT/CVT; carries the lower ball joint; two inner bushings (A-arm/L-arm) inferred",
+        "status": "confirmed (part); shape inferred",
+        "source_ids": [
+          "susp:hondapartsnow-2024-civic-control-arm"
+        ]
+      },
+      {
+        "item": "Front subframe",
+        "description": "Aluminium front subframe with truss and rib structure",
+        "status": "confirmed",
+        "source_ids": [
+          "susp:hondanews-us-2022-hatch-debut"
+        ],
+        "evidence": "The all-new aluminum front subframe, with an efficient truss and rib structure, provides rigidity and stability."
+      },
+      {
+        "item": "Spring",
+        "description": "Coil spring concentric with the strut damper (MacPherson)",
+        "status": "inferred (MacPherson by definition; 'spring and damper alignment' in press text)"
+      },
+      {
+        "item": "Anti-roll bar",
+        "description": "Tubular bar 26.5 mm OD x 4.5 mm wall, drop links to the struts (link mounting point inferred)",
+        "status": "confirmed (bar); link location inferred",
+        "source_ids": [
+          "susp:hondanews-us-2024-hatch-specs",
+          "susp:hondainfocenter-us-2024-hatch-specs"
+        ]
+      },
+      {
+        "item": "Steering",
+        "description": "Variable-ratio EPS rack-and-pinion; rack position (ahead of/behind axle) not confirmed",
+        "status": "confirmed (type); layout unknown"
+      }
+    ],
+    "rear": [
+      {
+        "item": "Suspension type",
+        "description": "Multi-link (independent)",
+        "status": "confirmed",
+        "source_ids": [
+          "susp:hondanews-ca-2024-hatch-specs",
+          "susp:hondanews-us-2024-hatch-specs"
+        ],
+        "evidence": "Independent multi-link rear suspension • •"
+      },
+      {
+        "item": "Upper arm (L/R)",
+        "description": "'UPPER ARM COMP, RR' 52510-T20-A00, listed for 5 Door 1.5T Sport Touring; camber control",
+        "status": "confirmed (part); function inferred",
+        "source_ids": [
+          "susp:hondapartsnow-2024-civic-control-arm"
+        ]
+      },
+      {
+        "item": "Lower arm A (L/R)",
+        "description": "'Lower Arm A Complete' 52370-TGH-A00 (other name 'Front Lower Arm, Lateral Link'), listed for 5 Door 1.5T Sport Touring; front lateral link, acts as toe-control link (aftermarket 'rear toe links' replace this member - inferred)",
+        "status": "confirmed (part); toe function inferred",
+        "source_ids": [
+          "susp:hondapartsnow-2024-civic-control-arm"
+        ]
+      },
+      {
+        "item": "Lower arm B (L/R)",
+        "description": "'ARM COMP, RR- B L / R' 52355-T20-A00 / 52350-T20-A00, listed for 5 Door 1.5T Sport Touring; main rear lower arm; press text says the rear lower arms got new bushings",
+        "status": "confirmed (part); spring seat on this arm inferred, not confirmed",
+        "source_ids": [
+          "susp:hondapartsnow-2024-civic-control-arm",
+          "susp:hondanews-us-2022-hatch-debut"
+        ],
+        "evidence": "New rear lower control arm bushings promote better straight-line stability and turn in, while reducing noise and vibration inside the cabin."
+      },
+      {
+        "item": "Trailing arm / knuckle (L/R)",
+        "description": "'TRAILING ARM COMP, L/R' 52365-T20-A10 / 52360-T20-A10, listed for 1.5T EX-L/Sport Touring hatch and 1.5T Touring sedan (2.0 L cars use -A00; Si/Type R use T22); longitudinal location, carries the hub",
+        "status": "confirmed (part); function inferred",
+        "source_ids": [
+          "susp:hondapartsnow-2024-civic-trailing-arm"
+        ]
+      },
+      {
+        "item": "Rear spring and damper",
+        "description": "Separate spring and damper believed (spring on lower arm B, damper to knuckle/trailing arm) as in the previous Civic multi-link; NOT confirmed for this car",
+        "status": "unknown",
+        "how_to_measure": "Underside photo of the rear corner (wheel off) or the Honda parts diagram 'RR. SHOCK ABSORBER / RR. LOWER ARM' image for the FL hatch."
+      },
+      {
+        "item": "Rear anti-roll bar",
+        "description": "Solid bar 17.5 mm; link location unknown",
+        "status": "confirmed (bar)",
+        "source_ids": [
+          "susp:hondanews-ca-2024-hatch-specs"
+        ]
+      }
+    ]
+  }
+}

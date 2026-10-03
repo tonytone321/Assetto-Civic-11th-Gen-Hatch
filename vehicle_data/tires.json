@@ -1,0 +1,735 @@
+{
+  "domain": "tires",
+  "title": "Tires",
+  "schema_version": 1,
+  "updated": "2026-10-03",
+  "sources": {
+    "d7:hondanews-ca-2024-hatch-specs": {
+      "title": "2024 Honda Civic Hatchback Specifications (April 4, 2024)",
+      "url": "https://hondanews.ca/en-CA/releases/release-1128768177ab00a73471b1938c152ddf-2024-honda-civic-hatchback-specifications",
+      "publisher": "Honda Canada (newsroom)",
+      "class": "A",
+      "accessed": "2026-10-03",
+      "access_method": "static",
+      "applicability": "2024 Civic Hatchback Sport and Sport Touring, Canada",
+      "notes": "",
+      "cache_file": "cache/pages/22157798d6e48e1c.txt"
+    },
+    "d7:hondainfocenter-us-2024-hatch-specs": {
+      "title": "2024 Civic Hatchback Specifications (Honda Info Center)",
+      "url": "https://www.hondainfocenter.com/2024/Civic-Hatchback/Feature-Guide/Civic-Hatchback-Specifications/",
+      "publisher": "American Honda Motor Co.",
+      "class": "A",
+      "accessed": "2026-10-03",
+      "access_method": "static",
+      "applicability": "2024 Civic Hatchback LX/Sport/EX-L/Sport Touring, US",
+      "notes": "",
+      "cache_file": "cache/pages/b67f7f855816944e.txt"
+    },
+    "d7:hondaca-2022-hatch-specpdf": {
+      "title": "2022 Civic Hatchback header spec sheet (PDF)",
+      "url": "https://www.honda.ca/Content/honda.ca/86525d2a-11fa-4527-8754-5ed987f3510e/ModelPage_Downloads/028382_01_22MY_Civic_Hatchback_HeaderSpec_EN_V2_hires.pdf",
+      "publisher": "Honda Canada",
+      "class": "A",
+      "accessed": "2026-10-03",
+      "access_method": "pdf",
+      "applicability": "2022 Civic Hatchback LX/Sport/Sport Touring, Canada",
+      "notes": "",
+      "cache_file": "cache/pdf/d3af82f728361fd5.pdf"
+    },
+    "d7:hondanews-us-2022-hatch-presskit": {
+      "title": "2022 Honda Civic Hatchback Press Kit (September 29, 2021)",
+      "url": "https://hondanews.com/en-US/releases/release-20c92b0d934f0bc63982bd3eee0149e9-2022-honda-civic-hatchback-press-kit",
+      "publisher": "American Honda (hondanews.com)",
+      "class": "A",
+      "accessed": "2026-10-03",
+      "access_method": "rendered",
+      "applicability": "2022 Civic Hatchback, US",
+      "notes": "",
+      "cache_file": "cache/pages/9964dff4363f93bf.txt"
+    },
+    "d7:tirepressure-2024-civic": {
+      "title": "2024 Honda Civic Tire Pressure",
+      "url": "https://tirepressure.com/2024-honda-civic-tire-pressure",
+      "publisher": "tirepressure.com (aggregator)",
+      "class": "C",
+      "accessed": "2026-10-03",
+      "access_method": "static",
+      "applicability": "2024 Civic, US, by tire size and trim",
+      "notes": "",
+      "cache_file": "cache/pages/365ef712f5d6b5f1.txt"
+    }
+  },
+  "parameters": {
+    "tires.size": {
+      "description": "Tire size designation",
+      "unit": "text",
+      "impact": "critical",
+      "candidates": [
+        {
+          "value": "P235/40 R18 91W",
+          "unit": "text",
+          "status": "confirmed",
+          "class": "A",
+          "source_id": "d7:hondanews-ca-2024-hatch-specs",
+          "locator": "CHASSIS table, row 'All-season tires', Sport Touring column",
+          "evidence": "All-season tires P235/40 R18 91W P235/40 R18 91W",
+          "as_printed": "P235/40 R18 91W",
+          "applicability": {
+            "year": "2024",
+            "market": "CA",
+            "trim": "Sport Touring",
+            "body": "hatchback",
+            "gearbox": "6MT and CVT (table covers both)",
+            "engine": "1.5T",
+            "notes": ""
+          },
+          "confidence": "high",
+          "range": null,
+          "how_to_measure": null,
+          "notes": ""
+        },
+        {
+          "value": "235/40R18 91W",
+          "unit": "text",
+          "status": "confirmed",
+          "class": "A",
+          "source_id": "d7:hondainfocenter-us-2024-hatch-specs",
+          "locator": "Engineering/Chassis table, row 'All-Season Tires', 4th column",
+          "evidence": "All-Season Tires 215/55R16 93H 235/40R18 91W 215/50R17 91H 235/40R18 91W",
+          "as_printed": "235/40R18 91W",
+          "applicability": {
+            "year": "2024",
+            "market": "US",
+            "trim": "Sport Touring",
+            "body": "hatchback",
+            "gearbox": "6MT and CVT",
+            "engine": "1.5T",
+            "notes": "US spec table, Sport Touring column (4th of LX/Sport/EX-L/Sport Touring)"
+          },
+          "confidence": "high",
+          "range": null,
+          "how_to_measure": null,
+          "notes": ""
+        },
+        {
+          "value": "P235/40 R18 91W",
+          "unit": "text",
+          "status": "confirmed",
+          "class": "A",
+          "source_id": "d7:hondaca-2022-hatch-specpdf",
+          "locator": "p.1 CHASSIS, 'All-season tires', Sport Touring column",
+          "evidence": "All-season tires P215/55 R16 93H P235/40 R18 91W P235/40 R18 91W",
+          "as_printed": "P235/40 R18 91W",
+          "applicability": {
+            "year": "2022",
+            "market": "CA",
+            "trim": "Sport Touring",
+            "body": "hatchback",
+            "gearbox": "6MT and CVT",
+            "engine": "1.5T",
+            "notes": ""
+          },
+          "confidence": "high",
+          "range": null,
+          "how_to_measure": null,
+          "notes": ""
+        }
+      ]
+    },
+    "tires.section_width": {
+      "description": "Nominal section width",
+      "unit": "m",
+      "impact": "high",
+      "candidates": [
+        {
+          "printed": {
+            "value": 235,
+            "unit": "mm"
+          },
+          "value": 0.23500000000000001,
+          "unit": "m",
+          "status": "confirmed",
+          "class": "A",
+          "source_id": "d7:hondanews-ca-2024-hatch-specs",
+          "locator": "CHASSIS table, row 'All-season tires', Sport Touring column",
+          "evidence": "All-season tires P235/40 R18 91W P235/40 R18 91W",
+          "as_printed": "235 (from P235/40 R18)",
+          "applicability": {
+            "year": "2024",
+            "market": "CA",
+            "trim": "Sport Touring",
+            "body": "hatchback",
+            "gearbox": "6MT and CVT (table covers both)",
+            "engine": "1.5T",
+            "notes": ""
+          },
+          "confidence": "high",
+          "range": null,
+          "how_to_measure": null,
+          "notes": "Field of the size designation; nominal, not a measured dimension."
+        },
+        {
+          "printed": {
+            "value": 235,
+            "unit": "mm"
+          },
+          "value": 0.23500000000000001,
+          "unit": "m",
+          "status": "confirmed",
+          "class": "A",
+          "source_id": "d7:hondainfocenter-us-2024-hatch-specs",
+          "locator": "Engineering/Chassis table, row 'All-Season Tires', 4th column",
+          "evidence": "All-Season Tires 215/55R16 93H 235/40R18 91W 215/50R17 91H 235/40R18 91W",
+          "as_printed": "235 (from 235/40R18)",
+          "applicability": {
+            "year": "2024",
+            "market": "US",
+            "trim": "Sport Touring",
+            "body": "hatchback",
+            "gearbox": "6MT and CVT",
+            "engine": "1.5T",
+            "notes": "US spec table, Sport Touring column (4th of LX/Sport/EX-L/Sport Touring)"
+          },
+          "confidence": "high",
+          "range": null,
+          "how_to_measure": null,
+          "notes": ""
+        }
+      ]
+    },
+    "tires.aspect_ratio": {
+      "description": "Aspect ratio",
+      "unit": "1",
+      "impact": "high",
+      "candidates": [
+        {
+          "printed": {
+            "value": 40,
+            "unit": "%"
+          },
+          "value": 0.4,
+          "unit": "1",
+          "status": "confirmed",
+          "class": "A",
+          "source_id": "d7:hondanews-ca-2024-hatch-specs",
+          "locator": "CHASSIS table, row 'All-season tires', Sport Touring column",
+          "evidence": "All-season tires P235/40 R18 91W P235/40 R18 91W",
+          "as_printed": "40 (from P235/40 R18)",
+          "applicability": {
+            "year": "2024",
+            "market": "CA",
+            "trim": "Sport Touring",
+            "body": "hatchback",
+            "gearbox": "6MT and CVT (table covers both)",
+            "engine": "1.5T",
+            "notes": ""
+          },
+          "confidence": "high",
+          "range": null,
+          "how_to_measure": null,
+          "notes": "Field of the size designation; nominal, not a measured dimension."
+        },
+        {
+          "printed": {
+            "value": 40,
+            "unit": "%"
+          },
+          "value": 0.4,
+          "unit": "1",
+          "status": "confirmed",
+          "class": "A",
+          "source_id": "d7:hondainfocenter-us-2024-hatch-specs",
+          "locator": "Engineering/Chassis table, row 'All-Season Tires', 4th column",
+          "evidence": "All-Season Tires 215/55R16 93H 235/40R18 91W 215/50R17 91H 235/40R18 91W",
+          "as_printed": "40 (from 235/40R18)",
+          "applicability": {
+            "year": "2024",
+            "market": "US",
+            "trim": "Sport Touring",
+            "body": "hatchback",
+            "gearbox": "6MT and CVT",
+            "engine": "1.5T",
+            "notes": "US spec table, Sport Touring column (4th of LX/Sport/EX-L/Sport Touring)"
+          },
+          "confidence": "high",
+          "range": null,
+          "how_to_measure": null,
+          "notes": ""
+        }
+      ]
+    },
+    "tires.rim_diameter": {
+      "description": "Rim diameter code",
+      "unit": "m",
+      "impact": "high",
+      "candidates": [
+        {
+          "printed": {
+            "value": 18,
+            "unit": "in"
+          },
+          "value": 0.4572,
+          "unit": "m",
+          "status": "confirmed",
+          "class": "A",
+          "source_id": "d7:hondanews-ca-2024-hatch-specs",
+          "locator": "CHASSIS table, row 'All-season tires', Sport Touring column",
+          "evidence": "All-season tires P235/40 R18 91W P235/40 R18 91W",
+          "as_printed": "R18 (from P235/40 R18)",
+          "applicability": {
+            "year": "2024",
+            "market": "CA",
+            "trim": "Sport Touring",
+            "body": "hatchback",
+            "gearbox": "6MT and CVT (table covers both)",
+            "engine": "1.5T",
+            "notes": ""
+          },
+          "confidence": "high",
+          "range": null,
+          "how_to_measure": null,
+          "notes": "Field of the size designation; nominal, not a measured dimension."
+        },
+        {
+          "printed": {
+            "value": 18,
+            "unit": "in"
+          },
+          "value": 0.4572,
+          "unit": "m",
+          "status": "confirmed",
+          "class": "A",
+          "source_id": "d7:hondainfocenter-us-2024-hatch-specs",
+          "locator": "Engineering/Chassis table, row 'All-Season Tires', 4th column",
+          "evidence": "All-Season Tires 215/55R16 93H 235/40R18 91W 215/50R17 91H 235/40R18 91W",
+          "as_printed": "R18 (from 235/40R18)",
+          "applicability": {
+            "year": "2024",
+            "market": "US",
+            "trim": "Sport Touring",
+            "body": "hatchback",
+            "gearbox": "6MT and CVT",
+            "engine": "1.5T",
+            "notes": "US spec table, Sport Touring column (4th of LX/Sport/EX-L/Sport Touring)"
+          },
+          "confidence": "high",
+          "range": null,
+          "how_to_measure": null,
+          "notes": ""
+        }
+      ]
+    },
+    "tires.load_index": {
+      "description": "Load index",
+      "unit": "count",
+      "impact": "medium",
+      "candidates": [
+        {
+          "printed": {
+            "value": 91,
+            "unit": "count"
+          },
+          "value": 91.0,
+          "unit": "count",
+          "status": "confirmed",
+          "class": "A",
+          "source_id": "d7:hondanews-ca-2024-hatch-specs",
+          "locator": "CHASSIS table, row 'All-season tires', Sport Touring column",
+          "evidence": "All-season tires P235/40 R18 91W P235/40 R18 91W",
+          "as_printed": "91",
+          "applicability": {
+            "year": "2024",
+            "market": "CA",
+            "trim": "Sport Touring",
+            "body": "hatchback",
+            "gearbox": "6MT and CVT (table covers both)",
+            "engine": "1.5T",
+            "notes": ""
+          },
+          "confidence": "high",
+          "range": null,
+          "how_to_measure": null,
+          "notes": "91 = 615 kg per tire (standard ETRTO/TRA table; not opened here)."
+        }
+      ]
+    },
+    "tires.speed_rating": {
+      "description": "Speed rating",
+      "unit": "text",
+      "impact": "low",
+      "candidates": [
+        {
+          "value": "W",
+          "unit": "text",
+          "status": "confirmed",
+          "class": "A",
+          "source_id": "d7:hondanews-ca-2024-hatch-specs",
+          "locator": "CHASSIS table, row 'All-season tires', Sport Touring column",
+          "evidence": "All-season tires P235/40 R18 91W P235/40 R18 91W",
+          "as_printed": "W",
+          "applicability": {
+            "year": "2024",
+            "market": "CA",
+            "trim": "Sport Touring",
+            "body": "hatchback",
+            "gearbox": "6MT and CVT (table covers both)",
+            "engine": "1.5T",
+            "notes": ""
+          },
+          "confidence": "high",
+          "range": null,
+          "how_to_measure": null,
+          "notes": ""
+        }
+      ]
+    },
+    "tires.type": {
+      "description": "Tire type",
+      "unit": "text",
+      "impact": "high",
+      "candidates": [
+        {
+          "value": "all-season",
+          "unit": "text",
+          "status": "confirmed",
+          "class": "A",
+          "source_id": "d7:hondanews-ca-2024-hatch-specs",
+          "locator": "CHASSIS table, row 'All-season tires', Sport Touring column",
+          "evidence": "All-season tires P235/40 R18 91W P235/40 R18 91W",
+          "as_printed": "All-season tires",
+          "applicability": {
+            "year": "2024",
+            "market": "CA",
+            "trim": "Sport Touring",
+            "body": "hatchback",
+            "gearbox": "6MT and CVT (table covers both)",
+            "engine": "1.5T",
+            "notes": ""
+          },
+          "confidence": "high",
+          "range": null,
+          "how_to_measure": null,
+          "notes": "Model-year check: 2024 Honda Canada and US spec tables list the same tire size, 18-in wheels and brake layout as 2022; no change found."
+        }
+      ]
+    },
+    "tires.recommended_pressure_front": {
+      "description": "Recommended cold pressure, front",
+      "unit": "Pa",
+      "impact": "high",
+      "candidates": [
+        {
+          "printed": {
+            "value": 33,
+            "unit": "psi"
+          },
+          "value": 227526.99067454398,
+          "unit": "Pa",
+          "status": "confirmed",
+          "class": "C",
+          "source_id": "d7:tirepressure-2024-civic",
+          "locator": "2024 Honda Civic Tire Inflation Chart, row 235/40R18",
+          "evidence": "235/40R18 33 psi 32 psi Si Sport Hatchback Sport Sedan Sport Touring Hatchback Touring Sedan",
+          "as_printed": "33 psi",
+          "applicability": {
+            "year": "2024",
+            "market": "US",
+            "trim": "Sport Touring Hatchback (shared row with Sport, Si, Touring sedan)",
+            "body": "hatchback",
+            "gearbox": "unspecified",
+            "engine": "1.5T",
+            "notes": ""
+          },
+          "confidence": "medium",
+          "range": null,
+          "how_to_measure": "Read the driver door-jamb tire placard (Canadian placard prints kPa).",
+          "notes": "Aggregator, not Honda. Owner's manual/placard not opened. Canadian placard value in kPa not found."
+        }
+      ]
+    },
+    "tires.recommended_pressure_rear": {
+      "description": "Recommended cold pressure, rear",
+      "unit": "Pa",
+      "impact": "high",
+      "candidates": [
+        {
+          "printed": {
+            "value": 32,
+            "unit": "psi"
+          },
+          "value": 220632.233381376,
+          "unit": "Pa",
+          "status": "confirmed",
+          "class": "C",
+          "source_id": "d7:tirepressure-2024-civic",
+          "locator": "2024 Honda Civic Tire Inflation Chart, row 235/40R18",
+          "evidence": "235/40R18 33 psi 32 psi Si Sport Hatchback Sport Sedan Sport Touring Hatchback Touring Sedan",
+          "as_printed": "32 psi",
+          "applicability": {
+            "year": "2024",
+            "market": "US",
+            "trim": "Sport Touring Hatchback (shared row)",
+            "body": "hatchback",
+            "gearbox": "unspecified",
+            "engine": "1.5T",
+            "notes": ""
+          },
+          "confidence": "medium",
+          "range": null,
+          "how_to_measure": "Read the driver door-jamb tire placard.",
+          "notes": "Aggregator, not Honda."
+        }
+      ]
+    },
+    "tires.spare_size": {
+      "description": "Temporary spare size",
+      "unit": "text",
+      "impact": "low",
+      "candidates": [
+        {
+          "value": "T125/85 D16 99M",
+          "unit": "text",
+          "status": "confirmed",
+          "class": "A",
+          "source_id": "d7:hondanews-ca-2024-hatch-specs",
+          "locator": "CHASSIS table, 'Temporary spare tire'",
+          "evidence": "Temporary spare tire T125/85 D16 99M T125/85 D16 99M",
+          "as_printed": "T125/85 D16 99M",
+          "applicability": {
+            "year": "2024",
+            "market": "CA",
+            "trim": "Sport Touring",
+            "body": "hatchback",
+            "gearbox": "6MT and CVT (table covers both)",
+            "engine": "1.5T",
+            "notes": ""
+          },
+          "confidence": "high",
+          "range": null,
+          "how_to_measure": null,
+          "notes": "US 2024 table prints 'T125/85R16 97M' for Sport Touring: a US/Canada difference in the printed spare designation."
+        }
+      ]
+    },
+    "tires.make_model": {
+      "description": "OE tire make and model",
+      "unit": "text",
+      "impact": "high",
+      "candidates": [
+        {
+          "value": null,
+          "unit": "text",
+          "status": "unknown",
+          "class": null,
+          "source_id": null,
+          "locator": "",
+          "evidence": "",
+          "as_printed": "",
+          "applicability": {},
+          "confidence": "none",
+          "range": null,
+          "how_to_measure": "Photograph the sidewall of a factory tire (brand, model, DOT, any OE marking) and the door placard.",
+          "notes": "Lead: Goodyear Eagle Sport All-Season 235/40R18 91W is described by retailers as OE on 2023-2024 Honda Civic (trim unstated) - unverified for the hatchback Sport Touring.",
+          "searches": [
+            "Tire Rack OE search (Akamai 'page unavailable', blocked)",
+            "hondapartsnow 2022 tire listing (no 235/40R18 91W hatch tire listed; only Si Eagle F1 Asymmetric 2 95Y)",
+            "query: 2024 Civic Hatchback Sport Touring original equipment tire 235/40R18 91W",
+            "query: Eagle Sport All-Season OE Honda Civic (retailer text says OE on '2023/2024 Honda Civic' without trim: lead only)",
+            "query: forum stock tires Sport Touring hatch",
+            "goodyear.com / goodyear.ca product pages (404)"
+          ]
+        }
+      ]
+    },
+    "tires.oem_variant": {
+      "description": "OE marking/variant",
+      "unit": "text",
+      "impact": "low",
+      "candidates": [
+        {
+          "value": null,
+          "unit": "text",
+          "status": "unknown",
+          "class": null,
+          "source_id": null,
+          "locator": "",
+          "evidence": "",
+          "as_printed": "",
+          "applicability": {},
+          "confidence": "none",
+          "range": null,
+          "how_to_measure": "Identify the OE tire from the sidewall, then read the maker's spec table (overall diameter, revs/km, weight, tread depth, UTQG); weigh one mounted tire minus the bare wheel.",
+          "notes": "Nominal geometry from the size is derived in scripts/derivations/wheels_tires.py (tires.overall_diameter_nominal, tires.rolling_circumference, tires.loaded_radius).",
+          "searches": [
+            "blocked on tires.make_model (OE make/model not established)",
+            "Tire Rack OE search (Akamai 'page unavailable', blocked)",
+            "hondapartsnow 2022 tire listing (no 235/40R18 91W hatch tire listed; only Si Eagle F1 Asymmetric 2 95Y)"
+          ]
+        }
+      ]
+    },
+    "tires.overall_diameter": {
+      "description": "Maker-published overall diameter of the OE tire",
+      "unit": "m",
+      "impact": "high",
+      "candidates": [
+        {
+          "value": null,
+          "unit": "m",
+          "status": "unknown",
+          "class": null,
+          "source_id": null,
+          "locator": "",
+          "evidence": "",
+          "as_printed": "",
+          "applicability": {},
+          "confidence": "none",
+          "range": null,
+          "how_to_measure": "Identify the OE tire from the sidewall, then read the maker's spec table (overall diameter, revs/km, weight, tread depth, UTQG); weigh one mounted tire minus the bare wheel.",
+          "notes": "Nominal geometry from the size is derived in scripts/derivations/wheels_tires.py (tires.overall_diameter_nominal, tires.rolling_circumference, tires.loaded_radius).",
+          "searches": [
+            "blocked on tires.make_model (OE make/model not established)",
+            "Tire Rack OE search (Akamai 'page unavailable', blocked)",
+            "hondapartsnow 2022 tire listing (no 235/40R18 91W hatch tire listed; only Si Eagle F1 Asymmetric 2 95Y)"
+          ]
+        }
+      ]
+    },
+    "tires.mass": {
+      "description": "Tire mass",
+      "unit": "kg",
+      "impact": "high",
+      "candidates": [
+        {
+          "value": null,
+          "unit": "kg",
+          "status": "unknown",
+          "class": null,
+          "source_id": null,
+          "locator": "",
+          "evidence": "",
+          "as_printed": "",
+          "applicability": {},
+          "confidence": "none",
+          "range": null,
+          "how_to_measure": "Identify the OE tire from the sidewall, then read the maker's spec table (overall diameter, revs/km, weight, tread depth, UTQG); weigh one mounted tire minus the bare wheel.",
+          "notes": "Nominal geometry from the size is derived in scripts/derivations/wheels_tires.py (tires.overall_diameter_nominal, tires.rolling_circumference, tires.loaded_radius).",
+          "searches": [
+            "blocked on tires.make_model (OE make/model not established)",
+            "Tire Rack OE search (Akamai 'page unavailable', blocked)",
+            "hondapartsnow 2022 tire listing (no 235/40R18 91W hatch tire listed; only Si Eagle F1 Asymmetric 2 95Y)"
+          ]
+        }
+      ]
+    },
+    "tires.tread_depth_new": {
+      "description": "New tread depth",
+      "unit": "m",
+      "impact": "low",
+      "candidates": [
+        {
+          "value": null,
+          "unit": "m",
+          "status": "unknown",
+          "class": null,
+          "source_id": null,
+          "locator": "",
+          "evidence": "",
+          "as_printed": "",
+          "applicability": {},
+          "confidence": "none",
+          "range": null,
+          "how_to_measure": "Identify the OE tire from the sidewall, then read the maker's spec table (overall diameter, revs/km, weight, tread depth, UTQG); weigh one mounted tire minus the bare wheel.",
+          "notes": "Nominal geometry from the size is derived in scripts/derivations/wheels_tires.py (tires.overall_diameter_nominal, tires.rolling_circumference, tires.loaded_radius).",
+          "searches": [
+            "blocked on tires.make_model (OE make/model not established)",
+            "Tire Rack OE search (Akamai 'page unavailable', blocked)",
+            "hondapartsnow 2022 tire listing (no 235/40R18 91W hatch tire listed; only Si Eagle F1 Asymmetric 2 95Y)"
+          ]
+        }
+      ]
+    },
+    "tires.utqg": {
+      "description": "UTQG",
+      "unit": "text",
+      "impact": "low",
+      "candidates": [
+        {
+          "value": null,
+          "unit": "text",
+          "status": "unknown",
+          "class": null,
+          "source_id": null,
+          "locator": "",
+          "evidence": "",
+          "as_printed": "",
+          "applicability": {},
+          "confidence": "none",
+          "range": null,
+          "how_to_measure": "Identify the OE tire from the sidewall, then read the maker's spec table (overall diameter, revs/km, weight, tread depth, UTQG); weigh one mounted tire minus the bare wheel.",
+          "notes": "Nominal geometry from the size is derived in scripts/derivations/wheels_tires.py (tires.overall_diameter_nominal, tires.rolling_circumference, tires.loaded_radius).",
+          "searches": [
+            "blocked on tires.make_model (OE make/model not established)",
+            "Tire Rack OE search (Akamai 'page unavailable', blocked)",
+            "hondapartsnow 2022 tire listing (no 235/40R18 91W hatch tire listed; only Si Eagle F1 Asymmetric 2 95Y)"
+          ]
+        }
+      ]
+    },
+    "tires.revs_per_km": {
+      "description": "Maker-published revolutions per km",
+      "unit": "1",
+      "impact": "high",
+      "candidates": [
+        {
+          "value": null,
+          "unit": "1",
+          "status": "unknown",
+          "class": null,
+          "source_id": null,
+          "locator": "",
+          "evidence": "",
+          "as_printed": "",
+          "applicability": {},
+          "confidence": "none",
+          "range": null,
+          "how_to_measure": "Identify the OE tire from the sidewall, then read the maker's spec table (overall diameter, revs/km, weight, tread depth, UTQG); weigh one mounted tire minus the bare wheel.",
+          "notes": "Nominal geometry from the size is derived in scripts/derivations/wheels_tires.py (tires.overall_diameter_nominal, tires.rolling_circumference, tires.loaded_radius).",
+          "searches": [
+            "blocked on tires.make_model (OE make/model not established)",
+            "Tire Rack OE search (Akamai 'page unavailable', blocked)",
+            "hondapartsnow 2022 tire listing (no 235/40R18 91W hatch tire listed; only Si Eagle F1 Asymmetric 2 95Y)"
+          ]
+        }
+      ]
+    },
+    "tires.test_data": {
+      "description": "Independent test data for the OE tire",
+      "unit": "text",
+      "impact": "medium",
+      "candidates": [
+        {
+          "value": null,
+          "unit": "text",
+          "status": "unknown",
+          "class": null,
+          "source_id": null,
+          "locator": "",
+          "evidence": "",
+          "as_printed": "",
+          "applicability": {},
+          "confidence": "none",
+          "range": null,
+          "how_to_measure": "Identify the OE tire from the sidewall, then read the maker's spec table (overall diameter, revs/km, weight, tread depth, UTQG); weigh one mounted tire minus the bare wheel.",
+          "notes": "Nominal geometry from the size is derived in scripts/derivations/wheels_tires.py (tires.overall_diameter_nominal, tires.rolling_circumference, tires.loaded_radius).",
+          "searches": [
+            "blocked on tires.make_model (OE make/model not established)",
+            "Tire Rack OE search (Akamai 'page unavailable', blocked)",
+            "hondapartsnow 2022 tire listing (no 235/40R18 91W hatch tire listed; only Si Eagle F1 Asymmetric 2 95Y)"
+          ]
+        }
+      ]
+    }
+  }
+}

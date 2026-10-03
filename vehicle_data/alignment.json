@@ -1,0 +1,305 @@
+{
+  "domain": "alignment",
+  "title": "Alignment",
+  "schema_version": 1,
+  "updated": "2026-10-03",
+  "sources": {},
+  "parameters": {
+    "alignment.front_camber": {
+      "description": "Front camber, nominal and tolerance",
+      "unit": "rad",
+      "impact": "high",
+      "candidates": [
+        {
+          "value": null,
+          "unit": "rad",
+          "status": "unknown",
+          "class": null,
+          "source_id": null,
+          "locator": "",
+          "evidence": "",
+          "as_printed": "",
+          "applicability": {
+            "year": "2024",
+            "market": "CA",
+            "trim": "Sport Touring",
+            "body": "hatchback",
+            "gearbox": "6MT",
+            "engine": "1.5T",
+            "notes": "estimate made for the target car"
+          },
+          "confidence": "none",
+          "range": null,
+          "how_to_measure": "Get a four-wheel alignment printout (before/after) from a Honda dealer or an alignment shop: it shows Honda's spec window (min/nominal/max) and the car's actual values.",
+          "notes": "Lead (not recorded as a value): the 10th-generation Civic spec quoted on civicx.com was front camber -0.8..+0.2 deg, caster 4.8..5.8 deg, rear camber -2.0..-0.5 deg, rear toe-in 0.04..0.16 deg (10th gen is excluded; 11th gen not verified).",
+          "searches": [
+            "Honda Canada / hondanews.com / hondainfocenter 2022-2024 hatch spec tables (no alignment data)",
+            "WebSearch: '2022 2023 Honda Civic hatchback factory alignment specifications camber caster toe service manual' (only 10th-gen CivicX thread found)",
+            "WebSearch: 'civicxi forum alignment specs 11th gen front camber caster toe rear camber factory spec' (no 11th-gen spec chart)",
+            "WebSearch: '2022 Honda Civic alignment printout specs ... 11th gen hatchback' (SPC spec book is a paid product; not accessed)",
+            "techinfo.honda.com service manual (paywalled; not accessed); kbb.com alignment page (cost info only)"
+          ]
+        }
+      ]
+    },
+    "alignment.front_caster": {
+      "description": "Front caster, nominal and tolerance",
+      "unit": "rad",
+      "impact": "high",
+      "candidates": [
+        {
+          "value": null,
+          "unit": "rad",
+          "status": "unknown",
+          "class": null,
+          "source_id": null,
+          "locator": "",
+          "evidence": "",
+          "as_printed": "",
+          "applicability": {
+            "year": "2024",
+            "market": "CA",
+            "trim": "Sport Touring",
+            "body": "hatchback",
+            "gearbox": "6MT",
+            "engine": "1.5T",
+            "notes": "estimate made for the target car"
+          },
+          "confidence": "none",
+          "range": null,
+          "how_to_measure": "Get a four-wheel alignment printout (before/after) from a Honda dealer or an alignment shop: it shows Honda's spec window (min/nominal/max) and the car's actual values.",
+          "notes": "Lead (not recorded as a value): the 10th-generation Civic spec quoted on civicx.com was front camber -0.8..+0.2 deg, caster 4.8..5.8 deg, rear camber -2.0..-0.5 deg, rear toe-in 0.04..0.16 deg (10th gen is excluded; 11th gen not verified).",
+          "searches": [
+            "Honda Canada / hondanews.com / hondainfocenter 2022-2024 hatch spec tables (no alignment data)",
+            "WebSearch: '2022 2023 Honda Civic hatchback factory alignment specifications camber caster toe service manual' (only 10th-gen CivicX thread found)",
+            "WebSearch: 'civicxi forum alignment specs 11th gen front camber caster toe rear camber factory spec' (no 11th-gen spec chart)",
+            "WebSearch: '2022 Honda Civic alignment printout specs ... 11th gen hatchback' (SPC spec book is a paid product; not accessed)",
+            "techinfo.honda.com service manual (paywalled; not accessed); kbb.com alignment page (cost info only)"
+          ]
+        }
+      ]
+    },
+    "alignment.front_toe_total": {
+      "description": "Front total toe, nominal and tolerance",
+      "unit": "rad",
+      "impact": "high",
+      "candidates": [
+        {
+          "value": null,
+          "unit": "rad",
+          "status": "unknown",
+          "class": null,
+          "source_id": null,
+          "locator": "",
+          "evidence": "",
+          "as_printed": "",
+          "applicability": {
+            "year": "2024",
+            "market": "CA",
+            "trim": "Sport Touring",
+            "body": "hatchback",
+            "gearbox": "6MT",
+            "engine": "1.5T",
+            "notes": "estimate made for the target car"
+          },
+          "confidence": "none",
+          "range": null,
+          "how_to_measure": "Get a four-wheel alignment printout (before/after) from a Honda dealer or an alignment shop: it shows Honda's spec window (min/nominal/max) and the car's actual values.",
+          "notes": "Lead (not recorded as a value): the 10th-generation Civic spec quoted on civicx.com was front camber -0.8..+0.2 deg, caster 4.8..5.8 deg, rear camber -2.0..-0.5 deg, rear toe-in 0.04..0.16 deg (10th gen is excluded; 11th gen not verified).",
+          "searches": [
+            "Honda Canada / hondanews.com / hondainfocenter 2022-2024 hatch spec tables (no alignment data)",
+            "WebSearch: '2022 2023 Honda Civic hatchback factory alignment specifications camber caster toe service manual' (only 10th-gen CivicX thread found)",
+            "WebSearch: 'civicxi forum alignment specs 11th gen front camber caster toe rear camber factory spec' (no 11th-gen spec chart)",
+            "WebSearch: '2022 Honda Civic alignment printout specs ... 11th gen hatchback' (SPC spec book is a paid product; not accessed)",
+            "techinfo.honda.com service manual (paywalled; not accessed); kbb.com alignment page (cost info only)"
+          ]
+        }
+      ]
+    },
+    "alignment.rear_camber": {
+      "description": "Rear camber, nominal and tolerance",
+      "unit": "rad",
+      "impact": "high",
+      "candidates": [
+        {
+          "value": null,
+          "unit": "rad",
+          "status": "unknown",
+          "class": null,
+          "source_id": null,
+          "locator": "",
+          "evidence": "",
+          "as_printed": "",
+          "applicability": {
+            "year": "2024",
+            "market": "CA",
+            "trim": "Sport Touring",
+            "body": "hatchback",
+            "gearbox": "6MT",
+            "engine": "1.5T",
+            "notes": "estimate made for the target car"
+          },
+          "confidence": "none",
+          "range": null,
+          "how_to_measure": "Get a four-wheel alignment printout (before/after) from a Honda dealer or an alignment shop: it shows Honda's spec window (min/nominal/max) and the car's actual values.",
+          "notes": "Lead (not recorded as a value): the 10th-generation Civic spec quoted on civicx.com was front camber -0.8..+0.2 deg, caster 4.8..5.8 deg, rear camber -2.0..-0.5 deg, rear toe-in 0.04..0.16 deg (10th gen is excluded; 11th gen not verified).",
+          "searches": [
+            "Honda Canada / hondanews.com / hondainfocenter 2022-2024 hatch spec tables (no alignment data)",
+            "WebSearch: '2022 2023 Honda Civic hatchback factory alignment specifications camber caster toe service manual' (only 10th-gen CivicX thread found)",
+            "WebSearch: 'civicxi forum alignment specs 11th gen front camber caster toe rear camber factory spec' (no 11th-gen spec chart)",
+            "WebSearch: '2022 Honda Civic alignment printout specs ... 11th gen hatchback' (SPC spec book is a paid product; not accessed)",
+            "techinfo.honda.com service manual (paywalled; not accessed); kbb.com alignment page (cost info only)"
+          ]
+        }
+      ]
+    },
+    "alignment.rear_toe_total": {
+      "description": "Rear total toe, nominal and tolerance",
+      "unit": "rad",
+      "impact": "high",
+      "candidates": [
+        {
+          "value": null,
+          "unit": "rad",
+          "status": "unknown",
+          "class": null,
+          "source_id": null,
+          "locator": "",
+          "evidence": "",
+          "as_printed": "",
+          "applicability": {
+            "year": "2024",
+            "market": "CA",
+            "trim": "Sport Touring",
+            "body": "hatchback",
+            "gearbox": "6MT",
+            "engine": "1.5T",
+            "notes": "estimate made for the target car"
+          },
+          "confidence": "none",
+          "range": null,
+          "how_to_measure": "Get a four-wheel alignment printout (before/after) from a Honda dealer or an alignment shop: it shows Honda's spec window (min/nominal/max) and the car's actual values.",
+          "notes": "Lead (not recorded as a value): the 10th-generation Civic spec quoted on civicx.com was front camber -0.8..+0.2 deg, caster 4.8..5.8 deg, rear camber -2.0..-0.5 deg, rear toe-in 0.04..0.16 deg (10th gen is excluded; 11th gen not verified).",
+          "searches": [
+            "Honda Canada / hondanews.com / hondainfocenter 2022-2024 hatch spec tables (no alignment data)",
+            "WebSearch: '2022 2023 Honda Civic hatchback factory alignment specifications camber caster toe service manual' (only 10th-gen CivicX thread found)",
+            "WebSearch: 'civicxi forum alignment specs 11th gen front camber caster toe rear camber factory spec' (no 11th-gen spec chart)",
+            "WebSearch: '2022 Honda Civic alignment printout specs ... 11th gen hatchback' (SPC spec book is a paid product; not accessed)",
+            "techinfo.honda.com service manual (paywalled; not accessed); kbb.com alignment page (cost info only)"
+          ]
+        }
+      ]
+    },
+    "alignment.thrust_angle": {
+      "description": "Thrust angle limit",
+      "unit": "rad",
+      "impact": "low",
+      "candidates": [
+        {
+          "value": null,
+          "unit": "rad",
+          "status": "unknown",
+          "class": null,
+          "source_id": null,
+          "locator": "",
+          "evidence": "",
+          "as_printed": "",
+          "applicability": {
+            "year": "2024",
+            "market": "CA",
+            "trim": "Sport Touring",
+            "body": "hatchback",
+            "gearbox": "6MT",
+            "engine": "1.5T",
+            "notes": "estimate made for the target car"
+          },
+          "confidence": "none",
+          "range": null,
+          "how_to_measure": "Get a four-wheel alignment printout (before/after) from a Honda dealer or an alignment shop: it shows Honda's spec window (min/nominal/max) and the car's actual values.",
+          "notes": "Lead (not recorded as a value): the 10th-generation Civic spec quoted on civicx.com was front camber -0.8..+0.2 deg, caster 4.8..5.8 deg, rear camber -2.0..-0.5 deg, rear toe-in 0.04..0.16 deg (10th gen is excluded; 11th gen not verified).",
+          "searches": [
+            "Honda Canada / hondanews.com / hondainfocenter 2022-2024 hatch spec tables (no alignment data)",
+            "WebSearch: '2022 2023 Honda Civic hatchback factory alignment specifications camber caster toe service manual' (only 10th-gen CivicX thread found)",
+            "WebSearch: 'civicxi forum alignment specs 11th gen front camber caster toe rear camber factory spec' (no 11th-gen spec chart)",
+            "WebSearch: '2022 Honda Civic alignment printout specs ... 11th gen hatchback' (SPC spec book is a paid product; not accessed)",
+            "techinfo.honda.com service manual (paywalled; not accessed); kbb.com alignment page (cost info only)"
+          ]
+        }
+      ]
+    },
+    "alignment.kingpin_inclination": {
+      "description": "Kingpin (steering-axis) inclination",
+      "unit": "rad",
+      "impact": "medium",
+      "candidates": [
+        {
+          "value": null,
+          "unit": "rad",
+          "status": "unknown",
+          "class": null,
+          "source_id": null,
+          "locator": "",
+          "evidence": "",
+          "as_printed": "",
+          "applicability": {
+            "year": "2024",
+            "market": "CA",
+            "trim": "Sport Touring",
+            "body": "hatchback",
+            "gearbox": "6MT",
+            "engine": "1.5T",
+            "notes": "estimate made for the target car"
+          },
+          "confidence": "none",
+          "range": null,
+          "how_to_measure": "Get a four-wheel alignment printout (before/after) from a Honda dealer or an alignment shop: the printout shows Honda's spec window (min/nominal/max) for 2022-2024 Civic Hatchback and the car's actual values. KPI and scrub need a caster/KPI sweep on the alignment rig.",
+          "notes": "Lead (not recorded as a value): the 10th-generation Civic spec quoted on civicx.com was front camber -0.8..+0.2 deg, caster 4.8..5.8 deg, rear camber -2.0..-0.5 deg, rear toe-in 0.04..0.16 deg (10th gen is excluded; 11th gen not verified).",
+          "searches": [
+            "Honda Canada / hondanews.com / hondainfocenter 2022-2024 hatch spec tables (no alignment data)",
+            "WebSearch: '2022 2023 Honda Civic hatchback factory alignment specifications camber caster toe service manual' (only 10th-gen CivicX thread found)",
+            "WebSearch: 'civicxi forum alignment specs 11th gen front camber caster toe rear camber factory spec' (no 11th-gen spec chart)",
+            "WebSearch: '2022 Honda Civic alignment printout specs ... 11th gen hatchback' (SPC spec book is a paid product; not accessed)",
+            "techinfo.honda.com service manual (paywalled; not accessed); kbb.com alignment page (cost info only)"
+          ]
+        }
+      ]
+    },
+    "alignment.scrub_radius": {
+      "description": "Scrub radius at ground",
+      "unit": "m",
+      "impact": "medium",
+      "candidates": [
+        {
+          "value": null,
+          "unit": "m",
+          "status": "unknown",
+          "class": null,
+          "source_id": null,
+          "locator": "",
+          "evidence": "",
+          "as_printed": "",
+          "applicability": {
+            "year": "2024",
+            "market": "CA",
+            "trim": "Sport Touring",
+            "body": "hatchback",
+            "gearbox": "6MT",
+            "engine": "1.5T",
+            "notes": "estimate made for the target car"
+          },
+          "confidence": "none",
+          "range": null,
+          "how_to_measure": "Get a four-wheel alignment printout (before/after) from a Honda dealer or an alignment shop: the printout shows Honda's spec window (min/nominal/max) for 2022-2024 Civic Hatchback and the car's actual values. KPI and scrub need a caster/KPI sweep on the alignment rig.",
+          "notes": "Lead (not recorded as a value): the 10th-generation Civic spec quoted on civicx.com was front camber -0.8..+0.2 deg, caster 4.8..5.8 deg, rear camber -2.0..-0.5 deg, rear toe-in 0.04..0.16 deg (10th gen is excluded; 11th gen not verified).",
+          "searches": [
+            "Honda Canada / hondanews.com / hondainfocenter 2022-2024 hatch spec tables (no alignment data)",
+            "WebSearch: '2022 2023 Honda Civic hatchback factory alignment specifications camber caster toe service manual' (only 10th-gen CivicX thread found)",
+            "WebSearch: 'civicxi forum alignment specs 11th gen front camber caster toe rear camber factory spec' (no 11th-gen spec chart)",
+            "WebSearch: '2022 Honda Civic alignment printout specs ... 11th gen hatchback' (SPC spec book is a paid product; not accessed)",
+            "techinfo.honda.com service manual (paywalled; not accessed); kbb.com alignment page (cost info only)"
+          ]
+        }
+      ]
+    }
+  }
+}

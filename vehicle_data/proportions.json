@@ -1,0 +1,1485 @@
+{
+  "domain": "proportions",
+  "title": "Photo-measured proportions",
+  "schema_version": 1,
+  "sources": {
+    "prop:hic-2022-hatch-strg-profile": {
+      "title": "Honda Information Center profile header, 2022 Civic Hatchback Sport Touring (STRG), Rallye Red",
+      "url": "https://www.hondainfocenter.com/-/media/Honda-Sales-Tool-Media-Folder/Images/2022-Civic-Hatchback/Profile-Headers/22_CivicHatchback_STRG_Header_RR.ashx",
+      "publisher": "American Honda Motor Co. (Honda Information Center)",
+      "class": "A",
+      "accessed": "2026-10-03",
+      "access_method": "direct image download (620x200 RGBA PNG)",
+      "applicability": "2022 US Civic Hatchback Sport Touring (18-in machined/black wheels); same body as 2024 (all published exterior dimensions identical 2022-2024)",
+      "notes": "Shown on https://www.hondainfocenter.com/2024/Civic-Hatchback/ (2024 Civic Hatchback page reuses the 2022 image). Studio render, near-orthographic side view. Local copy only in cache/photos (git-ignored).",
+      "cache_file": "cache/photos/22_CivicHatchback_STRG_Header_RR.png"
+    }
+  },
+  "parameters": {
+    "proportions.overhang_front": {
+      "description": "Front overhang: front axle to foremost body point (side view)",
+      "unit": "m",
+      "impact": "high",
+      "candidates": [
+        {
+          "value": 0.8519556507180501,
+          "unit": "m",
+          "status": "estimated",
+          "class": "D",
+          "source_id": "prop:hic-2022-hatch-strg-profile",
+          "locator": "image px {\"x_min\": 58, \"rows_at_extreme\": [128, 157], \"front_wheel_cx\": 156.2616756843141}",
+          "evidence": "Image feature located by algorithm: silhouette min column minus fitted front wheel centre",
+          "as_printed": "",
+          "applicability": {
+            "year": "2022",
+            "market": "US",
+            "trim": "Sport Touring",
+            "body": "hatchback",
+            "gearbox": "n/a (exterior render)",
+            "engine": "1.5T",
+            "notes": "Exterior body identical 2022-2024 per Honda spec tables (length, width, height, wheelbase, track unchanged)"
+          },
+          "confidence": "low",
+          "range": [
+            0.26718925174110375,
+            1.4367220496949966
+          ],
+          "how_to_measure": "Plumb bob from the front bumper's foremost point and from the front hub centre; measure the floor distance (+-5 mm).",
+          "notes": "1-sigma 0.2924 m; range = +-2 sigma (localisation + scale + perspective).",
+          "derivation": {
+            "script": "scripts/domains/photo_measure_side.py",
+            "function": "main",
+            "inputs": {
+              "image": "https://www.hondainfocenter.com/-/media/Honda-Sales-Tool-Media-Folder/Images/2022-Civic-Hatchback/Profile-Headers/22_CivicHatchback_STRG_Header_RR.ashx",
+              "dimensions.wheelbase_mm": 2735.0,
+              "tyre": "P235/40 R18 (nominal 645.2 mm)"
+            },
+            "algorithm": "silhouette min column minus fitted front wheel centre",
+            "pixels": {
+              "x_min": 58,
+              "rows_at_extreme": [
+                128,
+                157
+              ],
+              "front_wheel_cx": 156.2616756843141
+            },
+            "scale_mm_per_px": {
+              "horizontal": 8.670273988153157,
+              "vertical": 8.764766322988079
+            }
+          }
+        }
+      ]
+    },
+    "proportions.overhang_rear": {
+      "description": "Rear overhang: rear axle to rearmost body point (side view)",
+      "unit": "m",
+      "impact": "high",
+      "candidates": [
+        {
+          "value": 0.7915327132992944,
+          "unit": "m",
+          "status": "estimated",
+          "class": "D",
+          "source_id": "prop:hic-2022-hatch-strg-profile",
+          "locator": "image px {\"x_max\": 563, \"rows_at_extreme\": [140, 141], \"rear_wheel_cx\": 471.7073010171507}",
+          "evidence": "Image feature located by algorithm: silhouette max column minus fitted rear wheel centre",
+          "as_printed": "",
+          "applicability": {
+            "year": "2022",
+            "market": "US",
+            "trim": "Sport Touring",
+            "body": "hatchback",
+            "gearbox": "n/a (exterior render)",
+            "engine": "1.5T",
+            "notes": "Exterior body identical 2022-2024 per Honda spec tables (length, width, height, wheelbase, track unchanged)"
+          },
+          "confidence": "low",
+          "range": [
+            0.24822055633023898,
+            1.3348448702683497
+          ],
+          "how_to_measure": "Plumb bob from the rear bumper's rearmost point and from the rear hub centre; measure the floor distance (+-5 mm).",
+          "notes": "1-sigma 0.2717 m; range = +-2 sigma (localisation + scale + perspective).",
+          "derivation": {
+            "script": "scripts/domains/photo_measure_side.py",
+            "function": "main",
+            "inputs": {
+              "image": "https://www.hondainfocenter.com/-/media/Honda-Sales-Tool-Media-Folder/Images/2022-Civic-Hatchback/Profile-Headers/22_CivicHatchback_STRG_Header_RR.ashx",
+              "dimensions.wheelbase_mm": 2735.0,
+              "tyre": "P235/40 R18 (nominal 645.2 mm)"
+            },
+            "algorithm": "silhouette max column minus fitted rear wheel centre",
+            "pixels": {
+              "x_max": 563,
+              "rows_at_extreme": [
+                140,
+                141
+              ],
+              "rear_wheel_cx": 471.7073010171507
+            },
+            "scale_mm_per_px": {
+              "horizontal": 8.670273988153157,
+              "vertical": 8.764766322988079
+            }
+          }
+        }
+      ]
+    },
+    "proportions.overhang_front_fraction": {
+      "description": "Front overhang / (front + rear overhang) (scale-free)",
+      "unit": "1",
+      "impact": "high",
+      "candidates": [
+        {
+          "value": 0.5183825266858166,
+          "unit": "1",
+          "status": "estimated",
+          "class": "D",
+          "source_id": "prop:hic-2022-hatch-strg-profile",
+          "locator": "image px {\"oh_f_px\": 98.2616756843141, \"oh_r_px\": 91.29269898284929}",
+          "evidence": "Image feature located by algorithm: ratio of silhouette-derived overhang pixel lengths; independent of scale",
+          "as_printed": "",
+          "applicability": {
+            "year": "2022",
+            "market": "US",
+            "trim": "Sport Touring",
+            "body": "hatchback",
+            "gearbox": "n/a (exterior render)",
+            "engine": "1.5T",
+            "notes": "Exterior body identical 2022-2024 per Honda spec tables (length, width, height, wheelbase, track unchanged)"
+          },
+          "confidence": "medium",
+          "range": [
+            0.5109217990457593,
+            0.525843254325874
+          ],
+          "how_to_measure": "As for the overhangs.",
+          "notes": "Used by scripts/derivations/dimensions.py with the published length and wheelbase. 1-sigma 0.00373 1; range = +-2 sigma (localisation + scale + perspective).",
+          "derivation": {
+            "script": "scripts/domains/photo_measure_side.py",
+            "function": "main",
+            "inputs": {
+              "image": "https://www.hondainfocenter.com/-/media/Honda-Sales-Tool-Media-Folder/Images/2022-Civic-Hatchback/Profile-Headers/22_CivicHatchback_STRG_Header_RR.ashx",
+              "dimensions.wheelbase_mm": 2735.0,
+              "tyre": "P235/40 R18 (nominal 645.2 mm)"
+            },
+            "algorithm": "ratio of silhouette-derived overhang pixel lengths; independent of scale",
+            "pixels": {
+              "oh_f_px": 98.2616756843141,
+              "oh_r_px": 91.29269898284929
+            },
+            "scale_mm_per_px": {
+              "horizontal": 8.670273988153157,
+              "vertical": 8.764766322988079
+            }
+          }
+        }
+      ]
+    },
+    "proportions.front_bumper_extreme_z": {
+      "description": "Height of the foremost bumper point (mid of rows at the extreme column)",
+      "unit": "m",
+      "impact": "low",
+      "candidates": [
+        {
+          "value": 0.4001257406547127,
+          "unit": "m",
+          "status": "estimated",
+          "class": "D",
+          "source_id": "prop:hic-2022-hatch-strg-profile",
+          "locator": "image px {\"x\": 58, \"rows\": [128, 157]}",
+          "evidence": "Image feature located by algorithm: rows where the silhouette reaches its min column",
+          "as_printed": "",
+          "applicability": {
+            "year": "2022",
+            "market": "US",
+            "trim": "Sport Touring",
+            "body": "hatchback",
+            "gearbox": "n/a (exterior render)",
+            "engine": "1.5T",
+            "notes": "Exterior body identical 2022-2024 per Honda spec tables (length, width, height, wheelbase, track unchanged)"
+          },
+          "confidence": "low",
+          "range": [
+            0.13703671208144824,
+            0.6632147692279771
+          ],
+          "how_to_measure": "Measure the height of the bumper nose above the floor with a square (+-5 mm).",
+          "notes": "1-sigma 0.1315 m; range = +-2 sigma (localisation + scale + perspective).",
+          "derivation": {
+            "script": "scripts/domains/photo_measure_side.py",
+            "function": "main",
+            "inputs": {
+              "image": "https://www.hondainfocenter.com/-/media/Honda-Sales-Tool-Media-Folder/Images/2022-Civic-Hatchback/Profile-Headers/22_CivicHatchback_STRG_Header_RR.ashx",
+              "dimensions.wheelbase_mm": 2735.0,
+              "tyre": "P235/40 R18 (nominal 645.2 mm)"
+            },
+            "algorithm": "rows where the silhouette reaches its min column",
+            "pixels": {
+              "x": 58,
+              "rows": [
+                128,
+                157
+              ]
+            },
+            "scale_mm_per_px": {
+              "horizontal": 8.670273988153157,
+              "vertical": 8.764766322988079
+            }
+          }
+        }
+      ]
+    },
+    "proportions.rear_bumper_extreme_z": {
+      "description": "Height of the rearmost body point",
+      "unit": "m",
+      "impact": "low",
+      "candidates": [
+        {
+          "value": 0.4176552733006888,
+          "unit": "m",
+          "status": "estimated",
+          "class": "D",
+          "source_id": "prop:hic-2022-hatch-strg-profile",
+          "locator": "image px {\"x\": 563, \"rows\": [140, 141]}",
+          "evidence": "Image feature located by algorithm: rows where the silhouette reaches its max column",
+          "as_printed": "",
+          "applicability": {
+            "year": "2022",
+            "market": "US",
+            "trim": "Sport Touring",
+            "body": "hatchback",
+            "gearbox": "n/a (exterior render)",
+            "engine": "1.5T",
+            "notes": "Exterior body identical 2022-2024 per Honda spec tables (length, width, height, wheelbase, track unchanged)"
+          },
+          "confidence": "medium",
+          "range": [
+            0.3980566599955866,
+            0.437253886605791
+          ],
+          "how_to_measure": "Measure the height of the rearmost bumper point above the floor (+-5 mm).",
+          "notes": "1-sigma 0.009799 m; range = +-2 sigma (localisation + scale + perspective).",
+          "derivation": {
+            "script": "scripts/domains/photo_measure_side.py",
+            "function": "main",
+            "inputs": {
+              "image": "https://www.hondainfocenter.com/-/media/Honda-Sales-Tool-Media-Folder/Images/2022-Civic-Hatchback/Profile-Headers/22_CivicHatchback_STRG_Header_RR.ashx",
+              "dimensions.wheelbase_mm": 2735.0,
+              "tyre": "P235/40 R18 (nominal 645.2 mm)"
+            },
+            "algorithm": "rows where the silhouette reaches its max column",
+            "pixels": {
+              "x": 563,
+              "rows": [
+                140,
+                141
+              ]
+            },
+            "scale_mm_per_px": {
+              "horizontal": 8.670273988153157,
+              "vertical": 8.764766322988079
+            }
+          }
+        }
+      ]
+    },
+    "proportions.length_check": {
+      "description": "Overall length measured from the photo (cross-check of the published length)",
+      "unit": "m",
+      "impact": "low",
+      "candidates": [
+        {
+          "value": 4.378488364017345,
+          "unit": "m",
+          "status": "estimated",
+          "class": "D",
+          "source_id": "prop:hic-2022-hatch-strg-profile",
+          "locator": "image px {\"x_min\": 58, \"x_max\": 563}",
+          "evidence": "Image feature located by algorithm: silhouette extent x wheelbase scale",
+          "as_printed": "",
+          "applicability": {
+            "year": "2022",
+            "market": "US",
+            "trim": "Sport Touring",
+            "body": "hatchback",
+            "gearbox": "n/a (exterior render)",
+            "engine": "1.5T",
+            "notes": "Exterior body identical 2022-2024 per Honda spec tables (length, width, height, wheelbase, track unchanged)"
+          },
+          "confidence": "low",
+          "range": [
+            1.373811705694569,
+            7.383165022340121
+          ],
+          "how_to_measure": "Tape between plumb marks of bumper extremes.",
+          "notes": "1-sigma 1.502 m; range = +-2 sigma (localisation + scale + perspective).",
+          "derivation": {
+            "script": "scripts/domains/photo_measure_side.py",
+            "function": "main",
+            "inputs": {
+              "image": "https://www.hondainfocenter.com/-/media/Honda-Sales-Tool-Media-Folder/Images/2022-Civic-Hatchback/Profile-Headers/22_CivicHatchback_STRG_Header_RR.ashx",
+              "dimensions.wheelbase_mm": 2735.0,
+              "tyre": "P235/40 R18 (nominal 645.2 mm)"
+            },
+            "algorithm": "silhouette extent x wheelbase scale",
+            "pixels": {
+              "x_min": 58,
+              "x_max": 563
+            },
+            "scale_mm_per_px": {
+              "horizontal": 8.670273988153157,
+              "vertical": 8.764766322988079
+            }
+          }
+        }
+      ]
+    },
+    "proportions.height_check": {
+      "description": "Overall height measured from the photo (cross-check of the published height)",
+      "unit": "m",
+      "impact": "low",
+      "candidates": [
+        {
+          "value": 1.4343681667673058,
+          "unit": "m",
+          "status": "estimated",
+          "class": "D",
+          "source_id": "prop:hic-2022-hatch-strg-profile",
+          "locator": "image px {\"roof_row\": 25, \"ground_row\": 188.15161533231864}",
+          "evidence": "Image feature located by algorithm: top silhouette row vs fitted tyre-bottom ground line",
+          "as_printed": "",
+          "applicability": {
+            "year": "2022",
+            "market": "US",
+            "trim": "Sport Touring",
+            "body": "hatchback",
+            "gearbox": "n/a (exterior render)",
+            "engine": "1.5T",
+            "notes": "Exterior body identical 2022-2024 per Honda spec tables (length, width, height, wheelbase, track unchanged)"
+          },
+          "confidence": "low",
+          "range": [
+            0.4529902279970802,
+            2.4157461055375316
+          ],
+          "how_to_measure": "Straightedge on roof, tape to floor.",
+          "notes": "1-sigma 0.4907 m; range = +-2 sigma (localisation + scale + perspective).",
+          "derivation": {
+            "script": "scripts/domains/photo_measure_side.py",
+            "function": "main",
+            "inputs": {
+              "image": "https://www.hondainfocenter.com/-/media/Honda-Sales-Tool-Media-Folder/Images/2022-Civic-Hatchback/Profile-Headers/22_CivicHatchback_STRG_Header_RR.ashx",
+              "dimensions.wheelbase_mm": 2735.0,
+              "tyre": "P235/40 R18 (nominal 645.2 mm)"
+            },
+            "algorithm": "top silhouette row vs fitted tyre-bottom ground line",
+            "pixels": {
+              "roof_row": 25,
+              "ground_row": 188.15161533231864
+            },
+            "scale_mm_per_px": {
+              "horizontal": 8.670273988153157,
+              "vertical": 8.764766322988079
+            }
+          }
+        }
+      ]
+    },
+    "proportions.roof_peak_z": {
+      "description": "Roof peak height above ground",
+      "unit": "m",
+      "impact": "medium",
+      "candidates": [
+        {
+          "value": 1.4343681667673058,
+          "unit": "m",
+          "status": "estimated",
+          "class": "D",
+          "source_id": "prop:hic-2022-hatch-strg-profile",
+          "locator": "image px {\"row\": 25, \"cols\": [337, 348]}",
+          "evidence": "Image feature located by algorithm: minimum of the top silhouette profile",
+          "as_printed": "",
+          "applicability": {
+            "year": "2022",
+            "market": "US",
+            "trim": "Sport Touring",
+            "body": "hatchback",
+            "gearbox": "n/a (exterior render)",
+            "engine": "1.5T",
+            "notes": "Exterior body identical 2022-2024 per Honda spec tables (length, width, height, wheelbase, track unchanged)"
+          },
+          "confidence": "low",
+          "range": [
+            0.4529902279970802,
+            2.4157461055375316
+          ],
+          "how_to_measure": "Straightedge across the roof at its highest point; tape to floor (+-3 mm).",
+          "notes": "1-sigma 0.4907 m; range = +-2 sigma (localisation + scale + perspective).",
+          "derivation": {
+            "script": "scripts/domains/photo_measure_side.py",
+            "function": "main",
+            "inputs": {
+              "image": "https://www.hondainfocenter.com/-/media/Honda-Sales-Tool-Media-Folder/Images/2022-Civic-Hatchback/Profile-Headers/22_CivicHatchback_STRG_Header_RR.ashx",
+              "dimensions.wheelbase_mm": 2735.0,
+              "tyre": "P235/40 R18 (nominal 645.2 mm)"
+            },
+            "algorithm": "minimum of the top silhouette profile",
+            "pixels": {
+              "row": 25,
+              "cols": [
+                337,
+                348
+              ]
+            },
+            "scale_mm_per_px": {
+              "horizontal": 8.670273988153157,
+              "vertical": 8.764766322988079
+            }
+          }
+        }
+      ]
+    },
+    "proportions.roof_peak_y": {
+      "description": "Longitudinal position of roof peak (centre of the columns at the minimum row)",
+      "unit": "m",
+      "impact": "medium",
+      "candidates": [
+        {
+          "value": -1.6147372989115232,
+          "unit": "m",
+          "status": "estimated",
+          "class": "D",
+          "source_id": "prop:hic-2022-hatch-strg-profile",
+          "locator": "image px {\"cols\": [337, 348]}",
+          "evidence": "Image feature located by algorithm: centre of the flat run at the minimum top-profile row; range covers the run",
+          "as_printed": "",
+          "applicability": {
+            "year": "2022",
+            "market": "US",
+            "trim": "Sport Touring",
+            "body": "hatchback",
+            "gearbox": "n/a (exterior render)",
+            "engine": "1.5T",
+            "notes": "Exterior body identical 2022-2024 per Honda spec tables (length, width, height, wheelbase, track unchanged)"
+          },
+          "confidence": "medium",
+          "range": [
+            -1.719141223163912,
+            -1.5103333746591343
+          ],
+          "how_to_measure": "Level laid on the roof: find the highest point, plumb down, measure from front hub centre.",
+          "notes": "1-sigma 0.0522 m; range = +-2 sigma (localisation + scale + perspective).",
+          "derivation": {
+            "script": "scripts/domains/photo_measure_side.py",
+            "function": "main",
+            "inputs": {
+              "image": "https://www.hondainfocenter.com/-/media/Honda-Sales-Tool-Media-Folder/Images/2022-Civic-Hatchback/Profile-Headers/22_CivicHatchback_STRG_Header_RR.ashx",
+              "dimensions.wheelbase_mm": 2735.0,
+              "tyre": "P235/40 R18 (nominal 645.2 mm)"
+            },
+            "algorithm": "centre of the flat run at the minimum top-profile row; range covers the run",
+            "pixels": {
+              "cols": [
+                337,
+                348
+              ]
+            },
+            "scale_mm_per_px": {
+              "horizontal": 8.670273988153157,
+              "vertical": 8.764766322988079
+            }
+          }
+        }
+      ]
+    },
+    "proportions.windshield_base_y": {
+      "description": "Windshield base / cowl (silhouette slope break hood -> glass): Y",
+      "unit": "m",
+      "impact": "medium",
+      "candidates": [
+        {
+          "value": -0.6046503792916803,
+          "unit": "m",
+          "status": "estimated",
+          "class": "D",
+          "source_id": "prop:hic-2022-hatch-strg-profile",
+          "locator": "image px {\"break_px\": 226.0, \"row\": 70.0}",
+          "evidence": "Image feature located by algorithm: first breakpoint of a continuous 3-segment line fit to the top profile, front axle -> roof peak",
+          "as_printed": "",
+          "applicability": {
+            "year": "2022",
+            "market": "US",
+            "trim": "Sport Touring",
+            "body": "hatchback",
+            "gearbox": "n/a (exterior render)",
+            "engine": "1.5T",
+            "notes": "Exterior body identical 2022-2024 per Honda spec tables (length, width, height, wheelbase, track unchanged)"
+          },
+          "confidence": "medium",
+          "range": [
+            -0.6403988347478811,
+            -0.5689019238354796
+          ],
+          "how_to_measure": "Measure from front hub centre to the windshield base at the centreline (tape along the hood + plumb), +-10 mm.",
+          "notes": "Silhouette break: the true glass base can sit slightly behind the visible hood/cowl edge. Localisation sigma 2 px. 1-sigma 0.01787 m; range = +-2 sigma (localisation + scale + perspective).",
+          "derivation": {
+            "script": "scripts/domains/photo_measure_side.py",
+            "function": "main",
+            "inputs": {
+              "image": "https://www.hondainfocenter.com/-/media/Honda-Sales-Tool-Media-Folder/Images/2022-Civic-Hatchback/Profile-Headers/22_CivicHatchback_STRG_Header_RR.ashx",
+              "dimensions.wheelbase_mm": 2735.0,
+              "tyre": "P235/40 R18 (nominal 645.2 mm)"
+            },
+            "algorithm": "first breakpoint of a continuous 3-segment line fit to the top profile, front axle -> roof peak",
+            "pixels": {
+              "break_px": 226.0,
+              "row": 70.0
+            },
+            "scale_mm_per_px": {
+              "horizontal": 8.670273988153157,
+              "vertical": 8.764766322988079
+            }
+          }
+        }
+      ]
+    },
+    "proportions.windshield_base_z": {
+      "description": "Windshield base / cowl height above ground",
+      "unit": "m",
+      "impact": "medium",
+      "candidates": [
+        {
+          "value": 1.0355712990713484,
+          "unit": "m",
+          "status": "estimated",
+          "class": "D",
+          "source_id": "prop:hic-2022-hatch-strg-profile",
+          "locator": "image px {\"break_px\": 226.0}",
+          "evidence": "Image feature located by algorithm: top profile at the first breakpoint",
+          "as_printed": "",
+          "applicability": {
+            "year": "2022",
+            "market": "US",
+            "trim": "Sport Touring",
+            "body": "hatchback",
+            "gearbox": "n/a (exterior render)",
+            "engine": "1.5T",
+            "notes": "Exterior body identical 2022-2024 per Honda spec tables (length, width, height, wheelbase, track unchanged)"
+          },
+          "confidence": "low",
+          "range": [
+            0.3240125679281036,
+            1.7471300302145931
+          ],
+          "how_to_measure": "Tape from floor to the windshield base at the centreline (+-5 mm).",
+          "notes": "1-sigma 0.3558 m; range = +-2 sigma (localisation + scale + perspective).",
+          "derivation": {
+            "script": "scripts/domains/photo_measure_side.py",
+            "function": "main",
+            "inputs": {
+              "image": "https://www.hondainfocenter.com/-/media/Honda-Sales-Tool-Media-Folder/Images/2022-Civic-Hatchback/Profile-Headers/22_CivicHatchback_STRG_Header_RR.ashx",
+              "dimensions.wheelbase_mm": 2735.0,
+              "tyre": "P235/40 R18 (nominal 645.2 mm)"
+            },
+            "algorithm": "top profile at the first breakpoint",
+            "pixels": {
+              "break_px": 226.0
+            },
+            "scale_mm_per_px": {
+              "horizontal": 8.670273988153157,
+              "vertical": 8.764766322988079
+            }
+          }
+        }
+      ]
+    },
+    "proportions.windshield_header_y": {
+      "description": "Windshield top / roof header (second slope break): Y",
+      "unit": "m",
+      "impact": "low",
+      "candidates": [
+        {
+          "value": -0.9601316128059598,
+          "unit": "m",
+          "status": "estimated",
+          "class": "D",
+          "source_id": "prop:hic-2022-hatch-strg-profile",
+          "locator": "image px {\"break_px\": 267.0}",
+          "evidence": "Image feature located by algorithm: second breakpoint of the same fit",
+          "as_printed": "",
+          "applicability": {
+            "year": "2022",
+            "market": "US",
+            "trim": "Sport Touring",
+            "body": "hatchback",
+            "gearbox": "n/a (exterior render)",
+            "engine": "1.5T",
+            "notes": "Exterior body identical 2022-2024 per Honda spec tables (length, width, height, wheelbase, track unchanged)"
+          },
+          "confidence": "medium",
+          "range": [
+            -1.0128708305485172,
+            -0.9073923950634025
+          ],
+          "how_to_measure": "Measure from front hub centre to the top edge of the windshield glass (plumb), +-10 mm.",
+          "notes": "1-sigma 0.02637 m; range = +-2 sigma (localisation + scale + perspective).",
+          "derivation": {
+            "script": "scripts/domains/photo_measure_side.py",
+            "function": "main",
+            "inputs": {
+              "image": "https://www.hondainfocenter.com/-/media/Honda-Sales-Tool-Media-Folder/Images/2022-Civic-Hatchback/Profile-Headers/22_CivicHatchback_STRG_Header_RR.ashx",
+              "dimensions.wheelbase_mm": 2735.0,
+              "tyre": "P235/40 R18 (nominal 645.2 mm)"
+            },
+            "algorithm": "second breakpoint of the same fit",
+            "pixels": {
+              "break_px": 267.0
+            },
+            "scale_mm_per_px": {
+              "horizontal": 8.670273988153157,
+              "vertical": 8.764766322988079
+            }
+          }
+        }
+      ]
+    },
+    "proportions.windshield_angle": {
+      "description": "Windshield silhouette angle from horizontal",
+      "unit": "rad",
+      "impact": "low",
+      "candidates": [
+        {
+          "value": 0.7577830029422682,
+          "unit": "rad",
+          "status": "estimated",
+          "class": "D",
+          "source_id": "prop:hic-2022-hatch-strg-profile",
+          "locator": "image px {\"slopes_px\": [-0.10943893953089107, -0.9360392337805292, -0.13228067745845618], \"rms_px\": 1.2735616810222934}",
+          "evidence": "Image feature located by algorithm: atan of the middle-segment slope (scale-anisotropy corrected)",
+          "as_printed": "",
+          "applicability": {
+            "year": "2022",
+            "market": "US",
+            "trim": "Sport Touring",
+            "body": "hatchback",
+            "gearbox": "n/a (exterior render)",
+            "engine": "1.5T",
+            "notes": "Exterior body identical 2022-2024 per Honda spec tables (length, width, height, wheelbase, track unchanged)"
+          },
+          "confidence": "medium",
+          "range": [
+            0.687969832862495,
+            0.8275961730220414
+          ],
+          "how_to_measure": "Inclinometer on the glass at the centreline.",
+          "notes": "Silhouette (outer glass) line, not the glass at centreline; 2 deg sigma. 1-sigma 0.03491 rad; range = +-2 sigma (localisation + scale + perspective).",
+          "derivation": {
+            "script": "scripts/domains/photo_measure_side.py",
+            "function": "main",
+            "inputs": {
+              "image": "https://www.hondainfocenter.com/-/media/Honda-Sales-Tool-Media-Folder/Images/2022-Civic-Hatchback/Profile-Headers/22_CivicHatchback_STRG_Header_RR.ashx",
+              "dimensions.wheelbase_mm": 2735.0,
+              "tyre": "P235/40 R18 (nominal 645.2 mm)"
+            },
+            "algorithm": "atan of the middle-segment slope (scale-anisotropy corrected)",
+            "pixels": {
+              "slopes_px": [
+                -0.10943893953089107,
+                -0.9360392337805292,
+                -0.13228067745845618
+              ],
+              "rms_px": 1.2735616810222934
+            },
+            "scale_mm_per_px": {
+              "horizontal": 8.670273988153157,
+              "vertical": 8.764766322988079
+            }
+          }
+        }
+      ]
+    },
+    "proportions.hatch_angle": {
+      "description": "Rear hatch glass silhouette angle from horizontal",
+      "unit": "rad",
+      "impact": "medium",
+      "candidates": [
+        {
+          "value": 0.3516512468524677,
+          "unit": "rad",
+          "status": "estimated",
+          "class": "D",
+          "source_id": "prop:hic-2022-hatch-strg-profile",
+          "locator": "image px {\"slopes_px\": [0.04200071345960045, 0.3629453607260047, 5.808787094945763], \"breaks_px\": [437.0, 552.0], \"segment_used\": 1, \"rms_px\": 2.2783884020587033}",
+          "evidence": "Image feature located by algorithm: continuous 3-segment line fit to the top profile, roof peak -> rear extreme; steepest of the first two segments",
+          "as_printed": "",
+          "applicability": {
+            "year": "2022",
+            "market": "US",
+            "trim": "Sport Touring",
+            "body": "hatchback",
+            "gearbox": "n/a (exterior render)",
+            "engine": "1.5T",
+            "notes": "Exterior body identical 2022-2024 per Honda spec tables (length, width, height, wheelbase, track unchanged)"
+          },
+          "confidence": "low",
+          "range": [
+            0.2643847842527512,
+            0.43891770945218417
+          ],
+          "how_to_measure": "Inclinometer on the hatch glass at the centreline.",
+          "notes": "Includes the effect of the roof spoiler on the silhouette; 2.5 deg sigma. 1-sigma 0.04363 rad; range = +-2 sigma (localisation + scale + perspective).",
+          "derivation": {
+            "script": "scripts/domains/photo_measure_side.py",
+            "function": "main",
+            "inputs": {
+              "image": "https://www.hondainfocenter.com/-/media/Honda-Sales-Tool-Media-Folder/Images/2022-Civic-Hatchback/Profile-Headers/22_CivicHatchback_STRG_Header_RR.ashx",
+              "dimensions.wheelbase_mm": 2735.0,
+              "tyre": "P235/40 R18 (nominal 645.2 mm)"
+            },
+            "algorithm": "continuous 3-segment line fit to the top profile, roof peak -> rear extreme; steepest of the first two segments",
+            "pixels": {
+              "slopes_px": [
+                0.04200071345960045,
+                0.3629453607260047,
+                5.808787094945763
+              ],
+              "breaks_px": [
+                437.0,
+                552.0
+              ],
+              "segment_used": 1,
+              "rms_px": 2.2783884020587033
+            },
+            "scale_mm_per_px": {
+              "horizontal": 8.670273988153157,
+              "vertical": 8.764766322988079
+            }
+          }
+        }
+      ]
+    },
+    "proportions.hatch_glass_top_y": {
+      "description": "Start of the rear slope (first rear breakpoint): Y",
+      "unit": "m",
+      "impact": "low",
+      "candidates": [
+        {
+          "value": -2.4340781907919964,
+          "unit": "m",
+          "status": "estimated",
+          "class": "D",
+          "source_id": "prop:hic-2022-hatch-strg-profile",
+          "locator": "image px {\"break_px\": 437.0}",
+          "evidence": "Image feature located by algorithm: first breakpoint of the rear fit",
+          "as_printed": "",
+          "applicability": {
+            "year": "2022",
+            "market": "US",
+            "trim": "Sport Touring",
+            "body": "hatchback",
+            "gearbox": "n/a (exterior render)",
+            "engine": "1.5T",
+            "notes": "Exterior body identical 2022-2024 per Honda spec tables (length, width, height, wheelbase, track unchanged)"
+          },
+          "confidence": "medium",
+          "range": [
+            -2.4868174085345536,
+            -2.381338973049439
+          ],
+          "how_to_measure": "Plumb from the roof-spoiler trailing edge, measure from front hub centre.",
+          "notes": "1-sigma 0.02637 m; range = +-2 sigma (localisation + scale + perspective).",
+          "derivation": {
+            "script": "scripts/domains/photo_measure_side.py",
+            "function": "main",
+            "inputs": {
+              "image": "https://www.hondainfocenter.com/-/media/Honda-Sales-Tool-Media-Folder/Images/2022-Civic-Hatchback/Profile-Headers/22_CivicHatchback_STRG_Header_RR.ashx",
+              "dimensions.wheelbase_mm": 2735.0,
+              "tyre": "P235/40 R18 (nominal 645.2 mm)"
+            },
+            "algorithm": "first breakpoint of the rear fit",
+            "pixels": {
+              "break_px": 437.0
+            },
+            "scale_mm_per_px": {
+              "horizontal": 8.670273988153157,
+              "vertical": 8.764766322988079
+            }
+          }
+        }
+      ]
+    },
+    "proportions.hood_z_at_front_axle": {
+      "description": "Top silhouette (hood) height at the front-axle station (Y = 0)",
+      "unit": "m",
+      "impact": "medium",
+      "candidates": [
+        {
+          "value": 0.9566884021644556,
+          "unit": "m",
+          "status": "estimated",
+          "class": "D",
+          "source_id": "prop:hic-2022-hatch-strg-profile",
+          "locator": "image px {\"col\": 156, \"row\": 79}",
+          "evidence": "Image feature located by algorithm: top silhouette row at the fitted front wheel centre column",
+          "as_printed": "",
+          "applicability": {
+            "year": "2022",
+            "market": "US",
+            "trim": "Sport Touring",
+            "body": "hatchback",
+            "gearbox": "n/a (exterior render)",
+            "engine": "1.5T",
+            "notes": "Exterior body identical 2022-2024 per Honda spec tables (length, width, height, wheelbase, track unchanged)"
+          },
+          "confidence": "low",
+          "range": [
+            0.3000627728335772,
+            1.613314031495334
+          ],
+          "how_to_measure": "Straightedge across the hood above the front hub; tape to floor (+-5 mm).",
+          "notes": "1-sigma 0.3283 m; range = +-2 sigma (localisation + scale + perspective).",
+          "derivation": {
+            "script": "scripts/domains/photo_measure_side.py",
+            "function": "main",
+            "inputs": {
+              "image": "https://www.hondainfocenter.com/-/media/Honda-Sales-Tool-Media-Folder/Images/2022-Civic-Hatchback/Profile-Headers/22_CivicHatchback_STRG_Header_RR.ashx",
+              "dimensions.wheelbase_mm": 2735.0,
+              "tyre": "P235/40 R18 (nominal 645.2 mm)"
+            },
+            "algorithm": "top silhouette row at the fitted front wheel centre column",
+            "pixels": {
+              "col": 156,
+              "row": 79
+            },
+            "scale_mm_per_px": {
+              "horizontal": 8.670273988153157,
+              "vertical": 8.764766322988079
+            }
+          }
+        }
+      ]
+    },
+    "proportions.sill_z_mid_wheelbase": {
+      "description": "Side sill (rocker) lower edge height at mid-wheelbase",
+      "unit": "m",
+      "impact": "medium",
+      "candidates": [
+        {
+          "value": 0.19853611522598685,
+          "unit": "m",
+          "status": "estimated",
+          "class": "D",
+          "source_id": "prop:hic-2022-hatch-strg-profile",
+          "locator": "image px {\"cols\": [304, 324], \"rows_median\": 165.0}",
+          "evidence": "Image feature located by algorithm: lowest opaque row (median over 21 columns) at mid-wheelbase",
+          "as_printed": "",
+          "applicability": {
+            "year": "2022",
+            "market": "US",
+            "trim": "Sport Touring",
+            "body": "hatchback",
+            "gearbox": "n/a (exterior render)",
+            "engine": "1.5T",
+            "notes": "Exterior body identical 2022-2024 per Honda spec tables (length, width, height, wheelbase, track unchanged)"
+          },
+          "confidence": "low",
+          "range": [
+            0.058736687496884876,
+            0.33833554295508883
+          ],
+          "how_to_measure": "Tape from floor to the sill lower edge at mid-wheelbase, both sides (+-3 mm).",
+          "notes": "Not the same quantity as the published minimum ground clearance (134 mm, no-load). 1-sigma 0.0699 m; range = +-2 sigma (localisation + scale + perspective).",
+          "derivation": {
+            "script": "scripts/domains/photo_measure_side.py",
+            "function": "main",
+            "inputs": {
+              "image": "https://www.hondainfocenter.com/-/media/Honda-Sales-Tool-Media-Folder/Images/2022-Civic-Hatchback/Profile-Headers/22_CivicHatchback_STRG_Header_RR.ashx",
+              "dimensions.wheelbase_mm": 2735.0,
+              "tyre": "P235/40 R18 (nominal 645.2 mm)"
+            },
+            "algorithm": "lowest opaque row (median over 21 columns) at mid-wheelbase",
+            "pixels": {
+              "cols": [
+                304,
+                324
+              ],
+              "rows_median": 165.0
+            },
+            "scale_mm_per_px": {
+              "horizontal": 8.670273988153157,
+              "vertical": 8.764766322988079
+            }
+          }
+        }
+      ]
+    },
+    "proportions.wheel_center_z_front": {
+      "description": "Front wheel centre height above ground (photo)",
+      "unit": "m",
+      "impact": "medium",
+      "candidates": [
+        {
+          "value": 0.3140702597009457,
+          "unit": "m",
+          "status": "estimated",
+          "class": "D",
+          "source_id": "prop:hic-2022-hatch-strg-profile",
+          "locator": "image px {\"cx\": 156.2616756843141, \"cy\": 152.31834287219525}",
+          "evidence": "Image feature located by algorithm: least-squares circle fit to tyre edge",
+          "as_printed": "",
+          "applicability": {
+            "year": "2022",
+            "market": "US",
+            "trim": "Sport Touring",
+            "body": "hatchback",
+            "gearbox": "n/a (exterior render)",
+            "engine": "1.5T",
+            "notes": "Exterior body identical 2022-2024 per Honda spec tables (length, width, height, wheelbase, track unchanged)"
+          },
+          "confidence": "low",
+          "range": [
+            0.09818956912041216,
+            0.5299509502814792
+          ],
+          "how_to_measure": "Tape from floor to hub centre (+-2 mm).",
+          "notes": "In a render the tyre is undeflected; a real loaded tyre sits ~10-20 mm lower. Equals the unloaded tyre radius here. 1-sigma 0.1079 m; range = +-2 sigma (localisation + scale + perspective).",
+          "derivation": {
+            "script": "scripts/domains/photo_measure_side.py",
+            "function": "main",
+            "inputs": {
+              "image": "https://www.hondainfocenter.com/-/media/Honda-Sales-Tool-Media-Folder/Images/2022-Civic-Hatchback/Profile-Headers/22_CivicHatchback_STRG_Header_RR.ashx",
+              "dimensions.wheelbase_mm": 2735.0,
+              "tyre": "P235/40 R18 (nominal 645.2 mm)"
+            },
+            "algorithm": "least-squares circle fit to tyre edge",
+            "pixels": {
+              "cx": 156.2616756843141,
+              "cy": 152.31834287219525
+            },
+            "scale_mm_per_px": {
+              "horizontal": 8.670273988153157,
+              "vertical": 8.764766322988079
+            }
+          }
+        }
+      ]
+    },
+    "proportions.arch_gap_front": {
+      "description": "Front wheel centre to wheel-arch lip (vertical, photo)",
+      "unit": "m",
+      "impact": "high",
+      "candidates": [
+        {
+          "value": 0.40158706858133775,
+          "unit": "m",
+          "status": "estimated",
+          "class": "D",
+          "source_id": "prop:hic-2022-hatch-strg-profile",
+          "locator": "image px {\"col\": 156, \"arch_row\": 107, \"cy\": 152.31834287219525}",
+          "evidence": "Image feature located by algorithm: first run of >=3 body-coloured px (Lab distance < 30 to door-box median) scanning up from tyre top",
+          "as_printed": "",
+          "applicability": {
+            "year": "2022",
+            "market": "US",
+            "trim": "Sport Touring",
+            "body": "hatchback",
+            "gearbox": "n/a (exterior render)",
+            "engine": "1.5T",
+            "notes": "Exterior body identical 2022-2024 per Honda spec tables (length, width, height, wheelbase, track unchanged)"
+          },
+          "confidence": "low",
+          "range": [
+            0.1283094733792292,
+            0.6748646637834463
+          ],
+          "how_to_measure": "Tape from hub centre to the arch lip directly above it, car at curb weight (+-2 mm). Primary ride-height reference.",
+          "notes": "1-sigma 0.1366 m; range = +-2 sigma (localisation + scale + perspective).",
+          "derivation": {
+            "script": "scripts/domains/photo_measure_side.py",
+            "function": "main",
+            "inputs": {
+              "image": "https://www.hondainfocenter.com/-/media/Honda-Sales-Tool-Media-Folder/Images/2022-Civic-Hatchback/Profile-Headers/22_CivicHatchback_STRG_Header_RR.ashx",
+              "dimensions.wheelbase_mm": 2735.0,
+              "tyre": "P235/40 R18 (nominal 645.2 mm)"
+            },
+            "algorithm": "first run of >=3 body-coloured px (Lab distance < 30 to door-box median) scanning up from tyre top",
+            "pixels": {
+              "col": 156,
+              "arch_row": 107,
+              "cy": 152.31834287219525
+            },
+            "scale_mm_per_px": {
+              "horizontal": 8.670273988153157,
+              "vertical": 8.764766322988079
+            }
+          }
+        }
+      ]
+    },
+    "proportions.arch_top_z_front": {
+      "description": "Front wheel-arch lip height above ground (photo)",
+      "unit": "m",
+      "impact": "high",
+      "candidates": [
+        {
+          "value": 0.7156573282822836,
+          "unit": "m",
+          "status": "estimated",
+          "class": "D",
+          "source_id": "prop:hic-2022-hatch-strg-profile",
+          "locator": "image px {\"col\": 156, \"arch_row\": 107}",
+          "evidence": "Image feature located by algorithm: as above",
+          "as_printed": "",
+          "applicability": {
+            "year": "2022",
+            "market": "US",
+            "trim": "Sport Touring",
+            "body": "hatchback",
+            "gearbox": "n/a (exterior render)",
+            "engine": "1.5T",
+            "notes": "Exterior body identical 2022-2024 per Honda spec tables (length, width, height, wheelbase, track unchanged)"
+          },
+          "confidence": "low",
+          "range": [
+            0.22716555475455263,
+            1.2041491018100146
+          ],
+          "how_to_measure": "Tape from floor to the arch lip above the hub centre (+-2 mm).",
+          "notes": "1-sigma 0.2442 m; range = +-2 sigma (localisation + scale + perspective).",
+          "derivation": {
+            "script": "scripts/domains/photo_measure_side.py",
+            "function": "main",
+            "inputs": {
+              "image": "https://www.hondainfocenter.com/-/media/Honda-Sales-Tool-Media-Folder/Images/2022-Civic-Hatchback/Profile-Headers/22_CivicHatchback_STRG_Header_RR.ashx",
+              "dimensions.wheelbase_mm": 2735.0,
+              "tyre": "P235/40 R18 (nominal 645.2 mm)"
+            },
+            "algorithm": "as above",
+            "pixels": {
+              "col": 156,
+              "arch_row": 107
+            },
+            "scale_mm_per_px": {
+              "horizontal": 8.670273988153157,
+              "vertical": 8.764766322988079
+            }
+          }
+        }
+      ]
+    },
+    "proportions.wheel_center_z_rear": {
+      "description": "Rear wheel centre height above ground (photo)",
+      "unit": "m",
+      "impact": "medium",
+      "candidates": [
+        {
+          "value": 0.3116130878251355,
+          "unit": "m",
+          "status": "estimated",
+          "class": "D",
+          "source_id": "prop:hic-2022-hatch-strg-profile",
+          "locator": "image px {\"cx\": 471.7073010171507, \"cy\": 152.59868940800254}",
+          "evidence": "Image feature located by algorithm: least-squares circle fit to tyre edge",
+          "as_printed": "",
+          "applicability": {
+            "year": "2022",
+            "market": "US",
+            "trim": "Sport Touring",
+            "body": "hatchback",
+            "gearbox": "n/a (exterior render)",
+            "engine": "1.5T",
+            "notes": "Exterior body identical 2022-2024 per Honda spec tables (length, width, height, wheelbase, track unchanged)"
+          },
+          "confidence": "low",
+          "range": [
+            0.09741577955895026,
+            0.5258103960913207
+          ],
+          "how_to_measure": "Tape from floor to hub centre (+-2 mm).",
+          "notes": "In a render the tyre is undeflected; a real loaded tyre sits ~10-20 mm lower. Equals the unloaded tyre radius here. 1-sigma 0.1071 m; range = +-2 sigma (localisation + scale + perspective).",
+          "derivation": {
+            "script": "scripts/domains/photo_measure_side.py",
+            "function": "main",
+            "inputs": {
+              "image": "https://www.hondainfocenter.com/-/media/Honda-Sales-Tool-Media-Folder/Images/2022-Civic-Hatchback/Profile-Headers/22_CivicHatchback_STRG_Header_RR.ashx",
+              "dimensions.wheelbase_mm": 2735.0,
+              "tyre": "P235/40 R18 (nominal 645.2 mm)"
+            },
+            "algorithm": "least-squares circle fit to tyre edge",
+            "pixels": {
+              "cx": 471.7073010171507,
+              "cy": 152.59868940800254
+            },
+            "scale_mm_per_px": {
+              "horizontal": 8.670273988153157,
+              "vertical": 8.764766322988079
+            }
+          }
+        }
+      ]
+    },
+    "proportions.arch_gap_rear": {
+      "description": "Rear wheel centre to wheel-arch lip (vertical, photo)",
+      "unit": "m",
+      "impact": "high",
+      "candidates": [
+        {
+          "value": 0.3952794741341598,
+          "unit": "m",
+          "status": "estimated",
+          "class": "D",
+          "source_id": "prop:hic-2022-hatch-strg-profile",
+          "locator": "image px {\"col\": 472, \"arch_row\": 108, \"cy\": 152.59868940800254}",
+          "evidence": "Image feature located by algorithm: first run of >=3 body-coloured px (Lab distance < 30 to door-box median) scanning up from tyre top",
+          "as_printed": "",
+          "applicability": {
+            "year": "2022",
+            "market": "US",
+            "trim": "Sport Touring",
+            "body": "hatchback",
+            "gearbox": "n/a (exterior render)",
+            "engine": "1.5T",
+            "notes": "Exterior body identical 2022-2024 per Honda spec tables (length, width, height, wheelbase, track unchanged)"
+          },
+          "confidence": "low",
+          "range": [
+            0.12631901692946051,
+            0.6642399313388592
+          ],
+          "how_to_measure": "Tape from hub centre to the arch lip directly above it, car at curb weight (+-2 mm). Primary ride-height reference.",
+          "notes": "1-sigma 0.1345 m; range = +-2 sigma (localisation + scale + perspective).",
+          "derivation": {
+            "script": "scripts/domains/photo_measure_side.py",
+            "function": "main",
+            "inputs": {
+              "image": "https://www.hondainfocenter.com/-/media/Honda-Sales-Tool-Media-Folder/Images/2022-Civic-Hatchback/Profile-Headers/22_CivicHatchback_STRG_Header_RR.ashx",
+              "dimensions.wheelbase_mm": 2735.0,
+              "tyre": "P235/40 R18 (nominal 645.2 mm)"
+            },
+            "algorithm": "first run of >=3 body-coloured px (Lab distance < 30 to door-box median) scanning up from tyre top",
+            "pixels": {
+              "col": 472,
+              "arch_row": 108,
+              "cy": 152.59868940800254
+            },
+            "scale_mm_per_px": {
+              "horizontal": 8.670273988153157,
+              "vertical": 8.764766322988079
+            }
+          }
+        }
+      ]
+    },
+    "proportions.arch_top_z_rear": {
+      "description": "Rear wheel-arch lip height above ground (photo)",
+      "unit": "m",
+      "impact": "high",
+      "candidates": [
+        {
+          "value": 0.7068925619592954,
+          "unit": "m",
+          "status": "estimated",
+          "class": "D",
+          "source_id": "prop:hic-2022-hatch-strg-profile",
+          "locator": "image px {\"col\": 472, \"arch_row\": 108}",
+          "evidence": "Image feature located by algorithm: as above",
+          "as_printed": "",
+          "applicability": {
+            "year": "2022",
+            "market": "US",
+            "trim": "Sport Touring",
+            "body": "hatchback",
+            "gearbox": "n/a (exterior render)",
+            "engine": "1.5T",
+            "notes": "Exterior body identical 2022-2024 per Honda spec tables (length, width, height, wheelbase, track unchanged)"
+          },
+          "confidence": "low",
+          "range": [
+            0.224410534079249,
+            1.1893745898393417
+          ],
+          "how_to_measure": "Tape from floor to the arch lip above the hub centre (+-2 mm).",
+          "notes": "1-sigma 0.2412 m; range = +-2 sigma (localisation + scale + perspective).",
+          "derivation": {
+            "script": "scripts/domains/photo_measure_side.py",
+            "function": "main",
+            "inputs": {
+              "image": "https://www.hondainfocenter.com/-/media/Honda-Sales-Tool-Media-Folder/Images/2022-Civic-Hatchback/Profile-Headers/22_CivicHatchback_STRG_Header_RR.ashx",
+              "dimensions.wheelbase_mm": 2735.0,
+              "tyre": "P235/40 R18 (nominal 645.2 mm)"
+            },
+            "algorithm": "as above",
+            "pixels": {
+              "col": 472,
+              "arch_row": 108
+            },
+            "scale_mm_per_px": {
+              "horizontal": 8.670273988153157,
+              "vertical": 8.764766322988079
+            }
+          }
+        }
+      ]
+    },
+    "proportions.rim_to_tyre_ratio_rear": {
+      "description": "rear visible rim diameter / tyre diameter (photo)",
+      "unit": "1",
+      "impact": "low",
+      "candidates": [
+        {
+          "value": 0.6689713813413677,
+          "unit": "1",
+          "status": "estimated",
+          "class": "D",
+          "source_id": "prop:hic-2022-hatch-strg-profile",
+          "locator": "image px {\"rim_r_px\": 28.899999618530273, \"tyre_r_px\": 43.20065166402532}",
+          "evidence": "Image feature located by algorithm: concentric HoughCircles",
+          "as_printed": "",
+          "applicability": {
+            "year": "2022",
+            "market": "US",
+            "trim": "Sport Touring",
+            "body": "hatchback",
+            "gearbox": "n/a (exterior render)",
+            "engine": "1.5T",
+            "notes": "Exterior body identical 2022-2024 per Honda spec tables (length, width, height, wheelbase, track unchanged)"
+          },
+          "confidence": "medium",
+          "range": [
+            0.6226757834056201,
+            0.7152669792771152
+          ],
+          "how_to_measure": "Measure rim flange and tyre diameters.",
+          "notes": "Nominal 18 in / 645.2 mm = 0.709; visible rim lip is slightly smaller than the bead seat diameter. 1-sigma 0.02315 1; range = +-2 sigma (localisation + scale + perspective).",
+          "derivation": {
+            "script": "scripts/domains/photo_measure_side.py",
+            "function": "main",
+            "inputs": {
+              "image": "https://www.hondainfocenter.com/-/media/Honda-Sales-Tool-Media-Folder/Images/2022-Civic-Hatchback/Profile-Headers/22_CivicHatchback_STRG_Header_RR.ashx",
+              "dimensions.wheelbase_mm": 2735.0,
+              "tyre": "P235/40 R18 (nominal 645.2 mm)"
+            },
+            "algorithm": "concentric HoughCircles",
+            "pixels": {
+              "rim_r_px": 28.899999618530273,
+              "tyre_r_px": 43.20065166402532
+            },
+            "scale_mm_per_px": {
+              "horizontal": 8.670273988153157,
+              "vertical": 8.764766322988079
+            }
+          }
+        }
+      ]
+    },
+    "proportions.mirror_y": {
+      "description": "Side-mirror longitudinal position",
+      "unit": "m",
+      "impact": "low",
+      "candidates": [
+        {
+          "value": null,
+          "unit": "m",
+          "status": "unknown",
+          "class": null,
+          "source_id": null,
+          "locator": "",
+          "evidence": "",
+          "as_printed": "",
+          "applicability": {},
+          "confidence": "none",
+          "range": null,
+          "how_to_measure": "Long-lens (>=200 mm equiv.) straight-on front photo from >=15 m with a tape on the ground, or tape the mirror glass centre position from the front hub centre and floor directly.",
+          "notes": "Needs a straight-on front-view image or direct measurement.",
+          "searches": [
+            "Only one straight-on manufacturer view found (the 620x200 side render above); hondanews.com/hondanews.ca 2022 galleries contain only 3/4 and action shots; automobiles.honda.com configurator is 403 (blocked); no straight-on front/rear press view located",
+            "The mirror in the side render overlaps the A-pillar/glass and has no algorithmically separable outline at 9 mm/px"
+          ]
+        }
+      ]
+    },
+    "proportions.mirror_z": {
+      "description": "Side-mirror height",
+      "unit": "m",
+      "impact": "low",
+      "candidates": [
+        {
+          "value": null,
+          "unit": "m",
+          "status": "unknown",
+          "class": null,
+          "source_id": null,
+          "locator": "",
+          "evidence": "",
+          "as_printed": "",
+          "applicability": {},
+          "confidence": "none",
+          "range": null,
+          "how_to_measure": "Long-lens (>=200 mm equiv.) straight-on front photo from >=15 m with a tape on the ground, or tape the mirror glass centre position from the front hub centre and floor directly.",
+          "notes": "Needs a straight-on front-view image or direct measurement.",
+          "searches": [
+            "Only one straight-on manufacturer view found (the 620x200 side render above); hondanews.com/hondanews.ca 2022 galleries contain only 3/4 and action shots; automobiles.honda.com configurator is 403 (blocked); no straight-on front/rear press view located",
+            "The mirror in the side render overlaps the A-pillar/glass and has no algorithmically separable outline at 9 mm/px"
+          ]
+        }
+      ]
+    },
+    "proportions.mirror_width_ratio": {
+      "description": "Mirror-to-mirror width / body width (front view)",
+      "unit": "1",
+      "impact": "low",
+      "candidates": [
+        {
+          "value": null,
+          "unit": "1",
+          "status": "unknown",
+          "class": null,
+          "source_id": null,
+          "locator": "",
+          "evidence": "",
+          "as_printed": "",
+          "applicability": {},
+          "confidence": "none",
+          "range": null,
+          "how_to_measure": "Long-lens (>=200 mm equiv.) straight-on front photo from >=15 m with a tape on the ground, or tape the mirror glass centre position from the front hub centre and floor directly.",
+          "notes": "Needs a straight-on front-view image or direct measurement.",
+          "searches": [
+            "Only one straight-on manufacturer view found (the 620x200 side render above); hondanews.com/hondanews.ca 2022 galleries contain only 3/4 and action shots; automobiles.honda.com configurator is 403 (blocked); no straight-on front/rear press view located",
+            "The mirror in the side render overlaps the A-pillar/glass and has no algorithmically separable outline at 9 mm/px"
+          ]
+        }
+      ]
+    },
+    "proportions.front_view_track_ratio": {
+      "description": "Front-view tyre centre spacing / body width",
+      "unit": "1",
+      "impact": "low",
+      "candidates": [
+        {
+          "value": null,
+          "unit": "1",
+          "status": "unknown",
+          "class": null,
+          "source_id": null,
+          "locator": "",
+          "evidence": "",
+          "as_printed": "",
+          "applicability": {},
+          "confidence": "none",
+          "range": null,
+          "how_to_measure": "Long-lens (>=200 mm equiv.) straight-on front photo from >=15 m with a tape on the ground, or tape the mirror glass centre position from the front hub centre and floor directly.",
+          "notes": "Needs a straight-on front-view image or direct measurement.",
+          "searches": [
+            "Only one straight-on manufacturer view found (the 620x200 side render above); hondanews.com/hondanews.ca 2022 galleries contain only 3/4 and action shots; automobiles.honda.com configurator is 403 (blocked); no straight-on front/rear press view located",
+            "The mirror in the side render overlaps the A-pillar/glass and has no algorithmically separable outline at 9 mm/px"
+          ]
+        }
+      ]
+    }
+  },
+  "measurements": {
+    "wheel_front": {
+      "hough_px": [
+        156.375,
+        152.375,
+        29.125
+      ],
+      "cx": 156.2616756843141,
+      "cy": 152.31834287219525,
+      "r": 28.475895964565716,
+      "fit_resid_px": 0.6853591820060184,
+      "n_edge_pts": 1522,
+      "ellipse_semi_x": 28.498601616007697,
+      "ellipse_semi_y": 28.518953641041694,
+      "rim_r": null
+    },
+    "wheel_rear": {
+      "hough_px": [
+        471.375,
+        152.625,
+        42.849998474121094
+      ],
+      "cx": 471.7073010171507,
+      "cy": 152.59868940800254,
+      "r": 43.20065166402532,
+      "fit_resid_px": 0.38957316294323685,
+      "n_edge_pts": 493,
+      "ellipse_semi_x": 43.665593930868816,
+      "ellipse_semi_y": 42.8672447433978,
+      "rim_r": 28.899999618530273
+    },
+    "image": {
+      "url": "https://www.hondainfocenter.com/-/media/Honda-Sales-Tool-Media-Folder/Images/2022-Civic-Hatchback/Profile-Headers/22_CivicHatchback_STRG_Header_RR.ashx",
+      "page": "https://www.hondainfocenter.com/2024/Civic-Hatchback/",
+      "size_px": [
+        620,
+        200
+      ],
+      "local_cache": "cache/photos/22_CivicHatchback_STRG_Header_RR.png"
+    },
+    "silhouette": {
+      "alpha_threshold": 250,
+      "x_min": 58,
+      "x_max": 563,
+      "roof_row": 25
+    },
+    "scale": {
+      "s_wheelbase_mm_per_px": 8.670273988153157,
+      "s_tyre_mm_per_px": 8.940721851196834,
+      "s_vertical_mm_per_px": 8.764766322988079,
+      "wheel_ellipse_aspect_y_over_x": 0.989219069698745,
+      "front_rear_tyre_radius_ratio": 0.6591543152178554,
+      "relative_scale_error_1sigma": 0.3431151792053298,
+      "wheelbase_px": 315.4456253328366,
+      "inputs": {
+        "wheelbase_mm": 2735.0,
+        "tyre_nominal_diameter_mm": 645.2,
+        "published_length_mm": 4529.0,
+        "published_height_mm": 1415.0
+      }
+    },
+    "ground": {
+      "y_ground_fit_px": 188.15161533231864,
+      "lowest_opaque_rows_px": [
+        188.5,
+        188.35714285714286
+      ]
+    },
+    "top_profile_fits": {
+      "front": {
+        "break1_x": 226.0,
+        "break2_x": 267.0,
+        "slopes": [
+          -0.10943893953089107,
+          -0.9360392337805292,
+          -0.13228067745845618
+        ],
+        "rms_px": 1.2735616810222934
+      },
+      "rear": {
+        "break1_x": 437.0,
+        "break2_x": 552.0,
+        "slopes": [
+          0.04200071345960045,
+          0.3629453607260047,
+          5.808787094945763
+        ],
+        "rms_px": 2.2783884020587033
+      }
+    },
+    "body_colour_lab": [
+      96.0,
+      187.0,
+      171.0
+    ],
+    "door_box_px": [
+      266,
+      94,
+      361,
+      130
+    ]
+  },
+  "updated": "2026-10-03"
+}

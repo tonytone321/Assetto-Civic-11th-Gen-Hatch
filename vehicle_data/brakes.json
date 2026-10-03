@@ -1,0 +1,693 @@
+{
+  "domain": "brakes",
+  "title": "Brakes",
+  "schema_version": 1,
+  "updated": "2026-10-03",
+  "sources": {
+    "d7:hondanews-ca-2024-hatch-specs": {
+      "title": "2024 Honda Civic Hatchback Specifications (April 4, 2024)",
+      "url": "https://hondanews.ca/en-CA/releases/release-1128768177ab00a73471b1938c152ddf-2024-honda-civic-hatchback-specifications",
+      "publisher": "Honda Canada (newsroom)",
+      "class": "A",
+      "accessed": "2026-10-03",
+      "access_method": "static",
+      "applicability": "2024 Civic Hatchback Sport and Sport Touring, Canada",
+      "notes": "",
+      "cache_file": "cache/pages/22157798d6e48e1c.txt"
+    },
+    "d7:hondainfocenter-us-2024-hatch-specs": {
+      "title": "2024 Civic Hatchback Specifications (Honda Info Center)",
+      "url": "https://www.hondainfocenter.com/2024/Civic-Hatchback/Feature-Guide/Civic-Hatchback-Specifications/",
+      "publisher": "American Honda Motor Co.",
+      "class": "A",
+      "accessed": "2026-10-03",
+      "access_method": "static",
+      "applicability": "2024 Civic Hatchback LX/Sport/EX-L/Sport Touring, US",
+      "notes": "",
+      "cache_file": "cache/pages/b67f7f855816944e.txt"
+    },
+    "d7:hondanews-us-2022-hatch-presskit": {
+      "title": "2022 Honda Civic Hatchback Press Kit (September 29, 2021)",
+      "url": "https://hondanews.com/en-US/releases/release-20c92b0d934f0bc63982bd3eee0149e9-2022-honda-civic-hatchback-press-kit",
+      "publisher": "American Honda (hondanews.com)",
+      "class": "A",
+      "accessed": "2026-10-03",
+      "access_method": "rendered",
+      "applicability": "2022 Civic Hatchback, US",
+      "notes": "",
+      "cache_file": "cache/pages/9964dff4363f93bf.txt"
+    },
+    "d7:hondapartsnow-2024-calipers": {
+      "title": "Genuine 2024 Honda Civic Brake Caliper",
+      "url": "https://www.hondapartsnow.com/oem-2024-honda-civic-brake_caliper.html",
+      "publisher": "HondaPartsNow (Genuine Parts Now, Inc., Honda parts retailer)",
+      "class": "C",
+      "accessed": "2026-10-03",
+      "access_method": "static",
+      "applicability": "2024 Civic all bodies, US parts catalog data",
+      "notes": "",
+      "cache_file": "cache/pages/b5ec7718f9eca09d.txt"
+    }
+  },
+  "parameters": {
+    "brakes.front_rotor_diameter": {
+      "description": "Front rotor diameter",
+      "unit": "m",
+      "impact": "high",
+      "candidates": [
+        {
+          "printed": {
+            "value": 11.1,
+            "unit": "in"
+          },
+          "value": 0.28193999999999997,
+          "unit": "m",
+          "status": "confirmed",
+          "class": "A",
+          "source_id": "d7:hondainfocenter-us-2024-hatch-specs",
+          "locator": "Chassis table, 'Power-Assisted Ventilated Front Disc/Solid Rear Disc Brakes (front/rear)', 4th column",
+          "evidence": "Power-Assisted Ventilated Front Disc/Solid Rear Disc Brakes (front/rear) 11.1 in / 10.2 in 11.1 in / 10.2 in 11.1 in / 10.2 in 11.1 in / 10.2 in",
+          "as_printed": "11.1 in",
+          "applicability": {
+            "year": "2024",
+            "market": "US",
+            "trim": "Sport Touring",
+            "body": "hatchback",
+            "gearbox": "6MT and CVT",
+            "engine": "1.5T",
+            "notes": "US spec table, Sport Touring column (4th of LX/Sport/EX-L/Sport Touring)"
+          },
+          "confidence": "high",
+          "range": null,
+          "how_to_measure": null,
+          "notes": "Canada 2024 table lists the brake type but no sizes."
+        },
+        {
+          "printed": {
+            "value": 11.1,
+            "unit": "in"
+          },
+          "value": 0.28193999999999997,
+          "unit": "m",
+          "status": "confirmed",
+          "class": "A",
+          "source_id": "d7:hondanews-us-2022-hatch-presskit",
+          "locator": "Chassis section, 'Brake Changes Improve Fuel Efficiency'",
+          "evidence": "All 2022 Civic trims are equipped with 11.1-inch diameter ventilated front brake rotors (0.9-inch rotor thickness) clamped by single-piston brake calipers. The rear disc brakes incorporate 10.2-inch diameter solid rotors (0.4-inch rotor thickness) paired with single-piston calipers.",
+          "as_printed": "11.1-inch",
+          "applicability": {
+            "year": "2022",
+            "market": "US",
+            "trim": "all Civic trims (Sedan and Hatchback)",
+            "body": "hatchback",
+            "gearbox": "all",
+            "engine": "1.5T and 2.0",
+            "notes": "Press kit statement covers all 2022 Civic trims"
+          },
+          "confidence": "high",
+          "range": null,
+          "how_to_measure": null,
+          "notes": "Press kit for all 2022 Civic trims; 2024 US spec table repeats 11.1/10.2 in for all hatch trims (no model-year change found). Printed to 0.1 in: ±1.3 mm diameter, ±1.3 mm thickness."
+        }
+      ]
+    },
+    "brakes.rear_rotor_diameter": {
+      "description": "Rear rotor diameter",
+      "unit": "m",
+      "impact": "high",
+      "candidates": [
+        {
+          "printed": {
+            "value": 10.2,
+            "unit": "in"
+          },
+          "value": 0.25908,
+          "unit": "m",
+          "status": "confirmed",
+          "class": "A",
+          "source_id": "d7:hondainfocenter-us-2024-hatch-specs",
+          "locator": "Chassis table, 'Power-Assisted Ventilated Front Disc/Solid Rear Disc Brakes (front/rear)', 4th column",
+          "evidence": "Power-Assisted Ventilated Front Disc/Solid Rear Disc Brakes (front/rear) 11.1 in / 10.2 in 11.1 in / 10.2 in 11.1 in / 10.2 in 11.1 in / 10.2 in",
+          "as_printed": "10.2 in",
+          "applicability": {
+            "year": "2024",
+            "market": "US",
+            "trim": "Sport Touring",
+            "body": "hatchback",
+            "gearbox": "6MT and CVT",
+            "engine": "1.5T",
+            "notes": "US spec table, Sport Touring column (4th of LX/Sport/EX-L/Sport Touring)"
+          },
+          "confidence": "high",
+          "range": null,
+          "how_to_measure": null,
+          "notes": "Canada 2024 table lists the brake type but no sizes."
+        },
+        {
+          "printed": {
+            "value": 10.2,
+            "unit": "in"
+          },
+          "value": 0.25908,
+          "unit": "m",
+          "status": "confirmed",
+          "class": "A",
+          "source_id": "d7:hondanews-us-2022-hatch-presskit",
+          "locator": "Chassis section, 'Brake Changes Improve Fuel Efficiency'",
+          "evidence": "All 2022 Civic trims are equipped with 11.1-inch diameter ventilated front brake rotors (0.9-inch rotor thickness) clamped by single-piston brake calipers. The rear disc brakes incorporate 10.2-inch diameter solid rotors (0.4-inch rotor thickness) paired with single-piston calipers.",
+          "as_printed": "10.2-inch",
+          "applicability": {
+            "year": "2022",
+            "market": "US",
+            "trim": "all Civic trims (Sedan and Hatchback)",
+            "body": "hatchback",
+            "gearbox": "all",
+            "engine": "1.5T and 2.0",
+            "notes": "Press kit statement covers all 2022 Civic trims"
+          },
+          "confidence": "high",
+          "range": null,
+          "how_to_measure": null,
+          "notes": "Press kit for all 2022 Civic trims; 2024 US spec table repeats 11.1/10.2 in for all hatch trims (no model-year change found). Printed to 0.1 in: ±1.3 mm diameter, ±1.3 mm thickness."
+        }
+      ]
+    },
+    "brakes.front_rotor_thickness": {
+      "description": "Front rotor thickness (new)",
+      "unit": "m",
+      "impact": "medium",
+      "candidates": [
+        {
+          "printed": {
+            "value": 0.9,
+            "unit": "in"
+          },
+          "value": 0.02286,
+          "unit": "m",
+          "status": "confirmed",
+          "class": "A",
+          "source_id": "d7:hondanews-us-2022-hatch-presskit",
+          "locator": "Chassis section, 'Brake Changes Improve Fuel Efficiency'",
+          "evidence": "All 2022 Civic trims are equipped with 11.1-inch diameter ventilated front brake rotors (0.9-inch rotor thickness) clamped by single-piston brake calipers. The rear disc brakes incorporate 10.2-inch diameter solid rotors (0.4-inch rotor thickness) paired with single-piston calipers.",
+          "as_printed": "0.9-inch",
+          "applicability": {
+            "year": "2022",
+            "market": "US",
+            "trim": "all Civic trims (Sedan and Hatchback)",
+            "body": "hatchback",
+            "gearbox": "all",
+            "engine": "1.5T and 2.0",
+            "notes": "Press kit statement covers all 2022 Civic trims"
+          },
+          "confidence": "medium",
+          "range": null,
+          "how_to_measure": null,
+          "notes": "Press kit for all 2022 Civic trims; 2024 US spec table repeats 11.1/10.2 in for all hatch trims (no model-year change found). Printed to 0.1 in: ±1.3 mm diameter, ±1.3 mm thickness."
+        }
+      ]
+    },
+    "brakes.rear_rotor_thickness": {
+      "description": "Rear rotor thickness (new)",
+      "unit": "m",
+      "impact": "low",
+      "candidates": [
+        {
+          "printed": {
+            "value": 0.4,
+            "unit": "in"
+          },
+          "value": 0.01016,
+          "unit": "m",
+          "status": "confirmed",
+          "class": "A",
+          "source_id": "d7:hondanews-us-2022-hatch-presskit",
+          "locator": "Chassis section, 'Brake Changes Improve Fuel Efficiency'",
+          "evidence": "All 2022 Civic trims are equipped with 11.1-inch diameter ventilated front brake rotors (0.9-inch rotor thickness) clamped by single-piston brake calipers. The rear disc brakes incorporate 10.2-inch diameter solid rotors (0.4-inch rotor thickness) paired with single-piston calipers.",
+          "as_printed": "0.4-inch",
+          "applicability": {
+            "year": "2022",
+            "market": "US",
+            "trim": "all Civic trims (Sedan and Hatchback)",
+            "body": "hatchback",
+            "gearbox": "all",
+            "engine": "1.5T and 2.0",
+            "notes": "Press kit statement covers all 2022 Civic trims"
+          },
+          "confidence": "medium",
+          "range": null,
+          "how_to_measure": null,
+          "notes": "Press kit for all 2022 Civic trims; 2024 US spec table repeats 11.1/10.2 in for all hatch trims (no model-year change found). Printed to 0.1 in: ±1.3 mm diameter, ±1.3 mm thickness."
+        }
+      ]
+    },
+    "brakes.front_rotor_type": {
+      "description": "Front rotor type",
+      "unit": "text",
+      "impact": "medium",
+      "candidates": [
+        {
+          "value": "ventilated disc",
+          "unit": "text",
+          "status": "confirmed",
+          "class": "A",
+          "source_id": "d7:hondanews-ca-2024-hatch-specs",
+          "locator": "CHASSIS table",
+          "evidence": "Power-assisted, ventilated front disc/solid rear disc brakes",
+          "as_printed": "ventilated front disc",
+          "applicability": {
+            "year": "2024",
+            "market": "CA",
+            "trim": "Sport Touring",
+            "body": "hatchback",
+            "gearbox": "6MT and CVT (table covers both)",
+            "engine": "1.5T",
+            "notes": ""
+          },
+          "confidence": "high",
+          "range": null,
+          "how_to_measure": null,
+          "notes": ""
+        }
+      ]
+    },
+    "brakes.rear_rotor_type": {
+      "description": "Rear rotor type",
+      "unit": "text",
+      "impact": "medium",
+      "candidates": [
+        {
+          "value": "solid disc",
+          "unit": "text",
+          "status": "confirmed",
+          "class": "A",
+          "source_id": "d7:hondanews-ca-2024-hatch-specs",
+          "locator": "CHASSIS table",
+          "evidence": "Power-assisted, ventilated front disc/solid rear disc brakes",
+          "as_printed": "solid rear disc",
+          "applicability": {
+            "year": "2024",
+            "market": "CA",
+            "trim": "Sport Touring",
+            "body": "hatchback",
+            "gearbox": "6MT and CVT (table covers both)",
+            "engine": "1.5T",
+            "notes": ""
+          },
+          "confidence": "high",
+          "range": null,
+          "how_to_measure": null,
+          "notes": ""
+        }
+      ]
+    },
+    "brakes.front_caliper_type": {
+      "description": "Front caliper type",
+      "unit": "text",
+      "impact": "medium",
+      "candidates": [
+        {
+          "value": "single-piston floating caliper",
+          "unit": "text",
+          "status": "confirmed",
+          "class": "A",
+          "source_id": "d7:hondanews-us-2022-hatch-presskit",
+          "locator": "Chassis section, 'Brake Changes Improve Fuel Efficiency'",
+          "evidence": "All 2022 Civic trims are equipped with 11.1-inch diameter ventilated front brake rotors (0.9-inch rotor thickness) clamped by single-piston brake calipers. The rear disc brakes incorporate 10.2-inch diameter solid rotors (0.4-inch rotor thickness) paired with single-piston calipers.",
+          "as_printed": "single-piston",
+          "applicability": {
+            "year": "2022",
+            "market": "US",
+            "trim": "all Civic trims (Sedan and Hatchback)",
+            "body": "hatchback",
+            "gearbox": "all",
+            "engine": "1.5T and 2.0",
+            "notes": "Press kit statement covers all 2022 Civic trims"
+          },
+          "confidence": "high",
+          "range": null,
+          "how_to_measure": null,
+          "notes": "'Floating' is an inference from single-piston design (not stated)."
+        }
+      ]
+    },
+    "brakes.rear_caliper_type": {
+      "description": "Rear caliper type",
+      "unit": "text",
+      "impact": "medium",
+      "candidates": [
+        {
+          "value": "single-piston caliper with electric parking-brake actuator",
+          "unit": "text",
+          "status": "confirmed",
+          "class": "A",
+          "source_id": "d7:hondanews-us-2022-hatch-presskit",
+          "locator": "Chassis section, 'Brake Changes Improve Fuel Efficiency'",
+          "evidence": "All 2022 Civic trims are equipped with 11.1-inch diameter ventilated front brake rotors (0.9-inch rotor thickness) clamped by single-piston brake calipers. The rear disc brakes incorporate 10.2-inch diameter solid rotors (0.4-inch rotor thickness) paired with single-piston calipers.",
+          "as_printed": "single-piston",
+          "applicability": {
+            "year": "2022",
+            "market": "US",
+            "trim": "all Civic trims (Sedan and Hatchback)",
+            "body": "hatchback",
+            "gearbox": "all",
+            "engine": "1.5T and 2.0",
+            "notes": "Press kit statement covers all 2022 Civic trims"
+          },
+          "confidence": "high",
+          "range": null,
+          "how_to_measure": null,
+          "notes": "Actuator: parts catalog lists rear 43018/43019-T20-A02 as 'CALIPER SUB-ASSY; Actuator, Caliper' (see brakes.parking_brake_type)."
+        }
+      ]
+    },
+    "brakes.front_pistons": {
+      "description": "Front caliper pistons per caliper",
+      "unit": "count",
+      "impact": "medium",
+      "candidates": [
+        {
+          "printed": {
+            "value": 1,
+            "unit": "count"
+          },
+          "value": 1.0,
+          "unit": "count",
+          "status": "confirmed",
+          "class": "A",
+          "source_id": "d7:hondanews-us-2022-hatch-presskit",
+          "locator": "Chassis section, 'Brake Changes Improve Fuel Efficiency'",
+          "evidence": "All 2022 Civic trims are equipped with 11.1-inch diameter ventilated front brake rotors (0.9-inch rotor thickness) clamped by single-piston brake calipers. The rear disc brakes incorporate 10.2-inch diameter solid rotors (0.4-inch rotor thickness) paired with single-piston calipers.",
+          "as_printed": "single-piston",
+          "applicability": {
+            "year": "2022",
+            "market": "US",
+            "trim": "all Civic trims (Sedan and Hatchback)",
+            "body": "hatchback",
+            "gearbox": "all",
+            "engine": "1.5T and 2.0",
+            "notes": "Press kit statement covers all 2022 Civic trims"
+          },
+          "confidence": "high",
+          "range": null,
+          "how_to_measure": null,
+          "notes": ""
+        }
+      ]
+    },
+    "brakes.rear_pistons": {
+      "description": "Rear caliper pistons per caliper",
+      "unit": "count",
+      "impact": "medium",
+      "candidates": [
+        {
+          "printed": {
+            "value": 1,
+            "unit": "count"
+          },
+          "value": 1.0,
+          "unit": "count",
+          "status": "confirmed",
+          "class": "A",
+          "source_id": "d7:hondanews-us-2022-hatch-presskit",
+          "locator": "Chassis section, 'Brake Changes Improve Fuel Efficiency'",
+          "evidence": "All 2022 Civic trims are equipped with 11.1-inch diameter ventilated front brake rotors (0.9-inch rotor thickness) clamped by single-piston brake calipers. The rear disc brakes incorporate 10.2-inch diameter solid rotors (0.4-inch rotor thickness) paired with single-piston calipers.",
+          "as_printed": "single-piston",
+          "applicability": {
+            "year": "2022",
+            "market": "US",
+            "trim": "all Civic trims (Sedan and Hatchback)",
+            "body": "hatchback",
+            "gearbox": "all",
+            "engine": "1.5T and 2.0",
+            "notes": "Press kit statement covers all 2022 Civic trims"
+          },
+          "confidence": "high",
+          "range": null,
+          "how_to_measure": null,
+          "notes": ""
+        }
+      ]
+    },
+    "brakes.front_caliper_designation": {
+      "description": "Front caliper seal-kit designation in Honda catalog",
+      "unit": "text",
+      "impact": "low",
+      "candidates": [
+        {
+          "value": "AD57-15\"",
+          "unit": "text",
+          "status": "confirmed",
+          "class": "C",
+          "source_id": "d7:hondapartsnow-2024-calipers",
+          "locator": "listing 01463-TXM-A01",
+          "evidence": "2024 Honda Civic Set, Front (Ad57-15\")",
+          "as_printed": "Ad57-15\"",
+          "applicability": {
+            "year": "2024",
+            "market": "US",
+            "trim": "fits incl. 5 Door 1.5T Sport Touring",
+            "body": "hatchback",
+            "gearbox": "6MT, CVT",
+            "engine": "1.5T",
+            "notes": ""
+          },
+          "confidence": "medium",
+          "range": null,
+          "how_to_measure": null,
+          "notes": "Front caliper seal kit 01463-TXM-A01 fits 5 Door 1.5T Sport Touring 6MT/CVT. Honda caliper codes of this form are commonly read as piston diameter in mm (57) and minimum wheel size (15 in) - that reading is a lead, not confirmed."
+        }
+      ]
+    },
+    "brakes.front_piston_diameter": {
+      "description": "Front caliper piston diameter",
+      "unit": "m",
+      "impact": "high",
+      "candidates": [
+        {
+          "value": null,
+          "unit": "m",
+          "status": "unknown",
+          "class": null,
+          "source_id": null,
+          "locator": "",
+          "evidence": "",
+          "as_printed": "",
+          "applicability": {},
+          "confidence": "none",
+          "range": null,
+          "how_to_measure": "Measure the front caliper piston OD with calipers (±0.1 mm) during a pad change.",
+          "notes": "Lead: 57 mm from the 'AD57-15\"' seal-kit designation (unconfirmed reading).",
+          "searches": [
+            "hondanews.com 2022 press kit (says single-piston, no bore)",
+            "hondainfocenter 2024 specs",
+            "hondapartsnow caliper listing (front seal kit 'Ad57-15\"' designation only)",
+            "buybrakes.com (403)",
+            "query: Civic 2022 caliper piston diameter"
+          ]
+        }
+      ]
+    },
+    "brakes.rear_piston_diameter": {
+      "description": "Rear caliper piston diameter",
+      "unit": "m",
+      "impact": "high",
+      "candidates": [
+        {
+          "value": null,
+          "unit": "m",
+          "status": "unknown",
+          "class": null,
+          "source_id": null,
+          "locator": "",
+          "evidence": "",
+          "as_printed": "",
+          "applicability": {},
+          "confidence": "none",
+          "range": null,
+          "how_to_measure": "Measure the rear caliper piston OD with calipers (±0.1 mm) during a pad change.",
+          "notes": "",
+          "searches": [
+            "hondanews.com 2022 press kit (says single-piston, no bore)",
+            "hondainfocenter 2024 specs",
+            "hondapartsnow caliper listing (front seal kit 'Ad57-15\"' designation only)",
+            "buybrakes.com (403)",
+            "query: Civic 2022 caliper piston diameter"
+          ]
+        }
+      ]
+    },
+    "brakes.booster_type": {
+      "description": "Brake booster type",
+      "unit": "text",
+      "impact": "medium",
+      "candidates": [
+        {
+          "value": null,
+          "unit": "text",
+          "status": "unknown",
+          "class": null,
+          "source_id": null,
+          "locator": "",
+          "evidence": "",
+          "as_printed": "",
+          "applicability": {},
+          "confidence": "none",
+          "range": null,
+          "how_to_measure": "Look at the firewall behind the master cylinder: vacuum booster with hose from intake/pump vs electric booster; photograph.",
+          "notes": "Only 'Power-assisted' is published.",
+          "searches": [
+            "Honda Canada 2024 spec ('Power-assisted')",
+            "US 2024 spec ('Power-Assisted')",
+            "2022 press kit chassis section (no booster type)"
+          ]
+        }
+      ]
+    },
+    "brakes.abs": {
+      "description": "4-wheel ABS",
+      "unit": "bool",
+      "impact": "low",
+      "candidates": [
+        {
+          "value": true,
+          "unit": "bool",
+          "status": "confirmed",
+          "class": "A",
+          "source_id": "d7:hondanews-ca-2024-hatch-specs",
+          "locator": "ACTIVE SAFETY table",
+          "evidence": "4-wheel Anti-lock Braking System",
+          "as_printed": "•",
+          "applicability": {
+            "year": "2024",
+            "market": "CA",
+            "trim": "Sport Touring",
+            "body": "hatchback",
+            "gearbox": "6MT and CVT (table covers both)",
+            "engine": "1.5T",
+            "notes": ""
+          },
+          "confidence": "high",
+          "range": null,
+          "how_to_measure": null,
+          "notes": ""
+        }
+      ]
+    },
+    "brakes.ebd": {
+      "description": "Electronic brake-force distribution",
+      "unit": "bool",
+      "impact": "low",
+      "candidates": [
+        {
+          "value": true,
+          "unit": "bool",
+          "status": "confirmed",
+          "class": "A",
+          "source_id": "d7:hondanews-ca-2024-hatch-specs",
+          "locator": "ACTIVE SAFETY table",
+          "evidence": "Electronic Brake-force Distribution (EBD)",
+          "as_printed": "•",
+          "applicability": {
+            "year": "2024",
+            "market": "CA",
+            "trim": "Sport Touring",
+            "body": "hatchback",
+            "gearbox": "6MT and CVT (table covers both)",
+            "engine": "1.5T",
+            "notes": ""
+          },
+          "confidence": "high",
+          "range": null,
+          "how_to_measure": null,
+          "notes": ""
+        }
+      ]
+    },
+    "brakes.brake_assist": {
+      "description": "Brake assist",
+      "unit": "bool",
+      "impact": "low",
+      "candidates": [
+        {
+          "value": true,
+          "unit": "bool",
+          "status": "confirmed",
+          "class": "A",
+          "source_id": "d7:hondanews-ca-2024-hatch-specs",
+          "locator": "ACTIVE SAFETY table",
+          "evidence": "Brake Assist",
+          "as_printed": "•",
+          "applicability": {
+            "year": "2024",
+            "market": "CA",
+            "trim": "Sport Touring",
+            "body": "hatchback",
+            "gearbox": "6MT and CVT (table covers both)",
+            "engine": "1.5T",
+            "notes": ""
+          },
+          "confidence": "high",
+          "range": null,
+          "how_to_measure": null,
+          "notes": ""
+        }
+      ]
+    },
+    "brakes.parking_brake_type": {
+      "description": "Parking brake type",
+      "unit": "text",
+      "impact": "medium",
+      "candidates": [
+        {
+          "value": "electric parking brake (EPB) with automatic brake hold; rear caliper-mounted actuator",
+          "unit": "text",
+          "status": "confirmed",
+          "class": "A",
+          "source_id": "d7:hondanews-ca-2024-hatch-specs",
+          "locator": "CHASSIS table",
+          "evidence": "Electronic Parking Brake (EPB) with automatic brake hold",
+          "as_printed": "Electronic Parking Brake (EPB) with automatic brake hold",
+          "applicability": {
+            "year": "2024",
+            "market": "CA",
+            "trim": "Sport Touring",
+            "body": "hatchback",
+            "gearbox": "6MT and CVT (table covers both)",
+            "engine": "1.5T",
+            "notes": ""
+          },
+          "confidence": "high",
+          "range": null,
+          "how_to_measure": null,
+          "notes": "Rear caliper actuator: hondapartsnow lists 43018-T20-A02 'CALIPER SUB-ASSY; Actuator, Caliper' fitting 5 Door 1.5T Sport Touring. Manual cars: press kit says parking brake button is left of the shifter."
+        }
+      ]
+    },
+    "brakes.pad_mu": {
+      "description": "Pad friction coefficient",
+      "unit": "1",
+      "impact": "medium",
+      "candidates": [
+        {
+          "value": null,
+          "unit": "1",
+          "status": "unknown",
+          "class": null,
+          "source_id": null,
+          "locator": "",
+          "evidence": "",
+          "as_printed": "",
+          "applicability": {},
+          "confidence": "none",
+          "range": null,
+          "how_to_measure": "Not directly measurable at home; use OE pad edge code (e.g. FF) from a pad photo.",
+          "notes": "Bias derivation assumes equal mu front/rear.",
+          "searches": [
+            "no published OE pad mu found",
+            "press kit"
+          ]
+        }
+      ]
+    }
+  }
+}
