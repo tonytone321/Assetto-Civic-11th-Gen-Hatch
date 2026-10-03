@@ -559,17 +559,17 @@
           "range": [
             [
               34.89,
-              null,
-              null
+              -4.28,
+              -11.07
             ],
             [
               63.89,
-              null,
-              null
+              0.83,
+              -3.77
             ]
           ],
           "how_to_measure": "Spectrophotometer reading of a clean door panel (L*a*b* D65/10, multi-angle), or RAW photo of the panel next to an X-Rite ColorChecker in open shade with white balance set on the checker's neutral patch; then recompute with this script.",
-          "notes": "Computed from Honda's own 74x74 colour-orb render, the only image whose colour identity is confirmed. A render is not a measurement: Honda's renderer, lighting and tone mapping are unknown. Press photos of grey Sport Touring cars are colour-unconfirmed and were not used for this value (see photo_analysis.press_photos). Range gives only L* 10th..90th percentile; a*/b* spread: chroma p10..p90 = [4.31, 11.78].",
+          "notes": "Computed from Honda's own 74x74 colour-orb render, the only image whose colour identity is confirmed. A render is not a measurement: Honda's renderer, lighting and tone mapping are unknown. Press photos of grey Sport Touring cars are colour-unconfirmed and were not used for this value (see photo_analysis.press_photos). Range = per-component 10th..90th percentile of masked swatch pixels. The Lunar Silver swatch renders darker than Sonic Gray, which shows the orb renders are not photometrically consistent.",
           "derivation": {
             "script": "scripts/domains/paint_analyze.py",
             "function": "swatch_pixels+stats",
@@ -744,6 +744,16 @@
           34.89,
           63.89
         ],
+        "lab_p10": [
+          34.89,
+          -4.28,
+          -11.07
+        ],
+        "lab_p90": [
+          63.89,
+          0.83,
+          -3.77
+        ],
         "chroma_median": 5.03,
         "chroma_p10_p90": [
           4.31,
@@ -794,6 +804,16 @@
           26.18,
           75.12
         ],
+        "lab_p10": [
+          26.18,
+          -3.97,
+          -9.89
+        ],
+        "lab_p90": [
+          75.12,
+          0.64,
+          -1.0
+        ],
         "chroma_median": 1.66,
         "chroma_p10_p90": [
           1.07,
@@ -843,6 +863,16 @@
         "L_p10_p90": [
           5.07,
           47.96
+        ],
+        "lab_p10": [
+          5.07,
+          -2.75,
+          -6.52
+        ],
+        "lab_p90": [
+          47.96,
+          0.05,
+          -3.03
         ],
         "chroma_median": 5.31,
         "chroma_p10_p90": [
@@ -941,6 +971,16 @@
         "L_p10_p90": [
           31.41,
           47.31
+        ],
+        "lab_p10": [
+          31.41,
+          -3.41,
+          -12.31
+        ],
+        "lab_p90": [
+          47.31,
+          4.47,
+          -1.11
         ],
         "chroma_median": 7.06,
         "chroma_p10_p90": [
@@ -1043,6 +1083,16 @@
           61.63,
           74.11
         ],
+        "lab_p10": [
+          61.63,
+          0.02,
+          -3.23
+        ],
+        "lab_p90": [
+          74.11,
+          3.83,
+          0.0
+        ],
         "chroma_median": 1.61,
         "chroma_p10_p90": [
           0.94,
@@ -1144,6 +1194,16 @@
           22.97,
           37.25
         ],
+        "lab_p10": [
+          22.97,
+          -0.83,
+          -9.61
+        ],
+        "lab_p90": [
+          37.25,
+          2.36,
+          2.45
+        ],
         "chroma_median": 6.26,
         "chroma_p10_p90": [
           1.22,
@@ -1244,6 +1304,16 @@
         "L_p10_p90": [
           70.23,
           79.78
+        ],
+        "lab_p10": [
+          70.23,
+          -2.16,
+          -6.78
+        ],
+        "lab_p90": [
+          79.78,
+          0.79,
+          -2.48
         ],
         "chroma_median": 5.06,
         "chroma_p10_p90": [

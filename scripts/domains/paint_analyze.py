@@ -71,6 +71,8 @@ def stats(px):
         "linear_rgb_mean": [round(float(v), 4) for v in lin.mean(axis=0)],
         "lab_median": [round(float(v), 2) for v in np.median(lab, axis=0)],
         "L_p10_p90": [round(v, 2) for v in pct(lab[:, 0])],
+        "lab_p10": [round(float(np.percentile(lab[:, i], 10)), 2) for i in range(3)],
+        "lab_p90": [round(float(np.percentile(lab[:, i], 90)), 2) for i in range(3)],
         "chroma_median": round(float(np.median(chroma)), 2),
         "chroma_p10_p90": [round(v, 2) for v in pct(chroma)],
         "hue_deg_of_median_ab": round(float(hue), 1),
@@ -157,9 +159,9 @@ def main():
     db.add_candidate(d, "paint.base_lab", "Representative body colour, CIELAB (D65) median of swatch pixels", "1", "high", db.record(
         value=sgp["lab_median"], unit="1", status="estimated", cls="E", source_id=src, locator="Colors table swatch image",
         evidence="", as_printed="", applicability=db.app("2024 (MY18 swatch asset)", "US", "all trims", "any"),
-        confidence="low", range=[[sgp["L_p10_p90"][0], None, None], [sgp["L_p10_p90"][1], None, None]],
-        how_to_measure=how, notes=note + " Range gives only L* 10th..90th percentile; a*/b* spread: chroma p10..p90 = "
-        f"{sgp['chroma_p10_p90']}.", derivation=deriv))
+        confidence="low", range=[sgp["lab_p10"], sgp["lab_p90"]],
+        how_to_measure=how, notes=note + " Range = per-component 10th..90th percentile of masked swatch pixels. The Lunar Silver swatch renders "
+        "darker than Sonic Gray, which shows the orb renders are not photometrically consistent.", derivation=deriv))
     db.add_candidate(d, "paint.base_chroma", "Chroma C*ab of the body colour (how far from neutral grey)", "1", "medium", db.record(
         value=sgp["chroma_median"], unit="1", status="estimated", cls="E", source_id=src, locator="Colors table swatch image",
         evidence="", as_printed="", applicability={}, confidence="low", range=sgp["chroma_p10_p90"],

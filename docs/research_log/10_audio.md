@@ -25,7 +25,7 @@ limits, and the work was rebuilt from the on-disk state.
   replies). Gearbox is **not documented**: commenters claim CVT, which is unverified. Tune, trim and
   intake are not documented. **Audio not accessed or analyzed.**
 - Catalogued: 4 products (MagnaFlow, Borla, Remark, and PLM, which does not fit the ST) and
-  13 clips by text only (5 manufacturer, 7 owner or shop, 1 stock POV). Weights: 1 high,
+  13 clips by text only (6 manufacturer, 6 owner or shop, 1 stock POV). Weights: 1 high,
   3 medium, 6 low, 3 excluded. No stock-exhaust sound clip of a 6MT ST was confirmed as stock.
 - The Borla page contradicts itself: 2.5 in in the description, "2.25\" Diameter System" in the
   feature list.
