@@ -1,0 +1,670 @@
+{
+  "domain": "dashboard",
+  "title": "Instrument cluster and displays",
+  "schema_version": 1,
+  "sources": {
+    "hci-2024-specs": {
+      "title": "2024 Honda Civic Hatchback Specifications (Honda Canada newsroom, April 4, 2024)",
+      "url": "https://hondanews.ca/en-CA/releases/release-1128768177ab00a73471b1938c152ddf-2024-honda-civic-hatchback-specifications",
+      "publisher": "Honda Canada Inc. (hondanews.ca)",
+      "class": "A",
+      "accessed": "2026-10-03",
+      "access_method": "static",
+      "applicability": "2024 Civic Hatchback, Canada, Sport and Sport Touring, CVT and 6MT",
+      "notes": "Feature table columns SPORT | SPORT TOURING; column mapping checked in the page HTML table. No colour table on this page.",
+      "cache_file": "cache/pages/22157798d6e48e1c.txt"
+    },
+    "ahm-hondanews-2024-specs": {
+      "title": "2024 Honda Civic Hatchback Specifications & Features (hondanews.com)",
+      "url": "https://hondanews.com/en-US/honda-automobiles/releases/2024-honda-civic-hatchback-specifications-features",
+      "publisher": "American Honda Motor Co. (hondanews.com)",
+      "class": "A",
+      "accessed": "2026-10-03",
+      "access_method": "static",
+      "applicability": "2024 Civic Hatchback, USA, LX / Sport / EX-L / Sport Touring",
+      "notes": "Columns LX | Sport | EX-L | Sport Touring, checked in the HTML table.",
+      "cache_file": "cache/pages/2b1524caf89378a3.txt"
+    },
+    "ahm-presskit-2022": {
+      "title": "2022 Honda Civic Hatchback Press Kit (hondanews.com, Sept 2021)",
+      "url": "https://hondanews.com/en-US/releases/release-20c92b0d934f0bc63982bd3eee0149e9-2022-honda-civic-hatchback-press-kit",
+      "publisher": "American Honda Motor Co. (hondanews.com)",
+      "class": "A",
+      "accessed": "2026-10-03",
+      "access_method": "static",
+      "applicability": "2022 Civic Hatchback, USA, all trims; launch press kit with 32 press photos",
+      "notes": "Text and photo gallery (preview 928x522 JPEGs on wieck-honda-production S3; higher resolutions not publicly served (403)).",
+      "cache_file": "cache/pages/9964dff4363f93bf.txt"
+    }
+  },
+  "parameters": {
+    "dashboard.cluster_type": {
+      "description": "Instrument cluster type",
+      "unit": "text",
+      "impact": "high",
+      "candidates": [
+        {
+          "value": "10.2-inch colour TFT full digital driver meter display",
+          "unit": "text",
+          "status": "confirmed",
+          "class": "A",
+          "source_id": "hci-2024-specs",
+          "locator": "COMFORT & CONVENIENCE table (Sport Touring column)",
+          "evidence": "10.2\" colour TFT full digital driver meter display",
+          "as_printed": "10.2\" colour TFT full digital driver meter display",
+          "applicability": {
+            "year": "2024",
+            "market": "CA",
+            "trim": "Sport Touring",
+            "body": "hatchback",
+            "gearbox": "6MT and CVT",
+            "engine": "1.5T",
+            "notes": ""
+          },
+          "confidence": "high",
+          "range": null,
+          "how_to_measure": null,
+          "notes": "Sport (lower trim) instead has: 7\" colour TFT centre meter display with Driver Information Interface.",
+          "prefer": true,
+          "selection_reason": "Canadian 2024 source for the exact trim."
+        },
+        {
+          "value": "10.2-inch digital instrument cluster",
+          "unit": "text",
+          "status": "confirmed",
+          "class": "A",
+          "source_id": "ahm-hondanews-2024-specs",
+          "locator": "Features table, row '10.2-Inch Digital Instrument Cluster' (LX|Sport|EX-L|Sport Touring = -|-|-|•)",
+          "evidence": "10.2-Inch Digital Instrument Cluster",
+          "as_printed": "10.2-Inch Digital Instrument Cluster",
+          "applicability": {
+            "year": "2024",
+            "market": "US",
+            "trim": "Sport Touring",
+            "body": "hatchback",
+            "gearbox": "6MT and CVT",
+            "engine": "1.5T",
+            "notes": ""
+          },
+          "confidence": "high",
+          "range": null,
+          "how_to_measure": null,
+          "notes": ""
+        },
+        {
+          "value": "10.2-inch all-digital colour instrument display",
+          "unit": "text",
+          "status": "confirmed",
+          "class": "A",
+          "source_id": "ahm-presskit-2022",
+          "locator": "HMI and Technology: Digital Instrumentation",
+          "evidence": "Hatchback Sport Touring grades feature the new all-digital instrument display that debuted on Civic Sedan. Measuring 10.2 inches, the high-definition full-color panel displays a variety of information, all customizable from the steering wheel.",
+          "as_printed": "10.2 inches",
+          "applicability": {
+            "year": "2022",
+            "market": "US",
+            "trim": "Sport Touring",
+            "body": "hatchback",
+            "gearbox": "6MT and CVT",
+            "engine": "1.5T",
+            "notes": "2022 launch press kit; the 10.2-inch cluster and 9-inch screen are listed for Sport Touring in the 2024 Canadian table too (no model-year change found for the cluster)."
+          },
+          "confidence": "high",
+          "range": null,
+          "how_to_measure": null,
+          "notes": ""
+        }
+      ]
+    },
+    "dashboard.cluster_diagonal": {
+      "description": "Instrument display diagonal",
+      "unit": "m",
+      "impact": "medium",
+      "candidates": [
+        {
+          "printed": {
+            "value": 10.2,
+            "unit": "in"
+          },
+          "value": 0.25908,
+          "unit": "m",
+          "status": "confirmed",
+          "class": "A",
+          "source_id": "hci-2024-specs",
+          "locator": "COMFORT & CONVENIENCE table",
+          "evidence": "10.2\" colour TFT full digital driver meter display",
+          "as_printed": "10.2\"",
+          "applicability": {
+            "year": "2024",
+            "market": "CA",
+            "trim": "Sport Touring",
+            "body": "hatchback",
+            "gearbox": "6MT and CVT",
+            "engine": "1.5T",
+            "notes": ""
+          },
+          "confidence": "high",
+          "range": null,
+          "how_to_measure": null,
+          "notes": "Diagonal of the display panel; active-area width/height and resolution are not published (measure on the car)."
+        }
+      ]
+    },
+    "dashboard.lower_trim_cluster": {
+      "description": "Cluster on lower hatchback trims (what the Sport Touring does NOT have)",
+      "unit": "text",
+      "impact": "low",
+      "candidates": [
+        {
+          "value": "7-inch colour digital display (left) with depicted analog tachometer plus a physical (mechanical-needle) speedometer on the right",
+          "unit": "text",
+          "status": "confirmed",
+          "class": "A",
+          "source_id": "ahm-presskit-2022",
+          "locator": "HMI and Technology: Digital Instrumentation",
+          "evidence": "LX, Sport and EX-L grades are equipped with a 7-inch color digital display. The right side of the instrumentation is occupied by a physical speedometer.",
+          "as_printed": "7-inch",
+          "applicability": {
+            "year": "2022",
+            "market": "US",
+            "trim": "LX/Sport/EX-L",
+            "body": "hatchback",
+            "gearbox": "6MT and CVT",
+            "engine": "1.5T",
+            "notes": ""
+          },
+          "confidence": "high",
+          "range": null,
+          "how_to_measure": null,
+          "notes": "Visual differentiator: do not model the physical speedometer for Sport Touring."
+        }
+      ]
+    },
+    "dashboard.gauge_styles": {
+      "description": "Selectable gauge layouts of the 10.2-inch display",
+      "unit": "text",
+      "impact": "high",
+      "candidates": [
+        {
+          "value": "Round tachometer + round speedometer, or bar graphs at the left/right edges; ACC-only mode hides both gauges but keeps a numerical speed readout",
+          "unit": "text",
+          "status": "confirmed",
+          "class": "A",
+          "source_id": "ahm-presskit-2022",
+          "locator": "HMI and Technology: Digital Instrumentation",
+          "evidence": "Information can be displayed with traditional round gauges for the tachometer and speedometer, or with bar graphs flanking the left and right of the screen. A new mode available when using Adaptive Cruise Control eliminates the tachometer and speedometer from the display altogether (but maintains a numerical speed readout) for a more relaxed driving environment.",
+          "as_printed": "",
+          "applicability": {
+            "year": "2022",
+            "market": "US",
+            "trim": "Sport Touring",
+            "body": "hatchback",
+            "gearbox": "6MT and CVT",
+            "engine": "1.5T",
+            "notes": "2022 launch press kit; the 10.2-inch cluster and 9-inch screen are listed for Sport Touring in the 2024 Canadian table too (no model-year change found for the cluster)."
+          },
+          "confidence": "high",
+          "range": null,
+          "how_to_measure": null,
+          "notes": ""
+        }
+      ]
+    },
+    "dashboard.layout_zones": {
+      "description": "Zones of the 10.2-inch display",
+      "unit": "text",
+      "impact": "high",
+      "candidates": [
+        {
+          "value": "Left customizable area: audio/phone (left steering-wheel controls). Right area: driving info, Honda Sensing settings, navigation (right controls). Centre between gauges: vehicle functions, Honda Sensing status graphic (bird's-eye car icon whose brake/head/turn lights mirror the real car) and numerical speed.",
+          "unit": "text",
+          "status": "confirmed",
+          "class": "A",
+          "source_id": "ahm-presskit-2022",
+          "locator": "HMI and Technology: Digital Instrumentation",
+          "evidence": "The left side of the screen is dedicated to audio and telephone information, which the driver can select using the left-side steering wheel controls. The right side is dedicated to driving-related information such as activating or deactivating various Honda Sensing® functions, or navigation system information, which the driver selects using the right-side steering wheel controls. … Between the speedometer and tachometer is an area dedicated to vehicle functions, including Honda Sensing® status and a numerical speed readout. … the brake lights, headlights and turn signals of the Civic icon turn on and off with those functions.",
+          "as_printed": "",
+          "applicability": {
+            "year": "2022",
+            "market": "US",
+            "trim": "Sport Touring",
+            "body": "hatchback",
+            "gearbox": "6MT and CVT",
+            "engine": "1.5T",
+            "notes": "2022 launch press kit; the 10.2-inch cluster and 9-inch screen are listed for Sport Touring in the 2024 Canadian table too (no model-year change found for the cluster)."
+          },
+          "confidence": "high",
+          "range": null,
+          "how_to_measure": null,
+          "notes": ""
+        }
+      ]
+    },
+    "dashboard.tachometer": {
+      "description": "Tachometer presentation (round mode)",
+      "unit": "text",
+      "impact": "medium",
+      "candidates": [
+        {
+          "value": "Round tachometer on the left, scale 0-8 x1000 r/min with red band at the top of the scale",
+          "unit": "text",
+          "status": "confirmed",
+          "class": "A",
+          "source_id": "ahm-presskit-2022",
+          "locator": "Press photo 'photos/30' (wieck-honda-production .../cc54663dd9510d2c1538cfea2f8c16cb96c69e99/preview-928x522.jpg), US 2022 Sport Touring CVT, round-gauge mode",
+          "evidence": "[image] left dial, labels 0..8, 'x1000 r/min', red arc near 7-8",
+          "as_printed": "",
+          "applicability": {
+            "year": "2022",
+            "market": "US",
+            "trim": "Sport Touring",
+            "body": "hatchback",
+            "gearbox": "CVT",
+            "engine": "1.5T",
+            "notes": "US car: mph and deg F; gear letter 'D' shows it is a CVT. Layout applies; units and the gear field differ on the Canadian 6MT car."
+          },
+          "confidence": "medium",
+          "range": null,
+          "how_to_measure": null,
+          "notes": "Read from the press image by viewing (layout only, no measurement). The tachometer red-band start rpm is not read from this low-resolution image; engine redline is owned by the engine domain."
+        }
+      ]
+    },
+    "dashboard.speedometer": {
+      "description": "Speedometer presentation (round mode)",
+      "unit": "text",
+      "impact": "medium",
+      "candidates": [
+        {
+          "value": "Round speedometer on the right plus large numerical speed at top centre (US car: 0-160 mph scale)",
+          "unit": "text",
+          "status": "confirmed",
+          "class": "A",
+          "source_id": "ahm-presskit-2022",
+          "locator": "Press photo 'photos/30' (wieck-honda-production .../cc54663dd9510d2c1538cfea2f8c16cb96c69e99/preview-928x522.jpg), US 2022 Sport Touring CVT, round-gauge mode",
+          "evidence": "[image] right dial labels 0..160 'mph'; '38 mph' digits above centre",
+          "as_printed": "",
+          "applicability": {
+            "year": "2022",
+            "market": "US",
+            "trim": "Sport Touring",
+            "body": "hatchback",
+            "gearbox": "CVT",
+            "engine": "1.5T",
+            "notes": "US car: mph and deg F; gear letter 'D' shows it is a CVT. Layout applies; units and the gear field differ on the Canadian 6MT car."
+          },
+          "confidence": "medium",
+          "range": null,
+          "how_to_measure": null,
+          "notes": "Read from the press image by viewing (layout only, no measurement). The tachometer red-band start rpm is not read from this low-resolution image; engine redline is owned by the engine domain."
+        }
+      ]
+    },
+    "dashboard.coolant_temp_gauge": {
+      "description": "Coolant temperature gauge",
+      "unit": "text",
+      "impact": "medium",
+      "candidates": [
+        {
+          "value": "Segmented arc bar gauge at far left of the display, H (top, red) to C (bottom)",
+          "unit": "text",
+          "status": "confirmed",
+          "class": "A",
+          "source_id": "ahm-presskit-2022",
+          "locator": "Press photo 'photos/30' (wieck-honda-production .../cc54663dd9510d2c1538cfea2f8c16cb96c69e99/preview-928x522.jpg), US 2022 Sport Touring CVT, round-gauge mode",
+          "evidence": "[image] far-left arc, letters H and C, red segment by H",
+          "as_printed": "",
+          "applicability": {
+            "year": "2022",
+            "market": "US",
+            "trim": "Sport Touring",
+            "body": "hatchback",
+            "gearbox": "CVT",
+            "engine": "1.5T",
+            "notes": "US car: mph and deg F; gear letter 'D' shows it is a CVT. Layout applies; units and the gear field differ on the Canadian 6MT car."
+          },
+          "confidence": "medium",
+          "range": null,
+          "how_to_measure": null,
+          "notes": "Read from the press image by viewing (layout only, no measurement). The tachometer red-band start rpm is not read from this low-resolution image; engine redline is owned by the engine domain."
+        }
+      ]
+    },
+    "dashboard.fuel_gauge": {
+      "description": "Fuel gauge",
+      "unit": "text",
+      "impact": "medium",
+      "candidates": [
+        {
+          "value": "Segmented arc bar gauge at far right of the display, F (top) to E (bottom, red), fuel-pump icon",
+          "unit": "text",
+          "status": "confirmed",
+          "class": "A",
+          "source_id": "ahm-presskit-2022",
+          "locator": "Press photo 'photos/30' (wieck-honda-production .../cc54663dd9510d2c1538cfea2f8c16cb96c69e99/preview-928x522.jpg), US 2022 Sport Touring CVT, round-gauge mode",
+          "evidence": "[image] far-right arc, letters F and E, pump icon",
+          "as_printed": "",
+          "applicability": {
+            "year": "2022",
+            "market": "US",
+            "trim": "Sport Touring",
+            "body": "hatchback",
+            "gearbox": "CVT",
+            "engine": "1.5T",
+            "notes": "US car: mph and deg F; gear letter 'D' shows it is a CVT. Layout applies; units and the gear field differ on the Canadian 6MT car."
+          },
+          "confidence": "medium",
+          "range": null,
+          "how_to_measure": null,
+          "notes": "Read from the press image by viewing (layout only, no measurement). The tachometer red-band start rpm is not read from this low-resolution image; engine redline is owned by the engine domain."
+        }
+      ]
+    },
+    "dashboard.odometer_location": {
+      "description": "Odometer location",
+      "unit": "text",
+      "impact": "medium",
+      "candidates": [
+        {
+          "value": "Bottom right of centre, below the speedometer (shown '000008 miles' on the US car); outside temperature at bottom left under the tachometer; drive-mode text ('NORMAL') bottom centre",
+          "unit": "text",
+          "status": "confirmed",
+          "class": "A",
+          "source_id": "ahm-presskit-2022",
+          "locator": "Press photo 'photos/30' (wieck-honda-production .../cc54663dd9510d2c1538cfea2f8c16cb96c69e99/preview-928x522.jpg), US 2022 Sport Touring CVT, round-gauge mode",
+          "evidence": "[image] bottom row: '69 °F' under tach, 'D' gear field, 'NORMAL', '000008 miles'",
+          "as_printed": "",
+          "applicability": {
+            "year": "2022",
+            "market": "US",
+            "trim": "Sport Touring",
+            "body": "hatchback",
+            "gearbox": "CVT",
+            "engine": "1.5T",
+            "notes": "US car: mph and deg F; gear letter 'D' shows it is a CVT. Layout applies; units and the gear field differ on the Canadian 6MT car."
+          },
+          "confidence": "medium",
+          "range": null,
+          "how_to_measure": null,
+          "notes": "Read from the press image by viewing (layout only, no measurement). The tachometer red-band start rpm is not read from this low-resolution image; engine redline is owned by the engine domain."
+        }
+      ]
+    },
+    "dashboard.gear_position_indicator_mt": {
+      "description": "Gear position / shift-up indicator on the 6MT car",
+      "unit": "text",
+      "impact": "high",
+      "candidates": [
+        {
+          "value": null,
+          "unit": "text",
+          "status": "unknown",
+          "class": null,
+          "source_id": null,
+          "locator": "",
+          "evidence": "",
+          "as_printed": "",
+          "applicability": {},
+          "confidence": "none",
+          "range": null,
+          "how_to_measure": "Photograph the real car's cluster while driving the 6MT in each gear (passenger, phone on a mount) and at a steady cruise where Honda's shift indicator would appear; or read the owner's manual 'Instrument Panel > Gauges and Displays' section (printed copy in the glovebox).",
+          "notes": "The press photo of a CVT car shows a gear letter field under the tachometer ('D'); whether the 6MT shows a gear number or only an up/down shift arrow is not established.",
+          "searches": [
+            "Owner's manual: techinfo.honda.com owner's-manual PDFs fail upstream TLS through the egress proxy (502); owners.honda.com redirects to a login; honda.ca now shows the current model; manualslib.com robots.txt disallows ClaudeBot",
+            "2022 press kit text (no MT cluster description)",
+            "WebSearch: Civic Hatchback owner's manual 'shift up indicator' (Kia results only)",
+            "WebSearch: Honda Canada owner's manual Civic Hatchback 2024",
+            "hondanews.com/hondanews.ca 2024 spec tables (no such row)"
+          ]
+        }
+      ]
+    },
+    "dashboard.units_canada": {
+      "description": "Display units on the Canadian car (speed, distance, fuel economy, temperature)",
+      "unit": "text",
+      "impact": "medium",
+      "candidates": [
+        {
+          "value": null,
+          "unit": "text",
+          "status": "unknown",
+          "class": null,
+          "source_id": null,
+          "locator": "",
+          "evidence": "",
+          "as_printed": "",
+          "applicability": {},
+          "confidence": "none",
+          "range": null,
+          "how_to_measure": "Photograph the Canadian car's cluster (speed scale, odometer unit, outside temperature, fuel-economy page).",
+          "notes": "Expected km/h, km, L/100 km and deg C on a Canadian car, but that expectation is not sourced; the speedometer scale maximum for km/h is unknown.",
+          "searches": [
+            "hondanews.ca 2024 spec table (fuel economy published in L/100 km, but that is the spec sheet, not the display)",
+            "Owner's manual not accessible (see gear_position_indicator_mt)",
+            "No Canadian cluster photo with units legible found"
+          ]
+        }
+      ]
+    },
+    "dashboard.redzone_and_scale_ca": {
+      "description": "Tachometer red-zone start and km/h speedometer scale maximum on the Canadian car",
+      "unit": "text",
+      "impact": "medium",
+      "candidates": [
+        {
+          "value": null,
+          "unit": "text",
+          "status": "unknown",
+          "class": null,
+          "source_id": null,
+          "locator": "",
+          "evidence": "",
+          "as_printed": "",
+          "applicability": {},
+          "confidence": "none",
+          "range": null,
+          "how_to_measure": "Straight-on photo of the cluster in round-gauge mode with ignition on, engine off (all scales visible).",
+          "notes": "",
+          "searches": [
+            "US press photo only (mph, low resolution)"
+          ]
+        }
+      ]
+    },
+    "dashboard.infotainment_screen": {
+      "description": "Centre touchscreen",
+      "unit": "text",
+      "impact": "medium",
+      "candidates": [
+        {
+          "value": "9-inch colour touchscreen including navigation",
+          "unit": "text",
+          "status": "confirmed",
+          "class": "A",
+          "source_id": "hci-2024-specs",
+          "locator": "ENTERTAINMENT table (Sport Touring column: 'Including Navigation')",
+          "evidence": "9\" colour touchscreen",
+          "as_printed": "9\" colour touchscreen | Including Navigation",
+          "applicability": {
+            "year": "2024",
+            "market": "CA",
+            "trim": "Sport Touring",
+            "body": "hatchback",
+            "gearbox": "6MT and CVT",
+            "engine": "1.5T",
+            "notes": ""
+          },
+          "confidence": "high",
+          "range": null,
+          "how_to_measure": null,
+          "notes": "Sport has a 7\" colour touchscreen. Apple CarPlay/Android Auto wired/wireless on Sport Touring.",
+          "prefer": true,
+          "selection_reason": "Canadian 2024 exact trim."
+        },
+        {
+          "value": "9-inch colour touchscreen",
+          "unit": "text",
+          "status": "confirmed",
+          "class": "A",
+          "source_id": "ahm-hondanews-2024-specs",
+          "locator": "Features table '9-Inch Color Touchscreen' (Sport Touring only)",
+          "evidence": "9-Inch Color Touchscreen",
+          "as_printed": "9-Inch Color Touchscreen",
+          "applicability": {
+            "year": "2024",
+            "market": "US",
+            "trim": "Sport Touring",
+            "body": "hatchback",
+            "gearbox": "6MT and CVT",
+            "engine": "1.5T",
+            "notes": ""
+          },
+          "confidence": "high",
+          "range": null,
+          "how_to_measure": null,
+          "notes": ""
+        }
+      ]
+    },
+    "dashboard.infotainment_diagonal": {
+      "description": "Centre touchscreen diagonal",
+      "unit": "m",
+      "impact": "low",
+      "candidates": [
+        {
+          "printed": {
+            "value": 9,
+            "unit": "in"
+          },
+          "value": 0.2286,
+          "unit": "m",
+          "status": "confirmed",
+          "class": "A",
+          "source_id": "hci-2024-specs",
+          "locator": "ENTERTAINMENT table",
+          "evidence": "9\" colour touchscreen",
+          "as_printed": "9\"",
+          "applicability": {
+            "year": "2024",
+            "market": "CA",
+            "trim": "Sport Touring",
+            "body": "hatchback",
+            "gearbox": "6MT and CVT",
+            "engine": "1.5T",
+            "notes": ""
+          },
+          "confidence": "high",
+          "range": null,
+          "how_to_measure": null,
+          "notes": ""
+        }
+      ]
+    },
+    "dashboard.exterior_temperature_indicator": {
+      "description": "Exterior temperature indicator",
+      "unit": "bool",
+      "impact": "low",
+      "candidates": [
+        {
+          "value": true,
+          "unit": "bool",
+          "status": "confirmed",
+          "class": "A",
+          "source_id": "hci-2024-specs",
+          "locator": "COMFORT & CONVENIENCE table",
+          "evidence": "Exterior temperature indicator",
+          "as_printed": "• | •",
+          "applicability": {
+            "year": "2024",
+            "market": "CA",
+            "trim": "Sport Touring",
+            "body": "hatchback",
+            "gearbox": "6MT and CVT",
+            "engine": "1.5T",
+            "notes": ""
+          },
+          "confidence": "high",
+          "range": null,
+          "how_to_measure": null,
+          "notes": ""
+        }
+      ]
+    },
+    "dashboard.maintenance_minder": {
+      "description": "Maintenance Minder system (service messages on the display)",
+      "unit": "bool",
+      "impact": "low",
+      "candidates": [
+        {
+          "value": true,
+          "unit": "bool",
+          "status": "confirmed",
+          "class": "A",
+          "source_id": "hci-2024-specs",
+          "locator": "COMFORT & CONVENIENCE table",
+          "evidence": "Maintenance Minder™ system",
+          "as_printed": "• | •",
+          "applicability": {
+            "year": "2024",
+            "market": "CA",
+            "trim": "Sport Touring",
+            "body": "hatchback",
+            "gearbox": "6MT and CVT",
+            "engine": "1.5T",
+            "notes": ""
+          },
+          "confidence": "high",
+          "range": null,
+          "how_to_measure": null,
+          "notes": ""
+        }
+      ]
+    },
+    "dashboard.head_up_display": {
+      "description": "Head-up display",
+      "unit": "bool",
+      "impact": "low",
+      "candidates": [
+        {
+          "value": false,
+          "unit": "bool",
+          "status": "estimated",
+          "class": "E",
+          "source_id": null,
+          "locator": "",
+          "evidence": "",
+          "as_printed": "",
+          "applicability": {},
+          "confidence": "medium",
+          "range": [
+            false,
+            false
+          ],
+          "how_to_measure": "Look at the dash top of the real car (no HUD combiner/projection window).",
+          "notes": "Basis: absence. Neither the 2024 Honda Canada nor the 2024 American Honda feature tables nor the 2022 press kit (searched for 'head-up', 'HUD') list a head-up display for the hatchback. Absence from a table is not a statement, hence class E."
+        }
+      ]
+    }
+  },
+  "indicators": {
+    "status": "not populated",
+    "reason": "The owner's manual (primary source for every warning/indicator lamp) could not be opened: techinfo.honda.com owner's-manual URLs fail with an upstream TLS error through the egress proxy (502), owners.honda.com requires a login, honda.ca now hosts the current model, manualslib.com disallows ClaudeBot in robots.txt. No lamp is listed from memory.",
+    "seen_in_press_photo": [
+      {
+        "name": "unidentified green lamps at the upper left of the display",
+        "colour": "green",
+        "where": "press photo 30, left edge above the temperature gauge (two green icons; likely headlight/auto-high-beam, not legible at 928x522)",
+        "status": "unknown meaning"
+      },
+      {
+        "name": "eco/drive icon next to odometer",
+        "colour": "green",
+        "where": "press photo 30, left of '000008 miles'",
+        "status": "unknown meaning"
+      }
+    ],
+    "how_to_obtain": "Owner's manual printed copy (glovebox) section 'Instrument Panel > Indicators', or photograph the cluster bulb check at ignition-on (all lamps lit for a few seconds) on the real car.",
+    "table": []
+  },
+  "updated": "2026-10-03"
+}

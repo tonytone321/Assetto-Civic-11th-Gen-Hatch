@@ -1,0 +1,479 @@
+{
+  "domain": "paint",
+  "title": "Paint",
+  "schema_version": 1,
+  "sources": {
+    "hci-2023-specs": {
+      "title": "2023 Civic Hatchback Specifications (Honda Canada newsroom)",
+      "url": "https://hondanews.ca/en-CA/hci-automobiles/releases/release-f61ab7d13cb83fb181b8bc22df100303-2023-civic-hatchback-specifications",
+      "publisher": "Honda Canada Inc. (hondanews.ca)",
+      "class": "A",
+      "accessed": "2026-10-03",
+      "access_method": "static",
+      "applicability": "2023 Civic Hatchback, Canada, LX / Sport / Sport Touring",
+      "notes": "EXTERIOR/INTERIOR COLOURS table, columns LX | Sport | Sport Touring.",
+      "cache_file": "cache/pages/374416cf6bc6db5d.txt"
+    },
+    "ahm-infocenter-2024-colors": {
+      "title": "2024 Civic Hatchback - Colors (Honda Information Center, American Honda)",
+      "url": "https://www.hondainfocenter.com/2024/Civic-Hatchback/Feature-Guide/Colors",
+      "publisher": "American Honda Motor Co. (hondainfocenter.com)",
+      "class": "A",
+      "accessed": "2026-10-03",
+      "access_method": "static",
+      "applicability": "2024 Civic Hatchback, USA, LX / Sport / EX-L / Sport Touring",
+      "notes": "Colour/trim matrix; Sonic Gray Pearl row marks Black Leather under Sport Touring (no 'CVT only' note, i.e. both gearboxes). Page <title> reads '2023' but the body heading is '2024 Civic Hatchback'. Swatch image is an MY18 asset (same code NH-877P).",
+      "cache_file": "cache/pages/3a6c7d907fdddd60.txt"
+    },
+    "ahm-hondanews-2024-specs": {
+      "title": "2024 Honda Civic Hatchback Specifications & Features (hondanews.com)",
+      "url": "https://hondanews.com/en-US/honda-automobiles/releases/2024-honda-civic-hatchback-specifications-features",
+      "publisher": "American Honda Motor Co. (hondanews.com)",
+      "class": "A",
+      "accessed": "2026-10-03",
+      "access_method": "static",
+      "applicability": "2024 Civic Hatchback, USA, LX / Sport / EX-L / Sport Touring",
+      "notes": "Columns LX | Sport | EX-L | Sport Touring, checked in the HTML table.",
+      "cache_file": "cache/pages/2b1524caf89378a3.txt"
+    },
+    "hybridracing-touchup-nh877pah": {
+      "title": "Honda Sonic Gray Pearl Touch Up Paint NH877PAH (Hybrid Racing listing)",
+      "url": "https://www.hybrid-racing.com/products/honda-touch-up-paint-sonic-gray-pearl-nh877pah",
+      "publisher": "Hybrid Racing (aftermarket retailer listing a Genuine Honda touch-up product)",
+      "class": "C",
+      "accessed": "2026-10-03",
+      "access_method": "static",
+      "applicability": "Genuine Honda touch-up paint, fitment list includes 2017-2024 Honda Civic",
+      "notes": "Retailer listing; supports the code independently of Honda's spec sheets.",
+      "cache_file": "cache/pages/d1e7ca6de8632e09.txt"
+    },
+    "cd-2022-hatch-st-6mt": {
+      "title": "Tested: 2022 Honda Civic Hatchback (Car and Driver, by the numbers)",
+      "url": "https://www.caranddriver.com/reviews/a37936938/2022-honda-civic-hatchback-by-the-numbers/",
+      "publisher": "Car and Driver (Hearst)",
+      "class": "C",
+      "accessed": "2026-10-03",
+      "access_method": "static",
+      "applicability": "2022 Civic Hatchback Sport Touring 6MT, USA, Sonic Gray paint (test car)",
+      "notes": "Test car photos are on hips.hearstapps.com, whose robots.txt disallows Claude-User; cataloged by link only, not downloaded.",
+      "cache_file": "cache/pages/2df590f6625a05ee.txt"
+    },
+    "civicxi-sgp-st-thread": {
+      "title": "2022 Civic Hatchback Buying / Leasing Tips, Details, & Photos! (Sport Touring in Sonic Gray Pearl) — CivicXI forum",
+      "url": "https://www.civicxi.com/forum/threads/2022-civic-hatchback-buying-leasing-tips-details-photos-sport-touring-in-sonic-gray-pearl.50129/",
+      "publisher": "civicxi.com forum (owner josh_hp, Chicago IL)",
+      "class": "C",
+      "accessed": "2026-10-03",
+      "access_method": "static",
+      "applicability": "2022 Civic Hatchback Sport Touring, USA, Sonic Gray Pearl (owner car; gearbox not stated in the first post text)",
+      "notes": "45 photo attachments on cdn.civicxi.com; the egress proxy resets connections to cdn.civicxi.com, so none were downloaded or analysed.",
+      "cache_file": "cache/pages/eb028c2ffd24c2de.txt"
+    }
+  },
+  "parameters": {
+    "paint.code": {
+      "description": "Honda paint code of Sonic Grey Pearl",
+      "unit": "text",
+      "impact": "high",
+      "candidates": [
+        {
+          "value": "NH-877P",
+          "unit": "text",
+          "status": "confirmed",
+          "class": "A",
+          "source_id": "hci-2023-specs",
+          "locator": "EXTERIOR/INTERIOR COLOURS table, Sonic Grey Pearl row",
+          "evidence": "EXTERIOR/INTERIOR COLOURS … Sonic Grey Pearl\tNH-877P",
+          "as_printed": "NH-877P",
+          "applicability": {
+            "year": "2023",
+            "market": "CA",
+            "trim": "Sport Touring",
+            "body": "hatchback",
+            "gearbox": "6MT and CVT",
+            "engine": "1.5T",
+            "notes": ""
+          },
+          "confidence": "high",
+          "range": null,
+          "how_to_measure": null,
+          "notes": "Row reads Sonic Grey Pearl / NH-877P / (LX blank) / Black/Combi Fabric (Sport) / Black Leather (Sport Touring). Model-year check: same code in American Honda 2024 tables.",
+          "prefer": true,
+          "selection_reason": "Canadian Honda source; same code in the 2024 US tables. No 2024 Canadian colour table was found (the 2024 hondanews.ca spec page lists no colours)."
+        },
+        {
+          "value": "NH-877P",
+          "unit": "text",
+          "status": "confirmed",
+          "class": "A",
+          "source_id": "ahm-infocenter-2024-colors",
+          "locator": "Colors table, Sonic Gray Pearl row",
+          "evidence": "Sonic Gray Pearl … [NH-877P]",
+          "as_printed": "[NH-877P]",
+          "applicability": {
+            "year": "2024",
+            "market": "US",
+            "trim": "Sport Touring",
+            "body": "hatchback",
+            "gearbox": "6MT and CVT",
+            "engine": "1.5T",
+            "notes": ""
+          },
+          "confidence": "high",
+          "range": null,
+          "how_to_measure": null,
+          "notes": "US spelling 'Gray'. Sport Touring column: Black Leather, no 'CVT only' restriction."
+        },
+        {
+          "value": "NH-877P",
+          "unit": "text",
+          "status": "confirmed",
+          "class": "A",
+          "source_id": "ahm-hondanews-2024-specs",
+          "locator": "Exterior colors table row 'Sonic Gray Pearl (NH-877P)' (cols LX|Sport|EX-L|Sport Touring = -|Black|-|Black)",
+          "evidence": "Sonic Gray Pearl (NH-877P)",
+          "as_printed": "Sonic Gray Pearl (NH-877P)",
+          "applicability": {
+            "year": "2024",
+            "market": "US",
+            "trim": "Sport Touring",
+            "body": "hatchback",
+            "gearbox": "6MT and CVT",
+            "engine": "1.5T",
+            "notes": ""
+          },
+          "confidence": "high",
+          "range": null,
+          "how_to_measure": null,
+          "notes": ""
+        },
+        {
+          "value": "NH-877P",
+          "unit": "text",
+          "status": "confirmed",
+          "class": "C",
+          "source_id": "hybridracing-touchup-nh877pah",
+          "locator": "Product title and fitment list",
+          "evidence": "Sonic Gray Pearl Touch-Up Paint (NH877PAH) … 2017-2024 Honda Civic",
+          "as_printed": "NH877PAH",
+          "applicability": {
+            "year": "2017-2024",
+            "market": "US",
+            "trim": "all Civic",
+            "body": "all",
+            "gearbox": "any",
+            "engine": "all",
+            "notes": ""
+          },
+          "confidence": "medium",
+          "range": null,
+          "how_to_measure": null,
+          "notes": "NH877PAH is the touch-up product code (paint code NH-877P + Honda suffix)."
+        }
+      ]
+    },
+    "paint.name": {
+      "description": "Paint name (Canadian spelling selected)",
+      "unit": "text",
+      "impact": "medium",
+      "candidates": [
+        {
+          "value": "Sonic Grey Pearl",
+          "unit": "text",
+          "status": "confirmed",
+          "class": "A",
+          "source_id": "hci-2023-specs",
+          "locator": "EXTERIOR/INTERIOR COLOURS table",
+          "evidence": "Sonic Grey Pearl\tNH-877P",
+          "as_printed": "Sonic Grey Pearl",
+          "applicability": {
+            "year": "2023",
+            "market": "CA",
+            "trim": "Sport Touring",
+            "body": "hatchback",
+            "gearbox": "6MT and CVT",
+            "engine": "1.5T",
+            "notes": ""
+          },
+          "confidence": "high",
+          "range": null,
+          "how_to_measure": null,
+          "notes": "",
+          "prefer": true,
+          "selection_reason": "Canadian name; US name is 'Sonic Gray Pearl'."
+        },
+        {
+          "value": "Sonic Gray Pearl",
+          "unit": "text",
+          "status": "confirmed",
+          "class": "A",
+          "source_id": "ahm-hondanews-2024-specs",
+          "locator": "Exterior colors table",
+          "evidence": "Sonic Gray Pearl (NH-877P)",
+          "as_printed": "Sonic Gray Pearl",
+          "applicability": {
+            "year": "2024",
+            "market": "US",
+            "trim": "Sport Touring",
+            "body": "hatchback",
+            "gearbox": "6MT and CVT",
+            "engine": "1.5T",
+            "notes": ""
+          },
+          "confidence": "high",
+          "range": null,
+          "how_to_measure": null,
+          "notes": ""
+        }
+      ]
+    },
+    "paint.interior_with_paint": {
+      "description": "Interior offered with Sonic Grey Pearl on Sport Touring",
+      "unit": "text",
+      "impact": "low",
+      "candidates": [
+        {
+          "value": "Black Leather",
+          "unit": "text",
+          "status": "confirmed",
+          "class": "A",
+          "source_id": "hci-2023-specs",
+          "locator": "EXTERIOR/INTERIOR COLOURS table, Sonic Grey Pearl row, Sport Touring column",
+          "evidence": "Sonic Grey Pearl\tNH-877P\t \tBlack/Combi Fabric\tBlack Leather",
+          "as_printed": "Black Leather",
+          "applicability": {
+            "year": "2023",
+            "market": "CA",
+            "trim": "Sport Touring",
+            "body": "hatchback",
+            "gearbox": "6MT and CVT",
+            "engine": "1.5T",
+            "notes": ""
+          },
+          "confidence": "high",
+          "range": null,
+          "how_to_measure": null,
+          "notes": ""
+        }
+      ]
+    },
+    "paint.finish_family": {
+      "description": "Paint finish family (from Honda's name: Pearl = mica/pearlescent effect pigment)",
+      "unit": "text",
+      "impact": "medium",
+      "candidates": [
+        {
+          "value": "pearl (pearlescent effect pigment under clearcoat)",
+          "unit": "text",
+          "status": "confirmed",
+          "class": "A",
+          "source_id": "hci-2023-specs",
+          "locator": "Colour name",
+          "evidence": "Sonic Grey Pearl",
+          "as_printed": "Pearl",
+          "applicability": {
+            "year": "2023",
+            "market": "CA",
+            "trim": "Sport Touring",
+            "body": "hatchback",
+            "gearbox": "6MT and CVT",
+            "engine": "1.5T",
+            "notes": ""
+          },
+          "confidence": "medium",
+          "range": null,
+          "how_to_measure": null,
+          "notes": "Only the word 'Pearl' is sourced. Number of coats (2-coat vs 3-coat tri-coat), pigment and flake type are not published; see paint.layer_structure."
+        }
+      ]
+    },
+    "paint.option_cost_us_2022": {
+      "description": "Sonic Gray paint was an extra-cost option on the C&D 2022 test car (identity cross-check only)",
+      "unit": "text",
+      "impact": "low",
+      "candidates": [
+        {
+          "value": "Sonic Gray paint, $395 (US 2022)",
+          "unit": "text",
+          "status": "confirmed",
+          "class": "C",
+          "source_id": "cd-2022-hatch-st-6mt",
+          "locator": "Specifications block, Options",
+          "evidence": "Options: Sonic Gray paint, $395",
+          "as_printed": "$395",
+          "applicability": {
+            "year": "2022",
+            "market": "US",
+            "trim": "Sport Touring",
+            "body": "hatchback",
+            "gearbox": "6MT",
+            "engine": "1.5T",
+            "notes": ""
+          },
+          "confidence": "high",
+          "range": null,
+          "how_to_measure": null,
+          "notes": "Same test car: 'Our Sonic Gray Civic Sport Touring test car'. Photos of it are catalogued in references/manifest.json (not downloadable: robots.txt)."
+        }
+      ]
+    },
+    "paint.layer_structure": {
+      "description": "Paint layer structure (e-coat/primer/base/[mid-coat]/clear)",
+      "unit": "text",
+      "impact": "low",
+      "candidates": [
+        {
+          "value": null,
+          "unit": "text",
+          "status": "unknown",
+          "class": null,
+          "source_id": null,
+          "locator": "",
+          "evidence": "",
+          "as_printed": "",
+          "applicability": {},
+          "confidence": "none",
+          "range": null,
+          "how_to_measure": "Ask a Honda body shop / paint supplier (PPG, Axalta, BASF) for the NH-877P refinish formula: it states whether a mid-coat is needed. Measure a clean, polished body panel (door skin) of the real car with a multi-angle spectrophotometer (e.g. X-Rite MA-T12 / BYK-mac i: L*a*b* at 15/25/45/75/110 deg aspecular, sparkle and graininess) or at minimum photograph the panel beside an X-Rite ColorChecker in open shade, RAW, fixed white balance, at several viewing angles.",
+          "notes": "",
+          "searches": [
+            "hondanews.ca 2022-2024 Civic Hatchback releases (colour names only)",
+            "hondainfocenter.com 2022/2023/2024 Civic Hatchback Colors (codes only)",
+            "Touch-up listing hybrid-racing NH877PAH (single-stage touch-up bottle; no tri-coat note)",
+            "WebSearch: Sonic Gray Pearl NH-877P touch-up paint (retailer pages only)",
+            "paintscratch.com NH-877P leads (not opened: retail colour approximations)"
+          ]
+        }
+      ]
+    },
+    "paint.pearl_shift": {
+      "description": "Pearl flop / colour shift with viewing angle",
+      "unit": "text",
+      "impact": "medium",
+      "candidates": [
+        {
+          "value": null,
+          "unit": "text",
+          "status": "unknown",
+          "class": null,
+          "source_id": null,
+          "locator": "",
+          "evidence": "",
+          "as_printed": "",
+          "applicability": {},
+          "confidence": "none",
+          "range": null,
+          "how_to_measure": "Measure a clean, polished body panel (door skin) of the real car with a multi-angle spectrophotometer (e.g. X-Rite MA-T12 / BYK-mac i: L*a*b* at 15/25/45/75/110 deg aspecular, sparkle and graininess) or at minimum photograph the panel beside an X-Rite ColorChecker in open shade, RAW, fixed white balance, at several viewing angles.",
+          "notes": "",
+          "searches": [
+            "Honda press photos (no angle-controlled shots)",
+            "owner forum thread (images not downloadable)",
+            "C&D test car photos (robots.txt disallows download)"
+          ]
+        }
+      ]
+    },
+    "paint.clearcoat_ior": {
+      "description": "Clearcoat refractive index (for a layered BRDF)",
+      "unit": "1",
+      "impact": "low",
+      "candidates": [
+        {
+          "value": 1.5,
+          "unit": "1",
+          "status": "estimated",
+          "class": "E",
+          "source_id": null,
+          "locator": "",
+          "evidence": "",
+          "as_printed": "",
+          "applicability": {},
+          "confidence": "low",
+          "range": [
+            1.45,
+            1.55
+          ],
+          "how_to_measure": "Not practical to measure on the car; accept the generic value or ask the refinish supplier for the clearcoat chemistry.",
+          "notes": "Basis: OEM automotive clearcoats are acrylic/urethane polymers with refractive index about 1.45-1.55. Not specific to NH-877P."
+        }
+      ]
+    },
+    "paint.clearcoat_roughness": {
+      "description": "Clearcoat roughness (GGX perceptual roughness, new clean car)",
+      "unit": "1",
+      "impact": "medium",
+      "candidates": [
+        {
+          "value": 0.05,
+          "unit": "1",
+          "status": "estimated",
+          "class": "E",
+          "source_id": null,
+          "locator": "",
+          "evidence": "",
+          "as_printed": "",
+          "applicability": {},
+          "confidence": "low",
+          "range": [
+            0.02,
+            0.12
+          ],
+          "how_to_measure": "Measure 20-degree gloss (GU) on a cleaned panel with a glossmeter (OEM clearcoats are typically 85-95 GU at 20 deg) and map to roughness, or photograph a straight light reflection on the hood and fit the highlight width.",
+          "notes": "Basis: factory clearcoat on a new car gives sharp, mirror-like reflections (press photos show sharp building reflections on the doors). Engineering judgement, not measured; orange peel is a separate low-frequency normal effect."
+        }
+      ]
+    },
+    "paint.base_roughness": {
+      "description": "Base/pearl layer roughness under the clearcoat (GGX perceptual)",
+      "unit": "1",
+      "impact": "low",
+      "candidates": [
+        {
+          "value": 0.4,
+          "unit": "1",
+          "status": "estimated",
+          "class": "E",
+          "source_id": null,
+          "locator": "",
+          "evidence": "",
+          "as_printed": "",
+          "applicability": {},
+          "confidence": "low",
+          "range": [
+            0.25,
+            0.6
+          ],
+          "how_to_measure": "Measure a clean, polished body panel (door skin) of the real car with a multi-angle spectrophotometer (e.g. X-Rite MA-T12 / BYK-mac i: L*a*b* at 15/25/45/75/110 deg aspecular, sparkle and graininess) or at minimum photograph the panel beside an X-Rite ColorChecker in open shade, RAW, fixed white balance, at several viewing angles.",
+          "notes": "Basis: effect-pigment base coats scatter broadly (soft pearl glow rather than a second sharp highlight). Judgement only."
+        }
+      ]
+    },
+    "paint.flake": {
+      "description": "Flake / effect pigment type, size and density",
+      "unit": "text",
+      "impact": "medium",
+      "candidates": [
+        {
+          "value": null,
+          "unit": "text",
+          "status": "unknown",
+          "class": null,
+          "source_id": null,
+          "locator": "",
+          "evidence": "",
+          "as_printed": "",
+          "applicability": {},
+          "confidence": "none",
+          "range": null,
+          "how_to_measure": "Macro photograph (1:1, ring light, 45 deg) of a clean panel next to a mm scale to see flake size and density; or a sparkle/graininess reading from a BYK-mac i. Measure a clean, polished body panel (door skin) of the real car with a multi-angle spectrophotometer (e.g. X-Rite MA-T12 / BYK-mac i: L*a*b* at 15/25/45/75/110 deg aspecular, sparkle and graininess) or at minimum photograph the panel beside an X-Rite ColorChecker in open shade, RAW, fixed white balance, at several viewing angles.",
+          "notes": "'Pearl' implies mica-type (interference) pigment rather than aluminium metallic flake, but the mix is unpublished.",
+          "searches": [
+            "Honda colour names/codes only",
+            "no refinish formula or spectro data found publicly"
+          ]
+        }
+      ]
+    }
+  },
+  "updated": "2026-10-03"
+}

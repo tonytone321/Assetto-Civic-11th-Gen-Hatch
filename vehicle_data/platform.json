@@ -1,0 +1,1268 @@
+{
+  "domain": "platform",
+  "title": "Platform constraints (Assetto Corsa + CSP)",
+  "schema_version": 1,
+  "updated": "2026-10-03",
+  "sources": {
+    "csp-wiki-powertrain": {
+      "title": "CSP wiki: Cars – Powertrain",
+      "url": "https://github.com/ac-custom-shaders-patch/acc-extension-config/wiki/Cars-%E2%80%93-Powertrain",
+      "publisher": "Custom Shaders Patch project (GitHub wiki)",
+      "class": "A",
+      "accessed": "2026-10-03",
+      "access_method": "git clone of acc-extension-config.wiki @19048685 (2026-06-11)",
+      "applicability": "Assetto Corsa (2014) car content pipeline; not vehicle-specific",
+      "notes": "",
+      "cache_file": "cache/repos/acc-extension-config.wiki/Cars-–-Powertrain.md"
+    },
+    "csp-wiki-physics-scripts": {
+      "title": "CSP wiki: Cars – Physics scripts",
+      "url": "https://github.com/ac-custom-shaders-patch/acc-extension-config/wiki/Cars-%E2%80%93-Physics-scripts",
+      "publisher": "Custom Shaders Patch project (GitHub wiki)",
+      "class": "A",
+      "accessed": "2026-10-03",
+      "access_method": "git clone of acc-extension-config.wiki @19048685 (2026-06-11)",
+      "applicability": "Assetto Corsa (2014) car content pipeline; not vehicle-specific",
+      "notes": "Same text mirrored at https://cup.acstuff.club/docs/csp/cars/physics-scripts (fetched 200, cache/pages/b780550ed8c6a124.txt).",
+      "cache_file": "cache/repos/acc-extension-config.wiki/Cars-–-Physics-scripts.md"
+    },
+    "csp-wiki-extended-physics": {
+      "title": "CSP wiki: Cars – Enabling extended physics",
+      "url": "https://github.com/ac-custom-shaders-patch/acc-extension-config/wiki/Cars-%E2%80%93-Enabling-extended-physics",
+      "publisher": "Custom Shaders Patch project (GitHub wiki)",
+      "class": "A",
+      "accessed": "2026-10-03",
+      "access_method": "git clone of acc-extension-config.wiki @19048685 (2026-06-11)",
+      "applicability": "Assetto Corsa (2014) car content pipeline; not vehicle-specific",
+      "notes": "",
+      "cache_file": "cache/repos/acc-extension-config.wiki/Cars-–-Enabling-extended-physics.md"
+    },
+    "csp-wiki-audio": {
+      "title": "CSP wiki: Cars – Audio options",
+      "url": "https://github.com/ac-custom-shaders-patch/acc-extension-config/wiki/Cars-%E2%80%93-Audio-options",
+      "publisher": "Custom Shaders Patch project (GitHub wiki)",
+      "class": "A",
+      "accessed": "2026-10-03",
+      "access_method": "git clone of acc-extension-config.wiki @19048685 (2026-06-11)",
+      "applicability": "Assetto Corsa (2014) car content pipeline; not vehicle-specific",
+      "notes": "",
+      "cache_file": "cache/repos/acc-extension-config.wiki/Cars-–-Audio-options.md"
+    },
+    "csp-wiki-animations": {
+      "title": "CSP wiki: Cars – Animations",
+      "url": "https://github.com/ac-custom-shaders-patch/acc-extension-config/wiki/Cars-%E2%80%93-Animations",
+      "publisher": "Custom Shaders Patch project (GitHub wiki)",
+      "class": "A",
+      "accessed": "2026-10-03",
+      "access_method": "git clone of acc-extension-config.wiki @19048685 (2026-06-11)",
+      "applicability": "Assetto Corsa (2014) car content pipeline; not vehicle-specific",
+      "notes": "",
+      "cache_file": "cache/repos/acc-extension-config.wiki/Cars-–-Animations.md"
+    },
+    "csp-wiki-digital": {
+      "title": "CSP wiki: Cars – Digital instruments",
+      "url": "https://github.com/ac-custom-shaders-patch/acc-extension-config/wiki/Cars-%E2%80%93-Digital-instruments",
+      "publisher": "Custom Shaders Patch project (GitHub wiki)",
+      "class": "A",
+      "accessed": "2026-10-03",
+      "access_method": "git clone of acc-extension-config.wiki @19048685 (2026-06-11)",
+      "applicability": "Assetto Corsa (2014) car content pipeline; not vehicle-specific",
+      "notes": "",
+      "cache_file": "cache/repos/acc-extension-config.wiki/Cars-–-Digital-instruments.md"
+    },
+    "csp-wiki-inputs": {
+      "title": "CSP wiki: Cars – Instruments inputs",
+      "url": "https://github.com/ac-custom-shaders-patch/acc-extension-config/wiki/Cars-%E2%80%93-Instruments-inputs",
+      "publisher": "Custom Shaders Patch project (GitHub wiki)",
+      "class": "A",
+      "accessed": "2026-10-03",
+      "access_method": "git clone of acc-extension-config.wiki @19048685 (2026-06-11)",
+      "applicability": "Assetto Corsa (2014) car content pipeline; not vehicle-specific",
+      "notes": "",
+      "cache_file": "cache/repos/acc-extension-config.wiki/Cars-–-Instruments-inputs.md"
+    },
+    "csp-wiki-guessed": {
+      "title": "CSP wiki: Cars – About guessed configs",
+      "url": "https://github.com/ac-custom-shaders-patch/acc-extension-config/wiki/Cars-%E2%80%93-About-guessed-configs",
+      "publisher": "Custom Shaders Patch project (GitHub wiki)",
+      "class": "A",
+      "accessed": "2026-10-03",
+      "access_method": "git clone of acc-extension-config.wiki @19048685 (2026-06-11)",
+      "applicability": "Assetto Corsa (2014) car content pipeline; not vehicle-specific",
+      "notes": "",
+      "cache_file": "cache/repos/acc-extension-config.wiki/Cars-–-About-guessed-configs.md"
+    },
+    "csp-lua-audio": {
+      "title": "CSP Lua SDK: common/ac_audio.d.lua (ac.AudioEvent)",
+      "url": "https://github.com/ac-custom-shaders-patch/acc-lua-sdk/blob/main/common/ac_audio.d.lua",
+      "publisher": "Custom Shaders Patch project",
+      "class": "A",
+      "accessed": "2026-10-03",
+      "access_method": "git clone of acc-lua-sdk @7cf60f5a (2026-08-17)",
+      "applicability": "Assetto Corsa (2014) car content pipeline; not vehicle-specific",
+      "notes": "",
+      "cache_file": "cache/repos/acc-lua-sdk/common/ac_audio.d.lua"
+    },
+    "csp-lua-cphys": {
+      "title": "CSP Lua SDK: ac_car_cphys.lua (car physics script library)",
+      "url": "https://github.com/ac-custom-shaders-patch/acc-lua-sdk/blob/main/ac_car_cphys.lua",
+      "publisher": "Custom Shaders Patch project",
+      "class": "A",
+      "accessed": "2026-10-03",
+      "access_method": "git clone of acc-lua-sdk @7cf60f5a (2026-08-17)",
+      "applicability": "Assetto Corsa (2014) car content pipeline; not vehicle-specific",
+      "notes": "",
+      "cache_file": "cache/repos/acc-lua-sdk/ac_car_cphys.lua"
+    },
+    "csp-lua-readme": {
+      "title": "CSP Lua SDK README",
+      "url": "https://github.com/ac-custom-shaders-patch/acc-lua-sdk/blob/main/README.md",
+      "publisher": "Custom Shaders Patch project",
+      "class": "A",
+      "accessed": "2026-10-03",
+      "access_method": "git clone of acc-lua-sdk @7cf60f5a (2026-08-17)",
+      "applicability": "Assetto Corsa (2014) car content pipeline; not vehicle-specific",
+      "notes": "",
+      "cache_file": "cache/repos/acc-lua-sdk/README.md"
+    },
+    "csp-lua-ex-turbo": {
+      "title": "CSP Lua examples: cars_physics/turbo_map/script.lua",
+      "url": "https://github.com/ac-custom-shaders-patch/acc-lua-examples/blob/main/cars_physics/turbo_map/script.lua",
+      "publisher": "Custom Shaders Patch project",
+      "class": "A",
+      "accessed": "2026-10-03",
+      "access_method": "git clone of acc-lua-examples @51b25318 (2026-06-08)",
+      "applicability": "Assetto Corsa (2014) car content pipeline; not vehicle-specific",
+      "notes": "",
+      "cache_file": "cache/repos/acc-lua-examples/cars_physics/turbo_map/script.lua"
+    },
+    "csp-lua-ex-cars": {
+      "title": "CSP Lua examples: cars/README.md (car script snippets)",
+      "url": "https://github.com/ac-custom-shaders-patch/acc-lua-examples/blob/main/cars/README.md",
+      "publisher": "Custom Shaders Patch project",
+      "class": "A",
+      "accessed": "2026-10-03",
+      "access_method": "git clone of acc-lua-examples @51b25318 (2026-06-08)",
+      "applicability": "Assetto Corsa (2014) car content pipeline; not vehicle-specific",
+      "notes": "",
+      "cache_file": "cache/repos/acc-lua-examples/cars/README.md"
+    },
+    "csp-lua-ex-dash": {
+      "title": "CSP Lua examples: cars/dash_display_8100/README.md (scriptable display)",
+      "url": "https://github.com/ac-custom-shaders-patch/acc-lua-examples/blob/main/cars/dash_display_8100/README.md",
+      "publisher": "Custom Shaders Patch project",
+      "class": "A",
+      "accessed": "2026-10-03",
+      "access_method": "git clone of acc-lua-examples @51b25318 (2026-06-08)",
+      "applicability": "Assetto Corsa (2014) car content pipeline; not vehicle-specific",
+      "notes": "",
+      "cache_file": "cache/repos/acc-lua-examples/cars/dash_display_8100/README.md"
+    },
+    "acm-first-car": {
+      "title": "TUTORIAL – Your FIRST car in Assetto Corsa – Basic Guide (luchian; edited with feedback from a Kunos 3D artist)",
+      "url": "https://www.assettocorsamods.net/threads/your-first-car-in-assetto-corsa-basic-guide.1019/",
+      "publisher": "assettocorsamods.net (community forum)",
+      "class": "C",
+      "accessed": "2026-10-03",
+      "access_method": "static",
+      "applicability": "Assetto Corsa (2014) car content pipeline; not vehicle-specific",
+      "notes": "",
+      "cache_file": "cache/pages/0916b7573fa9e6bf.txt"
+    },
+    "acm-sound-guide": {
+      "title": "TUTORIAL – Start with Sound Modding – Quick Guide",
+      "url": "https://assettocorsamods.net/threads/start-with-sound-modding-quick-guide.1163/",
+      "publisher": "assettocorsamods.net (community forum)",
+      "class": "C",
+      "accessed": "2026-10-03",
+      "access_method": "static",
+      "applicability": "Assetto Corsa (2014) car content pipeline; not vehicle-specific",
+      "notes": "Thread also suggests taking samples from other games/mods; that is excluded by project rule 6.",
+      "cache_file": "cache/pages/bf7bb9e7f1524436.txt"
+    },
+    "acm-knsuseditor": {
+      "title": "KnSusEditor – Values Compared to Real Life? (thread)",
+      "url": "https://assettocorsamods.net/threads/knsuseditor-values-compared-to-real-life.1122/",
+      "publisher": "assettocorsamods.net (community forum)",
+      "class": "C",
+      "accessed": "2026-10-03",
+      "access_method": "static",
+      "applicability": "Assetto Corsa (2014) car content pipeline; not vehicle-specific",
+      "notes": "",
+      "cache_file": "cache/pages/4157be37015b2e8a.txt"
+    },
+    "acm-fbx-anim": {
+      "title": "FBX Animation (thread)",
+      "url": "https://www.assettocorsamods.net/threads/fbx-animation.2498/",
+      "publisher": "assettocorsamods.net (community forum)",
+      "class": "C",
+      "accessed": "2026-10-03",
+      "access_method": "static",
+      "applicability": "Assetto Corsa (2014) car content pipeline; not vehicle-specific",
+      "notes": "",
+      "cache_file": "cache/pages/543ffad1cdc945cd.txt"
+    },
+    "cm-turbo": {
+      "title": "Content Manager source: AcTools/Utils/Physics/TurboDescription.cs",
+      "url": "https://github.com/gro-ove/actools/blob/master/AcTools/Utils/Physics/TurboDescription.cs",
+      "publisher": "Content Manager (open source community tool)",
+      "class": "C",
+      "accessed": "2026-10-03",
+      "access_method": "git clone of gro-ove/actools @e5e5c94b (2026-06-17)",
+      "applicability": "Assetto Corsa (2014) car content pipeline; not vehicle-specific",
+      "notes": "",
+      "cache_file": "cache/repos/actools/AcTools/Utils/Physics/TurboDescription.cs"
+    },
+    "cm-torque": {
+      "title": "Content Manager source: AcTools/Utils/Physics/TorquePhysicUtils.cs",
+      "url": "https://github.com/gro-ove/actools/blob/master/AcTools/Utils/Physics/TorquePhysicUtils.cs",
+      "publisher": "Content Manager (open source community tool)",
+      "class": "C",
+      "accessed": "2026-10-03",
+      "access_method": "git clone of gro-ove/actools @e5e5c94b (2026-06-17)",
+      "applicability": "Assetto Corsa (2014) car content pipeline; not vehicle-specific",
+      "notes": "",
+      "cache_file": "cache/repos/actools/AcTools/Utils/Physics/TorquePhysicUtils.cs"
+    },
+    "cm-carobject": {
+      "title": "Content Manager source: AcManager.Tools/Objects/CarObject.cs (car packing list)",
+      "url": "https://github.com/gro-ove/actools/blob/master/AcManager.Tools/Objects/CarObject.cs",
+      "publisher": "Content Manager (open source community tool)",
+      "class": "C",
+      "accessed": "2026-10-03",
+      "access_method": "git clone of gro-ove/actools @e5e5c94b (2026-06-17)",
+      "applicability": "Assetto Corsa (2014) car content pipeline; not vehicle-specific",
+      "notes": "",
+      "cache_file": "cache/repos/actools/AcManager.Tools/Objects/CarObject.cs"
+    },
+    "cm-workshop": {
+      "title": "Content Manager source: WorkshopCarValidator.cs (required files check)",
+      "url": "https://github.com/gro-ove/actools/blob/master/AcManager/Tools/WorkshopPublishTools/Validators/WorkshopCarValidator.cs",
+      "publisher": "Content Manager (open source community tool)",
+      "class": "C",
+      "accessed": "2026-10-03",
+      "access_method": "git clone of gro-ove/actools @e5e5c94b (2026-06-17)",
+      "applicability": "Assetto Corsa (2014) car content pipeline; not vehicle-specific",
+      "notes": "",
+      "cache_file": "cache/repos/actools/AcManager/Tools/WorkshopPublishTools/Validators/WorkshopCarValidator.cs"
+    },
+    "cm-sfx": {
+      "title": "Content Manager source: CarObject.Sfx.cs (GUIDs.txt handling)",
+      "url": "https://github.com/gro-ove/actools/blob/master/AcManager.Tools/Objects/CarObject.Sfx.cs",
+      "publisher": "Content Manager (open source community tool)",
+      "class": "C",
+      "accessed": "2026-10-03",
+      "access_method": "git clone of gro-ove/actools @e5e5c94b (2026-06-17)",
+      "applicability": "Assetto Corsa (2014) car content pipeline; not vehicle-specific",
+      "notes": "",
+      "cache_file": "cache/repos/actools/AcManager.Tools/Objects/CarObject.Sfx.cs"
+    },
+    "cm-acd": {
+      "title": "Content Manager source: AcTools/AcdFile/AcdEncryption.cs",
+      "url": "https://github.com/gro-ove/actools/blob/master/AcTools/AcdFile/AcdEncryption.cs",
+      "publisher": "Content Manager (open source community tool)",
+      "class": "C",
+      "accessed": "2026-10-03",
+      "access_method": "git clone of gro-ove/actools @e5e5c94b (2026-06-17)",
+      "applicability": "Assetto Corsa (2014) car content pipeline; not vehicle-specific",
+      "notes": "",
+      "cache_file": "cache/repos/actools/AcTools/AcdFile/AcdEncryption.cs"
+    },
+    "cm-analyzer": {
+      "title": "Content Manager source: CarAnalyzer.xaml.cs (LOD rating heuristics)",
+      "url": "https://github.com/gro-ove/actools/blob/master/AcManager/Pages/ContentTools/CarAnalyzer.xaml.cs",
+      "publisher": "Content Manager (open source community tool)",
+      "class": "C",
+      "accessed": "2026-10-03",
+      "access_method": "git clone of gro-ove/actools @e5e5c94b (2026-06-17)",
+      "applicability": "Assetto Corsa (2014) car content pipeline; not vehicle-specific",
+      "notes": "",
+      "cache_file": "cache/repos/actools/AcManager/Pages/ContentTools/CarAnalyzer.xaml.cs"
+    },
+    "cm-wheels": {
+      "title": "Content Manager source: Kn5RenderableCar.Wheels.cs (wheel node names)",
+      "url": "https://github.com/gro-ove/actools/blob/master/AcTools.Render/Kn5Specific/Objects/Kn5RenderableCar.Wheels.cs",
+      "publisher": "Content Manager (open source community tool)",
+      "class": "C",
+      "accessed": "2026-10-03",
+      "access_method": "git clone of gro-ove/actools @e5e5c94b (2026-06-17)",
+      "applicability": "Assetto Corsa (2014) car content pipeline; not vehicle-specific",
+      "notes": "",
+      "cache_file": "cache/repos/actools/AcTools.Render/Kn5Specific/Objects/Kn5RenderableCar.Wheels.cs"
+    },
+    "cm-utils": {
+      "title": "Content Manager source: Kn5RenderableCar.Utils.cs (cockpit LR/HR, seatbelt nodes)",
+      "url": "https://github.com/gro-ove/actools/blob/master/AcTools.Render/Kn5Specific/Objects/Kn5RenderableCar.Utils.cs",
+      "publisher": "Content Manager (open source community tool)",
+      "class": "C",
+      "accessed": "2026-10-03",
+      "access_method": "git clone of gro-ove/actools @e5e5c94b (2026-06-17)",
+      "applicability": "Assetto Corsa (2014) car content pipeline; not vehicle-specific",
+      "notes": "",
+      "cache_file": "cache/repos/actools/AcTools.Render/Kn5Specific/Objects/Kn5RenderableCar.Utils.cs"
+    },
+    "blender-kn5": {
+      "title": "moppius/blender-assetto-corsa-tools: exporter/exporter_utils.py",
+      "url": "https://github.com/moppius/blender-assetto-corsa-tools/blob/master/exporter/exporter_utils.py",
+      "publisher": "Community Blender KN5 exporter (MIT)",
+      "class": "C",
+      "accessed": "2026-10-03",
+      "access_method": "git clone @5f0c163c (2022-01-02)",
+      "applicability": "Assetto Corsa (2014) car content pipeline; not vehicle-specific",
+      "notes": "",
+      "cache_file": "cache/repos/blender-assetto-corsa-tools/exporter/exporter_utils.py"
+    },
+    "gtp-dds": {
+      "title": "GTPlanet AC PC Mods General Discussion, post on DDS BC7/mipmaps/power-of-two",
+      "url": "https://www.gtplanet.net/forum/threads/assetto-corsa-pc-mods-general-discussion.307899/post-14358983",
+      "publisher": "GTPlanet forum (community)",
+      "class": "C",
+      "accessed": "2026-10-03",
+      "access_method": "static",
+      "applicability": "Assetto Corsa (2014) car content pipeline; not vehicle-specific",
+      "notes": "",
+      "cache_file": "cache/pages/9d01755bb6ac9e4d.txt"
+    }
+  },
+  "parameters": {
+    "platform.fmod_studio_version": {
+      "description": "FMOD Studio version required to build AC car soundbanks",
+      "unit": "text",
+      "impact": "critical",
+      "candidates": [
+        {
+          "value": "1.08.12",
+          "unit": "text",
+          "status": "confirmed",
+          "class": "C",
+          "source_id": "acm-sound-guide",
+          "locator": "post #1 and #4 (Just Kauser, Jan/Feb 2018)",
+          "evidence": "Short tut.: Go to : Assetto Corsa\\sdk\\audio\\AC Audio Pipeline 1.9.pdf … In my case it is: v 1.08.12. … IMPORTANT: Download not the lastest FMOD version, download v.1.08.12!!!",
+          "as_printed": "1.08.12",
+          "applicability": {
+            "year": "",
+            "market": "",
+            "trim": "",
+            "body": "",
+            "gearbox": "",
+            "engine": "",
+            "notes": "Platform documentation (Assetto Corsa / Custom Shaders Patch); not vehicle-specific."
+          },
+          "confidence": "medium",
+          "range": null,
+          "how_to_measure": null,
+          "notes": "Community post quoting the official 'AC Audio Pipeline 1.9.pdf' shipped in the AC install (sdk/audio). Primary PDF is not online and was not supplied; the Kunos forum thread 'FMod official project v1.9' returned HTTP 403 (not worked around). Same poster notes newer cars might use another version. Verify on the user's PC: open sdk/audio/AC Audio Pipeline 1.9.pdf and read the 'FMod Studio version used' line."
+        }
+      ]
+    },
+    "platform.audio_event_path_format": {
+      "description": "FMOD event path convention for car sound events",
+      "unit": "text",
+      "impact": "high",
+      "candidates": [
+        {
+          "value": "event:/cars/<car_folder_id>/<event> (e.g. engine_ext, engine_int, door)",
+          "unit": "text",
+          "status": "confirmed",
+          "class": "A",
+          "source_id": "csp-lua-audio",
+          "locator": "ac.AudioEvent @param event",
+          "evidence": "Event name, for example, `'/cars/lada_revolution/door'` (leading “/” or “event:” prefix are optional). … For example, `'cars/:own/engine_ext'` or `'cars/:1/engine_int'`.",
+          "as_printed": "event:/cars/<car_folder_id>/<event> (e.g. engine_ext, engine_int, door)",
+          "applicability": {
+            "year": "",
+            "market": "",
+            "trim": "",
+            "body": "",
+            "gearbox": "",
+            "engine": "",
+            "notes": "Platform documentation (Assetto Corsa / Custom Shaders Patch); not vehicle-specific."
+          },
+          "confidence": "high",
+          "range": null,
+          "how_to_measure": null,
+          "notes": "Corroborated by Content Manager regex for sfx/GUIDs.txt lines: ^\\{(GUID)\\}\\s+event:/cars/(\\w+)/e (cm-sfx, line 27)."
+        }
+      ]
+    },
+    "platform.audio_engine_event_params": {
+      "description": "Game-supplied parameters on engine/turbo/backfire/etc. events (as exposed by CSP's transform keys)",
+      "unit": "text",
+      "impact": "critical",
+      "candidates": [
+        {
+          "value": "engine_ext/engine_int: rpms, throttle; turbo: boost, bov, bov_decay; backfire_ext/int: throttle; limiter: decay; transmission: drivetrain_speed, throttle; gear_ext/int: state",
+          "unit": "text",
+          "status": "confirmed",
+          "class": "A",
+          "source_id": "csp-wiki-audio",
+          "locator": "Supported parameters list",
+          "evidence": "ENGINE_EXT: ENGINE_EXT_RPMS, ENGINE_EXT_THROTTLE; … ENGINE_INT: ENGINE_INT_RPMS, ENGINE_INT_THROTTLE; … BACKFIRE_EXT: BACKFIRE_EXT_THROTTLE; … LIMITER: LIMITER_DECAY; … TURBO: TURBO_BOOST, TURBO_BOV, TURBO_BOV_DECAY; … TRANSMISSION: TRANSMISSION_DRIVETRAIN_SPEED, TRANSMISSION_THROTTLE;",
+          "as_printed": "engine_ext/engine_int: rpms, throttle; turbo: boost, bov, bov_decay; backfire_ext/int: throttle; limiter: decay; transmission: drivetrain_speed, throttle; gear_ext/int: state",
+          "applicability": {
+            "year": "",
+            "market": "",
+            "trim": "",
+            "body": "",
+            "gearbox": "",
+            "engine": "",
+            "notes": "Platform documentation (Assetto Corsa / Custom Shaders Patch); not vehicle-specific."
+          },
+          "confidence": "medium",
+          "range": null,
+          "how_to_measure": null,
+          "notes": "CSP lists AC's existing event inputs by EVENT_PARAM key; lower-case FMOD parameter names are inferred from those keys (only 'drivetrain_speed', 'throttle', 'state', 'boost' appear lower-case in the text). No 'load' parameter is documented for base AC; CSP can add ENGINE_EXT_BOOST/ENGINE_INT_BOOST and TURBO_THROTTLE via [AUDIO_PROPERTIES]. Exact list must be confirmed against the Kunos FMOD template project (AC SDK, user's PC)."
+        }
+      ]
+    },
+    "platform.audio_sfx_files": {
+      "description": "Files the car's sound needs",
+      "unit": "text",
+      "impact": "high",
+      "candidates": [
+        {
+          "value": "sfx/<car_folder_id>.bank + sfx/GUIDs.txt",
+          "unit": "text",
+          "status": "confirmed",
+          "class": "C",
+          "source_id": "cm-workshop",
+          "locator": "Validate(): ValidateFileExistance / ValidateAudioGuids",
+          "evidence": "var fileName = \"sfx/GUIDs.txt\"; … yield return ValidateFileExistance($\"sfx/{Target.Id}.bank\", 200e6);",
+          "as_printed": "sfx/<car_folder_id>.bank + sfx/GUIDs.txt",
+          "applicability": {
+            "year": "",
+            "market": "",
+            "trim": "",
+            "body": "",
+            "gearbox": "",
+            "engine": "",
+            "notes": "Platform documentation (Assetto Corsa / Custom Shaders Patch); not vehicle-specific."
+          },
+          "confidence": "high",
+          "range": null,
+          "how_to_measure": null,
+          "notes": "Content Manager's Steam Workshop validator treats GUIDs.txt as required for non-Kunos cars and the bank name must equal the car folder id."
+        }
+      ]
+    },
+    "platform.csp_min_version_physics_script": {
+      "description": "Minimum CSP version for a car physics Lua script (data/script.lua)",
+      "unit": "text",
+      "impact": "high",
+      "candidates": [
+        {
+          "value": "0.1.77",
+          "unit": "text",
+          "status": "confirmed",
+          "class": "A",
+          "source_id": "csp-wiki-physics-scripts",
+          "locator": "first paragraph",
+          "evidence": "With 0.1.77 update it is now possible to use a Lua script to extend car physics. Simply create a “script.lua” in car data folder and it’ll work if extended physics is enabled.",
+          "as_printed": "0.1.77",
+          "applicability": {
+            "year": "",
+            "market": "",
+            "trim": "",
+            "body": "",
+            "gearbox": "",
+            "engine": "",
+            "notes": "Platform documentation (Assetto Corsa / Custom Shaders Patch); not vehicle-specific."
+          },
+          "confidence": "high",
+          "range": null,
+          "how_to_measure": null,
+          "notes": ""
+        }
+      ]
+    },
+    "platform.csp_min_version_cphys_turbo_boost_read": {
+      "description": "CSP build needed for carPh.turboBoost in physics scripts",
+      "unit": "text",
+      "impact": "medium",
+      "candidates": [
+        {
+          "value": "0.3.0-preview445",
+          "unit": "text",
+          "status": "confirmed",
+          "class": "A",
+          "source_id": "csp-wiki-physics-scripts",
+          "locator": "example 'Forcing more air into the engine'",
+          "evidence": "requires 0.3.0-preview445 or newer for `carPh.turboBoost` to work",
+          "as_printed": "0.3.0-preview445",
+          "applicability": {
+            "year": "",
+            "market": "",
+            "trim": "",
+            "body": "",
+            "gearbox": "",
+            "engine": "",
+            "notes": "Platform documentation (Assetto Corsa / Custom Shaders Patch); not vehicle-specific."
+          },
+          "confidence": "high",
+          "range": null,
+          "how_to_measure": null,
+          "notes": ""
+        }
+      ]
+    },
+    "platform.csp_min_version_visual_car_script": {
+      "description": "Minimum CSP version for a visual (ext_config [SCRIPT_...]) car Lua script",
+      "unit": "text",
+      "impact": "medium",
+      "candidates": [
+        {
+          "value": null,
+          "unit": "text",
+          "status": "unknown",
+          "class": null,
+          "source_id": null,
+          "locator": "",
+          "evidence": "",
+          "as_printed": "",
+          "applicability": {
+            "year": "",
+            "market": "",
+            "trim": "",
+            "body": "",
+            "gearbox": "",
+            "engine": "",
+            "notes": "Platform documentation (Assetto Corsa / Custom Shaders Patch); not vehicle-specific."
+          },
+          "confidence": "none",
+          "range": null,
+          "how_to_measure": "Set [_EXTENSION] REQUIRED_VERSION / test on the CSP build the user runs; CSP changelog (acstuff.club/patch) could date it.",
+          "notes": "Practical plan: target a current CSP (0.2.x/0.3.x) and declare REQUIRED_VERSION; do not rely on a minimum we could not cite.",
+          "searches": [
+            "CSP wiki clone (all Cars-* pages): grep 'SCRIPT', 'car script' - no version stated",
+            "acc-lua-sdk clone: README, ac_car_scriptable_display.lua, common/ac_enums.lua (SharedNamespace CarScript) - no version",
+            "acc-lua-examples cars/README.md - no version",
+            "WebSearch: 'CSP lua sdk ac.StateCar fields ...' (no version)",
+            "zgushonka/ac_scripts (linked from SDK README): shows [SCRIPT_...] SCRIPT='ext_script.lua' syntax, no version"
+          ]
+        }
+      ]
+    },
+    "platform.extended_physics_switch": {
+      "description": "How CSP extended physics is enabled for a car",
+      "unit": "text",
+      "impact": "high",
+      "candidates": [
+        {
+          "value": "car.ini [HEADER] VERSION=extended-2 (optionally [_EXTENSION] REQUIRED_VERSION=<build id>)",
+          "unit": "text",
+          "status": "confirmed",
+          "class": "A",
+          "source_id": "csp-wiki-extended-physics",
+          "locator": "main text",
+          "evidence": "open `car.ini`, find `[HEADER]` section and add `extended-` to `VERSION` value as prefix … original AC, if it would encounter that `VERSION` value, would crash",
+          "as_printed": "car.ini [HEADER] VERSION=extended-2 (optionally [_EXTENSION] REQUIRED_VERSION=<build id>)",
+          "applicability": {
+            "year": "",
+            "market": "",
+            "trim": "",
+            "body": "",
+            "gearbox": "",
+            "engine": "",
+            "notes": "Platform documentation (Assetto Corsa / Custom Shaders Patch); not vehicle-specific."
+          },
+          "confidence": "high",
+          "range": null,
+          "how_to_measure": null,
+          "notes": "Consequence: a car using CSP extended physics will not load in vanilla AC."
+        }
+      ]
+    },
+    "platform.turbo_definition_location": {
+      "description": "Where AC defines turbochargers",
+      "unit": "text",
+      "impact": "critical",
+      "candidates": [
+        {
+          "value": "engine.ini [TURBO_0..N] sections (keys MAX_BOOST, WASTEGATE, REFERENCE_RPM, GAMMA, LAG_UP, LAG_DN, DISPLAY_MAX_BOOST, COCKPIT_ADJUSTABLE); optional ctrl_turbo<N>.ini controllers; no turbo.ini",
+          "unit": "text",
+          "status": "confirmed",
+          "class": "A",
+          "source_id": "csp-lua-ex-turbo",
+          "locator": "DefaultTurbo()",
+          "evidence": "---Turbo acting similar to original Kunos turbo with CSP extensions. Only for illustrative purposes. … local section = 'TURBO_'..index … local gamma = engineINI:get(section, 'GAMMA', 2) … local rpmRef = engineINI:get(section, 'REFERENCE_RPM', 2000) … local lagDown = engineINI:get(section, 'LAG_DN', 0.99) … local lagUp = engineINI:get(section, 'LAG_UP', 0.99) … local wastegate = engineINI:get(section, 'WASTEGATE', 0) … local maxBoost = engineINI:get(section, 'MAX_BOOST', 1) … local controllerMaxBoost = ac.getDynamicController('ctrl_turbo'..index..'.ini')",
+          "as_printed": "engine.ini [TURBO_0..N] sections (keys MAX_BOOST, WASTEGATE, REFERENCE_RPM, GAMMA, LAG_UP, LAG_DN, DISPLAY_MAX_BOOST, COCKPIT_ADJUSTABLE); optional ctrl_turbo<N>.ini controllers; no turbo.ini",
+          "applicability": {
+            "year": "",
+            "market": "",
+            "trim": "",
+            "body": "",
+            "gearbox": "",
+            "engine": "",
+            "notes": "Platform documentation (Assetto Corsa / Custom Shaders Patch); not vehicle-specific."
+          },
+          "confidence": "high",
+          "range": null,
+          "how_to_measure": null,
+          "notes": "DISPLAY_MAX_BOOST and COCKPIT_ADJUSTABLE appear in the CSP Powertrain wiki [TURBO_0] example. No source anywhere mentions a turbo.ini; Content Manager also reads turbos only from engine.ini TURBO sections (cm-torque ReadTurbos). 'BOOST_THRESHOLD' as a turbo key was not found; the related key seen is [DAMAGE] TURBO_BOOST_THRESHOLD (community-reported, Automation forum) for engine damage."
+        }
+      ]
+    },
+    "platform.turbo_torque_model": {
+      "description": "How boost scales torque in AC (steady state, full throttle)",
+      "unit": "text",
+      "impact": "critical",
+      "candidates": [
+        {
+          "value": "T(rpm) = power.lut(rpm) * (1 + sum_i boost_i); boost_i = MAX_BOOST * min(1, (rpm*gas/REFERENCE_RPM)^GAMMA), clipped at WASTEGATE (if non-zero), approached through LAG_UP/LAG_DN",
+          "unit": "text",
+          "status": "confirmed",
+          "class": "C",
+          "source_id": "cm-torque",
+          "locator": "ConsiderTurbo()",
+          "evidence": "return torque * (1.0 + multiplier);",
+          "as_printed": "T(rpm) = power.lut(rpm) * (1 + sum_i boost_i); boost_i = MAX_BOOST * min(1, (rpm*gas/REFERENCE_RPM)^GAMMA), clipped at WASTEGATE (if non-zero), approached through LAG_UP/LAG_DN",
+          "applicability": {
+            "year": "",
+            "market": "",
+            "trim": "",
+            "body": "",
+            "gearbox": "",
+            "engine": "",
+            "notes": "Platform documentation (Assetto Corsa / Custom Shaders Patch); not vehicle-specific."
+          },
+          "confidence": "medium",
+          "range": null,
+          "how_to_measure": null,
+          "notes": "Multiplier per turbo from cm-turbo CalculateMultiplier: 'var baseLevel = Math.Min(1, Math.Pow(rpm / ReferenceRpm, Gamma));' and wastegate clip 'Math.Min(Wastegate, result)'. Gas term and lag from CSP's illustrative re-implementation (csp-lua-ex-turbo: 'math.pow(math.saturateN(data.rpm * gas / rpmRef), gamma)'). Both are re-implementations; Kunos source is closed. Implication for Phase 4: power.lut is the NON-boosted torque curve if turbo sections are used, or the full curve with no turbo sections."
+        },
+        {
+          "value": "intensity = saturate(rpm*gas/REFERENCE_RPM)^GAMMA; spinning += (intensity - spinning)*(LAG_UP or LAG_DN)*dt; boost = MAX_BOOST*spinning (wastegate clip)",
+          "unit": "text",
+          "status": "confirmed",
+          "class": "A",
+          "source_id": "csp-lua-ex-turbo",
+          "locator": "DefaultTurbo() return function",
+          "evidence": "local intensity = math.pow(math.saturateN(data.rpm * gas / rpmRef), gamma) … spinning = spinning + (intensity - spinning) * (intensity > spinning and lagUp or lagDown) * dt",
+          "as_printed": "intensity = saturate(rpm*gas/REFERENCE_RPM)^GAMMA; spinning += (intensity - spinning)*(LAG_UP or LAG_DN)*dt; boost = MAX_BOOST*spinning (wastegate clip)",
+          "applicability": {
+            "year": "",
+            "market": "",
+            "trim": "",
+            "body": "",
+            "gearbox": "",
+            "engine": "",
+            "notes": "Platform documentation (Assetto Corsa / Custom Shaders Patch); not vehicle-specific."
+          },
+          "confidence": "medium",
+          "range": null,
+          "how_to_measure": null,
+          "notes": "CSP's own description: 'Turbo acting similar to original Kunos turbo with CSP extensions. Only for illustrative purposes.'"
+        }
+      ]
+    },
+    "platform.csp_turbo_v1": {
+      "description": "CSP extended turbo model (TURBO_VERSION=1) availability",
+      "unit": "text",
+      "impact": "medium",
+      "candidates": [
+        {
+          "value": "CSP 0.2.8 (05/2025): engine.ini [HEADER] TURBO_VERSION=1, [TURBO_n] FLOW_ON_CUT",
+          "unit": "text",
+          "status": "confirmed",
+          "class": "A",
+          "source_id": "csp-wiki-powertrain",
+          "locator": "# Turbos / New for 0.2.8 (05/2025)",
+          "evidence": "## New for 0.2.8 (05/2025) … TURBO_VERSION=1 ;0 is AC, 1 is v1 CSP … FLOW_ON_CUT=0.6",
+          "as_printed": "CSP 0.2.8 (05/2025): engine.ini [HEADER] TURBO_VERSION=1, [TURBO_n] FLOW_ON_CUT",
+          "applicability": {
+            "year": "",
+            "market": "",
+            "trim": "",
+            "body": "",
+            "gearbox": "",
+            "engine": "",
+            "notes": "Platform documentation (Assetto Corsa / Custom Shaders Patch); not vehicle-specific."
+          },
+          "confidence": "high",
+          "range": null,
+          "how_to_measure": null,
+          "notes": "Fixes vanilla behaviour where ignition/fuel cuts act like a closed throttle and unspool the turbo. Relevant to rev-limiter/TC cuts on the Civic. Extended physics only."
+        }
+      ]
+    },
+    "platform.power_curve_file": {
+      "description": "Engine torque curve file",
+      "unit": "text",
+      "impact": "critical",
+      "candidates": [
+        {
+          "value": "engine.ini [HEADER] POWER_CURVE=power.lut (rpm|torque N*m), limiter at [ENGINE_DATA] LIMITER, idle at [ENGINE_DATA] MINIMUM",
+          "unit": "text",
+          "status": "confirmed",
+          "class": "C",
+          "source_id": "cm-torque",
+          "locator": "LoadCarTorque()",
+          "evidence": "var torque = engine[\"HEADER\"].GetLut(\"POWER_CURVE\", \"power.lut\"); … var limit = considerLimiter && engine.ContainsKey(\"ENGINE_DATA\") ? engine[\"ENGINE_DATA\"].GetDouble(\"LIMITER\", torque.MaxX) : torque.MaxX;",
+          "as_printed": "engine.ini [HEADER] POWER_CURVE=power.lut (rpm|torque N*m), limiter at [ENGINE_DATA] LIMITER, idle at [ENGINE_DATA] MINIMUM",
+          "applicability": {
+            "year": "",
+            "market": "",
+            "trim": "",
+            "body": "",
+            "gearbox": "",
+            "engine": "",
+            "notes": "Platform documentation (Assetto Corsa / Custom Shaders Patch); not vehicle-specific."
+          },
+          "confidence": "medium",
+          "range": null,
+          "how_to_measure": null,
+          "notes": "MINIMUM key read in AcTools.Render/Data/CarData.cs line 1005. Wheel vs crank: not stated in any source opened; community convention is crank torque - unconfirmed. Coast/engine-brake keys ([COAST_REF] RPM/TORQUE/NON_LINEARITY) are believed but unconfirmed online; check formula_k engine.ini comments in the AC SDK."
+        }
+      ]
+    },
+    "platform.required_data_files": {
+      "description": "Data files without which the car will not load (per community guide)",
+      "unit": "text",
+      "impact": "critical",
+      "candidates": [
+        {
+          "value": "aero.ini (+wing LUTs), cameras.ini, car.ini, driver3d.ini, engine.ini (+power.lut), lods.ini, suspensions.ini, tyres.ini (+LUTs); brakes.ini, colliders.ini, drivetrain.ini, setup.ini needed for sane behaviour",
+          "unit": "text",
+          "status": "confirmed",
+          "class": "C",
+          "source_id": "acm-first-car",
+          "locator": "post #1, section 4: Edit \\DATA\\*.ini files",
+          "evidence": "MANDATORY … (without them, the car will not load and game will crash)",
+          "as_printed": "aero.ini (+wing LUTs), cameras.ini, car.ini, driver3d.ini, engine.ini (+power.lut), lods.ini, suspensions.ini, tyres.ini (+LUTs); brakes.ini, colliders.ini, drivetrain.ini, setup.ini needed for sane behaviour",
+          "applicability": {
+            "year": "",
+            "market": "",
+            "trim": "",
+            "body": "",
+            "gearbox": "",
+            "engine": "",
+            "notes": "Platform documentation (Assetto Corsa / Custom Shaders Patch); not vehicle-specific."
+          },
+          "confidence": "medium",
+          "range": null,
+          "how_to_measure": null,
+          "notes": "List follows the guide's 'MANDATORY' and 'OPTIONAL, BUT MANDATORY' groups (2017; edited with Kunos 3D-artist feedback). Official car_pipeline*.pdf ships in sdk/dev on the user's PC."
+        }
+      ]
+    },
+    "platform.data_packing": {
+      "description": "Release packing of data folder",
+      "unit": "text",
+      "impact": "high",
+      "candidates": [
+        {
+          "value": "data/ folder packed to data.acd; encryption key derived from the car folder name",
+          "unit": "text",
+          "status": "confirmed",
+          "class": "C",
+          "source_id": "cm-acd",
+          "locator": "AcdEncryption.FromAcdFilename",
+          "evidence": "var id = name.StartsWith(\"data\", StringComparison.OrdinalIgnoreCase) ? Path.GetFileName(Path.GetDirectoryName(acdFilename)) : name;",
+          "as_printed": "data/ folder packed to data.acd; encryption key derived from the car folder name",
+          "applicability": {
+            "year": "",
+            "market": "",
+            "trim": "",
+            "body": "",
+            "gearbox": "",
+            "engine": "",
+            "notes": "Platform documentation (Assetto Corsa / Custom Shaders Patch); not vehicle-specific."
+          },
+          "confidence": "medium",
+          "range": null,
+          "how_to_measure": null,
+          "notes": "Guide: 'nowdays the entire folder is packed in one single file called data.acd'. Renaming the folder after packing breaks the data.acd (inference from key derivation). Unpacked data/ also loads (CSP: live reload of script.lua 'if data is unpacked')."
+        }
+      ]
+    },
+    "platform.car_folder_name_max_length": {
+      "description": "Max length of the car folder name",
+      "unit": "count",
+      "impact": "low",
+      "candidates": [
+        {
+          "value": 32,
+          "unit": "count",
+          "status": "confirmed",
+          "class": "C",
+          "source_id": "acm-first-car",
+          "locator": "post #1, folder structure",
+          "evidence": "max length for car folder name: 32",
+          "as_printed": "32",
+          "applicability": {
+            "year": "",
+            "market": "",
+            "trim": "",
+            "body": "",
+            "gearbox": "",
+            "engine": "",
+            "notes": "Platform documentation (Assetto Corsa / Custom Shaders Patch); not vehicle-specific."
+          },
+          "confidence": "high",
+          "range": null,
+          "how_to_measure": null,
+          "notes": "From AC shared-memory definitions per guide; keep lower-case latin."
+        }
+      ]
+    },
+    "platform.lod_structure": {
+      "description": "LOD / collider structure",
+      "unit": "text",
+      "impact": "high",
+      "candidates": [
+        {
+          "value": "One KN5 per LOD listed in data/lods.ini ([LOD_0..n] FILE, IN, OUT; optional [LOD_HR]); [COCKPIT_HR] DISTANCE_SWITCH toggles COCKPIT_HR/COCKPIT_LR; physics collider is a separate collider.kn5 in the car root",
+          "unit": "text",
+          "status": "confirmed",
+          "class": "C",
+          "source_id": "cm-carobject",
+          "locator": "PackOverride()",
+          "evidence": "yield return Add(lods.GetSections(\"LOD\").Append(lods[\"LOD_HR\"]).Select(x => x.GetNonEmpty(\"FILE\")));",
+          "as_printed": "One KN5 per LOD listed in data/lods.ini ([LOD_0..n] FILE, IN, OUT; optional [LOD_HR]); [COCKPIT_HR] DISTANCE_SWITCH toggles COCKPIT_HR/COCKPIT_LR; physics collider is a separate collider.kn5 in the car root",
+          "applicability": {
+            "year": "",
+            "market": "",
+            "trim": "",
+            "body": "",
+            "gearbox": "",
+            "engine": "",
+            "notes": "Platform documentation (Assetto Corsa / Custom Shaders Patch); not vehicle-specific."
+          },
+          "confidence": "medium",
+          "range": null,
+          "how_to_measure": null,
+          "notes": "IN/OUT keys: CarGenerateLodsDialog.xaml.cs lines 1291-1292; DISTANCE_SWITCH: cm-analyzer line ~413; collider.kn5 existence check: cm-workshop. The belief 'one KN5 per LOD plus a collider KN5' is consistent with all sources opened."
+        }
+      ]
+    },
+    "platform.lod_triangle_targets": {
+      "description": "LOD triangle/distance targets used by Content Manager's car analyzer (heuristic)",
+      "unit": "text",
+      "impact": "low",
+      "candidates": [
+        {
+          "value": "LOD_1 <= 45k tris (superb 22k), LOD_2 <= 11k (6k), LOD_3 <= 5k (3k); LOD_0 OUT ~15 m, LOD_1 OUT 25-60 m, LOD_2 OUT 60-250 m; 4 LODs; COCKPIT_HR < 20k tris or COCKPIT_LR with switch ~7 m",
+          "unit": "text",
+          "status": "confirmed",
+          "class": "C",
+          "source_id": "cm-analyzer",
+          "locator": "LOD rating block",
+          "evidence": "var correctLods = lodsTris[1] <= 45e3 && … (lods.Count < 3 || lodsTris[2] <= 11e3) && … (lods.Count < 4 || lodsTris[3] <= 5e3);",
+          "as_printed": "LOD_1 <= 45k tris (superb 22k), LOD_2 <= 11k (6k), LOD_3 <= 5k (3k); LOD_0 OUT ~15 m, LOD_1 OUT 25-60 m, LOD_2 OUT 60-250 m; 4 LODs; COCKPIT_HR < 20k tris or COCKPIT_LR with switch ~7 m",
+          "applicability": {
+            "year": "",
+            "market": "",
+            "trim": "",
+            "body": "",
+            "gearbox": "",
+            "engine": "",
+            "notes": "Platform documentation (Assetto Corsa / Custom Shaders Patch); not vehicle-specific."
+          },
+          "confidence": "low",
+          "range": null,
+          "how_to_measure": null,
+          "notes": "These are CM's quality heuristics, not engine limits."
+        }
+      ]
+    },
+    "platform.collider_rules": {
+      "description": "collider.kn5 construction",
+      "unit": "text",
+      "impact": "high",
+      "candidates": [
+        {
+          "value": "very low poly (40-60 tris) box-like shape, material named GL with GL shader in ksEditor, no vertex below car bottom, pivot at ground 0",
+          "unit": "text",
+          "status": "confirmed",
+          "class": "C",
+          "source_id": "acm-first-car",
+          "locator": "post #1, 3D: collider",
+          "evidence": "It is therefore required to use a VERY (40-60 triangles) low poly basic shape as collision box. … Note you need to set it with a material called GL, then assign the GL shader in KsEditor before exporting. … NO vertex under the car bottom (so DON'T go as low as the ground)",
+          "as_printed": "very low poly (40-60 tris) box-like shape, material named GL with GL shader in ksEditor, no vertex below car bottom, pivot at ground 0",
+          "applicability": {
+            "year": "",
+            "market": "",
+            "trim": "",
+            "body": "",
+            "gearbox": "",
+            "engine": "",
+            "notes": "Platform documentation (Assetto Corsa / Custom Shaders Patch); not vehicle-specific."
+          },
+          "confidence": "medium",
+          "range": null,
+          "how_to_measure": null,
+          "notes": ""
+        }
+      ]
+    },
+    "platform.fbx_version": {
+      "description": "FBX version accepted by ksEditor",
+      "unit": "text",
+      "impact": "high",
+      "candidates": [
+        {
+          "value": "FBX 2014/2015 (2016 unsupported)",
+          "unit": "text",
+          "status": "confirmed",
+          "class": "C",
+          "source_id": "acm-first-car",
+          "locator": "post #1, main steps 2c",
+          "evidence": "-c/ export to FBX up to 2014/2015 format (2016 is unsupported)",
+          "as_printed": "FBX 2014/2015 (2016 unsupported)",
+          "applicability": {
+            "year": "",
+            "market": "",
+            "trim": "",
+            "body": "",
+            "gearbox": "",
+            "engine": "",
+            "notes": "Platform documentation (Assetto Corsa / Custom Shaders Patch); not vehicle-specific."
+          },
+          "confidence": "medium",
+          "range": null,
+          "how_to_measure": null,
+          "notes": "2017 community statement; re-check with the ksEditor build on the user's PC."
+        }
+      ]
+    },
+    "platform.model_units": {
+      "description": "Model units",
+      "unit": "text",
+      "impact": "high",
+      "candidates": [
+        {
+          "value": "meters",
+          "unit": "text",
+          "status": "confirmed",
+          "class": "C",
+          "source_id": "acm-first-car",
+          "locator": "post #1, 2A",
+          "evidence": "Set scale to Meters.",
+          "as_printed": "meters",
+          "applicability": {
+            "year": "",
+            "market": "",
+            "trim": "",
+            "body": "",
+            "gearbox": "",
+            "engine": "",
+            "notes": "Platform documentation (Assetto Corsa / Custom Shaders Patch); not vehicle-specific."
+          },
+          "confidence": "medium",
+          "range": null,
+          "how_to_measure": null,
+          "notes": ""
+        }
+      ]
+    },
+    "platform.ac_axis_up_forward": {
+      "description": "AC/KN5 car-space up and forward axes",
+      "unit": "text",
+      "impact": "critical",
+      "candidates": [
+        {
+          "value": "+Y up, +Z forward (dummies Z forward, Y up)",
+          "unit": "text",
+          "status": "confirmed",
+          "class": "C",
+          "source_id": "acm-first-car",
+          "locator": "post #1, 2B important notes",
+          "evidence": "all dummies must have Z-axis pointing forward and Y-up.",
+          "as_printed": "+Y up, +Z forward (dummies Z forward, Y up)",
+          "applicability": {
+            "year": "",
+            "market": "",
+            "trim": "",
+            "body": "",
+            "gearbox": "",
+            "engine": "",
+            "notes": "Platform documentation (Assetto Corsa / Custom Shaders Patch); not vehicle-specific."
+          },
+          "confidence": "medium",
+          "range": null,
+          "how_to_measure": null,
+          "notes": "Consistent with suspension hard-point offsets (WBCAR_BOTTOM_FRONT z=+0.03 vs _REAR z=-0.33 in acm-knsuseditor) and the Blender exporter mapping (x, z, -y)."
+        }
+      ]
+    },
+    "platform.ac_vertical_origin": {
+      "description": "Vertical origin of the car model",
+      "unit": "text",
+      "impact": "high",
+      "candidates": [
+        {
+          "value": "ground plane = 0 (wheels touching Y=0)",
+          "unit": "text",
+          "status": "confirmed",
+          "class": "C",
+          "source_id": "acm-first-car",
+          "locator": "post #1, 2B important notes",
+          "evidence": "car's body origin/pivot point : the model must be placed with the wheels touching the ground on the 0 coordinate (see below).",
+          "as_printed": "ground plane = 0 (wheels touching Y=0)",
+          "applicability": {
+            "year": "",
+            "market": "",
+            "trim": "",
+            "body": "",
+            "gearbox": "",
+            "engine": "",
+            "notes": "Platform documentation (Assetto Corsa / Custom Shaders Patch); not vehicle-specific."
+          },
+          "confidence": "medium",
+          "range": null,
+          "how_to_measure": null,
+          "notes": ""
+        }
+      ]
+    },
+    "platform.blender_to_kn5_mapping": {
+      "description": "Axis mapping used by a community Blender->KN5 exporter",
+      "unit": "text",
+      "impact": "medium",
+      "candidates": [
+        {
+          "value": "kn5(x, y, z) = blender(x, z, -y)",
+          "unit": "text",
+          "status": "confirmed",
+          "class": "C",
+          "source_id": "blender-kn5",
+          "locator": "convert_vector3()",
+          "evidence": "return Vector((in_vec[0], in_vec[2], -in_vec[1]))",
+          "as_printed": "kn5(x, y, z) = blender(x, z, -y)",
+          "applicability": {
+            "year": "",
+            "market": "",
+            "trim": "",
+            "body": "",
+            "gearbox": "",
+            "engine": "",
+            "notes": "Platform documentation (Assetto Corsa / Custom Shaders Patch); not vehicle-specific."
+          },
+          "confidence": "medium",
+          "range": null,
+          "how_to_measure": null,
+          "notes": "With the car facing Blender -Y (Blender 'front' convention), KN5 +Z = forward and KN5 +X = Blender +X = the car's LEFT side. This sign is an inference, not stated by any source."
+        }
+      ]
+    },
+    "platform.ac_axis_x_sign": {
+      "description": "Sign of AC car-space +X (car's left or right)",
+      "unit": "text",
+      "impact": "critical",
+      "candidates": [
+        {
+          "value": null,
+          "unit": "text",
+          "status": "unknown",
+          "class": null,
+          "source_id": null,
+          "locator": "",
+          "evidence": "",
+          "as_printed": "",
+          "applicability": {
+            "year": "",
+            "market": "",
+            "trim": "",
+            "body": "",
+            "gearbox": "",
+            "engine": "",
+            "notes": "Platform documentation (Assetto Corsa / Custom Shaders Patch); not vehicle-specific."
+          },
+          "confidence": "none",
+          "range": null,
+          "how_to_measure": "In ksEditor or Content Manager showroom, open any stock Kunos car (structure only) and read the X translation of WHEEL_LF; positive => +X is the car's left. Then fix the project->AC mapping.",
+          "notes": "Working hypothesis (unconfirmed): AC +X = car's left. Project frame is +X right, +Y forward, +Z up, origin on ground under the front axle; AC frame is +Y up, +Z forward, ground at Y=0; longitudinal origin of the KN5/physics body is not documented in sources opened (car.ini GRAPHICS_OFFSET exists per CM/zgushonka usage).",
+          "searches": [
+            "CSP wiki clone: grep 'left', 'axis', 'car space' (Lights: 'POSITION = 0, 0.7, 1.8 ; light position in car space'; Instruments inputs: 'X for left/right' - no sign)",
+            "acc-lua-sdk clone: grep 'to the left', 'positive x', 'left-handed'",
+            "WebSearch: 'assetto corsa kn5 coordinate system WHEEL_LF positive X ...'",
+            "WebSearch: 'assetto corsa suspensions.ini WBCAR_TOP_FRONT coordinates x axis left right sign hub'",
+            "overtake.gg suspension thread - bot challenge page, not worked around",
+            "moppius Blender exporter: mapping (x, z, -y) implies +X = car left only under an assumed Blender orientation"
+          ]
+        }
+      ]
+    },
+    "platform.node_names_wheels": {
+      "description": "Wheel/suspension node names",
+      "unit": "text",
+      "impact": "critical",
+      "candidates": [
+        {
+          "value": "WHEEL_LF/RF/LR/RR, SUSP_LF/RF/LR/RR, HUB_xx (optional), DISC_xx (or DISC_xx_ANIM)",
+          "unit": "text",
+          "status": "confirmed",
+          "class": "C",
+          "source_id": "cm-wheels",
+          "locator": "GetWheelNodesNames()",
+          "evidence": "var susp = $@\"SUSP_{namePostfix}\"; … var hub = $@\"HUB_{namePostfix}\"; … var animatedDisc = $@\"DISC_{namePostfix}_ANIM\"; … $@\"WHEEL_{namePostfix}\", susp, skipHub == true ? null : hub,",
+          "as_printed": "WHEEL_LF/RF/LR/RR, SUSP_LF/RF/LR/RR, HUB_xx (optional), DISC_xx (or DISC_xx_ANIM)",
+          "applicability": {
+            "year": "",
+            "market": "",
+            "trim": "",
+            "body": "",
+            "gearbox": "",
+            "engine": "",
+            "notes": "Platform documentation (Assetto Corsa / Custom Shaders Patch); not vehicle-specific."
+          },
+          "confidence": "medium",
+          "range": null,
+          "how_to_measure": null,
+          "notes": "WHEEL_LF/WHEEL_LR/WHEEL_RF/WHEEL_RR also in acm-first-car. CM's repair tool warns that missing SUSP_xx nodes 'Might cause crashes, especially in showroom.'"
+        }
+      ]
+    },
+    "platform.node_names_cockpit": {
+      "description": "Cockpit/steering/shifter/seatbelt node names",
+      "unit": "text",
+      "impact": "high",
+      "candidates": [
+        {
+          "value": "COCKPIT_HR/COCKPIT_LR, STEER_HR/STEER_LR, SHIFT_HD/SHIFT_LD, CINTURE_ON/CINTURE_OFF",
+          "unit": "text",
+          "status": "confirmed",
+          "class": "C",
+          "source_id": "cm-utils",
+          "locator": "SetCockpitLrActive / SetSeatbeltActive",
+          "evidence": "case \"COCKPIT_LR\": … case \"STEER_LR\": … case \"SHIFT_LD\": … case \"COCKPIT_HR\": … case \"STEER_HR\": … case \"SHIFT_HD\": … var onNode = parent.GetDummyByName(\"CINTURE_ON\");",
+          "as_printed": "COCKPIT_HR/COCKPIT_LR, STEER_HR/STEER_LR, SHIFT_HD/SHIFT_LD, CINTURE_ON/CINTURE_OFF",
+          "applicability": {
+            "year": "",
+            "market": "",
+            "trim": "",
+            "body": "",
+            "gearbox": "",
+            "engine": "",
+            "notes": "Platform documentation (Assetto Corsa / Custom Shaders Patch); not vehicle-specific."
+          },
+          "confidence": "medium",
+          "range": null,
+          "how_to_measure": null,
+          "notes": "Door/wiper/mirror/light node names are not covered by a source opened (DOOR_L/DOOR_R only appear in a CSP config template line). Lights/emissives are defined by mesh name in lights.ini / ext_config, so names are free but must match."
+        }
+      ]
+    },
+    "platform.texture_rules": {
+      "description": "Texture format constraints",
+      "unit": "text",
+      "impact": "medium",
+      "candidates": [
+        {
+          "value": "DDS; power-of-two sizes; BC7 allowed but must include mipmaps",
+          "unit": "text",
+          "status": "confirmed",
+          "class": "C",
+          "source_id": "gtp-dds",
+          "locator": "post #14358983 (page 4616)",
+          "evidence": "You should use this instead of \"BC3 (Linear, DXT5)\" … you must ALWAYS save the DDS with mipmaps as AC can't create the mipmaps for the new format and the game will crash otherwise. … you may run into issues if a track texture resolution isn't a power of 2",
+          "as_printed": "DDS; power-of-two sizes; BC7 allowed but must include mipmaps",
+          "applicability": {
+            "year": "",
+            "market": "",
+            "trim": "",
+            "body": "",
+            "gearbox": "",
+            "engine": "",
+            "notes": "Platform documentation (Assetto Corsa / Custom Shaders Patch); not vehicle-specific."
+          },
+          "confidence": "low",
+          "range": null,
+          "how_to_measure": null,
+          "notes": "Forum post, not official; maximum texture size not found. Textures are embedded in the KN5 by ksEditor (acm-first-car)."
+        }
+      ]
+    },
+    "platform.animation_pipeline": {
+      "description": "How .ksanim animations are produced and used",
+      "unit": "text",
+      "impact": "high",
+      "candidates": [
+        {
+          "value": "animations/*.ksanim produced from baked FBX animation imported into ksEditor (or a Blender ksanim exporter); CSP [ANIMATION_...] binds a .ksanim to any instrument input",
+          "unit": "text",
+          "status": "confirmed",
+          "class": "A",
+          "source_id": "csp-wiki-animations",
+          "locator": "Syntax",
+          "evidence": "FILE = animation.ksanim     ; file name of new animation in “animations” folder",
+          "as_printed": "animations/*.ksanim produced from baked FBX animation imported into ksEditor (or a Blender ksanim exporter); CSP [ANIMATION_...] binds a .ksanim to any instrument input",
+          "applicability": {
+            "year": "",
+            "market": "",
+            "trim": "",
+            "body": "",
+            "gearbox": "",
+            "engine": "",
+            "notes": "Platform documentation (Assetto Corsa / Custom Shaders Patch); not vehicle-specific."
+          },
+          "confidence": "medium",
+          "range": null,
+          "how_to_measure": null,
+          "notes": "FBX->ksEditor->ksanim and Blender ksanim/knh exporter routes: community-reported in acm-fbx-anim ('export as FBX (Selected objects only) and bake animation (then import into kseditor alongside the car and grab the ksanim)'). Steering wheel rotation itself is driven by the engine via STEER_HR (community)."
+        }
+      ]
+    },
+    "platform.digital_instrument_options": {
+      "description": "Instrument options for the digital cluster",
+      "unit": "text",
+      "impact": "high",
+      "candidates": [
+        {
+          "value": "Kunos data/digital_instruments.ini + analog_instruments.ini; CSP can only re-format existing digital items ([DI_*] DIGITAL_ITEM=n) or draw full displays with [SCRIPTABLE_DISPLAY_...] Lua on a mesh",
+          "unit": "text",
+          "status": "confirmed",
+          "class": "A",
+          "source_id": "csp-wiki-digital",
+          "locator": "intro",
+          "evidence": "This is a temporary and somewhat hacky approach, doesn’t allow to define new digital instruments, but instead, only to replace text on original Kunos instruments defined in “data/digital_instruments.ini”.",
+          "as_printed": "Kunos data/digital_instruments.ini + analog_instruments.ini; CSP can only re-format existing digital items ([DI_*] DIGITAL_ITEM=n) or draw full displays with [SCRIPTABLE_DISPLAY_...] Lua on a mesh",
+          "applicability": {
+            "year": "",
+            "market": "",
+            "trim": "",
+            "body": "",
+            "gearbox": "",
+            "engine": "",
+            "notes": "Platform documentation (Assetto Corsa / Custom Shaders Patch); not vehicle-specific."
+          },
+          "confidence": "high",
+          "range": null,
+          "how_to_measure": null,
+          "notes": "Scriptable display syntax (MESHES, RESOLUTION, DISPLAY_POS, DISPLAY_SIZE, SKIP_FRAMES, SCRIPT=*.lua) from csp-lua-ex-dash. For the Civic's 7-inch digital cluster a [SCRIPTABLE_DISPLAY_...] is the realistic route."
+        }
+      ]
+    },
+    "platform.instrument_inputs": {
+      "description": "Car-state inputs available to CSP instruments/emissives/animations",
+      "unit": "text",
+      "impact": "high",
+      "candidates": [
+        {
+          "value": "SPEED, RPM, GAS, BRAKE, CLUTCH, FUEL (l), WATER_TEMPERATURE (°C), TURBO, GEAR, ENGINE_TORQUE, TURNSIGNAL_LEFT/RIGHT, HAZARD, LOWBEAM/HIGHBEAM, SEATBELT, ABS_INACTION, TC_INACTION, CPHYS_SCRIPT_0..7, ...",
+          "unit": "text",
+          "status": "confirmed",
+          "class": "A",
+          "source_id": "csp-wiki-inputs",
+          "locator": "input list",
+          "evidence": "- `RPM`: engine RPM; … - `FUEL`: remaining fuel, in liters; … - `WATER_TEMPERATURE` (alias: `WATER_TEMP`): water temperature, in °C; … - `TURBO`: turbo boost; … - `GEAR`: current gear, with —1 for reverse and 0 for neutral",
+          "as_printed": "SPEED, RPM, GAS, BRAKE, CLUTCH, FUEL (l), WATER_TEMPERATURE (°C), TURBO, GEAR, ENGINE_TORQUE, TURNSIGNAL_LEFT/RIGHT, HAZARD, LOWBEAM/HIGHBEAM, SEATBELT, ABS_INACTION, TC_INACTION, CPHYS_SCRIPT_0..7, ...",
+          "applicability": {
+            "year": "",
+            "market": "",
+            "trim": "",
+            "body": "",
+            "gearbox": "",
+            "engine": "",
+            "notes": "Platform documentation (Assetto Corsa / Custom Shaders Patch); not vehicle-specific."
+          },
+          "confidence": "high",
+          "range": null,
+          "how_to_measure": null,
+          "notes": "Full list in the wiki page (lines 127-276 of the clone)."
+        }
+      ]
+    }
+  },
+  "class_note": "Class mapping for platform facts: A = official documentation from the software's own developer (Kunos for base AC, the Custom Shaders Patch project for CSP features); C = community reference (modding forums, Content Manager source code, third-party exporters). Status 'confirmed' means the value is stated verbatim in the cited source; class C confirmations still need a check against the official AC SDK documents on the user's PC (not online, not supplied)."
+}
