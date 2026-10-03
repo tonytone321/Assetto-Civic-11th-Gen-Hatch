@@ -473,7 +473,790 @@
           ]
         }
       ]
+    },
+    "paint.base_srgb": {
+      "description": "Representative body colour, sRGB 0-255 (diffuse, mid-tone)",
+      "unit": "1",
+      "impact": "high",
+      "candidates": [
+        {
+          "value": [
+            117,
+            122,
+            131
+          ],
+          "unit": "1",
+          "status": "estimated",
+          "class": "E",
+          "source_id": "ahm-infocenter-2024-colors",
+          "locator": "Colors table swatch image (Sonic Gray Pearl)",
+          "evidence": "",
+          "as_printed": "",
+          "applicability": {
+            "year": "2024 (MY18 swatch asset)",
+            "market": "US",
+            "trim": "all trims",
+            "body": "hatchback",
+            "gearbox": "any",
+            "engine": "1.5T",
+            "notes": ""
+          },
+          "confidence": "low",
+          "range": [
+            [
+              70,
+              85,
+              94
+            ],
+            [
+              149,
+              156,
+              163
+            ]
+          ],
+          "how_to_measure": "Spectrophotometer reading of a clean door panel (L*a*b* D65/10, multi-angle), or RAW photo of the panel next to an X-Rite ColorChecker in open shade with white balance set on the checker's neutral patch; then recompute with this script.",
+          "notes": "Computed from Honda's own 74x74 colour-orb render, the only image whose colour identity is confirmed. A render is not a measurement: Honda's renderer, lighting and tone mapping are unknown. Press photos of grey Sport Touring cars are colour-unconfirmed and were not used for this value (see photo_analysis.press_photos). Range = per-channel 10th..90th percentile of masked swatch pixels.",
+          "derivation": {
+            "script": "scripts/domains/paint_analyze.py",
+            "function": "swatch_pixels+stats",
+            "inputs": {
+              "image": "https://www.hondainfocenter.com/-/media/Honda-Sales-Tool-Media-Folder/Images/2018-Civic-Hatch/Color-Swatches/MY18-Civic-Hatch-Sonic-Gray-Pearl.ashx?h=74&w=74&hash=7FD9F8782E22DC01FFB05FBBE73678817D176E95",
+              "cache_path": "cache/visual/swatch/Sonic.img",
+              "mask": "alpha>200, L* within 5th..95th percentile"
+            }
+          }
+        }
+      ]
+    },
+    "paint.base_lab": {
+      "description": "Representative body colour, CIELAB (D65) median of swatch pixels",
+      "unit": "1",
+      "impact": "high",
+      "candidates": [
+        {
+          "value": [
+            50.92,
+            0.19,
+            -4.97
+          ],
+          "unit": "1",
+          "status": "estimated",
+          "class": "E",
+          "source_id": "ahm-infocenter-2024-colors",
+          "locator": "Colors table swatch image",
+          "evidence": "",
+          "as_printed": "",
+          "applicability": {
+            "year": "2024 (MY18 swatch asset)",
+            "market": "US",
+            "trim": "all trims",
+            "body": "hatchback",
+            "gearbox": "any",
+            "engine": "1.5T",
+            "notes": ""
+          },
+          "confidence": "low",
+          "range": [
+            [
+              34.89,
+              null,
+              null
+            ],
+            [
+              63.89,
+              null,
+              null
+            ]
+          ],
+          "how_to_measure": "Spectrophotometer reading of a clean door panel (L*a*b* D65/10, multi-angle), or RAW photo of the panel next to an X-Rite ColorChecker in open shade with white balance set on the checker's neutral patch; then recompute with this script.",
+          "notes": "Computed from Honda's own 74x74 colour-orb render, the only image whose colour identity is confirmed. A render is not a measurement: Honda's renderer, lighting and tone mapping are unknown. Press photos of grey Sport Touring cars are colour-unconfirmed and were not used for this value (see photo_analysis.press_photos). Range gives only L* 10th..90th percentile; a*/b* spread: chroma p10..p90 = [4.31, 11.78].",
+          "derivation": {
+            "script": "scripts/domains/paint_analyze.py",
+            "function": "swatch_pixels+stats",
+            "inputs": {
+              "image": "https://www.hondainfocenter.com/-/media/Honda-Sales-Tool-Media-Folder/Images/2018-Civic-Hatch/Color-Swatches/MY18-Civic-Hatch-Sonic-Gray-Pearl.ashx?h=74&w=74&hash=7FD9F8782E22DC01FFB05FBBE73678817D176E95",
+              "cache_path": "cache/visual/swatch/Sonic.img",
+              "mask": "alpha>200, L* within 5th..95th percentile"
+            }
+          }
+        }
+      ]
+    },
+    "paint.base_chroma": {
+      "description": "Chroma C*ab of the body colour (how far from neutral grey)",
+      "unit": "1",
+      "impact": "medium",
+      "candidates": [
+        {
+          "value": 5.03,
+          "unit": "1",
+          "status": "estimated",
+          "class": "E",
+          "source_id": "ahm-infocenter-2024-colors",
+          "locator": "Colors table swatch image",
+          "evidence": "",
+          "as_printed": "",
+          "applicability": {},
+          "confidence": "low",
+          "range": [
+            4.31,
+            11.78
+          ],
+          "how_to_measure": "Spectrophotometer reading of a clean door panel (L*a*b* D65/10, multi-angle), or RAW photo of the panel next to an X-Rite ColorChecker in open shade with white balance set on the checker's neutral patch; then recompute with this script.",
+          "notes": "Computed from Honda's own 74x74 colour-orb render, the only image whose colour identity is confirmed. A render is not a measurement: Honda's renderer, lighting and tone mapping are unknown. Press photos of grey Sport Touring cars are colour-unconfirmed and were not used for this value (see photo_analysis.press_photos).",
+          "derivation": {
+            "script": "scripts/domains/paint_analyze.py",
+            "function": "swatch_pixels+stats",
+            "inputs": {
+              "image": "https://www.hondainfocenter.com/-/media/Honda-Sales-Tool-Media-Folder/Images/2018-Civic-Hatch/Color-Swatches/MY18-Civic-Hatch-Sonic-Gray-Pearl.ashx?h=74&w=74&hash=7FD9F8782E22DC01FFB05FBBE73678817D176E95",
+              "cache_path": "cache/visual/swatch/Sonic.img",
+              "mask": "alpha>200, L* within 5th..95th percentile"
+            }
+          }
+        }
+      ]
+    },
+    "paint.base_hue_deg": {
+      "description": "Hue angle h_ab of the body colour (deg; ~200-260 = blue-ish grey)",
+      "unit": "deg",
+      "impact": "medium",
+      "candidates": [
+        {
+          "value": 272.2,
+          "unit": "deg",
+          "status": "estimated",
+          "class": "E",
+          "source_id": "ahm-infocenter-2024-colors",
+          "locator": "Colors table swatch image",
+          "evidence": "",
+          "as_printed": "",
+          "applicability": {},
+          "confidence": "low",
+          "range": [
+            242.2,
+            302.2
+          ],
+          "how_to_measure": "Spectrophotometer reading of a clean door panel (L*a*b* D65/10, multi-angle), or RAW photo of the panel next to an X-Rite ColorChecker in open shade with white balance set on the checker's neutral patch; then recompute with this script.",
+          "notes": "Computed from Honda's own 74x74 colour-orb render, the only image whose colour identity is confirmed. A render is not a measurement: Honda's renderer, lighting and tone mapping are unknown. Press photos of grey Sport Touring cars are colour-unconfirmed and were not used for this value (see photo_analysis.press_photos). Range +/-30 deg is a judgement for near-neutral colours, where hue is unstable.",
+          "derivation": {
+            "script": "scripts/domains/paint_analyze.py",
+            "function": "swatch_pixels+stats",
+            "inputs": {
+              "image": "https://www.hondainfocenter.com/-/media/Honda-Sales-Tool-Media-Folder/Images/2018-Civic-Hatch/Color-Swatches/MY18-Civic-Hatch-Sonic-Gray-Pearl.ashx?h=74&w=74&hash=7FD9F8782E22DC01FFB05FBBE73678817D176E95",
+              "cache_path": "cache/visual/swatch/Sonic.img",
+              "mask": "alpha>200, L* within 5th..95th percentile"
+            }
+          }
+        }
+      ]
+    },
+    "paint.base_albedo_linear": {
+      "description": "Base albedo (linear RGB) for a PBR base layer",
+      "unit": "1",
+      "impact": "high",
+      "candidates": [
+        {
+          "value": [
+            0.1819,
+            0.2054,
+            0.2367
+          ],
+          "unit": "1",
+          "status": "estimated",
+          "class": "E",
+          "source_id": "ahm-infocenter-2024-colors",
+          "locator": "Colors table swatch image",
+          "evidence": "",
+          "as_printed": "",
+          "applicability": {},
+          "confidence": "low",
+          "range": [
+            [
+              0.1091,
+              0.1232,
+              0.142
+            ],
+            [
+              0.2729,
+              0.3081,
+              0.355
+            ]
+          ],
+          "how_to_measure": "Spectrophotometer reading of a clean door panel (L*a*b* D65/10, multi-angle), or RAW photo of the panel next to an X-Rite ColorChecker in open shade with white balance set on the checker's neutral patch; then recompute with this script.",
+          "notes": "Computed from Honda's own 74x74 colour-orb render, the only image whose colour identity is confirmed. A render is not a measurement: Honda's renderer, lighting and tone mapping are unknown. Press photos of grey Sport Touring cars are colour-unconfirmed and were not used for this value (see photo_analysis.press_photos). Range x0.6..x1.5 reflects unknown exposure/tone mapping of the render (judgement).",
+          "derivation": {
+            "script": "scripts/domains/paint_analyze.py",
+            "function": "swatch_pixels+stats",
+            "inputs": {
+              "image": "https://www.hondainfocenter.com/-/media/Honda-Sales-Tool-Media-Folder/Images/2018-Civic-Hatch/Color-Swatches/MY18-Civic-Hatch-Sonic-Gray-Pearl.ashx?h=74&w=74&hash=7FD9F8782E22DC01FFB05FBBE73678817D176E95",
+              "cache_path": "cache/visual/swatch/Sonic.img",
+              "mask": "alpha>200, L* within 5th..95th percentile"
+            }
+          }
+        }
+      ]
     }
   },
-  "updated": "2026-10-03"
+  "updated": "2026-10-03",
+  "photo_analysis": {
+    "method": "Domain 9: scripted colour statistics for Sonic Grey Pearl (NH-877P) from available images.\n\nMethod (recorded in vehicle_data/paint.json -> photo_analysis):\n  * Honda colour swatches (hondainfocenter.com, 74x74 RGBA renders): body pixels = alpha > 200;\n    specular highlight pixels (L* above the 95th percentile) and the darkest 5 % are dropped.\n  * Press photos (hondanews.com previews, 928x522): a coarse rectangle around a painted area is given per\n    image (recorded); inside it, pixels are clustered in CIELAB with k-means (k=6, OpenCV, fixed seed).\n    The paint cluster is chosen by rule, not by eye: the largest cluster whose mean L* is 25..92 and whose\n    mean chroma is below 30 (excludes tyres/glass/grille (dark), lamps/sky reflections (very bright) and\n    saturated surroundings). Reported: median sRGB, linear-RGB mean, L*a*b*, chroma, hue and percentiles.\n  * Results for the label-confirmed Honda swatch become the colour estimate; press-photo cars are of\n    UNCONFIRMED colour (captions name no colour), so they are reported only as context with a\n    nearest-swatch distance, never as Sonic Grey Pearl evidence.\n\nConfounders: white balance, exposure, tone curve, coloured scene lighting and JPEG compression all shift\nthese numbers. Everything written is status 'estimated' with ranges and how_to_measure.",
+    "swatches": {
+      "Sonic Gray Pearl NH-877P": {
+        "url": "https://www.hondainfocenter.com/-/media/Honda-Sales-Tool-Media-Folder/Images/2018-Civic-Hatch/Color-Swatches/MY18-Civic-Hatch-Sonic-Gray-Pearl.ashx?h=74&w=74&hash=7FD9F8782E22DC01FFB05FBBE73678817D176E95",
+        "cache_path": "cache/visual/swatch/Sonic.img",
+        "condition": "Honda CG colour-orb render (studio lighting, unknown renderer/tonemap)",
+        "mask": "alpha>200, L* within 5th..95th percentile",
+        "image_size": [
+          74,
+          74
+        ],
+        "n_pixels": 3824,
+        "srgb_median": [
+          117,
+          122,
+          131
+        ],
+        "srgb_p10_p90": [
+          [
+            70,
+            149
+          ],
+          [
+            85,
+            156
+          ],
+          [
+            94,
+            163
+          ]
+        ],
+        "linear_rgb_mean": [
+          0.1819,
+          0.2054,
+          0.2367
+        ],
+        "lab_median": [
+          50.92,
+          0.19,
+          -4.97
+        ],
+        "L_p10_p90": [
+          34.89,
+          63.89
+        ],
+        "chroma_median": 5.03,
+        "chroma_p10_p90": [
+          4.31,
+          11.78
+        ],
+        "hue_deg_of_median_ab": 272.2
+      },
+      "Lunar Silver Metallic NH-830M": {
+        "url": "https://www.hondainfocenter.com/-/media/Honda-Sales-Tool-Media-Folder/Images/2018-Civic-Hatch/Color-Swatches/MY18-Civic-Hatch-Lunar-Silver-Metallic.ashx?h=74&w=74&hash=00A6078D66F7C2B29DA31FA1BE9FA8D5687F85AB",
+        "cache_path": "cache/visual/swatch/Lunar.img",
+        "condition": "Honda CG colour-orb render (studio lighting, unknown renderer/tonemap)",
+        "mask": "alpha>200, L* within 5th..95th percentile",
+        "image_size": [
+          74,
+          74
+        ],
+        "n_pixels": 3830,
+        "srgb_median": [
+          109,
+          110,
+          116
+        ],
+        "srgb_p10_p90": [
+          [
+            53,
+            185
+          ],
+          [
+            62,
+            185
+          ],
+          [
+            65,
+            187
+          ]
+        ],
+        "linear_rgb_mean": [
+          0.2089,
+          0.2158,
+          0.2295
+        ],
+        "lab_median": [
+          46.36,
+          0.48,
+          -1.55
+        ],
+        "L_p10_p90": [
+          26.18,
+          75.12
+        ],
+        "chroma_median": 1.66,
+        "chroma_p10_p90": [
+          1.07,
+          10.73
+        ],
+        "hue_deg_of_median_ab": 287.4
+      },
+      "Meteorite Gray Metallic NH-904M": {
+        "url": "https://www.hondainfocenter.com/-/media/Honda-Sales-Tool-Media-Folder/Images/2022-Civic-Hatchback/Orbs/Meteorite_Gray_Metalli.ashx?h=74&w=74&hash=BB175A87CB6EAD806855CFF88275DB04",
+        "cache_path": "cache/visual/swatch/Meteorite.img",
+        "condition": "Honda CG colour-orb render (studio lighting, unknown renderer/tonemap)",
+        "mask": "alpha>200, L* within 5th..95th percentile",
+        "image_size": [
+          74,
+          74
+        ],
+        "n_pixels": 3861,
+        "srgb_median": [
+          47,
+          59,
+          67
+        ],
+        "srgb_p10_p90": [
+          [
+            14,
+            106
+          ],
+          [
+            17,
+            116
+          ],
+          [
+            23,
+            121
+          ]
+        ],
+        "linear_rgb_mean": [
+          0.0546,
+          0.0695,
+          0.0825
+        ],
+        "lab_median": [
+          24.41,
+          -1.08,
+          -5.11
+        ],
+        "L_p10_p90": [
+          5.07,
+          47.96
+        ],
+        "chroma_median": 5.31,
+        "chroma_p10_p90": [
+          3.24,
+          6.58
+        ],
+        "hue_deg_of_median_ab": 258.1
+      }
+    },
+    "press_photos": [
+      {
+        "id": "ahm-press22-16",
+        "url": "https://wieck-honda-production.s3.amazonaws.com/photos/c928c567621b4f88aa6028f4055c239422fdf477/preview-928x522.jpg",
+        "condition": "daylight, open shade/overcast street",
+        "colour_identity": "UNCONFIRMED (caption names no colour)",
+        "rect_xyxy": [
+          200,
+          300,
+          750,
+          420
+        ],
+        "image_size": [
+          928,
+          573
+        ],
+        "clusters": [
+          {
+            "k": 0,
+            "n": 8916,
+            "L": 39.4,
+            "chroma": 6.5
+          },
+          {
+            "k": 1,
+            "n": 21010,
+            "L": 7.5,
+            "chroma": 3.3
+          },
+          {
+            "k": 2,
+            "n": 7379,
+            "L": 79.6,
+            "chroma": 3.3
+          },
+          {
+            "k": 3,
+            "n": 5596,
+            "L": 61.8,
+            "chroma": 5.0
+          },
+          {
+            "k": 4,
+            "n": 22197,
+            "L": 20.7,
+            "chroma": 5.6
+          },
+          {
+            "k": 5,
+            "n": 902,
+            "L": 31.6,
+            "chroma": 45.2
+          }
+        ],
+        "selected_cluster": 0,
+        "selected_fraction_of_rect": 0.135,
+        "n_pixels": 8916,
+        "srgb_median": [
+          91,
+          93,
+          103
+        ],
+        "srgb_p10_p90": [
+          [
+            71,
+            111
+          ],
+          [
+            74,
+            112
+          ],
+          [
+            82,
+            127
+          ]
+        ],
+        "linear_rgb_mean": [
+          0.108,
+          0.1123,
+          0.1415
+        ],
+        "lab_median": [
+          39.56,
+          2.3,
+          -5.45
+        ],
+        "L_p10_p90": [
+          31.41,
+          47.31
+        ],
+        "chroma_median": 7.06,
+        "chroma_p10_p90": [
+          2.42,
+          13.19
+        ],
+        "hue_deg_of_median_ab": 292.8,
+        "deltaE76_to_swatch": {
+          "Sonic Gray Pearl NH-877P": 11.6,
+          "Lunar Silver Metallic NH-830M": 8.0,
+          "Meteorite Gray Metallic NH-904M": 15.5
+        }
+      },
+      {
+        "id": "ahm-press22-17",
+        "url": "https://wieck-honda-production.s3.amazonaws.com/photos/cd3db434396a7767c7ca2e2ca85bb9ce056f2205/preview-928x522.jpg",
+        "condition": "night, mixed coloured artificial light",
+        "colour_identity": "UNCONFIRMED (caption names no colour)",
+        "rect_xyxy": [
+          300,
+          40,
+          900,
+          200
+        ],
+        "image_size": [
+          927,
+          462
+        ],
+        "clusters": [
+          {
+            "k": 0,
+            "n": 4846,
+            "L": 85.8,
+            "chroma": 2.6
+          },
+          {
+            "k": 1,
+            "n": 17286,
+            "L": 21.1,
+            "chroma": 7.2
+          },
+          {
+            "k": 2,
+            "n": 30525,
+            "L": 67.8,
+            "chroma": 2.0
+          },
+          {
+            "k": 3,
+            "n": 10249,
+            "L": 7.3,
+            "chroma": 5.6
+          },
+          {
+            "k": 4,
+            "n": 14461,
+            "L": 50.3,
+            "chroma": 8.1
+          },
+          {
+            "k": 5,
+            "n": 18633,
+            "L": 36.4,
+            "chroma": 5.3
+          }
+        ],
+        "selected_cluster": 2,
+        "selected_fraction_of_rect": 0.318,
+        "n_pixels": 30525,
+        "srgb_median": [
+          167,
+          164,
+          167
+        ],
+        "srgb_p10_p90": [
+          [
+            149,
+            186
+          ],
+          [
+            148,
+            181
+          ],
+          [
+            151,
+            184
+          ]
+        ],
+        "linear_rgb_mean": [
+          0.3916,
+          0.3764,
+          0.3918
+        ],
+        "lab_median": [
+          67.67,
+          1.28,
+          -1.03
+        ],
+        "L_p10_p90": [
+          61.63,
+          74.11
+        ],
+        "chroma_median": 1.61,
+        "chroma_p10_p90": [
+          0.94,
+          5.19
+        ],
+        "hue_deg_of_median_ab": 321.2,
+        "deltaE76_to_swatch": {
+          "Sonic Gray Pearl NH-877P": 17.2,
+          "Lunar Silver Metallic NH-830M": 21.3,
+          "Meteorite Gray Metallic NH-904M": 43.5
+        }
+      },
+      {
+        "id": "ahm-press22-18",
+        "url": "https://wieck-honda-production.s3.amazonaws.com/photos/8e7b3cbca24c99dcc87857f936e9f9ae660ec7cf/preview-928x522.jpg",
+        "condition": "low sun, warm backlit street",
+        "colour_identity": "UNCONFIRMED (caption names no colour)",
+        "rect_xyxy": [
+          310,
+          260,
+          700,
+          480
+        ],
+        "image_size": [
+          928,
+          587
+        ],
+        "clusters": [
+          {
+            "k": 0,
+            "n": 15395,
+            "L": 16.9,
+            "chroma": 4.6
+          },
+          {
+            "k": 1,
+            "n": 17270,
+            "L": 49.2,
+            "chroma": 1.3
+          },
+          {
+            "k": 2,
+            "n": 17930,
+            "L": 3.1,
+            "chroma": 1.7
+          },
+          {
+            "k": 3,
+            "n": 22292,
+            "L": 30.2,
+            "chroma": 4.7
+          },
+          {
+            "k": 4,
+            "n": 6008,
+            "L": 78.4,
+            "chroma": 4.5
+          },
+          {
+            "k": 5,
+            "n": 6905,
+            "L": 32.9,
+            "chroma": 18.6
+          }
+        ],
+        "selected_cluster": 3,
+        "selected_fraction_of_rect": 0.26,
+        "n_pixels": 22292,
+        "srgb_median": [
+          70,
+          72,
+          77
+        ],
+        "srgb_p10_p90": [
+          [
+            51,
+            86
+          ],
+          [
+            55,
+            88
+          ],
+          [
+            62,
+            97
+          ]
+        ],
+        "linear_rgb_mean": [
+          0.0619,
+          0.0661,
+          0.08
+        ],
+        "lab_median": [
+          30.49,
+          1.03,
+          -5.83
+        ],
+        "L_p10_p90": [
+          22.97,
+          37.25
+        ],
+        "chroma_median": 6.26,
+        "chroma_p10_p90": [
+          1.22,
+          9.94
+        ],
+        "hue_deg_of_median_ab": 280.0,
+        "deltaE76_to_swatch": {
+          "Sonic Gray Pearl NH-877P": 20.5,
+          "Lunar Silver Metallic NH-830M": 16.4,
+          "Meteorite Gray Metallic NH-904M": 6.5
+        }
+      },
+      {
+        "id": "ahm-press22-20",
+        "url": "https://wieck-honda-production.s3.amazonaws.com/photos/e12e8e3340bee4cd9717637daa0e5b84ee88839e/preview-928x522.jpg",
+        "condition": "night, mixed coloured artificial light",
+        "colour_identity": "UNCONFIRMED (caption names no colour)",
+        "rect_xyxy": [
+          380,
+          180,
+          760,
+          330
+        ],
+        "image_size": [
+          928,
+          619
+        ],
+        "clusters": [
+          {
+            "k": 0,
+            "n": 13533,
+            "L": 3.2,
+            "chroma": 1.7
+          },
+          {
+            "k": 1,
+            "n": 13277,
+            "L": 64.5,
+            "chroma": 5.9
+          },
+          {
+            "k": 2,
+            "n": 3010,
+            "L": 30.6,
+            "chroma": 9.4
+          },
+          {
+            "k": 3,
+            "n": 7329,
+            "L": 54.4,
+            "chroma": 8.3
+          },
+          {
+            "k": 4,
+            "n": 6275,
+            "L": 12.5,
+            "chroma": 8.5
+          },
+          {
+            "k": 5,
+            "n": 13576,
+            "L": 73.9,
+            "chroma": 4.9
+          }
+        ],
+        "selected_cluster": 5,
+        "selected_fraction_of_rect": 0.238,
+        "n_pixels": 13576,
+        "srgb_median": [
+          174,
+          179,
+          189
+        ],
+        "srgb_p10_p90": [
+          [
+            166,
+            192
+          ],
+          [
+            173,
+            199
+          ],
+          [
+            179,
+            205
+          ]
+        ],
+        "linear_rgb_mean": [
+          0.4397,
+          0.4734,
+          0.5226
+        ],
+        "lab_median": [
+          72.75,
+          -0.44,
+          -5.05
+        ],
+        "L_p10_p90": [
+          70.23,
+          79.78
+        ],
+        "chroma_median": 5.06,
+        "chroma_p10_p90": [
+          2.81,
+          6.79
+        ],
+        "hue_deg_of_median_ab": 265.0,
+        "deltaE76_to_swatch": {
+          "Sonic Gray Pearl NH-877P": 21.8,
+          "Lunar Silver Metallic NH-830M": 26.6,
+          "Meteorite Gray Metallic NH-904M": 48.3
+        }
+      }
+    ]
+  }
 }
