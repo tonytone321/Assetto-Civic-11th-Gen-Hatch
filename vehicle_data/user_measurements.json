@@ -1,0 +1,3072 @@
+{
+  "domain": "user_measurements",
+  "title": "User measurements of the real car (top precedence)",
+  "schema_version": 1,
+  "sources": {},
+  "_instructions": [
+    "Fill only what you measured. A candidate whose value is not null wins over every other record for that key.",
+    "Units are SI (m, kg, N/m, rad, rpm). Put the raw reading in as_printed, e.g. '1,384 kg' or '26.5 mm'.",
+    "Hard points: value = [x, y, z] in metres in the vehicle frame (origin on the ground at the centreline below the front axle; +X right, +Y forward, +Z up). Left side (x < 0) unless stated.",
+    "Files (dyno sheets, datalogs, recordings, photos): put them in user_supplied/ and list them under 'attachments'.",
+    "After editing run: python3 scripts/resolve.py && python3 scripts/derive.py && python3 scripts/resolve.py && python3 scripts/validate_db.py && python3 scripts/make_report.py"
+  ],
+  "parameters": {
+    "mass.curb_mass": {
+      "description": "Curb mass, full tank, no driver",
+      "unit": "kg",
+      "impact": "high",
+      "candidates": [
+        {
+          "value": null,
+          "unit": "kg",
+          "status": "unknown",
+          "class": "B",
+          "source_id": "user:measurement",
+          "locator": "",
+          "evidence": "",
+          "as_printed": "",
+          "applicability": {
+            "year": "2024",
+            "market": "CA",
+            "trim": "Sport Touring",
+            "body": "hatchback",
+            "gearbox": "6MT",
+            "engine": "1.5T",
+            "notes": "the user's own car"
+          },
+          "confidence": "none",
+          "range": null,
+          "how_to_measure": "Four-pad corner scales or certified axle scale; full tank; ±2 kg.",
+          "notes": "FILL IN: set value (SI unit shown), status 'confirmed', locator (date/place), evidence (what you did and the raw reading), as_printed (raw reading with its unit), confidence."
+        }
+      ]
+    },
+    "mass.corner_fl": {
+      "description": "Corner weight front left",
+      "unit": "kg",
+      "impact": "high",
+      "candidates": [
+        {
+          "value": null,
+          "unit": "kg",
+          "status": "unknown",
+          "class": "B",
+          "source_id": "user:measurement",
+          "locator": "",
+          "evidence": "",
+          "as_printed": "",
+          "applicability": {
+            "year": "2024",
+            "market": "CA",
+            "trim": "Sport Touring",
+            "body": "hatchback",
+            "gearbox": "6MT",
+            "engine": "1.5T",
+            "notes": "the user's own car"
+          },
+          "confidence": "none",
+          "range": null,
+          "how_to_measure": "Corner scales on level pads, full tank, no driver; ±1 kg.",
+          "notes": "FILL IN: set value (SI unit shown), status 'confirmed', locator (date/place), evidence (what you did and the raw reading), as_printed (raw reading with its unit), confidence."
+        }
+      ]
+    },
+    "mass.corner_fr": {
+      "description": "Corner weight front right",
+      "unit": "kg",
+      "impact": "high",
+      "candidates": [
+        {
+          "value": null,
+          "unit": "kg",
+          "status": "unknown",
+          "class": "B",
+          "source_id": "user:measurement",
+          "locator": "",
+          "evidence": "",
+          "as_printed": "",
+          "applicability": {
+            "year": "2024",
+            "market": "CA",
+            "trim": "Sport Touring",
+            "body": "hatchback",
+            "gearbox": "6MT",
+            "engine": "1.5T",
+            "notes": "the user's own car"
+          },
+          "confidence": "none",
+          "range": null,
+          "how_to_measure": "As above.",
+          "notes": "FILL IN: set value (SI unit shown), status 'confirmed', locator (date/place), evidence (what you did and the raw reading), as_printed (raw reading with its unit), confidence."
+        }
+      ]
+    },
+    "mass.corner_rl": {
+      "description": "Corner weight rear left",
+      "unit": "kg",
+      "impact": "high",
+      "candidates": [
+        {
+          "value": null,
+          "unit": "kg",
+          "status": "unknown",
+          "class": "B",
+          "source_id": "user:measurement",
+          "locator": "",
+          "evidence": "",
+          "as_printed": "",
+          "applicability": {
+            "year": "2024",
+            "market": "CA",
+            "trim": "Sport Touring",
+            "body": "hatchback",
+            "gearbox": "6MT",
+            "engine": "1.5T",
+            "notes": "the user's own car"
+          },
+          "confidence": "none",
+          "range": null,
+          "how_to_measure": "As above.",
+          "notes": "FILL IN: set value (SI unit shown), status 'confirmed', locator (date/place), evidence (what you did and the raw reading), as_printed (raw reading with its unit), confidence."
+        }
+      ]
+    },
+    "mass.corner_rr": {
+      "description": "Corner weight rear right",
+      "unit": "kg",
+      "impact": "high",
+      "candidates": [
+        {
+          "value": null,
+          "unit": "kg",
+          "status": "unknown",
+          "class": "B",
+          "source_id": "user:measurement",
+          "locator": "",
+          "evidence": "",
+          "as_printed": "",
+          "applicability": {
+            "year": "2024",
+            "market": "CA",
+            "trim": "Sport Touring",
+            "body": "hatchback",
+            "gearbox": "6MT",
+            "engine": "1.5T",
+            "notes": "the user's own car"
+          },
+          "confidence": "none",
+          "range": null,
+          "how_to_measure": "As above.",
+          "notes": "FILL IN: set value (SI unit shown), status 'confirmed', locator (date/place), evidence (what you did and the raw reading), as_printed (raw reading with its unit), confidence."
+        }
+      ]
+    },
+    "mass.front_fraction": {
+      "description": "Front axle fraction of curb mass",
+      "unit": "1",
+      "impact": "high",
+      "candidates": [
+        {
+          "value": null,
+          "unit": "1",
+          "status": "unknown",
+          "class": "B",
+          "source_id": "user:measurement",
+          "locator": "",
+          "evidence": "",
+          "as_printed": "",
+          "applicability": {
+            "year": "2024",
+            "market": "CA",
+            "trim": "Sport Touring",
+            "body": "hatchback",
+            "gearbox": "6MT",
+            "engine": "1.5T",
+            "notes": "the user's own car"
+          },
+          "confidence": "none",
+          "range": null,
+          "how_to_measure": "(FL+FR)/total from corner weights.",
+          "notes": "FILL IN: set value (SI unit shown), status 'confirmed', locator (date/place), evidence (what you did and the raw reading), as_printed (raw reading with its unit), confidence."
+        }
+      ]
+    },
+    "mass.gvwr": {
+      "description": "GVWR from door-jamb label",
+      "unit": "kg",
+      "impact": "high",
+      "candidates": [
+        {
+          "value": null,
+          "unit": "kg",
+          "status": "unknown",
+          "class": "B",
+          "source_id": "user:measurement",
+          "locator": "",
+          "evidence": "",
+          "as_printed": "",
+          "applicability": {
+            "year": "2024",
+            "market": "CA",
+            "trim": "Sport Touring",
+            "body": "hatchback",
+            "gearbox": "6MT",
+            "engine": "1.5T",
+            "notes": "the user's own car"
+          },
+          "confidence": "none",
+          "range": null,
+          "how_to_measure": "Photograph the B-pillar certification label (kg and lb printed).",
+          "notes": "FILL IN: set value (SI unit shown), status 'confirmed', locator (date/place), evidence (what you did and the raw reading), as_printed (raw reading with its unit), confidence."
+        }
+      ]
+    },
+    "mass.gawr_front": {
+      "description": "Front GAWR from door-jamb label",
+      "unit": "kg",
+      "impact": "high",
+      "candidates": [
+        {
+          "value": null,
+          "unit": "kg",
+          "status": "unknown",
+          "class": "B",
+          "source_id": "user:measurement",
+          "locator": "",
+          "evidence": "",
+          "as_printed": "",
+          "applicability": {
+            "year": "2024",
+            "market": "CA",
+            "trim": "Sport Touring",
+            "body": "hatchback",
+            "gearbox": "6MT",
+            "engine": "1.5T",
+            "notes": "the user's own car"
+          },
+          "confidence": "none",
+          "range": null,
+          "how_to_measure": "Same label.",
+          "notes": "FILL IN: set value (SI unit shown), status 'confirmed', locator (date/place), evidence (what you did and the raw reading), as_printed (raw reading with its unit), confidence."
+        }
+      ]
+    },
+    "mass.gawr_rear": {
+      "description": "Rear GAWR from door-jamb label",
+      "unit": "kg",
+      "impact": "high",
+      "candidates": [
+        {
+          "value": null,
+          "unit": "kg",
+          "status": "unknown",
+          "class": "B",
+          "source_id": "user:measurement",
+          "locator": "",
+          "evidence": "",
+          "as_printed": "",
+          "applicability": {
+            "year": "2024",
+            "market": "CA",
+            "trim": "Sport Touring",
+            "body": "hatchback",
+            "gearbox": "6MT",
+            "engine": "1.5T",
+            "notes": "the user's own car"
+          },
+          "confidence": "none",
+          "range": null,
+          "how_to_measure": "Same label.",
+          "notes": "FILL IN: set value (SI unit shown), status 'confirmed', locator (date/place), evidence (what you did and the raw reading), as_printed (raw reading with its unit), confidence."
+        }
+      ]
+    },
+    "mass.cg_height": {
+      "description": "CG height",
+      "unit": "m",
+      "impact": "high",
+      "candidates": [
+        {
+          "value": null,
+          "unit": "m",
+          "status": "unknown",
+          "class": "B",
+          "source_id": "user:measurement",
+          "locator": "",
+          "evidence": "",
+          "as_printed": "",
+          "applicability": {
+            "year": "2024",
+            "market": "CA",
+            "trim": "Sport Touring",
+            "body": "hatchback",
+            "gearbox": "6MT",
+            "engine": "1.5T",
+            "notes": "the user's own car"
+          },
+          "confidence": "none",
+          "range": null,
+          "how_to_measure": "Axle-lift method: weigh rear axle level and with front raised ≥250 mm (wheels locked, suspension blocked); ±15 mm.",
+          "notes": "FILL IN: set value (SI unit shown), status 'confirmed', locator (date/place), evidence (what you did and the raw reading), as_printed (raw reading with its unit), confidence."
+        }
+      ]
+    },
+    "dimensions.length": {
+      "description": "Overall length",
+      "unit": "m",
+      "impact": "high",
+      "candidates": [
+        {
+          "value": null,
+          "unit": "m",
+          "status": "unknown",
+          "class": "B",
+          "source_id": "user:measurement",
+          "locator": "",
+          "evidence": "",
+          "as_printed": "",
+          "applicability": {
+            "year": "2024",
+            "market": "CA",
+            "trim": "Sport Touring",
+            "body": "hatchback",
+            "gearbox": "6MT",
+            "engine": "1.5T",
+            "notes": "the user's own car"
+          },
+          "confidence": "none",
+          "range": null,
+          "how_to_measure": "Plumb bob to floor at bumper extremes, tape between marks; ±3 mm.",
+          "notes": "FILL IN: set value (SI unit shown), status 'confirmed', locator (date/place), evidence (what you did and the raw reading), as_printed (raw reading with its unit), confidence."
+        }
+      ]
+    },
+    "dimensions.width_body": {
+      "description": "Body width without mirrors",
+      "unit": "m",
+      "impact": "high",
+      "candidates": [
+        {
+          "value": null,
+          "unit": "m",
+          "status": "unknown",
+          "class": "B",
+          "source_id": "user:measurement",
+          "locator": "",
+          "evidence": "",
+          "as_printed": "",
+          "applicability": {
+            "year": "2024",
+            "market": "CA",
+            "trim": "Sport Touring",
+            "body": "hatchback",
+            "gearbox": "6MT",
+            "engine": "1.5T",
+            "notes": "the user's own car"
+          },
+          "confidence": "none",
+          "range": null,
+          "how_to_measure": "Plumb bobs at widest body points; ±3 mm.",
+          "notes": "FILL IN: set value (SI unit shown), status 'confirmed', locator (date/place), evidence (what you did and the raw reading), as_printed (raw reading with its unit), confidence."
+        }
+      ]
+    },
+    "dimensions.width_mirrors": {
+      "description": "Width across open mirrors",
+      "unit": "m",
+      "impact": "high",
+      "candidates": [
+        {
+          "value": null,
+          "unit": "m",
+          "status": "unknown",
+          "class": "B",
+          "source_id": "user:measurement",
+          "locator": "",
+          "evidence": "",
+          "as_printed": "",
+          "applicability": {
+            "year": "2024",
+            "market": "CA",
+            "trim": "Sport Touring",
+            "body": "hatchback",
+            "gearbox": "6MT",
+            "engine": "1.5T",
+            "notes": "the user's own car"
+          },
+          "confidence": "none",
+          "range": null,
+          "how_to_measure": "Plumb bobs at mirror tips; ±3 mm.",
+          "notes": "FILL IN: set value (SI unit shown), status 'confirmed', locator (date/place), evidence (what you did and the raw reading), as_printed (raw reading with its unit), confidence."
+        }
+      ]
+    },
+    "dimensions.height": {
+      "description": "Overall height (unladen)",
+      "unit": "m",
+      "impact": "high",
+      "candidates": [
+        {
+          "value": null,
+          "unit": "m",
+          "status": "unknown",
+          "class": "B",
+          "source_id": "user:measurement",
+          "locator": "",
+          "evidence": "",
+          "as_printed": "",
+          "applicability": {
+            "year": "2024",
+            "market": "CA",
+            "trim": "Sport Touring",
+            "body": "hatchback",
+            "gearbox": "6MT",
+            "engine": "1.5T",
+            "notes": "the user's own car"
+          },
+          "confidence": "none",
+          "range": null,
+          "how_to_measure": "Straight edge on roof, tape to floor; ±3 mm.",
+          "notes": "FILL IN: set value (SI unit shown), status 'confirmed', locator (date/place), evidence (what you did and the raw reading), as_printed (raw reading with its unit), confidence."
+        }
+      ]
+    },
+    "dimensions.wheelbase": {
+      "description": "Wheelbase (left and right average)",
+      "unit": "m",
+      "impact": "high",
+      "candidates": [
+        {
+          "value": null,
+          "unit": "m",
+          "status": "unknown",
+          "class": "B",
+          "source_id": "user:measurement",
+          "locator": "",
+          "evidence": "",
+          "as_printed": "",
+          "applicability": {
+            "year": "2024",
+            "market": "CA",
+            "trim": "Sport Touring",
+            "body": "hatchback",
+            "gearbox": "6MT",
+            "engine": "1.5T",
+            "notes": "the user's own car"
+          },
+          "confidence": "none",
+          "range": null,
+          "how_to_measure": "Plumb from hub centres, both sides; ±2 mm.",
+          "notes": "FILL IN: set value (SI unit shown), status 'confirmed', locator (date/place), evidence (what you did and the raw reading), as_printed (raw reading with its unit), confidence."
+        }
+      ]
+    },
+    "dimensions.track_front": {
+      "description": "Front track",
+      "unit": "m",
+      "impact": "high",
+      "candidates": [
+        {
+          "value": null,
+          "unit": "m",
+          "status": "unknown",
+          "class": "B",
+          "source_id": "user:measurement",
+          "locator": "",
+          "evidence": "",
+          "as_printed": "",
+          "applicability": {
+            "year": "2024",
+            "market": "CA",
+            "trim": "Sport Touring",
+            "body": "hatchback",
+            "gearbox": "6MT",
+            "engine": "1.5T",
+            "notes": "the user's own car"
+          },
+          "confidence": "none",
+          "range": null,
+          "how_to_measure": "Tire centreline to centreline at contact patch; ±3 mm.",
+          "notes": "FILL IN: set value (SI unit shown), status 'confirmed', locator (date/place), evidence (what you did and the raw reading), as_printed (raw reading with its unit), confidence."
+        }
+      ]
+    },
+    "dimensions.track_rear": {
+      "description": "Rear track",
+      "unit": "m",
+      "impact": "high",
+      "candidates": [
+        {
+          "value": null,
+          "unit": "m",
+          "status": "unknown",
+          "class": "B",
+          "source_id": "user:measurement",
+          "locator": "",
+          "evidence": "",
+          "as_printed": "",
+          "applicability": {
+            "year": "2024",
+            "market": "CA",
+            "trim": "Sport Touring",
+            "body": "hatchback",
+            "gearbox": "6MT",
+            "engine": "1.5T",
+            "notes": "the user's own car"
+          },
+          "confidence": "none",
+          "range": null,
+          "how_to_measure": "As above.",
+          "notes": "FILL IN: set value (SI unit shown), status 'confirmed', locator (date/place), evidence (what you did and the raw reading), as_printed (raw reading with its unit), confidence."
+        }
+      ]
+    },
+    "dimensions.ground_clearance": {
+      "description": "Minimum ground clearance",
+      "unit": "m",
+      "impact": "high",
+      "candidates": [
+        {
+          "value": null,
+          "unit": "m",
+          "status": "unknown",
+          "class": "B",
+          "source_id": "user:measurement",
+          "locator": "",
+          "evidence": "",
+          "as_printed": "",
+          "applicability": {
+            "year": "2024",
+            "market": "CA",
+            "trim": "Sport Touring",
+            "body": "hatchback",
+            "gearbox": "6MT",
+            "engine": "1.5T",
+            "notes": "the user's own car"
+          },
+          "confidence": "none",
+          "range": null,
+          "how_to_measure": "Lowest point under car to floor; ±2 mm.",
+          "notes": "FILL IN: set value (SI unit shown), status 'confirmed', locator (date/place), evidence (what you did and the raw reading), as_printed (raw reading with its unit), confidence."
+        }
+      ]
+    },
+    "dimensions.overhang_front": {
+      "description": "Front overhang (axle to bumper)",
+      "unit": "m",
+      "impact": "high",
+      "candidates": [
+        {
+          "value": null,
+          "unit": "m",
+          "status": "unknown",
+          "class": "B",
+          "source_id": "user:measurement",
+          "locator": "",
+          "evidence": "",
+          "as_printed": "",
+          "applicability": {
+            "year": "2024",
+            "market": "CA",
+            "trim": "Sport Touring",
+            "body": "hatchback",
+            "gearbox": "6MT",
+            "engine": "1.5T",
+            "notes": "the user's own car"
+          },
+          "confidence": "none",
+          "range": null,
+          "how_to_measure": "Plumb marks; ±3 mm.",
+          "notes": "FILL IN: set value (SI unit shown), status 'confirmed', locator (date/place), evidence (what you did and the raw reading), as_printed (raw reading with its unit), confidence."
+        }
+      ]
+    },
+    "dimensions.overhang_rear": {
+      "description": "Rear overhang (axle to bumper)",
+      "unit": "m",
+      "impact": "high",
+      "candidates": [
+        {
+          "value": null,
+          "unit": "m",
+          "status": "unknown",
+          "class": "B",
+          "source_id": "user:measurement",
+          "locator": "",
+          "evidence": "",
+          "as_printed": "",
+          "applicability": {
+            "year": "2024",
+            "market": "CA",
+            "trim": "Sport Touring",
+            "body": "hatchback",
+            "gearbox": "6MT",
+            "engine": "1.5T",
+            "notes": "the user's own car"
+          },
+          "confidence": "none",
+          "range": null,
+          "how_to_measure": "Plumb marks; ±3 mm.",
+          "notes": "FILL IN: set value (SI unit shown), status 'confirmed', locator (date/place), evidence (what you did and the raw reading), as_printed (raw reading with its unit), confidence."
+        }
+      ]
+    },
+    "proportions.arch_top_z_front": {
+      "description": "Fender arch top height above ground, front",
+      "unit": "m",
+      "impact": "high",
+      "candidates": [
+        {
+          "value": null,
+          "unit": "m",
+          "status": "unknown",
+          "class": "B",
+          "source_id": "user:measurement",
+          "locator": "",
+          "evidence": "",
+          "as_printed": "",
+          "applicability": {
+            "year": "2024",
+            "market": "CA",
+            "trim": "Sport Touring",
+            "body": "hatchback",
+            "gearbox": "6MT",
+            "engine": "1.5T",
+            "notes": "the user's own car"
+          },
+          "confidence": "none",
+          "range": null,
+          "how_to_measure": "Floor to arch lip directly above hub, full tank; ±2 mm.",
+          "notes": "FILL IN: set value (SI unit shown), status 'confirmed', locator (date/place), evidence (what you did and the raw reading), as_printed (raw reading with its unit), confidence."
+        }
+      ]
+    },
+    "proportions.arch_top_z_rear": {
+      "description": "Fender arch top height above ground, rear",
+      "unit": "m",
+      "impact": "high",
+      "candidates": [
+        {
+          "value": null,
+          "unit": "m",
+          "status": "unknown",
+          "class": "B",
+          "source_id": "user:measurement",
+          "locator": "",
+          "evidence": "",
+          "as_printed": "",
+          "applicability": {
+            "year": "2024",
+            "market": "CA",
+            "trim": "Sport Touring",
+            "body": "hatchback",
+            "gearbox": "6MT",
+            "engine": "1.5T",
+            "notes": "the user's own car"
+          },
+          "confidence": "none",
+          "range": null,
+          "how_to_measure": "As above.",
+          "notes": "FILL IN: set value (SI unit shown), status 'confirmed', locator (date/place), evidence (what you did and the raw reading), as_printed (raw reading with its unit), confidence."
+        }
+      ]
+    },
+    "proportions.wheel_center_z_front": {
+      "description": "Front hub centre height",
+      "unit": "m",
+      "impact": "high",
+      "candidates": [
+        {
+          "value": null,
+          "unit": "m",
+          "status": "unknown",
+          "class": "B",
+          "source_id": "user:measurement",
+          "locator": "",
+          "evidence": "",
+          "as_printed": "",
+          "applicability": {
+            "year": "2024",
+            "market": "CA",
+            "trim": "Sport Touring",
+            "body": "hatchback",
+            "gearbox": "6MT",
+            "engine": "1.5T",
+            "notes": "the user's own car"
+          },
+          "confidence": "none",
+          "range": null,
+          "how_to_measure": "Floor to hub centre; ±2 mm.",
+          "notes": "FILL IN: set value (SI unit shown), status 'confirmed', locator (date/place), evidence (what you did and the raw reading), as_printed (raw reading with its unit), confidence."
+        }
+      ]
+    },
+    "proportions.wheel_center_z_rear": {
+      "description": "Rear hub centre height",
+      "unit": "m",
+      "impact": "high",
+      "candidates": [
+        {
+          "value": null,
+          "unit": "m",
+          "status": "unknown",
+          "class": "B",
+          "source_id": "user:measurement",
+          "locator": "",
+          "evidence": "",
+          "as_printed": "",
+          "applicability": {
+            "year": "2024",
+            "market": "CA",
+            "trim": "Sport Touring",
+            "body": "hatchback",
+            "gearbox": "6MT",
+            "engine": "1.5T",
+            "notes": "the user's own car"
+          },
+          "confidence": "none",
+          "range": null,
+          "how_to_measure": "As above.",
+          "notes": "FILL IN: set value (SI unit shown), status 'confirmed', locator (date/place), evidence (what you did and the raw reading), as_printed (raw reading with its unit), confidence."
+        }
+      ]
+    },
+    "proportions.sill_z_mid_wheelbase": {
+      "description": "Sill height at mid-wheelbase",
+      "unit": "m",
+      "impact": "high",
+      "candidates": [
+        {
+          "value": null,
+          "unit": "m",
+          "status": "unknown",
+          "class": "B",
+          "source_id": "user:measurement",
+          "locator": "",
+          "evidence": "",
+          "as_printed": "",
+          "applicability": {
+            "year": "2024",
+            "market": "CA",
+            "trim": "Sport Touring",
+            "body": "hatchback",
+            "gearbox": "6MT",
+            "engine": "1.5T",
+            "notes": "the user's own car"
+          },
+          "confidence": "none",
+          "range": null,
+          "how_to_measure": "Floor to sill underside; ±2 mm.",
+          "notes": "FILL IN: set value (SI unit shown), status 'confirmed', locator (date/place), evidence (what you did and the raw reading), as_printed (raw reading with its unit), confidence."
+        }
+      ]
+    },
+    "proportions.windshield_base_y": {
+      "description": "Windshield base Y (from front axle, +forward)",
+      "unit": "m",
+      "impact": "high",
+      "candidates": [
+        {
+          "value": null,
+          "unit": "m",
+          "status": "unknown",
+          "class": "B",
+          "source_id": "user:measurement",
+          "locator": "",
+          "evidence": "",
+          "as_printed": "",
+          "applicability": {
+            "year": "2024",
+            "market": "CA",
+            "trim": "Sport Touring",
+            "body": "hatchback",
+            "gearbox": "6MT",
+            "engine": "1.5T",
+            "notes": "the user's own car"
+          },
+          "confidence": "none",
+          "range": null,
+          "how_to_measure": "Plumb from cowl glass edge at centreline; ±5 mm.",
+          "notes": "FILL IN: set value (SI unit shown), status 'confirmed', locator (date/place), evidence (what you did and the raw reading), as_printed (raw reading with its unit), confidence."
+        }
+      ]
+    },
+    "proportions.windshield_base_z": {
+      "description": "Windshield base height",
+      "unit": "m",
+      "impact": "high",
+      "candidates": [
+        {
+          "value": null,
+          "unit": "m",
+          "status": "unknown",
+          "class": "B",
+          "source_id": "user:measurement",
+          "locator": "",
+          "evidence": "",
+          "as_printed": "",
+          "applicability": {
+            "year": "2024",
+            "market": "CA",
+            "trim": "Sport Touring",
+            "body": "hatchback",
+            "gearbox": "6MT",
+            "engine": "1.5T",
+            "notes": "the user's own car"
+          },
+          "confidence": "none",
+          "range": null,
+          "how_to_measure": "Floor to cowl glass edge; ±5 mm.",
+          "notes": "FILL IN: set value (SI unit shown), status 'confirmed', locator (date/place), evidence (what you did and the raw reading), as_printed (raw reading with its unit), confidence."
+        }
+      ]
+    },
+    "proportions.roof_peak_z": {
+      "description": "Roof peak height",
+      "unit": "m",
+      "impact": "high",
+      "candidates": [
+        {
+          "value": null,
+          "unit": "m",
+          "status": "unknown",
+          "class": "B",
+          "source_id": "user:measurement",
+          "locator": "",
+          "evidence": "",
+          "as_printed": "",
+          "applicability": {
+            "year": "2024",
+            "market": "CA",
+            "trim": "Sport Touring",
+            "body": "hatchback",
+            "gearbox": "6MT",
+            "engine": "1.5T",
+            "notes": "the user's own car"
+          },
+          "confidence": "none",
+          "range": null,
+          "how_to_measure": "Straight edge; ±3 mm.",
+          "notes": "FILL IN: set value (SI unit shown), status 'confirmed', locator (date/place), evidence (what you did and the raw reading), as_printed (raw reading with its unit), confidence."
+        }
+      ]
+    },
+    "proportions.mirror_y": {
+      "description": "Mirror glass centre Y",
+      "unit": "m",
+      "impact": "high",
+      "candidates": [
+        {
+          "value": null,
+          "unit": "m",
+          "status": "unknown",
+          "class": "B",
+          "source_id": "user:measurement",
+          "locator": "",
+          "evidence": "",
+          "as_printed": "",
+          "applicability": {
+            "year": "2024",
+            "market": "CA",
+            "trim": "Sport Touring",
+            "body": "hatchback",
+            "gearbox": "6MT",
+            "engine": "1.5T",
+            "notes": "the user's own car"
+          },
+          "confidence": "none",
+          "range": null,
+          "how_to_measure": "Plumb to floor, measure to front-axle line; ±5 mm.",
+          "notes": "FILL IN: set value (SI unit shown), status 'confirmed', locator (date/place), evidence (what you did and the raw reading), as_printed (raw reading with its unit), confidence."
+        }
+      ]
+    },
+    "proportions.mirror_z": {
+      "description": "Mirror glass centre height",
+      "unit": "m",
+      "impact": "high",
+      "candidates": [
+        {
+          "value": null,
+          "unit": "m",
+          "status": "unknown",
+          "class": "B",
+          "source_id": "user:measurement",
+          "locator": "",
+          "evidence": "",
+          "as_printed": "",
+          "applicability": {
+            "year": "2024",
+            "market": "CA",
+            "trim": "Sport Touring",
+            "body": "hatchback",
+            "gearbox": "6MT",
+            "engine": "1.5T",
+            "notes": "the user's own car"
+          },
+          "confidence": "none",
+          "range": null,
+          "how_to_measure": "Floor to mirror centre; ±5 mm.",
+          "notes": "FILL IN: set value (SI unit shown), status 'confirmed', locator (date/place), evidence (what you did and the raw reading), as_printed (raw reading with its unit), confidence."
+        }
+      ]
+    },
+    "steering.wheel_diameter": {
+      "description": "Steering wheel outer diameter",
+      "unit": "m",
+      "impact": "high",
+      "candidates": [
+        {
+          "value": null,
+          "unit": "m",
+          "status": "unknown",
+          "class": "B",
+          "source_id": "user:measurement",
+          "locator": "",
+          "evidence": "",
+          "as_printed": "",
+          "applicability": {
+            "year": "2024",
+            "market": "CA",
+            "trim": "Sport Touring",
+            "body": "hatchback",
+            "gearbox": "6MT",
+            "engine": "1.5T",
+            "notes": "the user's own car"
+          },
+          "confidence": "none",
+          "range": null,
+          "how_to_measure": "Caliper or tape across rim; ±2 mm.",
+          "notes": "FILL IN: set value (SI unit shown), status 'confirmed', locator (date/place), evidence (what you did and the raw reading), as_printed (raw reading with its unit), confidence."
+        }
+      ]
+    },
+    "steering.max_angle_inner": {
+      "description": "Max road-wheel angle, inner wheel",
+      "unit": "rad",
+      "impact": "high",
+      "candidates": [
+        {
+          "value": null,
+          "unit": "rad",
+          "status": "unknown",
+          "class": "B",
+          "source_id": "user:measurement",
+          "locator": "",
+          "evidence": "",
+          "as_printed": "",
+          "applicability": {
+            "year": "2024",
+            "market": "CA",
+            "trim": "Sport Touring",
+            "body": "hatchback",
+            "gearbox": "6MT",
+            "engine": "1.5T",
+            "notes": "the user's own car"
+          },
+          "confidence": "none",
+          "range": null,
+          "how_to_measure": "Turn plates at full lock; ±0.5 deg (enter radians).",
+          "notes": "FILL IN: set value (SI unit shown), status 'confirmed', locator (date/place), evidence (what you did and the raw reading), as_printed (raw reading with its unit), confidence."
+        }
+      ]
+    },
+    "steering.max_angle_outer": {
+      "description": "Max road-wheel angle, outer wheel",
+      "unit": "rad",
+      "impact": "high",
+      "candidates": [
+        {
+          "value": null,
+          "unit": "rad",
+          "status": "unknown",
+          "class": "B",
+          "source_id": "user:measurement",
+          "locator": "",
+          "evidence": "",
+          "as_printed": "",
+          "applicability": {
+            "year": "2024",
+            "market": "CA",
+            "trim": "Sport Touring",
+            "body": "hatchback",
+            "gearbox": "6MT",
+            "engine": "1.5T",
+            "notes": "the user's own car"
+          },
+          "confidence": "none",
+          "range": null,
+          "how_to_measure": "As above.",
+          "notes": "FILL IN: set value (SI unit shown), status 'confirmed', locator (date/place), evidence (what you did and the raw reading), as_printed (raw reading with its unit), confidence."
+        }
+      ]
+    },
+    "suspension.spring_free_length_front": {
+      "description": "Front spring free length",
+      "unit": "m",
+      "impact": "high",
+      "candidates": [
+        {
+          "value": null,
+          "unit": "m",
+          "status": "unknown",
+          "class": "B",
+          "source_id": "user:measurement",
+          "locator": "",
+          "evidence": "",
+          "as_printed": "",
+          "applicability": {
+            "year": "2024",
+            "market": "CA",
+            "trim": "Sport Touring",
+            "body": "hatchback",
+            "gearbox": "6MT",
+            "engine": "1.5T",
+            "notes": "the user's own car"
+          },
+          "confidence": "none",
+          "range": null,
+          "how_to_measure": "Removed spring, caliper; ±1 mm.",
+          "notes": "FILL IN: set value (SI unit shown), status 'confirmed', locator (date/place), evidence (what you did and the raw reading), as_printed (raw reading with its unit), confidence."
+        }
+      ]
+    },
+    "suspension.spring_free_length_rear": {
+      "description": "Rear spring free length",
+      "unit": "m",
+      "impact": "high",
+      "candidates": [
+        {
+          "value": null,
+          "unit": "m",
+          "status": "unknown",
+          "class": "B",
+          "source_id": "user:measurement",
+          "locator": "",
+          "evidence": "",
+          "as_printed": "",
+          "applicability": {
+            "year": "2024",
+            "market": "CA",
+            "trim": "Sport Touring",
+            "body": "hatchback",
+            "gearbox": "6MT",
+            "engine": "1.5T",
+            "notes": "the user's own car"
+          },
+          "confidence": "none",
+          "range": null,
+          "how_to_measure": "As above.",
+          "notes": "FILL IN: set value (SI unit shown), status 'confirmed', locator (date/place), evidence (what you did and the raw reading), as_printed (raw reading with its unit), confidence."
+        }
+      ]
+    },
+    "suspension.spring_wire_diameter_front": {
+      "description": "Front spring wire diameter",
+      "unit": "m",
+      "impact": "high",
+      "candidates": [
+        {
+          "value": null,
+          "unit": "m",
+          "status": "unknown",
+          "class": "B",
+          "source_id": "user:measurement",
+          "locator": "",
+          "evidence": "",
+          "as_printed": "",
+          "applicability": {
+            "year": "2024",
+            "market": "CA",
+            "trim": "Sport Touring",
+            "body": "hatchback",
+            "gearbox": "6MT",
+            "engine": "1.5T",
+            "notes": "the user's own car"
+          },
+          "confidence": "none",
+          "range": null,
+          "how_to_measure": "Caliper; ±0.05 mm.",
+          "notes": "FILL IN: set value (SI unit shown), status 'confirmed', locator (date/place), evidence (what you did and the raw reading), as_printed (raw reading with its unit), confidence."
+        }
+      ]
+    },
+    "suspension.spring_wire_diameter_rear": {
+      "description": "Rear spring wire diameter",
+      "unit": "m",
+      "impact": "high",
+      "candidates": [
+        {
+          "value": null,
+          "unit": "m",
+          "status": "unknown",
+          "class": "B",
+          "source_id": "user:measurement",
+          "locator": "",
+          "evidence": "",
+          "as_printed": "",
+          "applicability": {
+            "year": "2024",
+            "market": "CA",
+            "trim": "Sport Touring",
+            "body": "hatchback",
+            "gearbox": "6MT",
+            "engine": "1.5T",
+            "notes": "the user's own car"
+          },
+          "confidence": "none",
+          "range": null,
+          "how_to_measure": "Caliper; ±0.05 mm.",
+          "notes": "FILL IN: set value (SI unit shown), status 'confirmed', locator (date/place), evidence (what you did and the raw reading), as_printed (raw reading with its unit), confidence."
+        }
+      ]
+    },
+    "suspension.spring_active_coils_front": {
+      "description": "Front spring active coils",
+      "unit": "count",
+      "impact": "high",
+      "candidates": [
+        {
+          "value": null,
+          "unit": "count",
+          "status": "unknown",
+          "class": "B",
+          "source_id": "user:measurement",
+          "locator": "",
+          "evidence": "",
+          "as_printed": "",
+          "applicability": {
+            "year": "2024",
+            "market": "CA",
+            "trim": "Sport Touring",
+            "body": "hatchback",
+            "gearbox": "6MT",
+            "engine": "1.5T",
+            "notes": "the user's own car"
+          },
+          "confidence": "none",
+          "range": null,
+          "how_to_measure": "Count coils minus closed ends; ±0.25.",
+          "notes": "FILL IN: set value (SI unit shown), status 'confirmed', locator (date/place), evidence (what you did and the raw reading), as_printed (raw reading with its unit), confidence."
+        }
+      ]
+    },
+    "suspension.spring_active_coils_rear": {
+      "description": "Rear spring active coils",
+      "unit": "count",
+      "impact": "high",
+      "candidates": [
+        {
+          "value": null,
+          "unit": "count",
+          "status": "unknown",
+          "class": "B",
+          "source_id": "user:measurement",
+          "locator": "",
+          "evidence": "",
+          "as_printed": "",
+          "applicability": {
+            "year": "2024",
+            "market": "CA",
+            "trim": "Sport Touring",
+            "body": "hatchback",
+            "gearbox": "6MT",
+            "engine": "1.5T",
+            "notes": "the user's own car"
+          },
+          "confidence": "none",
+          "range": null,
+          "how_to_measure": "As above.",
+          "notes": "FILL IN: set value (SI unit shown), status 'confirmed', locator (date/place), evidence (what you did and the raw reading), as_printed (raw reading with its unit), confidence."
+        }
+      ]
+    },
+    "suspension.spring_mean_coil_diameter_front": {
+      "description": "Front spring mean coil diameter",
+      "unit": "m",
+      "impact": "high",
+      "candidates": [
+        {
+          "value": null,
+          "unit": "m",
+          "status": "unknown",
+          "class": "B",
+          "source_id": "user:measurement",
+          "locator": "",
+          "evidence": "",
+          "as_printed": "",
+          "applicability": {
+            "year": "2024",
+            "market": "CA",
+            "trim": "Sport Touring",
+            "body": "hatchback",
+            "gearbox": "6MT",
+            "engine": "1.5T",
+            "notes": "the user's own car"
+          },
+          "confidence": "none",
+          "range": null,
+          "how_to_measure": "OD minus wire diameter; ±0.5 mm.",
+          "notes": "FILL IN: set value (SI unit shown), status 'confirmed', locator (date/place), evidence (what you did and the raw reading), as_printed (raw reading with its unit), confidence."
+        }
+      ]
+    },
+    "suspension.spring_mean_coil_diameter_rear": {
+      "description": "Rear spring mean coil diameter",
+      "unit": "m",
+      "impact": "high",
+      "candidates": [
+        {
+          "value": null,
+          "unit": "m",
+          "status": "unknown",
+          "class": "B",
+          "source_id": "user:measurement",
+          "locator": "",
+          "evidence": "",
+          "as_printed": "",
+          "applicability": {
+            "year": "2024",
+            "market": "CA",
+            "trim": "Sport Touring",
+            "body": "hatchback",
+            "gearbox": "6MT",
+            "engine": "1.5T",
+            "notes": "the user's own car"
+          },
+          "confidence": "none",
+          "range": null,
+          "how_to_measure": "As above.",
+          "notes": "FILL IN: set value (SI unit shown), status 'confirmed', locator (date/place), evidence (what you did and the raw reading), as_printed (raw reading with its unit), confidence."
+        }
+      ]
+    },
+    "suspension.spring_rate_front": {
+      "description": "Front spring rate (bench)",
+      "unit": "N/m",
+      "impact": "high",
+      "candidates": [
+        {
+          "value": null,
+          "unit": "N/m",
+          "status": "unknown",
+          "class": "B",
+          "source_id": "user:measurement",
+          "locator": "",
+          "evidence": "",
+          "as_printed": "",
+          "applicability": {
+            "year": "2024",
+            "market": "CA",
+            "trim": "Sport Touring",
+            "body": "hatchback",
+            "gearbox": "6MT",
+            "engine": "1.5T",
+            "notes": "the user's own car"
+          },
+          "confidence": "none",
+          "range": null,
+          "how_to_measure": "Spring tester or loaded-length at two loads; ±3 %.",
+          "notes": "FILL IN: set value (SI unit shown), status 'confirmed', locator (date/place), evidence (what you did and the raw reading), as_printed (raw reading with its unit), confidence."
+        }
+      ]
+    },
+    "suspension.spring_rate_rear": {
+      "description": "Rear spring rate (bench)",
+      "unit": "N/m",
+      "impact": "high",
+      "candidates": [
+        {
+          "value": null,
+          "unit": "N/m",
+          "status": "unknown",
+          "class": "B",
+          "source_id": "user:measurement",
+          "locator": "",
+          "evidence": "",
+          "as_printed": "",
+          "applicability": {
+            "year": "2024",
+            "market": "CA",
+            "trim": "Sport Touring",
+            "body": "hatchback",
+            "gearbox": "6MT",
+            "engine": "1.5T",
+            "notes": "the user's own car"
+          },
+          "confidence": "none",
+          "range": null,
+          "how_to_measure": "As above.",
+          "notes": "FILL IN: set value (SI unit shown), status 'confirmed', locator (date/place), evidence (what you did and the raw reading), as_printed (raw reading with its unit), confidence."
+        }
+      ]
+    },
+    "suspension.arb_front_diameter": {
+      "description": "Front anti-roll bar OD",
+      "unit": "m",
+      "impact": "high",
+      "candidates": [
+        {
+          "value": null,
+          "unit": "m",
+          "status": "unknown",
+          "class": "B",
+          "source_id": "user:measurement",
+          "locator": "",
+          "evidence": "",
+          "as_printed": "",
+          "applicability": {
+            "year": "2024",
+            "market": "CA",
+            "trim": "Sport Touring",
+            "body": "hatchback",
+            "gearbox": "6MT",
+            "engine": "1.5T",
+            "notes": "the user's own car"
+          },
+          "confidence": "none",
+          "range": null,
+          "how_to_measure": "Caliper at straight section; ±0.1 mm.",
+          "notes": "FILL IN: set value (SI unit shown), status 'confirmed', locator (date/place), evidence (what you did and the raw reading), as_printed (raw reading with its unit), confidence."
+        }
+      ]
+    },
+    "suspension.arb_rear_diameter": {
+      "description": "Rear anti-roll bar OD",
+      "unit": "m",
+      "impact": "high",
+      "candidates": [
+        {
+          "value": null,
+          "unit": "m",
+          "status": "unknown",
+          "class": "B",
+          "source_id": "user:measurement",
+          "locator": "",
+          "evidence": "",
+          "as_printed": "",
+          "applicability": {
+            "year": "2024",
+            "market": "CA",
+            "trim": "Sport Touring",
+            "body": "hatchback",
+            "gearbox": "6MT",
+            "engine": "1.5T",
+            "notes": "the user's own car"
+          },
+          "confidence": "none",
+          "range": null,
+          "how_to_measure": "Caliper; ±0.1 mm.",
+          "notes": "FILL IN: set value (SI unit shown), status 'confirmed', locator (date/place), evidence (what you did and the raw reading), as_printed (raw reading with its unit), confidence."
+        }
+      ]
+    },
+    "suspension.arb_front_lever_arm": {
+      "description": "Front bar lever arm (bushing axis to link eye)",
+      "unit": "m",
+      "impact": "high",
+      "candidates": [
+        {
+          "value": null,
+          "unit": "m",
+          "status": "unknown",
+          "class": "B",
+          "source_id": "user:measurement",
+          "locator": "",
+          "evidence": "",
+          "as_printed": "",
+          "applicability": {
+            "year": "2024",
+            "market": "CA",
+            "trim": "Sport Touring",
+            "body": "hatchback",
+            "gearbox": "6MT",
+            "engine": "1.5T",
+            "notes": "the user's own car"
+          },
+          "confidence": "none",
+          "range": null,
+          "how_to_measure": "Tape/caliper; ±2 mm.",
+          "notes": "FILL IN: set value (SI unit shown), status 'confirmed', locator (date/place), evidence (what you did and the raw reading), as_printed (raw reading with its unit), confidence."
+        }
+      ]
+    },
+    "suspension.arb_rear_lever_arm": {
+      "description": "Rear bar lever arm",
+      "unit": "m",
+      "impact": "high",
+      "candidates": [
+        {
+          "value": null,
+          "unit": "m",
+          "status": "unknown",
+          "class": "B",
+          "source_id": "user:measurement",
+          "locator": "",
+          "evidence": "",
+          "as_printed": "",
+          "applicability": {
+            "year": "2024",
+            "market": "CA",
+            "trim": "Sport Touring",
+            "body": "hatchback",
+            "gearbox": "6MT",
+            "engine": "1.5T",
+            "notes": "the user's own car"
+          },
+          "confidence": "none",
+          "range": null,
+          "how_to_measure": "As above.",
+          "notes": "FILL IN: set value (SI unit shown), status 'confirmed', locator (date/place), evidence (what you did and the raw reading), as_printed (raw reading with its unit), confidence."
+        }
+      ]
+    },
+    "suspension.arb_front_active_length": {
+      "description": "Front bar length between bushings",
+      "unit": "m",
+      "impact": "high",
+      "candidates": [
+        {
+          "value": null,
+          "unit": "m",
+          "status": "unknown",
+          "class": "B",
+          "source_id": "user:measurement",
+          "locator": "",
+          "evidence": "",
+          "as_printed": "",
+          "applicability": {
+            "year": "2024",
+            "market": "CA",
+            "trim": "Sport Touring",
+            "body": "hatchback",
+            "gearbox": "6MT",
+            "engine": "1.5T",
+            "notes": "the user's own car"
+          },
+          "confidence": "none",
+          "range": null,
+          "how_to_measure": "Tape; ±2 mm.",
+          "notes": "FILL IN: set value (SI unit shown), status 'confirmed', locator (date/place), evidence (what you did and the raw reading), as_printed (raw reading with its unit), confidence."
+        }
+      ]
+    },
+    "suspension.arb_rear_active_length": {
+      "description": "Rear bar length between bushings",
+      "unit": "m",
+      "impact": "high",
+      "candidates": [
+        {
+          "value": null,
+          "unit": "m",
+          "status": "unknown",
+          "class": "B",
+          "source_id": "user:measurement",
+          "locator": "",
+          "evidence": "",
+          "as_printed": "",
+          "applicability": {
+            "year": "2024",
+            "market": "CA",
+            "trim": "Sport Touring",
+            "body": "hatchback",
+            "gearbox": "6MT",
+            "engine": "1.5T",
+            "notes": "the user's own car"
+          },
+          "confidence": "none",
+          "range": null,
+          "how_to_measure": "Tape; ±2 mm.",
+          "notes": "FILL IN: set value (SI unit shown), status 'confirmed', locator (date/place), evidence (what you did and the raw reading), as_printed (raw reading with its unit), confidence."
+        }
+      ]
+    },
+    "suspension.travel_bump_front": {
+      "description": "Front bump travel from ride height to bump-stop contact",
+      "unit": "m",
+      "impact": "high",
+      "candidates": [
+        {
+          "value": null,
+          "unit": "m",
+          "status": "unknown",
+          "class": "B",
+          "source_id": "user:measurement",
+          "locator": "",
+          "evidence": "",
+          "as_printed": "",
+          "applicability": {
+            "year": "2024",
+            "market": "CA",
+            "trim": "Sport Touring",
+            "body": "hatchback",
+            "gearbox": "6MT",
+            "engine": "1.5T",
+            "notes": "the user's own car"
+          },
+          "confidence": "none",
+          "range": null,
+          "how_to_measure": "Spring removed or jack under knuckle; ±2 mm.",
+          "notes": "FILL IN: set value (SI unit shown), status 'confirmed', locator (date/place), evidence (what you did and the raw reading), as_printed (raw reading with its unit), confidence."
+        }
+      ]
+    },
+    "suspension.travel_bump_rear": {
+      "description": "Rear bump travel",
+      "unit": "m",
+      "impact": "high",
+      "candidates": [
+        {
+          "value": null,
+          "unit": "m",
+          "status": "unknown",
+          "class": "B",
+          "source_id": "user:measurement",
+          "locator": "",
+          "evidence": "",
+          "as_printed": "",
+          "applicability": {
+            "year": "2024",
+            "market": "CA",
+            "trim": "Sport Touring",
+            "body": "hatchback",
+            "gearbox": "6MT",
+            "engine": "1.5T",
+            "notes": "the user's own car"
+          },
+          "confidence": "none",
+          "range": null,
+          "how_to_measure": "As above.",
+          "notes": "FILL IN: set value (SI unit shown), status 'confirmed', locator (date/place), evidence (what you did and the raw reading), as_printed (raw reading with its unit), confidence."
+        }
+      ]
+    },
+    "suspension.travel_rebound_front": {
+      "description": "Front rebound travel (droop)",
+      "unit": "m",
+      "impact": "high",
+      "candidates": [
+        {
+          "value": null,
+          "unit": "m",
+          "status": "unknown",
+          "class": "B",
+          "source_id": "user:measurement",
+          "locator": "",
+          "evidence": "",
+          "as_printed": "",
+          "applicability": {
+            "year": "2024",
+            "market": "CA",
+            "trim": "Sport Touring",
+            "body": "hatchback",
+            "gearbox": "6MT",
+            "engine": "1.5T",
+            "notes": "the user's own car"
+          },
+          "confidence": "none",
+          "range": null,
+          "how_to_measure": "Lift body until wheel hangs; ±2 mm.",
+          "notes": "FILL IN: set value (SI unit shown), status 'confirmed', locator (date/place), evidence (what you did and the raw reading), as_printed (raw reading with its unit), confidence."
+        }
+      ]
+    },
+    "suspension.travel_rebound_rear": {
+      "description": "Rear rebound travel",
+      "unit": "m",
+      "impact": "high",
+      "candidates": [
+        {
+          "value": null,
+          "unit": "m",
+          "status": "unknown",
+          "class": "B",
+          "source_id": "user:measurement",
+          "locator": "",
+          "evidence": "",
+          "as_printed": "",
+          "applicability": {
+            "year": "2024",
+            "market": "CA",
+            "trim": "Sport Touring",
+            "body": "hatchback",
+            "gearbox": "6MT",
+            "engine": "1.5T",
+            "notes": "the user's own car"
+          },
+          "confidence": "none",
+          "range": null,
+          "how_to_measure": "As above.",
+          "notes": "FILL IN: set value (SI unit shown), status 'confirmed', locator (date/place), evidence (what you did and the raw reading), as_printed (raw reading with its unit), confidence."
+        }
+      ]
+    },
+    "wheels.mass": {
+      "description": "Bare wheel mass (Sport Touring 18x8)",
+      "unit": "kg",
+      "impact": "high",
+      "candidates": [
+        {
+          "value": null,
+          "unit": "kg",
+          "status": "unknown",
+          "class": "B",
+          "source_id": "user:measurement",
+          "locator": "",
+          "evidence": "",
+          "as_printed": "",
+          "applicability": {
+            "year": "2024",
+            "market": "CA",
+            "trim": "Sport Touring",
+            "body": "hatchback",
+            "gearbox": "6MT",
+            "engine": "1.5T",
+            "notes": "the user's own car"
+          },
+          "confidence": "none",
+          "range": null,
+          "how_to_measure": "Bathroom/hanging scale, tire removed; ±0.1 kg.",
+          "notes": "FILL IN: set value (SI unit shown), status 'confirmed', locator (date/place), evidence (what you did and the raw reading), as_printed (raw reading with its unit), confidence."
+        }
+      ]
+    },
+    "wheels.offset": {
+      "description": "Wheel offset (stamped on wheel)",
+      "unit": "m",
+      "impact": "high",
+      "candidates": [
+        {
+          "value": null,
+          "unit": "m",
+          "status": "unknown",
+          "class": "B",
+          "source_id": "user:measurement",
+          "locator": "",
+          "evidence": "",
+          "as_printed": "",
+          "applicability": {
+            "year": "2024",
+            "market": "CA",
+            "trim": "Sport Touring",
+            "body": "hatchback",
+            "gearbox": "6MT",
+            "engine": "1.5T",
+            "notes": "the user's own car"
+          },
+          "confidence": "none",
+          "range": null,
+          "how_to_measure": "Read stamp 'ET'; exact.",
+          "notes": "FILL IN: set value (SI unit shown), status 'confirmed', locator (date/place), evidence (what you did and the raw reading), as_printed (raw reading with its unit), confidence."
+        }
+      ]
+    },
+    "wheels.center_bore": {
+      "description": "Wheel centre bore",
+      "unit": "m",
+      "impact": "high",
+      "candidates": [
+        {
+          "value": null,
+          "unit": "m",
+          "status": "unknown",
+          "class": "B",
+          "source_id": "user:measurement",
+          "locator": "",
+          "evidence": "",
+          "as_printed": "",
+          "applicability": {
+            "year": "2024",
+            "market": "CA",
+            "trim": "Sport Touring",
+            "body": "hatchback",
+            "gearbox": "6MT",
+            "engine": "1.5T",
+            "notes": "the user's own car"
+          },
+          "confidence": "none",
+          "range": null,
+          "how_to_measure": "Caliper; ±0.1 mm.",
+          "notes": "FILL IN: set value (SI unit shown), status 'confirmed', locator (date/place), evidence (what you did and the raw reading), as_printed (raw reading with its unit), confidence."
+        }
+      ]
+    },
+    "tires.mass": {
+      "description": "Tire mass",
+      "unit": "kg",
+      "impact": "high",
+      "candidates": [
+        {
+          "value": null,
+          "unit": "kg",
+          "status": "unknown",
+          "class": "B",
+          "source_id": "user:measurement",
+          "locator": "",
+          "evidence": "",
+          "as_printed": "",
+          "applicability": {
+            "year": "2024",
+            "market": "CA",
+            "trim": "Sport Touring",
+            "body": "hatchback",
+            "gearbox": "6MT",
+            "engine": "1.5T",
+            "notes": "the user's own car"
+          },
+          "confidence": "none",
+          "range": null,
+          "how_to_measure": "Scale, tire off wheel; ±0.1 kg (or wheel+tire minus wheel).",
+          "notes": "FILL IN: set value (SI unit shown), status 'confirmed', locator (date/place), evidence (what you did and the raw reading), as_printed (raw reading with its unit), confidence."
+        }
+      ]
+    },
+    "tires.make_model": {
+      "description": "Original tire brand/model/OE marking",
+      "unit": "text",
+      "impact": "high",
+      "candidates": [
+        {
+          "value": null,
+          "unit": "text",
+          "status": "unknown",
+          "class": "B",
+          "source_id": "user:measurement",
+          "locator": "",
+          "evidence": "",
+          "as_printed": "",
+          "applicability": {
+            "year": "2024",
+            "market": "CA",
+            "trim": "Sport Touring",
+            "body": "hatchback",
+            "gearbox": "6MT",
+            "engine": "1.5T",
+            "notes": "the user's own car"
+          },
+          "confidence": "none",
+          "range": null,
+          "how_to_measure": "Read sidewall; include DOT date code.",
+          "notes": "FILL IN: set value (SI unit shown), status 'confirmed', locator (date/place), evidence (what you did and the raw reading), as_printed (raw reading with its unit), confidence."
+        }
+      ]
+    },
+    "tires.rolling_circumference": {
+      "description": "Rolling circumference at rated pressure, loaded",
+      "unit": "m",
+      "impact": "high",
+      "candidates": [
+        {
+          "value": null,
+          "unit": "m",
+          "status": "unknown",
+          "class": "B",
+          "source_id": "user:measurement",
+          "locator": "",
+          "evidence": "",
+          "as_printed": "",
+          "applicability": {
+            "year": "2024",
+            "market": "CA",
+            "trim": "Sport Touring",
+            "body": "hatchback",
+            "gearbox": "6MT",
+            "engine": "1.5T",
+            "notes": "the user's own car"
+          },
+          "confidence": "none",
+          "range": null,
+          "how_to_measure": "Mark tire, roll 10 turns in a straight line, measure; ±5 mm per turn.",
+          "notes": "FILL IN: set value (SI unit shown), status 'confirmed', locator (date/place), evidence (what you did and the raw reading), as_printed (raw reading with its unit), confidence."
+        }
+      ]
+    },
+    "tires.loaded_radius": {
+      "description": "Loaded radius (hub centre to ground)",
+      "unit": "m",
+      "impact": "high",
+      "candidates": [
+        {
+          "value": null,
+          "unit": "m",
+          "status": "unknown",
+          "class": "B",
+          "source_id": "user:measurement",
+          "locator": "",
+          "evidence": "",
+          "as_printed": "",
+          "applicability": {
+            "year": "2024",
+            "market": "CA",
+            "trim": "Sport Touring",
+            "body": "hatchback",
+            "gearbox": "6MT",
+            "engine": "1.5T",
+            "notes": "the user's own car"
+          },
+          "confidence": "none",
+          "range": null,
+          "how_to_measure": "Floor to hub centre at curb weight and placard pressure; ±1 mm.",
+          "notes": "FILL IN: set value (SI unit shown), status 'confirmed', locator (date/place), evidence (what you did and the raw reading), as_printed (raw reading with its unit), confidence."
+        }
+      ]
+    },
+    "brakes.front_caliper_piston_diameter": {
+      "description": "Front caliper piston diameter",
+      "unit": "m",
+      "impact": "high",
+      "candidates": [
+        {
+          "value": null,
+          "unit": "m",
+          "status": "unknown",
+          "class": "B",
+          "source_id": "user:measurement",
+          "locator": "",
+          "evidence": "",
+          "as_printed": "",
+          "applicability": {
+            "year": "2024",
+            "market": "CA",
+            "trim": "Sport Touring",
+            "body": "hatchback",
+            "gearbox": "6MT",
+            "engine": "1.5T",
+            "notes": "the user's own car"
+          },
+          "confidence": "none",
+          "range": null,
+          "how_to_measure": "Caliper on piston face with pads out; ±0.1 mm.",
+          "notes": "FILL IN: set value (SI unit shown), status 'confirmed', locator (date/place), evidence (what you did and the raw reading), as_printed (raw reading with its unit), confidence."
+        }
+      ]
+    },
+    "brakes.rear_caliper_piston_diameter": {
+      "description": "Rear caliper piston diameter",
+      "unit": "m",
+      "impact": "high",
+      "candidates": [
+        {
+          "value": null,
+          "unit": "m",
+          "status": "unknown",
+          "class": "B",
+          "source_id": "user:measurement",
+          "locator": "",
+          "evidence": "",
+          "as_printed": "",
+          "applicability": {
+            "year": "2024",
+            "market": "CA",
+            "trim": "Sport Touring",
+            "body": "hatchback",
+            "gearbox": "6MT",
+            "engine": "1.5T",
+            "notes": "the user's own car"
+          },
+          "confidence": "none",
+          "range": null,
+          "how_to_measure": "As above.",
+          "notes": "FILL IN: set value (SI unit shown), status 'confirmed', locator (date/place), evidence (what you did and the raw reading), as_printed (raw reading with its unit), confidence."
+        }
+      ]
+    },
+    "engine.idle_rpm": {
+      "description": "Warm idle rpm",
+      "unit": "rpm",
+      "impact": "high",
+      "candidates": [
+        {
+          "value": null,
+          "unit": "rpm",
+          "status": "unknown",
+          "class": "B",
+          "source_id": "user:measurement",
+          "locator": "",
+          "evidence": "",
+          "as_printed": "",
+          "applicability": {
+            "year": "2024",
+            "market": "CA",
+            "trim": "Sport Touring",
+            "body": "hatchback",
+            "gearbox": "6MT",
+            "engine": "1.5T",
+            "notes": "the user's own car"
+          },
+          "confidence": "none",
+          "range": null,
+          "how_to_measure": "OBD-II logger, warm engine, accessories off; ±10 rpm.",
+          "notes": "FILL IN: set value (SI unit shown), status 'confirmed', locator (date/place), evidence (what you did and the raw reading), as_printed (raw reading with its unit), confidence."
+        }
+      ]
+    },
+    "engine.limiter_rpm": {
+      "description": "Fuel-cut / limiter rpm (neutral and in gear)",
+      "unit": "rpm",
+      "impact": "high",
+      "candidates": [
+        {
+          "value": null,
+          "unit": "rpm",
+          "status": "unknown",
+          "class": "B",
+          "source_id": "user:measurement",
+          "locator": "",
+          "evidence": "",
+          "as_printed": "",
+          "applicability": {
+            "year": "2024",
+            "market": "CA",
+            "trim": "Sport Touring",
+            "body": "hatchback",
+            "gearbox": "6MT",
+            "engine": "1.5T",
+            "notes": "the user's own car"
+          },
+          "confidence": "none",
+          "range": null,
+          "how_to_measure": "OBD-II logger at 20+ Hz while touching the limiter briefly; ±25 rpm.",
+          "notes": "FILL IN: set value (SI unit shown), status 'confirmed', locator (date/place), evidence (what you did and the raw reading), as_printed (raw reading with its unit), confidence."
+        }
+      ]
+    },
+    "drivetrain.obs_rpm_at_100kmh_6th": {
+      "description": "Engine rpm at GPS 100 km/h in 6th",
+      "unit": "rpm",
+      "impact": "high",
+      "candidates": [
+        {
+          "value": null,
+          "unit": "rpm",
+          "status": "unknown",
+          "class": "B",
+          "source_id": "user:measurement",
+          "locator": "",
+          "evidence": "",
+          "as_printed": "",
+          "applicability": {
+            "year": "2024",
+            "market": "CA",
+            "trim": "Sport Touring",
+            "body": "hatchback",
+            "gearbox": "6MT",
+            "engine": "1.5T",
+            "notes": "the user's own car"
+          },
+          "confidence": "none",
+          "range": null,
+          "how_to_measure": "Level road, steady speed, GPS speed, OBD rpm; ±10 rpm.",
+          "notes": "FILL IN: set value (SI unit shown), status 'confirmed', locator (date/place), evidence (what you did and the raw reading), as_printed (raw reading with its unit), confidence."
+        }
+      ]
+    },
+    "drivetrain.obs_rpm_at_70mph_6th": {
+      "description": "Engine rpm at GPS 70 mph (112.7 km/h) in 6th",
+      "unit": "rpm",
+      "impact": "high",
+      "candidates": [
+        {
+          "value": null,
+          "unit": "rpm",
+          "status": "unknown",
+          "class": "B",
+          "source_id": "user:measurement",
+          "locator": "",
+          "evidence": "",
+          "as_printed": "",
+          "applicability": {
+            "year": "2024",
+            "market": "CA",
+            "trim": "Sport Touring",
+            "body": "hatchback",
+            "gearbox": "6MT",
+            "engine": "1.5T",
+            "notes": "the user's own car"
+          },
+          "confidence": "none",
+          "range": null,
+          "how_to_measure": "As above.",
+          "notes": "FILL IN: set value (SI unit shown), status 'confirmed', locator (date/place), evidence (what you did and the raw reading), as_printed (raw reading with its unit), confidence."
+        }
+      ]
+    },
+    "hardpoints.front.arb_bushing": {
+      "description": "front anti-roll-bar body/subframe bushing (left side)",
+      "unit": "m",
+      "impact": "high",
+      "candidates": [
+        {
+          "value": null,
+          "unit": "m",
+          "status": "unknown",
+          "class": "B",
+          "source_id": "user:measurement",
+          "locator": "",
+          "evidence": "",
+          "as_printed": "",
+          "applicability": {
+            "year": "2024",
+            "market": "CA",
+            "trim": "Sport Touring",
+            "body": "hatchback",
+            "gearbox": "6MT",
+            "engine": "1.5T",
+            "notes": "the user's own car"
+          },
+          "confidence": "none",
+          "range": null,
+          "how_to_measure": "Car on lift at ride height (or with corner weights restored): plumb/laser to the joint or bushing centre, measure X, Y, Z from the reference origin; ±3 mm.",
+          "notes": "FILL IN: set value (SI unit shown), status 'confirmed', locator (date/place), evidence (what you did and the raw reading), as_printed (raw reading with its unit), confidence."
+        }
+      ]
+    },
+    "hardpoints.front.arb_link_lower": {
+      "description": "front anti-roll-bar link on the bar arm (left side)",
+      "unit": "m",
+      "impact": "high",
+      "candidates": [
+        {
+          "value": null,
+          "unit": "m",
+          "status": "unknown",
+          "class": "B",
+          "source_id": "user:measurement",
+          "locator": "",
+          "evidence": "",
+          "as_printed": "",
+          "applicability": {
+            "year": "2024",
+            "market": "CA",
+            "trim": "Sport Touring",
+            "body": "hatchback",
+            "gearbox": "6MT",
+            "engine": "1.5T",
+            "notes": "the user's own car"
+          },
+          "confidence": "none",
+          "range": null,
+          "how_to_measure": "Car on lift at ride height (or with corner weights restored): plumb/laser to the joint or bushing centre, measure X, Y, Z from the reference origin; ±3 mm.",
+          "notes": "FILL IN: set value (SI unit shown), status 'confirmed', locator (date/place), evidence (what you did and the raw reading), as_printed (raw reading with its unit), confidence."
+        }
+      ]
+    },
+    "hardpoints.front.arb_link_upper": {
+      "description": "front anti-roll-bar link on the strut (left side)",
+      "unit": "m",
+      "impact": "high",
+      "candidates": [
+        {
+          "value": null,
+          "unit": "m",
+          "status": "unknown",
+          "class": "B",
+          "source_id": "user:measurement",
+          "locator": "",
+          "evidence": "",
+          "as_printed": "",
+          "applicability": {
+            "year": "2024",
+            "market": "CA",
+            "trim": "Sport Touring",
+            "body": "hatchback",
+            "gearbox": "6MT",
+            "engine": "1.5T",
+            "notes": "the user's own car"
+          },
+          "confidence": "none",
+          "range": null,
+          "how_to_measure": "Car on lift at ride height (or with corner weights restored): plumb/laser to the joint or bushing centre, measure X, Y, Z from the reference origin; ±3 mm.",
+          "notes": "FILL IN: set value (SI unit shown), status 'confirmed', locator (date/place), evidence (what you did and the raw reading), as_printed (raw reading with its unit), confidence."
+        }
+      ]
+    },
+    "hardpoints.front.lca_front_inner": {
+      "description": "front lca front inner (left side)",
+      "unit": "m",
+      "impact": "high",
+      "candidates": [
+        {
+          "value": null,
+          "unit": "m",
+          "status": "unknown",
+          "class": "B",
+          "source_id": "user:measurement",
+          "locator": "",
+          "evidence": "",
+          "as_printed": "",
+          "applicability": {
+            "year": "2024",
+            "market": "CA",
+            "trim": "Sport Touring",
+            "body": "hatchback",
+            "gearbox": "6MT",
+            "engine": "1.5T",
+            "notes": "the user's own car"
+          },
+          "confidence": "none",
+          "range": null,
+          "how_to_measure": "Car on lift at ride height (or with corner weights restored): plumb/laser to the joint or bushing centre, measure X, Y, Z from the reference origin; ±3 mm.",
+          "notes": "FILL IN: set value (SI unit shown), status 'confirmed', locator (date/place), evidence (what you did and the raw reading), as_printed (raw reading with its unit), confidence."
+        }
+      ]
+    },
+    "hardpoints.front.lca_rear_inner": {
+      "description": "front lca rear inner (left side)",
+      "unit": "m",
+      "impact": "high",
+      "candidates": [
+        {
+          "value": null,
+          "unit": "m",
+          "status": "unknown",
+          "class": "B",
+          "source_id": "user:measurement",
+          "locator": "",
+          "evidence": "",
+          "as_printed": "",
+          "applicability": {
+            "year": "2024",
+            "market": "CA",
+            "trim": "Sport Touring",
+            "body": "hatchback",
+            "gearbox": "6MT",
+            "engine": "1.5T",
+            "notes": "the user's own car"
+          },
+          "confidence": "none",
+          "range": null,
+          "how_to_measure": "Car on lift at ride height (or with corner weights restored): plumb/laser to the joint or bushing centre, measure X, Y, Z from the reference origin; ±3 mm.",
+          "notes": "FILL IN: set value (SI unit shown), status 'confirmed', locator (date/place), evidence (what you did and the raw reading), as_printed (raw reading with its unit), confidence."
+        }
+      ]
+    },
+    "hardpoints.front.lower_ball_joint": {
+      "description": "front lower ball joint (left side)",
+      "unit": "m",
+      "impact": "high",
+      "candidates": [
+        {
+          "value": null,
+          "unit": "m",
+          "status": "unknown",
+          "class": "B",
+          "source_id": "user:measurement",
+          "locator": "",
+          "evidence": "",
+          "as_printed": "",
+          "applicability": {
+            "year": "2024",
+            "market": "CA",
+            "trim": "Sport Touring",
+            "body": "hatchback",
+            "gearbox": "6MT",
+            "engine": "1.5T",
+            "notes": "the user's own car"
+          },
+          "confidence": "none",
+          "range": null,
+          "how_to_measure": "Car on lift at ride height (or with corner weights restored): plumb/laser to the joint or bushing centre, measure X, Y, Z from the reference origin; ±3 mm.",
+          "notes": "FILL IN: set value (SI unit shown), status 'confirmed', locator (date/place), evidence (what you did and the raw reading), as_printed (raw reading with its unit), confidence."
+        }
+      ]
+    },
+    "hardpoints.front.strut_top": {
+      "description": "front strut top (left side)",
+      "unit": "m",
+      "impact": "high",
+      "candidates": [
+        {
+          "value": null,
+          "unit": "m",
+          "status": "unknown",
+          "class": "B",
+          "source_id": "user:measurement",
+          "locator": "",
+          "evidence": "",
+          "as_printed": "",
+          "applicability": {
+            "year": "2024",
+            "market": "CA",
+            "trim": "Sport Touring",
+            "body": "hatchback",
+            "gearbox": "6MT",
+            "engine": "1.5T",
+            "notes": "the user's own car"
+          },
+          "confidence": "none",
+          "range": null,
+          "how_to_measure": "Car on lift at ride height (or with corner weights restored): plumb/laser to the joint or bushing centre, measure X, Y, Z from the reference origin; ±3 mm.",
+          "notes": "FILL IN: set value (SI unit shown), status 'confirmed', locator (date/place), evidence (what you did and the raw reading), as_printed (raw reading with its unit), confidence."
+        }
+      ]
+    },
+    "hardpoints.front.subframe_mounts": {
+      "description": "front subframe-to-body mounts (left side)",
+      "unit": "m",
+      "impact": "high",
+      "candidates": [
+        {
+          "value": null,
+          "unit": "m",
+          "status": "unknown",
+          "class": "B",
+          "source_id": "user:measurement",
+          "locator": "",
+          "evidence": "",
+          "as_printed": "",
+          "applicability": {
+            "year": "2024",
+            "market": "CA",
+            "trim": "Sport Touring",
+            "body": "hatchback",
+            "gearbox": "6MT",
+            "engine": "1.5T",
+            "notes": "the user's own car"
+          },
+          "confidence": "none",
+          "range": null,
+          "how_to_measure": "Car on lift at ride height (or with corner weights restored): plumb/laser to the joint or bushing centre, measure X, Y, Z from the reference origin; ±3 mm.",
+          "notes": "FILL IN: set value (SI unit shown), status 'confirmed', locator (date/place), evidence (what you did and the raw reading), as_printed (raw reading with its unit), confidence."
+        }
+      ]
+    },
+    "hardpoints.front.tie_rod_inner": {
+      "description": "front tie rod inner (left side)",
+      "unit": "m",
+      "impact": "high",
+      "candidates": [
+        {
+          "value": null,
+          "unit": "m",
+          "status": "unknown",
+          "class": "B",
+          "source_id": "user:measurement",
+          "locator": "",
+          "evidence": "",
+          "as_printed": "",
+          "applicability": {
+            "year": "2024",
+            "market": "CA",
+            "trim": "Sport Touring",
+            "body": "hatchback",
+            "gearbox": "6MT",
+            "engine": "1.5T",
+            "notes": "the user's own car"
+          },
+          "confidence": "none",
+          "range": null,
+          "how_to_measure": "Car on lift at ride height (or with corner weights restored): plumb/laser to the joint or bushing centre, measure X, Y, Z from the reference origin; ±3 mm.",
+          "notes": "FILL IN: set value (SI unit shown), status 'confirmed', locator (date/place), evidence (what you did and the raw reading), as_printed (raw reading with its unit), confidence."
+        }
+      ]
+    },
+    "hardpoints.front.tie_rod_outer": {
+      "description": "front tie rod outer (left side)",
+      "unit": "m",
+      "impact": "high",
+      "candidates": [
+        {
+          "value": null,
+          "unit": "m",
+          "status": "unknown",
+          "class": "B",
+          "source_id": "user:measurement",
+          "locator": "",
+          "evidence": "",
+          "as_printed": "",
+          "applicability": {
+            "year": "2024",
+            "market": "CA",
+            "trim": "Sport Touring",
+            "body": "hatchback",
+            "gearbox": "6MT",
+            "engine": "1.5T",
+            "notes": "the user's own car"
+          },
+          "confidence": "none",
+          "range": null,
+          "how_to_measure": "Car on lift at ride height (or with corner weights restored): plumb/laser to the joint or bushing centre, measure X, Y, Z from the reference origin; ±3 mm.",
+          "notes": "FILL IN: set value (SI unit shown), status 'confirmed', locator (date/place), evidence (what you did and the raw reading), as_printed (raw reading with its unit), confidence."
+        }
+      ]
+    },
+    "hardpoints.front.wheel_center": {
+      "description": "front wheel center (left side)",
+      "unit": "m",
+      "impact": "high",
+      "candidates": [
+        {
+          "value": null,
+          "unit": "m",
+          "status": "unknown",
+          "class": "B",
+          "source_id": "user:measurement",
+          "locator": "",
+          "evidence": "",
+          "as_printed": "",
+          "applicability": {
+            "year": "2024",
+            "market": "CA",
+            "trim": "Sport Touring",
+            "body": "hatchback",
+            "gearbox": "6MT",
+            "engine": "1.5T",
+            "notes": "the user's own car"
+          },
+          "confidence": "none",
+          "range": null,
+          "how_to_measure": "Car on lift at ride height (or with corner weights restored): plumb/laser to the joint or bushing centre, measure X, Y, Z from the reference origin; ±3 mm.",
+          "notes": "FILL IN: set value (SI unit shown), status 'confirmed', locator (date/place), evidence (what you did and the raw reading), as_printed (raw reading with its unit), confidence."
+        }
+      ]
+    },
+    "hardpoints.rear.arb_bushing": {
+      "description": "rear anti-roll-bar bushing (left side)",
+      "unit": "m",
+      "impact": "high",
+      "candidates": [
+        {
+          "value": null,
+          "unit": "m",
+          "status": "unknown",
+          "class": "B",
+          "source_id": "user:measurement",
+          "locator": "",
+          "evidence": "",
+          "as_printed": "",
+          "applicability": {
+            "year": "2024",
+            "market": "CA",
+            "trim": "Sport Touring",
+            "body": "hatchback",
+            "gearbox": "6MT",
+            "engine": "1.5T",
+            "notes": "the user's own car"
+          },
+          "confidence": "none",
+          "range": null,
+          "how_to_measure": "Car on lift at ride height (or with corner weights restored): plumb/laser to the joint or bushing centre, measure X, Y, Z from the reference origin; ±3 mm.",
+          "notes": "FILL IN: set value (SI unit shown), status 'confirmed', locator (date/place), evidence (what you did and the raw reading), as_printed (raw reading with its unit), confidence."
+        }
+      ]
+    },
+    "hardpoints.rear.arb_link_upper": {
+      "description": "rear anti-roll-bar link at arm/knuckle (left side)",
+      "unit": "m",
+      "impact": "high",
+      "candidates": [
+        {
+          "value": null,
+          "unit": "m",
+          "status": "unknown",
+          "class": "B",
+          "source_id": "user:measurement",
+          "locator": "",
+          "evidence": "",
+          "as_printed": "",
+          "applicability": {
+            "year": "2024",
+            "market": "CA",
+            "trim": "Sport Touring",
+            "body": "hatchback",
+            "gearbox": "6MT",
+            "engine": "1.5T",
+            "notes": "the user's own car"
+          },
+          "confidence": "none",
+          "range": null,
+          "how_to_measure": "Car on lift at ride height (or with corner weights restored): plumb/laser to the joint or bushing centre, measure X, Y, Z from the reference origin; ±3 mm.",
+          "notes": "FILL IN: set value (SI unit shown), status 'confirmed', locator (date/place), evidence (what you did and the raw reading), as_printed (raw reading with its unit), confidence."
+        }
+      ]
+    },
+    "hardpoints.rear.damper_lower": {
+      "description": "rear damper lower (left side)",
+      "unit": "m",
+      "impact": "high",
+      "candidates": [
+        {
+          "value": null,
+          "unit": "m",
+          "status": "unknown",
+          "class": "B",
+          "source_id": "user:measurement",
+          "locator": "",
+          "evidence": "",
+          "as_printed": "",
+          "applicability": {
+            "year": "2024",
+            "market": "CA",
+            "trim": "Sport Touring",
+            "body": "hatchback",
+            "gearbox": "6MT",
+            "engine": "1.5T",
+            "notes": "the user's own car"
+          },
+          "confidence": "none",
+          "range": null,
+          "how_to_measure": "Car on lift at ride height (or with corner weights restored): plumb/laser to the joint or bushing centre, measure X, Y, Z from the reference origin; ±3 mm.",
+          "notes": "FILL IN: set value (SI unit shown), status 'confirmed', locator (date/place), evidence (what you did and the raw reading), as_printed (raw reading with its unit), confidence."
+        }
+      ]
+    },
+    "hardpoints.rear.damper_upper": {
+      "description": "rear damper upper (left side)",
+      "unit": "m",
+      "impact": "high",
+      "candidates": [
+        {
+          "value": null,
+          "unit": "m",
+          "status": "unknown",
+          "class": "B",
+          "source_id": "user:measurement",
+          "locator": "",
+          "evidence": "",
+          "as_printed": "",
+          "applicability": {
+            "year": "2024",
+            "market": "CA",
+            "trim": "Sport Touring",
+            "body": "hatchback",
+            "gearbox": "6MT",
+            "engine": "1.5T",
+            "notes": "the user's own car"
+          },
+          "confidence": "none",
+          "range": null,
+          "how_to_measure": "Car on lift at ride height (or with corner weights restored): plumb/laser to the joint or bushing centre, measure X, Y, Z from the reference origin; ±3 mm.",
+          "notes": "FILL IN: set value (SI unit shown), status 'confirmed', locator (date/place), evidence (what you did and the raw reading), as_printed (raw reading with its unit), confidence."
+        }
+      ]
+    },
+    "hardpoints.rear.lower_arm_a_inner": {
+      "description": "rear lower arm a inner (left side)",
+      "unit": "m",
+      "impact": "high",
+      "candidates": [
+        {
+          "value": null,
+          "unit": "m",
+          "status": "unknown",
+          "class": "B",
+          "source_id": "user:measurement",
+          "locator": "",
+          "evidence": "",
+          "as_printed": "",
+          "applicability": {
+            "year": "2024",
+            "market": "CA",
+            "trim": "Sport Touring",
+            "body": "hatchback",
+            "gearbox": "6MT",
+            "engine": "1.5T",
+            "notes": "the user's own car"
+          },
+          "confidence": "none",
+          "range": null,
+          "how_to_measure": "Car on lift at ride height (or with corner weights restored): plumb/laser to the joint or bushing centre, measure X, Y, Z from the reference origin; ±3 mm.",
+          "notes": "FILL IN: set value (SI unit shown), status 'confirmed', locator (date/place), evidence (what you did and the raw reading), as_printed (raw reading with its unit), confidence."
+        }
+      ]
+    },
+    "hardpoints.rear.lower_arm_a_outer": {
+      "description": "rear lower arm a outer (left side)",
+      "unit": "m",
+      "impact": "high",
+      "candidates": [
+        {
+          "value": null,
+          "unit": "m",
+          "status": "unknown",
+          "class": "B",
+          "source_id": "user:measurement",
+          "locator": "",
+          "evidence": "",
+          "as_printed": "",
+          "applicability": {
+            "year": "2024",
+            "market": "CA",
+            "trim": "Sport Touring",
+            "body": "hatchback",
+            "gearbox": "6MT",
+            "engine": "1.5T",
+            "notes": "the user's own car"
+          },
+          "confidence": "none",
+          "range": null,
+          "how_to_measure": "Car on lift at ride height (or with corner weights restored): plumb/laser to the joint or bushing centre, measure X, Y, Z from the reference origin; ±3 mm.",
+          "notes": "FILL IN: set value (SI unit shown), status 'confirmed', locator (date/place), evidence (what you did and the raw reading), as_printed (raw reading with its unit), confidence."
+        }
+      ]
+    },
+    "hardpoints.rear.lower_arm_b_inner": {
+      "description": "rear lower arm b inner (left side)",
+      "unit": "m",
+      "impact": "high",
+      "candidates": [
+        {
+          "value": null,
+          "unit": "m",
+          "status": "unknown",
+          "class": "B",
+          "source_id": "user:measurement",
+          "locator": "",
+          "evidence": "",
+          "as_printed": "",
+          "applicability": {
+            "year": "2024",
+            "market": "CA",
+            "trim": "Sport Touring",
+            "body": "hatchback",
+            "gearbox": "6MT",
+            "engine": "1.5T",
+            "notes": "the user's own car"
+          },
+          "confidence": "none",
+          "range": null,
+          "how_to_measure": "Car on lift at ride height (or with corner weights restored): plumb/laser to the joint or bushing centre, measure X, Y, Z from the reference origin; ±3 mm.",
+          "notes": "FILL IN: set value (SI unit shown), status 'confirmed', locator (date/place), evidence (what you did and the raw reading), as_printed (raw reading with its unit), confidence."
+        }
+      ]
+    },
+    "hardpoints.rear.lower_arm_b_outer": {
+      "description": "rear lower arm b outer (left side)",
+      "unit": "m",
+      "impact": "high",
+      "candidates": [
+        {
+          "value": null,
+          "unit": "m",
+          "status": "unknown",
+          "class": "B",
+          "source_id": "user:measurement",
+          "locator": "",
+          "evidence": "",
+          "as_printed": "",
+          "applicability": {
+            "year": "2024",
+            "market": "CA",
+            "trim": "Sport Touring",
+            "body": "hatchback",
+            "gearbox": "6MT",
+            "engine": "1.5T",
+            "notes": "the user's own car"
+          },
+          "confidence": "none",
+          "range": null,
+          "how_to_measure": "Car on lift at ride height (or with corner weights restored): plumb/laser to the joint or bushing centre, measure X, Y, Z from the reference origin; ±3 mm.",
+          "notes": "FILL IN: set value (SI unit shown), status 'confirmed', locator (date/place), evidence (what you did and the raw reading), as_printed (raw reading with its unit), confidence."
+        }
+      ]
+    },
+    "hardpoints.rear.spring_lower_seat": {
+      "description": "rear spring lower seat (left side)",
+      "unit": "m",
+      "impact": "high",
+      "candidates": [
+        {
+          "value": null,
+          "unit": "m",
+          "status": "unknown",
+          "class": "B",
+          "source_id": "user:measurement",
+          "locator": "",
+          "evidence": "",
+          "as_printed": "",
+          "applicability": {
+            "year": "2024",
+            "market": "CA",
+            "trim": "Sport Touring",
+            "body": "hatchback",
+            "gearbox": "6MT",
+            "engine": "1.5T",
+            "notes": "the user's own car"
+          },
+          "confidence": "none",
+          "range": null,
+          "how_to_measure": "Car on lift at ride height (or with corner weights restored): plumb/laser to the joint or bushing centre, measure X, Y, Z from the reference origin; ±3 mm.",
+          "notes": "FILL IN: set value (SI unit shown), status 'confirmed', locator (date/place), evidence (what you did and the raw reading), as_printed (raw reading with its unit), confidence."
+        }
+      ]
+    },
+    "hardpoints.rear.spring_upper_seat": {
+      "description": "rear spring upper seat (left side)",
+      "unit": "m",
+      "impact": "high",
+      "candidates": [
+        {
+          "value": null,
+          "unit": "m",
+          "status": "unknown",
+          "class": "B",
+          "source_id": "user:measurement",
+          "locator": "",
+          "evidence": "",
+          "as_printed": "",
+          "applicability": {
+            "year": "2024",
+            "market": "CA",
+            "trim": "Sport Touring",
+            "body": "hatchback",
+            "gearbox": "6MT",
+            "engine": "1.5T",
+            "notes": "the user's own car"
+          },
+          "confidence": "none",
+          "range": null,
+          "how_to_measure": "Car on lift at ride height (or with corner weights restored): plumb/laser to the joint or bushing centre, measure X, Y, Z from the reference origin; ±3 mm.",
+          "notes": "FILL IN: set value (SI unit shown), status 'confirmed', locator (date/place), evidence (what you did and the raw reading), as_printed (raw reading with its unit), confidence."
+        }
+      ]
+    },
+    "hardpoints.rear.subframe_mounts": {
+      "description": "rear subframe-to-body mounts (left side)",
+      "unit": "m",
+      "impact": "high",
+      "candidates": [
+        {
+          "value": null,
+          "unit": "m",
+          "status": "unknown",
+          "class": "B",
+          "source_id": "user:measurement",
+          "locator": "",
+          "evidence": "",
+          "as_printed": "",
+          "applicability": {
+            "year": "2024",
+            "market": "CA",
+            "trim": "Sport Touring",
+            "body": "hatchback",
+            "gearbox": "6MT",
+            "engine": "1.5T",
+            "notes": "the user's own car"
+          },
+          "confidence": "none",
+          "range": null,
+          "how_to_measure": "Car on lift at ride height (or with corner weights restored): plumb/laser to the joint or bushing centre, measure X, Y, Z from the reference origin; ±3 mm.",
+          "notes": "FILL IN: set value (SI unit shown), status 'confirmed', locator (date/place), evidence (what you did and the raw reading), as_printed (raw reading with its unit), confidence."
+        }
+      ]
+    },
+    "hardpoints.rear.trailing_arm_front": {
+      "description": "rear trailing arm front (left side)",
+      "unit": "m",
+      "impact": "high",
+      "candidates": [
+        {
+          "value": null,
+          "unit": "m",
+          "status": "unknown",
+          "class": "B",
+          "source_id": "user:measurement",
+          "locator": "",
+          "evidence": "",
+          "as_printed": "",
+          "applicability": {
+            "year": "2024",
+            "market": "CA",
+            "trim": "Sport Touring",
+            "body": "hatchback",
+            "gearbox": "6MT",
+            "engine": "1.5T",
+            "notes": "the user's own car"
+          },
+          "confidence": "none",
+          "range": null,
+          "how_to_measure": "Car on lift at ride height (or with corner weights restored): plumb/laser to the joint or bushing centre, measure X, Y, Z from the reference origin; ±3 mm.",
+          "notes": "FILL IN: set value (SI unit shown), status 'confirmed', locator (date/place), evidence (what you did and the raw reading), as_printed (raw reading with its unit), confidence."
+        }
+      ]
+    },
+    "hardpoints.rear.upper_arm_inner": {
+      "description": "rear upper arm inner (left side)",
+      "unit": "m",
+      "impact": "high",
+      "candidates": [
+        {
+          "value": null,
+          "unit": "m",
+          "status": "unknown",
+          "class": "B",
+          "source_id": "user:measurement",
+          "locator": "",
+          "evidence": "",
+          "as_printed": "",
+          "applicability": {
+            "year": "2024",
+            "market": "CA",
+            "trim": "Sport Touring",
+            "body": "hatchback",
+            "gearbox": "6MT",
+            "engine": "1.5T",
+            "notes": "the user's own car"
+          },
+          "confidence": "none",
+          "range": null,
+          "how_to_measure": "Car on lift at ride height (or with corner weights restored): plumb/laser to the joint or bushing centre, measure X, Y, Z from the reference origin; ±3 mm.",
+          "notes": "FILL IN: set value (SI unit shown), status 'confirmed', locator (date/place), evidence (what you did and the raw reading), as_printed (raw reading with its unit), confidence."
+        }
+      ]
+    },
+    "hardpoints.rear.upper_arm_outer": {
+      "description": "rear upper arm outer (left side)",
+      "unit": "m",
+      "impact": "high",
+      "candidates": [
+        {
+          "value": null,
+          "unit": "m",
+          "status": "unknown",
+          "class": "B",
+          "source_id": "user:measurement",
+          "locator": "",
+          "evidence": "",
+          "as_printed": "",
+          "applicability": {
+            "year": "2024",
+            "market": "CA",
+            "trim": "Sport Touring",
+            "body": "hatchback",
+            "gearbox": "6MT",
+            "engine": "1.5T",
+            "notes": "the user's own car"
+          },
+          "confidence": "none",
+          "range": null,
+          "how_to_measure": "Car on lift at ride height (or with corner weights restored): plumb/laser to the joint or bushing centre, measure X, Y, Z from the reference origin; ±3 mm.",
+          "notes": "FILL IN: set value (SI unit shown), status 'confirmed', locator (date/place), evidence (what you did and the raw reading), as_printed (raw reading with its unit), confidence."
+        }
+      ]
+    },
+    "hardpoints.rear.wheel_center": {
+      "description": "rear wheel center (left side)",
+      "unit": "m",
+      "impact": "high",
+      "candidates": [
+        {
+          "value": null,
+          "unit": "m",
+          "status": "unknown",
+          "class": "B",
+          "source_id": "user:measurement",
+          "locator": "",
+          "evidence": "",
+          "as_printed": "",
+          "applicability": {
+            "year": "2024",
+            "market": "CA",
+            "trim": "Sport Touring",
+            "body": "hatchback",
+            "gearbox": "6MT",
+            "engine": "1.5T",
+            "notes": "the user's own car"
+          },
+          "confidence": "none",
+          "range": null,
+          "how_to_measure": "Car on lift at ride height (or with corner weights restored): plumb/laser to the joint or bushing centre, measure X, Y, Z from the reference origin; ±3 mm.",
+          "notes": "FILL IN: set value (SI unit shown), status 'confirmed', locator (date/place), evidence (what you did and the raw reading), as_printed (raw reading with its unit), confidence."
+        }
+      ]
+    },
+    "hardpoints.steering.rack_mounts": {
+      "description": "steering rack mounting bushes (left side)",
+      "unit": "m",
+      "impact": "high",
+      "candidates": [
+        {
+          "value": null,
+          "unit": "m",
+          "status": "unknown",
+          "class": "B",
+          "source_id": "user:measurement",
+          "locator": "",
+          "evidence": "",
+          "as_printed": "",
+          "applicability": {
+            "year": "2024",
+            "market": "CA",
+            "trim": "Sport Touring",
+            "body": "hatchback",
+            "gearbox": "6MT",
+            "engine": "1.5T",
+            "notes": "the user's own car"
+          },
+          "confidence": "none",
+          "range": null,
+          "how_to_measure": "Car on lift at ride height (or with corner weights restored): plumb/laser to the joint or bushing centre, measure X, Y, Z from the reference origin; ±3 mm.",
+          "notes": "FILL IN: set value (SI unit shown), status 'confirmed', locator (date/place), evidence (what you did and the raw reading), as_printed (raw reading with its unit), confidence."
+        }
+      ]
+    },
+    "alignment.front_camber": {
+      "description": "Front camber, nominal and tolerance",
+      "unit": "rad",
+      "impact": "high",
+      "candidates": [
+        {
+          "value": null,
+          "unit": "rad",
+          "status": "unknown",
+          "class": "B",
+          "source_id": "user:measurement",
+          "locator": "",
+          "evidence": "",
+          "as_printed": "",
+          "applicability": {
+            "year": "2024",
+            "market": "CA",
+            "trim": "Sport Touring",
+            "body": "hatchback",
+            "gearbox": "6MT",
+            "engine": "1.5T",
+            "notes": "the user's own car"
+          },
+          "confidence": "none",
+          "range": null,
+          "how_to_measure": "Alignment rack printout (before and after values), at curb weight; enter radians.",
+          "notes": "FILL IN: set value (SI unit shown), status 'confirmed', locator (date/place), evidence (what you did and the raw reading), as_printed (raw reading with its unit), confidence."
+        }
+      ]
+    },
+    "alignment.front_caster": {
+      "description": "Front caster, nominal and tolerance",
+      "unit": "rad",
+      "impact": "high",
+      "candidates": [
+        {
+          "value": null,
+          "unit": "rad",
+          "status": "unknown",
+          "class": "B",
+          "source_id": "user:measurement",
+          "locator": "",
+          "evidence": "",
+          "as_printed": "",
+          "applicability": {
+            "year": "2024",
+            "market": "CA",
+            "trim": "Sport Touring",
+            "body": "hatchback",
+            "gearbox": "6MT",
+            "engine": "1.5T",
+            "notes": "the user's own car"
+          },
+          "confidence": "none",
+          "range": null,
+          "how_to_measure": "Alignment rack printout (before and after values), at curb weight; enter radians.",
+          "notes": "FILL IN: set value (SI unit shown), status 'confirmed', locator (date/place), evidence (what you did and the raw reading), as_printed (raw reading with its unit), confidence."
+        }
+      ]
+    },
+    "alignment.front_toe_total": {
+      "description": "Front total toe, nominal and tolerance",
+      "unit": "rad",
+      "impact": "high",
+      "candidates": [
+        {
+          "value": null,
+          "unit": "rad",
+          "status": "unknown",
+          "class": "B",
+          "source_id": "user:measurement",
+          "locator": "",
+          "evidence": "",
+          "as_printed": "",
+          "applicability": {
+            "year": "2024",
+            "market": "CA",
+            "trim": "Sport Touring",
+            "body": "hatchback",
+            "gearbox": "6MT",
+            "engine": "1.5T",
+            "notes": "the user's own car"
+          },
+          "confidence": "none",
+          "range": null,
+          "how_to_measure": "Alignment rack printout (before and after values), at curb weight; enter radians.",
+          "notes": "FILL IN: set value (SI unit shown), status 'confirmed', locator (date/place), evidence (what you did and the raw reading), as_printed (raw reading with its unit), confidence."
+        }
+      ]
+    },
+    "alignment.kingpin_inclination": {
+      "description": "Kingpin (steering-axis) inclination",
+      "unit": "rad",
+      "impact": "high",
+      "candidates": [
+        {
+          "value": null,
+          "unit": "rad",
+          "status": "unknown",
+          "class": "B",
+          "source_id": "user:measurement",
+          "locator": "",
+          "evidence": "",
+          "as_printed": "",
+          "applicability": {
+            "year": "2024",
+            "market": "CA",
+            "trim": "Sport Touring",
+            "body": "hatchback",
+            "gearbox": "6MT",
+            "engine": "1.5T",
+            "notes": "the user's own car"
+          },
+          "confidence": "none",
+          "range": null,
+          "how_to_measure": "Alignment rack printout (before and after values), at curb weight; enter radians.",
+          "notes": "FILL IN: set value (SI unit shown), status 'confirmed', locator (date/place), evidence (what you did and the raw reading), as_printed (raw reading with its unit), confidence."
+        }
+      ]
+    },
+    "alignment.rear_camber": {
+      "description": "Rear camber, nominal and tolerance",
+      "unit": "rad",
+      "impact": "high",
+      "candidates": [
+        {
+          "value": null,
+          "unit": "rad",
+          "status": "unknown",
+          "class": "B",
+          "source_id": "user:measurement",
+          "locator": "",
+          "evidence": "",
+          "as_printed": "",
+          "applicability": {
+            "year": "2024",
+            "market": "CA",
+            "trim": "Sport Touring",
+            "body": "hatchback",
+            "gearbox": "6MT",
+            "engine": "1.5T",
+            "notes": "the user's own car"
+          },
+          "confidence": "none",
+          "range": null,
+          "how_to_measure": "Alignment rack printout (before and after values), at curb weight; enter radians.",
+          "notes": "FILL IN: set value (SI unit shown), status 'confirmed', locator (date/place), evidence (what you did and the raw reading), as_printed (raw reading with its unit), confidence."
+        }
+      ]
+    },
+    "alignment.rear_toe_total": {
+      "description": "Rear total toe, nominal and tolerance",
+      "unit": "rad",
+      "impact": "high",
+      "candidates": [
+        {
+          "value": null,
+          "unit": "rad",
+          "status": "unknown",
+          "class": "B",
+          "source_id": "user:measurement",
+          "locator": "",
+          "evidence": "",
+          "as_printed": "",
+          "applicability": {
+            "year": "2024",
+            "market": "CA",
+            "trim": "Sport Touring",
+            "body": "hatchback",
+            "gearbox": "6MT",
+            "engine": "1.5T",
+            "notes": "the user's own car"
+          },
+          "confidence": "none",
+          "range": null,
+          "how_to_measure": "Alignment rack printout (before and after values), at curb weight; enter radians.",
+          "notes": "FILL IN: set value (SI unit shown), status 'confirmed', locator (date/place), evidence (what you did and the raw reading), as_printed (raw reading with its unit), confidence."
+        }
+      ]
+    },
+    "alignment.scrub_radius": {
+      "description": "Scrub radius at ground",
+      "unit": "m",
+      "impact": "high",
+      "candidates": [
+        {
+          "value": null,
+          "unit": "m",
+          "status": "unknown",
+          "class": "B",
+          "source_id": "user:measurement",
+          "locator": "",
+          "evidence": "",
+          "as_printed": "",
+          "applicability": {
+            "year": "2024",
+            "market": "CA",
+            "trim": "Sport Touring",
+            "body": "hatchback",
+            "gearbox": "6MT",
+            "engine": "1.5T",
+            "notes": "the user's own car"
+          },
+          "confidence": "none",
+          "range": null,
+          "how_to_measure": "Alignment rack printout (before and after values), at curb weight; enter radians.",
+          "notes": "FILL IN: set value (SI unit shown), status 'confirmed', locator (date/place), evidence (what you did and the raw reading), as_printed (raw reading with its unit), confidence."
+        }
+      ]
+    },
+    "alignment.thrust_angle": {
+      "description": "Thrust angle limit",
+      "unit": "rad",
+      "impact": "high",
+      "candidates": [
+        {
+          "value": null,
+          "unit": "rad",
+          "status": "unknown",
+          "class": "B",
+          "source_id": "user:measurement",
+          "locator": "",
+          "evidence": "",
+          "as_printed": "",
+          "applicability": {
+            "year": "2024",
+            "market": "CA",
+            "trim": "Sport Touring",
+            "body": "hatchback",
+            "gearbox": "6MT",
+            "engine": "1.5T",
+            "notes": "the user's own car"
+          },
+          "confidence": "none",
+          "range": null,
+          "how_to_measure": "Alignment rack printout (before and after values), at curb weight; enter radians.",
+          "notes": "FILL IN: set value (SI unit shown), status 'confirmed', locator (date/place), evidence (what you did and the raw reading), as_printed (raw reading with its unit), confidence."
+        }
+      ]
+    }
+  },
+  "attachments": [
+    {
+      "kind": "dyno",
+      "path": "user_supplied/",
+      "notes": "stock dyno sheet: dyno make/type, correction (SAE/STD), gear, fuel, ambient",
+      "provided": false
+    },
+    {
+      "kind": "datalog",
+      "path": "user_supplied/",
+      "notes": "OBD/FlashPro/KTuner stock log: rpm, MAP/boost, throttle, ign. timing, fuel trims, gear, speed; WOT pulls in 3rd and 4th plus throttle lifts",
+      "provided": false
+    },
+    {
+      "kind": "recording",
+      "path": "user_supplied/",
+      "notes": "exhaust audio (WAV, ≥48 kHz, no clipping), mic position stated; idle, rev sweeps, WOT pulls, lift-offs at 3000/4500/6000 rpm, upshifts; synced OBD log if possible",
+      "provided": false
+    },
+    {
+      "kind": "photos",
+      "path": "user_supplied/",
+      "notes": "straight-on long-lens side/front/rear at axle height; door-jamb label; tire sidewall; cluster in each display mode",
+      "provided": false
+    }
+  ],
+  "updated": "2026-10-03"
+}
