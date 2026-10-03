@@ -1,0 +1,1494 @@
+{
+  "domain": "identity",
+  "title": "Identity",
+  "schema_version": 1,
+  "updated": "2026-10-03",
+  "sources": {
+    "id:hci-2024-specs": {
+      "title": "2024 Honda Civic Hatchback Specifications (release, April 4, 2024)",
+      "url": "https://hondanews.ca/en-CA/hci-automobiles/releases/release-1128768177ab00a73471b1938c152ddf-2024-honda-civic-hatchback-specifications",
+      "publisher": "Honda Canada Inc. (hondanews.ca newsroom)",
+      "class": "A",
+      "accessed": "2026-10-03",
+      "access_method": "rendered",
+      "applicability": "2024 Civic Hatchback, Canada; columns SPORT and SPORT TOURING",
+      "notes": "Primary source for the target. No colour table on this page. Label typo 'Steering ratio – (curb-to-curb) (m) 11.4:1'.",
+      "cache_file": "cache/pages/41e62125b9f268de.txt"
+    },
+    "id:hci-2023-specs": {
+      "title": "2023 Civic Hatchback Specifications (release, April 13, 2023)",
+      "url": "https://hondanews.ca/en-CA/hci-automobiles/releases/release-f61ab7d13cb83fb181b8bc22df100303-2023-civic-hatchback-specifications",
+      "publisher": "Honda Canada Inc.",
+      "class": "A",
+      "accessed": "2026-10-03",
+      "access_method": "rendered",
+      "applicability": "2023 Civic Hatchback, Canada; LX, Sport, Sport-B, Sport Touring; includes EXTERIOR/INTERIOR COLOURS table with paint codes",
+      "notes": "",
+      "cache_file": "cache/pages/374416cf6bc6db5d.txt"
+    },
+    "id:hci-2022-specs": {
+      "title": "2022 Civic Hatchback Specifications (release, October 12, 2021)",
+      "url": "https://hondanews.ca/en-CA/hci-automobiles/releases/release-9d4b663caef09e412c833d744c4365f9-2022-civic-hatchback-specifications",
+      "publisher": "Honda Canada Inc.",
+      "class": "A",
+      "accessed": "2026-10-03",
+      "access_method": "rendered",
+      "applicability": "2022 Civic Hatchback, Canada; LX, Sport, Sport Touring",
+      "notes": "",
+      "cache_file": "cache/pages/344bc90bb36560a9.txt"
+    },
+    "id:hci-2025-specs-page": {
+      "title": "'2025 Civic Hatchback Specifications' (release, May 21, 2024)",
+      "url": "https://hondanews.ca/en-CA/hci-automobiles/releases/release-16f7afa1eda16f08561d54be9a0095b8-2025-civic-hatchback-specifications",
+      "publisher": "Honda Canada Inc.",
+      "class": "A",
+      "accessed": "2026-10-03",
+      "access_method": "rendered",
+      "applicability": "NOT USABLE: page body contains Ridgeline (3.5 L V6, i-VTM4) specifications under a Civic Hatchback title",
+      "notes": "Honda Canada content error; recorded so nobody uses it. No 2025 Civic Hatchback spec table was available from Honda Canada.",
+      "cache_file": "cache/pages/e230b13acdcf3696.txt"
+    },
+    "id:hci-2022-arrival": {
+      "title": "All-New 2022 Civic Hatchback to arrive at Honda Dealerships ... Available Manual Transmission (Sep 20, 2021)",
+      "url": "https://hondanews.ca/en-CA/hci-automobiles/releases/release-f5ca16bc4a91ff33c2da538124f5afe69c43bfa0-all-new-2022-civic-hatchback-to-arrive-at-honda-dealerships-with-euro-inspired-design-enhanced-sporty-driving-character-and-an-available-manual-transmission",
+      "publisher": "Honda Canada Inc.",
+      "class": "A",
+      "accessed": "2026-10-03",
+      "access_method": "rendered",
+      "applicability": "2022 Civic Hatchback, Canada launch: trims, engines, MSRP",
+      "notes": "",
+      "cache_file": "cache/pages/a2b12d6f912e06a3.txt"
+    },
+    "id:hci-2022-debut": {
+      "title": "2022 Honda Civic Hatchback Makes Global Debut ... (June 23, 2021)",
+      "url": "https://hondanews.ca/en-CA/hci-automobiles/releases/release-f62a8a2e1d52802dd04a2618822ad44329120a90-2022-honda-civic-hatchback-makes-global-debut-during-honda-civic-tour-remix-virtual-performance",
+      "publisher": "Honda Canada Inc.",
+      "class": "A",
+      "accessed": "2026-10-03",
+      "access_method": "rendered",
+      "applicability": "2022 Civic Hatchback, North America (pre-production); plant, powertrain, key specs",
+      "notes": "Pre-launch figures (e.g. length 4549 mm, wheel insert colour 'Shark Gray') differ from later production spec tables; prefer the spec tables for those.",
+      "cache_file": "cache/pages/011b73eb9216ebcd.txt"
+    },
+    "id:hci-2025-refresh": {
+      "title": "New 2025 Honda Civic Gains Powerful Hybrid Trims, Sportier Styling and Improved Tech (May 21, 2024)",
+      "url": "https://hondanews.ca/en-CA/hci-automobiles/releases/release-13b596316ac6e66d601e6e282b0059a9-new-2025-honda-civic-gains-powerful-hybrid-trims-sportier-styling-and-improved-tech",
+      "publisher": "Honda Canada Inc.",
+      "class": "A",
+      "accessed": "2026-10-03",
+      "access_method": "rendered",
+      "applicability": "2025 Civic (refresh), Canada; used only to define exclusions",
+      "notes": "",
+      "cache_file": "cache/pages/7807c4fe44812d43.txt"
+    },
+    "id:ahm-infocenter-2024-colors": {
+      "title": "2024 Civic Hatchback – Feature Guide – Colors (Honda Information Center)",
+      "url": "https://www.hondainfocenter.com/2024/civic-hatchback/feature-guide/colors/",
+      "publisher": "American Honda Motor Co., Inc. (page footer: 'All information contained herein applies to U.S. vehicles only.')",
+      "class": "A",
+      "accessed": "2026-10-03",
+      "access_method": "rendered",
+      "applicability": "2024 Civic Hatchback, USA; LX, Sport, EX-L, Sport Touring",
+      "notes": "Trim availability is shown by check-circle icons; parsed from the cached HTML (cache/pages/87f27b45d7784846.html). Sonic Gray Pearl row: Black Cloth checked under Sport; Black Leather checked under Sport Touring with no 'CVT only' note.",
+      "cache_file": "cache/pages/87f27b45d7784846.txt"
+    },
+    "id:vpic": {
+      "title": "NHTSA vPIC DecodeVinValuesExtended API",
+      "url": "https://vpic.nhtsa.dot.gov/api/",
+      "publisher": "NHTSA (data from manufacturer's 49 CFR 565 VIN-decoding submission)",
+      "class": "A",
+      "accessed": "2026-10-03",
+      "access_method": "api",
+      "applicability": "US VIN patterns; Canadian-market VINs decode through the same patterns",
+      "notes": "Raw JSON cached in cache/vpic/. CAUTION: vPIC returns Trim 'Sport Touring' for 19XFL1H8 and 19XFL1G8 patterns, but Canadian listings show the same patterns on Canadian 'Sport' cars (Canada's Sport is 1.5T; US Sport is 2.0 L), so vPIC trim is NOT reliable for Canadian VINs.",
+      "cache_file": null
+    },
+    "id:cuv-hatch-list": {
+      "title": "Honda Certified Used Vehicles – used Civic Hatchback listings",
+      "url": "https://cuv.honda.ca/used/Honda-Civic_Hatchback.html",
+      "publisher": "Honda Canada dealer network (cuv.honda.ca)",
+      "class": "C",
+      "accessed": "2026-10-03",
+      "access_method": "rendered",
+      "applicability": "Canadian used-vehicle listings (dealer-entered data)",
+      "notes": "Dealer-entered trim/colour text; weak. Used only for VIN patterns of Canadian cars.",
+      "cache_file": "cache/pages/14f629ca5159267d.txt"
+    }
+  },
+  "parameters": {
+    "identity.model_year": {
+      "description": "Model year",
+      "unit": "text",
+      "impact": "critical",
+      "candidates": [
+        {
+          "printed": {
+            "value": "2024",
+            "unit": "text"
+          },
+          "value": "2024",
+          "unit": "text",
+          "status": "confirmed",
+          "class": "A",
+          "source_id": "id:hci-2024-specs",
+          "locator": "Title",
+          "evidence": "2024 Honda Civic Hatchback Specifications",
+          "as_printed": "2024",
+          "applicability": {
+            "year": "2024",
+            "market": "CA",
+            "trim": "Sport, Sport Touring (table columns)",
+            "body": "hatchback",
+            "gearbox": "6MT and CVT",
+            "engine": "1.5T",
+            "notes": "Honda Canada 2024 Civic Hatchback specification table (Sport, Sport Touring columns)"
+          },
+          "confidence": "high",
+          "range": null,
+          "how_to_measure": null,
+          "notes": ""
+        }
+      ]
+    },
+    "identity.trim": {
+      "description": "Trim",
+      "unit": "text",
+      "impact": "critical",
+      "candidates": [
+        {
+          "printed": {
+            "value": "Sport Touring",
+            "unit": "text"
+          },
+          "value": "Sport Touring",
+          "unit": "text",
+          "status": "confirmed",
+          "class": "A",
+          "source_id": "id:hci-2024-specs",
+          "locator": "Table column headings",
+          "evidence": "SPORT TOURING … 6-speed manual transmission (MT)",
+          "as_printed": "SPORT TOURING",
+          "applicability": {
+            "year": "2024",
+            "market": "CA",
+            "trim": "Sport, Sport Touring (table columns)",
+            "body": "hatchback",
+            "gearbox": "6MT and CVT",
+            "engine": "1.5T",
+            "notes": "Honda Canada 2024 Civic Hatchback specification table (Sport, Sport Touring columns)"
+          },
+          "confidence": "high",
+          "range": null,
+          "how_to_measure": null,
+          "notes": "Canadian 2024 Civic Hatchback line-up on this page is SPORT and SPORT TOURING only (both 1.5T)."
+        }
+      ]
+    },
+    "identity.body": {
+      "description": "Body style",
+      "unit": "text",
+      "impact": "critical",
+      "candidates": [
+        {
+          "printed": {
+            "value": "5-door hatchback",
+            "unit": "text"
+          },
+          "value": "5-door hatchback",
+          "unit": "text",
+          "status": "confirmed",
+          "class": "A",
+          "source_id": "id:vpic",
+          "locator": "DecodeVinValuesExtended 19XFL1G82RE400164: BodyClass, Doors, NCSABodyType",
+          "evidence": "BodyClass: Hatchback/Liftback/Notchback; Doors: 5; NCSABodyType: 5-door/4-door hatchback",
+          "as_printed": "Hatchback/Liftback/Notchback, 5 doors",
+          "applicability": {
+            "year": "2024",
+            "market": "US/CA VIN pattern",
+            "trim": "Sport Touring (vPIC)",
+            "body": "hatchback",
+            "gearbox": "6MT",
+            "engine": "1.5T",
+            "notes": ""
+          },
+          "confidence": "high",
+          "range": null,
+          "how_to_measure": null,
+          "notes": "Honda Canada calls the body 'Civic Hatchback' (page title)."
+        }
+      ]
+    },
+    "identity.market": {
+      "description": "Market",
+      "unit": "text",
+      "impact": "high",
+      "candidates": [
+        {
+          "printed": {
+            "value": "Canada",
+            "unit": "text"
+          },
+          "value": "Canada",
+          "unit": "text",
+          "status": "confirmed",
+          "class": "A",
+          "source_id": "id:hci-2024-specs",
+          "locator": "Publisher / footer",
+          "evidence": "HONDA CANADA AUTOMOBILES NEWSROOM … ©2026 Honda Canada Inc",
+          "as_printed": "Honda Canada",
+          "applicability": {
+            "year": "2024",
+            "market": "CA",
+            "trim": "Sport, Sport Touring (table columns)",
+            "body": "hatchback",
+            "gearbox": "6MT and CVT",
+            "engine": "1.5T",
+            "notes": "Honda Canada 2024 Civic Hatchback specification table (Sport, Sport Touring columns)"
+          },
+          "confidence": "high",
+          "range": null,
+          "how_to_measure": null,
+          "notes": "Target is the Canadian-market car; US data recorded separately in us_ca_differences."
+        }
+      ]
+    },
+    "identity.assembly_plant": {
+      "description": "Assembly plant",
+      "unit": "text",
+      "impact": "medium",
+      "candidates": [
+        {
+          "printed": {
+            "value": "Honda Manufacturing of Indiana, Greensburg, Indiana, USA",
+            "unit": "text"
+          },
+          "value": "Honda Manufacturing of Indiana, Greensburg, Indiana, USA",
+          "unit": "text",
+          "status": "confirmed",
+          "class": "A",
+          "source_id": "id:hci-2022-debut",
+          "locator": "Para. 5 and 'A New Chapter in Civic North American Manufacturing'",
+          "evidence": "Starting with the 2022 model year, the Civic Hatchback will be manufactured in the U.S. for the first time at the company’s Greensburg, Indiana auto plant.",
+          "as_printed": "Greensburg, Indiana auto plant",
+          "applicability": {
+            "year": "2022",
+            "market": "North America",
+            "trim": "all hatchback",
+            "body": "hatchback",
+            "gearbox": "all",
+            "engine": "1.5T",
+            "notes": ""
+          },
+          "confidence": "high",
+          "range": null,
+          "how_to_measure": null,
+          "notes": "Statement covers 2022 MY onward; 2024 confirmed by vPIC candidate (plant decoded from VIN)."
+        },
+        {
+          "printed": {
+            "value": "GREENSBURG, INDIANA, UNITED STATES (USA)",
+            "unit": "text"
+          },
+          "value": "GREENSBURG, INDIANA, UNITED STATES (USA)",
+          "unit": "text",
+          "status": "confirmed",
+          "class": "A",
+          "source_id": "id:vpic",
+          "locator": "https://vpic.nhtsa.dot.gov/api/vehicles/DecodeVinValuesExtended/19XFL1G82RE400164?format=json (cache cache/vpic/19XFL1G82RE400164.json) PlantCity/PlantState/PlantCountry",
+          "evidence": "PlantCity: GREENSBURG; PlantState: INDIANA; PlantCountry: UNITED STATES (USA)",
+          "as_printed": "GREENSBURG",
+          "applicability": {
+            "year": "2024",
+            "market": "CA (serial 4xxxxx; see notes)",
+            "trim": "Sport Touring (vPIC)",
+            "body": "hatchback",
+            "gearbox": "6MT",
+            "engine": "1.5T",
+            "notes": ""
+          },
+          "confidence": "high",
+          "range": null,
+          "how_to_measure": null,
+          "notes": "VIN check digit valid ('0 - VIN decoded clean. Check Digit (9th position) is correct'). Also decoded identically for the pattern 19XFL1G8*RE and for Canadian 2024 CVT VINs 19XFL1H87RE400675 / 19XFL1H84RE400858 (cuv.honda.ca)."
+        }
+      ]
+    },
+    "identity.model_code": {
+      "description": "Honda model/chassis code (VIN positions 4-6)",
+      "unit": "text",
+      "impact": "medium",
+      "candidates": [
+        {
+          "printed": {
+            "value": "FL1",
+            "unit": "text"
+          },
+          "value": "FL1",
+          "unit": "text",
+          "status": "estimated",
+          "class": "E",
+          "source_id": "id:vpic",
+          "locator": "VehicleDescriptor 19XFL1G8*RE",
+          "evidence": "VehicleDescriptor: 19XFL1G8*RE",
+          "as_printed": "19XFL1G8*RE",
+          "applicability": {
+            "year": "2024",
+            "market": "US/CA VIN pattern",
+            "trim": "Sport Touring (vPIC)",
+            "body": "hatchback",
+            "gearbox": "6MT",
+            "engine": "1.5T",
+            "notes": ""
+          },
+          "confidence": "medium",
+          "range": [
+            "FL1",
+            "FL1"
+          ],
+          "how_to_measure": "Read the VIN and the model code on the door-jamb / firewall ID plate of the real car; Honda parts catalogs for the VIN list the frame code.",
+          "notes": "Interpretation, not a quoted value: Honda VIN positions 4-6 ('FL1') are the line/body/engine code; FL1 = 5-door hatch 1.5T (2.0 L hatches decode as FL2, e.g. 19XFL2G52NE400414 on cuv.honda.ca). Position 7 'G' = 6MT and 'H' = CVT per vPIC TransmissionStyle on G vs H patterns. Honda's own documents calling the North American car 'FL1' were not opened."
+        }
+      ]
+    },
+    "identity.engine_code": {
+      "description": "Engine code",
+      "unit": "text",
+      "impact": "high",
+      "candidates": [
+        {
+          "printed": {
+            "value": "L15B7",
+            "unit": "text"
+          },
+          "value": "L15B7",
+          "unit": "text",
+          "status": "confirmed",
+          "class": "A",
+          "source_id": "id:vpic",
+          "locator": "https://vpic.nhtsa.dot.gov/api/vehicles/DecodeVinValuesExtended/19XFL1G82RE400164?format=json EngineModel",
+          "evidence": "EngineModel: L15B7; DisplacementL: 1.5; EngineHP: 180; Turbo: Yes",
+          "as_printed": "L15B7",
+          "applicability": {
+            "year": "2024",
+            "market": "US/CA VIN pattern",
+            "trim": "Sport Touring (vPIC)",
+            "body": "hatchback",
+            "gearbox": "6MT",
+            "engine": "1.5T",
+            "notes": ""
+          },
+          "confidence": "medium",
+          "range": null,
+          "how_to_measure": null,
+          "notes": "Single source (manufacturer VIN submission via NHTSA). Same code decoded for MY2022 and MY2023 FL1G8 patterns. Second independent source not found within budget; beware the Si (different L15 variant, 200 hp) and JDM documents that use other designations."
+        }
+      ]
+    },
+    "identity.transmission_code": {
+      "description": "Gearbox (manual transmission) code",
+      "unit": "text",
+      "impact": "medium",
+      "candidates": [
+        {
+          "value": null,
+          "unit": "text",
+          "status": "unknown",
+          "class": null,
+          "source_id": null,
+          "locator": "",
+          "evidence": "",
+          "as_printed": "",
+          "applicability": {},
+          "confidence": "none",
+          "range": null,
+          "how_to_measure": "Read the transmission ID number stamped on the gearbox case (Honda prints the type code at the start of the transmission number), or ask a Honda parts counter for the MT assembly part number/type for the VIN.",
+          "notes": "Techinfo/service information is paywalled and was not used.",
+          "searches": [
+            "WebSearch: 11th gen Civic hatchback 1.5T 6-speed manual transmission code L15B7 'transmission code'",
+            "WebSearch: 2024 Civic hatchback Sport Touring MT 'transmission assembly' 20011 part number (hondapartsnow lead 20011-65M-G51 is for 2.0 L Sport per snippet; not opened)",
+            "Honda Canada 2022/2023/2024 spec pages (no code printed)",
+            "vPIC decode (gives only 'Manual/Standard', 6 speeds)"
+          ]
+        }
+      ]
+    },
+    "identity.transmission_type": {
+      "description": "Transmission type",
+      "unit": "text",
+      "impact": "critical",
+      "candidates": [
+        {
+          "printed": {
+            "value": "6-speed manual",
+            "unit": "text"
+          },
+          "value": "6-speed manual",
+          "unit": "text",
+          "status": "confirmed",
+          "class": "A",
+          "source_id": "id:hci-2024-specs",
+          "locator": "DRIVETRAIN table",
+          "evidence": "6-speed manual transmission (MT)\t \tAvailable",
+          "as_printed": "6-speed manual transmission (MT) — SPORT: blank, SPORT TOURING: Available",
+          "applicability": {
+            "year": "2024",
+            "market": "CA",
+            "trim": "Sport, Sport Touring (table columns)",
+            "body": "hatchback",
+            "gearbox": "6MT and CVT",
+            "engine": "1.5T",
+            "notes": "Honda Canada 2024 Civic Hatchback specification table (Sport, Sport Touring columns)"
+          },
+          "confidence": "high",
+          "range": null,
+          "how_to_measure": null,
+          "notes": ""
+        }
+      ]
+    },
+    "identity.drivetrain": {
+      "description": "Driven wheels",
+      "unit": "text",
+      "impact": "critical",
+      "candidates": [
+        {
+          "printed": {
+            "value": "FWD",
+            "unit": "text"
+          },
+          "value": "FWD",
+          "unit": "text",
+          "status": "confirmed",
+          "class": "A",
+          "source_id": "id:hci-2022-specs",
+          "locator": "DRIVETRAIN table",
+          "evidence": "Front-wheel drive",
+          "as_printed": "Front-wheel drive (all trims)",
+          "applicability": {
+            "year": "2022",
+            "market": "CA",
+            "trim": "LX, Sport, Sport Touring",
+            "body": "hatchback",
+            "gearbox": "6MT and CVT",
+            "engine": "1.5T",
+            "notes": ""
+          },
+          "confidence": "high",
+          "range": null,
+          "how_to_measure": null,
+          "notes": "2024 Canadian table does not repeat the line; vPIC 2024 FL1G8 pattern DriveType '4x2' confirms; no AWD Civic hatch exists in this generation."
+        }
+      ]
+    },
+    "identity.engine_description": {
+      "description": "Engine description (Honda Canada)",
+      "unit": "text",
+      "impact": "high",
+      "candidates": [
+        {
+          "printed": {
+            "value": "1.5-litre, 16-valve, Direct Injection, DOHC, VTEC turbocharged 4-cylinder",
+            "unit": "text"
+          },
+          "value": "1.5-litre, 16-valve, Direct Injection, DOHC, VTEC turbocharged 4-cylinder",
+          "unit": "text",
+          "status": "confirmed",
+          "class": "A",
+          "source_id": "id:hci-2024-specs",
+          "locator": "ENGINE table",
+          "evidence": "1.5-litre, 16-valve, Direct Injection, DOHC, VTEC® turbocharged 4-cylinder",
+          "as_printed": "1.5-litre, 16-valve, Direct Injection, DOHC, VTEC® turbocharged 4-cylinder",
+          "applicability": {
+            "year": "2024",
+            "market": "CA",
+            "trim": "Sport, Sport Touring (table columns)",
+            "body": "hatchback",
+            "gearbox": "6MT and CVT",
+            "engine": "1.5T",
+            "notes": "Honda Canada 2024 Civic Hatchback specification table (Sport, Sport Touring columns)"
+          },
+          "confidence": "high",
+          "range": null,
+          "how_to_measure": null,
+          "notes": ""
+        }
+      ]
+    },
+    "identity.sold_in_canada_2024_st_6mt": {
+      "description": "2024 Civic Hatchback Sport Touring 1.5T 6MT offered in Canada",
+      "unit": "bool",
+      "impact": "critical",
+      "candidates": [
+        {
+          "printed": {
+            "value": true,
+            "unit": "bool"
+          },
+          "value": true,
+          "unit": "bool",
+          "status": "confirmed",
+          "class": "A",
+          "source_id": "id:hci-2024-specs",
+          "locator": "DRIVETRAIN table; FUEL ECONOMY table; DIMENSIONS table",
+          "evidence": "6-speed manual transmission (MT)\t \tAvailable … Manual transmission (City/Hwy/Combined)\t \t8.5/6.3/7.5 … Curb weight – MT/CVT (kg) … 1382/1412",
+          "as_printed": "Available (Sport Touring column only)",
+          "applicability": {
+            "year": "2024",
+            "market": "CA",
+            "trim": "Sport, Sport Touring (table columns)",
+            "body": "hatchback",
+            "gearbox": "6MT and CVT",
+            "engine": "1.5T",
+            "notes": "Honda Canada 2024 Civic Hatchback specification table (Sport, Sport Touring columns)"
+          },
+          "confidence": "high",
+          "range": null,
+          "how_to_measure": null,
+          "notes": "Offered per Honda Canada. In 2024 Canada the 6MT is listed only for Sport Touring (Sport column blank; Sport MT curb weight 'NA'). A Canadian-serial VIN (19XFL1G82RE400164) decodes in vPIC as 2024 Civic hatch 6MT 1.5T, but its listing (carpages.ca, Cambridge ON) returned HTTP 403 and was seen only as a search snippet."
+        }
+      ]
+    },
+    "identity.paint_name": {
+      "description": "Exterior colour name (Canada spelling)",
+      "unit": "text",
+      "impact": "high",
+      "candidates": [
+        {
+          "printed": {
+            "value": "Sonic Grey Pearl",
+            "unit": "text"
+          },
+          "value": "Sonic Grey Pearl",
+          "unit": "text",
+          "status": "confirmed",
+          "class": "A",
+          "source_id": "id:hci-2023-specs",
+          "locator": "EXTERIOR/INTERIOR COLOURS table",
+          "evidence": "Sonic Grey Pearl\tNH-877P\t \tBlack/Combi Fabric\tBlack Leather",
+          "as_printed": "Sonic Grey Pearl",
+          "applicability": {
+            "year": "2023",
+            "market": "CA",
+            "trim": "LX, Sport, Sport Touring",
+            "body": "hatchback",
+            "gearbox": "all",
+            "engine": "1.5T",
+            "notes": ""
+          },
+          "confidence": "high",
+          "range": null,
+          "how_to_measure": null,
+          "notes": "US spelling is 'Sonic Gray Pearl' (hondainfocenter 2024)."
+        }
+      ]
+    },
+    "identity.paint_code": {
+      "description": "Paint code",
+      "unit": "text",
+      "impact": "high",
+      "candidates": [
+        {
+          "printed": {
+            "value": "NH-877P",
+            "unit": "text"
+          },
+          "value": "NH-877P",
+          "unit": "text",
+          "status": "confirmed",
+          "class": "A",
+          "source_id": "id:hci-2023-specs",
+          "locator": "EXTERIOR/INTERIOR COLOURS table",
+          "evidence": "Sonic Grey Pearl\tNH-877P",
+          "as_printed": "NH-877P",
+          "applicability": {
+            "year": "2023",
+            "market": "CA",
+            "trim": "Sport Touring",
+            "body": "hatchback",
+            "gearbox": "all",
+            "engine": "1.5T",
+            "notes": ""
+          },
+          "confidence": "high",
+          "range": null,
+          "how_to_measure": null,
+          "notes": ""
+        },
+        {
+          "printed": {
+            "value": "NH-877P",
+            "unit": "text"
+          },
+          "value": "NH-877P",
+          "unit": "text",
+          "status": "confirmed",
+          "class": "A",
+          "source_id": "id:ahm-infocenter-2024-colors",
+          "locator": "Colors table, Sonic Gray Pearl row",
+          "evidence": "Sonic Gray Pearl69 … [NH-877P]",
+          "as_printed": "[NH-877P]",
+          "applicability": {
+            "year": "2024",
+            "market": "US",
+            "trim": "Sport, Sport Touring",
+            "body": "hatchback",
+            "gearbox": "all",
+            "engine": "1.5T",
+            "notes": ""
+          },
+          "confidence": "high",
+          "range": null,
+          "how_to_measure": null,
+          "notes": "Second, independent (US, 2024) source agrees with Honda Canada 2023."
+        }
+      ]
+    },
+    "identity.sonic_grey_offered_2024_ca_st": {
+      "description": "Sonic Grey Pearl offered on 2024 Canadian Civic Hatchback Sport Touring",
+      "unit": "bool",
+      "impact": "high",
+      "candidates": [
+        {
+          "printed": {
+            "value": true,
+            "unit": "bool"
+          },
+          "value": true,
+          "unit": "bool",
+          "status": "estimated",
+          "class": "E",
+          "source_id": null,
+          "locator": "inference from id:hci-2023-specs + id:ahm-infocenter-2024-colors",
+          "evidence": "",
+          "as_printed": "",
+          "applicability": {
+            "year": "2023 CA / 2024 US",
+            "market": "CA+US",
+            "trim": "Sport Touring",
+            "body": "hatchback",
+            "gearbox": "all",
+            "engine": "1.5T",
+            "notes": ""
+          },
+          "confidence": "medium",
+          "range": [
+            true,
+            true
+          ],
+          "how_to_measure": "Check the real car's colour label (driver door jamb / VIN label) for NH877P, or a Honda Canada 2024 brochure / Build & Price archive.",
+          "notes": "Not directly confirmed for 2024 Canada: Honda Canada's 2024 spec page has no colour table, honda.ca now shows the current model, web.archive.org is blocked and the sm360 2024 ST MT catalog page was blocked by the egress proxy. Evidence: Honda Canada 2023 lists Sonic Grey Pearl NH-877P with Black Leather on Sport Touring; American Honda 2024 lists Sonic Gray Pearl NH-877P with Black Leather on Sport Touring with no 'CVT only' restriction. No 2024 MY change to the colour list was found. The user's own car (if it is this colour) settles it."
+        }
+      ]
+    },
+    "identity.sonic_grey_offered_2023_ca_st": {
+      "description": "Sonic Grey Pearl offered on 2023 Canadian Civic Hatchback Sport Touring",
+      "unit": "bool",
+      "impact": "medium",
+      "candidates": [
+        {
+          "printed": {
+            "value": true,
+            "unit": "bool"
+          },
+          "value": true,
+          "unit": "bool",
+          "status": "confirmed",
+          "class": "A",
+          "source_id": "id:hci-2023-specs",
+          "locator": "EXTERIOR/INTERIOR COLOURS table",
+          "evidence": "EXTERIOR/INTERIOR COLOURS\t \tLX\tSport\tSport Touring … Sonic Grey Pearl\tNH-877P\t \tBlack/Combi Fabric\tBlack Leather",
+          "as_printed": "Sport Touring: Black Leather",
+          "applicability": {
+            "year": "2023",
+            "market": "CA",
+            "trim": "Sport Touring",
+            "body": "hatchback",
+            "gearbox": "all",
+            "engine": "1.5T",
+            "notes": ""
+          },
+          "confidence": "high",
+          "range": null,
+          "how_to_measure": null,
+          "notes": ""
+        }
+      ]
+    },
+    "identity.interior_color": {
+      "description": "Interior colour",
+      "unit": "text",
+      "impact": "medium",
+      "candidates": [
+        {
+          "printed": {
+            "value": "Black",
+            "unit": "text"
+          },
+          "value": "Black",
+          "unit": "text",
+          "status": "confirmed",
+          "class": "A",
+          "source_id": "id:hci-2023-specs",
+          "locator": "EXTERIOR/INTERIOR COLOURS table, Sonic Grey Pearl row, Sport Touring column",
+          "evidence": "Sonic Grey Pearl\tNH-877P\t \tBlack/Combi Fabric\tBlack Leather",
+          "as_printed": "Black Leather",
+          "applicability": {
+            "year": "2023",
+            "market": "CA",
+            "trim": "Sport Touring",
+            "body": "hatchback",
+            "gearbox": "all",
+            "engine": "1.5T",
+            "notes": ""
+          },
+          "confidence": "high",
+          "range": null,
+          "how_to_measure": null,
+          "notes": "US 2024 also offers only Black Leather with Sonic Gray Pearl on Sport Touring (Gray Leather is CVT-only and not with Sonic Gray)."
+        }
+      ]
+    },
+    "identity.seat_material": {
+      "description": "Seat material",
+      "unit": "text",
+      "impact": "medium",
+      "candidates": [
+        {
+          "printed": {
+            "value": "Leather-trimmed seating surfaces",
+            "unit": "text"
+          },
+          "value": "Leather-trimmed seating surfaces",
+          "unit": "text",
+          "status": "confirmed",
+          "class": "A",
+          "source_id": "id:hci-2024-specs",
+          "locator": "SEATING & TRIM table",
+          "evidence": "Leather-trimmed seating surfaces\t \t•",
+          "as_printed": "Leather-trimmed seating surfaces (SPORT TOURING only)",
+          "applicability": {
+            "year": "2024",
+            "market": "CA",
+            "trim": "Sport, Sport Touring (table columns)",
+            "body": "hatchback",
+            "gearbox": "6MT and CVT",
+            "engine": "1.5T",
+            "notes": "Honda Canada 2024 Civic Hatchback specification table (Sport, Sport Touring columns)"
+          },
+          "confidence": "high",
+          "range": null,
+          "how_to_measure": null,
+          "notes": ""
+        }
+      ]
+    },
+    "identity.seating": {
+      "description": "Seating capacity / adjustment",
+      "unit": "text",
+      "impact": "low",
+      "candidates": [
+        {
+          "printed": {
+            "value": "5 seats; driver 8-way power, passenger 4-way power; heated front and rear seats; 60/40 rear",
+            "unit": "text"
+          },
+          "value": "5 seats; driver 8-way power, passenger 4-way power; heated front and rear seats; 60/40 rear",
+          "unit": "text",
+          "status": "confirmed",
+          "class": "A",
+          "source_id": "id:hci-2024-specs",
+          "locator": "SEATING & TRIM table",
+          "evidence": "Seating capacity\t5\t5 … Driver’s seat with 8-way power adjustment\t \t• … Front passenger’s seat with 4-way power adjustment\t \t• … Heated rear seats\t \t• … 60/40 split fold-down rear seatback\t•\t•",
+          "as_printed": "5",
+          "applicability": {
+            "year": "2024",
+            "market": "CA",
+            "trim": "Sport, Sport Touring (table columns)",
+            "body": "hatchback",
+            "gearbox": "6MT and CVT",
+            "engine": "1.5T",
+            "notes": "Honda Canada 2024 Civic Hatchback specification table (Sport, Sport Touring columns)"
+          },
+          "confidence": "high",
+          "range": null,
+          "how_to_measure": null,
+          "notes": ""
+        }
+      ]
+    },
+    "identity.cluster_type": {
+      "description": "Instrument cluster",
+      "unit": "text",
+      "impact": "high",
+      "candidates": [
+        {
+          "printed": {
+            "value": "10.2-inch colour TFT full digital driver meter display",
+            "unit": "text"
+          },
+          "value": "10.2-inch colour TFT full digital driver meter display",
+          "unit": "text",
+          "status": "confirmed",
+          "class": "A",
+          "source_id": "id:hci-2024-specs",
+          "locator": "COMFORT & CONVENIENCE table",
+          "evidence": "10.2\" colour TFT full digital driver meter display",
+          "as_printed": "10.2\" colour TFT full digital driver meter display (SPORT TOURING)",
+          "applicability": {
+            "year": "2024",
+            "market": "CA",
+            "trim": "Sport, Sport Touring (table columns)",
+            "body": "hatchback",
+            "gearbox": "6MT and CVT",
+            "engine": "1.5T",
+            "notes": "Honda Canada 2024 Civic Hatchback specification table (Sport, Sport Touring columns)"
+          },
+          "confidence": "high",
+          "range": null,
+          "how_to_measure": null,
+          "notes": ""
+        }
+      ]
+    },
+    "identity.options_ca_2024_st": {
+      "description": "Factory options on 2024 Canadian Sport Touring",
+      "unit": "text",
+      "impact": "medium",
+      "candidates": [
+        {
+          "printed": {
+            "value": "Transmission (6MT or CVT) and colour only; no packages listed",
+            "unit": "text"
+          },
+          "value": "Transmission (6MT or CVT) and colour only; no packages listed",
+          "unit": "text",
+          "status": "estimated",
+          "class": "E",
+          "source_id": null,
+          "locator": "inference from id:hci-2024-specs",
+          "evidence": "",
+          "as_printed": "",
+          "applicability": {
+            "year": "2024",
+            "market": "CA",
+            "trim": "Sport, Sport Touring (table columns)",
+            "body": "hatchback",
+            "gearbox": "6MT and CVT",
+            "engine": "1.5T",
+            "notes": "Honda Canada 2024 Civic Hatchback specification table (Sport, Sport Touring columns)"
+          },
+          "confidence": "medium",
+          "range": [
+            "n/a",
+            "n/a"
+          ],
+          "how_to_measure": "Check the real car's window sticker / Honda Canada order guide.",
+          "notes": "Honda Canada's 2024 table lists every Sport Touring feature as standard ('•') except items marked 'CVT only'; the only 'Available' entry is the 6MT. Dealer accessories are not covered."
+        }
+      ]
+    }
+  },
+  "model_year_check": "2022, 2023 and 2024 Honda Canada spec tables compared row by row (see my_2022_2024_changes). Engine, ratings, bore/stroke, compression, track, wheelbase, tires, stabilizer bars, curb weight MT, fuel economy MT, 10.2\" cluster and equipment of the Sport Touring are unchanged 2022→2024 in Canada.",
+  "trim_distinguishers": [
+    {
+      "item": "Wheels",
+      "sport_touring": "18\" aluminum-alloy, machined with black inserts",
+      "lower_trims": "Sport: 18\" black alloys",
+      "source_id": "id:hci-2024-specs",
+      "locator": "spec table",
+      "evidence": "18\" aluminum-alloy wheels (black) … 18\" aluminum-alloy wheels (machined with black inserts)",
+      "applicability": "2024 CA Civic Hatchback, Sport vs Sport Touring",
+      "notes": "2021 debut release said 'Shark Gray inserts' (pre-production); production tables say black inserts."
+    },
+    {
+      "item": "Fog lights",
+      "sport_touring": "LED fog lights",
+      "lower_trims": "Sport: none",
+      "source_id": "id:hci-2024-specs",
+      "locator": "spec table",
+      "evidence": "LED fog lights\t \t•",
+      "applicability": "2024 CA Civic Hatchback, Sport vs Sport Touring",
+      "notes": ""
+    },
+    {
+      "item": "Parking sensors",
+      "sport_touring": "Body-coloured front and rear parking sensors (visible in bumpers)",
+      "lower_trims": "Sport: none",
+      "source_id": "id:hci-2024-specs",
+      "locator": "spec table",
+      "evidence": "Body-coloured front and rear parking sensors",
+      "applicability": "2024 CA Civic Hatchback, Sport vs Sport Touring",
+      "notes": ""
+    },
+    {
+      "item": "Wipers",
+      "sport_touring": "Rain-sensing windshield wipers",
+      "lower_trims": "Sport: speed-sensing intermittent",
+      "source_id": "id:hci-2024-specs",
+      "locator": "spec table",
+      "evidence": "Rain-sensing windshield wipers\t \t• … Speed-sensing, variable intermittent windshield wipers\t•\t ",
+      "applicability": "2024 CA Civic Hatchback, Sport vs Sport Touring",
+      "notes": ""
+    },
+    {
+      "item": "Instrument cluster",
+      "sport_touring": "10.2\" full digital TFT meter",
+      "lower_trims": "Sport: 7\" TFT centre meter with analogue speedometer",
+      "source_id": "id:hci-2024-specs",
+      "locator": "spec table",
+      "evidence": "7\" colour TFT centre meter display with Driver Information Interface … 10.2\" colour TFT full digital driver meter display",
+      "applicability": "2024 CA Civic Hatchback, Sport vs Sport Touring",
+      "notes": ""
+    },
+    {
+      "item": "Infotainment",
+      "sport_touring": "9\" touchscreen with navigation, wireless CarPlay/Android Auto",
+      "lower_trims": "Sport: 7\" touchscreen, wired",
+      "source_id": "id:hci-2024-specs",
+      "locator": "spec table",
+      "evidence": "9\" colour touchscreen\t \tIncluding Navigation2,5 … 7\" colour touchscreen\t•\t  … Apple CarPlay®2,3 / Android Auto™2,3\tWired\tWired/Wireless",
+      "applicability": "2024 CA Civic Hatchback, Sport vs Sport Touring",
+      "notes": ""
+    },
+    {
+      "item": "Audio",
+      "sport_touring": "BOSE 12 speakers incl. subwoofer",
+      "lower_trims": "Sport: 8 speakers",
+      "source_id": "id:hci-2024-specs",
+      "locator": "spec table",
+      "evidence": "BOSE® Premium Sound System with 12 speakers including subwoofer\t \t• … AM/FM audio system with 8 speakers\t•\t ",
+      "applicability": "2024 CA Civic Hatchback, Sport vs Sport Touring",
+      "notes": ""
+    },
+    {
+      "item": "Seats",
+      "sport_touring": "Leather-trimmed; 8-way power driver; 4-way power passenger; heated rear",
+      "lower_trims": "Sport: black combi (synthetic leather/fabric), manual seats",
+      "source_id": "id:hci-2024-specs",
+      "locator": "spec table",
+      "evidence": "Black combi seats (synthetic leather/fabric)\t•\t  … Leather-trimmed seating surfaces\t \t• … Driver’s seat with 8-way power adjustment\t \t•",
+      "applicability": "2024 CA Civic Hatchback, Sport vs Sport Touring",
+      "notes": ""
+    },
+    {
+      "item": "Mirror",
+      "sport_touring": "Auto-dimming rearview mirror; HomeLink",
+      "lower_trims": "Sport: no",
+      "source_id": "id:hci-2024-specs",
+      "locator": "spec table",
+      "evidence": "Auto-dimming rearview mirror … HomeLink® remote system6",
+      "applicability": "2024 CA Civic Hatchback, Sport vs Sport Touring",
+      "notes": ""
+    },
+    {
+      "item": "Wireless charging / USB",
+      "sport_touring": "Wireless charging; 4 USB",
+      "lower_trims": "Sport: 3 USB",
+      "source_id": "id:hci-2024-specs",
+      "locator": "spec table",
+      "evidence": "Wireless charging … USB device connector3\t3\t4",
+      "applicability": "2024 CA Civic Hatchback, Sport vs Sport Touring",
+      "notes": ""
+    },
+    {
+      "item": "Exterior shared with Sport (not distinguishing)",
+      "sport_touring": "Dual exhaust finisher, moonroof, mirror LED turn signals, LED headlights, front splash guards",
+      "lower_trims": "same on Sport",
+      "source_id": "id:hci-2024-specs",
+      "locator": "spec table",
+      "evidence": "Duel exhaust finishe\t•\t• … Mirror-integrated LED turn signal indicators\t•\t• … One-touch power moonroof with tilt feature\t•\t•",
+      "applicability": "2024 CA Civic Hatchback, Sport vs Sport Touring",
+      "notes": ""
+    },
+    {
+      "item": "LX (2022–2023 only) vs Sport Touring",
+      "sport_touring": "ST: dual exhaust finisher, moonroof, mirror turn signals, aluminium pedals, 18\" wheels",
+      "lower_trims": "LX: 16\" wheels, none of these",
+      "source_id": "id:hci-2023-specs",
+      "locator": "spec table",
+      "evidence": "16\" aluminum-alloy wheels \t• … Duel exhaust finisher\t \t•\t•\t• … Aluminum-trimmed sport pedals\t \t•\t•\t•",
+      "applicability": "2023 CA Civic Hatchback LX/Sport/Sport-B/Sport Touring",
+      "notes": ""
+    }
+  ],
+  "manual_vs_cvt_cabin": [
+    {
+      "item": "Gear selector",
+      "manual": "6-speed manual shifter (three pedals implied)",
+      "cvt": "CVT selector",
+      "source_id": "id:hci-2024-specs",
+      "locator": "DRIVETRAIN",
+      "evidence": "6-speed manual transmission (MT)\t \tAvailable",
+      "applicability": "2024 CA Civic Hatchback, Sport vs Sport Touring",
+      "notes": "Shifter knob/boot appearance: see references/ (domain 9); not stated by Honda Canada."
+    },
+    {
+      "item": "Paddle shifters",
+      "manual": "absent",
+      "cvt": "present",
+      "source_id": "id:hci-2024-specs",
+      "locator": "DRIVETRAIN",
+      "evidence": "Steering wheel-mounted paddle shifters … CVT only",
+      "applicability": "2024 CA Civic Hatchback, Sport vs Sport Touring",
+      "notes": ""
+    },
+    {
+      "item": "Drive mode switch (Normal/Econ/Sport)",
+      "manual": "not listed (CVT only)",
+      "cvt": "present",
+      "source_id": "id:hci-2024-specs",
+      "locator": "DRIVETRAIN",
+      "evidence": "Three-mode drive system (Normal, Econ, Sport)    \t•\tCVT only",
+      "applicability": "2024 CA Civic Hatchback, Sport vs Sport Touring",
+      "notes": "2022 table lists an 'ECON mode button' on all trims incl. MT; whether the 2024 MT car has an ECON button is unconfirmed."
+    },
+    {
+      "item": "Parking brake",
+      "manual": "Electronic Parking Brake with automatic brake hold (no hand lever)",
+      "cvt": "same",
+      "source_id": "id:hci-2024-specs",
+      "locator": "CHASSIS",
+      "evidence": "Electronic Parking Brake (EPB) with automatic brake hold",
+      "applicability": "2024 CA Civic Hatchback, Sport vs Sport Touring",
+      "notes": "Listed without a CVT-only qualifier."
+    },
+    {
+      "item": "Idle-stop",
+      "manual": "listed '•' for Sport Touring without qualifier",
+      "cvt": "listed",
+      "source_id": "id:hci-2024-specs",
+      "locator": "ENGINE",
+      "evidence": "Idle-stop",
+      "applicability": "2024 CA Civic Hatchback, Sport vs Sport Touring",
+      "notes": "Conflicting hint: 2021 debut release says idle-stop is 'CVT only' (sentence about the 2.0 L LX). Whether the 6MT 1.5T car has idle-stop is UNCONFIRMED; check the owner's manual or the real car."
+    },
+    {
+      "item": "Adaptive Cruise Control",
+      "manual": "ACC without Low-Speed Follow",
+      "cvt": "ACC with Low-Speed Follow",
+      "source_id": "id:hci-2024-specs",
+      "locator": "DRIVER ASSIST TECHNOLOGY",
+      "evidence": "Adaptive Cruise Control (ACC)2 with Low-Speed Follow (HS*)\t \tCVT only",
+      "applicability": "2024 CA Civic Hatchback, Sport vs Sport Touring",
+      "notes": "2022 table: 'Adaptive Cruise Control (ACC)2  with Low-Speed Follow (HS*) *LSF on CVT only'."
+    },
+    {
+      "item": "Traffic Jam Assist / Low-speed braking control",
+      "manual": "absent",
+      "cvt": "present",
+      "source_id": "id:hci-2024-specs",
+      "locator": "DRIVER ASSIST TECHNOLOGY",
+      "evidence": "Low-speed braking control\t \tCVT only … Traffic Jam Assist2\t•\tCVT only",
+      "applicability": "2024 CA Civic Hatchback, Sport vs Sport Touring",
+      "notes": ""
+    },
+    {
+      "item": "Remote engine starter",
+      "manual": "absent",
+      "cvt": "present",
+      "source_id": "id:hci-2024-specs",
+      "locator": "COMFORT & CONVENIENCE",
+      "evidence": "Remote engine starter … CVT only",
+      "applicability": "2024 CA Civic Hatchback, Sport vs Sport Touring",
+      "notes": ""
+    },
+    {
+      "item": "Pedals",
+      "manual": "Aluminum-trimmed sport pedals (clutch, brake, throttle)",
+      "cvt": "aluminium-trimmed (2 pedals)",
+      "source_id": "id:hci-2024-specs",
+      "locator": "COMFORT & CONVENIENCE",
+      "evidence": "Aluminum-trimmed sport pedals",
+      "applicability": "2024 CA Civic Hatchback, Sport vs Sport Touring",
+      "notes": ""
+    },
+    {
+      "item": "Rev-match control",
+      "manual": "UNKNOWN (not listed for Civic Hatchback; do not assume the Si's rev-matching)",
+      "cvt": "n/a",
+      "source_id": null,
+      "locator": "",
+      "evidence": "",
+      "applicability": "2024 CA Civic Hatchback, Sport vs Sport Touring",
+      "notes": "Not mentioned in any Honda Canada 2022–2024 hatchback table or release opened. Verify on the real car (blip on downshift with clutch in)."
+    },
+    {
+      "item": "Flywheel",
+      "manual": "dual-mass flywheel (lead for drivetrain domain)",
+      "cvt": "n/a",
+      "source_id": "id:hci-2022-debut",
+      "locator": "Sporty and Fun Powertrains",
+      "evidence": "A new dual-mass flywheel helps reduce noise and vibration transmitted through the drivetrain.",
+      "applicability": "2022 North America hatchback 6MT",
+      "notes": ""
+    }
+  ],
+  "us_ca_differences": [
+    {
+      "item": "Trim line-up 2024",
+      "canada": "Sport (1.5T, CVT only), Sport Touring (1.5T, CVT or 6MT)",
+      "us": "LX, Sport, EX-L, Sport Touring",
+      "source_ids": [
+        "id:hci-2024-specs",
+        "id:ahm-infocenter-2024-colors"
+      ],
+      "locator": "table headings",
+      "evidence": "SPORT TOURING | LX … Sport … EX-L … Sport Touring",
+      "notes": "US Sport is 2.0 L (US 1.5T trims: EX-L, Sport Touring) per Honda US; Canadian Sport is 1.5T. US engine split from US page not opened (automobiles.honda.com 403)."
+    },
+    {
+      "item": "Manual availability 2024",
+      "canada": "Sport Touring only",
+      "us": "Sport and Sport Touring (US Sport = 2.0 L)",
+      "source_ids": [
+        "id:hci-2024-specs"
+      ],
+      "locator": "DRIVETRAIN",
+      "evidence": "6-speed manual transmission (MT)\t \tAvailable",
+      "notes": "US side from the 2021 debut release ('6-speed manual transmission is available in all grades') and US colour table MT rows; not a 2024 US spec sheet."
+    },
+    {
+      "item": "Paint name spelling",
+      "canada": "Sonic Grey Pearl",
+      "us": "Sonic Gray Pearl",
+      "source_ids": [
+        "id:hci-2023-specs",
+        "id:ahm-infocenter-2024-colors"
+      ],
+      "locator": "colour tables",
+      "evidence": "Sonic Grey Pearl | Sonic Gray Pearl69",
+      "notes": "Same code NH-877P."
+    },
+    {
+      "item": "Units/cluster",
+      "canada": "metric (L/100 km, km/h primary)",
+      "us": "imperial",
+      "source_ids": [
+        "id:hci-2024-specs"
+      ],
+      "locator": "FUEL ECONOMY",
+      "evidence": "FUEL ECONOMY9 (L/100 KM)",
+      "notes": "Cluster unit details: domain 9."
+    },
+    {
+      "item": "Sport Touring MT feature gaps (Canada)",
+      "canada": "ACC LSF, Traffic Jam Assist, Low-speed braking control, remote starter: CVT only",
+      "us": "not checked (US spec page blocked)",
+      "source_ids": [
+        "id:hci-2024-specs"
+      ],
+      "locator": "DRIVER ASSIST TECHNOLOGY",
+      "evidence": "Low-speed braking control\t \tCVT only",
+      "notes": ""
+    },
+    {
+      "item": "Model/VIN serial block",
+      "canada": "Canadian cars observed with serial 4xxxxx (e.g. 19XFL1H87RE400675)",
+      "us": "US cars observed with serial 0xxxxx (search snippets only)",
+      "source_ids": [
+        "id:cuv-hatch-list"
+      ],
+      "locator": "listing VINs",
+      "evidence": "VIN: 19XFL1H87RE400675",
+      "notes": "Observation, not a Honda statement."
+    }
+  ],
+  "my_2022_2024_changes": [
+    {
+      "change": "Canadian hatch line-up: 2022 LX/Sport/Sport Touring; 2023 adds Sport-B, Sport becomes CVT-only; 2024 LX dropped (Sport and Sport Touring only)",
+      "affects_target": false,
+      "source_ids": [
+        "id:hci-2022-specs",
+        "id:hci-2023-specs",
+        "id:hci-2024-specs"
+      ],
+      "evidence": "ENGINE\tLX\tSport\tSport Touring | ENGINE\tLX\tSport\tSport-B\tSport Touring | SPORT TOURING",
+      "notes": ""
+    },
+    {
+      "change": "Sport Touring MT data unchanged 2022→2024: 180 hp @ 6000, 177 lb-ft @ 1700-4500, 1498 cc, 73 x 89.5, 10.3:1, 235/40R18 91W, stabilizers 26.5/17.5, track 1536/1565, wheelbase 2735, curb weight MT 1382 kg, MT fuel 8.5/6.3/7.5",
+      "affects_target": false,
+      "source_ids": [
+        "id:hci-2022-specs",
+        "id:hci-2024-specs"
+      ],
+      "evidence": "Curb weight (kg) MT/CVT\t1322/1333\t1361/1391\t1382/1412 | 1382/1412 … 8.5/6.3/7.5 … 26.5/17.5",
+      "notes": "So 2022–2023 Sport Touring MT data are usable for the 2024 target where the record says so."
+    },
+    {
+      "change": "Width presentation: 2022/2023 'Mirrors open/Mirrors folded 2081/1900'; 2024 lists 'Width (mm) 1802'",
+      "affects_target": false,
+      "source_ids": [
+        "id:hci-2022-specs",
+        "id:hci-2024-specs"
+      ],
+      "evidence": "2081/1900 | Width (mm)      \t1802\t1802",
+      "notes": "Different measurement definitions, not a body change; dimensions domain resolves."
+    },
+    {
+      "change": "Length presentation: 2022/2023 '4547/4529' (with/without licence bracket); 2024 '4529'",
+      "affects_target": false,
+      "source_ids": [
+        "id:hci-2023-specs",
+        "id:hci-2024-specs"
+      ],
+      "evidence": "4547/4529 | 4529",
+      "notes": ""
+    },
+    {
+      "change": "2024 table adds 'Steering wheel turns, lock-to-lock 2.2' and 'Steering ratio 11.4:1' (not in 2022/2023 tables)",
+      "affects_target": false,
+      "source_ids": [
+        "id:hci-2024-specs"
+      ],
+      "evidence": "Steering wheel turns, lock-to-lock … 11.4:1",
+      "notes": "New disclosure, not evidence of a change."
+    },
+    {
+      "change": "TPMS type decodes 'Indirect' for MY2022/2023 FL1G8 patterns and 'Direct' for MY2024 (vPIC only)",
+      "affects_target": "unconfirmed",
+      "source_ids": [
+        "id:vpic"
+      ],
+      "evidence": "19XFL1G8*NE TPMS: Indirect; 19XFL1G8*PE TPMS: Indirect; 19XFL1G8*RE TPMS: Direct",
+      "notes": "Low confidence; may be a database entry difference. Check the 2024 owner's manual (TPMS vs Deflation Warning System) or the real car's valve stems."
+    },
+    {
+      "change": "Colour list 2024 (US): Boost Blue, Smokey Mauve, Crystal Black, Lunar Silver, Meteorite Gray, Rallye Red, Sonic Gray, Platinum White; Canada 2023: Boost Blue, Crystal Black, Meteoroid Grey, Platinum White, Rallye Red, Sonic Grey",
+      "affects_target": false,
+      "source_ids": [
+        "id:hci-2023-specs",
+        "id:ahm-infocenter-2024-colors"
+      ],
+      "evidence": "Meteoroid Grey Metallic\tNH-904M | Lunar Silver Metallic",
+      "notes": "Canada 2024 colour list not found."
+    }
+  ],
+  "facelift_2025_exclusions": [
+    {
+      "change": "New more aggressive front fascia and grille on every 2025 Civic",
+      "source_id": "id:hci-2025-refresh",
+      "evidence": "The exterior styling of every 2025 Honda Civic is enhanced with a new more aggressive front fascia and grille"
+    },
+    {
+      "change": "Hybrid replaces the 1.5T in Canada; non-hybrid Sport/LX use the 2.0 L",
+      "source_id": "id:hci-2025-refresh",
+      "evidence": "The Civic LX and Sport trims continue to be powered by the responsive and efficient 2.0-liter 4-cylinder engine … The resulting performance is even quicker than the outgoing 1.5L turbo-powered Civic."
+    },
+    {
+      "change": "New wheels (machine-finished design exclusive to Sport Touring Hybrid) and three new colours",
+      "source_id": "id:hci-2025-refresh",
+      "evidence": "A new machine-finished wheel design is exclusive to the top-of-the-line Sport Touring Hybrid. … Three new colors including Solar Silver Metallic, Urban Grey Pearl and Blue Lagoon Pearl"
+    },
+    {
+      "change": "Front USB-C ports, Google built-in (ST Hybrid) — 2025 cabin details to exclude",
+      "source_id": "id:hci-2025-refresh",
+      "evidence": "All Civic models now come standard with front USB-C ports."
+    }
+  ],
+  "vin_decodes": [
+    {
+      "vin": "19XFL1G82RE400164",
+      "origin": "search snippet of carpages.ca Cambridge ON listing (page 403, not opened); Canadian serial block",
+      "api_url": "https://vpic.nhtsa.dot.gov/api/vehicles/DecodeVinValuesExtended/19XFL1G82RE400164?format=json",
+      "cache_file": "cache/vpic/19XFL1G82RE400164.json",
+      "decode": {
+        "ErrorText": "0 - VIN decoded clean. Check Digit (9th position) is correct",
+        "ModelYear": "2024",
+        "Make": "HONDA",
+        "Model": "Civic",
+        "Trim": "Sport Touring",
+        "BodyClass": "Hatchback/Liftback/Notchback",
+        "Doors": "5",
+        "DriveType": "4x2",
+        "TransmissionStyle": "Manual/Standard",
+        "TransmissionSpeeds": "6",
+        "EngineModel": "L15B7",
+        "DisplacementL": "1.5",
+        "EngineHP": "180",
+        "Turbo": "Yes",
+        "PlantCity": "GREENSBURG",
+        "PlantState": "INDIANA",
+        "PlantCountry": "UNITED STATES (USA)",
+        "Manufacturer": "AMERICAN HONDA MOTOR CO., INC.",
+        "VehicleDescriptor": "19XFL1G8*RE",
+        "GVWR": "Class 1C: 4,001 - 5,000 lb (1,814 - 2,268 kg)",
+        "TPMS": "Direct"
+      }
+    },
+    {
+      "vin": "19XFL1G8*RE",
+      "origin": "pattern",
+      "api_url": "https://vpic.nhtsa.dot.gov/api/vehicles/DecodeVinValuesExtended/19XFL1G8*RE?format=json",
+      "cache_file": "cache/vpic/19XFL1G8_RE.json",
+      "decode": {
+        "ErrorText": "6 - Incomplete VIN",
+        "ModelYear": "2024",
+        "Make": "HONDA",
+        "Model": "Civic",
+        "Trim": "Sport Touring",
+        "BodyClass": "Hatchback/Liftback/Notchback",
+        "Doors": "5",
+        "DriveType": "4x2",
+        "TransmissionStyle": "Manual/Standard",
+        "TransmissionSpeeds": "6",
+        "EngineModel": "L15B7",
+        "DisplacementL": "1.5",
+        "EngineHP": "180",
+        "Turbo": "Yes",
+        "PlantCity": "GREENSBURG",
+        "PlantState": "INDIANA",
+        "PlantCountry": "UNITED STATES (USA)",
+        "Manufacturer": "AMERICAN HONDA MOTOR CO., INC.",
+        "VehicleDescriptor": "19XFL1G8*RE",
+        "GVWR": "Class 1C: 4,001 - 5,000 lb (1,814 - 2,268 kg)",
+        "TPMS": "Direct"
+      }
+    },
+    {
+      "vin": "19XFL1G8*PE",
+      "origin": "pattern",
+      "api_url": "https://vpic.nhtsa.dot.gov/api/vehicles/DecodeVinValuesExtended/19XFL1G8*PE?format=json",
+      "cache_file": "cache/vpic/19XFL1G8_PE.json",
+      "decode": {
+        "ErrorText": "6 - Incomplete VIN",
+        "ModelYear": "2023",
+        "Make": "HONDA",
+        "Model": "Civic",
+        "Trim": "Sport Touring",
+        "BodyClass": "Hatchback/Liftback/Notchback",
+        "Doors": "5",
+        "DriveType": "4x2",
+        "TransmissionStyle": "Manual/Standard",
+        "TransmissionSpeeds": "6",
+        "EngineModel": "L15B7",
+        "DisplacementL": "1.5",
+        "EngineHP": "180",
+        "Turbo": "Yes",
+        "PlantCity": "GREENSBURG",
+        "PlantState": "INDIANA",
+        "PlantCountry": "UNITED STATES (USA)",
+        "Manufacturer": "AMERICAN HONDA MOTOR CO., INC.",
+        "VehicleDescriptor": "19XFL1G8*PE",
+        "GVWR": "Class 1C: 4,001 - 5,000 lb (1,814 - 2,268 kg)",
+        "TPMS": "Indirect"
+      }
+    },
+    {
+      "vin": "19XFL1G8*NE",
+      "origin": "pattern",
+      "api_url": "https://vpic.nhtsa.dot.gov/api/vehicles/DecodeVinValuesExtended/19XFL1G8*NE?format=json",
+      "cache_file": "cache/vpic/19XFL1G8_NE.json",
+      "decode": {
+        "ErrorText": "6 - Incomplete VIN",
+        "ModelYear": "2022",
+        "Make": "HONDA",
+        "Model": "Civic",
+        "Trim": "Sport Touring",
+        "BodyClass": "Hatchback/Liftback/Notchback",
+        "Doors": "5",
+        "DriveType": "4x2",
+        "TransmissionStyle": "Manual/Standard",
+        "TransmissionSpeeds": "6",
+        "EngineModel": "L15B7",
+        "DisplacementL": "1.5",
+        "EngineHP": "180",
+        "Turbo": "Yes",
+        "PlantCity": "GREENSBURG",
+        "PlantState": "INDIANA",
+        "PlantCountry": "UNITED STATES (USA)",
+        "Manufacturer": "AMERICAN HONDA MOTOR CO., INC.",
+        "VehicleDescriptor": "19XFL1G8*NE",
+        "GVWR": "Class 1C: 4,001 - 5,000 lb (1,814 - 2,268 kg)",
+        "TPMS": "Indirect"
+      }
+    },
+    {
+      "vin": "19XFL1H87RE400675",
+      "origin": "cuv.honda.ca 2024 Civic Hatchback 'Sport Touring Rare', Winnipeg, CVT",
+      "api_url": "https://vpic.nhtsa.dot.gov/api/vehicles/DecodeVinValuesExtended/19XFL1H87RE400675?format=json",
+      "cache_file": "cache/vpic/19XFL1H87RE400675.json",
+      "decode": {
+        "ErrorText": "0 - VIN decoded clean. Check Digit (9th position) is correct",
+        "ModelYear": "2024",
+        "Make": "HONDA",
+        "Model": "Civic",
+        "Trim": "Sport Touring",
+        "BodyClass": "Hatchback/Liftback/Notchback",
+        "Doors": "5",
+        "DriveType": "4x2",
+        "TransmissionStyle": "Continuously Variable Transmission (CVT)",
+        "TransmissionSpeeds": "",
+        "EngineModel": "L15B7",
+        "DisplacementL": "1.5",
+        "EngineHP": "180",
+        "Turbo": "Yes",
+        "PlantCity": "GREENSBURG",
+        "PlantState": "INDIANA",
+        "PlantCountry": "UNITED STATES (USA)",
+        "Manufacturer": "AMERICAN HONDA MOTOR CO., INC.",
+        "VehicleDescriptor": "19XFL1H8*RE",
+        "GVWR": "Class 1C: 4,001 - 5,000 lb (1,814 - 2,268 kg)",
+        "TPMS": "Direct"
+      }
+    },
+    {
+      "vin": "19XFL1H84RE400858",
+      "origin": "cuv.honda.ca 2024 Civic Hatchback 'Sport', Toronto, CVT (vPIC says Sport Touring: trim decode unreliable for CA)",
+      "api_url": "https://vpic.nhtsa.dot.gov/api/vehicles/DecodeVinValuesExtended/19XFL1H84RE400858?format=json",
+      "cache_file": "cache/vpic/19XFL1H84RE400858.json",
+      "decode": {
+        "ErrorText": "0 - VIN decoded clean. Check Digit (9th position) is correct",
+        "ModelYear": "2024",
+        "Make": "HONDA",
+        "Model": "Civic",
+        "Trim": "Sport Touring",
+        "BodyClass": "Hatchback/Liftback/Notchback",
+        "Doors": "5",
+        "DriveType": "4x2",
+        "TransmissionStyle": "Continuously Variable Transmission (CVT)",
+        "TransmissionSpeeds": "",
+        "EngineModel": "L15B7",
+        "DisplacementL": "1.5",
+        "EngineHP": "180",
+        "Turbo": "Yes",
+        "PlantCity": "GREENSBURG",
+        "PlantState": "INDIANA",
+        "PlantCountry": "UNITED STATES (USA)",
+        "Manufacturer": "AMERICAN HONDA MOTOR CO., INC.",
+        "VehicleDescriptor": "19XFL1H8*RE",
+        "GVWR": "Class 1C: 4,001 - 5,000 lb (1,814 - 2,268 kg)",
+        "TPMS": "Direct"
+      }
+    },
+    {
+      "vin": "19XFL1G86NE401019",
+      "origin": "cuv.honda.ca 2022 Civic Hatchback 'Sport', Truro NS, Man. (vPIC says Sport Touring)",
+      "api_url": "https://vpic.nhtsa.dot.gov/api/vehicles/DecodeVinValuesExtended/19XFL1G86NE401019?format=json",
+      "cache_file": "cache/vpic/19XFL1G86NE401019.json",
+      "decode": {
+        "ErrorText": "0 - VIN decoded clean. Check Digit (9th position) is correct",
+        "ModelYear": "2022",
+        "Make": "HONDA",
+        "Model": "Civic",
+        "Trim": "Sport Touring",
+        "BodyClass": "Hatchback/Liftback/Notchback",
+        "Doors": "5",
+        "DriveType": "4x2",
+        "TransmissionStyle": "Manual/Standard",
+        "TransmissionSpeeds": "6",
+        "EngineModel": "L15B7",
+        "DisplacementL": "1.5",
+        "EngineHP": "180",
+        "Turbo": "Yes",
+        "PlantCity": "GREENSBURG",
+        "PlantState": "INDIANA",
+        "PlantCountry": "UNITED STATES (USA)",
+        "Manufacturer": "AMERICAN HONDA MOTOR CO., INC.",
+        "VehicleDescriptor": "19XFL1G8*NE",
+        "GVWR": "Class 1C: 4,001 - 5,000 lb (1,814 - 2,268 kg)",
+        "TPMS": "Indirect"
+      }
+    }
+  ]
+}
