@@ -179,6 +179,12 @@ def add_candidate(d, key, description, unit, impact, rec, replace_same_source=Tr
         p["candidates"] = [c for c in p["candidates"]
                            if not (c.get("source_id") == rec["source_id"]
                                    and c.get("locator") == rec.get("locator"))]
+    elif replace_same_source and rec.get("status") != "unknown":
+        # unsourced estimate (class D/E/F): replaces the builder's earlier record of the same class
+        # and locator, so re-running a builder does not stack copies
+        p["candidates"] = [c for c in p["candidates"]
+                           if not (not c.get("source_id") and c.get("class") == rec.get("class")
+                                   and c.get("locator") == rec.get("locator"))]
     if rec.get("status") == "unknown":
         # an unknown placeholder is dropped once a real candidate exists, and vice versa;
         # a new unknown replaces an older unknown placeholder (re-running a builder is idempotent)
