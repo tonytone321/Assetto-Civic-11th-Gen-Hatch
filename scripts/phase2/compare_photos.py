@@ -52,6 +52,7 @@ LIP_X_SIGMA = 0.02      # m, uncertainty of the lip plane position
 OUT_JSON = os.path.join(ROOT, "docs", "phase2", "photo_comparison.json")
 D_NOMINAL, D_RANGE = 30.0, (10.0, 100.0)   # side views without EXIF: assumed camera distance (m)
 YAW_TEST = math.radians(3.0)               # side views: yaw uncertainty tested by refitting at +-3 deg
+H_NOMINAL, H_RANGE = 0.9, (0.4, 1.6)       # side views: camera height (m) is not determined by the wheels; assumed
 OVL = os.path.join(ROOT, "cache", "phase2", "overlays")
 
 
@@ -65,7 +66,7 @@ PHOTOS = [
          path="cache/photos/22_CivicHatchback_STRG_Header_RR.png", mask="alpha", side=-1, front_on="left",
          wheels=["FL", "RL"], focal=None, k1max=0.0, pp_shift=(0, 0), loc_px=0.5,
          shows="2022 Civic Hatchback Sport Touring (Honda Information Center studio render, CGI, 620x200)"),
-    dict(id="R2_press06_side", manifest="ahm-press22-06", kind="oblique", fit_focal=True,
+    dict(id="R2_press06_side", manifest="ahm-press22-06", kind="oblique", fit_focal=True, rim_polarity=False,
          path="cache/visual/presskit22/06_f7039164019c.jpg", mask="cache/phase2/masks/06_f7039164019c.png",
          side=-1, front_on="left", wheels=["FL", "RL"], focal=None, k1max=0.01, pp_shift=(0, 0), loc_px=None,
          shows="2022 US Civic Hatchback, Boost Blue, black wheels (Sport trim by its wheels), rolling shot, motion blur"),
@@ -189,7 +190,7 @@ def yaw_of(R):
     return math.atan2(zc[1], abs(zc[0]))
 
 
-def residuals(p, ph, rims, env_contacts, f_fixed, cx, cy, k1, nw, w_rim=1.0, w_contact=0.5, yaw0=None):
+def residuals(p, ph, rims, env_contacts, f_fixed, cx, cy, k1, nw, w_rim=1.0, w_contact=0.5, yaw0=None, h0=None):
     """Residuals (px): projected rim-lip circle samples vs the detected rim ellipse of each wheel, plus the
     tyre contact point; optional soft yaw prior for side views."""
     pose = p[:6]
@@ -201,14 +202,19 @@ def residuals(p, ph, rims, env_contacts, f_fixed, cx, cy, k1, nw, w_rim=1.0, w_c
         z = z_f if coords.WHEELS[w]["axle"] == "front" else z_r
         el = rims.get(w)
         if el is not None:
-            uv = cam.project(rim_points(w, z, r_rim, 36))
-            res.append(w_rim * pf.ellipse_distance(uv, el["center"], el["axes_cv"], el["angle_deg"]))
+            # distance of each detected rim-lip edge point to the projected 3D rim circle (handles partial arcs)
+            curve = cam.project(rim_points(w, z, r_rim, 240))
+            pts = el["lip_points"]
+            d2 = ((pts[:, None, :] - curve[None, :, :]) ** 2).sum(axis=2)
+            res.append(w_rim * np.sqrt(d2.min(axis=1)) / math.sqrt(len(pts) / 36.0))
         if env_contacts.get(w) is not None:
             s, axle, y, lip_x, tread_x = wheel_geom(w)
             cuv = cam.project([[tread_x, y, 0.0]])[0]
             res.append(w_contact * (cuv - env_contacts[w]))
     if yaw0 is not None:  # side views only: soft prior that the camera looks square at the car side
         res.append(np.array([10.0 * (yaw_of(cam.R) - yaw0) / YAW_PRIOR_SIGMA]))
+    if h0 is not None:    # side views only: camera height is degenerate with pitch; hold it at the assumed value
+        res.append(np.array([10.0 * (p[5] - h0) / 0.02]))
     return np.concatenate(res)
 
 
@@ -222,7 +228,7 @@ def multi_start(ph, f, free_f):
     for az in azs:
         for d in (5.0, 10.0, 20.0, 40.0):
             # az = 0: camera square to the visible side; positive az moves it towards the front
-            C = tgt + d * np.array([s * math.cos(az), math.sin(az), 0.0]) + np.array([0, 0, 0.9])
+            C = tgt + d * np.array([s * math.cos(az), math.sin(az), 0.0]) + np.array([0, 0, H_NOMINAL - tgt[2]])
             R = camlib.look_at(C, tgt)
             x = np.r_[camlib.rot_to_rodrigues(R), C, Z_WHEEL0, Z_WHEEL0, RIM_D / 2 + FLANGE_H]
             if free_f:
@@ -268,7 +274,8 @@ def detect_wheels(ph, rgb, body):
     Wd = rgb.shape[1]
     rims, contacts = {}, {}
     for w, a in zip(ph["wheels"], arcs):
-        el = pf.find_wheel(grey, (a["contact_u"], a["contact_v"]), (0.015 * Wd, 0.12 * Wd))
+        el = pf.find_wheel(grey, (a["contact_u"], a["contact_v"]), (0.015 * Wd, 0.12 * Wd),
+                           polarity=ph.get("rim_polarity", True))
         contacts[w] = np.array([a["contact_u"], a["contact_v"]])
         if el is not None:
             ref = pf.refine_rim_radial(grey, el)
@@ -276,21 +283,27 @@ def detect_wheels(ph, rgb, body):
             if ref.get("refined") and ref["n_inliers"] >= 0.6 * 72 and ref["rms_px"] <= 2.0:
                 el = ref
             el["axes_cv"] = (el["axes"][0], el["axes"][1])
+            P = np.asarray(el["points"], float)
+            if len(P) > 400:  # thin evenly for speed
+                P = P[np.linspace(0, len(P) - 1, 400).astype(int)]
+            el["lip_points"] = P
             rims[w] = el
     WHEEL_CACHE[ph["id"]] = (rims, contacts, env)
     return rims, contacts, env
 
 
-def fit_camera(ph, rgb, body, f, cx, cy, k1=0.0, x_start=None, yaw0="auto"):
+def fit_camera(ph, rgb, body, f, cx, cy, k1=0.0, x_start=None, yaw0="auto", h0="auto"):
     if yaw0 == "auto":
         yaw0 = 0.0 if ph["kind"] == "side" else None
+    if h0 == "auto":
+        h0 = H_NOMINAL if ph["kind"] == "side" else None
     rims, contacts, env = detect_wheels(ph, rgb, body)
     free_f = bool(ph.get("fit_focal"))
     lo = np.r_[[-np.inf] * 6, 0.22, 0.22, RIM_D / 2 - 0.01]
     hi = np.r_[[np.inf] * 6, 0.40, 0.40, RIM_D / 2 + 0.05]
     if free_f:
         lo, hi = np.r_[lo, 0.3 * rgb.shape[1]], np.r_[hi, 60.0 * rgb.shape[1]]
-    args = (ph, rims, contacts, None if free_f else f, cx, cy, k1, len(ph["wheels"]), 1.0, 0.5, yaw0)
+    args = (ph, rims, contacts, None if free_f else f, cx, cy, k1, len(ph["wheels"]), 1.0, 0.5, yaw0, h0)
     if x_start is None:
         starts = multi_start(ph, f, free_f)
     else:
@@ -313,8 +326,9 @@ def fit_camera(ph, rgb, body, f, cx, cy, k1=0.0, x_start=None, yaw0="auto"):
     for w in ph["wheels"]:
         z = sol.x[6] if coords.WHEELS[w]["axle"] == "front" else sol.x[7]
         if w in rims:
-            uv = cam.project(rim_points(w, z, sol.x[8], 36))
-            rim_res.append(pf.ellipse_distance(uv, rims[w]["center"], rims[w]["axes_cv"], rims[w]["angle_deg"]))
+            curve = cam.project(rim_points(w, z, sol.x[8], 240))
+            pts = rims[w]["lip_points"]
+            rim_res.append(np.sqrt(((pts[:, None, :] - curve[None, :, :]) ** 2).sum(axis=2).min(axis=1)))
         s_, axle, y, lip_x, tread_x = wheel_geom(w)
         con_res.append(cam.project([[tread_x, y, 0.0]])[0] - contacts[w])
     rim_res = np.concatenate(rim_res) if rim_res else np.zeros(0)
@@ -324,7 +338,7 @@ def fit_camera(ph, rgb, body, f, cx, cy, k1=0.0, x_start=None, yaw0="auto"):
             "rim_inlier_frac": float(np.mean(np.abs(rim_res) < 3)) if len(rim_res) else None,
             "contact_rms_px": float(np.sqrt(np.mean(con_res ** 2))),
             "contacts": {w: c.tolist() for w, c in contacts.items()},
-            "rims": {w: {k: v for k, v in r.items() if k != "points"} for w, r in rims.items()},
+            "rims": {w: {k: v for k, v in r.items() if k not in ("points", "lip_points")} for w, r in rims.items()},
             "env": env, "success": bool(sol.success), "cost": float(sol.cost),
             "yaw_deg": math.degrees(yaw_of(cam.R)),
             "wb_px": float(np.linalg.norm(np.subtract(*[rims[w]["center"] for w in ph["wheels"][:2]])))
@@ -391,12 +405,13 @@ def measure(ph, rgb, body, top, glass, fit, snap=True):
         r_px = (TYRE_D / 2) / cam.mm_per_px(c3)
         p0 = cuv + dvec * (r_px * 1.02)
         p1 = cuv + dvec * (r_px + 0.45 / cam.mm_per_px(c3))
-        hit = pf.first_body_run(lab, p0, p1, body_lab, spread)
+        hit = pf.well_to_body_edge(lab, p0, p1, body_lab)
         name = f"arch_top_{axle}"
         if hit is not None:
             add(name, hit, ("bodyside", s * W / 2, 0.05), ("Z",), max(base_loc, 1.0),
-                note="first body-coloured run scanning up the projected vertical through the wheel centre; "
-                     "assumed on the body-side plane x = +-width/2 (+-0.05 m)")
+                note="scanning up the projected vertical through the wheel centre from the tyre top: first point closer "
+                     "in colour to the body (door sample) than to the dark wheel well; assumed on the body-side plane "
+                     "x = +-width/2 (+-0.05 m)")
         else:
             feats[name] = {"missing": "no body-coloured run found above the wheel"}
     # sill at mid-wheelbase: silhouette bottom along the projected vertical (body-side plane)
@@ -515,7 +530,7 @@ def compare_one(ph, cage):
     result = {"id": ph["id"], "path": ph["path"], "manifest_id": ph["manifest"], "shows": ph["shows"],
               "image_size": [Ww, Hh], "kind": ph["kind"]}
     rims, contacts, env = detect_wheels(ph, rgb, body)
-    result["wheel_detection"] = {w: {k: v for k, v in r.items() if k not in ("points", "axes_cv")} for w, r in rims.items()}
+    result["wheel_detection"] = {w: {k: v for k, v in r.items() if k not in ("points", "axes_cv", "lip_points")} for w, r in rims.items()}
     if len(rims) < 2:
         result["status"] = "camera not fitted"
         result["reason"] = (f"rim ellipses found for {len(rims)} wheel(s) ({', '.join(rims) or 'none'}); two wheels are "
@@ -601,6 +616,14 @@ def compare_one(ph, cage):
                 if k in r3:
                     sys_terms[k].append(("camera distance (no EXIF)", r3[k] - base3d[k]))
     if ph["kind"] == "side":
+        for hh in H_RANGE:
+            xs = fit["x"].copy()
+            xs[5] = hh
+            ft = fit_camera(ph, rgb, body, cam.f, cx, cy, h0=hh, x_start=xs)
+            r3 = remeasure(ft["cam"], ft)
+            for k in base3d:
+                if k in r3:
+                    sys_terms[k].append(("camera height (unknown, 0.4-1.6 m)", r3[k] - base3d[k]))
         for y0 in (-YAW_TEST, YAW_TEST):
             ft = fit_camera(ph, rgb, body, cam.f, cx, cy, yaw0=y0, x_start=fit["x"])
             r3 = remeasure(ft["cam"], ft)

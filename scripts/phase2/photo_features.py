@@ -232,7 +232,7 @@ def snap_to_edge(grey, uv, direction, search=12, sigma=1.0):
     return float(uv[0] + t * d[0]), float(uv[1] + t * d[1]), float(t)
 
 
-def detect_rim_ellipse(grey, center, r_tire_px, rng=None, iters=600, r_lo=0.55, r_hi=0.95, tol=None):
+def detect_rim_ellipse(grey, center, r_tire_px, rng=None, iters=600, r_lo=0.55, r_hi=0.95, tol=None, polarity=True):
     """Rim-lip ellipse by RANSAC on Canny edges in an annulus around `center`, keeping only edge pixels
     whose gradient is within 35 deg of radial (spokes give tangential gradients and are rejected).
     Returns dict(center, axes (semi), angle_deg, n_inliers, rms_px) or None."""
@@ -250,8 +250,11 @@ def detect_rim_ellipse(grey, center, r_tire_px, rng=None, iters=600, r_lo=0.55, 
     if len(xs) < 20:
         return None
     gxx, gyy = gx[ys, xs], gy[ys, xs]
-    cosang = np.abs(gxx * dx + gyy * dy) / (np.hypot(gxx, gyy) * r + 1e-9)
-    keep = cosang > math.cos(math.radians(35))
+    dot = gxx * dx + gyy * dy
+    cosang = np.abs(dot) / (np.hypot(gxx, gyy) * r + 1e-9)
+    # radial gradient, and brighter towards the centre (wheel face inside, black tyre outside): rejects spokes
+    # (tangential gradients) and the tyre's outline against the body or ground (brighter outside)
+    keep = (cosang > math.cos(math.radians(35))) & ((dot < 0) if polarity else True)
     pts = np.c_[xs[keep], ys[keep]].astype(np.float32)
     if len(pts) < 20:
         return None
@@ -294,7 +297,7 @@ def ellipse_distance(pts, c, axes, ang_deg):
     return (q - 1) * np.sqrt(a * b)
 
 
-def find_wheel(grey, contact_uv, r_range, n_scales=14, rng=None):
+def find_wheel(grey, contact_uv, r_range, n_scales=14, rng=None, polarity=True):
     """Locate a wheel's rim-lip ellipse from its tyre contact point: try tyre radii over `r_range` (px),
     guess the centre one radius above the contact, run detect_rim_ellipse, and keep the candidate whose
     inliers cover the largest fraction of its circumference (rms < 2.5 px). Returns the ellipse dict
@@ -302,16 +305,17 @@ def find_wheel(grey, contact_uv, r_range, n_scales=14, rng=None):
     best = None
     for r in np.geomspace(r_range[0], r_range[1], n_scales):
         el = detect_rim_ellipse(grey, (contact_uv[0], contact_uv[1] - r), r, rng=rng or np.random.default_rng(7),
-                                iters=400, r_lo=0.5, r_hi=0.95)
+                                iters=400, r_lo=0.5, r_hi=0.95, polarity=polarity)
         if el is None or el["rms_px"] > 2.5:
             continue
         circ = math.pi * (3 * sum(el["axes"]) - math.sqrt((3 * el["axes"][0] + el["axes"][1]) * (el["axes"][0] + 3 * el["axes"][1])))
         cov = el["n_inliers"] / max(circ, 1)
-        # the rim must sit above the contact by roughly its tyre radius
+        # geometry: the tyre bottom lies about one tyre radius below the rim centre, and the rim-lip radius is
+        # ~0.76 of the tyre radius (0.246 / 0.323 m), so contact depth / rim radius should be ~1.3 (1.15-1.55)
         dv = contact_uv[1] - el["center"][1]
-        if not (0.6 * max(el["axes"]) < dv < 2.0 * max(el["axes"])):
+        if not (1.15 * max(el["axes"]) < dv < 1.55 * max(el["axes"])) or cov < 0.3:
             continue
-        if best is None or cov > best["coverage"]:
+        if best is None or el["n_inliers"] > best["n_inliers"]:
             el["coverage"], el["r_tire_guess"] = float(cov), float(r)
             best = el
     return best
@@ -367,3 +371,24 @@ def refine_rim_radial(grey, el, n_rays=72, band=(0.80, 1.20), iters=3):
     out.update(center=[float(c[0]), float(c[1])], axes=[float(a), float(b)], angle_deg=float(ang),
                n_inliers=int(len(pts)), rms_px=float(np.sqrt(np.mean(d ** 2))), refined="radial", points=pts)
     return out
+
+
+def well_to_body_edge(lab, p0, p1, body_lab, run=2, n=None):
+    """Walk from p0 (inside the dark wheel well, just above the tyre) to p1 and return the first point
+    that is closer (Lab) to the body colour than to the well colour (median of the first samples),
+    held for `run` samples; sub-sample position by linear interpolation of the two distances."""
+    L = math.hypot(p1[0] - p0[0], p1[1] - p0[1])
+    n = n or max(8, int(L * 2))
+    us, vs = np.linspace(p0[0], p1[0], n), np.linspace(p0[1], p1[1], n)
+    c = np.stack([sample_line(lab[:, :, i], p0, p1, n)[2] for i in range(3)], axis=1)
+    well = np.median(c[:3], axis=0)
+    if np.linalg.norm(well - body_lab) < 15:
+        return None                                   # no contrast between well and body
+    dw = np.linalg.norm(c - well, axis=1)
+    db = np.linalg.norm(c - body_lab, axis=1)
+    g = dw - db                                       # > 0 once closer to the body
+    for i in range(1, n - run):
+        if (g[i:i + run] > 0).all():
+            t = g[i - 1] / (g[i - 1] - g[i]) if g[i - 1] < 0 else 0.0
+            return float(us[i - 1] + t * (us[i] - us[i - 1])), float(vs[i - 1] + t * (vs[i] - vs[i - 1]))
+    return None
