@@ -117,14 +117,19 @@ def photo_section():
     for p in pc["photos"]:
         L += [f"### {p['id']}", "", f"- Image: `{p['path']}` (third-party; kept in the git-ignored cache; manifest id "
               f"`{p['manifest_id']}`). Shows: {p['shows']}. Size {p['image_size'][0]}×{p['image_size'][1]} px."]
-        if p.get("status") != "fitted":
+        if p.get("status") == "camera not fitted":
             L += [f"- **Camera not fitted**: {p.get('reason')}", "- Every key point: **not measurable** for that reason.", ""]
             continue
         cam = p["camera"]
+        spread = p.get("camera_fit_spread_m")
+        spread_s = f"{spread:.3f} m" if spread is not None else "not computed"
         L += [f"- Focal length: {p['focal']['source']}; f = {cam['f_px']:.0f} px.",
               f"- Fitted camera: {cam['distance_to_mid_wheelbase_m']:.1f} m from mid-wheelbase, height {cam['C_project_m'][2]:.2f} m, "
               f"yaw {cam['yaw_deg']:.1f}°. Fit residual: rim edges RMS **{cam['rim_rms_px']:.2f} px**, contact points RMS "
-              f"**{cam['contact_rms_px']:.2f} px**; camera-position spread over perturbed refits {p['camera_fit_spread_m']:.3f} m."]
+              f"**{cam['contact_rms_px']:.2f} px**; camera-position spread over perturbed refits {spread_s}."]
+        if p.get("status") == "camera fit unstable":
+            L.append(f"- **Camera fit unstable — {p.get('reason')}.** Every key point below is therefore **not measurable**; "
+                     "the column \"rejected-fit value − cage\" shows what the rejected camera would give and is not a difference.")
         if p.get("wheel_detection_warning"):
             L.append(f"- Warning: {p['wheel_detection_warning']}")
         if p.get("stability_note"):
@@ -134,7 +139,11 @@ def photo_section():
         for r in p["rows"]:
             comps = r.get("components_mm", {})
             top = max(comps, key=lambda k: abs(comps[k])) if comps else ""
-            if "diff_mm" in r:
+            if "diff_mm_rejected_fit" in r:
+                L.append(f"| {r['key_point']} | {r['axis']} | {r['plane']} | {r['photo_m']:.4f} | {r['cage_m']:.4f} | "
+                         f"{r['cage_object']} ({r['cage_class']}) | ({r['diff_mm_rejected_fit']:+.1f}, rejected fit) | "
+                         f"{r['U_mm']:.1f} | {top} | not measurable (camera fit unstable) |")
+            elif "diff_mm" in r:
                 L.append(f"| {r['key_point']} | {r['axis']} | {r['plane']} | {r['photo_m']:.4f} | {r['cage_m']:.4f} | "
                          f"{r['cage_object']} ({r['cage_class']}) | {r['diff_mm']:+.1f} | {r['U_mm']:.1f} | {top} | **{r['verdict']}** |")
             else:
@@ -143,6 +152,27 @@ def photo_section():
         for n in p.get("not_measurable", []):
             L.append(f"| {n['key_point']} | — | — | — | — | — | — | — | — | not measurable: {n['reason']} |")
         L.append("")
+    return L
+
+
+def largest_section(n=10):
+    pc = load(os.path.join(P2, "photo_comparison.json"))
+    rows = [(p["id"], r) for p in pc["photos"] for r in p.get("rows", []) if "diff_mm" in r]
+    rows.sort(key=lambda t: -abs(t[1]["diff_mm"]))
+    status = {p["id"]: p.get("status") for p in pc["photos"]}
+    L = ["## 7. Largest differences", "",
+         f"All key-point rows that have a verdict, largest |difference| first (top {n} of {len(rows)}). Images with an "
+         "unstable or missing camera fit contribute no rows: "
+         + (", ".join(f"{k} ({v})" for k, v in status.items() if v != "fitted") or "none") + ".", "",
+         "| # | image | key point | axis | cage object (class) | difference (mm) | U (mm) | verdict |",
+         "|---|---|---|---|---|---|---|---|"]
+    for i, (pid, r) in enumerate(rows[:n], 1):
+        L.append(f"| {i} | {pid} | {r['key_point']} | {r['axis']} | {r['cage_object']} ({r['cage_class']}) | "
+                 f"{r['diff_mm']:+.1f} | {r['U_mm']:.1f} | **{r['verdict']}** |")
+    dis = [(pid, r) for pid, r in rows if r["verdict"] == "disagrees"]
+    L += ["", f"Rows that **disagree** (|difference| > U): {len(dis)}"
+          + ("" if not dis else ": " + "; ".join(f"{pid} {r['key_point']} {r['axis']} ({r['diff_mm']:+.1f} mm vs U "
+                                                 f"{r['U_mm']:.1f} mm)" for pid, r in dis)) + ".", ""]
     return L
 
 
@@ -169,6 +199,7 @@ def main():
           "Coordinate mapping and the AC status: `docs/COORDINATES.md`; tests: `tests/test_coords.py`.", ""]
     L += cage_section()
     L += photo_section()
+    L += largest_section()
     extra = os.path.join(P2, "validation_tail.md")
     if os.path.exists(extra):
         L += [open(extra, encoding="utf-8").read().strip(), ""]

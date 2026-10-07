@@ -53,6 +53,8 @@ OUT_JSON = os.path.join(ROOT, "docs", "phase2", "photo_comparison.json")
 D_NOMINAL, D_RANGE = 30.0, (10.0, 100.0)   # side views without EXIF: assumed camera distance (m)
 YAW_TEST = math.radians(3.0)               # side views: yaw uncertainty tested by refitting at +-3 deg
 H_NOMINAL, H_RANGE = 0.9, (0.4, 1.6)       # side views: camera height (m) is not determined by the wheels; assumed
+# camera-fit acceptance: rim-lip and contact residuals must be at the level of edge localisation
+GATE_RIM_RMS_PX, GATE_CONTACT_RMS_PX = 2.0, 3.0
 OVL = os.path.join(ROOT, "cache", "phase2", "overlays")
 
 
@@ -718,7 +720,24 @@ def compare_one(ph, cage):
     if "beltline_mid" in measured_names:
         nm.append({"key_point": "beltline", "verdict": "not measurable",
                    "reason": "measured in the image (see beltline_mid row) but the cage has no beltline to compare with"})
-    result.update(status="fitted", calibration=calib, camera_fit_spread_m=cam_spread, rows=rows, not_measurable=nm,
+    status = "fitted"
+    bad = []
+    if fit["rim_rms_px"] > GATE_RIM_RMS_PX:
+        bad.append(f"rim-lip residual {fit['rim_rms_px']:.2f} px > {GATE_RIM_RMS_PX} px")
+    if fit["contact_rms_px"] > GATE_CONTACT_RMS_PX:
+        bad.append(f"contact residual {fit['contact_rms_px']:.2f} px > {GATE_CONTACT_RMS_PX} px")
+    if bad:
+        # an isotropic pinhole camera does not explain the wheels: the numbers are kept for inspection but no
+        # key point gets a verdict, and nothing here is evidence against a published figure
+        status = "camera fit unstable"
+        result["reason"] = ("camera fit rejected: " + "; ".join(bad) + ". Key-point values below are what the "
+                            "rejected camera gives; they are not differences and carry no verdict")
+        for r in rows:
+            if "diff_mm" in r:
+                r["diff_mm_rejected_fit"] = r.pop("diff_mm")
+            r["verdict"] = "not measurable"
+            r["reason"] = "camera fit unstable"
+    result.update(status=status, calibration=calib, camera_fit_spread_m=cam_spread, rows=rows, not_measurable=nm,
                   top_profile=feats.get("_top_profile"))
     return result, (rgb, cam, fit, feats)
 
@@ -764,6 +783,7 @@ def main():
         res, extra = compare_one(ph, cage)
         if extra is not None:
             overlay(ph, *extra, cage)
+            print("  ", res["status"], res.get("reason", ""))
             print(f"   camera rim rms {res['camera']['rim_rms_px']:.2f}px inliers {res['camera']['rim_inlier_frac']:.2f} "
                   f"contact rms {res['camera']['contact_rms_px']}  dist {res['camera']['distance_to_mid_wheelbase_m']:.1f} m "
                   f"f {res['camera']['f_px']:.0f}px spread {res['camera_fit_spread_m']}")
