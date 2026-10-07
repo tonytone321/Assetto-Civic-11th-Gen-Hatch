@@ -35,7 +35,10 @@ Each item says what would settle it. Numbers are in the tables above. No data va
    None of the references is a straight front or rear view.
 6. **Images that gave no verdicts:**
    - **R2 (press photo):** an isotropic pinhole camera does not explain its two wheels, so the camera fit was rejected (§6).
-   - **R4 and R5 (Canadian Commons photos):** both are steep three-quarter views of black wheels on black tyres. The rim-lip detector did not find two acceptable rim ellipses, so their cameras were not fitted. Fitting them would need a tyre-silhouette model (a torus outline) instead of the rim-lip circle; that was not built.
+   - **R4 and R5 (Canadian Commons photos):** both are steep three-quarter views of black wheels on black tyres, and their cameras were not fitted.
+     - R4: both tyre contacts were found, but no rim-lip ellipse met the acceptance rules.
+     - R5: only one of the two tyre contacts was found on the car silhouette.
+     - Fitting them would need a tyre-silhouette model (a torus outline) instead of the rim-lip circle. That was not built.
    - R3_STATUS_SENTENCE
 7. **Assetto Corsa frame.**
    - Neither the sign of X for `WHEEL_LF` nor the longitudinal origin is confirmed, because no `user_supplied/ac_sdk/` documents were supplied.

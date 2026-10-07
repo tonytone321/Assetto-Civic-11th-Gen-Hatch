@@ -264,6 +264,7 @@ def init_pose(ph, arcs_uv, f, cx, cy):
 
 
 WHEEL_CACHE = {}
+DETECT_INFO = {}
 
 
 def detect_wheels(ph, rgb, body):
@@ -275,6 +276,10 @@ def detect_wheels(ph, rgb, body):
     arcs = sorted(pf.tire_arcs(env, len(ph["wheels"])), key=lambda a: a["contact_u"])
     Wd = rgb.shape[1]
     rims, contacts = {}, {}
+    DETECT_INFO[ph["id"]] = {"tyre_contacts_found": len(arcs), "tyre_contacts_expected": len(ph["wheels"])}
+    if len(arcs) < len(ph["wheels"]):
+        # contacts cannot be assigned to wheels by image order when one is missing
+        arcs = []
     for w, a in zip(ph["wheels"], arcs):
         el = pf.find_wheel(grey, (a["contact_u"], a["contact_v"]), (0.015 * Wd, 0.12 * Wd),
                            polarity=ph.get("rim_polarity", True))
@@ -535,8 +540,16 @@ def compare_one(ph, cage):
     result["wheel_detection"] = {w: {k: v for k, v in r.items() if k not in ("points", "axes_cv", "lip_points")} for w, r in rims.items()}
     if len(rims) < 2:
         result["status"] = "camera not fitted"
-        result["reason"] = (f"rim ellipses found for {len(rims)} wheel(s) ({', '.join(rims) or 'none'}); two wheels are "
-                            "needed to fix the camera, so no key point in this image is measurable")
+        di = DETECT_INFO.get(ph["id"], {})
+        result["detection"] = di
+        if di.get("tyre_contacts_found", 0) < di.get("tyre_contacts_expected", 2):
+            why = (f"tyre contact points found on the car silhouette: {di.get('tyre_contacts_found')} of "
+                   f"{di.get('tyre_contacts_expected')}, so the wheels cannot be identified")
+        else:
+            why = (f"both tyre contacts found, but an acceptable rim-lip ellipse for {len(rims)} wheel(s) "
+                   f"({', '.join(rims) or 'none'}): no candidate had edge support on at least 30% of the ellipse and a "
+                   "contact point 1.15-1.55 rim radii below its centre")
+        result["reason"] = why + "; two wheels are needed to fix the camera, so no key point in this image is measurable"
         return result, None
     weak = [w for w, r in rims.items() if r["coverage"] < 0.35]
     if weak:
