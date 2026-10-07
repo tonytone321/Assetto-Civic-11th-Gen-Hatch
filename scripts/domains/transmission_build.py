@@ -94,7 +94,7 @@ db.add_candidate(D,"drivetrain.flywheel_shipping_weight","Listed item (shipping)
   notes="Retailer shipping data (box dims listed); includes packaging. Use only as an upper bound for flywheel mass."))
 db.add_candidate(D,"drivetrain.differential_type","Front differential type","text","critical",db.record(value="open (bevel-gear) differential; no mechanical LSD",unit="text",cls="C",
   source_id="dt:hondapartsnow-2024-civic-differential",locator="listing 'Part Number: 41100-57A-000'",
-  evidence="2024 Honda Civic Differential Complete Part Number: 41100-57A-000 … Other Name Differential Case … Fits the following 2024 Honda Civic Submodels: 5 Door 1.5T Sport Touring, 5 Door 2.0L Sport | 6MT",
+  evidence="2024 Honda Civic Differential Complete Part Number: 41100-57A-000 … Other Name : Differential Case … Fits the following 2024 Honda Civic Submodels: 5 Door 1.5T Sport Touring, 5 Door 2.0L Sport | 6MT",
   as_printed="Differential Complete 41100-57A-000",applicability=db.app("2024","US (EPC)","Sport Touring (shared with 2.0L Sport)","6MT"),confidence="high",
   notes="Same listing shows the Si gets 'Differential Assembly, Helical Limited Slip' 41200-5CD-003 and the Type R 'LSD, ASSY- HELICAL' 41200-R3P-003; the Sport Touring 6MT part is not an LSD. No Honda spec sheet lists an LSD for the hatchback. Brake-based yaw control is separate: see drivetrain.agile_handling_assist."))
 db.add_candidate(D,"drivetrain.agile_handling_assist","Agile Handling Assist (brake-based yaw-moment control) fitted","bool","medium",db.record(value=True,unit="bool",cls="A",

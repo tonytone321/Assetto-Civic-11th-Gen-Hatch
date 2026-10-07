@@ -112,7 +112,7 @@ APP_US22 = db.app("2022", "US", "Sport Touring", "6MT and CVT",
 def add_sources(d, ids):
     for sid in ids:
         s = SRC[sid]
-        db.add_source(d, sid, s["title"], s["url"], s["publisher"], s["cls"], accessed=TODAY,
+        db.add_source(d, sid, s["title"], s["url"], s["publisher"], s["cls"], accessed=None,
                       access_method="static" if not sid.startswith("civicxi") else "static",
                       applicability=s["applicability"], notes=s["notes"], cache_file=s["cache_file"])
 

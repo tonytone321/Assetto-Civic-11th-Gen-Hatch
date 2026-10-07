@@ -66,9 +66,27 @@ def load_or_new(domain, title=""):
             "sources": {}, "parameters": {}}
 
 
+def _content_date(d):
+    """Deterministic 'updated' date: the latest `accessed` date among the file's sources."""
+    dates = [s.get("accessed") for s in d.get("sources", {}).values() if s.get("accessed")]
+    return max(dates) if dates else None
+
+
 def save(d, path=None):
-    d["updated"] = today()
+    """Write a domain file. `updated` is deterministic: kept from disk when nothing else changed,
+    otherwise the latest source access date (today only for a file with no dated sources)."""
     p = path or path_for(d["domain"])
+    old = None
+    if os.path.exists(p):
+        try:
+            old = load(p)
+        except ValueError:
+            old = None
+    strip = lambda x: {k: v for k, v in x.items() if k != "updated"}
+    if old is not None and strip(old) == strip(d) and old.get("updated"):
+        d["updated"] = old["updated"]
+    else:
+        d["updated"] = _content_date(d) or d.get("as_of") or (old or {}).get("updated") or today()
     os.makedirs(os.path.dirname(p), exist_ok=True)
     with open(p, "w", encoding="utf-8") as f:
         json.dump(d, f, indent=2, ensure_ascii=False)
@@ -82,13 +100,30 @@ def app(year, market, trim, gearbox, body="hatchback", engine="1.5T", notes=""):
             "gearbox": gearbox, "engine": engine, "notes": notes}
 
 
+def cache_date(cache_file):
+    """Date a cached source was opened: the FETCHED header written by fetch_page.py, else the
+    cached file's modification date. None if there is no cached copy."""
+    if not cache_file:
+        return None
+    p = os.path.join(ROOT, cache_file)
+    if not os.path.exists(p):
+        return None
+    if p.endswith(".txt"):
+        with open(p, encoding="utf-8", errors="replace") as f:
+            for _ in range(6):
+                line = f.readline()
+                if line.startswith("FETCHED:"):
+                    return line.split(":", 1)[1].strip()[:10]
+    return datetime.datetime.utcfromtimestamp(os.path.getmtime(p)).date().isoformat()
+
+
 def add_source(d, sid, title, url, publisher, cls, accessed=None, access_method="static",
                applicability="", notes="", cache_file=None):
     if cls not in CLASSES:
         raise ValueError(f"bad class {cls}")
     d.setdefault("sources", {})[sid] = {
         "title": title, "url": url, "publisher": publisher, "class": cls,
-        "accessed": accessed or today(), "access_method": access_method,
+        "accessed": accessed or cache_date(cache_file) or today(), "access_method": access_method,
         "applicability": applicability, "notes": notes, "cache_file": cache_file,
     }
     return sid
@@ -145,9 +180,11 @@ def add_candidate(d, key, description, unit, impact, rec, replace_same_source=Tr
                            if not (c.get("source_id") == rec["source_id"]
                                    and c.get("locator") == rec.get("locator"))]
     if rec.get("status") == "unknown":
-        # an unknown placeholder is dropped once a real candidate exists, and vice versa
+        # an unknown placeholder is dropped once a real candidate exists, and vice versa;
+        # a new unknown replaces an older unknown placeholder (re-running a builder is idempotent)
         if any(c.get("status") != "unknown" for c in p["candidates"]):
             return p
+        p["candidates"] = []
     else:
         p["candidates"] = [c for c in p["candidates"] if c.get("status") != "unknown"]
     p["candidates"].append(rec)

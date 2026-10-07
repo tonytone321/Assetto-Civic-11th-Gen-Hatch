@@ -31,9 +31,10 @@ BUILDERS = [
     ("scripts/domains/drivetrain_build.py", []),  # extends drivetrain.json
     ("scripts/domains/steering_build.py", ["vehicle_data/steering.json"]),
     ("scripts/domains/suspension_build.py", ["vehicle_data/suspension.json", "vehicle_data/alignment.json"]),
-    ("scripts/domains/hardpoints_estimate.py", ["vehicle_data/hardpoints.json"]),
     ("scripts/domains/wheels_tires_brakes_aero_build.py", ["vehicle_data/wheels.json", "vehicle_data/tires.json",
                                                            "vehicle_data/brakes.json", "vehicle_data/aero.json"]),
+    ("scripts/resolve.py", []),  # hardpoints read resolved wheelbase, tracks and tire size
+    ("scripts/domains/hardpoints_estimate.py", ["vehicle_data/hardpoints.json"]),
     ("scripts/domains/perf_targets.py", ["vehicle_data/validation_targets.json"]),
     ("scripts/domains/visual_build.py", ["references/manifest.json", "vehicle_data/paint.json",
                                          "vehicle_data/dashboard.json"]),

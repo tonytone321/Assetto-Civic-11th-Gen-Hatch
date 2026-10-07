@@ -184,7 +184,7 @@ Research log: `docs/research_log/04_engine.md`.
 | `engine.stroke` | 0.0895 m | confirmed | A | high | `eng:hondanews-ca-2024-hatch-specs` | 2 |
 | `engine.throttle` | Drive-by-wire (electronic throttle) | confirmed | A | high | `eng:hondanews-ca-2023-hatch-specs` | 1 |
 | `engine.torque_at_power_peak` | 213.627 N*m (range 212.559–214.695) | confirmed | D | high | derived | 1 |
-| `engine.torque_curve_stock_6mt` | — | unknown | — | none | — | 2 |
+| `engine.torque_curve_stock_6mt` | — | unknown | — | none | — | 1 |
 | `engine.torque_max` | 239.98 N*m | confirmed | A | high | `eng:hondanews-ca-2024-hatch-specs` | 5 |
 | `engine.torque_max_rpm_high` | 4500 rpm | confirmed | A | high | `eng:hondanews-ca-2024-hatch-specs` | 5 |
 | `engine.torque_max_rpm_low` | 1700 rpm | confirmed | A | high | `eng:hondanews-ca-2024-hatch-specs` | 5 |

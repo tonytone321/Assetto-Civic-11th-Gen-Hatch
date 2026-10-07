@@ -35,23 +35,24 @@ SEED = 20261003
 
 
 # ----------------------------------------------------------------- published inputs
-def resolved(key, fallback, fallback_src):
-    """Take the resolved value if the coordinator has resolved it, else the cited fallback."""
+def resolved(key):
+    """Resolved database value (run scripts/resolve.py first). No typed fallback: a missing
+    input stops the build instead of silently using a hand-copied number."""
     p = os.path.join(ROOT, "vehicle_data", "_resolved.json")
-    try:
-        r = json.load(open(p, encoding="utf-8"))["parameters"][key]
-        if r.get("value") is not None:
-            return r["value"], f"{key} from vehicle_data/_resolved.json (source {r.get('source_id')})"
-    except (OSError, KeyError, ValueError):
-        pass
-    return fallback, f"{key} fallback {fallback} m ({fallback_src})"
+    r = json.load(open(p, encoding="utf-8"))["parameters"].get(key) or {}
+    if r.get("value") is None:
+        sys.exit(f"hardpoints_estimate: {key} is not resolved; run scripts/resolve.py after the dimension/tire builders")
+    return r["value"], f"{key} from vehicle_data/_resolved.json (source {r.get('source_id')})"
 
 
-WB, WB_SRC = resolved("dimensions.wheelbase", 2.735, "hondanews.ca 2024 Civic Hatchback Specifications, 'Wheelbase (mm) 2735'")
-TF, TF_SRC = resolved("dimensions.track_front", 1.536, "hondanews.ca 2024, 'Track – front/rear (mm) 1536/1565'")
-TR, TR_SRC = resolved("dimensions.track_rear", 1.565, "hondanews.ca 2024, 'Track – front/rear (mm) 1536/1565'")
-# tyre 235/40R18 (hondanews.ca 2024 'All-season tires P235/40 R18 91W'); radii computed, not typed
-R_FREE = (18 * 0.0254) / 2 + 0.235 * 0.40
+WB, WB_SRC = resolved("dimensions.wheelbase")
+TF, TF_SRC = resolved("dimensions.track_front")
+TR, TR_SRC = resolved("dimensions.track_rear")
+# free tyre radius from the resolved size fields (235/40R18: hondanews.ca 2024 'All-season tires P235/40 R18 91W')
+_RIM, _ = resolved("tires.rim_diameter")
+_SW, _ = resolved("tires.section_width")
+_AR, _ = resolved("tires.aspect_ratio")
+R_FREE = _RIM / 2 + _SW * _AR
 TYRE_DEFL = (0.008, 0.022)          # static deflection assumption (class E)
 
 INPUTS = {
@@ -183,7 +184,7 @@ def run():
     basis.update({"rear." + n: c["basis"] for n, c in REAR.items()})
 
     out = {"domain": "hardpoints", "title": "Suspension hard points (left side, vehicle coordinates)", "schema_version": 1,
-           "updated": db.today(),
+           "updated": max(db.load(f).get("updated", "") for f in ("dimensions", "tires")),  # newest input file date
            "generator": {"script": "scripts/domains/hardpoints_estimate.py", "samples": N_SAMPLES, "seed": SEED,
                          "method": "uniform Monte-Carlo over the stated constraint ranges; value = point from mid-range constraints; range = per-coordinate min/max over samples",
                          "frame": "origin on ground at centreline below front axle; +X right, +Y forward, +Z up; metres; LEFT side (right = mirror X -> -X)"},

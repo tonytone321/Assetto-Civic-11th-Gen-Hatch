@@ -320,6 +320,7 @@ for k, desc, u, imp in (
                         "Get a four-wheel alignment printout (before/after) from a Honda dealer or an alignment shop: it shows Honda's spec window (min/nominal/max) and the car's actual values."),
         applicability=TARGET,
         notes="Lead (not recorded as a value): the 10th-generation Civic spec quoted on civicx.com was front camber -0.8..+0.2 deg, caster 4.8..5.8 deg, rear camber -2.0..-0.5 deg, rear toe-in 0.04..0.16 deg (10th gen is excluded; 11th gen not verified).")]}
+a["as_of"] = "2026-10-03"  # date the alignment searches were made (no dated sources: every record is unknown)
 db.save(a, os.path.join(V, "alignment.json"))
 
 # ================================================================== steering unknowns
