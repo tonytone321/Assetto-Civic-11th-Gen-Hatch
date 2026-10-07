@@ -13,6 +13,8 @@ HERE = os.path.dirname(os.path.abspath(__file__))
 ROOT = os.path.dirname(os.path.dirname(HERE))
 sys.path.insert(0, os.path.join(ROOT, "scripts"))
 import resolve  # noqa: E402
+sys.path.insert(0, HERE)
+from compare_photos import GATE_CONTACT_RMS_PX, GATE_RIM_RMS_PX  # noqa: E402
 
 P2 = os.path.join(ROOT, "docs", "phase2")
 OUT = os.path.join(ROOT, "docs", "MODEL_VALIDATION.md")
@@ -109,7 +111,10 @@ def photo_section():
          "lie on, and compared with the cage object built from the database. Uncertainty U = 2σ, where σ is the RSS of: "
          "localisation (pixel accuracy × size of a pixel at the car), camera-fit stability (refits from perturbed starts), "
          "lens distortion (refit at ±k1), unknown principal point (crop), the plane assumption (plane shifted by its stated "
-         "tolerance) and, for views without EXIF, the unknown camera distance, height and yaw. **Agrees** = |difference| ≤ U.",
+         "tolerance) and, for views without EXIF, the unknown camera distance, height and yaw. **Agrees** = |difference| ≤ U. "
+         f"A camera fit is accepted only if the rim-edge RMS is ≤ {GATE_RIM_RMS_PX:g} px and the contact-point RMS ≤ "
+         f"{GATE_CONTACT_RMS_PX:g} px; otherwise every key point of that image is *not measurable* and its values are shown "
+         "for inspection only.",
          "", "None of these images is a photograph of the target car, and none is straight-on with a known camera position "
          "(none were supplied). **Image R1 is the same studio render Phase 1 measured**, so for photo-derived cage items it tests "
          "Phase 1's orthographic simplification rather than giving an independent check; its comparisons with *published* "

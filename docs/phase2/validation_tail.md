@@ -4,7 +4,7 @@ Each item says what would settle it. Numbers are in the tables above. No data va
 
 1. **Ride height (wheel-centre height).**
    - The cage puts every wheel centre at `tires.loaded_radius`. That is an estimate (class E), used because no measured wheel-centre height was supplied.
-   - The render (R1) puts both axles slightly higher. This agrees within U, but it is the only image with a stable camera fit that shows the wheels.
+   - The render (R1) puts both axles slightly higher. This agrees within U, but R1 is the only image whose camera fit was accepted, and it is a CGI render, not a photograph.
    - Settled by: ground-to-hub-centre height measured at each wheel, entered in `vehicle_data/user_measurements.json`.
 2. **Windshield header.**
    - Phase 1 (3-segment fit to the front of the top profile) and Phase 2 (4-segment fit to the whole profile) place the windshield-to-roof break at different points on the same render. The difference in Y is larger than U.
@@ -39,7 +39,9 @@ Each item says what would settle it. Numbers are in the tables above. No data va
      - R4: both tyre contacts were found, but no rim-lip ellipse met the acceptance rules.
      - R5: only one of the two tyre contacts was found on the car silhouette.
      - Fitting them would need a tyre-silhouette model (a torus outline) instead of the rim-lip circle. That was not built.
-   - R3_STATUS_SENTENCE
+   - **R3 (Queens, EXIF focal length):** the best independent image, a real Sport Touring shot with a long lens. Its camera fit was nevertheless rejected (§6).
+     - On both wheels the rim detector fitted the inner ring where the spokes meet the dark barrel. It missed the rim lip, which on this wheel is a thin bright machined line between a dark barrel and a black tyre. As a result, the rim and contact residuals are far above the acceptance limits.
+     - Two other detectors were tried and discarded because they also failed on this image: a whole-loop edge integral and a Hessian ridge integral. Getting a fit would have needed tuning to this one photo.
 7. **Assetto Corsa frame.**
    - Neither the sign of X for `WHEEL_LF` nor the longitudinal origin is confirmed, because no `user_supplied/ac_sdk/` documents were supplied.
    - `scripts/blender/coords.py:project_to_ac` refuses to convert until both are given.
