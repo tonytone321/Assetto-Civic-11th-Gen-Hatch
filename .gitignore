@@ -4,3 +4,7 @@ cache/
 __pycache__/
 *.pyc
 .venv/
+
+# Phase 2 large build outputs
+blender/_build/
+*.blend1

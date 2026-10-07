@@ -1,0 +1,111 @@
+{
+ "tolerance_m": 2e-06,
+ "tolerance_basis": "float32 coordinate storage in Blender",
+ "blender": "5.2.2 LTS",
+ "checks": [
+  {
+   "check": "length (body box Y extent)",
+   "key": "dimensions.length",
+   "database": 4.529,
+   "cage": 4.528999924659729,
+   "diff_m": -7.534027091082862e-08,
+   "pass": true,
+   "note": "REF_body_box"
+  },
+  {
+   "check": "width (body box X extent)",
+   "key": "dimensions.width_body",
+   "database": 1.802,
+   "cage": 1.8020000457763672,
+   "diff_m": 4.577636714131472e-08,
+   "pass": true,
+   "note": "REF_body_box"
+  },
+  {
+   "check": "height (body box Z extent)",
+   "key": "dimensions.height",
+   "database": 1.415,
+   "cage": 1.4149999618530273,
+   "diff_m": -3.814697269177714e-08,
+   "pass": true,
+   "note": "REF_body_box"
+  },
+  {
+   "check": "box front face Y = front overhang",
+   "key": "dimensions.overhang_front",
+   "database": 0.9363414092999305,
+   "cage": 0.936341404914856,
+   "diff_m": -4.385074525714572e-09,
+   "pass": true,
+   "note": "photo-derived placement"
+  },
+  {
+   "check": "wheelbase (contact lines)",
+   "key": "dimensions.wheelbase",
+   "database": 2.735,
+   "cage": 2.734999895095825,
+   "diff_m": -1.0490417468034252e-07,
+   "pass": true,
+   "note": "REF_contact_line_front/rear"
+  },
+  {
+   "check": "front track (wheel centres FR - FL)",
+   "key": "dimensions.track_front",
+   "database": 1.536,
+   "cage": 1.5360000133514404,
+   "diff_m": 1.3351440397713077e-08,
+   "pass": true,
+   "note": "REF_wheel_center_FL/FR"
+  },
+  {
+   "check": "rear track (wheel centres RR - RL)",
+   "key": "dimensions.track_rear",
+   "database": 1.565,
+   "cage": 1.565000057220459,
+   "diff_m": 5.7220459037665705e-08,
+   "pass": true,
+   "note": "REF_wheel_center_RL/RR"
+  },
+  {
+   "check": "wheelbase (wheel centres FL - RL)",
+   "key": "dimensions.wheelbase",
+   "database": 2.735,
+   "cage": 2.734999895095825,
+   "diff_m": -1.0490417468034252e-07,
+   "pass": true,
+   "note": "REF_wheel_center_FL/RL"
+  },
+  {
+   "check": "front track (contact line)",
+   "key": "dimensions.track_front",
+   "database": 1.536,
+   "cage": 1.5360000133514404,
+   "diff_m": 1.3351440397713077e-08,
+   "pass": true,
+   "note": "REF_contact_line_front"
+  },
+  {
+   "check": "rear track (contact line)",
+   "key": "dimensions.track_rear",
+   "database": 1.565,
+   "cage": 1.565000057220459,
+   "diff_m": 5.7220459037665705e-08,
+   "pass": true,
+   "note": "REF_contact_line_rear"
+  },
+  {
+   "check": "width over mirrors",
+   "key": "dimensions.width_mirrors",
+   "database": 2.081,
+   "cage": 2.0810000896453857,
+   "diff_m": 8.964538578126735e-08,
+   "pass": true,
+   "note": "REF_mirror_width_L/R"
+  }
+ ],
+ "custom_property_checks": {
+  "n": 101,
+  "failed": []
+ },
+ "pass": true
+}
