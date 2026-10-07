@@ -4,11 +4,11 @@
 
 Each row is the **effective** record chosen by `scripts/resolve.py` (precedence: user measurement > A > B/C > D > E > F; then closest applicability to 2024 / Canada / Sport Touring / 6MT). `n` = number of candidate records kept. Class: A manufacturer/government, B measurement, C third party, D derived by script, E engineering estimate, F fallback. Status `unknown` means not found after the primary sources and ~5 searches; see `docs/UNCERTAINTIES.md`.
 
-**449 parameters**: 221 confirmed, 128 estimated, 100 unknown. By class: A: 156, C: 49, D: 83, E: 61, None: 100. Conflicts: 11 (see `docs/CONFLICTS.md`).
+**449 parameters**: 221 confirmed, 128 estimated, 100 unknown. By class: A: 156, C: 49, D: 83, E: 61, None: 100. Conflicts: 12 (see `docs/CONFLICTS.md`).
 
 ## Validation
 
-`scripts/validate_db.py`: **0 errors, 1 warnings**; 320 evidence quotes re-found in cached page text, 0 not found (listed as warnings).
+`scripts/validate_db.py`: **0 errors, 1 warnings**; 337 evidence quotes re-found in cached page text, 0 not found (listed as warnings).
 
 | cross-check | result | detail |
 |---|---|---|
@@ -62,12 +62,12 @@ Research log: `docs/research_log/02_dimensions.md`.
 | `dimensions.ground_clearance` | 0.134 m | confirmed | A | medium | `dim:hondanews-ca-2024-hatch-specs` | 2 |
 | `dimensions.headroom_front` | 0.956 m | confirmed | A | high | `dim:hondanews-ca-2024-hatch-specs` | 2 |
 | `dimensions.headroom_rear` | 0.942 m | confirmed | A | high | `dim:hondanews-ca-2024-hatch-specs` | 2 |
-| `dimensions.height` | 1.415 m | confirmed | A | high | `dim:hondanews-ca-2024-hatch-specs` | 2 |
+| `dimensions.height` | 1.415 m | confirmed | A | high | `dim:hondanews-ca-2024-hatch-specs` | 6 |
 | `dimensions.hip_room_front` | 1.38 m | confirmed | A | high | `dim:hondanews-ca-2024-hatch-specs` | 2 |
 | `dimensions.hip_room_rear` | 1.243 m | confirmed | A | high | `dim:hondanews-ca-2024-hatch-specs` | 2 |
 | `dimensions.legroom_front` | 1.074 m | confirmed | A | high | `dim:hondanews-ca-2024-hatch-specs` | 2 |
 | `dimensions.legroom_rear` | 0.95 m | confirmed | A | high | `dim:hondanews-ca-2024-hatch-specs` | 2 |
-| `dimensions.length` ⚠ | 4.529 m | confirmed | A | high | `dim:hondanews-ca-2024-hatch-specs` | 4 |
+| `dimensions.length` ⚠ | 4.529 m | confirmed | A | high | `dim:hondanews-ca-2024-hatch-specs` | 6 |
 | `dimensions.length_with_licence_bracket` | 4.547 m | confirmed | A | high | `dim:hondanews-ca-2023-hatch-specs` | 2 |
 | `dimensions.licence_bracket_depth` | 0.018 m (range 0.016–0.02) | confirmed | D | high | derived | 1 |
 | `dimensions.mirror_protrusion_per_side` | 0.1395 m (range 0.1385–0.1405) | confirmed | D | medium | derived | 1 |
@@ -80,10 +80,10 @@ Research log: `docs/research_log/02_dimensions.md`.
 | `dimensions.rear_tyre_outer_margin_per_side` | 0.001 m (range -0.004–0.006) | estimated | D | medium | derived | 1 |
 | `dimensions.shoulder_room_front` | 1.447 m | confirmed | A | high | `dim:hondanews-ca-2024-hatch-specs` | 2 |
 | `dimensions.shoulder_room_rear` | 1.422 m | confirmed | A | high | `dim:hondanews-ca-2024-hatch-specs` | 2 |
-| `dimensions.track_front` | 1.536 m | confirmed | A | high | `dim:hondanews-ca-2024-hatch-specs` | 3 |
-| `dimensions.track_rear` | 1.565 m | confirmed | A | high | `dim:hondanews-ca-2024-hatch-specs` | 3 |
-| `dimensions.wheelbase` | 2.735 m | confirmed | A | high | `dim:hondanews-ca-2024-hatch-specs` | 3 |
-| `dimensions.width_body` | 1.802 m | confirmed | A | high | `dim:hondanews-ca-2024-hatch-specs` | 2 |
+| `dimensions.track_front` | 1.536 m | confirmed | A | high | `dim:hondanews-ca-2024-hatch-specs` | 6 |
+| `dimensions.track_rear` | 1.565 m | confirmed | A | high | `dim:hondanews-ca-2024-hatch-specs` | 6 |
+| `dimensions.wheelbase` | 2.735 m | confirmed | A | high | `dim:hondanews-ca-2024-hatch-specs` | 6 |
+| `dimensions.width_body` | 1.802 m | confirmed | A | high | `dim:hondanews-ca-2024-hatch-specs` | 4 |
 | `dimensions.width_mirrors` | 2.081 m | confirmed | A | medium | `dim:hondanews-ca-2023-hatch-specs` | 2 |
 | `dimensions.width_mirrors_folded` | 1.9 m | confirmed | A | medium | `dim:hondanews-ca-2023-hatch-specs` | 1 |
 | `proportions.arch_gap_front` | 0.389919 m (range 0.362825–0.417014) | estimated | D | low | `prop:hic-2022-hatch-strg-profile` | 1 |
@@ -129,7 +129,7 @@ Research log: `docs/research_log/03_mass_inertia.md`.
 | `mass.check_rollover_risk_from_ssf` | 0.0951313 (range 0.0942713–0.0960058) | estimated | D | high | derived | 1 |
 | `mass.check_yaw_over_roll` | 4.47098 (range 4.38–6) | estimated | D | medium | derived | 1 |
 | `mass.corner_weights` | — | unknown | — | none | — | 1 |
-| `mass.curb_mass` | 1382 kg | confirmed | A | high | `mass:hondanews-ca-2024-hatch-specs` | 5 |
+| `mass.curb_mass` ⚠ | 1382 kg | confirmed | A | high | `mass:hondanews-ca-2024-hatch-specs` | 5 |
 | `mass.front_axle_mass` | 815.38 kg (range 808.47–822.29) | estimated | D | high | derived | 1 |
 | `mass.front_fraction` | 0.59 | confirmed | A | high | `mass:hondainfocenter-us-2024-hatch-specs` | 3 |
 | `mass.fuel_capacity` ⚠ | 0.046 m3 | confirmed | A | high | `mass:hondanews-ca-2024-hatch-specs` | 3 |

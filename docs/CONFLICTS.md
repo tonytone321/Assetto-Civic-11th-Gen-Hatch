@@ -23,7 +23,12 @@ Listed when two or more user/A/B/C candidates for the same parameter differ by m
 
 - **Selected:** 4.529 m — class A, `dim:hondanews-ca-2024-hatch-specs` ({"year": "2024", "market": "CA", "trim": "Sport Touring (table also covers Sport)", "body": "hatchback", "gearbox": "6MT and CVT", "engine": "1.5T", "notes": "Honda Canada 2024 table; trim columns identical for these rows"})
   - reason given: Canadian 2024 figure; the 2022/2023 Canadian tables identify 4529 mm as the length without the front licence bracket, i.e. the body itself. US 179.0 in (4546.6 mm) equals the with-bracket figure 4547 mm.
+- Other: 4.5466 m — class A, `dim:hondanews-us-2024-hatch-specs` ({"year": "2024", "market": "US", "trim": "Sport Touring", "body": "hatchback", "gearbox": "6MT and CVT", "engine": "1.5T", "notes": "US market; Canadian figure is selected where both exist"})
+  - note: 179.0 in = 4546.6 mm, matching Honda Canada's WITH-licence-bracket length 4547 mm (US cars carry a front plate bracket in most states). Not a disagreement about the body; kept as a candidate for the with-bracket length.
 - Other: 4.6736 m — class A, `dim:hondainfocenter-us-2024-hatch-specs` ({"year": "2024", "market": "US", "trim": "Sport Touring", "body": "hatchback", "gearbox": "6MT and CVT", "engine": "1.5T", "notes": "US market; Canadian figure is selected where both exist"})
+  - note: REJECTED: 184.0 in (4673.6 mm) is the 2024 Civic SEDAN length on the same site (dim:hondainfocenter-us-2024-sedan-specs, 'Length 184.0 in') and contradicts hondanews.com 2024 hatchback (179.0 in) and Honda Canada (4547/4529 mm). Kept as a losing candidate; see CONFLICTS.
+- Other: 4.5466 m — class A, `dim:hondanews-us-2022-hatch-specs` ({"year": "2022", "market": "US", "trim": "Sport Touring", "body": "hatchback", "gearbox": "6MT and CVT", "engine": "1.5T", "notes": "US market, launch year"})
+  - note: 4546.6 mm = Honda Canada's with-licence-bracket length (4547 mm), as for the 2024 US figure.
 - Rule: precedence: user > A > B/C; then applicability (2024, CA, Sport Touring, 6MT); then prefer flag; then confidence
 
 ## `engine.fuel_recommended`
@@ -42,13 +47,25 @@ Listed when two or more user/A/B/C candidates for the same parameter differ by m
 
 - **Selected:** GREENSBURG, INDIANA, UNITED STATES (USA) — class A, `id:vpic` ({"year": "2024", "market": "CA (serial 4xxxxx; see notes)", "trim": "Sport Touring (vPIC)", "body": "hatchback", "gearbox": "6MT", "engine": "1.5T", "notes": ""})
 - Other: Honda Manufacturing of Indiana, Greensburg, Indiana, USA — class A, `id:hci-2022-debut` ({"year": "2022", "market": "North America", "trim": "all hatchback", "body": "hatchback", "gearbox": "all", "engine": "1.5T", "notes": ""})
+  - note: Statement covers 2022 MY onward; 2024 confirmed by vPIC candidate (plant decoded from VIN).
+- Rule: precedence: user > A > B/C; then applicability (2024, CA, Sport Touring, 6MT); then prefer flag; then confidence
+
+## `mass.curb_mass`
+
+- **Selected:** 1382 kg — class A, `mass:hondanews-ca-2024-hatch-specs` ({"year": "2024", "market": "CA", "trim": "Sport Touring", "body": "hatchback", "gearbox": "6MT", "engine": "1.5T", "notes": ""})
+- Other: 1377.11 kg — class A, `mass:hondainfocenter-us-2024-hatch-specs` ({"year": "2024", "market": "US", "trim": "Sport Touring", "body": "hatchback", "gearbox": "6MT", "engine": "1.5T", "notes": ""})
+  - note: US figure for the same trim/gearbox; 3036 lb = 1377.1 kg, about 5 kg below the Canadian 1382 kg. The difference is small (0.4 %) and may come from Canadian-market equipment or rounding/definition differences; both are kept, the Canadian value is the target-market value.
+- Other: 1377.11 kg — class A, `mass:hondanews-us-2024-hatch-specs` ({"year": "2024", "market": "US", "trim": "Sport Touring", "body": "hatchback", "gearbox": "6MT", "engine": "1.5T", "notes": ""})
+  - note: Independent Honda press document agreeing with hondainfocenter (3036 lb).
 - Rule: precedence: user > A > B/C; then applicability (2024, CA, Sport Touring, 6MT); then prefer flag; then confidence
 
 ## `mass.fuel_capacity`
 
 - **Selected:** 0.046 m3 — class A, `mass:hondanews-ca-2024-hatch-specs` ({"year": "2024", "market": "CA", "trim": "Sport, Sport Touring", "body": "hatchback", "gearbox": "CVT and 6MT", "engine": "1.5T", "notes": ""})
 - Other: 0.0469013 m3 — class A, `mass:hondainfocenter-us-2024-hatch-specs` ({"year": "2024", "market": "US", "trim": "LX, Sport, EX-L, Sport Touring", "body": "hatchback", "gearbox": "CVT and 6MT", "engine": "1.5T", "notes": ""})
+  - note: 12.39 US gal = 46.9 L; Canada prints 46 L. Same tank, different rounding/unit convention (not a conflict beyond rounding: 46 L as printed vs 46.9 L).
 - Other: 0.0469391 m3 — class A, `mass:hondanews-us-2024-hatch-specs` ({"year": "2024", "market": "US", "trim": "all hatchback trims", "body": "hatchback", "gearbox": "CVT and 6MT", "engine": "1.5T", "notes": ""})
+  - note: Rounded version of 12.39 gal.
 - Rule: precedence: user > A > B/C; then applicability (2024, CA, Sport Touring, 6MT); then prefer flag; then confidence
 
 ## `paint.name`
@@ -62,6 +79,7 @@ Listed when two or more user/A/B/C candidates for the same parameter differ by m
 
 - **Selected:** intensity = saturate(rpm*gas/REFERENCE_RPM)^GAMMA; spinning += (intensity - spinning)*(… — class A, `csp-lua-ex-turbo` ({"year": "", "market": "", "trim": "", "body": "", "gearbox": "", "engine": "", "notes": "Platform documentation (Assetto Corsa / Custom Shaders Patch); not vehicle-specific."})
 - Other: T(rpm) = power.lut(rpm) * (1 + sum_i boost_i); boost_i = MAX_BOOST * min(1, (rpm*gas/RE… — class C, `cm-torque` ({"year": "", "market": "", "trim": "", "body": "", "gearbox": "", "engine": "", "notes": "Platform documentation (Assetto Corsa / Custom Shaders Patch); not vehicle-specific."})
+  - note: Multiplier per turbo from cm-turbo CalculateMultiplier: 'var baseLevel = Math.Min(1, Math.Pow(rpm / ReferenceRpm, Gamma));' and wastegate clip 'Math.Min(Wastegate, result)'. Gas term and lag from CSP's illustrative re-implementation (csp-lua-ex-turbo: 'math.pow(math.saturateN(data.rpm * gas / rpmRef), gamma)'). Both are re-implementations; Kunos source is closed. Implication for Phase 4: power.lut
 - Rule: precedence: user > A > B/C; then applicability (2024, CA, Sport Touring, 6MT); then prefer flag; then confidence
 
 ## `tires.size`
@@ -74,5 +92,6 @@ Listed when two or more user/A/B/C candidates for the same parameter differ by m
 
 - **Selected:** machined face with black inserts (2024 CA wording); 2022: 'machined-tinted with black i… — class A, `d7:hondanews-ca-2024-hatch-specs` ({"year": "2024", "market": "CA", "trim": "Sport Touring", "body": "hatchback", "gearbox": "6MT and CVT (table covers both)", "engine": "1.5T", "notes": ""})
 - Other: dark clear-coated machined face, Berlina Black inserts — class A, `d7:hondanews-us-2022-hatch-presskit` ({"year": "2022", "market": "US", "trim": "Sport Touring (hatchback)", "body": "hatchback", "gearbox": "all", "engine": "1.5T", "notes": ""})
+  - note: Canada 2022 spec PDF: '18" aluminum-alloy wheels (machined-tinted with black inserts)'. Same part number 2022-2024 per parts catalog, so design unchanged.
 - Rule: precedence: user > A > B/C; then applicability (2024, CA, Sport Touring, 6MT); then prefer flag; then confidence
 

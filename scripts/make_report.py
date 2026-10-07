@@ -169,6 +169,8 @@ def conflicts_md(conflicts):
         for o in c["others"]:
             L.append(f"- Other: {fmt(o['value'], o['unit'])} — class {o['class']}, `{o['source_id']}` "
                      f"({json.dumps(o.get('applicability'), ensure_ascii=False)})")
+            if o.get("notes"):
+                L.append(f"  - note: {o['notes'][:400]}")
         L += [f"- Rule: {c['rule']}", ""]
     return "\n".join(L) + "\n"
 

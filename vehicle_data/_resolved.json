@@ -1566,7 +1566,7 @@
       "range": null,
       "file": "vehicle_data/dimensions.json",
       "candidate_index": 0,
-      "n_candidates": 2,
+      "n_candidates": 6,
       "impact": "high",
       "description": "Overall height (unladen)",
       "applicability": {
@@ -1681,7 +1681,7 @@
       "range": null,
       "file": "vehicle_data/dimensions.json",
       "candidate_index": 0,
-      "n_candidates": 4,
+      "n_candidates": 6,
       "impact": "high",
       "description": "Overall length (body, without front licence-plate bracket)",
       "applicability": {
@@ -1957,7 +1957,7 @@
       "range": null,
       "file": "vehicle_data/dimensions.json",
       "candidate_index": 0,
-      "n_candidates": 3,
+      "n_candidates": 6,
       "impact": "high",
       "description": "Front track (18-in wheels)",
       "applicability": {
@@ -1980,7 +1980,7 @@
       "range": null,
       "file": "vehicle_data/dimensions.json",
       "candidate_index": 0,
-      "n_candidates": 3,
+      "n_candidates": 6,
       "impact": "high",
       "description": "Rear track (18-in wheels)",
       "applicability": {
@@ -2003,7 +2003,7 @@
       "range": null,
       "file": "vehicle_data/dimensions.json",
       "candidate_index": 0,
-      "n_candidates": 3,
+      "n_candidates": 6,
       "impact": "critical",
       "description": "Wheelbase",
       "applicability": {
@@ -2026,7 +2026,7 @@
       "range": null,
       "file": "vehicle_data/dimensions.json",
       "candidate_index": 0,
-      "n_candidates": 2,
+      "n_candidates": 4,
       "impact": "high",
       "description": "Overall width without mirrors",
       "applicability": {
@@ -4928,7 +4928,8 @@
         "gearbox": "6MT",
         "engine": "1.5T",
         "notes": ""
-      }
+      },
+      "conflict": true
     },
     "mass.front_axle_mass": {
       "value": 815.38,
@@ -10005,7 +10006,8 @@
             "gearbox": "6MT and CVT",
             "engine": "1.5T",
             "notes": ""
-          }
+          },
+          "notes": ""
         },
         {
           "file": "vehicle_data/dashboard.json",
@@ -10022,7 +10024,8 @@
             "gearbox": "6MT and CVT",
             "engine": "1.5T",
             "notes": "2022 launch press kit; the 10.2-inch cluster and 9-inch screen are listed for Sport Touring in the 2024 Canadian table too (no model-year change found for the cluster)."
-          }
+          },
+          "notes": ""
         }
       ],
       "rule": "precedence: user > A > B/C; then applicability (2024, CA, Sport Touring, 6MT); then prefer flag; then confidence"
@@ -10063,7 +10066,8 @@
             "gearbox": "6MT and CVT",
             "engine": "1.5T",
             "notes": ""
-          }
+          },
+          "notes": ""
         }
       ],
       "rule": "precedence: user > A > B/C; then applicability (2024, CA, Sport Touring, 6MT); then prefer flag; then confidence"
@@ -10091,6 +10095,24 @@
       "others": [
         {
           "file": "vehicle_data/dimensions.json",
+          "index": 2,
+          "value": 4.5466,
+          "unit": "m",
+          "class": "A",
+          "source_id": "dim:hondanews-us-2024-hatch-specs",
+          "applicability": {
+            "year": "2024",
+            "market": "US",
+            "trim": "Sport Touring",
+            "body": "hatchback",
+            "gearbox": "6MT and CVT",
+            "engine": "1.5T",
+            "notes": "US market; Canadian figure is selected where both exist"
+          },
+          "notes": "179.0 in = 4546.6 mm, matching Honda Canada's WITH-licence-bracket length 4547 mm (US cars carry a front plate bracket in most states). Not a disagreement about the body; kept as a candidate for the with-bracket length."
+        },
+        {
+          "file": "vehicle_data/dimensions.json",
           "index": 3,
           "value": 4.6735999999999995,
           "unit": "m",
@@ -10104,7 +10126,26 @@
             "gearbox": "6MT and CVT",
             "engine": "1.5T",
             "notes": "US market; Canadian figure is selected where both exist"
-          }
+          },
+          "notes": "REJECTED: 184.0 in (4673.6 mm) is the 2024 Civic SEDAN length on the same site (dim:hondainfocenter-us-2024-sedan-specs, 'Length 184.0 in') and contradicts hondanews.com 2024 hatchback (179.0 in) and Honda Canada (4547/4529 mm). Kept as a losing candidate; see CONFLICTS."
+        },
+        {
+          "file": "vehicle_data/dimensions.json",
+          "index": 5,
+          "value": 4.5466,
+          "unit": "m",
+          "class": "A",
+          "source_id": "dim:hondanews-us-2022-hatch-specs",
+          "applicability": {
+            "year": "2022",
+            "market": "US",
+            "trim": "Sport Touring",
+            "body": "hatchback",
+            "gearbox": "6MT and CVT",
+            "engine": "1.5T",
+            "notes": "US market, launch year"
+          },
+          "notes": "4546.6 mm = Honda Canada's with-licence-bracket length (4547 mm), as for the 2024 US figure."
         }
       ],
       "rule": "precedence: user > A > B/C; then applicability (2024, CA, Sport Touring, 6MT); then prefer flag; then confidence"
@@ -10145,7 +10186,8 @@
             "gearbox": "6MT or CVT (not split)",
             "engine": "1.5T",
             "notes": ""
-          }
+          },
+          "notes": ""
         }
       ],
       "rule": "precedence: user > A > B/C; then applicability (2024, CA, Sport Touring, 6MT); then prefer flag; then confidence"
@@ -10186,7 +10228,8 @@
             "gearbox": "not split",
             "engine": "1.5T",
             "notes": "Honda 1.5T technical release; Civic Sedan EX/Touring share the same code and ratings per the same table"
-          }
+          },
+          "notes": ""
         }
       ],
       "rule": "precedence: user > A > B/C; then applicability (2024, CA, Sport Touring, 6MT); then prefer flag; then confidence"
@@ -10227,7 +10270,68 @@
             "gearbox": "all",
             "engine": "1.5T",
             "notes": ""
-          }
+          },
+          "notes": "Statement covers 2022 MY onward; 2024 confirmed by vPIC candidate (plant decoded from VIN)."
+        }
+      ],
+      "rule": "precedence: user > A > B/C; then applicability (2024, CA, Sport Touring, 6MT); then prefer flag; then confidence"
+    },
+    {
+      "key": "mass.curb_mass",
+      "selected": {
+        "file": "vehicle_data/mass_inertia.json",
+        "index": 0,
+        "value": 1382.0,
+        "unit": "kg",
+        "class": "A",
+        "source_id": "mass:hondanews-ca-2024-hatch-specs",
+        "applicability": {
+          "year": "2024",
+          "market": "CA",
+          "trim": "Sport Touring",
+          "body": "hatchback",
+          "gearbox": "6MT",
+          "engine": "1.5T",
+          "notes": ""
+        },
+        "selection_reason": null
+      },
+      "others": [
+        {
+          "file": "vehicle_data/mass_inertia.json",
+          "index": 1,
+          "value": 1377.1064353200002,
+          "unit": "kg",
+          "class": "A",
+          "source_id": "mass:hondainfocenter-us-2024-hatch-specs",
+          "applicability": {
+            "year": "2024",
+            "market": "US",
+            "trim": "Sport Touring",
+            "body": "hatchback",
+            "gearbox": "6MT",
+            "engine": "1.5T",
+            "notes": ""
+          },
+          "notes": "US figure for the same trim/gearbox; 3036 lb = 1377.1 kg, about 5 kg below the Canadian 1382 kg. The difference is small (0.4 %) and may come from Canadian-market equipment or rounding/definition differences; both are kept, the Canadian value is the target-market value."
+        },
+        {
+          "file": "vehicle_data/mass_inertia.json",
+          "index": 2,
+          "value": 1377.1064353200002,
+          "unit": "kg",
+          "class": "A",
+          "source_id": "mass:hondanews-us-2024-hatch-specs",
+          "applicability": {
+            "year": "2024",
+            "market": "US",
+            "trim": "Sport Touring",
+            "body": "hatchback",
+            "gearbox": "6MT",
+            "engine": "1.5T",
+            "notes": ""
+          },
+          "notes": "Independent Honda press document agreeing with hondainfocenter (3036 lb)."
         }
       ],
       "rule": "precedence: user > A > B/C; then applicability (2024, CA, Sport Touring, 6MT); then prefer flag; then confidence"
@@ -10268,7 +10372,8 @@
             "gearbox": "CVT and 6MT",
             "engine": "1.5T",
             "notes": ""
-          }
+          },
+          "notes": "12.39 US gal = 46.9 L; Canada prints 46 L. Same tank, different rounding/unit convention (not a conflict beyond rounding: 46 L as printed vs 46.9 L)."
         },
         {
           "file": "vehicle_data/mass_inertia.json",
@@ -10285,7 +10390,8 @@
             "gearbox": "CVT and 6MT",
             "engine": "1.5T",
             "notes": ""
-          }
+          },
+          "notes": "Rounded version of 12.39 gal."
         }
       ],
       "rule": "precedence: user > A > B/C; then applicability (2024, CA, Sport Touring, 6MT); then prefer flag; then confidence"
@@ -10326,7 +10432,8 @@
             "gearbox": "6MT and CVT",
             "engine": "1.5T",
             "notes": ""
-          }
+          },
+          "notes": ""
         }
       ],
       "rule": "precedence: user > A > B/C; then applicability (2024, CA, Sport Touring, 6MT); then prefer flag; then confidence"
@@ -10367,7 +10474,8 @@
             "gearbox": "",
             "engine": "",
             "notes": "Platform documentation (Assetto Corsa / Custom Shaders Patch); not vehicle-specific."
-          }
+          },
+          "notes": "Multiplier per turbo from cm-turbo CalculateMultiplier: 'var baseLevel = Math.Min(1, Math.Pow(rpm / ReferenceRpm, Gamma));' and wastegate clip 'Math.Min(Wastegate, result)'. Gas term and lag from CSP's illustrative re-implementation (csp-lua-ex-turbo: 'math.pow(math.saturateN(data.rpm * gas / rpmRef), gamma)'). Both are re-implementations; Kunos source is closed. Implication for Phase 4: power.lut is the NON-boosted torque curve if turbo sections are used, or the full curve with no turbo sections."
         }
       ],
       "rule": "precedence: user > A > B/C; then applicability (2024, CA, Sport Touring, 6MT); then prefer flag; then confidence"
@@ -10408,7 +10516,8 @@
             "gearbox": "6MT and CVT",
             "engine": "1.5T",
             "notes": "US spec table, Sport Touring column (4th of LX/Sport/EX-L/Sport Touring)"
-          }
+          },
+          "notes": ""
         }
       ],
       "rule": "precedence: user > A > B/C; then applicability (2024, CA, Sport Touring, 6MT); then prefer flag; then confidence"
@@ -10449,7 +10558,8 @@
             "gearbox": "all",
             "engine": "1.5T",
             "notes": ""
-          }
+          },
+          "notes": "Canada 2022 spec PDF: '18\" aluminum-alloy wheels (machined-tinted with black inserts)'. Same part number 2022-2024 per parts catalog, so design unchanged."
         }
       ],
       "rule": "precedence: user > A > B/C; then applicability (2024, CA, Sport Touring, 6MT); then prefer flag; then confidence"

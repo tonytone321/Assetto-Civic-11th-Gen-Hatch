@@ -163,6 +163,49 @@ for key, desc, ca, us, ustxt in (("dimensions.track_front", "Front track (18-in 
         as_printed="60.5 / 61.6", applicability=US_ST24, confidence="high",
         notes="Column order LX, Sport, EX-L, Sport Touring; 18-in trims 60.5/61.6 in.")
 
+# ---- Phase 2 Step 2: every other Honda source opened for the six headline dimensions is kept as a candidate
+# (re-opened live 2026-10-07 by scripts/phase2/confirm_headline_dims.py; quotes verified against the cached pages)
+IC_APP = db.app("2024", "US", "Sport Touring", "6MT and CVT",
+                notes="Honda Information Center 2024 hatchback page. Its Length row (184.0 in) is the sedan figure, so every row "
+                      "on this page is treated with caution; these rows agree with hondanews.com and Honda Canada.")
+add("dimensions.length", "Overall length (body, without front licence-plate bracket)", "m", "high",
+    printed=(4529, "mm"), cls="A", source_id=CA22, locator="DIMENSIONS table, row 'Length (mm) - With licence bracket/without licence bracket', Sport Touring column",
+    evidence=ev(CA22, "Length (mm) - With licence bracket/without licence bracket 4547/4529 4547/4529 4547/4529"),
+    as_printed="4547/4529 (value after slash = without licence bracket)", applicability=CA_ST22, confidence="high")
+add("dimensions.length", "Overall length (body, without front licence-plate bracket)", "m", "high",
+    printed=(179.0, "in"), cls="A", source_id=US22, locator="Specifications, row 'Length', Sport Touring column",
+    evidence=ev(US22, "Length 179.0 in 179.0 in 179.0 in 179.0 in"), as_printed="179.0 in", applicability=US_ST22, confidence="medium",
+    notes="4546.6 mm = Honda Canada's with-licence-bracket length (4547 mm), as for the 2024 US figure.")
+for sid, app_, txt in ((US22, US_ST22, "Width 70.9 in 70.9 in 70.9 in 70.9 in"), (IC24, IC_APP, "Width 70.9 in 70.9 in 70.9 in 70.9 in")):
+    add("dimensions.width_body", "Overall width without mirrors", "m", "high", printed=(70.9, "in"), cls="A", source_id=sid,
+        locator="Specifications, row 'Width', Sport Touring column", evidence=ev(sid, txt), as_printed="70.9 in",
+        applicability=app_, confidence="high", notes="1800.9 mm; agrees with Honda Canada 1802 mm within print rounding.")
+for sid, app_, txt, pr in ((CA23, CA_ST23, "Height (mm) 1415 1415 1415 1415", (1415, "mm")),
+                           (CA22, CA_ST22, "Height (mm) 1415 1415 1415", (1415, "mm")),
+                           (US22, US_ST22, "Height 55.7 in 55.7 in 55.7 in 55.7 in", (55.7, "in")),
+                           (IC24, IC_APP, "Height 55.7 in 55.7 in 55.7 in 55.7 in", (55.7, "in"))):
+    add("dimensions.height", "Overall height (unladen)", "m", "high", printed=pr, cls="A", source_id=sid,
+        locator="DIMENSIONS / Specifications, row 'Height', Sport Touring column", evidence=ev(sid, txt),
+        as_printed=f"{pr[0]} {pr[1]}", applicability=app_, confidence="high")
+for sid, app_, txt, pr in ((CA23, CA_ST23, "Wheelbase (mm) 2735 2735 2735 2735", (2735, "mm")),
+                           (CA22, CA_ST22, "Wheelbase (mm) 2735 2735 2735", (2735, "mm")),
+                           (US22, US_ST22, "Wheelbase 107.7 in 107.7 in 107.7 in 107.7 in", (107.7, "in"))):
+    add("dimensions.wheelbase", "Wheelbase", "m", "critical", printed=pr, cls="A", source_id=sid,
+        locator="DIMENSIONS / Specifications, row 'Wheelbase', Sport Touring column", evidence=ev(sid, txt),
+        as_printed=f"{pr[0]} {pr[1]}", applicability=app_, confidence="high")
+for key, desc, ca, us in (("dimensions.track_front", "Front track (18-in wheels)", 1536, 60.5),
+                          ("dimensions.track_rear", "Rear track (18-in wheels)", 1565, 61.6)):
+    add(key, desc, "m", "high", printed=(ca, "mm"), cls="A", source_id=CA22,
+        locator="DIMENSIONS table, row 'Track (mm) – front/rear', Sport Touring column (3rd)",
+        evidence=ev(CA22, "Track (mm) – front/rear 1546/1575 1536/1565 1536/1565"), as_printed="1536/1565",
+        applicability=CA_ST22, confidence="high")
+    for sid, app_ in ((US22, US_ST22), (IC24, IC_APP)):
+        add(key, desc, "m", "high", printed=(us, "in"), cls="A", source_id=sid,
+            locator="Specifications, row 'Track (front/rear)', 4th column = Sport Touring",
+            evidence=ev(sid, "Track (front/rear) 60.9 in / 62.0 in 60.5 in / 61.6 in 60.9 in / 62.0 in 60.5 in / 61.6 in"),
+            as_printed="60.5 in / 61.6 in", applicability=app_, confidence="high",
+            notes="Column order LX, Sport, EX-L, Sport Touring; 18-in trims 60.5/61.6 in.")
+
 # ---- ground clearance
 add("dimensions.ground_clearance", "Minimum ground clearance, no load", "m", "medium",
     printed=(134, "mm"), cls="A", source_id=CA24, locator="DIMENSIONS table, row 'Ground clearance – no-load (mm)'",

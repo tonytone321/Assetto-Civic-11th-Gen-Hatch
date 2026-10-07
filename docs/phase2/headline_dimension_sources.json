@@ -1,0 +1,86 @@
+{
+ "dim:hondanews-ca-2024-hatch-specs": {
+  "label": "Honda Canada newsroom, 2024 Civic Hatchback specifications",
+  "url": "https://hondanews.ca/en-CA/hci-automobiles/releases/release-1128768177ab00a73471b1938c152ddf-2024-honda-civic-hatchback-specifications",
+  "http_status": 200,
+  "rows": [
+   "Height (mm) | 1415 | 1415 | Hip room – front/rear (mm) | 1380/1243 | 1380/1243",
+   "Length (mm) | 4529 | 4529 | Passenger volume (L) | 2735 | 2735",
+   "Track – front/rear (mm) | 1536/1565 | 1536/1565 | Steering wheel turns, lock-to-lock | 2.2 | 2.2",
+   "Wheelbase (mm) | 2735 | 2735 | Width (mm) | 1802 | 1802",
+   "Width (mm) | 1802 | 1802 | HS* = Feature is a component of the Honda Sensing® suite of safety and driver assist features. | Horsepower and torque calculations reflect SAE net, Rev. 08/04, SAE J1349 procedures. | None of the features we describe are intended to replace the driver's responsibility to exercise due care while driving. Drivers should not use handheld devices or operate certain vehicle features unless it is safe and legal to do so. Some features have technological limitations. For additional feature information, limitations and restrictions, please visit www.honda.ca/disclaimers and refer to the vehicle’s Owner’s Manual."
+  ]
+ },
+ "dim:hondanews-ca-2023-hatch-specs": {
+  "label": "Honda Canada newsroom, 2023 Civic Hatchback specifications",
+  "url": "https://hondanews.ca/en-CA/hci-automobiles/releases/release-f61ab7d13cb83fb181b8bc22df100303-2023-civic-hatchback-specifications",
+  "http_status": 200,
+  "rows": [
+   "Height (mm) | 1415 | 1415 | 1415 | 1415 | Hip room – front/rear (mm)",
+   "Length (mm) - With licence bracket/without licence bracket | 4547/4529 | 4547/4529 | 4547/4529 | 4547/4529 | Passenger volume (L)",
+   "Track (mm) – front/rear | 1546/1575 | 1536/1565 | 1536/1565 | 1536/1565 | Turning radius (m) (curb-to-curb)",
+   "Wheelbase (mm) | 2735 | 2735 | 2735 | 2735 | Width (mm) – Mirrors open/Mirrors folded",
+   "Width (mm) – Mirrors open/Mirrors folded | 2081/1900 | 2081/1900 | 2081/1900 | 2081/1900 | EXTERIOR/INTERIOR COLOURS"
+  ]
+ },
+ "dim:hondanews-ca-2022-hatch-specs": {
+  "label": "Honda Canada newsroom, 2022 Civic Hatchback specifications",
+  "url": "https://hondanews.ca/en-CA/hci-automobiles/releases/release-9d4b663caef09e412c833d744c4365f9-2022-civic-hatchback-specifications",
+  "http_status": 200,
+  "rows": [
+   "Height (mm) | 1415 | 1415 | 1415 | Hip room – front/rear (mm) | 1380/1243",
+   "Length (mm) - With licence bracket/without licence bracket | 4547/4529 | 4547/4529 | 4547/4529 | Passenger volume (L) | 2803",
+   "Track (mm) – front/rear | 1546/1575 | 1536/1565 | 1536/1565 | Turning radius (m) (curb-to-curb) | 11",
+   "Wheelbase (mm) | 2735 | 2735 | 2735 | Width (mm) – Mirrors open/Mirrors folded | 2081/1900",
+   "Width (mm) – Mirrors open/Mirrors folded | 2081/1900 | 2081/1900 | 2081/1900 | Legal disclaimers: | 1. Horsepower and torque calculations reflect SAE net, Rev. 08/04, SAE J1349 procedures."
+  ]
+ },
+ "dim:hondanews-us-2024-hatch-specs": {
+  "label": "American Honda newsroom, 2024 Civic Hatchback specifications",
+  "url": "https://hondanews.com/en-US/honda-automobiles/releases/release-5003aaa39c009393f5d06d620f0fc923-2024-honda-civic-hatchback-specifications-features",
+  "http_status": 200,
+  "rows": [
+   "Wheelbase (in.) | 107.7 | << | << | << | Length (in.)",
+   "Length (in.) | 179.0 | << | << | << | Height (in.)",
+   "Height (in.) | 55.7 | << | << | << | Width (in.)",
+   "Width (in.) | 70.9 | << | << | << | Track (in.) (front/rear)",
+   "Track (in.) (front/rear) | 60.9 / 62.0 | 60.5 / 61.6 | 60.9 / 62.0 | 60.5 / 61.6 | INTERIOR"
+  ]
+ },
+ "dim:hondanews-us-2022-hatch-specs": {
+  "label": "American Honda newsroom, 2022 Civic Hatchback specifications",
+  "url": "https://hondanews.com/en-US/honda-automobiles/releases/release-cb177600e922c8a5fcfa01b9b80149e2-2022-honda-civic-hatchback-specifications-features",
+  "http_status": 200,
+  "rows": [
+   "Wheelbase | 107.7 in | 107.7 in | 107.7 in | 107.7 in | Length",
+   "Length | 179.0 in | 179.0 in | 179.0 in | 179.0 in | Height",
+   "Height | 55.7 in | 55.7 in | 55.7 in | 55.7 in | Width",
+   "Width | 70.9 in | 70.9 in | 70.9 in | 70.9 in | Track (front/rear)",
+   "Track (front/rear) | 60.9 in / 62.0 in | 60.5 in / 61.6 in | 60.9 in / 62.0 in | 60.5 in / 61.6 in | Curb Weight (6MT/CVT)"
+  ]
+ },
+ "dim:hondainfocenter-us-2024-hatch-specs": {
+  "label": "Honda Information Center (US), 2024 Civic Hatchback specifications",
+  "url": "https://www.hondainfocenter.com/2024/Civic-Hatchback/Feature-Guide/Civic-Hatchback-Specifications/",
+  "http_status": 200,
+  "rows": [
+   "Wheelbase | 107.7 in | 107.7 in | 107.7 in | 107.7 in | Length",
+   "Length | 184.0 in | 184.0 in | 184.0 in | 184.0 in | Height",
+   "Height | 55.7 in | 55.7 in | 55.7 in | 55.7 in | Width",
+   "Width | 70.9 in | 70.9 in | 70.9 in | 70.9 in | Track (front/rear)",
+   "Track (front/rear) | 60.9 in / 62.0 in | 60.5 in / 61.6 in | 60.9 in / 62.0 in | 60.5 in / 61.6 in | Curb Weight (6MT/CVT)"
+  ]
+ },
+ "dim:hondainfocenter-us-2024-sedan-specs": {
+  "label": "Honda Information Center (US), 2024 Civic Sedan specifications (excluded body)",
+  "url": "https://www.hondainfocenter.com/2024/Civic-Sedan/Feature-Guide/Civic-Sedan-Specifications/",
+  "http_status": 200,
+  "rows": [
+   "Wheelbase | 107.7 in | 107.7 in | 107.7 in | 107.7 in | Length",
+   "Length | 184.0 in | 184.0 in | 184.0 in | 184.0 in | Height",
+   "Height | 55.7 in | 55.7 in | 55.7 in | 55.7 in | Width",
+   "Width | 70.9 in | 70.9 in | 70.9 in | 70.9 in | Track (front/rear)",
+   "Track (front/rear) | 60.9 in / 62.0 in | 60.5 in / 61.6 in | 60.9 in / 62.0 in | 60.5 in / 61.6 in | Curb Weight"
+  ]
+ }
+}

@@ -26,7 +26,7 @@ EXTRA_FILES = [os.path.join(ROOT, "audio", "reference_database.json"),
                os.path.join(ROOT, "references", "manifest.json")]
 TIER = {"A": 1, "B": 2, "C": 2, "D": 3, "E": 4, "F": 5}
 CONF = {"high": 0, "medium": 1, "low": 2, "none": 3}
-REL_TOL = 0.01  # 1 % disagreement between credible numeric candidates = conflict
+REL_TOL = 0.01  # 1 % disagreement between unprinted numeric candidates = conflict (printed: rounding-aware)
 
 
 def domain_files(include_derived=True):
@@ -96,8 +96,26 @@ def _num(v):
     return isinstance(v, (int, float)) and not isinstance(v, bool)
 
 
-def differs(a, b):
+def _half_ulp_si(rec):
+    """Half the last printed digit of a record's printed figure, in SI (print-rounding tolerance)."""
+    pr = rec.get("printed") if isinstance(rec, dict) else None
+    if not pr or not _num(pr.get("value")):
+        return None
+    txt = repr(pr["value"])
+    dec = len(txt.split(".")[1]) if "." in txt and "e" not in txt else 0
+    import units
+    lo, _ = units.to_si(pr["value"] - 0.5 * 10 ** -dec, pr["unit"])
+    hi, _ = units.to_si(pr["value"] + 0.5 * 10 ** -dec, pr["unit"])
+    return abs(hi - lo) / 2
+
+
+def differs(a, b, ra=None, rb=None):
+    """True if two candidate values disagree. Two printed figures disagree when they differ by more
+    than their combined print rounding (e.g. 179.0 in vs 4529 mm); otherwise a 1 % tolerance applies."""
     if _num(a) and _num(b):
+        ta, tb = _half_ulp_si(ra), _half_ulp_si(rb)
+        if ta is not None and tb is not None:
+            return abs(a - b) > (ta + tb) * (1 + 1e-9)
         return abs(a - b) > REL_TOL * max(abs(a), abs(b), 1e-12)
     if isinstance(a, list) and isinstance(b, list):
         return len(a) != len(b) or any(differs(x, y) for x, y in zip(a, b))
@@ -126,7 +144,7 @@ def resolve(params):
         # conflicts among credible (user/A/B/C) candidates with real values
         cred = [c for c in ranked if rank(c)[1] <= 2 and c[2].get("value") is not None]
         if tier <= 2:
-            others = [c for c in cred[1:] if differs(c[2]["value"], r.get("value"))]
+            others = [c for c in cred[1:] if differs(c[2]["value"], r.get("value"), c[2], r)]
             if others:
                 rec["conflict"] = True
                 conflicts.append({
@@ -137,7 +155,8 @@ def resolve(params):
                                              "selection_reason": r.get("selection_reason")},
                     "others": [{"file": f, "index": i, "value": o.get("value"), "unit": o.get("unit"),
                                 "class": o.get("class"), "source_id": o.get("source_id"),
-                                "applicability": o.get("applicability")} for f, i, o in others],
+                                "applicability": o.get("applicability"), "notes": o.get("notes")}
+                               for f, i, o in others],
                     "rule": "precedence: user > A > B/C; then applicability (2024, CA, Sport Touring, 6MT); "
                             "then prefer flag; then confidence"})
         out[key] = rec
