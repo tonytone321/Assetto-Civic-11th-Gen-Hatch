@@ -1,0 +1,629 @@
+{
+ "generator": "scripts/blender/build_reference_cage.py",
+ "blender": "5.2.2 LTS",
+ "objects": {
+  "REF_ground_plane": {
+   "collection": "REF_frame",
+   "keys": [],
+   "note": "z = 0 (project origin height); extents cosmetic"
+  },
+  "REF_centerline_plane": {
+   "collection": "REF_frame",
+   "keys": [],
+   "note": "x = 0 vehicle centreline plane; extents cosmetic"
+  },
+  "REF_body_box": {
+   "collection": "REF_photo",
+   "keys": [
+    "dimensions.length",
+    "dimensions.width_body",
+    "dimensions.height",
+    "dimensions.overhang_front"
+   ],
+   "note": "length/width/height published; fore-aft position from dimensions.overhang_front (photo: published total overhang x photo-measured front fraction), so the box's Y placement is photo-derived"
+  },
+  "REF_contact_line_front": {
+   "collection": "REF_published",
+   "keys": [
+    "dimensions.wheelbase",
+    "dimensions.track_front"
+   ],
+   "note": "axle position projected on the ground, between tire contact centres (track definition)"
+  },
+  "REF_contact_line_rear": {
+   "collection": "REF_published",
+   "keys": [
+    "dimensions.wheelbase",
+    "dimensions.track_rear"
+   ],
+   "note": "axle position projected on the ground, between tire contact centres (track definition)"
+  },
+  "REF_axle_line_front": {
+   "collection": "REF_estimated",
+   "keys": [
+    "dimensions.wheelbase",
+    "dimensions.track_front",
+    "tires.loaded_radius"
+   ],
+   "note": "axle line at wheel-centre height from tires.loaded_radius"
+  },
+  "REF_axle_line_rear": {
+   "collection": "REF_estimated",
+   "keys": [
+    "dimensions.wheelbase",
+    "dimensions.track_rear",
+    "tires.loaded_radius"
+   ],
+   "note": "axle line at wheel-centre height from tires.loaded_radius"
+  },
+  "REF_wheel_center_FL": {
+   "collection": "REF_estimated",
+   "keys": [
+    "dimensions.wheelbase",
+    "dimensions.track_front",
+    "tires.loaded_radius"
+   ],
+   "note": "X = \u00b1track/2, Y = 0 or -wheelbase (published), Z from tires.loaded_radius"
+  },
+  "REF_tire_FL": {
+   "collection": "REF_estimated",
+   "keys": [
+    "dimensions.wheelbase",
+    "dimensions.track_front",
+    "tires.loaded_radius",
+    "tires.overall_diameter",
+    "tires.section_width"
+   ],
+   "note": "unloaded outline (overall diameter, section width) at the loaded-radius centre: it dips below z = 0 by the static deflection"
+  },
+  "REF_wheel_center_FR": {
+   "collection": "REF_estimated",
+   "keys": [
+    "dimensions.wheelbase",
+    "dimensions.track_front",
+    "tires.loaded_radius"
+   ],
+   "note": "X = \u00b1track/2, Y = 0 or -wheelbase (published), Z from tires.loaded_radius"
+  },
+  "REF_tire_FR": {
+   "collection": "REF_estimated",
+   "keys": [
+    "dimensions.wheelbase",
+    "dimensions.track_front",
+    "tires.loaded_radius",
+    "tires.overall_diameter",
+    "tires.section_width"
+   ],
+   "note": "unloaded outline (overall diameter, section width) at the loaded-radius centre: it dips below z = 0 by the static deflection"
+  },
+  "REF_wheel_center_RL": {
+   "collection": "REF_estimated",
+   "keys": [
+    "dimensions.wheelbase",
+    "dimensions.track_rear",
+    "tires.loaded_radius"
+   ],
+   "note": "X = \u00b1track/2, Y = 0 or -wheelbase (published), Z from tires.loaded_radius"
+  },
+  "REF_tire_RL": {
+   "collection": "REF_estimated",
+   "keys": [
+    "dimensions.wheelbase",
+    "dimensions.track_rear",
+    "tires.loaded_radius",
+    "tires.overall_diameter",
+    "tires.section_width"
+   ],
+   "note": "unloaded outline (overall diameter, section width) at the loaded-radius centre: it dips below z = 0 by the static deflection"
+  },
+  "REF_wheel_center_RR": {
+   "collection": "REF_estimated",
+   "keys": [
+    "dimensions.wheelbase",
+    "dimensions.track_rear",
+    "tires.loaded_radius"
+   ],
+   "note": "X = \u00b1track/2, Y = 0 or -wheelbase (published), Z from tires.loaded_radius"
+  },
+  "REF_tire_RR": {
+   "collection": "REF_estimated",
+   "keys": [
+    "dimensions.wheelbase",
+    "dimensions.track_rear",
+    "tires.loaded_radius",
+    "tires.overall_diameter",
+    "tires.section_width"
+   ],
+   "note": "unloaded outline (overall diameter, section width) at the loaded-radius centre: it dips below z = 0 by the static deflection"
+  },
+  "REF_mirror_width_L": {
+   "collection": "REF_published",
+   "keys": [
+    "dimensions.width_mirrors",
+    "dimensions.wheelbase",
+    "dimensions.height"
+   ],
+   "note": "plane at x = \u00b1width over open mirrors / 2; mirror Y and Z are unknown, the plane only shows the width"
+  },
+  "REF_mirror_width_R": {
+   "collection": "REF_published",
+   "keys": [
+    "dimensions.width_mirrors",
+    "dimensions.wheelbase",
+    "dimensions.height"
+   ],
+   "note": "plane at x = \u00b1width over open mirrors / 2; mirror Y and Z are unknown, the plane only shows the width"
+  },
+  "REF_hp_front_lca_front_inner_L": {
+   "collection": "REF_estimated",
+   "keys": [
+    "hardpoints.front.lca_front_inner"
+   ],
+   "note": "left side from database"
+  },
+  "REF_hp_front_lca_front_inner_R": {
+   "collection": "REF_estimated",
+   "keys": [
+    "hardpoints.front.lca_front_inner"
+   ],
+   "note": "mirror of the left side (X -> -X)"
+  },
+  "REF_hp_front_lca_rear_inner_L": {
+   "collection": "REF_estimated",
+   "keys": [
+    "hardpoints.front.lca_rear_inner"
+   ],
+   "note": "left side from database"
+  },
+  "REF_hp_front_lca_rear_inner_R": {
+   "collection": "REF_estimated",
+   "keys": [
+    "hardpoints.front.lca_rear_inner"
+   ],
+   "note": "mirror of the left side (X -> -X)"
+  },
+  "REF_hp_front_lower_ball_joint_L": {
+   "collection": "REF_estimated",
+   "keys": [
+    "hardpoints.front.lower_ball_joint"
+   ],
+   "note": "left side from database"
+  },
+  "REF_hp_front_lower_ball_joint_R": {
+   "collection": "REF_estimated",
+   "keys": [
+    "hardpoints.front.lower_ball_joint"
+   ],
+   "note": "mirror of the left side (X -> -X)"
+  },
+  "REF_hp_front_strut_top_L": {
+   "collection": "REF_estimated",
+   "keys": [
+    "hardpoints.front.strut_top"
+   ],
+   "note": "left side from database"
+  },
+  "REF_hp_front_strut_top_R": {
+   "collection": "REF_estimated",
+   "keys": [
+    "hardpoints.front.strut_top"
+   ],
+   "note": "mirror of the left side (X -> -X)"
+  },
+  "REF_hp_front_tie_rod_inner_L": {
+   "collection": "REF_estimated",
+   "keys": [
+    "hardpoints.front.tie_rod_inner"
+   ],
+   "note": "left side from database"
+  },
+  "REF_hp_front_tie_rod_inner_R": {
+   "collection": "REF_estimated",
+   "keys": [
+    "hardpoints.front.tie_rod_inner"
+   ],
+   "note": "mirror of the left side (X -> -X)"
+  },
+  "REF_hp_front_tie_rod_outer_L": {
+   "collection": "REF_estimated",
+   "keys": [
+    "hardpoints.front.tie_rod_outer"
+   ],
+   "note": "left side from database"
+  },
+  "REF_hp_front_tie_rod_outer_R": {
+   "collection": "REF_estimated",
+   "keys": [
+    "hardpoints.front.tie_rod_outer"
+   ],
+   "note": "mirror of the left side (X -> -X)"
+  },
+  "REF_hp_front_wheel_center_L": {
+   "collection": "REF_estimated",
+   "keys": [
+    "hardpoints.front.wheel_center"
+   ],
+   "note": "left side from database"
+  },
+  "REF_hp_front_wheel_center_R": {
+   "collection": "REF_estimated",
+   "keys": [
+    "hardpoints.front.wheel_center"
+   ],
+   "note": "mirror of the left side (X -> -X)"
+  },
+  "REF_hp_rear_damper_lower_L": {
+   "collection": "REF_estimated",
+   "keys": [
+    "hardpoints.rear.damper_lower"
+   ],
+   "note": "left side from database"
+  },
+  "REF_hp_rear_damper_lower_R": {
+   "collection": "REF_estimated",
+   "keys": [
+    "hardpoints.rear.damper_lower"
+   ],
+   "note": "mirror of the left side (X -> -X)"
+  },
+  "REF_hp_rear_damper_upper_L": {
+   "collection": "REF_estimated",
+   "keys": [
+    "hardpoints.rear.damper_upper"
+   ],
+   "note": "left side from database"
+  },
+  "REF_hp_rear_damper_upper_R": {
+   "collection": "REF_estimated",
+   "keys": [
+    "hardpoints.rear.damper_upper"
+   ],
+   "note": "mirror of the left side (X -> -X)"
+  },
+  "REF_hp_rear_lower_arm_a_inner_L": {
+   "collection": "REF_estimated",
+   "keys": [
+    "hardpoints.rear.lower_arm_a_inner"
+   ],
+   "note": "left side from database"
+  },
+  "REF_hp_rear_lower_arm_a_inner_R": {
+   "collection": "REF_estimated",
+   "keys": [
+    "hardpoints.rear.lower_arm_a_inner"
+   ],
+   "note": "mirror of the left side (X -> -X)"
+  },
+  "REF_hp_rear_lower_arm_a_outer_L": {
+   "collection": "REF_estimated",
+   "keys": [
+    "hardpoints.rear.lower_arm_a_outer"
+   ],
+   "note": "left side from database"
+  },
+  "REF_hp_rear_lower_arm_a_outer_R": {
+   "collection": "REF_estimated",
+   "keys": [
+    "hardpoints.rear.lower_arm_a_outer"
+   ],
+   "note": "mirror of the left side (X -> -X)"
+  },
+  "REF_hp_rear_lower_arm_b_inner_L": {
+   "collection": "REF_estimated",
+   "keys": [
+    "hardpoints.rear.lower_arm_b_inner"
+   ],
+   "note": "left side from database"
+  },
+  "REF_hp_rear_lower_arm_b_inner_R": {
+   "collection": "REF_estimated",
+   "keys": [
+    "hardpoints.rear.lower_arm_b_inner"
+   ],
+   "note": "mirror of the left side (X -> -X)"
+  },
+  "REF_hp_rear_lower_arm_b_outer_L": {
+   "collection": "REF_estimated",
+   "keys": [
+    "hardpoints.rear.lower_arm_b_outer"
+   ],
+   "note": "left side from database"
+  },
+  "REF_hp_rear_lower_arm_b_outer_R": {
+   "collection": "REF_estimated",
+   "keys": [
+    "hardpoints.rear.lower_arm_b_outer"
+   ],
+   "note": "mirror of the left side (X -> -X)"
+  },
+  "REF_hp_rear_spring_lower_seat_L": {
+   "collection": "REF_estimated",
+   "keys": [
+    "hardpoints.rear.spring_lower_seat"
+   ],
+   "note": "left side from database"
+  },
+  "REF_hp_rear_spring_lower_seat_R": {
+   "collection": "REF_estimated",
+   "keys": [
+    "hardpoints.rear.spring_lower_seat"
+   ],
+   "note": "mirror of the left side (X -> -X)"
+  },
+  "REF_hp_rear_spring_upper_seat_L": {
+   "collection": "REF_estimated",
+   "keys": [
+    "hardpoints.rear.spring_upper_seat"
+   ],
+   "note": "left side from database"
+  },
+  "REF_hp_rear_spring_upper_seat_R": {
+   "collection": "REF_estimated",
+   "keys": [
+    "hardpoints.rear.spring_upper_seat"
+   ],
+   "note": "mirror of the left side (X -> -X)"
+  },
+  "REF_hp_rear_trailing_arm_front_L": {
+   "collection": "REF_estimated",
+   "keys": [
+    "hardpoints.rear.trailing_arm_front"
+   ],
+   "note": "left side from database"
+  },
+  "REF_hp_rear_trailing_arm_front_R": {
+   "collection": "REF_estimated",
+   "keys": [
+    "hardpoints.rear.trailing_arm_front"
+   ],
+   "note": "mirror of the left side (X -> -X)"
+  },
+  "REF_hp_rear_upper_arm_inner_L": {
+   "collection": "REF_estimated",
+   "keys": [
+    "hardpoints.rear.upper_arm_inner"
+   ],
+   "note": "left side from database"
+  },
+  "REF_hp_rear_upper_arm_inner_R": {
+   "collection": "REF_estimated",
+   "keys": [
+    "hardpoints.rear.upper_arm_inner"
+   ],
+   "note": "mirror of the left side (X -> -X)"
+  },
+  "REF_hp_rear_upper_arm_outer_L": {
+   "collection": "REF_estimated",
+   "keys": [
+    "hardpoints.rear.upper_arm_outer"
+   ],
+   "note": "left side from database"
+  },
+  "REF_hp_rear_upper_arm_outer_R": {
+   "collection": "REF_estimated",
+   "keys": [
+    "hardpoints.rear.upper_arm_outer"
+   ],
+   "note": "mirror of the left side (X -> -X)"
+  },
+  "REF_hp_rear_wheel_center_L": {
+   "collection": "REF_estimated",
+   "keys": [
+    "hardpoints.rear.wheel_center"
+   ],
+   "note": "left side from database"
+  },
+  "REF_hp_rear_wheel_center_R": {
+   "collection": "REF_estimated",
+   "keys": [
+    "hardpoints.rear.wheel_center"
+   ],
+   "note": "mirror of the left side (X -> -X)"
+  },
+  "REF_guide_windshield": {
+   "collection": "REF_photo",
+   "keys": [
+    "proportions.windshield_base_y",
+    "proportions.windshield_base_z",
+    "proportions.windshield_header_y",
+    "proportions.windshield_angle"
+   ],
+   "note": "assumed plane: centreline (straight line at the measured angle)"
+  },
+  "REF_guide_windshield_base": {
+   "collection": "REF_photo",
+   "keys": [
+    "proportions.windshield_base_y",
+    "proportions.windshield_base_z"
+   ],
+   "note": "assumed plane: centreline"
+  },
+  "REF_guide_roofline": {
+   "collection": "REF_photo",
+   "keys": [
+    "proportions.windshield_base_y",
+    "proportions.windshield_base_z",
+    "proportions.windshield_header_y",
+    "proportions.windshield_angle",
+    "proportions.roof_peak_y",
+    "proportions.roof_peak_z"
+   ],
+   "note": "assumed plane: centreline (windshield header to roof peak; the roof aft of the peak is not measured)"
+  },
+  "REF_guide_roof_peak": {
+   "collection": "REF_photo",
+   "keys": [
+    "proportions.roof_peak_y",
+    "proportions.roof_peak_z"
+   ],
+   "note": "assumed plane: centreline"
+  },
+  "REF_guide_hood": {
+   "collection": "REF_photo",
+   "keys": [
+    "proportions.hood_z_at_front_axle",
+    "proportions.windshield_base_y",
+    "proportions.windshield_base_z"
+   ],
+   "note": "assumed plane: centreline (hood at the front axle to the windshield base)"
+  },
+  "REF_guide_front_bumper_extent": {
+   "collection": "REF_photo",
+   "keys": [
+    "dimensions.front_bumper_y",
+    "dimensions.height"
+   ],
+   "note": "assumed plane: centreline (vertical line through the extreme bumper Y)"
+  },
+  "REF_guide_front_bumper_extreme_point": {
+   "collection": "REF_photo",
+   "keys": [
+    "dimensions.front_bumper_y",
+    "proportions.front_bumper_extreme_z"
+   ],
+   "note": "assumed plane: centreline"
+  },
+  "REF_guide_rear_bumper_extent": {
+   "collection": "REF_photo",
+   "keys": [
+    "dimensions.rear_bumper_y",
+    "dimensions.height"
+   ],
+   "note": "assumed plane: centreline (vertical line through the extreme bumper Y)"
+  },
+  "REF_guide_rear_bumper_extreme_point": {
+   "collection": "REF_photo",
+   "keys": [
+    "dimensions.rear_bumper_y",
+    "proportions.rear_bumper_extreme_z"
+   ],
+   "note": "assumed plane: centreline"
+  },
+  "REF_guide_arch_top_front_L": {
+   "collection": "REF_photo",
+   "keys": [
+    "proportions.arch_top_z_front",
+    "dimensions.width_body",
+    "dimensions.wheelbase"
+   ],
+   "note": "assumed plane: body side (x = \u00b1width/2); arch top above the axle; arch shape not measured"
+  },
+  "REF_guide_arch_top_front_R": {
+   "collection": "REF_photo",
+   "keys": [
+    "proportions.arch_top_z_front",
+    "dimensions.width_body",
+    "dimensions.wheelbase"
+   ],
+   "note": "assumed plane: body side (x = \u00b1width/2); arch top above the axle; arch shape not measured"
+  },
+  "REF_guide_arch_top_rear_L": {
+   "collection": "REF_photo",
+   "keys": [
+    "proportions.arch_top_z_rear",
+    "dimensions.width_body",
+    "dimensions.wheelbase"
+   ],
+   "note": "assumed plane: body side (x = \u00b1width/2); arch top above the axle; arch shape not measured"
+  },
+  "REF_guide_arch_top_rear_R": {
+   "collection": "REF_photo",
+   "keys": [
+    "proportions.arch_top_z_rear",
+    "dimensions.width_body",
+    "dimensions.wheelbase"
+   ],
+   "note": "assumed plane: body side (x = \u00b1width/2); arch top above the axle; arch shape not measured"
+  },
+  "REF_guide_sill_mid_L": {
+   "collection": "REF_photo",
+   "keys": [
+    "proportions.sill_z_mid_wheelbase",
+    "dimensions.width_body",
+    "dimensions.wheelbase"
+   ],
+   "note": "assumed plane: body side"
+  },
+  "REF_guide_sill_mid_R": {
+   "collection": "REF_photo",
+   "keys": [
+    "proportions.sill_z_mid_wheelbase",
+    "dimensions.width_body",
+    "dimensions.wheelbase"
+   ],
+   "note": "assumed plane: body side"
+  },
+  "REF_photo_wheel_center_front": {
+   "collection": "REF_photo",
+   "keys": [
+    "proportions.wheel_center_z_front",
+    "dimensions.track_front",
+    "dimensions.wheelbase"
+   ],
+   "note": "assumed plane: body side (left), photo wheel-centre height"
+  },
+  "REF_photo_wheel_center_rear": {
+   "collection": "REF_photo",
+   "keys": [
+    "proportions.wheel_center_z_rear",
+    "dimensions.track_rear",
+    "dimensions.wheelbase"
+   ],
+   "note": "assumed plane: body side (left), photo wheel-centre height"
+  }
+ },
+ "missing": [
+  {
+   "item": "mirror position (Y, Z)",
+   "reason": "proportions.mirror_y / proportions.mirror_z unknown"
+  },
+  {
+   "item": "hardpoints.front.arb_bushing",
+   "reason": "unknown in database"
+  },
+  {
+   "item": "hardpoints.front.arb_link_lower",
+   "reason": "unknown in database"
+  },
+  {
+   "item": "hardpoints.front.arb_link_upper",
+   "reason": "unknown in database"
+  },
+  {
+   "item": "hardpoints.front.subframe_mounts",
+   "reason": "unknown in database"
+  },
+  {
+   "item": "hardpoints.rear.arb_bushing",
+   "reason": "unknown in database"
+  },
+  {
+   "item": "hardpoints.rear.arb_link_upper",
+   "reason": "unknown in database"
+  },
+  {
+   "item": "hardpoints.rear.subframe_mounts",
+   "reason": "unknown in database"
+  },
+  {
+   "item": "hardpoints.steering.rack_mounts",
+   "reason": "unknown in database"
+  },
+  {
+   "item": "hood leading edge",
+   "reason": "not measured in Phase 1 (no proportions key)"
+  },
+  {
+   "item": "hatch line",
+   "reason": "proportions.hatch_angle and hatch_glass_top_y exist but the hatch-top height was not measured, so the line cannot be placed"
+  },
+  {
+   "item": "beltline",
+   "reason": "not measured in Phase 1 (no proportions key)"
+  },
+  {
+   "item": "wheel-arch curves",
+   "reason": "only the arch-top heights were measured; arch radius/shape not measured"
+  }
+ ]
+}

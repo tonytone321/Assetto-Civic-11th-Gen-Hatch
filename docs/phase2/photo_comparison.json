@@ -1,0 +1,1215 @@
+{
+ "generator": "scripts/phase2/compare_photos.py",
+ "photos": [
+  {
+   "id": "R1_render_side",
+   "path": "cache/photos/22_CivicHatchback_STRG_Header_RR.png",
+   "manifest_id": "(Phase 1 photo_measure_side source)",
+   "shows": "2022 Civic Hatchback Sport Touring (Honda Information Center studio render, CGI, 620x200)",
+   "image_size": [
+    620,
+    200
+   ],
+   "kind": "side",
+   "wheel_detection": {
+    "FL": {
+     "center": [
+      155.8175506591797,
+      152.0284881591797
+     ],
+     "axes": [
+      29.331199645996094,
+      29.65757179260254
+     ],
+     "angle_deg": 104.6733627319336,
+     "n_inliers": 66,
+     "rms_px": 0.30398100899210767,
+     "coverage": 0.9634623117027056,
+     "r_tire_guess": 39.237298045117235,
+     "refined": "radial"
+    },
+    "RL": {
+     "center": [
+      472.8425598144531,
+      151.67385864257812
+     ],
+     "axes": [
+      28.932907104492188,
+      30.176218032836914
+     ],
+     "angle_deg": 70.08209991455078,
+     "n_inliers": 70,
+     "rms_px": 0.7473439577298586,
+     "coverage": 1.0138865097271437,
+     "r_tire_guess": 39.237298045117235,
+     "refined": "radial"
+    }
+   },
+   "focal": {
+    "source": "focal length ESTIMATED: no EXIF; camera distance unknown, nominal 30 m, range 10-100 m carried as an uncertainty term",
+    "f_px": 3477.4245795519655
+   },
+   "camera": {
+    "C_project_m": [
+     -30.89714865691048,
+     -1.330873883106609,
+     0.9000004105466914
+    ],
+    "f_px": 3477.4245795519655,
+    "cx": 310.0,
+    "cy": 100.0,
+    "yaw_deg": -0.0002874417540945246,
+    "distance_to_mid_wheelbase_m": 30.899759496282513,
+    "rim_rms_px": 0.6852473566443378,
+    "rim_inlier_frac": 0.9926470588235294,
+    "contact_rms_px": 0.6250856593368296,
+    "z_front_fit": 0.314451408976017,
+    "z_rear_fit": 0.31749393813386084,
+    "r_rim_fit": 0.25404211915855013,
+    "success": true
+   },
+   "status": "fitted",
+   "calibration": {
+    "note": "focal length ESTIMATED: no EXIF; camera distance unknown, nominal 30 m, range 10-100 m carried as an uncertainty term",
+    "f_by_distance_px": {
+     "10.0": 1159.1415265173218,
+     "30.0": 3477.4245795519655,
+     "100.0": 11591.415265173218
+    }
+   },
+   "camera_fit_spread_m": 2.6125983691442113e-05,
+   "rows": [
+    {
+     "key_point": "roof_peak",
+     "axis": "Y",
+     "photo_m": -1.6774866198709242,
+     "plane": "centerline",
+     "uv": [
+      349.0,
+      24.5
+     ],
+     "mm_per_px": 8.88428238522064,
+     "U_mm": 100.79043067056138,
+     "components_mm": {
+      "localisation": 4.44214119261032,
+      "camera_fit": 0.00786209992240816,
+      "plane": 2.8045689637350435,
+      "camera distance (no EXIF)": 20.111545792279806,
+      "camera height (unknown, 0.4-1.6 m)": 17.062223668668164,
+      "camera yaw +-3 deg": 42.62024977348955
+     },
+     "note": "topmost silhouette point; assumed on the centreline (roof crown), plane uncertainty +-0.25 m",
+     "cage_m": -1.6645700931549072,
+     "cage_object": "REF_guide_roof_peak",
+     "cage_class": "photo (Phase 1 render, orthographic)",
+     "diff_mm": -12.916526716016952,
+     "verdict": "agrees"
+    },
+    {
+     "key_point": "roof_peak",
+     "axis": "Z",
+     "photo_m": 1.4304229320521649,
+     "plane": "centerline",
+     "uv": [
+      349.0,
+      24.5
+     ],
+     "mm_per_px": 8.88428238522064,
+     "U_mm": 70.06166867873925,
+     "components_mm": {
+      "localisation": 4.44214119261032,
+      "camera_fit": 0.0034335784852138882,
+      "plane": 4.291840384653689,
+      "camera distance (no EXIF)": 29.555542359924747,
+      "camera height (unknown, 0.4-1.6 m)": 17.541815480704326,
+      "camera yaw +-3 deg": 2.7859389641704535
+     },
+     "note": "topmost silhouette point; assumed on the centreline (roof crown), plane uncertainty +-0.25 m",
+     "cage_m": 1.4248332977294922,
+     "cage_object": "REF_guide_roof_peak",
+     "cage_class": "photo (Phase 1 render, orthographic)",
+     "diff_mm": 5.589634322672676,
+     "verdict": "agrees"
+    },
+    {
+     "key_point": "roof_peak (vs published height)",
+     "axis": "Z",
+     "photo_m": 1.4304229320521649,
+     "plane": "centerline",
+     "uv": [
+      349.0,
+      24.5
+     ],
+     "mm_per_px": 8.88428238522064,
+     "U_mm": 70.06166867873925,
+     "components_mm": {
+      "localisation": 4.44214119261032,
+      "camera_fit": 0.0034335784852138882,
+      "plane": 4.291840384653689,
+      "camera distance (no EXIF)": 29.555542359924747,
+      "camera height (unknown, 0.4-1.6 m)": 17.541815480704326,
+      "camera yaw +-3 deg": 2.7859389641704535
+     },
+     "cage_m": 1.4149999618530273,
+     "cage_object": "REF_body_box (top = published height)",
+     "cage_class": "published",
+     "diff_mm": 15.42297019913752,
+     "verdict": "agrees",
+     "note": "published height includes any roof antenna; the silhouette top may be the antenna"
+    },
+    {
+     "key_point": "arch_top_front",
+     "axis": "Z",
+     "photo_m": 0.6840226466386539,
+     "plane": "bodyside",
+     "uv": [
+      155.69864625648137,
+      109.2334490196999
+     ],
+     "mm_per_px": 8.626157929464899,
+     "U_mm": 47.54035086824263,
+     "components_mm": {
+      "localisation": 8.626157929464899,
+      "camera_fit": 0.00954970182796051,
+      "plane": 0.36000915713940707,
+      "camera distance (no EXIF)": 9.643872011137478,
+      "camera height (unknown, 0.4-1.6 m)": 19.787288970487538,
+      "camera yaw +-3 deg": 2.437184766493239
+     },
+     "note": "scanning up the projected vertical through the wheel centre from the tyre top: first point closer in colour to the body (door sample) than to the dark wheel well; assumed on the body-side plane x = +-width/2 (+-0.05 m)",
+     "cage_m": 0.7034144401550293,
+     "cage_object": "REF_guide_arch_top_front_L",
+     "cage_class": "photo",
+     "diff_mm": -19.391793516375433,
+     "verdict": "agrees"
+    },
+    {
+     "key_point": "arch_top_rear",
+     "axis": "Z",
+     "photo_m": 0.6833486124279862,
+     "plane": "bodyside",
+     "uv": [
+      472.75743474579866,
+      109.32541477938443
+     ],
+     "mm_per_px": 8.626162755698251,
+     "U_mm": 50.16225546819475,
+     "components_mm": {
+      "localisation": 8.626162755698251,
+      "camera_fit": 0.010397737410603439,
+      "plane": 0.3611326917276614,
+      "camera distance (no EXIF)": 9.929595575499995,
+      "camera height (unknown, 0.4-1.6 m)": 21.305337310773552,
+      "camera yaw +-3 deg": 1.4168603930897472
+     },
+     "note": "scanning up the projected vertical through the wheel centre from the tyre top: first point closer in colour to the body (door sample) than to the dark wheel well; assumed on the body-side plane x = +-width/2 (+-0.05 m)",
+     "cage_m": 0.7034144401550293,
+     "cage_object": "REF_guide_arch_top_rear_L",
+     "cage_class": "photo",
+     "diff_mm": -20.06582772704313,
+     "verdict": "agrees"
+    },
+    {
+     "key_point": "sill_mid",
+     "axis": "Z",
+     "photo_m": 0.19871242981551096,
+     "plane": "bodyside",
+     "uv": [
+      314.2253112792969,
+      165.49525451660156
+     ],
+     "mm_per_px": 8.626793904804135,
+     "U_mm": 11.282779923056534,
+     "components_mm": {
+      "localisation": 4.313396952402067,
+      "camera_fit": 2.7849814854422765e-05,
+      "plane": 2.3379267410371662,
+      "camera distance (no EXIF)": 1.9752328205273617,
+      "camera height (unknown, 0.4-1.6 m)": 1.9627636657619796,
+      "camera yaw +-3 deg": 0.00028086350556399964
+     },
+     "note": "silhouette bottom at mid-wheelbase along the projected vertical; assumed on x = +-width/2 (+-0.10 m; the rocker is inboard)",
+     "cage_m": 0.1992904096841812,
+     "cage_object": "REF_guide_sill_mid_L",
+     "cage_class": "photo",
+     "diff_mm": -0.5779798686702531,
+     "verdict": "agrees"
+    },
+    {
+     "key_point": "front_bumper_extent",
+     "axis": "Y",
+     "photo_m": 0.912559235176104,
+     "plane": "centerline",
+     "uv": [
+      57.5,
+      134.0
+     ],
+     "mm_per_px": 8.885549755825812,
+     "U_mm": 279.0078483851575,
+     "components_mm": {
+      "localisation": 4.442774877912906,
+      "camera_fit": 0.0016253728585227936,
+      "plane": 21.78291411153488,
+      "camera distance (no EXIF)": 127.79914192217001,
+      "camera height (unknown, 0.4-1.6 m)": 1.9927626235145546,
+      "camera yaw +-3 deg": 51.28859022983545
+     },
+     "note": "extreme silhouette column; assumed on the centreline (+-0.30 m: the extreme may sit off-centre)",
+     "cage_m": 0.936341404914856,
+     "cage_object": "REF_body_box front face / REF_guide_front_bumper_extent",
+     "cage_class": "photo (overhang split)",
+     "diff_mm": -23.78216973875191,
+     "verdict": "agrees"
+    },
+    {
+     "key_point": "rear_bumper_extent",
+     "axis": "Y",
+     "photo_m": -3.5835521660584053,
+     "plane": "centerline",
+     "uv": [
+      563.5,
+      140.5
+     ],
+     "mm_per_px": 8.885631442758347,
+     "U_mm": 283.24948134176185,
+     "components_mm": {
+      "localisation": 4.442815721379174,
+      "camera_fit": 0.0014763377786559174,
+      "plane": 21.872681275215022,
+      "camera distance (no EXIF)": 129.88520453097507,
+      "camera height (unknown, 0.4-1.6 m)": 1.515498859827602,
+      "camera yaw +-3 deg": 51.83581076211752
+     },
+     "note": "extreme silhouette column; assumed on the centreline (+-0.30 m: the extreme may sit off-centre)",
+     "cage_m": -3.592658519744873,
+     "cage_object": "REF_body_box rear face",
+     "cage_class": "photo (overhang split)",
+     "diff_mm": 9.106353686467727,
+     "verdict": "agrees"
+    },
+    {
+     "key_point": "windshield_base",
+     "axis": "Y",
+     "photo_m": -0.2978117563833407,
+     "plane": "centerline",
+     "uv": [
+      193.71134768304475,
+      73.20761782860377
+     ],
+     "mm_per_px": 8.884845774918269,
+     "U_mm": 150.45623132510386,
+     "components_mm": {
+      "localisation": 8.884845774918269,
+      "camera_fit": 0.0048625575527151445,
+      "plane": 13.374206638866681,
+      "camera distance (no EXIF)": 57.794956033083935,
+      "camera height (unknown, 0.4-1.6 m)": 9.758764470233938,
+      "camera yaw +-3 deg": 44.339249519799395
+     },
+     "note": "intersection of fitted top-profile segments (4-segment least squares); assumed on the centreline",
+     "cage_m": -0.3418937623500824,
+     "cage_object": "REF_guide_windshield_base",
+     "cage_class": "photo",
+     "diff_mm": 44.08200596674172,
+     "verdict": "agrees"
+    },
+    {
+     "key_point": "windshield_base",
+     "axis": "Z",
+     "photo_m": 0.9976411336336873,
+     "plane": "centerline",
+     "uv": [
+      193.71134768304475,
+      73.20761782860377
+     ],
+     "mm_per_px": 8.884845774918269,
+     "U_mm": 77.50416285306753,
+     "components_mm": {
+      "localisation": 8.884845774918269,
+      "camera_fit": 0.007536126291716522,
+      "plane": 1.2640742247282954,
+      "camera distance (no EXIF)": 9.26669781491485,
+      "camera height (unknown, 0.4-1.6 m)": 36.411236865032556,
+      "camera yaw +-3 deg": 3.087965603976839
+     },
+     "note": "intersection of fitted top-profile segments (4-segment least squares); assumed on the centreline",
+     "cage_m": 0.9858977198600769,
+     "cage_object": "REF_guide_windshield_base",
+     "cage_class": "photo",
+     "diff_mm": 11.743413773610435,
+     "verdict": "agrees"
+    },
+    {
+     "key_point": "windshield_header",
+     "axis": "Y",
+     "photo_m": -1.1292522738631963,
+     "plane": "centerline",
+     "uv": [
+      287.29164257616515,
+      25.378110419527076
+     ],
+     "mm_per_px": 8.884291816352599,
+     "U_mm": 95.21132075397388,
+     "components_mm": {
+      "localisation": 8.884291816352599,
+      "camera_fit": 0.007815653776083129,
+      "plane": 1.6313933324580976,
+      "camera distance (no EXIF)": 10.628373766998989,
+      "camera height (unknown, 0.4-1.6 m)": 16.48329672712667,
+      "camera yaw +-3 deg": 42.42694136554914
+     },
+     "note": "intersection of fitted top-profile segments (4-segment least squares); assumed on the centreline",
+     "cage_m": -0.9902644753456116,
+     "cage_object": "REF_guide_windshield (upper end)",
+     "cage_class": "photo",
+     "diff_mm": -138.98779851758468,
+     "verdict": "disagrees"
+    },
+    {
+     "key_point": "windshield_header",
+     "axis": "Z",
+     "photo_m": 1.4225982545008349,
+     "plane": "centerline",
+     "uv": [
+      287.29164257616515,
+      25.378110419527076
+     ],
+     "mm_per_px": 8.884291816352599,
+     "U_mm": 78.3925587620749,
+     "components_mm": {
+      "localisation": 8.884291816352599,
+      "camera_fit": 0.0025554163361507266,
+      "plane": 4.228528089737171,
+      "camera distance (no EXIF)": 29.123255827870675,
+      "camera height (unknown, 0.4-1.6 m)": 24.201653484689388,
+      "camera yaw +-3 deg": 2.377637166138147
+     },
+     "note": "intersection of fitted top-profile segments (4-segment least squares); assumed on the centreline",
+     "cage_m": 1.3517742156982422,
+     "cage_object": "REF_guide_windshield (upper end)",
+     "cage_class": "photo",
+     "diff_mm": 70.8240388025927,
+     "verdict": "agrees"
+    },
+    {
+     "key_point": "hatch_top",
+     "axis": "Y",
+     "photo_m": -2.394835027079816,
+     "plane": "centerline",
+     "uv": [
+      429.7431721635437,
+      26.27034623596584
+     ],
+     "mm_per_px": 8.884303924536516,
+     "U_mm": 155.86206588579046,
+     "components_mm": {
+      "localisation": 8.884303924536516,
+      "camera_fit": 0.007741603989188954,
+      "plane": 8.608894268753442,
+      "camera distance (no EXIF)": 60.35616051439252,
+      "camera height (unknown, 0.4-1.6 m)": 17.431555955718103,
+      "camera yaw +-3 deg": 44.42382990899851
+     },
+     "note": "intersection of fitted top-profile segments (4-segment least squares); assumed on the centreline",
+     "verdict": "not measurable",
+     "reason": "no corresponding cage item"
+    },
+    {
+     "key_point": "hatch_top",
+     "axis": "Z",
+     "photo_m": 1.414727400422877,
+     "plane": "centerline",
+     "uv": [
+      429.7431721635437,
+      26.27034623596584
+     ],
+     "mm_per_px": 8.884303924536516,
+     "U_mm": 76.2268590915178,
+     "components_mm": {
+      "localisation": 8.884303924536516,
+      "camera_fit": 0.008047423673003956,
+      "plane": 4.164842163850269,
+      "camera distance (no EXIF)": 28.686032330565546,
+      "camera height (unknown, 0.4-1.6 m)": 22.778651861921738,
+      "camera yaw +-3 deg": 3.82115806900174
+     },
+     "note": "intersection of fitted top-profile segments (4-segment least squares); assumed on the centreline",
+     "verdict": "not measurable",
+     "reason": "no corresponding cage item"
+    },
+    {
+     "key_point": "hood_at_front_axle",
+     "axis": "Z",
+     "photo_m": 0.9594917047985367,
+     "plane": "centerline",
+     "uv": [
+      160.19394271228757,
+      77.5
+     ],
+     "mm_per_px": 8.884895183170832,
+     "U_mm": 95.30390697666469,
+     "components_mm": {
+      "localisation": 8.884895183170832,
+      "camera_fit": 0.009584441901710658,
+      "plane": 0.5776386835475433,
+      "camera distance (no EXIF)": 19.457196300072923,
+      "camera height (unknown, 0.4-1.6 m)": 40.73838667953134,
+      "camera yaw +-3 deg": 12.378809046811101
+     },
+     "note": "top silhouette at the projected front-axle column; assumed on the centreline",
+     "cage_m": 0.9511305093765259,
+     "cage_object": "REF_guide_hood (front end)",
+     "cage_class": "photo",
+     "diff_mm": 8.361195422010859,
+     "verdict": "agrees"
+    },
+    {
+     "key_point": "beltline_mid",
+     "axis": "Z",
+     "photo_m": 1.00145083769743,
+     "plane": "bodyside",
+     "uv": [
+      314.0,
+      72.5
+     ],
+     "mm_per_px": 8.669167708186748,
+     "U_mm": 10.876982731525322,
+     "components_mm": {
+      "localisation": 4.334583854093374,
+      "camera_fit": 0.002186743903364167,
+      "plane": 0.33651748729290887,
+      "camera distance (no EXIF)": 0.7026474506293123,
+      "camera height (unknown, 0.4-1.6 m)": 2.7472405509330056,
+      "camera yaw +-3 deg": 1.6230459826014343
+     },
+     "note": "lowest side-glass pixel at mid-wheelbase (render alpha); assumed on the glass plane x = +-0.75 m (+-0.10)",
+     "verdict": "not measurable",
+     "reason": "no corresponding cage item"
+    },
+    {
+     "key_point": "wheel_center_front (ride height)",
+     "axis": "Z",
+     "photo_m": 0.314451408976017,
+     "plane": "wheel (fitted with the camera)",
+     "mm_per_px": 8.626640732174213,
+     "U_mm": 17.253292557215918,
+     "components_mm": {
+      "camera_fit": 0.009782341912471354,
+      "localisation": 8.626640732174213
+     },
+     "cage_m": 0.3046000003814697,
+     "cage_object": "REF_wheel_center_FL",
+     "cage_class": "estimated (tires.loaded_radius)",
+     "diff_mm": 9.851408594547252,
+     "verdict": "agrees",
+     "note": "wheel-centre height fitted from rim circles and contact points"
+    },
+    {
+     "key_point": "wheel_center_rear (ride height)",
+     "axis": "Z",
+     "photo_m": 0.31749393813386084,
+     "plane": "wheel (fitted with the camera)",
+     "mm_per_px": 8.62664070314103,
+     "U_mm": 17.253293775543074,
+     "components_mm": {
+      "camera_fit": 0.010329821333435076,
+      "localisation": 8.62664070314103
+     },
+     "cage_m": 0.3046000003814697,
+     "cage_object": "REF_wheel_center_RL",
+     "cage_class": "estimated (tires.loaded_radius)",
+     "diff_mm": 12.893937752391116,
+     "verdict": "agrees",
+     "note": "wheel-centre height fitted from rim circles and contact points"
+    }
+   ],
+   "not_measurable": [
+    {
+     "key_point": "hood_leading_edge",
+     "verdict": "not measurable",
+     "reason": "the cage has no hood-leading-edge item (not measured in Phase 1)"
+    },
+    {
+     "key_point": "hatch_line",
+     "verdict": "not measurable",
+     "reason": "the cage has no hatch line (Phase 1 measured the hatch angle and top Y but not its height)"
+    },
+    {
+     "key_point": "beltline",
+     "verdict": "not measurable",
+     "reason": "not located"
+    },
+    {
+     "key_point": "mirror_position",
+     "verdict": "not measurable",
+     "reason": "the cage has only the published width over mirrors; mirror Y/Z unknown, and no algorithm separates the mirror from the body in these images"
+    },
+    {
+     "key_point": "beltline",
+     "verdict": "not measurable",
+     "reason": "measured in the image (see beltline_mid row) but the cage has no beltline to compare with"
+    }
+   ],
+   "top_profile": {
+    "segments": [
+     {
+      "name": "hood",
+      "slope": -0.14166929133858328,
+      "u0": 78.0,
+      "u1": 203.0
+     },
+     {
+      "name": "windshield",
+      "slope": -0.5111066113192267,
+      "u0": 204.0,
+      "u1": 287.0
+     },
+     {
+      "name": "roof",
+      "slope": 0.006263434439933164,
+      "u0": 288.0,
+      "u1": 446.0
+     },
+     {
+      "name": "hatch",
+      "slope": 0.33415700222220945,
+      "u0": 447.0,
+      "u1": 548.0
+     }
+    ]
+   }
+  },
+  {
+   "id": "R2_press06_side",
+   "path": "cache/visual/presskit22/06_f7039164019c.jpg",
+   "manifest_id": "ahm-press22-06",
+   "shows": "2022 US Civic Hatchback, Boost Blue, black wheels (Sport trim by its wheels), rolling shot, motion blur",
+   "image_size": [
+    928,
+    557
+   ],
+   "kind": "oblique",
+   "wheel_detection": {
+    "FL": {
+     "center": [
+      244.04452514648438,
+      354.4919128417969
+     ],
+     "axes": [
+      35.392601013183594,
+      36.475074768066406
+     ],
+     "angle_deg": 177.02622985839844,
+     "n_inliers": 72,
+     "rms_px": 0.7283499697078526,
+     "coverage": 0.6869670926804151,
+     "r_tire_guess": 42.64994338823351,
+     "refined": "radial"
+    },
+    "RL": {
+     "center": [
+      644.8564453125,
+      383.462646484375
+     ],
+     "axes": [
+      38.13975143432617,
+      42.51871109008789
+     ],
+     "angle_deg": 2.5166192054748535,
+     "n_inliers": 59,
+     "rms_px": 0.9699248927034778,
+     "coverage": 0.8340508981806489,
+     "r_tire_guess": 50.048022187527785,
+     "refined": "radial"
+    }
+   },
+   "focal": {
+    "source": "focal length ESTIMATED: no EXIF; fitted together with the pose (the oblique view makes the two wheels' perspective sizes and ellipse shapes informative)",
+    "f_px": 2431.261518333219
+   },
+   "camera": {
+    "C_project_m": [
+     -14.921091436378804,
+     -7.2999637560631765,
+     0.8148648937123899
+    ],
+    "f_px": 2431.261518333219,
+    "cx": 464.0,
+    "cy": 278.5,
+    "yaw_deg": 22.438996852649296,
+    "distance_to_mid_wheelbase_m": 16.06026885737199,
+    "rim_rms_px": 1.3707884605552008,
+    "rim_inlier_frac": 0.9694656488549618,
+    "contact_rms_px": 5.5554470621462775,
+    "z_front_fit": 0.26649843189562716,
+    "z_rear_fit": 0.3030977997642499,
+    "r_rim_fit": 0.24871790140058309,
+    "success": true
+   },
+   "reason": "camera fit rejected: contact residual 5.56 px > 3.0 px. Key-point values below are what the rejected camera gives; they are not differences and carry no verdict",
+   "status": "camera fit unstable",
+   "calibration": {
+    "note": "focal length ESTIMATED: no EXIF; fitted together with the pose (the oblique view makes the two wheels' perspective sizes and ellipse shapes informative)"
+   },
+   "camera_fit_spread_m": 0.242518650504001,
+   "rows": [
+    {
+     "key_point": "roof_peak",
+     "axis": "Y",
+     "photo_m": -1.106830292428298,
+     "plane": "centerline",
+     "uv": [
+      463.5,
+      225.37499974668026
+     ],
+     "mm_per_px": 6.645260155933051,
+     "U_mm": 219.88393402847524,
+     "components_mm": {
+      "localisation": 36.133601256198176,
+      "camera_fit": 3.804574777077932,
+      "plane": 103.76475290097709,
+      "distortion": 0.01540722473070133
+     },
+     "note": "topmost silhouette point; assumed on the centreline (roof crown), plane uncertainty +-0.25 m",
+     "cage_m": -1.6645700931549072,
+     "cage_object": "REF_guide_roof_peak",
+     "cage_class": "photo (Phase 1 render, orthographic)",
+     "verdict": "not measurable",
+     "diff_mm_rejected_fit": 557.7398007266092,
+     "reason": "camera fit unstable"
+    },
+    {
+     "key_point": "roof_peak",
+     "axis": "Z",
+     "photo_m": 1.213498398656971,
+     "plane": "centerline",
+     "uv": [
+      463.5,
+      225.37499974668026
+     ],
+     "mm_per_px": 6.645260155933051,
+     "U_mm": 74.40094425123219,
+     "components_mm": {
+      "localisation": 36.133601256198176,
+      "camera_fit": 5.7989376769459,
+      "plane": 6.679027245498403,
+      "distortion": 0.030058270092281347
+     },
+     "note": "topmost silhouette point; assumed on the centreline (roof crown), plane uncertainty +-0.25 m",
+     "cage_m": 1.4248332977294922,
+     "cage_object": "REF_guide_roof_peak",
+     "cage_class": "photo (Phase 1 render, orthographic)",
+     "verdict": "not measurable",
+     "diff_mm_rejected_fit": -211.33489907252124,
+     "reason": "camera fit unstable"
+    },
+    {
+     "key_point": "roof_peak (vs published height)",
+     "axis": "Z",
+     "photo_m": 1.213498398656971,
+     "plane": "centerline",
+     "uv": [
+      463.5,
+      225.37499974668026
+     ],
+     "mm_per_px": 6.645260155933051,
+     "U_mm": 74.40094425123219,
+     "components_mm": {
+      "localisation": 36.133601256198176,
+      "camera_fit": 5.7989376769459,
+      "plane": 6.679027245498403,
+      "distortion": 0.030058270092281347
+     },
+     "cage_m": 1.4149999618530273,
+     "cage_object": "REF_body_box (top = published height)",
+     "cage_class": "published",
+     "verdict": "not measurable",
+     "note": "published height includes any roof antenna; the silhouette top may be the antenna",
+     "diff_mm_rejected_fit": -201.5015631960564,
+     "reason": "camera fit unstable"
+    },
+    {
+     "key_point": "arch_top_front",
+     "axis": "Z",
+     "photo_m": 0.6043403875542741,
+     "plane": "bodyside",
+     "uv": [
+      246.16253575100674,
+      302.35007451258184
+     ],
+     "mm_per_px": 6.4757731655999216,
+     "U_mm": 13.126252821004702,
+     "components_mm": {
+      "localisation": 6.4757731655999216,
+      "camera_fit": 0.7583995351558512,
+      "plane": 0.7507957673223986,
+      "distortion": 0.011227144588010773
+     },
+     "note": "scanning up the projected vertical through the wheel centre from the tyre top: first point closer in colour to the body (door sample) than to the dark wheel well; assumed on the body-side plane x = +-width/2 (+-0.05 m)",
+     "cage_m": 0.7034144401550293,
+     "cage_object": "REF_guide_arch_top_front_L",
+     "cage_class": "photo",
+     "verdict": "not measurable",
+     "diff_mm_rejected_fit": -99.0740526007552,
+     "reason": "camera fit unstable"
+    },
+    {
+     "key_point": "sill_mid",
+     "axis": "Z",
+     "photo_m": 0.15241825112386864,
+     "plane": "bodyside",
+     "uv": [
+      434.83262901432244,
+      389.53243605882244
+     ],
+     "mm_per_px": 6.260543255136587,
+     "U_mm": 15.724534224475795,
+     "components_mm": {
+      "localisation": 6.260543255136587,
+      "camera_fit": 0.5433756645691661,
+      "plane": 4.724980900407183,
+      "distortion": 0.011860551536568842
+     },
+     "note": "silhouette bottom at mid-wheelbase along the projected vertical; assumed on x = +-width/2 (+-0.10 m; the rocker is inboard)",
+     "cage_m": 0.1992904096841812,
+     "cage_object": "REF_guide_sill_mid_L",
+     "cage_class": "photo",
+     "verdict": "not measurable",
+     "diff_mm_rejected_fit": -46.87215856031257,
+     "reason": "camera fit unstable"
+    },
+    {
+     "key_point": "wheel_center_front (ride height)",
+     "axis": "Z",
+     "photo_m": 0.26649843189562716,
+     "plane": "wheel (fitted with the camera)",
+     "mm_per_px": 6.4753708973731054,
+     "U_mm": 13.000879570284239,
+     "components_mm": {
+      "camera_fit": 0.5703412502282682,
+      "localisation": 6.4753708973731054
+     },
+     "cage_m": 0.3046000003814697,
+     "cage_object": "REF_wheel_center_FL",
+     "cage_class": "estimated (tires.loaded_radius)",
+     "verdict": "not measurable",
+     "note": "wheel-centre height fitted from rim circles and contact points",
+     "diff_mm_rejected_fit": -38.10156848584256,
+     "reason": "camera fit unstable"
+    },
+    {
+     "key_point": "wheel_center_rear (ride height)",
+     "axis": "Z",
+     "photo_m": 0.3030977997642499,
+     "plane": "wheel (fitted with the camera)",
+     "mm_per_px": 6.046030840286517,
+     "U_mm": 12.2899210125841,
+     "components_mm": {
+      "camera_fit": 1.0982033974603134,
+      "localisation": 6.046030840286517
+     },
+     "cage_m": 0.3046000003814697,
+     "cage_object": "REF_wheel_center_RL",
+     "cage_class": "estimated (tires.loaded_radius)",
+     "verdict": "not measurable",
+     "note": "wheel-centre height fitted from rim circles and contact points",
+     "diff_mm_rejected_fit": -1.5022006172198399,
+     "reason": "camera fit unstable"
+    }
+   ],
+   "not_measurable": [
+    {
+     "key_point": "windshield_base",
+     "verdict": "not measurable",
+     "reason": "not located by the algorithm in a three-quarter view (the feature is not on the silhouette)"
+    },
+    {
+     "key_point": "hood_at_front_axle",
+     "verdict": "not measurable",
+     "reason": "not located by the algorithm in a three-quarter view (the feature is not on the silhouette)"
+    },
+    {
+     "key_point": "hood_leading_edge",
+     "verdict": "not measurable",
+     "reason": "the cage has no hood-leading-edge item (not measured in Phase 1)"
+    },
+    {
+     "key_point": "hatch_line",
+     "verdict": "not measurable",
+     "reason": "the cage has no hatch line (Phase 1 measured the hatch angle and top Y but not its height)"
+    },
+    {
+     "key_point": "front_bumper_extent",
+     "verdict": "not measurable",
+     "reason": "not located by the algorithm in a three-quarter view (the feature is not on the silhouette)"
+    },
+    {
+     "key_point": "rear_bumper_extent",
+     "verdict": "not measurable",
+     "reason": "not located by the algorithm in a three-quarter view (the feature is not on the silhouette)"
+    },
+    {
+     "key_point": "arch_top_rear",
+     "verdict": "not measurable",
+     "reason": "that wheel is not one of the wheels fitted in this image"
+    },
+    {
+     "key_point": "beltline",
+     "verdict": "not measurable",
+     "reason": "the cage has no beltline (not measured in Phase 1)"
+    },
+    {
+     "key_point": "mirror_position",
+     "verdict": "not measurable",
+     "reason": "the cage has only the published width over mirrors; mirror Y/Z unknown, and no algorithm separates the mirror from the body in these images"
+    }
+   ],
+   "top_profile": null
+  },
+  {
+   "id": "R3_commons_queens_rear3q",
+   "path": "cache/visual/commons/2022_Honda_Civic_Sport_Touring_liftback,_rear_6.18.22.jpg",
+   "manifest_id": "commons-2022-honda-civic-sport-touring-liftback-rear-6-18-22-jpg",
+   "shows": "2022 Civic Hatchback Sport Touring, USA (Canon G7 X III, 36.8 mm)",
+   "image_size": [
+    3840,
+    1660
+   ],
+   "kind": "3q",
+   "wheel_detection": {
+    "FL": {
+     "center": [
+      445.1023254394531,
+      1176.9168701171875
+     ],
+     "axes": [
+      108.6428451538086,
+      154.6114959716797
+     ],
+     "angle_deg": 175.2202606201172,
+     "n_inliers": 384,
+     "rms_px": 0.8177635081950889,
+     "coverage": 0.4607884184745283,
+     "r_tire_guess": 176.4825243651042
+    },
+    "RL": {
+     "center": [
+      2306.854248046875,
+      1279.454833984375
+     ],
+     "axes": [
+      119.90235137939453,
+      182.52401733398438
+     ],
+     "angle_deg": 20.246198654174805,
+     "n_inliers": 409,
+     "rms_px": 1.0642348037775515,
+     "coverage": 0.4259032831853355,
+     "r_tire_guess": 207.09526422425284
+    }
+   },
+   "focal": {
+    "source": "EXIF focal length x focal-plane resolution",
+    "f_px": 12123.6326481814
+   },
+   "camera": {
+    "C_project_m": [
+     -11.36870295835461,
+     -10.485754006510016,
+     -1.6745834638487054
+    ],
+    "f_px": 12123.6326481814,
+    "cx": 1920.0,
+    "cy": 830.0,
+    "yaw_deg": 38.497719251076774,
+    "distance_to_mid_wheelbase_m": 14.734950842258725,
+    "rim_rms_px": 10.43542919160503,
+    "rim_inlier_frac": 0.6428571428571429,
+    "contact_rms_px": 43.658071654480835,
+    "z_front_fit": 0.2626199727570234,
+    "z_rear_fit": 0.2560733625249012,
+    "r_rim_fit": 0.21860000000000002,
+    "success": true
+   },
+   "reason": "camera fit rejected: rim-lip residual 10.44 px > 2.0 px; contact residual 43.66 px > 3.0 px. Key-point values below are what the rejected camera gives; they are not differences and carry no verdict",
+   "status": "camera fit unstable",
+   "calibration": null,
+   "camera_fit_spread_m": 0.07652090856965342,
+   "rows": [
+    {
+     "key_point": "roof_peak",
+     "axis": "Y",
+     "photo_m": -1.4613106151144422,
+     "plane": "centerline",
+     "uv": [
+      2047.0,
+      175.37499936670065
+     ],
+     "mm_per_px": 1.2284916477913368,
+     "U_mm": 2620.491441726893,
+     "components_mm": {
+      "localisation": 8.676222651527798,
+      "camera_fit": 5.632323782399788,
+      "plane": 198.44927395089584,
+      "distortion": 1.9332629519652755,
+      "principal point": 1295.0872547025565
+     },
+     "note": "topmost silhouette point; assumed on the centreline (roof crown), plane uncertainty +-0.25 m",
+     "cage_m": -1.6645700931549072,
+     "cage_object": "REF_guide_roof_peak",
+     "cage_class": "photo (Phase 1 render, orthographic)",
+     "verdict": "not measurable",
+     "diff_mm_rejected_fit": 203.25947804046507,
+     "reason": "camera fit unstable"
+    },
+    {
+     "key_point": "roof_peak",
+     "axis": "Z",
+     "photo_m": 1.7616676815144654,
+     "plane": "centerline",
+     "uv": [
+      2047.0,
+      175.37499936670065
+     ],
+     "mm_per_px": 1.2284916477913368,
+     "U_mm": 1483.5011452654062,
+     "components_mm": {
+      "localisation": 8.676222651527798,
+      "camera_fit": 15.933975993373688,
+      "plane": 75.56383428150725,
+      "distortion": 0.41101225379325257,
+      "principal point": 737.6684089671257
+     },
+     "note": "topmost silhouette point; assumed on the centreline (roof crown), plane uncertainty +-0.25 m",
+     "cage_m": 1.4248332977294922,
+     "cage_object": "REF_guide_roof_peak",
+     "cage_class": "photo (Phase 1 render, orthographic)",
+     "verdict": "not measurable",
+     "diff_mm_rejected_fit": 336.8343837849732,
+     "reason": "camera fit unstable"
+    },
+    {
+     "key_point": "roof_peak (vs published height)",
+     "axis": "Z",
+     "photo_m": 1.7616676815144654,
+     "plane": "centerline",
+     "uv": [
+      2047.0,
+      175.37499936670065
+     ],
+     "mm_per_px": 1.2284916477913368,
+     "U_mm": 1483.5011452654062,
+     "components_mm": {
+      "localisation": 8.676222651527798,
+      "camera_fit": 15.933975993373688,
+      "plane": 75.56383428150725,
+      "distortion": 0.41101225379325257,
+      "principal point": 737.6684089671257
+     },
+     "cage_m": 1.4149999618530273,
+     "cage_object": "REF_body_box (top = published height)",
+     "cage_class": "published",
+     "verdict": "not measurable",
+     "note": "published height includes any roof antenna; the silhouette top may be the antenna",
+     "diff_mm_rejected_fit": 346.66771966143807,
+     "reason": "camera fit unstable"
+    },
+    {
+     "key_point": "arch_top_front",
+     "axis": "Z",
+     "photo_m": 0.6551610241140144,
+     "plane": "bodyside",
+     "uv": [
+      522.0857545688478,
+      836.4696732428857
+     ],
+     "mm_per_px": 1.228976758937441,
+     "U_mm": 165.6677606064727,
+     "components_mm": {
+      "localisation": 1.228976758937441,
+      "camera_fit": 1.259509080157424,
+      "plane": 11.128250855185318,
+      "distortion": 0.5054408361326868,
+      "principal point": 82.06254652129141
+     },
+     "note": "scanning up the projected vertical through the wheel centre from the tyre top: first point closer in colour to the body (door sample) than to the dark wheel well; assumed on the body-side plane x = +-width/2 (+-0.05 m)",
+     "cage_m": 0.7034144401550293,
+     "cage_object": "REF_guide_arch_top_front_L",
+     "cage_class": "photo",
+     "verdict": "not measurable",
+     "diff_mm_rejected_fit": -48.25341604101485,
+     "reason": "camera fit unstable"
+    },
+    {
+     "key_point": "arch_top_rear",
+     "axis": "Z",
+     "photo_m": 0.6657456011337088,
+     "plane": "bodyside",
+     "uv": [
+      2326.9927384088523,
+      897.1975598991583
+     ],
+     "mm_per_px": 1.0909101663977394,
+     "U_mm": 195.85546910614403,
+     "components_mm": {
+      "localisation": 1.0909101663977394,
+      "camera_fit": 3.338139856371001,
+      "plane": 11.178809115492516,
+      "distortion": 0.3234159491907196,
+      "principal point": 97.22364712809473
+     },
+     "note": "scanning up the projected vertical through the wheel centre from the tyre top: first point closer in colour to the body (door sample) than to the dark wheel well; assumed on the body-side plane x = +-width/2 (+-0.05 m)",
+     "cage_m": 0.7034144401550293,
+     "cage_object": "REF_guide_arch_top_rear_L",
+     "cage_class": "photo",
+     "verdict": "not measurable",
+     "diff_mm_rejected_fit": -37.66883902132045,
+     "reason": "camera fit unstable"
+    },
+    {
+     "key_point": "sill_mid",
+     "axis": "Z",
+     "photo_m": 0.1690497827117372,
+     "plane": "bodyside",
+     "uv": [
+      1294.5635815218257,
+      1278.4458464292768
+     ],
+     "mm_per_px": 1.1527859159091494,
+     "U_mm": 468.99051841539693,
+     "components_mm": {
+      "localisation": 5.9467862163580545,
+      "camera_fit": 0.6401631765531677,
+      "plane": 17.61258658079301,
+      "distortion": 0.11663046358645346,
+      "principal point": 233.7563597144665
+     },
+     "note": "silhouette bottom at mid-wheelbase along the projected vertical; assumed on x = +-width/2 (+-0.10 m; the rocker is inboard)",
+     "cage_m": 0.1992904096841812,
+     "cage_object": "REF_guide_sill_mid_L",
+     "cage_class": "photo",
+     "verdict": "not measurable",
+     "diff_mm_rejected_fit": -30.240626972444005,
+     "reason": "camera fit unstable"
+    },
+    {
+     "key_point": "wheel_center_front (ride height)",
+     "axis": "Z",
+     "photo_m": 0.2626199727570234,
+     "plane": "wheel (fitted with the camera)",
+     "mm_per_px": 1.2232591976477614,
+     "U_mm": 3.301062127592114,
+     "components_mm": {
+      "camera_fit": 1.1081018581005533,
+      "localisation": 1.2232591976477614
+     },
+     "cage_m": 0.3046000003814697,
+     "cage_object": "REF_wheel_center_FL",
+     "cage_class": "estimated (tires.loaded_radius)",
+     "verdict": "not measurable",
+     "note": "wheel-centre height fitted from rim circles and contact points",
+     "diff_mm_rejected_fit": -41.9800276244463,
+     "reason": "camera fit unstable"
+    },
+    {
+     "key_point": "wheel_center_rear (ride height)",
+     "axis": "Z",
+     "photo_m": 0.2560733625249012,
+     "plane": "wheel (fitted with the camera)",
+     "mm_per_px": 1.0849430805991231,
+     "U_mm": 3.2541906528367077,
+     "components_mm": {
+      "camera_fit": 1.2125748278405475,
+      "localisation": 1.0849430805991231
+     },
+     "cage_m": 0.3046000003814697,
+     "cage_object": "REF_wheel_center_RL",
+     "cage_class": "estimated (tires.loaded_radius)",
+     "verdict": "not measurable",
+     "note": "wheel-centre height fitted from rim circles and contact points",
+     "diff_mm_rejected_fit": -48.52663785656852,
+     "reason": "camera fit unstable"
+    }
+   ],
+   "not_measurable": [
+    {
+     "key_point": "windshield_base",
+     "verdict": "not measurable",
+     "reason": "not located by the algorithm in a three-quarter view (the feature is not on the silhouette)"
+    },
+    {
+     "key_point": "hood_at_front_axle",
+     "verdict": "not measurable",
+     "reason": "not located by the algorithm in a three-quarter view (the feature is not on the silhouette)"
+    },
+    {
+     "key_point": "hood_leading_edge",
+     "verdict": "not measurable",
+     "reason": "the cage has no hood-leading-edge item (not measured in Phase 1)"
+    },
+    {
+     "key_point": "hatch_line",
+     "verdict": "not measurable",
+     "reason": "the cage has no hatch line (Phase 1 measured the hatch angle and top Y but not its height)"
+    },
+    {
+     "key_point": "front_bumper_extent",
+     "verdict": "not measurable",
+     "reason": "not located by the algorithm in a three-quarter view (the feature is not on the silhouette)"
+    },
+    {
+     "key_point": "rear_bumper_extent",
+     "verdict": "not measurable",
+     "reason": "not located by the algorithm in a three-quarter view (the feature is not on the silhouette)"
+    },
+    {
+     "key_point": "beltline",
+     "verdict": "not measurable",
+     "reason": "the cage has no beltline (not measured in Phase 1)"
+    },
+    {
+     "key_point": "mirror_position",
+     "verdict": "not measurable",
+     "reason": "the cage has only the published width over mirrors; mirror Y/Z unknown, and no algorithm separates the mirror from the body in these images"
+    }
+   ],
+   "top_profile": null
+  },
+  {
+   "id": "R4_commons_canada_front3q",
+   "path": "cache/visual/commons/2022_Honda_Civic_Sport_Touring,_Front_Right,_11-07-2021.jpg",
+   "manifest_id": "commons-2022-honda-civic-sport-touring-front-right-11-07-2021-jpg",
+   "shows": "2022 Civic Hatchback Sport Touring, Canada (Canon G10, 12.1 mm)",
+   "image_size": [
+    3840,
+    2033
+   ],
+   "kind": "3q",
+   "wheel_detection": {},
+   "status": "camera not fitted",
+   "detection": {
+    "tyre_contacts_found": 2,
+    "tyre_contacts_expected": 2
+   },
+   "reason": "both tyre contacts found, but an acceptable rim-lip ellipse for 0 wheel(s) (none): no candidate had edge support on at least 30% of the ellipse and a contact point 1.15-1.55 rim radii below its centre; two wheels are needed to fix the camera, so no key point in this image is measurable"
+  },
+  {
+   "id": "R5_commons_canada_rear3q",
+   "path": "cache/visual/commons/2022_Honda_Civic_Sport_Touring,_Rear_Left,_11-07-2021.jpg",
+   "manifest_id": "commons-2022-honda-civic-sport-touring-rear-left-11-07-2021-jpg",
+   "shows": "2022 Civic Hatchback Sport Touring, Canada (Canon G10, 10.8 mm)",
+   "image_size": [
+    3840,
+    2269
+   ],
+   "kind": "3q",
+   "wheel_detection": {},
+   "status": "camera not fitted",
+   "detection": {
+    "tyre_contacts_found": 1,
+    "tyre_contacts_expected": 2
+   },
+   "reason": "tyre contact points found on the car silhouette: 1 of 2, so the wheels cannot be identified; two wheels are needed to fix the camera, so no key point in this image is measurable"
+  }
+ ]
+}
