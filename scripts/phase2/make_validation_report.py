@@ -93,11 +93,16 @@ def cage_section():
     L += ["", "**Left out because the data are missing** (nothing was invented):", ""]
     for m in man["missing"]:
         L.append(f"- {m['item']}: {m['reason']}")
+    res = load(resolve.OUT)["parameters"]
+    lr = res["tires.loaded_radius"]
+    hp = res["hardpoints.front.wheel_center"]["value"][2]
+    pf_, pr_ = res["proportions.wheel_center_z_front"]["value"], res["proportions.wheel_center_z_rear"]["value"]
     L += ["", "Notes: the body box's fore-aft position comes from `dimensions.overhang_front` (published total overhang × the "
           "front fraction measured on the Phase 1 render), so the box is in `REF_photo`. Wheel centres use "
-          "`tires.loaded_radius` (0.3046 m, class E) because no measured wheel-centre height was supplied; Phase 1's hard-point "
-          "builder uses a different estimate (0.3076 m) for the same point, and the render gives 0.3135/0.3156 m (Phase 1) — see "
-          "the photo tables.", ""]
+          f"`tires.loaded_radius` ({lr['value']:.4f} m, class {lr.get('class', 'E')}) because no measured wheel-centre height "
+          f"was supplied; Phase 1's hard-point builder uses a different estimate ({hp:.4f} m, "
+          "`hardpoints.front.wheel_center`) for the same point, and Phase 1's render measurement gives "
+          f"{pf_:.4f}/{pr_:.4f} m (`proportions.wheel_center_z_front/rear`) — see the photo tables.", ""]
     return L
 
 

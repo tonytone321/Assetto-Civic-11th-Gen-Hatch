@@ -719,7 +719,7 @@ def compare_one(ph, cage):
                 "mirror_position", "sill_mid", "wheel_center_front", "wheel_center_rear"]
     nm = []
     for e in expected:
-        if e in measured_names:
+        if e in measured_names or (e == "beltline" and "beltline_mid" in measured_names):
             continue
         if e in NOT_IN_CAGE and not (e == "beltline" and "beltline_mid" in measured_names):
             reason = NOT_IN_CAGE[e]
