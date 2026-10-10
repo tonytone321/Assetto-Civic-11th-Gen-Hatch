@@ -535,11 +535,6 @@
      "reason": "the cage has no hatch line (Phase 1 measured the hatch angle and top Y but not its height)"
     },
     {
-     "key_point": "beltline",
-     "verdict": "not measurable",
-     "reason": "not located"
-    },
-    {
      "key_point": "mirror_position",
      "verdict": "not measurable",
      "reason": "the cage has only the published width over mirrors; mirror Y/Z unknown, and no algorithm separates the mirror from the body in these images"

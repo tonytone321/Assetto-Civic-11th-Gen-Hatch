@@ -139,7 +139,7 @@ Objects per collection: REF_estimated 48, REF_frame 2, REF_photo 18, REF_publish
 - beltline: not measured in Phase 1 (no proportions key)
 - wheel-arch curves: only the arch-top heights were measured; arch radius/shape not measured
 
-Notes: the body box's fore-aft position comes from `dimensions.overhang_front` (published total overhang × the front fraction measured on the Phase 1 render), so the box is in `REF_photo`. Wheel centres use `tires.loaded_radius` (0.3046 m, class E) because no measured wheel-centre height was supplied; Phase 1's hard-point builder uses a different estimate (0.3076 m) for the same point, and the render gives 0.3135/0.3156 m (Phase 1) — see the photo tables.
+Notes: the body box's fore-aft position comes from `dimensions.overhang_front` (published total overhang × the front fraction measured on the Phase 1 render), so the box is in `REF_photo`. Wheel centres use `tires.loaded_radius` (0.3046 m, class E) because no measured wheel-centre height was supplied; Phase 1's hard-point builder uses a different estimate (0.3076 m, `hardpoints.front.wheel_center`) for the same point, and Phase 1's render measurement gives 0.3135/0.3156 m (`proportions.wheel_center_z_front/rear`) — see the photo tables.
 
 ## 6. Comparison with reference images
 
@@ -175,7 +175,6 @@ None of these images is a photograph of the target car, and none is straight-on 
 | wheel_center_rear (ride height) | Z | wheel (fitted with the camera) | 0.3175 | 0.3046 | REF_wheel_center_RL (estimated (tires.loaded_radius)) | +12.9 | 17.3 | localisation | **agrees** |
 | hood_leading_edge | — | — | — | — | — | — | — | — | not measurable: the cage has no hood-leading-edge item (not measured in Phase 1) |
 | hatch_line | — | — | — | — | — | — | — | — | not measurable: the cage has no hatch line (Phase 1 measured the hatch angle and top Y but not its height) |
-| beltline | — | — | — | — | — | — | — | — | not measurable: not located |
 | mirror_position | — | — | — | — | — | — | — | — | not measurable: the cage has only the published width over mirrors; mirror Y/Z unknown, and no algorithm separates the mirror from the body in these images |
 | beltline | — | — | — | — | — | — | — | — | not measurable: measured in the image (see beltline_mid row) but the cage has no beltline to compare with |
 
@@ -329,4 +328,5 @@ Each item says what would settle it. Numbers are in the tables above. No data va
 4. **AC frame.** The `sdk/dev/car_pipeline*.pdf` from your Assetto Corsa install, or the X sign of `WHEEL_LF` read from any Kunos car in ksEditor, plus where AC puts the model origin along the car. See `docs/COORDINATES.md`.
 5. **Front licence-plate bracket.** Is one fitted to your car? It decides whether the in-game length should be 4529 mm or about 4547 mm.
 6. **Press photo R2.** Is its anisotropy real? Its two wheels look different in size and shape in a way a single pinhole camera cannot explain. If Honda publishes the original-resolution file, its EXIF focal length would let the fit be retried. Otherwise R2 stays a reference for colour and details only.
+7. **VINs from Phase 1.** `scripts/domains/identity_build.py`, `vehicle_data/identity.json` and `docs/research_log/01_identity.md` contain five full VINs from public dealer listings and search snippets. They were used for vPIC decoding in Phase 1 and none of them is your car's. Your Phase 2 rule is about your own VIN, which was never supplied, so they were left as they are. Should they be reduced to the patterns (for example `19XFL1G8*RE`)?
 
